@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Account | PixtoLearn</title>
+  <meta name="description" content="Sign in to your PixtoLearn account to view orders, downloads, and open the PixtoLearn App." />
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="PixtoLearn home">
+        <img src="assets/brand/logo.png" alt="PixtoLearn" />
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="swimming.html" data-nav="swimming.html">Swimming</a></li>
+        <li><a href="routines.html" data-nav="routines.html">Routines</a></li>
+        <li><a href="app.html" data-nav="app.html">App</a></li>
+        <li><a href="updates.html" data-nav="updates.html">Updates</a></li>
+        <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
+        <li><a href="contact.html" data-nav="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a class="nav-icon" href="shop.html" aria-label="Shop basket">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 7h15l-1.4 8.2a2 2 0 0 1-2 1.8H9a2 2 0 0 1-2-1.6L5 3H2"/>
+            <circle cx="10" cy="20" r="1.3"/>
+            <circle cx="18" cy="20" r="1.3"/>
+          </svg>
+        </a>
+        <a class="nav-icon" href="account.html" aria-label="My Account" aria-current="page">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="3.2"/>
+            <path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+  <section class="account-hero">
+    <div class="wrap account-hero-inner reveal">
+      <p class="eyebrow account-eyebrow">Members</p>
+      <h1>My Account</h1>
+      <p class="lede">Orders, downloads, addresses, and your PixtoLearn App access in one calm place.</p>
+    </div>
+    <div class="wave-edge" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <path class="wave-path wave-a" d="M0,40 C240,80 480,0 720,40 C960,80 1200,10 1440,40 L1440,90 L0,90 Z"></path>
+        <path class="wave-path wave-b" d="M0,55 C260,20 520,75 780,45 C1040,15 1240,70 1440,50 L1440,90 L0,90 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="account-section">
+    <div class="wrap">
+
+      <div class="account-gate reveal" data-account-gate>
+        <div class="account-auth">
+          <div class="account-auth-tabs" role="tablist" aria-label="Account access">
+            <button type="button" class="account-auth-tab is-active" data-auth-tab="login" role="tab" aria-selected="true">Sign in</button>
+            <button type="button" class="account-auth-tab" data-auth-tab="register" role="tab" aria-selected="false">Create account</button>
+          </div>
+
+          <form class="account-form is-active" data-auth-panel="login" data-login-form>
+            <h2>Welcome back</h2>
+            <p class="muted">Sign in to see your orders, download files, and open the app.</p>
+            <label>Email<input type="email" name="email" autocomplete="email" required placeholder="you@email.com" /></label>
+            <label>Password<input type="password" name="password" autocomplete="current-password" required placeholder="Your password" /></label>
+            <div class="account-form-row">
+              <label class="check"><input type="checkbox" name="remember" /> Remember me</label>
+              <a class="account-link" href="contact.html">Need help?</a>
+            </div>
+            <button class="btn btn-primary" type="submit">Sign in</button>
+            <p class="note" data-login-note>Preview mode: any email and password will open your member dashboard.</p>
+          </form>
+
+          <form class="account-form" data-auth-panel="register" data-register-form hidden>
+            <h2>Join PixtoLearn</h2>
+            <p class="muted">Create an account to track packs, downloads, and app access.</p>
+            <label>Full name<input type="text" name="name" autocomplete="name" required placeholder="Your name" /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required placeholder="you@email.com" /></label>
+            <label>Password<input type="password" name="password" autocomplete="new-password" required minlength="6" placeholder="At least 6 characters" /></label>
+            <button class="btn btn-teal" type="submit">Create account</button>
+            <p class="note" data-register-note>Preview mode: your details stay in this browser only until checkout is connected.</p>
+          </form>
+        </div>
+
+        <aside class="account-aside">
+          <div class="account-aside-card">
+            <span class="account-aside-kicker">With your account</span>
+            <ul>
+              <li>Track swimming and WOW pack orders</li>
+              <li>Download printables and guides</li>
+              <li>Open PixtoLearn App for digital sessions</li>
+              <li>Update shipping and billing details</li>
+            </ul>
+            <a class="btn btn-ghost" href="https://visual-vic.vercel.app" target="_blank" rel="noopener">Try PixtoLearn App</a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="account-shell reveal" data-account-shell hidden>
+        <nav class="account-nav" aria-label="Account menu">
+          <button type="button" class="is-active" data-account-tab="dashboard">Dashboard</button>
+          <button type="button" data-account-tab="orders">Orders</button>
+          <button type="button" data-account-tab="files">Files</button>
+          <button type="button" data-account-tab="addresses">Addresses</button>
+          <button type="button" data-account-tab="payment">Payment methods</button>
+          <button type="button" data-account-tab="details">Account details</button>
+          <button type="button" data-account-logout>Log out</button>
+        </nav>
+
+        <div class="account-panels">
+          <article class="account-panel is-active" data-account-panel="dashboard">
+            <h2>Dashboard</h2>
+            <p class="account-welcome">
+              Hello <strong data-account-name>Member</strong>
+              (<span class="muted">(not <strong data-account-name>Member</strong>? <button type="button" class="account-inline" data-account-logout>Log out</button>)</span>
+            </p>
+            <p class="muted">From your account dashboard you can view your <button type="button" class="account-inline" data-jump="orders">recent orders</button>, manage your <button type="button" class="account-inline" data-jump="addresses">shipping and billing addresses</button>, and <button type="button" class="account-inline" data-jump="details">edit your password and account details</button>.</p>
+            <div class="account-quick">
+              <a class="account-quick-card" href="https://visual-vic.vercel.app" target="_blank" rel="noopener">
+                <strong>PixtoLearn App</strong>
+                <span>Open your digital visual sessions</span>
+              </a>
+              <a class="account-quick-card" href="shop.html">
+                <strong>Shop packs</strong>
+                <span>Swimming, WOW, and accessories</span>
+              </a>
+              <a class="account-quick-card" href="printable-trial.html">
+                <strong>Free printable</strong>
+                <span>Try a swimming visual sample</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="account-panel" data-account-panel="orders" hidden>
+            <h2>Orders</h2>
+            <div class="account-empty">
+              <p>No orders yet.</p>
+              <p class="muted">When you buy a pack, it will appear here with status and tracking.</p>
+              <a class="btn btn-primary" href="shop.html">Browse the shop</a>
+            </div>
+          </article>
+
+          <article class="account-panel" data-account-panel="files" hidden>
+            <h2>Files</h2>
+            <div class="account-file-list">
+              <a class="account-file" href="printable-trial.html">
+                <span class="account-file-icon" aria-hidden="true">PDF</span>
+                <span>
+                  <strong>Swimming printable sample</strong>
+                  <em>Free trial download</em>
+                </span>
+              </a>
+              <div class="account-file is-locked">
+                <span class="account-file-icon" aria-hidden="true">ZIP</span>
+                <span>
+                  <strong>Pack guides &amp; extras</strong>
+                  <em>Available after purchase</em>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article class="account-panel" data-account-panel="addresses" hidden>
+            <h2>Addresses</h2>
+            <div class="account-address-grid">
+              <div class="account-address-card">
+                <h3>Billing address</h3>
+                <p class="muted">You have not set up this type of address yet.</p>
+                <button type="button" class="btn btn-ghost" data-jump="details">Add billing address</button>
+              </div>
+              <div class="account-address-card">
+                <h3>Shipping address</h3>
+                <p class="muted">You have not set up this type of address yet.</p>
+                <button type="button" class="btn btn-ghost" data-jump="details">Add shipping address</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="account-panel" data-account-panel="payment" hidden>
+            <h2>Payment methods</h2>
+            <div class="account-empty">
+              <p>No saved payment methods.</p>
+              <p class="muted">Cards used at checkout can be stored here once payments are connected.</p>
+            </div>
+          </article>
+
+          <article class="account-panel" data-account-panel="details" hidden>
+            <h2>Account details</h2>
+            <form class="account-form account-form-inline" data-details-form>
+              <div class="account-form-grid">
+                <label>First name<input type="text" name="first" autocomplete="given-name" /></label>
+                <label>Last name<input type="text" name="last" autocomplete="family-name" /></label>
+              </div>
+              <label>Display name<input type="text" name="display" data-details-display /></label>
+              <label>Email<input type="email" name="email" data-details-email autocomplete="email" /></label>
+              <fieldset class="account-fieldset">
+                <legend>Password change</legend>
+                <label>Current password<input type="password" name="current" autocomplete="current-password" /></label>
+                <label>New password<input type="password" name="next" autocomplete="new-password" /></label>
+                <label>Confirm new password<input type="password" name="confirm" autocomplete="new-password" /></label>
+              </fieldset>
+              <button class="btn btn-primary" type="submit">Save changes</button>
+              <p class="note" data-details-note>Preview mode: changes update this browser session only.</p>
+            </form>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="PixtoLearn home"><img src="assets/brand/logo.png" alt="PixtoLearn" /></a>
+        <p class="muted" style="margin-top:0.85rem;max-width:28ch">Real-life learning, powered by visual aids. Physical packs and PixtoLearn App for clearer sessions.</p>
+      </div>
+      <div>
+        <h3>Our work</h3>
+        <ul>
+          <li><a href="swimming.html">Swimming</a></li>
+          <li><a href="routines.html">Routines / WOW</a></li>
+          <li><a href="app.html">PixtoLearn App</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="updates.html">Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="account.html">My Account</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@pixtolearn.com">hello@pixtolearn.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Care</h3>
+        <ul>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="cookies.html">Cookies policy</a></li>
+          <li><a href="legal.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <span>&copy; 2026 PixtoLearn</span>
+      <span>Because visuals speak louder</span>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

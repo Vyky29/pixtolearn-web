@@ -67,6 +67,7 @@
   initLeadPopup();
   initSwimWaves();
   initCardRailMomentum();
+  initAccountPortal();
 
   function initSwimWaves() {
     const host = document.querySelector("[data-swim-waves]");
@@ -266,5 +267,131 @@
       exitArmed = false;
       open();
     });
+  }
+
+  function initAccountPortal() {
+    const gate = document.querySelector("[data-account-gate]");
+    const shell = document.querySelector("[data-account-shell]");
+    if (!gate || !shell) return;
+
+    const KEY = "ptl_account_v1";
+    const read = () => {
+      try {
+        return JSON.parse(localStorage.getItem(KEY) || "null");
+      } catch {
+        return null;
+      }
+    };
+    const write = (data) => localStorage.setItem(KEY, JSON.stringify(data));
+    const clear = () => localStorage.removeItem(KEY);
+
+    const nameNodes = document.querySelectorAll("[data-account-name]");
+    const detailsDisplay = document.querySelector("[data-details-display]");
+    const detailsEmail = document.querySelector("[data-details-email]");
+
+    function showPanel(id) {
+      document.querySelectorAll("[data-account-tab]").forEach((btn) => {
+        btn.classList.toggle("is-active", btn.getAttribute("data-account-tab") === id);
+      });
+      document.querySelectorAll("[data-account-panel]").forEach((panel) => {
+        const on = panel.getAttribute("data-account-panel") === id;
+        panel.hidden = !on;
+        panel.classList.toggle("is-active", on);
+      });
+    }
+
+    function render(user) {
+      if (user) {
+        gate.hidden = true;
+        shell.hidden = false;
+        nameNodes.forEach((n) => {
+          n.textContent = user.name || "Member";
+        });
+        if (detailsDisplay) detailsDisplay.value = user.name || "";
+        if (detailsEmail) detailsEmail.value = user.email || "";
+        showPanel("dashboard");
+      } else {
+        gate.hidden = false;
+        shell.hidden = true;
+      }
+    }
+
+    document.querySelectorAll("[data-auth-tab]").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const id = tab.getAttribute("data-auth-tab");
+        document.querySelectorAll("[data-auth-tab]").forEach((t) => {
+          const on = t === tab;
+          t.classList.toggle("is-active", on);
+          t.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        document.querySelectorAll("[data-auth-panel]").forEach((panel) => {
+          const on = panel.getAttribute("data-auth-panel") === id;
+          panel.hidden = !on;
+          panel.classList.toggle("is-active", on);
+        });
+      });
+    });
+
+    const loginForm = document.querySelector("[data-login-form]");
+    if (loginForm) {
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = String(loginForm.email.value || "").trim();
+        const local = email.split("@")[0] || "Member";
+        const name = local.replace(/[._-]+/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+        write({ name, email, at: Date.now() });
+        const note = loginForm.querySelector("[data-login-note]");
+        if (note) note.textContent = "Signed in. Welcome back.";
+        render(read());
+      });
+    }
+
+    const registerForm = document.querySelector("[data-register-form]");
+    if (registerForm) {
+      registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = String(registerForm.name.value || "").trim() || "Member";
+        const email = String(registerForm.email.value || "").trim();
+        write({ name, email, at: Date.now() });
+        const note = registerForm.querySelector("[data-register-note]");
+        if (note) note.textContent = "Account ready. Opening your dashboard.";
+        render(read());
+      });
+    }
+
+    document.querySelectorAll("[data-account-tab]").forEach((btn) => {
+      btn.addEventListener("click", () => showPanel(btn.getAttribute("data-account-tab")));
+    });
+
+    document.querySelectorAll("[data-jump]").forEach((btn) => {
+      btn.addEventListener("click", () => showPanel(btn.getAttribute("data-jump")));
+    });
+
+    document.querySelectorAll("[data-account-logout]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        clear();
+        render(null);
+      });
+    });
+
+    const detailsForm = document.querySelector("[data-details-form]");
+    if (detailsForm) {
+      detailsForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const current = read() || {};
+        const first = String(detailsForm.first.value || "").trim();
+        const last = String(detailsForm.last.value || "").trim();
+        const display = String(detailsForm.display.value || "").trim();
+        const email = String(detailsForm.email.value || "").trim();
+        const name = display || [first, last].filter(Boolean).join(" ") || current.name || "Member";
+        write({ ...current, name, email: email || current.email, at: Date.now() });
+        const note = detailsForm.querySelector("[data-details-note]");
+        if (note) note.textContent = "Saved for this browser preview.";
+        render(read());
+        showPanel("details");
+      });
+    }
+
+    render(read());
   }
 })();
