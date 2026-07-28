@@ -956,7 +956,7 @@ section {
 .audience {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.85rem;
+  gap: 1.25rem 1.1rem;
 }
 
 .audience-learners {
@@ -968,14 +968,14 @@ section {
 }
 
 .audience-block {
-  padding: 1.25rem;
+  padding: 1.5rem 1.35rem 1.65rem;
   border-radius: calc(var(--radius) + 4px);
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--line);
 }
 
 .audience-label {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   max-width: 40rem;
 }
 
@@ -987,41 +987,40 @@ section {
 .audience figure {
   margin: 0;
   text-align: center;
-  padding: 0.55rem;
-  border-radius: 16px;
-  background: var(--mist);
-  border: 1px solid rgba(136, 176, 192, 0.22);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  padding: 0.85rem 0.75rem 0.9rem;
+  border-radius: 18px;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s ease;
 }
 
 .audience figure:hover {
   transform: translateY(-3px);
-  border-color: rgba(136, 176, 192, 0.55);
 }
 
 .audience img {
   width: 100%;
-  max-width: 220px;
+  max-width: 168px;
   margin: 0 auto;
   aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 12px;
-  background: #eef4f6;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  background: #f4f8f9;
   display: block;
 }
 
 .audience-learners img,
 .audience-pros img {
-  max-width: 180px;
+  max-width: 168px;
 }
 
 .home-audience-preview img {
-  max-width: 160px;
+  max-width: 150px;
 }
 
 .audience figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.65rem;
   font-weight: 740;
   font-size: 0.92rem;
 }
