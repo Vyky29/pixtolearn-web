@@ -2985,6 +2985,14 @@ a.post:hover {
   background: #eef4f6;
 }
 
+.flash-trait-art img {
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+  padding: 0.35rem;
+  box-sizing: border-box;
+}
+
 .flash-trait-a5 .a5-stage {
   --a5-line: 3px;
   --a5-cap: 12px;
