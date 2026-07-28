@@ -73,7 +73,14 @@
       const name = form.getAttribute("data-product-name");
       const price = form.getAttribute("data-product-price");
       rememberInterest({ action: "add_to_cart", id, name, price, qty });
-      toast("Added to cart preview. Checkout connects next.");
+      const image = document.querySelector("[data-product-image]")?.getAttribute("src") || "";
+      const href = location.pathname.split("/").pop() || "";
+      if (window.PixtoCart) {
+        window.PixtoCart.add({ id, name, price, qty, image, href });
+        toast("Added to cart. Open the bag icon to review.");
+      } else {
+        toast("Added to cart preview. Checkout connects next.");
+      }
     });
   }
 
