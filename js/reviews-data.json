@@ -1,0 +1,125 @@
+{
+  "catalog": {
+    "full-pack": {
+      "title": "Full Pack",
+      "price": "329.00",
+      "image": "assets/packs/shop-full.png",
+      "href": "product-full-pack.html",
+      "related": ["basic-pack", "fun-pack", "stands-holder"]
+    },
+    "basic-pack": {
+      "title": "Basic Pack",
+      "price": "74.99",
+      "image": "assets/packs/shop-basic.png",
+      "href": "product-basic-pack.html",
+      "related": ["full-pack", "fun-pack", "keyring"]
+    },
+    "fun-pack": {
+      "title": "Fun Pack",
+      "price": "74.99",
+      "image": "assets/packs/shop-fun.png",
+      "href": "product-fun-pack.html",
+      "related": ["full-pack", "basic-pack", "stands-holder"]
+    },
+    "stands-holder": {
+      "title": "Stands & Holder",
+      "price": "19.99",
+      "image": "assets/photos/stands-holder.png",
+      "href": "product-stands-holder.html",
+      "related": ["full-pack", "basic-pack", "fun-pack"]
+    },
+    "keyring": {
+      "title": "Keyring with Lanyard",
+      "price": "19.99",
+      "image": "assets/photos/cards-hands.png",
+      "href": "product-keyring.html",
+      "related": ["full-pack", "basic-pack", "fun-pack"]
+    }
+  },
+  "reviews": [
+    {
+      "id": "adele-full",
+      "name": "Adele",
+      "role": "Store manager",
+      "initial": "A",
+      "verified": true,
+      "rating": 5,
+      "date": "2026-01-20",
+      "dateLabel": "20 January 2026",
+      "productId": "full-pack",
+      "productLabel": "Full Pack",
+      "body": "Incredible product!",
+      "photo": null
+    },
+    {
+      "id": "timi-full",
+      "name": "Timi",
+      "role": "Reviewer",
+      "initial": "T",
+      "verified": true,
+      "rating": 5,
+      "date": "2026-01-20",
+      "dateLabel": "20 January 2026",
+      "productId": "full-pack",
+      "productLabel": "Full Pack",
+      "body": "Clear visuals, waterproof quality, and easy for poolside routines. Our swimmers understand the steps much faster.",
+      "photo": "assets/flashcards/float-on-back.png"
+    },
+    {
+      "id": "sam-basic",
+      "name": "Sam",
+      "role": "Swim coach",
+      "initial": "S",
+      "verified": true,
+      "rating": 5,
+      "date": "2025-11-12",
+      "dateLabel": "12 November 2025",
+      "productId": "basic-pack",
+      "productLabel": "Basic Pack",
+      "body": "Perfect starter set. Great for introducing water confidence without overwhelming new swimmers.",
+      "photo": null
+    },
+    {
+      "id": "jordan-fun",
+      "name": "Jordan",
+      "role": "Parent",
+      "initial": "J",
+      "verified": true,
+      "rating": 5,
+      "date": "2025-10-03",
+      "dateLabel": "3 October 2025",
+      "productId": "fun-pack",
+      "productLabel": "Fun Pack",
+      "body": "The games cards keep sessions playful. My child asks for the duck and water pistol visuals every lesson.",
+      "photo": null
+    },
+    {
+      "id": "lee-stands",
+      "name": "Lee",
+      "role": "SEN support",
+      "initial": "L",
+      "verified": true,
+      "rating": 5,
+      "date": "2025-09-18",
+      "dateLabel": "18 September 2025",
+      "productId": "stands-holder",
+      "productLabel": "Stands & Holder",
+      "body": "First / Next / Then stands make poolside structure visible for everyone. Simple and effective.",
+      "photo": null
+    },
+    {
+      "id": "maya-keyring",
+      "name": "Maya",
+      "role": "Therapist",
+      "initial": "M",
+      "verified": true,
+      "rating": 5,
+      "date": "2025-08-22",
+      "dateLabel": "22 August 2025",
+      "productId": "keyring",
+      "productLabel": "Keyring with Lanyard",
+      "body": "Handy for carrying a small visual set on the go. The lanyard keeps cards ready without digging in a bag.",
+      "photo": null
+    }
+  ]
+}

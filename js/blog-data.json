@@ -1,0 +1,84 @@
+{
+  "categories": [
+    {
+      "id": "learning",
+      "label": "Learning",
+      "tone": "pink",
+      "blurb": "Ideas, research, and practice for clearer visual teaching.",
+      "image": "assets/photos/students.jpg"
+    },
+    {
+      "id": "impact",
+      "label": "Impact",
+      "tone": "amber",
+      "blurb": "Stories from pools, classrooms, and communities worldwide.",
+      "image": "assets/photos/ghana-impact.jpg"
+    },
+    {
+      "id": "resources",
+      "label": "Resources",
+      "tone": "slate",
+      "blurb": "Printables, guides, and tools you can use this week.",
+      "image": "assets/photos/hands-cards.png"
+    }
+  ],
+  "posts": [
+    {
+      "id": "visual-learning-101",
+      "slug": "blog-visual-learning-101.html",
+      "title": "Visual learning 101",
+      "excerpt": "Did you know that 65% of people are visual learners? How visuals help children, adults, and neurodiverse learners.",
+      "date": "2024-09-25",
+      "dateLabel": "25 Sep 2024",
+      "category": "learning",
+      "image": "assets/photos/students.jpg",
+      "minutes": 8,
+      "seedViews": 1280,
+      "prev": "breaking-language-barriers",
+      "next": "ghana-swimming"
+    },
+    {
+      "id": "ghana-swimming",
+      "slug": "blog-ghana-swimming.html",
+      "title": "PixtoLearn Swimming in Larabanga, Ghana",
+      "excerpt": "A memorable journey introducing waterproof visual swimming support at Bambenninye Community School.",
+      "date": "2024-08-27",
+      "dateLabel": "27 Aug 2024",
+      "category": "impact",
+      "image": "assets/photos/ghana-2.jpg",
+      "minutes": 6,
+      "seedViews": 2140,
+      "prev": "visual-learning-101",
+      "next": "breaking-language-barriers"
+    },
+    {
+      "id": "breaking-language-barriers",
+      "slug": "blog-breaking-language-barriers.html",
+      "title": "Breaking language barriers",
+      "excerpt": "How visual tools help travellers, teachers, and learners connect when words are not enough.",
+      "date": "2024-07-25",
+      "dateLabel": "25 Jul 2024",
+      "category": "learning",
+      "image": "assets/photos/ghana-1.jpg",
+      "minutes": 7,
+      "seedViews": 960,
+      "prev": "ghana-swimming",
+      "next": "visual-learning-101"
+    },
+    {
+      "id": "printable-trial",
+      "slug": "printable-trial.html",
+      "title": "Free swimming printable trial",
+      "excerpt": "Try a free swimming printable sample and see how waterproof visuals support clearer poolside sessions.",
+      "date": "2026-01-10",
+      "dateLabel": "Resource",
+      "category": "resources",
+      "image": "assets/photos/hands-cards.png",
+      "minutes": 2,
+      "seedViews": 540,
+      "resource": true,
+      "prev": null,
+      "next": null
+    }
+  ]
+}

@@ -85,6 +85,7 @@
   }
 
   initLeadPopup();
+  initHelpChat();
   initSwimWaves();
   initCardRailMomentum();
   initAccountPortal();
@@ -181,12 +182,24 @@
     });
   }
 
+  function ensureFloatStack() {
+    let stack = document.querySelector("[data-float-stack]");
+    if (stack) return stack;
+    stack = document.createElement("div");
+    stack.className = "float-stack";
+    stack.setAttribute("data-float-stack", "");
+    document.body.appendChild(stack);
+    return stack;
+  }
+
   function initLeadPopup() {
     if (path === "printable-trial.html") return;
-    const dismissed = localStorage.getItem("pixto_lead_dismissed");
-    const subscribed = localStorage.getItem("pixto_lead_subscribed");
-    if (dismissed === "1" || subscribed === "1") return;
-    if (sessionStorage.getItem("pixto_lead_shown") === "1") return;
+    const subscribed = localStorage.getItem("pixto_lead_subscribed") === "1";
+    const foreverOff = localStorage.getItem("pixto_lead_dismissed") === "1";
+    if (subscribed || foreverOff) return;
+
+    const minimized = localStorage.getItem("pixto_lead_minimized") === "1";
+    const stack = ensureFloatStack();
 
     const root = document.createElement("div");
     root.className = "lead-root";
@@ -228,26 +241,67 @@
     `;
     document.body.appendChild(root);
 
+    const miniWrap = document.createElement("div");
+    miniWrap.className = "lead-mini-wrap";
+    miniWrap.hidden = true;
+    miniWrap.innerHTML = `
+      <button type="button" class="lead-mini" data-lead-reopen aria-label="Open free gift signup">
+        <img src="assets/flashcards/float-on-back.png" alt="" />
+        <span class="lead-mini-copy">
+          <strong>Free gift</strong>
+          <span>Get your printable trial</span>
+        </span>
+      </button>
+      <button type="button" class="lead-mini-x" data-lead-forever aria-label="Dismiss forever">&times;</button>
+    `;
+    stack.prepend(miniWrap);
+
+    const showMini = () => {
+      miniWrap.hidden = false;
+      localStorage.setItem("pixto_lead_minimized", "1");
+    };
+
+    const hideMini = () => {
+      miniWrap.hidden = true;
+    };
+
     const open = () => {
+      hideMini();
       root.hidden = false;
       document.body.style.overflow = "hidden";
       sessionStorage.setItem("pixto_lead_shown", "1");
+      const modal = root.querySelector(".lead-modal");
+      if (modal) modal.scrollTop = 0;
       const first = root.querySelector('input[name="name"]');
       if (first) setTimeout(() => first.focus(), 180);
     };
 
-    const close = (persistDismiss) => {
+    const closeToCorner = () => {
       root.hidden = true;
       document.body.style.overflow = "";
-      if (persistDismiss) localStorage.setItem("pixto_lead_dismissed", "1");
+      showMini();
+    };
+
+    const closeForever = () => {
+      root.hidden = true;
+      document.body.style.overflow = "";
+      hideMini();
+      localStorage.setItem("pixto_lead_dismissed", "1");
+      localStorage.removeItem("pixto_lead_minimized");
     };
 
     root.querySelectorAll("[data-lead-close]").forEach((el) => {
-      el.addEventListener("click", () => close(true));
+      el.addEventListener("click", () => closeToCorner());
+    });
+
+    miniWrap.querySelector("[data-lead-reopen]").addEventListener("click", () => open());
+    miniWrap.querySelector("[data-lead-forever]").addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeForever();
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !root.hidden) close(true);
+      if (e.key === "Escape" && !root.hidden) closeToCorner();
     });
 
     const leadForm = root.querySelector("[data-lead-form]");
@@ -270,25 +324,82 @@
         localStorage.setItem("pixto_lead_leads", JSON.stringify(prev.slice(-50)));
       } catch (_) {}
       localStorage.setItem("pixto_lead_subscribed", "1");
+      localStorage.removeItem("pixto_lead_minimized");
       const note = root.querySelector("[data-lead-note]");
       note.hidden = false;
       note.textContent = "You're in. Opening your free printable trial...";
       setTimeout(() => {
-        close(false);
+        root.hidden = true;
+        document.body.style.overflow = "";
+        hideMini();
         window.location.href = "printable-trial.html";
       }, 700);
     });
 
-    // Delay so home hero breathes; also open on soft exit intent (desktop)
+    if (minimized) {
+      showMini();
+      return;
+    }
+
+    if (sessionStorage.getItem("pixto_lead_shown") === "1") {
+      showMini();
+      return;
+    }
+
     const delay = path === "index.html" || path === "" ? 5200 : 3500;
     setTimeout(open, delay);
 
     let exitArmed = true;
     document.addEventListener("mouseout", (e) => {
       if (!exitArmed || !root.hidden) return;
+      if (localStorage.getItem("pixto_lead_minimized") === "1") return;
       if (e.clientY > 12) return;
       exitArmed = false;
       open();
+    });
+  }
+
+  function initHelpChat() {
+    const stack = ensureFloatStack();
+    const wrap = document.createElement("div");
+    wrap.className = "help-chat";
+    wrap.innerHTML = `
+      <div class="help-chat-panel" hidden data-help-panel>
+        <div class="help-chat-head">
+          <strong>Need help?</strong>
+          <button type="button" aria-label="Close help" data-help-close>&times;</button>
+        </div>
+        <div class="help-chat-body">
+          <p>Ask about packs, the app, or how to use the cards. We usually reply within one working day.</p>
+          <div class="help-chat-actions">
+            <a class="primary" href="contact.html">Contact form</a>
+            <a class="ghost" href="mailto:hello@pixtolearn.com?subject=PixtoLearn%20help">Email hello@pixtolearn.com</a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="help-chat-btn" aria-label="Open help chat" data-help-toggle>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 18.5V7.8A2.8 2.8 0 0 1 7.8 5h8.4A2.8 2.8 0 0 1 19 7.8v6.4A2.8 2.8 0 0 1 16.2 17H9.2L5 18.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9 10h6M9 13h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    `;
+    stack.appendChild(wrap);
+
+    const panel = wrap.querySelector("[data-help-panel]");
+    const toggle = wrap.querySelector("[data-help-toggle]");
+    const closeBtn = wrap.querySelector("[data-help-close]");
+
+    const setOpen = (open) => {
+      panel.hidden = !open;
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close help chat" : "Open help chat");
+    };
+
+    toggle.addEventListener("click", () => setOpen(panel.hidden));
+    closeBtn.addEventListener("click", () => setOpen(false));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !panel.hidden) setOpen(false);
     });
   }
 
