@@ -3319,3 +3319,91 @@ a.post:hover {
   .pack-nav-prev { left: 0.2rem; }
   .pack-nav-next { right: 0.2rem; }
 }
+
+/* Shop: App membership panel (not a pack card) */
+.shop-app {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(20, 36, 43, 0.08);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(20, 36, 43, 0.05);
+}
+
+.shop-app-media {
+  min-height: 240px;
+  height: 100%;
+  background: #eef4f6;
+}
+
+.shop-app-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.shop-app-copy {
+  padding: clamp(1.35rem, 3vw, 2.1rem) clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.shop-app-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.shop-app-badge img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 8px 18px rgba(20, 36, 43, 0.1);
+}
+
+.shop-app-copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+  margin: 0 0 0.55rem;
+}
+
+.shop-app-copy .lede {
+  margin: 0 0 1rem;
+  max-width: 42ch;
+}
+
+.shop-app-price {
+  margin: 0 0 1.15rem;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+.shop-app-price strong {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 800px) {
+  .shop-app {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-app-media {
+    min-height: 200px;
+    max-height: 240px;
+  }
+}
