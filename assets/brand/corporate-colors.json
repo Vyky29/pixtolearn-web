@@ -1,0 +1,24 @@
+{
+  "name": "PixtoLearn corporate palette",
+  "source": "Official logo mark (Logo PIX TO LEARN_Color / symbol.png)",
+  "extracted": "2026-07-28",
+  "colors": {
+    "pink": { "hex": "#D03860", "role": "Magenta keyring tag in logo", "deep": "#B82858" },
+    "amber": { "hex": "#E8A840", "role": "Gold middle card in logo", "bright": "#F0B040" },
+    "slate": { "hex": "#88B0C0", "role": "Blue-slate right card in logo", "deep": "#5F8A9A" },
+    "ink": { "hex": "#14242B", "role": "Primary text / premium apparel base" },
+    "foam": { "hex": "#F4F8F9", "role": "Soft page background" }
+  },
+  "apparelGuidance": {
+    "base": ["ink navy", "soft white", "light mist grey", "charcoal"],
+    "accent": "Use pink, amber, or slate only for small logo embroidery or piping, never full neon garments",
+    "props": "Show real PixtoLearn keyring cards when characters hold visuals"
+  },
+  "assets": {
+    "logoColorSvg": "assets/brand/logo-color.svg",
+    "logoMonoSvg": "assets/brand/logo-mono.svg",
+    "keyringPacks": "assets/packs/keyring/1-5",
+    "swimmingPacksJpg": "assets/packs/swimming-jpg/pack-1-4",
+    "keyringWebSamples": "assets/packs/keyring-web"
+  }
+}

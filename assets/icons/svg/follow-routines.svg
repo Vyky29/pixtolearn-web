@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <rect x="6" y="14" width="12" height="12" rx="3" fill="#4CB8B0" opacity=".9"/>
-  <rect x="22" y="14" width="12" height="12" rx="3" fill="#E9AE2E" opacity=".95"/>
-  <rect x="38" y="14" width="12" height="12" rx="3" fill="#DD4596" opacity=".9"/>
+  <rect x="6" y="14" width="12" height="12" rx="3" fill="#88B0C0" opacity=".9"/>
+  <rect x="22" y="14" width="12" height="12" rx="3" fill="#E8A840" opacity=".95"/>
+  <rect x="38" y="14" width="12" height="12" rx="3" fill="#D03860" opacity=".9"/>
   <path d="M18 20h4M34 20h4" stroke="#14242B" stroke-width="1.6" stroke-linecap="round"/>
   <path d="M12 34v10M28 34v10M44 34v10" stroke="#14242B" stroke-width="1.8" stroke-linecap="round"/>
-  <circle cx="12" cy="48" r="3" fill="#4CB8B0"/>
-  <circle cx="28" cy="48" r="3" fill="#E9AE2E"/>
-  <circle cx="44" cy="48" r="3" fill="#DD4596"/>
+  <circle cx="12" cy="48" r="3" fill="#88B0C0"/>
+  <circle cx="28" cy="48" r="3" fill="#E8A840"/>
+  <circle cx="44" cy="48" r="3" fill="#D03860"/>
 </svg>

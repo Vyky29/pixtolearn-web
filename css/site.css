@@ -1,13 +1,18 @@
 /* PixtoLearn marketing site - premium static */
+/* Corporate palette extracted from official logo mark (symbol.png / Logo Color) */
 :root {
-  --pink: #dd4596;
-  --amber: #e9ae2e;
-  --teal: #4cb8b0;
-  --teal-deep: #2a8f88;
+  --pink: #d03860;          /* logo magenta / keyring tag */
+  --pink-deep: #b82858;
+  --amber: #e8a840;         /* logo gold card */
+  --amber-bright: #f0b040;
+  --slate: #88b0c0;         /* logo blue-slate card (primary cool) */
+  --slate-deep: #5f8a9a;
+  --teal: #88b0c0;          /* alias: cool brand tone = slate, not aqua */
+  --teal-deep: #5f8a9a;
   --ink: #14242b;
   --ink-soft: #3a5159;
-  --foam: #f3faf9;
-  --mist: #e7f4f2;
+  --foam: #f4f8f9;
+  --mist: #e8f1f4;
   --sand: #fff8eb;
   --line: rgba(20, 36, 43, 0.1);
   --white: #ffffff;
