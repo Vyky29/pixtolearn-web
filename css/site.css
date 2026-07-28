@@ -270,26 +270,27 @@ h3,
 }
 
 .hero-home {
-  align-items: center;
+  align-items: end;
 }
 
 .hero-media {
   position: absolute;
   inset: 0;
+  background: #1a333a;
 }
 
 .hero-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 28%;
-  transform: scale(1.04);
-  animation: heroKen 18s ease-in-out infinite alternate;
+  object-position: center 35%;
+  transform: none;
+  animation: none;
 }
 
-@keyframes heroKen {
-  from { transform: scale(1.04) translate3d(0, 0, 0); }
-  to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
+.hero-home .hero-media img {
+  object-fit: cover;
+  object-position: center 40%;
 }
 
 .hero-media::after,
@@ -298,12 +299,16 @@ h3,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(20, 36, 43, 0.28) 0%, rgba(20, 36, 43, 0.42) 45%, rgba(20, 36, 43, 0.78) 100%),
-    linear-gradient(90deg, rgba(20, 36, 43, 0.35), transparent 60%);
+    linear-gradient(180deg, rgba(20, 36, 43, 0.12) 0%, rgba(20, 36, 43, 0.22) 50%, rgba(20, 36, 43, 0.7) 100%);
 }
 
 .hero-home .hero-media::after {
   display: none;
+}
+
+.hero-home .hero-shade {
+  background:
+    linear-gradient(180deg, rgba(20, 36, 43, 0.05) 0%, rgba(20, 36, 43, 0.12) 42%, rgba(20, 36, 43, 0.72) 100%);
 }
 
 .hero-content {
@@ -322,16 +327,18 @@ h3,
 
 .hero-content-center .lede,
 .hero-content-center .hero-sub {
-  max-width: 36rem;
+  max-width: 38rem;
 }
 
 .hero h1,
 .hero-title-anim {
-  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  font-size: clamp(2.2rem, 5.8vw, 4rem);
   max-width: 14ch;
-  margin: 0.55rem 0 0.85rem;
+  margin: 0.35rem 0 0.75rem;
   text-transform: uppercase;
   letter-spacing: -0.03em;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.28);
 }
 
 .hero-content-center h1,
@@ -341,15 +348,16 @@ h3,
 
 .hero-sub {
   margin: 0;
-  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.7vw, 1.05rem);
   font-weight: 650;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.93);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.22);
 }
 
 .hero .lede {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.18rem;
 }
 
@@ -370,20 +378,6 @@ h3,
   color: var(--amber);
 }
 
-.brand-mark-pop {
-  background: linear-gradient(90deg, var(--amber), #fff, var(--teal));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shimmer 5s ease infinite;
-  background-size: 200% 100%;
-}
-
-@keyframes shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
 .btn-row-hero {
   justify-content: center;
 }
@@ -391,11 +385,11 @@ h3,
 .btn-ghost-light {
   border-color: rgba(255, 255, 255, 0.55);
   color: #fff;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-ghost-light:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.2);
   border-color: #fff;
 }
 
@@ -513,8 +507,6 @@ h3,
 .color-chip.teal { background: var(--teal); }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-media img,
-  .brand-mark-pop,
   .btn-pulse,
   .wave-a,
   .wave-b,
@@ -1368,7 +1360,7 @@ section {
 
 .hero-page .hero-media img {
   object-position: center 35%;
-  animation: heroKen 22s ease-in-out infinite alternate;
+  animation: none;
 }
 
 .hero-page .hero-content {
