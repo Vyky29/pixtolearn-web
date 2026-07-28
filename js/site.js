@@ -26,15 +26,6 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && header.classList.contains("open")) closeNav();
     });
-    document.addEventListener(
-      "pointerdown",
-      (e) => {
-        if (!header.classList.contains("open")) return;
-        if (header.contains(e.target)) return;
-        closeNav();
-      },
-      true
-    );
   }
 
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
