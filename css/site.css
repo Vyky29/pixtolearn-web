@@ -427,6 +427,10 @@ h3,
   justify-content: center;
 }
 
+.hero-content-home .btn-row-hero {
+  justify-content: flex-start;
+}
+
 .btn-ghost-light {
   border-color: rgba(255, 255, 255, 0.55);
   color: #fff;
