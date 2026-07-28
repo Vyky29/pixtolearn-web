@@ -5,14 +5,18 @@
     const closeNav = () => {
       header.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
       document.body.classList.remove("nav-open");
     };
     const openNav = () => {
       header.classList.add("open");
       toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Close menu");
       document.body.classList.add("nav-open");
     };
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       if (header.classList.contains("open")) closeNav();
       else openNav();
     });
@@ -22,10 +26,15 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && header.classList.contains("open")) closeNav();
     });
-    document.addEventListener("click", (e) => {
-      if (!header.classList.contains("open")) return;
-      if (!header.contains(e.target)) closeNav();
-    });
+    document.addEventListener(
+      "pointerdown",
+      (e) => {
+        if (!header.classList.contains("open")) return;
+        if (header.contains(e.target)) return;
+        closeNav();
+      },
+      true
+    );
   }
 
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
