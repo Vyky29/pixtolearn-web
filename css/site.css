@@ -2876,26 +2876,44 @@ a.post:hover {
 
 .flash-panel {
   margin: 0;
-  background: #fff;
-  border: 1px solid rgba(20, 36, 43, 0.08);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(20, 36, 43, 0.07);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
 }
 
 .flash-panel img {
   width: 100%;
   display: block;
   background: #f4f8f9;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(20, 36, 43, 0.1);
 }
 
 .flash-panel-copy {
-  padding: 1.05rem 1.15rem 1.2rem;
-  border-top: 1px solid rgba(20, 36, 43, 0.06);
+  margin-top: 0.85rem;
+  padding: 1.05rem 1.15rem 1.15rem;
+  background: #fff;
+  border: 1px solid rgba(20, 36, 43, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(20, 36, 43, 0.05);
+  position: relative;
+}
+
+.flash-panel-copy::before {
+  content: "";
+  position: absolute;
+  left: 1.15rem;
+  right: 1.15rem;
+  top: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink), var(--amber), var(--slate));
 }
 
 .flash-kicker {
-  margin: 0 0 0.3rem;
+  margin: 0.35rem 0 0.3rem;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
