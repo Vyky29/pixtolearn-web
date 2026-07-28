@@ -2944,13 +2944,60 @@ a.post:hover {
   }
 }
 
+.impact-story {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  margin: 0.4rem 0 1.6rem;
+}
+
+.impact-photos {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 0.75rem;
+}
+
+.impact-photo {
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 44px rgba(20, 36, 43, 0.12);
+  background: #14242b;
+}
+
+.impact-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 280px;
+}
+
+.impact-photo-main img {
+  object-position: center 35%;
+}
+
+.impact-photo-side img {
+  object-position: center 40%;
+}
+
 .impact-copy {
-  max-width: 46rem;
-  margin: 0 auto 1.4rem;
-  text-align: center;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+  background: #fff;
+  border: 1px solid rgba(20, 36, 43, 0.08);
+  border-radius: 22px;
+  padding: 1.35rem 1.4rem;
+  box-shadow: 0 16px 36px rgba(20, 36, 43, 0.06);
+  display: grid;
+  align-content: center;
+  gap: 0.85rem;
 }
 
 .impact-copy p {
+  margin: 0;
   color: var(--ink-soft);
   line-height: 1.55;
 }
@@ -2986,6 +3033,15 @@ a.post:hover {
   .system-grid,
   .impact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .impact-story,
+  .impact-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-photo img {
+    min-height: 240px;
   }
 
   .swim-users {
