@@ -2964,31 +2964,27 @@ a.post:hover {
   background: #f4f8f9;
 }
 
-.flash-traits li:nth-child(2) img {
-  object-fit: contain;
-  background: #eef3f5;
-  padding: 0.45rem;
-}
-
 .flash-trait-a5 .a5-stage {
+  --a5-line: 2px;
+  --a5-cap: 10px;
   position: relative;
   aspect-ratio: 1;
-  border-radius: 12px;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(255,255,255,0.95), transparent 50%),
-    linear-gradient(160deg, rgba(136,176,192,0.2), rgba(232,168,64,0.1));
-  overflow: hidden;
+  background: transparent;
+  overflow: visible;
   display: grid;
   place-items: center;
+  padding: 0.35rem 1.1rem 1.35rem 0.35rem;
+  box-sizing: border-box;
 }
 
 .a5-card {
   width: auto !important;
-  height: 72% !important;
+  height: 100% !important;
+  max-height: 100%;
   aspect-ratio: 148 / 210;
-  object-fit: cover;
-  border-radius: 8px !important;
-  box-shadow: 0 12px 28px rgba(20, 36, 43, 0.16);
+  object-fit: cover !important;
+  border-radius: 6px !important;
+  box-shadow: 0 10px 22px rgba(20, 36, 43, 0.14);
   padding: 0 !important;
   background: #fff !important;
 }
@@ -2999,19 +2995,19 @@ a.post:hover {
 }
 
 .a5-dim-w {
-  left: 18%;
+  left: 12%;
   right: 18%;
-  bottom: 7%;
+  bottom: 0.15rem;
   height: 22px;
   display: grid;
   place-items: center;
 }
 
 .a5-dim-h {
-  top: 14%;
-  bottom: 18%;
-  right: 6%;
-  width: 28px;
+  top: 0.35rem;
+  bottom: 1.35rem;
+  right: 0.15rem;
+  width: 22px;
   display: grid;
   place-items: center;
 }
@@ -3019,7 +3015,7 @@ a.post:hover {
 .a5-dim .a5-line {
   position: absolute;
   background: var(--pink);
-  border-radius: 999px;
+  border-radius: 0;
   transform-origin: center;
 }
 
@@ -3027,7 +3023,8 @@ a.post:hover {
   left: 0;
   right: 0;
   top: 50%;
-  height: 2px;
+  height: var(--a5-line);
+  margin-top: calc(var(--a5-line) / -2);
   transform: scaleX(0);
   animation: a5GrowX 1.4s ease forwards 0.25s;
 }
@@ -3036,8 +3033,9 @@ a.post:hover {
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 2px;
-  transform: translateX(-50%) scaleY(0);
+  width: var(--a5-line);
+  margin-left: calc(var(--a5-line) / -2);
+  transform: scaleY(0);
   animation: a5GrowY 1.4s ease forwards 0.45s;
 }
 
@@ -3048,14 +3046,14 @@ a.post:hover {
   content: "";
   position: absolute;
   background: var(--pink);
-  border-radius: 1px;
+  border-radius: 0;
 }
 
 .a5-dim-w .a5-line::before,
 .a5-dim-w .a5-line::after {
-  width: 2px;
-  height: 10px;
-  top: -4px;
+  width: var(--a5-line);
+  height: var(--a5-cap);
+  top: calc((var(--a5-cap) - var(--a5-line)) / -2);
 }
 
 .a5-dim-w .a5-line::before { left: 0; }
@@ -3063,9 +3061,9 @@ a.post:hover {
 
 .a5-dim-h .a5-line::before,
 .a5-dim-h .a5-line::after {
-  height: 2px;
-  width: 10px;
-  left: -4px;
+  height: var(--a5-line);
+  width: var(--a5-cap);
+  left: calc((var(--a5-cap) - var(--a5-line)) / -2);
 }
 
 .a5-dim-h .a5-line::before { top: 0; }
@@ -3098,8 +3096,8 @@ a.post:hover {
 }
 
 @keyframes a5GrowY {
-  from { transform: translateX(-50%) scaleY(0); }
-  to { transform: translateX(-50%) scaleY(1); }
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
 }
 
 @keyframes a5FadeIn {
@@ -3114,9 +3112,6 @@ a.post:hover {
     animation: none;
     opacity: 1;
     transform: none;
-  }
-  .a5-dim-h .a5-line {
-    transform: translateX(-50%);
   }
 }
 
