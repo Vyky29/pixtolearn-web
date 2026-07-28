@@ -1,21 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <circle cx="32" cy="32" r="24" fill="#88B0C0" opacity=".14"/>
-  <!-- globe -->
-  <circle cx="32" cy="22" r="9" fill="#88B0C0" opacity=".22" stroke="#14242B" stroke-width="1.6"/>
-  <ellipse cx="32" cy="22" rx="3.6" ry="9" stroke="#88B0C0" stroke-width="1.3"/>
-  <path d="M23.5 22h17M24.2 18h15.6M24.2 26h15.6" stroke="#14242B" stroke-width="1.15" stroke-linecap="round" opacity=".75"/>
-  <!-- speech bubbles -->
-  <rect x="8" y="8" width="11" height="8" rx="3" fill="#fff" stroke="#14242B" stroke-width="1.3"/>
-  <path d="M12.5 12.2h2.2M12.5 14.2h3.5" stroke="#D03860" stroke-width="1.3" stroke-linecap="round"/>
-  <rect x="45" y="7" width="11" height="8" rx="3" fill="#fff" stroke="#14242B" stroke-width="1.3"/>
-  <circle cx="48.2" cy="11" r="1" fill="#E8A840"/><circle cx="50.5" cy="11" r="1" fill="#88B0C0"/><circle cx="52.8" cy="11" r="1" fill="#D03860"/>
-  <rect x="48" y="18" width="10" height="7.5" rx="3" fill="#fff" stroke="#14242B" stroke-width="1.3"/>
-  <path d="M51 20.2h4M51 22.4h2.8" stroke="#88B0C0" stroke-width="1.25" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="26" fill="#88B0C0" opacity=".16"/>
+  <!-- globe behind -->
+  <circle cx="32" cy="24" r="11" fill="#88B0C0" opacity=".22" stroke="#14242B" stroke-width="1.55"/>
+  <ellipse cx="32" cy="24" rx="4.2" ry="11" stroke="#88B0C0" stroke-width="1.25"/>
+  <path d="M21.5 24h21M22.2 19h19.6M22.2 29h19.6" stroke="#14242B" stroke-width="1.1" stroke-linecap="round" opacity=".7"/>
+  <!-- speech: 文 -->
+  <rect x="7" y="6" width="13" height="9.5" rx="3.2" fill="#D03860" opacity=".9" stroke="#14242B" stroke-width="1.25"/>
+  <text x="13.5" y="13.2" text-anchor="middle" font-size="6.5" font-family="Figtree, Arial, sans-serif" font-weight="700" fill="#fff">文</text>
+  <!-- speech: A -->
+  <rect x="25.5" y="4" width="13" height="9.5" rx="3.2" fill="#fff" stroke="#14242B" stroke-width="1.25"/>
+  <text x="32" y="11.3" text-anchor="middle" font-size="7" font-family="Figtree, Arial, sans-serif" font-weight="700" fill="#14242B">A</text>
+  <!-- speech: ... -->
+  <rect x="44" y="6" width="13" height="9.5" rx="3.2" fill="#fff" stroke="#14242B" stroke-width="1.25"/>
+  <circle cx="47.2" cy="10.7" r="1.05" fill="#E8A840"/>
+  <circle cx="50.5" cy="10.7" r="1.05" fill="#88B0C0"/>
+  <circle cx="53.8" cy="10.7" r="1.05" fill="#D03860"/>
   <!-- three people -->
-  <circle cx="17" cy="40" r="4.2" fill="#88B0C0" opacity=".35" stroke="#14242B" stroke-width="1.5"/>
-  <path d="M9.5 54c1-5.5 3.4-8.2 7.5-8.2s6.5 2.7 7.5 8.2" stroke="#14242B" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="32" cy="38" r="5" fill="#E8A840" opacity=".3" stroke="#14242B" stroke-width="1.6"/>
-  <path d="M22.5 55c1.3-6.5 4.5-9.5 9.5-9.5s8.2 3 9.5 9.5" stroke="#14242B" stroke-width="1.6" stroke-linecap="round"/>
-  <circle cx="47" cy="40" r="4.2" fill="#D03860" opacity=".22" stroke="#14242B" stroke-width="1.5"/>
-  <path d="M39.5 54c1-5.5 3.4-8.2 7.5-8.2s6.5 2.7 7.5 8.2" stroke="#14242B" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="16" cy="40" r="4.3" fill="#88B0C0" opacity=".4" stroke="#14242B" stroke-width="1.55"/>
+  <path d="M8.8 54c.95-5.5 3.2-8.1 7.2-8.1s6.25 2.6 7.2 8.1" stroke="#14242B" stroke-width="1.55" stroke-linecap="round"/>
+  <circle cx="32" cy="38" r="5" fill="#E8A840" opacity=".32" stroke="#14242B" stroke-width="1.65"/>
+  <path d="M22.8 55c1.3-6.6 4.5-9.6 9.2-9.6s7.9 3 9.2 9.6" stroke="#14242B" stroke-width="1.65" stroke-linecap="round"/>
+  <circle cx="48" cy="40" r="4.3" fill="#D03860" opacity=".22" stroke="#14242B" stroke-width="1.55"/>
+  <path d="M40.8 54c.95-5.5 3.2-8.1 7.2-8.1s6.25 2.6 7.2 8.1" stroke="#14242B" stroke-width="1.55" stroke-linecap="round"/>
 </svg>
