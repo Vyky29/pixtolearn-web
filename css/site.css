@@ -2869,53 +2869,73 @@ a.post:hover {
 .flash-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  align-items: start;
-  margin: 0.35rem auto 0;
-  max-width: 720px;
+  gap: 1.15rem;
+  align-items: stretch;
+  margin-top: 0.35rem;
 }
 
 .flash-panel {
   margin: 0;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  overflow: visible;
-  box-shadow: none;
+  background: #fff;
+  border: 1px solid rgba(20, 36, 43, 0.08);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(20, 36, 43, 0.05);
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
-.flash-panel img {
-  width: 100%;
+.flash-panel-media {
+  display: grid;
+  place-items: center;
+  padding: 1.35rem 1.5rem 0.85rem;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,0.95), transparent 55%),
+    linear-gradient(165deg, #eef4f6, #f7fafb);
+}
+
+.flash-panel-media img {
+  width: auto;
+  max-width: min(100%, 280px);
+  height: auto;
+  max-height: 360px;
   display: block;
-  background: #f4f8f9;
-  border-radius: 14px;
-  box-shadow: 0 12px 28px rgba(20, 36, 43, 0.09);
+  border-radius: 10px;
+  box-shadow: 0 16px 36px rgba(20, 36, 43, 0.14);
+  background: #fff;
 }
 
 .flash-panel-copy {
-  margin-top: 0.7rem;
-  padding: 0.85rem 0.95rem 0.95rem;
-  background: #fff;
-  border: 1px solid rgba(20, 36, 43, 0.1);
-  border-radius: 14px;
-  box-shadow: 0 10px 22px rgba(20, 36, 43, 0.04);
+  margin: 0;
+  padding: 0.15rem 1.25rem 1.3rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   position: relative;
 }
 
 .flash-panel-copy::before {
   content: "";
-  position: absolute;
-  left: 0.95rem;
-  right: 0.95rem;
-  top: 0;
+  display: block;
+  width: 2.75rem;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--pink), var(--amber), var(--slate));
+  margin: 0 0 0.75rem;
+  background: var(--pink);
+}
+
+.flash-panel-path .flash-panel-copy::before {
+  background: var(--amber);
+}
+
+.flash-panel-path .flash-kicker {
+  color: #b37a12;
 }
 
 .flash-kicker {
-  margin: 0.3rem 0 0.25rem;
-  font-size: 0.68rem;
+  margin: 0 0 0.25rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2924,64 +2944,64 @@ a.post:hover {
 
 .flash-panel-copy h3 {
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   letter-spacing: -0.02em;
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.4rem;
 }
 
 .flash-panel-copy p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 0.88rem;
-  line-height: 1.45;
-  max-width: 34ch;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  max-width: 38ch;
 }
 
 .flash-traits {
   list-style: none;
-  margin: 1.1rem auto 0;
+  margin: 1.15rem 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  max-width: 720px;
+  gap: 1rem;
 }
 
 .flash-traits li {
   background: #fff;
   border: 1px solid rgba(20, 36, 43, 0.08);
-  border-radius: 14px;
-  padding: 0.55rem 0.55rem 0.75rem;
-  box-shadow: 0 8px 18px rgba(20, 36, 43, 0.04);
+  border-radius: 22px;
+  padding: 0.85rem 0.85rem 1.05rem;
+  box-shadow: 0 14px 34px rgba(20, 36, 43, 0.05);
   display: grid;
-  gap: 0.28rem;
+  gap: 0.4rem;
 }
 
 .flash-traits img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 14px;
   display: block;
-  background: #f4f8f9;
+  background: #eef4f6;
 }
 
 .flash-trait-a5 .a5-stage {
-  --a5-line: 2px;
-  --a5-cap: 10px;
+  --a5-line: 3px;
+  --a5-cap: 12px;
   position: relative;
-  aspect-ratio: 1;
-  background: transparent;
-  overflow: visible;
+  aspect-ratio: 4 / 3;
+  background: #eef4f6;
+  border-radius: 14px;
+  overflow: hidden;
   display: grid;
   place-items: center;
-  padding: 0.35rem 1.1rem 1.35rem 0.35rem;
+  padding: 0.55rem 1.35rem 1.15rem 0.7rem;
   box-sizing: border-box;
 }
 
 .a5-card {
   width: auto !important;
-  height: 100% !important;
+  height: 92% !important;
   max-height: 100%;
   aspect-ratio: 148 / 210;
   object-fit: cover !important;
@@ -2997,19 +3017,19 @@ a.post:hover {
 }
 
 .a5-dim-w {
-  left: 12%;
-  right: 18%;
-  bottom: 0.15rem;
+  left: 18%;
+  right: 22%;
+  bottom: 0.35rem;
   height: 22px;
   display: grid;
   place-items: center;
 }
 
 .a5-dim-h {
-  top: 0.35rem;
-  bottom: 1.35rem;
-  right: 0.15rem;
-  width: 22px;
+  top: 8%;
+  bottom: 18%;
+  right: 0.4rem;
+  width: 24px;
   display: grid;
   place-items: center;
 }
@@ -3076,10 +3096,10 @@ a.post:hover {
   z-index: 2;
   background: #fff;
   color: var(--pink);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  padding: 0.18rem 0.45rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 999px;
   border: 1px solid rgba(208, 56, 96, 0.25);
   box-shadow: 0 6px 14px rgba(20, 36, 43, 0.08);
@@ -3119,14 +3139,14 @@ a.post:hover {
 
 .flash-traits strong {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   letter-spacing: -0.01em;
   padding: 0 0.2rem;
 }
 
 .flash-traits span {
   color: var(--ink-soft);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 0 0.2rem 0.1rem;
 }
 
@@ -3134,6 +3154,11 @@ a.post:hover {
   .flash-duo,
   .flash-traits {
     grid-template-columns: 1fr;
+  }
+
+  .flash-panel-media img {
+    max-width: min(100%, 240px);
+    max-height: 320px;
   }
 }
 
