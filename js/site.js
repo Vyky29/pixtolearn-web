@@ -69,6 +69,9 @@
   initCardRailMomentum();
   initAccountPortal();
   initVideoCards();
+  initSwimUsers();
+  initPackCarousel();
+  initFlashStage();
 
   function initSwimWaves() {
     const host = document.querySelector("[data-swim-waves]");
@@ -417,7 +420,12 @@
       playBtn.addEventListener("click", () => {
         pauseOthers(card);
         card.classList.add("is-playing");
-        video.play().catch(() => {});
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(() => {
+            card.classList.remove("is-playing");
+          });
+        }
       });
 
       video.addEventListener("play", () => {
@@ -425,9 +433,88 @@
         card.classList.add("is-playing");
       });
 
+      video.addEventListener("pause", () => {
+        if (video.ended) return;
+      });
+
       video.addEventListener("ended", () => {
         card.classList.remove("is-playing");
         video.currentTime = 0;
+      });
+    });
+  }
+
+  function initSwimUsers() {
+    const root = document.querySelector("[data-swim-users]");
+    if (!root) return;
+    const tabs = Array.from(root.querySelectorAll("[data-user]"));
+    const panels = Array.from(root.querySelectorAll("[data-user-panel]"));
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const key = tab.getAttribute("data-user");
+        tabs.forEach((t) => {
+          const on = t === tab;
+          t.classList.toggle("is-active", on);
+          t.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        panels.forEach((p) => {
+          const on = p.getAttribute("data-user-panel") === key;
+          p.hidden = !on;
+        });
+      });
+    });
+  }
+
+  function initPackCarousel() {
+    const root = document.querySelector("[data-pack-carousel]");
+    if (!root) return;
+    const slides = Array.from(root.querySelectorAll("[data-pack-slide]"));
+    const dots = Array.from(root.querySelectorAll("[data-pack-dot]"));
+    const prev = root.querySelector(".pack-nav-prev");
+    const next = root.querySelector(".pack-nav-next");
+    if (!slides.length) return;
+    let index = Math.max(
+      0,
+      slides.findIndex((s) => s.classList.contains("is-active"))
+    );
+
+    function stopVideos() {
+      root.querySelectorAll(".video-el").forEach((v) => {
+        v.pause();
+        v.currentTime = 0;
+      });
+      root.querySelectorAll("[data-video-card]").forEach((c) => c.classList.remove("is-playing"));
+    }
+
+    function show(i) {
+      index = (i + slides.length) % slides.length;
+      stopVideos();
+      slides.forEach((s, n) => s.classList.toggle("is-active", n === index));
+      dots.forEach((d, n) => d.classList.toggle("is-active", n === index));
+    }
+
+    if (prev) prev.addEventListener("click", () => show(index - 1));
+    if (next) next.addEventListener("click", () => show(index + 1));
+    dots.forEach((d) => {
+      d.addEventListener("click", () => show(Number(d.getAttribute("data-pack-dot")) || 0));
+    });
+    show(index);
+  }
+
+  function initFlashStage() {
+    const root = document.querySelector("[data-flash-stage]");
+    if (!root) return;
+    const buttons = Array.from(root.querySelectorAll("[data-flash-side]"));
+    const panels = Array.from(root.querySelectorAll("[data-flash-panel]"));
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const side = btn.getAttribute("data-flash-side");
+        buttons.forEach((b) => b.classList.toggle("is-active", b === btn));
+        panels.forEach((p) => {
+          const on = p.getAttribute("data-flash-panel") === side;
+          p.hidden = !on;
+          p.classList.toggle("is-active", on);
+        });
       });
     });
   }
