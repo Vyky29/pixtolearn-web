@@ -71,7 +71,6 @@
   initVideoCards();
   initSwimUsers();
   initPackCarousel();
-  initFlashStage();
 
   function initSwimWaves() {
     const host = document.querySelector("[data-swim-waves]");
@@ -499,23 +498,5 @@
       d.addEventListener("click", () => show(Number(d.getAttribute("data-pack-dot")) || 0));
     });
     show(index);
-  }
-
-  function initFlashStage() {
-    const root = document.querySelector("[data-flash-stage]");
-    if (!root) return;
-    const buttons = Array.from(root.querySelectorAll("[data-flash-side]"));
-    const panels = Array.from(root.querySelectorAll("[data-flash-panel]"));
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const side = btn.getAttribute("data-flash-side");
-        buttons.forEach((b) => b.classList.toggle("is-active", b === btn));
-        panels.forEach((p) => {
-          const on = p.getAttribute("data-flash-panel") === side;
-          p.hidden = !on;
-          p.classList.toggle("is-active", on);
-        });
-      });
-    });
   }
 })();
