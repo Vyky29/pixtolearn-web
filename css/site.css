@@ -1353,3 +1353,63 @@ section {
 .hero-page .hero-content {
   z-index: 2;
 }
+
+
+/* Blog article */
+.article {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.2rem) 0 4rem;
+}
+
+.article .meta {
+  color: var(--ink-soft);
+  font-weight: 650;
+  font-size: 0.92rem;
+  margin-bottom: 1.25rem;
+}
+
+.article .content {
+  display: grid;
+  gap: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.article .content p { margin: 0; color: var(--ink-soft); }
+.article .content h2,
+.article .content h3,
+.article .content h4,
+.article .content h5 {
+  margin: 1.1rem 0 0.2rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+}
+.article .content ul,
+.article .content ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--ink-soft);
+}
+.article .content li + li { margin-top: 0.35rem; }
+.article .content img {
+  width: 100%;
+  border-radius: 14px;
+  margin: 0.5rem 0;
+}
+.article .content figure { margin: 0.5rem 0; }
+.article .back {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  font-weight: 740;
+  color: var(--teal-deep);
+}
+
+a.post {
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+a.post:hover {
+  transform: translateY(-3px);
+  border-color: rgba(76, 184, 176, 0.5);
+}
