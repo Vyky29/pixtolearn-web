@@ -783,7 +783,7 @@ section {
 
 .audience figure:hover {
   transform: translateY(-3px);
-  border-color: rgba(221, 69, 150, 0.35);
+  border-color: rgba(136, 176, 192, 0.55);
 }
 
 .audience img {
@@ -791,7 +791,7 @@ section {
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 12px;
-  background: #eaf7f5;
+  background: #eef4f6;
 }
 
 .audience figcaption {
@@ -874,13 +874,13 @@ section {
 }
 
 .badge.pink {
-  background: rgba(221, 69, 150, 0.15);
-  color: #a1286d;
+  background: rgba(208, 56, 96, 0.14);
+  color: #a1284c;
 }
 
 .badge.teal {
-  background: rgba(76, 184, 176, 0.18);
-  color: #1f6f6a;
+  background: rgba(136, 176, 192, 0.22);
+  color: #3f6878;
 }
 
 /* Plans */
