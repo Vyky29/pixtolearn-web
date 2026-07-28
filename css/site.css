@@ -159,9 +159,9 @@ body::before {
 }
 
 .nav-links a {
-  padding: 0.55rem 0.75rem;
+  padding: 0.5rem 0.62rem;
   border-radius: 999px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--ink-soft);
   transition: color 0.2s ease, background 0.2s ease;
@@ -298,7 +298,7 @@ h3,
 
 .hero-home {
   align-items: center;
-  min-height: 100svh;
+  min-height: min(72svh, 640px);
 }
 
 .hero-media {
