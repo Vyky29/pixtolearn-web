@@ -967,11 +967,11 @@ section {
 }
 
 .audience-learners {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .audience-pros {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .audience-block {
@@ -1012,7 +1012,7 @@ section {
   margin: 0;
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center center;
   border-radius: 16px;
   background: #f4f8f9;
   display: block;
@@ -1035,12 +1035,9 @@ section {
 
 @media (max-width: 960px) {
   .audience,
-  .audience-learners {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  .audience-learners,
   .audience-pros {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
