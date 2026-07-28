@@ -68,6 +68,7 @@
   initSwimWaves();
   initCardRailMomentum();
   initAccountPortal();
+  initVideoCards();
 
   function initSwimWaves() {
     const host = document.querySelector("[data-swim-waves]");
@@ -393,5 +394,41 @@
     }
 
     render(read());
+  }
+
+  function initVideoCards() {
+    const cards = Array.from(document.querySelectorAll("[data-video-card]"));
+    if (!cards.length) return;
+
+    function pauseOthers(except) {
+      cards.forEach((card) => {
+        if (card === except) return;
+        const video = card.querySelector(".video-el");
+        if (video && !video.paused) video.pause();
+        card.classList.remove("is-playing");
+      });
+    }
+
+    cards.forEach((card) => {
+      const playBtn = card.querySelector(".video-play");
+      const video = card.querySelector(".video-el");
+      if (!playBtn || !video) return;
+
+      playBtn.addEventListener("click", () => {
+        pauseOthers(card);
+        card.classList.add("is-playing");
+        video.play().catch(() => {});
+      });
+
+      video.addEventListener("play", () => {
+        pauseOthers(card);
+        card.classList.add("is-playing");
+      });
+
+      video.addEventListener("ended", () => {
+        card.classList.remove("is-playing");
+        video.currentTime = 0;
+      });
+    });
   }
 })();
