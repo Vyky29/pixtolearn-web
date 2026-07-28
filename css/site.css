@@ -2997,22 +2997,24 @@ a.post:hover {
   --a5-line: 3px;
   --a5-cap: 12px;
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1;
   background: #eef4f6;
   border-radius: 14px;
-  overflow: hidden;
+  overflow: visible;
   display: grid;
   place-items: center;
-  padding: 0.55rem 1.35rem 1.15rem 0.7rem;
+  padding: 0.7rem 1.55rem 1.45rem 0.75rem;
   box-sizing: border-box;
 }
 
 .a5-card {
   width: auto !important;
-  height: 92% !important;
-  max-height: 100%;
-  aspect-ratio: 148 / 210;
-  object-fit: cover !important;
+  height: auto !important;
+  max-height: 100% !important;
+  max-width: 62% !important;
+  aspect-ratio: 148 / 210 !important;
+  object-fit: contain !important;
+  object-position: center !important;
   border-radius: 6px !important;
   box-shadow: 0 10px 22px rgba(20, 36, 43, 0.14);
   padding: 0 !important;
@@ -3025,18 +3027,18 @@ a.post:hover {
 }
 
 .a5-dim-w {
-  left: 18%;
-  right: 22%;
-  bottom: 0.35rem;
+  left: 22%;
+  right: 26%;
+  bottom: 0.2rem;
   height: 22px;
   display: grid;
   place-items: center;
 }
 
 .a5-dim-h {
-  top: 8%;
-  bottom: 18%;
-  right: 0.4rem;
+  top: 6%;
+  bottom: 16%;
+  right: 0.25rem;
   width: 24px;
   display: grid;
   place-items: center;
