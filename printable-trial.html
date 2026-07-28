@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free printable trial | PixtoLearn Swimming</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #14242b;
+      --teal: #4cb8b0;
+      --amber: #e9ae2e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Figtree, sans-serif;
+      color: var(--ink);
+      background: #f3faf9;
+      padding: 1.25rem;
+    }
+    .bar {
+      max-width: 900px;
+      margin: 0 auto 1rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    h1 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 1.45rem;
+      margin: 0;
+    }
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 0.7rem 1.1rem;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 740;
+      cursor: pointer;
+    }
+    .sheet {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid rgba(20,36,43,0.12);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+    .intro { color: #3a5159; margin: 0 0 1rem; max-width: 52ch; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+    }
+    .grid figure {
+      margin: 0;
+      border: 1px solid rgba(20,36,43,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f7fbfb;
+    }
+    .grid img { width: 100%; display: block; }
+    .grid figcaption {
+      padding: 0.55rem 0.65rem 0.7rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .foot {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #3a5159;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .bar .btn, .no-print { display: none !important; }
+      .sheet { border: 0; border-radius: 0; padding: 0; }
+    }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <h1>PixtoLearn Swimming · free printable trial</h1>
+    <button class="btn" type="button" onclick="window.print()">Print / Save PDF</button>
+  </div>
+  <div class="sheet">
+    <p class="intro">Sample visuals for poolside practice. Print, laminate if you can, and try one sequence with your learner. Full waterproof packs live in the shop.</p>
+    <div class="grid">
+      <figure>
+        <img src="assets/flashcards/float-on-back.png" alt="Float on back" />
+        <figcaption>Float on back</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/flashcards/blow-bubbles.png" alt="Blow bubbles" />
+        <figcaption>Blow bubbles</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/flashcards/goggles-on.png" alt="Goggles on" />
+        <figcaption>Goggles on</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/flashcards/kick-legs.png" alt="Kick legs" />
+        <figcaption>Kick legs</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/flashcards/swim-cap-on.png" alt="Swim cap on" />
+        <figcaption>Swim cap on</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/flashcards/splash.png" alt="Splash" />
+        <figcaption>Splash</figcaption>
+      </figure>
+    </div>
+    <p class="foot">© PixtoLearn · Personal trial use only · <span class="no-print"><a href="shop.html">Shop packs</a> · <a href="app.html">PixtoLearn App</a></span></p>
+  </div>
+</body>
+</html>
