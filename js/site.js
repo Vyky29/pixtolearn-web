@@ -65,6 +65,97 @@
   }
 
   initLeadPopup();
+  initSwimWaves();
+  initCardRailMomentum();
+
+  function initSwimWaves() {
+    const host = document.querySelector("[data-swim-waves]");
+    if (!host) return;
+    const canvas = host.querySelector("canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let w = 0;
+    let h = 0;
+    let raf = 0;
+    let t = 0;
+    let mx = 0.5;
+    let my = 0.5;
+
+    const resize = () => {
+      const rect = host.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = Math.max(1, Math.floor(rect.width));
+      h = Math.max(1, Math.floor(rect.height));
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+
+    const draw = () => {
+      t += 0.016;
+      ctx.clearRect(0, 0, w, h);
+      const layers = [
+        { amp: 18, len: 0.008, speed: 1.1, color: "rgba(76,184,176,0.28)", y: 0.42 },
+        { amp: 14, len: 0.012, speed: 1.6, color: "rgba(221,69,150,0.16)", y: 0.55 },
+        { amp: 10, len: 0.018, speed: 2.1, color: "rgba(233,174,46,0.18)", y: 0.68 },
+      ];
+      layers.forEach((layer, i) => {
+        ctx.beginPath();
+        const base = h * layer.y + (my - 0.5) * 28 * (i + 1) * 0.25;
+        ctx.moveTo(0, h);
+        for (let x = 0; x <= w; x += 8) {
+          const n =
+            Math.sin(x * layer.len + t * layer.speed + mx * 2) * layer.amp +
+            Math.sin(x * layer.len * 0.45 - t * 0.7) * (layer.amp * 0.35);
+          ctx.lineTo(x, base + n);
+        }
+        ctx.lineTo(w, h);
+        ctx.closePath();
+        ctx.fillStyle = layer.color;
+        ctx.fill();
+      });
+      if (!reduce) raf = requestAnimationFrame(draw);
+    };
+
+    resize();
+    draw();
+    window.addEventListener("resize", () => {
+      resize();
+      if (reduce) draw();
+    });
+    window.addEventListener(
+      "pointermove",
+      (e) => {
+        const rect = host.getBoundingClientRect();
+        mx = (e.clientX - rect.left) / Math.max(rect.width, 1);
+        my = (e.clientY - rect.top) / Math.max(rect.height, 1);
+      },
+      { passive: true }
+    );
+  }
+
+  function initCardRailMomentum() {
+    document.querySelectorAll(".card-rail").forEach((rail) => {
+      let down = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      rail.addEventListener("pointerdown", (e) => {
+        down = true;
+        startX = e.pageX;
+        scrollLeft = rail.scrollLeft;
+        rail.setPointerCapture(e.pointerId);
+      });
+      rail.addEventListener("pointerup", () => {
+        down = false;
+      });
+      rail.addEventListener("pointermove", (e) => {
+        if (!down) return;
+        rail.scrollLeft = scrollLeft - (e.pageX - startX);
+      });
+    });
+  }
 
   function initLeadPopup() {
     if (path === "printable-trial.html") return;

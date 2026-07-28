@@ -31,23 +31,29 @@
   </header>
   <main id="main">
 
-  <section class="hero">
+  <section class="hero hero-home">
     <div class="hero-media" aria-hidden="true">
-      <img src="assets/photos/pool-session.jpg" alt="" />
+      <img src="assets/photos/hero-original.jpg" alt="" />
+      <div class="hero-shade"></div>
     </div>
-    <div class="wrap hero-content">
-      <p class="brand-mark">PixtoLearn</p>
-      <p class="eyebrow">Real-life learning</p>
-      <h1>Because visuals speak louder</h1>
-      <p class="lede">Structured picture tools for the pool and everyday life. Clear steps. Less overwhelm. More independence.</p>
-      <div class="btn-row" style="margin-top:1.4rem">
-        <a class="btn btn-primary" href="shop.html">Shop visual packs</a>
-        <a class="btn btn-ghost" href="app.html" style="border-color:rgba(255,255,255,0.35);color:#fff">Try PixtoLearn App</a>
+    <div class="wrap hero-content hero-content-center">
+      <p class="brand-mark brand-mark-pop">PixtoLearn</p>
+      <h1 class="hero-title-anim">Because visuals speak louder</h1>
+      <p class="hero-sub">Real-life learning, powered by visual aids</p>
+      <div class="btn-row btn-row-hero" style="margin-top:1.5rem">
+        <a class="btn btn-ghost btn-ghost-light" href="#explore">Discover PixtoLearn</a>
+        <a class="btn btn-primary btn-pulse" href="shop.html">Shop visual packs</a>
       </div>
+    </div>
+    <div class="wave-edge" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <path class="wave-path wave-a" d="M0,40 C240,80 480,0 720,40 C960,80 1200,10 1440,40 L1440,90 L0,90 Z"></path>
+        <path class="wave-path wave-b" d="M0,55 C260,20 520,75 780,45 C1040,15 1240,70 1440,50 L1440,90 L0,90 Z"></path>
+      </svg>
     </div>
   </section>
 
-  <section>
+  <section id="explore" class="section-tint">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Choose your path</p>
@@ -55,19 +61,19 @@
         <p class="lede">Same visual language across water, home, and programmes. Pick the format that fits how you teach and support.</p>
       </div>
       <div class="path-grid">
-        <a class="path reveal" href="swimming.html">
+        <a class="path reveal tilt-card" href="swimming.html">
           <img src="assets/photos/tarjetas-hero.png" alt="PixtoLearn swimming cards" />
           <h3>Swimming</h3>
           <p>Waterproof visual system for safer, clearer aquatic learning.</p>
           <span class="linkish">Explore swimming →</span>
         </a>
-        <a class="path reveal" href="routines.html">
+        <a class="path reveal tilt-card" href="routines.html">
           <img src="assets/packs/wow-1.png" alt="WOW routine cards" />
           <h3>Routines</h3>
           <p>WOW cards for words, objects, and ways in everyday life.</p>
           <span class="linkish">Explore routines →</span>
         </a>
-        <a class="path reveal" href="app.html">
+        <a class="path reveal tilt-card" href="app.html">
           <img src="assets/photos/app-mock.png" alt="PixtoLearn App preview" />
           <h3>PixtoLearn App</h3>
           <p>Run Focus sessions, build routines, and support learners live.</p>

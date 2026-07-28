@@ -1,3 +1,6 @@
 .DS_Store
 .vercel
 *.log
+assets/photos/frames/
+assets/photos/try-*
+assets/photos/swimming-team.mp4
