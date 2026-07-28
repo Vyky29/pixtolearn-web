@@ -92,6 +92,24 @@
   initVideoCards();
   initSwimUsers();
   initPackCarousel();
+  initMissionProgress();
+
+  function initMissionProgress() {
+    document.querySelectorAll("[data-mission-progress]").forEach((panel) => {
+      const current = Math.max(0, Number(panel.getAttribute("data-current") || 0));
+      const goal = Math.max(1, Number(panel.getAttribute("data-goal") || 100));
+      const pct = Math.min(100, Math.round((current / goal) * 100));
+      const fill = panel.querySelector("[data-mission-fill]");
+      const count = panel.querySelector("[data-mission-count]");
+      const bar = panel.querySelector(".mission-bar");
+      if (fill) fill.style.width = pct + "%";
+      if (count) count.textContent = String(current);
+      if (bar) {
+        bar.setAttribute("aria-valuenow", String(current));
+        bar.setAttribute("aria-valuemax", String(goal));
+      }
+    });
+  }
 
   function initSwimWaves() {
     const host = document.querySelector("[data-swim-waves]");
