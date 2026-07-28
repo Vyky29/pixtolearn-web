@@ -292,7 +292,8 @@ h3,
 }
 
 .hero-home {
-  align-items: end;
+  align-items: center;
+  min-height: 100svh;
 }
 
 .hero-media {
@@ -312,7 +313,7 @@ h3,
 
 .hero-home .hero-media img {
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center center;
 }
 
 .hero-media::after,
@@ -330,13 +331,27 @@ h3,
 
 .hero-home .hero-shade {
   background:
-    linear-gradient(180deg, rgba(20, 36, 43, 0.05) 0%, rgba(20, 36, 43, 0.12) 42%, rgba(20, 36, 43, 0.72) 100%);
+    linear-gradient(90deg, rgba(12, 28, 36, 0.55) 0%, rgba(12, 28, 36, 0.28) 48%, rgba(12, 28, 36, 0.18) 100%),
+    linear-gradient(180deg, rgba(12, 28, 36, 0.28) 0%, rgba(12, 28, 36, 0.12) 40%, rgba(12, 28, 36, 0.55) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(3.5rem, 7vw, 5rem);
+}
+
+.hero-content-home {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  max-width: 42rem;
+  padding-top: clamp(5rem, 12vw, 8rem);
+  padding-bottom: clamp(4.5rem, 9vw, 6.5rem);
+}
+
+.hero-content-home .btn-row-hero {
+  margin-top: 1.35rem;
 }
 
 .hero-content-center {
@@ -361,6 +376,14 @@ h3,
   letter-spacing: -0.03em;
   color: #fff;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.28);
+}
+
+.hero-content-home h1 {
+  max-width: 12ch;
+  font-size: clamp(2.4rem, 6.2vw, 4.35rem);
+  letter-spacing: -0.035em;
+  margin: 0 0 0.7rem;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content-center h1,
