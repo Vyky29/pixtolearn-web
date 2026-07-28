@@ -2970,6 +2970,156 @@ a.post:hover {
   padding: 0.45rem;
 }
 
+.flash-trait-a5 .a5-stage {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,0.95), transparent 50%),
+    linear-gradient(160deg, rgba(136,176,192,0.2), rgba(232,168,64,0.1));
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.a5-card {
+  width: auto !important;
+  height: 72% !important;
+  aspect-ratio: 148 / 210;
+  object-fit: cover;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 28px rgba(20, 36, 43, 0.16);
+  padding: 0 !important;
+  background: #fff !important;
+}
+
+.a5-dim {
+  position: absolute;
+  pointer-events: none;
+}
+
+.a5-dim-w {
+  left: 18%;
+  right: 18%;
+  bottom: 7%;
+  height: 22px;
+  display: grid;
+  place-items: center;
+}
+
+.a5-dim-h {
+  top: 14%;
+  bottom: 18%;
+  right: 6%;
+  width: 28px;
+  display: grid;
+  place-items: center;
+}
+
+.a5-dim .a5-line {
+  position: absolute;
+  background: var(--pink);
+  border-radius: 999px;
+  transform-origin: center;
+}
+
+.a5-dim-w .a5-line {
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: scaleX(0);
+  animation: a5GrowX 1.4s ease forwards 0.25s;
+}
+
+.a5-dim-h .a5-line {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%) scaleY(0);
+  animation: a5GrowY 1.4s ease forwards 0.45s;
+}
+
+.a5-dim-w .a5-line::before,
+.a5-dim-w .a5-line::after,
+.a5-dim-h .a5-line::before,
+.a5-dim-h .a5-line::after {
+  content: "";
+  position: absolute;
+  background: var(--pink);
+  border-radius: 1px;
+}
+
+.a5-dim-w .a5-line::before,
+.a5-dim-w .a5-line::after {
+  width: 2px;
+  height: 10px;
+  top: -4px;
+}
+
+.a5-dim-w .a5-line::before { left: 0; }
+.a5-dim-w .a5-line::after { right: 0; }
+
+.a5-dim-h .a5-line::before,
+.a5-dim-h .a5-line::after {
+  height: 2px;
+  width: 10px;
+  left: -4px;
+}
+
+.a5-dim-h .a5-line::before { top: 0; }
+.a5-dim-h .a5-line::after { bottom: 0; }
+
+.a5-label {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color: var(--pink);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(208, 56, 96, 0.25);
+  box-shadow: 0 6px 14px rgba(20, 36, 43, 0.08);
+  opacity: 0;
+  animation: a5FadeIn 0.6s ease forwards 1.1s;
+}
+
+.a5-dim-h .a5-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+@keyframes a5GrowX {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes a5GrowY {
+  from { transform: translateX(-50%) scaleY(0); }
+  to { transform: translateX(-50%) scaleY(1); }
+}
+
+@keyframes a5FadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .a5-dim-w .a5-line,
+  .a5-dim-h .a5-line,
+  .a5-label {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .a5-dim-h .a5-line {
+    transform: translateX(-50%);
+  }
+}
+
 .flash-traits strong {
   font-family: var(--font-display);
   font-size: 0.98rem;
