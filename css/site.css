@@ -1411,6 +1411,16 @@ section {
   animation: none;
 }
 
+.hero-swimming .hero-media img {
+  object-position: center 42%;
+}
+
+.hero-swimming .hero-shade {
+  background:
+    linear-gradient(90deg, rgba(12, 28, 36, 0.5) 0%, rgba(12, 28, 36, 0.22) 55%, rgba(12, 28, 36, 0.15) 100%),
+    linear-gradient(180deg, rgba(12, 28, 36, 0.2) 0%, rgba(12, 28, 36, 0.1) 45%, rgba(12, 28, 36, 0.62) 100%);
+}
+
 .hero-page .hero-content {
   padding-top: clamp(4rem, 10vw, 6rem);
   padding-bottom: clamp(3.5rem, 7vw, 4.8rem);
