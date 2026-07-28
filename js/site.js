@@ -2,9 +2,29 @@
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && header) {
+    const closeNav = () => {
+      header.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
+    };
+    const openNav = () => {
+      header.classList.add("open");
+      toggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("nav-open");
+    };
     toggle.addEventListener("click", () => {
-      const open = header.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      if (header.classList.contains("open")) closeNav();
+      else openNav();
+    });
+    header.querySelectorAll(".nav-links a").forEach((a) => {
+      a.addEventListener("click", () => closeNav());
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && header.classList.contains("open")) closeNav();
+    });
+    document.addEventListener("click", (e) => {
+      if (!header.classList.contains("open")) return;
+      if (!header.contains(e.target)) closeNav();
     });
   }
 
@@ -497,6 +517,28 @@
     dots.forEach((d) => {
       d.addEventListener("click", () => show(Number(d.getAttribute("data-pack-dot")) || 0));
     });
+
+    let touchX = null;
+    root.addEventListener(
+      "touchstart",
+      (e) => {
+        touchX = e.changedTouches[0].clientX;
+      },
+      { passive: true }
+    );
+    root.addEventListener(
+      "touchend",
+      (e) => {
+        if (touchX == null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        touchX = null;
+        if (Math.abs(dx) < 48) return;
+        if (dx < 0) show(index + 1);
+        else show(index - 1);
+      },
+      { passive: true }
+    );
+
     show(index);
   }
 })();
