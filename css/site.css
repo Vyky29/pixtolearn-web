@@ -5723,3 +5723,54 @@ a.post:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.world-project-title {
+  margin: 0.35rem 0 0.75rem;
+  font-size: clamp(1.7rem, 3.5vw, 2.35rem);
+}
+
+.mission-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.mission-step {
+  background: #fff;
+  border: 1px solid rgba(20, 36, 43, 0.1);
+  border-radius: 20px;
+  padding: 1.1rem 1.15rem;
+  box-shadow: 0 12px 28px rgba(20, 36, 43, 0.04);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.mission-step.is-active {
+  border-color: rgba(208, 56, 96, 0.35);
+  background: linear-gradient(165deg, #fff, rgba(208, 56, 96, 0.07));
+}
+
+.mission-step-n {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.mission-step h3 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.mission-step p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 860px) {
+  .mission-steps {
+    grid-template-columns: 1fr;
+  }
+}
