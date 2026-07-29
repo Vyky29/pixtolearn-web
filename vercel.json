@@ -2,6 +2,68 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/portal",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/portal/",
+      "permanent": false
+    },
+    {
+      "source": "/portal/(.*)",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/portal/$1",
+      "permanent": false
+    },
+    {
+      "source": "/training-i",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-i/",
+      "permanent": false
+    },
+    {
+      "source": "/training-i/(.*)",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-i/$1",
+      "permanent": false
+    },
+    {
+      "source": "/training-ii",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-ii/",
+      "permanent": false
+    },
+    {
+      "source": "/training-ii/(.*)",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-ii/$1",
+      "permanent": false
+    },
+    {
+      "source": "/swimming-training-i",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-i/",
+      "permanent": false
+    },
+    {
+      "source": "/swimming-training-i/(.*)",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-i/$1",
+      "permanent": false
+    },
+    {
+      "source": "/swimming-training-ii",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-ii/",
+      "permanent": false
+    },
+    {
+      "source": "/swimming-training-ii/(.*)",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-ii/$1",
+      "permanent": false
+    },
+    {
+      "source": "/learn/course/aquatic-specialist-pathway/module-:id",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-i/modules/module-:id/",
+      "permanent": false
+    },
+    {
+      "source": "/learn/course/aquatic-specialist-pathway/modules/module-:id",
+      "destination": "https://pixtolearn-aquatic-specialist.vercel.app/training-i/modules/module-:id/",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

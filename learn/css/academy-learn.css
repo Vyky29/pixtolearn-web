@@ -1017,6 +1017,321 @@ input {
   max-width: 36rem;
 }
 
+.dash-welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.15rem;
+}
+
+.learn-btn-on-dark {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.learn-btn-on-dark:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: #fff;
+}
+
+.dash-welcome-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.45rem;
+}
+
+/* Dashboard pricing */
+.dash-pricing-sec {
+  padding-top: 2.5rem;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(232, 168, 64, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 10%, rgba(208, 56, 96, 0.08), transparent 50%);
+}
+
+.dash-price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.dash-price {
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr auto;
+  gap: 0.4rem;
+  padding: 1.15rem 1.05rem 1.1rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(20, 36, 43, 0.1);
+  border-top: 4px solid var(--slate-deep);
+  border-radius: 4px 16px 4px 16px;
+}
+
+.dash-price.is-featured {
+  background: #122832;
+  color: #fff;
+  border-color: transparent;
+  border-top-color: var(--amber);
+  box-shadow: 12px 14px 0 rgba(232, 168, 64, 0.2);
+}
+
+.dash-price.is-featured .dash-price-tag {
+  color: var(--amber);
+}
+
+.dash-price.is-featured .dash-price-note,
+.dash-price.is-featured li {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.dash-price.is-featured .learn-btn-primary {
+  background: var(--amber);
+  color: #122832;
+  border-color: var(--amber);
+}
+
+.dash-price-tag {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pink-deep);
+}
+
+.dash-price h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.dash-price-amount {
+  margin: 0.1rem 0;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.dash-price-note {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.dash-price ul {
+  list-style: none;
+  margin: 0.25rem 0 0.65rem;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.dash-price li {
+  position: relative;
+  padding-left: 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.dash-price li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 1px;
+  background: var(--pink);
+}
+
+.dash-price.is-featured li::before {
+  background: var(--amber);
+}
+
+.dash-price .learn-btn {
+  justify-self: start;
+  margin-top: auto;
+}
+
+.dash-price-org {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(20, 36, 43, 0.1);
+  border-left: 4px solid var(--pink);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 4px 14px 4px 14px;
+}
+
+.dash-price-org h3 {
+  margin: 0.15rem 0 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.dash-price-org p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.dash-price-org-aside {
+  display: grid;
+  gap: 0.55rem;
+  justify-items: end;
+  text-align: right;
+}
+
+.dash-price-org-aside strong {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+/* Course cards with prices */
+.dash-course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.25rem;
+}
+
+.dash-course {
+  display: grid;
+  grid-template-columns: minmax(140px, 38%) minmax(0, 1fr);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(20, 36, 43, 0.1);
+  border-radius: 4px 20px 4px 20px;
+  overflow: hidden;
+  box-shadow: 10px 12px 0 rgba(20, 36, 43, 0.05);
+}
+
+.dash-course-media {
+  position: relative;
+  min-height: 180px;
+  background: #14242b;
+}
+
+.dash-course-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.dash-course-price {
+  position: absolute;
+  left: 0.7rem;
+  bottom: 0.7rem;
+  z-index: 1;
+  padding: 0.35rem 0.55rem;
+  border-radius: 4px;
+  background: var(--amber);
+  color: #122832;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+}
+
+.dash-course-body {
+  padding: 1rem 1.05rem 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+}
+
+.dash-course-meta {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--slate-deep);
+}
+
+.dash-course-body h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.dash-course-body > p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.dash-course-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.45rem;
+}
+
+.dash-bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.15rem;
+}
+
+.dash-bundle {
+  padding: 1.15rem 1.1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(20, 36, 43, 0.1);
+  border-radius: 4px 16px 4px 16px;
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+}
+
+.dash-bundle.is-featured {
+  background: #122832;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 10px 12px 0 rgba(208, 56, 96, 0.16);
+}
+
+.dash-bundle.is-featured p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.dash-bundle h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.dash-bundle-price {
+  margin: 0 !important;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink) !important;
+}
+
+.dash-bundle.is-featured .dash-bundle-price {
+  color: var(--amber) !important;
+}
+
+.dash-bundle .learn-btn {
+  justify-self: start;
+  margin-top: 0.45rem;
+}
+
 .dash-welcome-stats {
   display: flex;
   flex-wrap: wrap;
@@ -1478,8 +1793,33 @@ input {
   .dash-next,
   .dash-outcomes,
   .dash-how,
-  .dash-tools {
+  .dash-tools,
+  .dash-course-grid,
+  .dash-bundle-grid,
+  .dash-price-org {
     grid-template-columns: 1fr;
+  }
+
+  .dash-price-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dash-course {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-course-media {
+    min-height: 160px;
+  }
+
+  .dash-course-media img {
+    position: relative;
+    height: 160px;
+  }
+
+  .dash-price-org-aside {
+    justify-items: start;
+    text-align: left;
   }
 
   .learn-collection-media {
@@ -1507,6 +1847,12 @@ input {
   .learn-continue-media {
     clip-path: none;
     border-radius: 4px 22px 4px 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .dash-price-grid {
+    grid-template-columns: 1fr;
   }
 }
 

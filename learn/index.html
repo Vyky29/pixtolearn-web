@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>My Learning | PixtoLearn Academy</title>
-  <meta name="description" content="Your PixtoLearn Academy dashboard: see your next step, track modules and apply visual teaching in real sessions." />
-  <link rel="icon" href="../assets/brand/favicon.png" />
+  <meta name="description" content="Your PixtoLearn Academy dashboard: courses from &pound;19, Launch Pathway &pound;79, track modules and apply visual teaching in real sessions." />
+  <link rel="icon" href="/assets/brand/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
   <header class="learn-header">
     <div class="learn-wrap learn-nav">
       <a class="learn-brand" href="index.html" aria-label="PixtoLearn Academy home">
-        <img src="../assets/brand/logo.png" alt="PixtoLearn" />
+        <img src="/assets/brand/logo.png" alt="PixtoLearn" />
         <span class="learn-brand-text">
           <strong>Academy</strong>
           <span>Learner hub</span>
@@ -25,8 +25,9 @@
       <ul class="learn-nav-links">
         <li><a href="index.html" aria-current="page">Dashboard</a></li>
         <li><a href="catalog.html">Catalogue</a></li>
-        <li><a href="../account.html">Account</a></li>
-        <li><a href="../academy.html">About Academy</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="/account.html">Account</a></li>
+        <li><a href="/cart.html">Cart</a></li>
       </ul>
     </div>
   </header>
@@ -34,15 +35,19 @@
   <main id="main">
     <section class="dash-welcome" aria-labelledby="dashWelcomeTitle">
       <div class="dash-welcome-media" aria-hidden="true">
-        <img src="../assets/photos/academy-hero.jpg" alt="" />
+        <img src="/assets/photos/academy-hero.jpg" alt="" />
         <div class="dash-welcome-shade"></div>
       </div>
       <div class="learn-wrap dash-welcome-inner">
-        <p class="dash-welcome-kicker">Your learning space</p>
+        <p class="dash-welcome-kicker">PixtoLearn Academy</p>
         <h1 id="dashWelcomeTitle">Hello, <span data-learn-name>Learner</span></h1>
-        <p class="dash-welcome-lead" data-welcome-lead>
-          Four launch courses are ready to explore: Foundations, Packs and App, Swimming, and Toddler routines. Videos still to film appear as clear placeholders.
+        <p class="dash-welcome-lead">
+          Learn the visual method, then use Packs and App in real sessions. Courses from &pound;19. Full pathway &pound;79.
         </p>
+        <div class="dash-welcome-actions">
+          <a class="learn-btn learn-btn-primary" href="#pricing">See pricing</a>
+          <a class="learn-btn learn-btn-ghost learn-btn-on-dark" href="course/visual-teaching-foundations/index.html">Start Foundations</a>
+        </div>
         <div class="dash-welcome-stats" aria-label="Course progress">
           <div class="dash-stat">
             <strong data-progress-pct>0%</strong>
@@ -53,9 +58,298 @@
             <span>Modules done</span>
           </div>
           <div class="dash-stat">
-            <strong>~45 min</strong>
-            <span>Total course</span>
+            <strong>&pound;79</strong>
+            <span>Full pathway</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="learn-section dash-section dash-pricing-sec">
+      <div class="learn-wrap">
+        <div class="learn-section-head">
+          <div>
+            <p class="learn-eyebrow">Pricing</p>
+            <h2>Buy a course. Or take the full pathway.</h2>
+            <p class="learn-muted">Clear GBP prices. Add to cart and checkout. Team and multi-site licences available.</p>
+          </div>
+        </div>
+
+        <div class="dash-price-grid">
+          <article class="dash-price">
+            <p class="dash-price-tag">Entry</p>
+            <h3>Foundations</h3>
+            <p class="dash-price-amount">&pound;19</p>
+            <p class="dash-price-note">Best first step into the method.</p>
+            <ul>
+              <li>Visual Teaching Foundations</li>
+              <li>About 45-60 minutes</li>
+            </ul>
+            <button
+              class="learn-btn learn-btn-ghost"
+              type="button"
+              data-aca-buy
+              data-product-id="aca-foundations"
+              data-product-name="Academy: Visual Teaching Foundations"
+              data-product-price="19"
+              data-product-image="../assets/photos/workshop.jpg"
+              data-product-href="course/visual-teaching-foundations/index.html"
+            >Buy &pound;19</button>
+          </article>
+
+          <article class="dash-price">
+            <p class="dash-price-tag">Single course</p>
+            <h3>Any one course</h3>
+            <p class="dash-price-amount">&pound;29</p>
+            <p class="dash-price-note">Packs and App, Swimming, or Toddlers.</p>
+            <ul>
+              <li>One full launch course</li>
+              <li>About 45-60 minutes</li>
+            </ul>
+            <a class="learn-btn learn-btn-ghost" href="#courses">Choose a course</a>
+          </article>
+
+          <article class="dash-price is-featured">
+            <p class="dash-price-tag">Best value</p>
+            <h3>Launch Pathway</h3>
+            <p class="dash-price-amount">&pound;79</p>
+            <p class="dash-price-note">All 4 courses. About &pound;20 each.</p>
+            <ul>
+              <li>Foundations + Packs and App</li>
+              <li>Swimming + Toddler routines</li>
+            </ul>
+            <button
+              class="learn-btn learn-btn-primary"
+              type="button"
+              data-aca-buy
+              data-product-id="aca-pathway"
+              data-product-name="Academy: Launch Pathway (4 courses)"
+              data-product-price="79"
+              data-product-image="../assets/photos/academy-hero.jpg"
+              data-product-href="index.html"
+            >Buy pathway &pound;79</button>
+          </article>
+
+          <article class="dash-price">
+            <p class="dash-price-tag">Centres</p>
+            <h3>Team licence</h3>
+            <p class="dash-price-amount">&pound;249</p>
+            <p class="dash-price-note">Up to 10 seats for 1 year.</p>
+            <ul>
+              <li>Full Launch Pathway</li>
+              <li>Shared method for staff</li>
+            </ul>
+            <button
+              class="learn-btn learn-btn-ghost"
+              type="button"
+              data-aca-buy
+              data-product-id="aca-team"
+              data-product-name="Academy: Team licence (10 seats / 1 year)"
+              data-product-price="249"
+              data-product-image="../assets/photos/workshop.jpg"
+              data-product-href="/contact.html?interest=academy-team"
+            >Buy team &pound;249</button>
+          </article>
+        </div>
+
+        <div class="dash-price-org" id="specialist" style="border-left-color:var(--amber)">
+          <div>
+            <p class="dash-price-tag">Specialist</p>
+            <h3>Aquatic Specialist Pathway</h3>
+            <p>Deep Pathway I + II for instructors and centres. &pound;199 individual | &pound;399 team.</p>
+          </div>
+          <div class="dash-price-org-aside">
+            <strong>&pound;199</strong>
+            <a class="learn-btn learn-btn-primary" href="course/aquatic-specialist-pathway/index.html">View pathway</a>
+          </div>
+        </div>
+
+        <div class="dash-price-org">
+          <div>
+            <p class="dash-price-tag">Organisations</p>
+            <h3>Multi-site / org licence</h3>
+            <p>Day centres, pools and schools. Custom seats and invoicing.</p>
+          </div>
+          <div class="dash-price-org-aside">
+            <strong>From &pound;499</strong>
+            <a class="learn-btn learn-btn-primary" href="/contact.html?interest=academy-org">Request a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="learn-section dash-section">
+      <div class="learn-wrap">
+        <div class="learn-section-head">
+          <div>
+            <p class="learn-eyebrow">Launch pathway</p>
+            <h2>Four courses. Global to specific.</h2>
+            <p class="learn-muted">Buy one course or the full pathway. Open any course to start learning.</p>
+          </div>
+        </div>
+
+        <div class="dash-course-grid">
+          <article class="dash-course">
+            <div class="dash-course-media">
+              <img src="/assets/photos/workshop.jpg" alt="" loading="lazy" />
+              <span class="dash-course-price">&pound;19</span>
+            </div>
+            <div class="dash-course-body">
+              <p class="dash-course-meta">01 | Method</p>
+              <h3>Visual Teaching Foundations</h3>
+              <p>What visual teaching is, steps, prompting and one shared system.</p>
+              <div class="dash-course-actions">
+                <a class="learn-btn learn-btn-primary" href="course/visual-teaching-foundations/index.html">Open</a>
+                <button
+                  class="learn-btn learn-btn-ghost"
+                  type="button"
+                  data-aca-buy
+                  data-product-id="aca-foundations"
+                  data-product-name="Academy: Visual Teaching Foundations"
+                  data-product-price="19"
+                  data-product-image="../assets/photos/workshop.jpg"
+                  data-product-href="course/visual-teaching-foundations/index.html"
+                >Buy &pound;19</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dash-course">
+            <div class="dash-course-media">
+              <img src="/assets/photos/hero-app.jpg" alt="" loading="lazy" />
+              <span class="dash-course-price">&pound;29</span>
+            </div>
+            <div class="dash-course-body">
+              <p class="dash-course-meta">02 | Tools</p>
+              <h3>Using PixtoLearn Packs and App</h3>
+              <p>Turn Packs and App into a repeatable teaching system.</p>
+              <div class="dash-course-actions">
+                <a class="learn-btn learn-btn-primary" href="course/using-pixtolearn-packs-and-app/index.html">Open</a>
+                <button
+                  class="learn-btn learn-btn-ghost"
+                  type="button"
+                  data-aca-buy
+                  data-product-id="aca-packs-app"
+                  data-product-name="Academy: Using PixtoLearn Packs and App"
+                  data-product-price="29"
+                  data-product-image="../assets/photos/hero-app.jpg"
+                  data-product-href="course/using-pixtolearn-packs-and-app/index.html"
+                >Buy &pound;29</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dash-course">
+            <div class="dash-course-media">
+              <img src="/assets/photos/ghana-1.jpg" alt="" loading="lazy" />
+              <span class="dash-course-price">&pound;29</span>
+            </div>
+            <div class="dash-course-body">
+              <p class="dash-course-meta">03 | Swimming</p>
+              <h3>Teaching Swimming with Visual Systems</h3>
+              <p>Poolside visuals, skill sequences and neurodiverse swimmers.</p>
+              <div class="dash-course-actions">
+                <a class="learn-btn learn-btn-primary" href="/learn/course/teaching-swimming-visual-systems/">Open</a>
+                <button
+                  class="learn-btn learn-btn-ghost"
+                  type="button"
+                  data-aca-buy
+                  data-product-id="aca-swimming"
+                  data-product-name="Academy: Teaching Swimming with Visual Systems"
+                  data-product-price="29"
+                  data-product-image="../assets/photos/ghana-1.jpg"
+                  data-product-href="/learn/course/teaching-swimming-visual-systems/"
+                >Buy &pound;29</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dash-course">
+            <div class="dash-course-media">
+              <img src="/assets/icons/audience/families.jpg" alt="" loading="lazy" />
+              <span class="dash-course-price">&pound;29</span>
+            </div>
+            <div class="dash-course-body">
+              <p class="dash-course-meta">04 | Toddlers</p>
+              <h3>Everyday Visual Routines</h3>
+              <p>Calmer home and early-years routines with WOW cards.</p>
+              <div class="dash-course-actions">
+                <a class="learn-btn learn-btn-primary" href="course/everyday-visual-routines-toddlers/index.html">Open</a>
+                <button
+                  class="learn-btn learn-btn-ghost"
+                  type="button"
+                  data-aca-buy
+                  data-product-id="aca-toddlers"
+                  data-product-name="Academy: Everyday Visual Routines for Toddlers"
+                  data-product-price="29"
+                  data-product-image="../assets/icons/audience/families.jpg"
+                  data-product-href="course/everyday-visual-routines-toddlers/index.html"
+                >Buy &pound;29</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="bundles" class="learn-section dash-section dash-section-tint">
+      <div class="learn-wrap">
+        <div class="learn-section-head">
+          <div>
+            <p class="learn-eyebrow">Bundles</p>
+            <h2>Method + kit together</h2>
+            <p class="learn-muted">Courses stay available alone. Bundles pair Academy with Packs.</p>
+          </div>
+        </div>
+        <div class="dash-bundle-grid">
+          <article class="dash-bundle">
+            <h3>Swim Starter</h3>
+            <p class="dash-bundle-price">&pound;89</p>
+            <p>Basic Pack or Fun Pack + Swimming course</p>
+            <div class="dash-course-actions">
+              <button
+                class="learn-btn learn-btn-ghost"
+                type="button"
+                data-aca-buy
+                data-product-id="bundle-swim-starter-basic"
+                data-product-name="Bundle: Swim Starter (Basic Pack + Swimming course)"
+                data-product-price="89"
+                data-product-image="../assets/packs/shop-basic.png"
+                data-product-href="../product-basic-pack.html"
+              >Basic + course</button>
+              <button
+                class="learn-btn learn-btn-ghost"
+                type="button"
+                data-aca-buy
+                data-product-id="bundle-swim-starter-fun"
+                data-product-name="Bundle: Swim Starter (Fun Pack + Swimming course)"
+                data-product-price="89"
+                data-product-image="../assets/packs/shop-fun.png"
+                data-product-href="../product-fun-pack.html"
+              >Fun + course</button>
+            </div>
+          </article>
+          <article class="dash-bundle is-featured">
+            <h3>Swim Pro</h3>
+            <p class="dash-bundle-price">&pound;349</p>
+            <p>Full Pack + Pathway + 30 days App</p>
+            <button
+              class="learn-btn learn-btn-primary"
+              type="button"
+              data-aca-buy
+              data-product-id="bundle-swim-pro"
+              data-product-name="Bundle: Swim Pro (Full Pack + Pathway + App trial)"
+              data-product-price="349"
+              data-product-image="../assets/packs/shop-full.png"
+              data-product-href="../product-full-pack.html"
+            >Add to cart</button>
+          </article>
+          <article class="dash-bundle">
+            <h3>Home Calm</h3>
+            <p class="dash-bundle-price">Ask</p>
+            <p>WOW cards + Toddler course</p>
+            <a class="learn-btn learn-btn-ghost" href="/contact.html?interest=home-calm">Ask us</a>
+          </article>
         </div>
       </div>
     </section>
@@ -64,7 +358,7 @@
       <div class="learn-wrap">
         <article class="dash-next" aria-labelledby="dashNextTitle">
           <div class="dash-next-copy">
-            <p class="learn-eyebrow">Your next step</p>
+            <p class="learn-eyebrow">Continue learning</p>
             <p class="dash-next-meta">
               <span class="learn-badge is-preview" data-next-badge>Ready to start</span>
               <span data-next-meta>Module 1 of 4 | about 10 minutes</span>
@@ -73,18 +367,13 @@
             <p class="dash-next-why" data-next-why>
               Understand why spoken instructions alone often fail in busy pool environments, and how a stable visual cue helps learners act with more calm and clarity.
             </p>
-            <ul class="dash-next-bullets" data-next-bullets>
-              <li>See what makes the pool a hard place to learn from speech alone</li>
-              <li>Learn what a good visual support changes in a lesson</li>
-              <li>Leave with one simple way to start using visuals</li>
-            </ul>
             <div class="dash-next-actions">
-              <a class="learn-btn learn-btn-primary" href="course/teaching-swimming-visual-systems/module-1/index.html" data-continue-cta>Start Module 1</a>
-              <a class="learn-btn learn-btn-ghost" href="course/teaching-swimming-visual-systems/index.html">View full course</a>
+              <a class="learn-btn learn-btn-primary" href="/learn/course/teaching-swimming-visual-systems/module-1/" data-continue-cta>Start Module 1</a>
+              <a class="learn-btn learn-btn-ghost" href="/learn/course/teaching-swimming-visual-systems/">View full course</a>
             </div>
           </div>
           <figure class="dash-next-media">
-            <img src="../assets/photos/ghana-1.jpg" alt="Instructor teaching with a PixtoLearn visual card in the pool" data-next-img />
+            <img src="/assets/photos/ghana-1.jpg" alt="Instructor teaching with a PixtoLearn visual card in the pool" data-next-img />
             <figcaption data-next-caption>Module 1 | Visual cues that stay available while the learner practises</figcaption>
           </figure>
         </article>
@@ -95,51 +384,9 @@
       <div class="learn-wrap">
         <div class="learn-section-head">
           <div>
-            <p class="learn-eyebrow">Launch pathway</p>
-            <h2>Four courses. Global to specific.</h2>
-            <p class="learn-muted">Start with Foundations, then tools, then swimming or toddler routines. Each course has four gold-standard modules.</p>
-          </div>
-        </div>
-        <div class="dash-tools">
-          <a class="dash-tool" href="course/visual-teaching-foundations/index.html">
-            <img src="../assets/photos/workshop.jpg" alt="" />
-            <div>
-              <strong>1. Visual Teaching Foundations</strong>
-              <span>Method for professionals</span>
-            </div>
-          </a>
-          <a class="dash-tool" href="course/using-pixtolearn-packs-and-app/index.html">
-            <img src="../assets/photos/hero-app.jpg" alt="" />
-            <div>
-              <strong>2. Packs and App</strong>
-              <span>Your PixtoLearn tools</span>
-            </div>
-          </a>
-          <a class="dash-tool" href="course/teaching-swimming-visual-systems/index.html">
-            <img src="../assets/photos/ghana-1.jpg" alt="" />
-            <div>
-              <strong>3. Swimming with Visual Systems</strong>
-              <span>Aquatic application</span>
-            </div>
-          </a>
-          <a class="dash-tool" href="course/everyday-visual-routines-toddlers/index.html">
-            <img src="../assets/icons/audience/families.jpg" alt="" />
-            <div>
-              <strong>4. Toddler visual routines</strong>
-              <span>WOW / early years</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="learn-section dash-section">
-      <div class="learn-wrap">
-        <div class="learn-section-head">
-          <div>
-            <p class="learn-eyebrow">Your pathway</p>
+            <p class="learn-eyebrow">Swimming course modules</p>
             <h2>Teaching Swimming with Visual Systems</h2>
-            <p class="learn-muted">Follow the four modules in order. Each one ends with a short check so you can confirm the idea before moving on.</p>
+            <p class="learn-muted">Four modules. Each ends with a short check before you move on.</p>
           </div>
           <div class="learn-progress dash-path-progress">
             <div class="learn-progress-meta">
@@ -158,7 +405,7 @@
               <p>Why visual supports reduce overwhelm and make instructions clearer in the water.</p>
               <span class="learn-status" data-path-status>Not started</span>
             </div>
-            <a class="learn-btn learn-btn-primary" href="course/teaching-swimming-visual-systems/module-1/index.html" data-path-cta>Start</a>
+            <a class="learn-btn learn-btn-primary" href="/learn/course/teaching-swimming-visual-systems/module-1/" data-path-cta>Start</a>
           </li>
           <li class="dash-path-item is-not-started" data-path-module="module-2">
             <span class="dash-path-num" aria-hidden="true">2</span>
@@ -167,7 +414,7 @@
               <p>Turn one swim skill into a short sequence a learner can follow.</p>
               <span class="learn-status" data-path-status>Not started</span>
             </div>
-            <a class="learn-btn learn-btn-ghost" href="course/teaching-swimming-visual-systems/module-2/index.html" data-path-cta>Open</a>
+            <a class="learn-btn learn-btn-ghost" href="/learn/course/teaching-swimming-visual-systems/module-2/" data-path-cta>Open</a>
           </li>
           <li class="dash-path-item is-not-started" data-path-module="module-3">
             <span class="dash-path-num" aria-hidden="true">3</span>
@@ -176,7 +423,7 @@
               <p>Placement, pacing and prompting with cards poolside.</p>
               <span class="learn-status" data-path-status>Not started</span>
             </div>
-            <a class="learn-btn learn-btn-ghost" href="course/teaching-swimming-visual-systems/module-3/index.html" data-path-cta>Open</a>
+            <a class="learn-btn learn-btn-ghost" href="/learn/course/teaching-swimming-visual-systems/module-3/" data-path-cta>Open</a>
           </li>
           <li class="dash-path-item is-not-started" data-path-module="module-4">
             <span class="dash-path-num" aria-hidden="true">4</span>
@@ -185,7 +432,7 @@
               <p>Adapt visual structure for sensory needs, transitions and emotional safety.</p>
               <span class="learn-status" data-path-status>Not started</span>
             </div>
-            <a class="learn-btn learn-btn-ghost" href="course/teaching-swimming-visual-systems/module-4/index.html" data-path-cta>Open</a>
+            <a class="learn-btn learn-btn-ghost" href="/learn/course/teaching-swimming-visual-systems/module-4/" data-path-cta>Open</a>
           </li>
         </ol>
       </div>
@@ -195,83 +442,31 @@
       <div class="learn-wrap">
         <div class="learn-section-head">
           <div>
-            <p class="learn-eyebrow">How Academy works</p>
-            <h2>Learn in short steps. Use it the same day.</h2>
-            <p class="learn-muted">Academy is built for people who teach and support: instructors, families, educators and therapists who need practical methods, not long theory.</p>
-          </div>
-        </div>
-        <div class="dash-how">
-          <article class="dash-how-step" style="--mark:var(--pink)">
-            <span class="dash-how-n">01</span>
-            <h3>Open a short module</h3>
-            <p>Each module takes about 10 minutes: a clear objective, a few teaching ideas and one real-world example.</p>
-          </article>
-          <article class="dash-how-step" style="--mark:var(--amber)">
-            <span class="dash-how-n">02</span>
-            <h3>Check your understanding</h3>
-            <p>A quick activity confirms the key idea before you move on, so progress stays intentional.</p>
-          </article>
-          <article class="dash-how-step" style="--mark:var(--slate-deep)">
-            <span class="dash-how-n">03</span>
-            <h3>Apply it with PixtoLearn tools</h3>
-            <p>Use Packs and the App to practise the same visual structure in the pool, at home or in sessions.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="learn-section dash-section">
-      <div class="learn-wrap dash-outcomes">
-        <div class="dash-outcomes-copy">
-          <p class="learn-eyebrow">By the end of this course</p>
-          <h2>What you will be able to do</h2>
-          <p class="learn-muted">This first course focuses on swimming. The same visual teaching habits transfer to routines, classrooms and therapy settings later in the catalogue.</p>
-          <ul class="dash-outcome-list">
-            <li>Explain why visuals help when the pool is noisy and busy</li>
-            <li>Break one swim skill into a short teachable sequence</li>
-            <li>Place and prompt waterproof cards without disrupting the lesson</li>
-            <li>Adapt structure for neurodiverse swimmers with calm, predictable cues</li>
-          </ul>
-          <a class="learn-btn learn-btn-primary" href="course/teaching-swimming-visual-systems/index.html" data-continue-link>Go to your course</a>
-        </div>
-        <div class="dash-outcomes-panel">
-          <h3>Coming next in Academy</h3>
-          <p>More collections are on the way. Browse what is planned and register interest while you finish this preview.</p>
-          <ul class="dash-coming">
-            <li>Everyday Skills &amp; Independence</li>
-            <li>Visual Teaching for Professionals</li>
-            <li>The PixtoLearn Method &amp; Tools</li>
-          </ul>
-          <div class="dash-coming-actions">
-            <a class="learn-btn learn-btn-ghost" href="catalog.html">Browse catalogue</a>
-            <a class="learn-btn learn-btn-ghost" href="../academy.html#waitlist">Join waiting list</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="learn-section dash-section">
-      <div class="learn-wrap">
-        <div class="learn-section-head">
-          <div>
             <p class="learn-eyebrow">Apply what you learn</p>
             <h2>Academy + Packs + App</h2>
-            <p class="learn-muted">Academy gives you the method. PixtoLearn tools help you deliver it consistently with learners.</p>
+            <p class="learn-muted">Courses teach the method. Products make it repeatable.</p>
           </div>
         </div>
         <div class="dash-tools">
-          <a class="dash-tool" href="../shop.html">
-            <img src="../assets/packs/shop-full.png" alt="" />
+          <a class="dash-tool" href="/shop.html">
+            <img src="/assets/packs/shop-full.png" alt="" />
             <div>
               <strong>PixtoLearn Packs</strong>
-              <span>Waterproof visual cards for swimming and everyday routines</span>
+              <span>Waterproof cards from &pound;74.99. Full Pack &pound;329.</span>
             </div>
           </a>
-          <a class="dash-tool" href="../app.html">
-            <img src="../assets/photos/hero-app.jpg" alt="" />
+          <a class="dash-tool" href="/app.html">
+            <img src="/assets/photos/hero-app.jpg" alt="" />
             <div>
               <strong>PixtoLearn App</strong>
-              <span>Digital visual support for structured Focus sessions</span>
+              <span>Focus sessions from &pound;7 / month</span>
+            </div>
+          </a>
+          <a class="dash-tool" href="/cart.html">
+            <img src="/assets/photos/workshop.jpg" alt="" />
+            <div>
+              <strong>Your cart</strong>
+              <span>Review Academy courses and bundles</span>
             </div>
           </a>
         </div>
@@ -281,12 +476,15 @@
 
   <footer class="learn-footer">
     <div class="learn-wrap learn-footer-inner">
-      <span>&copy; 2026 PixtoLearn Academy (preview)</span>
-      <a href="../academy.html">Academy marketing page</a>
+      <span>&copy; 2026 PixtoLearn Academy</span>
+      <a href="/academy.html">Academy home</a>
+      <a href="/cart.html">Cart</a>
     </div>
   </footer>
 
+  <script src="/js/cart.js"></script>
   <script src="js/progress.js"></script>
+  <script src="js/academy-buy.js"></script>
   <script>
     (function () {
       var COURSE_ID = "teaching-swimming-visual-systems";
@@ -296,12 +494,7 @@
           title: "Why visuals in the pool",
           meta: "Module 1 of 4 | about 10 minutes",
           why: "Understand why spoken instructions alone often fail in busy pool environments, and how a stable visual cue helps learners act with more calm and clarity.",
-          bullets: [
-            "See what makes the pool a hard place to learn from speech alone",
-            "Learn what a good visual support changes in a lesson",
-            "Leave with one simple way to start using visuals",
-          ],
-          href: "course/teaching-swimming-visual-systems/module-1/index.html",
+          href: "/learn/course/teaching-swimming-visual-systems/module-1/",
           img: "../assets/photos/ghana-1.jpg",
           caption: "Module 1 | Visual cues that stay available while the learner practises",
         },
@@ -310,12 +503,7 @@
           title: "Breaking a swim skill into clear steps",
           meta: "Module 2 of 4 | about 10 minutes",
           why: "Turn one swimming skill into a short visual sequence so learners can follow the order without overloaded verbal instructions.",
-          bullets: [
-            "Choose one skill and keep only the essential steps",
-            "Match each step to one clear card",
-            "Teach the sequence before busy water practice",
-          ],
-          href: "course/teaching-swimming-visual-systems/module-2/index.html",
+          href: "/learn/course/teaching-swimming-visual-systems/module-2/",
           img: "../assets/photos/library/dsc_0764.jpg",
           caption: "Module 2 | Short sequences keep skill order visible at the pool edge",
         },
@@ -324,12 +512,7 @@
           title: "Using waterproof cards in a live lesson",
           meta: "Module 3 of 4 | about 10 minutes",
           why: "Place, pace and prompt with waterproof cards so visuals support teaching without becoming a distraction mid-lesson.",
-          bullets: [
-            "Place cards where the learner can see them in action",
-            "Prompt toward the card before adding more talk",
-            "Keep start and finish of the lesson visually clear",
-          ],
-          href: "course/teaching-swimming-visual-systems/module-3/index.html",
+          href: "/learn/course/teaching-swimming-visual-systems/module-3/",
           img: "../assets/photos/library/dsc_0795.jpg",
           caption: "Module 3 | Boards and stands keep sequences visible poolside",
         },
@@ -338,12 +521,7 @@
           title: "Supporting neurodiverse swimmers with visual structure",
           meta: "Module 4 of 4 | about 10 minutes",
           why: "Adapt visual systems for sensory needs, transitions and emotional safety so structure supports regulation as well as skill learning.",
-          bullets: [
-            "Use predictable start and finish routines",
-            "Reduce competing visuals to the cards you need now",
-            "Prioritise regulation before introducing new skills",
-          ],
-          href: "course/teaching-swimming-visual-systems/module-4/index.html",
+          href: "/learn/course/teaching-swimming-visual-systems/module-4/",
           img: "../assets/icons/audience/swimming-instructors.jpg",
           caption: "Module 4 | Consistent visual routines help learners know what comes next",
         },
@@ -375,114 +553,54 @@
         el.style.width = prog.percent + "%";
       });
 
-      var nextMod = null;
-      for (var i = 0; i < MODULES.length; i++) {
-        if (P.getModuleStatus(COURSE_ID, MODULES[i].id) !== "completed") {
-          nextMod = MODULES[i];
-          break;
-        }
-      }
-      if (!nextMod) nextMod = MODULES[0];
+      var nextIndex = prog.completed >= MODULES.length ? MODULES.length - 1 : prog.completed;
+      var next = MODULES[nextIndex];
+      var done = prog.completed >= MODULES.length;
 
-      var lead = document.querySelector("[data-welcome-lead]");
-      if (lead) {
-        if (prog.percent === 0) {
-          lead.textContent =
-            "You are about to start Teaching Swimming with Visual Systems: four short modules that show how to teach swim skills with clearer visual structure.";
-        } else if (prog.percent === 100) {
-          lead.textContent =
-            "You have completed Teaching Swimming with Visual Systems. Review any module below, or explore what is coming next in the catalogue.";
-        } else {
-          lead.textContent =
-            "You are part-way through Teaching Swimming with Visual Systems. Pick up where you left off and keep building practical visual teaching habits.";
-        }
-      }
-
-      var badge = document.querySelector("[data-next-badge]");
-      var nextSt = P.getModuleStatus(COURSE_ID, nextMod.id);
-      if (badge) {
-        if (prog.percent === 100) {
-          badge.textContent = "Course complete";
-          badge.className = "learn-badge is-available";
-        } else if (nextSt === "in-progress" || prog.percent > 0) {
-          badge.textContent = "Continue here";
-          badge.className = "learn-badge is-preview";
-        } else {
-          badge.textContent = "Ready to start";
-          badge.className = "learn-badge is-preview";
-        }
-      }
-
-      var setText = function (sel, text) {
-        var el = document.querySelector(sel);
-        if (el) el.textContent = text;
-      };
-      setText("[data-next-title]", prog.percent === 100 ? "Review your course" : nextMod.title);
-      setText("[data-next-meta]", prog.percent === 100 ? "All 4 modules complete | revisit any time" : nextMod.meta);
-      setText("[data-next-why]", prog.percent === 100
-        ? "Great work. Use the pathway below to revisit any idea, or open the full course hub to see your completed modules together."
-        : nextMod.why);
-
-      var bullets = document.querySelector("[data-next-bullets]");
-      if (bullets) {
-        bullets.innerHTML = "";
-        (prog.percent === 100
-          ? [
-              "Revisit a module if you want a refresher before a live lesson",
-              "Browse the catalogue for upcoming collections",
-              "Apply the method with PixtoLearn Packs and App",
-            ]
-          : nextMod.bullets
-        ).forEach(function (t) {
-          var li = document.createElement("li");
-          li.textContent = t;
-          bullets.appendChild(li);
-        });
-      }
-
-      var img = document.querySelector("[data-next-img]");
-      if (img) {
-        img.src = nextMod.img;
-        img.alt = nextMod.title;
-      }
-      setText("[data-next-caption]", nextMod.caption);
-
-      var nextHref =
-        prog.percent === 100
-          ? "course/teaching-swimming-visual-systems/index.html"
-          : nextMod.href;
-
-      document.querySelectorAll("[data-continue-cta]").forEach(function (a) {
-        a.href = nextHref;
-        a.textContent =
-          prog.percent === 0
-            ? "Start Module 1"
-            : prog.percent === 100
-              ? "Review course"
-              : "Continue " + nextMod.title.split(" ").slice(0, 3).join(" ") + (nextMod.title.split(" ").length > 3 ? "..." : "");
-        if (prog.percent > 0 && prog.percent < 100) a.textContent = "Continue this module";
+      document.querySelectorAll("[data-next-title]").forEach(function (el) {
+        el.textContent = done ? "Course complete" : next.title;
       });
-
-      document.querySelectorAll("[data-continue-link]").forEach(function (a) {
-        a.href = "course/teaching-swimming-visual-systems/index.html";
+      document.querySelectorAll("[data-next-meta]").forEach(function (el) {
+        el.textContent = done ? "All 4 modules finished" : next.meta;
+      });
+      document.querySelectorAll("[data-next-why]").forEach(function (el) {
+        el.textContent = done
+          ? "You finished Teaching Swimming with Visual Systems. Review any module, or open another launch course."
+          : next.why;
+      });
+      document.querySelectorAll("[data-next-badge]").forEach(function (el) {
+        el.textContent = done ? "Completed" : prog.completed === 0 ? "Ready to start" : "In progress";
+        el.className = "learn-badge " + (done ? "is-available" : "is-preview");
+      });
+      document.querySelectorAll("[data-continue-cta]").forEach(function (el) {
+        el.href = next.href;
+        el.textContent = done ? "Review Module 4" : prog.completed === 0 ? "Start Module 1" : "Continue";
+      });
+      document.querySelectorAll("[data-next-img]").forEach(function (el) {
+        el.src = next.img;
+      });
+      document.querySelectorAll("[data-next-caption]").forEach(function (el) {
+        el.textContent = next.caption;
       });
 
       document.querySelectorAll("[data-path-module]").forEach(function (item) {
         var id = item.getAttribute("data-path-module");
-        var st = P.getModuleStatus(COURSE_ID, id);
+        var state = P.moduleState(COURSE_ID, id);
         item.classList.remove("is-not-started", "is-progress", "is-completed", "is-current");
-        item.classList.add(P.statusClass(st));
-        if (nextMod.id === id && prog.percent < 100) item.classList.add("is-current");
+        if (state === "completed") item.classList.add("is-completed");
+        else if (state === "in_progress") item.classList.add("is-progress", "is-current");
+        else item.classList.add("is-not-started");
+        if (next && next.id === id && !done) item.classList.add("is-current");
 
-        var statusEl = item.querySelector("[data-path-status]");
-        if (statusEl) statusEl.textContent = P.statusLabel(st);
-
+        var status = item.querySelector("[data-path-status]");
+        if (status) {
+          status.textContent =
+            state === "completed" ? "Completed" : state === "in_progress" ? "In progress" : "Not started";
+        }
         var cta = item.querySelector("[data-path-cta]");
         if (cta) {
-          cta.textContent = st === "completed" ? "Review" : st === "in-progress" ? "Continue" : nextMod.id === id ? "Start" : "Open";
-          cta.className =
-            "learn-btn " +
-            (nextMod.id === id && prog.percent < 100 ? "learn-btn-primary" : "learn-btn-ghost");
+          cta.textContent = state === "completed" ? "Review" : state === "in_progress" ? "Continue" : "Start";
+          cta.className = "learn-btn " + (state === "completed" ? "learn-btn-ghost" : "learn-btn-primary");
         }
       });
     })();

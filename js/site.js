@@ -92,6 +92,7 @@
   initVideoCards();
   initSwimUsers();
   initPackCarousel();
+  initFlashStage();
   initMissionProgress();
   initAcademyWaitlist();
   initFooterNewsletter();
@@ -164,7 +165,7 @@
       if (note) {
         note.hidden = false;
         note.textContent =
-          "You are on the list. We will email you when PixtoLearn Academy opens. For anything urgent, write to hello@pixtolearn.com.";
+          "Thanks. You are on the Academy updates list. You can buy courses any time from the pricing section.";
       }
       form.reset();
       if (interest) {
@@ -677,22 +678,99 @@
   function initSwimUsers() {
     const root = document.querySelector("[data-swim-users]");
     if (!root) return;
-    const tabs = Array.from(root.querySelectorAll("[data-user]"));
+
+    const nodes = Array.from(root.querySelectorAll(".swim-users-node[data-user]"));
+    const tabs = Array.from(root.querySelectorAll(".swim-users-tabs [data-user]"));
     const panels = Array.from(root.querySelectorAll("[data-user-panel]"));
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        const key = tab.getAttribute("data-user");
-        tabs.forEach((t) => {
-          const on = t === tab;
-          t.classList.toggle("is-active", on);
-          t.setAttribute("aria-selected", on ? "true" : "false");
-        });
-        panels.forEach((p) => {
-          const on = p.getAttribute("data-user-panel") === key;
-          p.hidden = !on;
-        });
+    const orbit = root.querySelector("[data-swim-orbit]");
+    let active = root.getAttribute("data-active") || "";
+    let pauseTimer = null;
+
+    function setActive(key, { pause = true } = {}) {
+      active = key || "";
+      root.setAttribute("data-active", active);
+      root.classList.toggle("is-selected", Boolean(active));
+
+      const panelWrap = root.querySelector("[data-swim-panel]");
+      if (panelWrap) {
+        panelWrap.setAttribute("aria-hidden", active ? "false" : "true");
+      }
+
+      nodes.forEach((node) => {
+        const on = Boolean(active) && node.getAttribute("data-user") === active;
+        node.classList.toggle("is-active", on);
+        node.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+
+      tabs.forEach((tab) => {
+        const on = Boolean(active) && tab.getAttribute("data-user") === active;
+        tab.classList.toggle("is-active", on);
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+      });
+
+      panels.forEach((panel) => {
+        const panelKey = panel.getAttribute("data-user-panel");
+        const on = Boolean(active) && panelKey === active;
+        panel.hidden = !on;
+        if (on) {
+          panel.style.animation = "none";
+          // Force reflow so the entrance animation can replay
+          void panel.offsetWidth;
+          panel.style.animation = "";
+        }
+      });
+
+      if (pause && active) {
+        root.classList.add("is-paused");
+        clearTimeout(pauseTimer);
+        pauseTimer = setTimeout(() => {
+          root.classList.remove("is-paused");
+        }, 4500);
+      }
+    }
+
+    function onSelect(key) {
+      if (!key) return;
+      const mobile = window.matchMedia("(max-width: 960px)").matches;
+      // Desktop: clicking the active role again recenters the orbit
+      if (!mobile && active === key) {
+        setActive("", { pause: false });
+        return;
+      }
+      setActive(key, { pause: true });
+    }
+
+    nodes.forEach((node) => {
+      node.addEventListener("click", () => onSelect(node.getAttribute("data-user")));
+      node.addEventListener("mouseenter", () => root.classList.add("is-paused"));
+      node.addEventListener("mouseleave", () => {
+        // Keep paused briefly after leaving a node so reading is comfortable
+        clearTimeout(pauseTimer);
+        pauseTimer = setTimeout(() => root.classList.remove("is-paused"), 1200);
       });
     });
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => onSelect(tab.getAttribute("data-user")));
+    });
+
+    if (orbit) {
+      orbit.addEventListener("mouseenter", () => root.classList.add("is-paused"));
+      orbit.addEventListener("mouseleave", () => {
+        clearTimeout(pauseTimer);
+        pauseTimer = setTimeout(() => root.classList.remove("is-paused"), 900);
+      });
+    }
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduceMotion.matches) root.classList.add("is-paused");
+    reduceMotion.addEventListener("change", (e) => {
+      root.classList.toggle("is-paused", e.matches);
+    });
+
+    const mobileQuery = window.matchMedia("(max-width: 960px)");
+    if (mobileQuery.matches && !active) active = "instructors";
+    setActive(active, { pause: false });
   }
 
   function initPackCarousel() {
@@ -751,5 +829,23 @@
     );
 
     show(index);
+  }
+
+  function initFlashStage() {
+    const root = document.querySelector("[data-flash-stage]");
+    if (!root) return;
+    const buttons = Array.from(root.querySelectorAll("[data-flash-side]"));
+    const panels = Array.from(root.querySelectorAll("[data-flash-panel]"));
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const side = btn.getAttribute("data-flash-side");
+        buttons.forEach((b) => b.classList.toggle("is-active", b === btn));
+        panels.forEach((p) => {
+          const on = p.getAttribute("data-flash-panel") === side;
+          p.hidden = !on;
+          p.classList.toggle("is-active", on);
+        });
+      });
+    });
   }
 })();

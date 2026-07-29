@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Swimming | PixtoLearn</title>
   <meta name="description" content="Waterproof PixtoLearn Swimming visual system for clearer, safer aquatic learning." />
   <link rel="icon" href="assets/brand/favicon.png" />
@@ -18,13 +18,13 @@
       <a class="brand" href="index.html" aria-label="PixtoLearn home">
         <img src="assets/brand/logo.png" alt="PixtoLearn" />
       </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">Menu</button>
       <ul class="nav-links">
         <li><a href="swimming.html" data-nav="swimming.html">Swimming</a></li>
         <li><a href="routines.html" data-nav="routines.html">Routines</a></li>
         <li><a href="app.html" data-nav="app.html">App</a></li>
-        <li><a href="academy.html" data-nav="academy.html">Academy</a></li>
-        <li><a href="updates.html" data-nav="updates.html">Updates</a></li>
         <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
+        <li><a href="updates.html" data-nav="updates.html">Updates</a></li>
       </ul>
       <div class="nav-icons">
         <a class="nav-icon" href="shop.html" aria-label="Shop basket">
@@ -41,11 +41,6 @@
           </svg>
         </a>
       </div>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
-        <span class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></span>
-      </button>
-
     </div>
   </header>
   <main id="main">
@@ -61,7 +56,7 @@
       <h1>Real-life swimming skills, powered by visual systems</h1>
       <p class="lede">Waterproof picture tools help swimmers understand actions, follow steps, and feel secure where verbal instructions often fall short.</p>
       <div class="btn-row">
-        <a class="btn btn-primary btn-pulse" href="product-full-pack.html">Shop swimming packs</a>
+        <a class="btn btn-primary btn-pulse" href="shop.html#swimming">Shop swimming packs</a>
         <a class="btn btn-ghost btn-ghost-light" href="#inside">Inside the system</a>
       </div>
     </div>
@@ -125,42 +120,184 @@
         <h2>Who uses PixtoLearn Swimming</h2>
         <p class="lede">Same visual language across the people who teach, support, and learn in the water.</p>
       </div>
-      <div class="swim-users reveal" data-swim-users>
-        <div class="swim-users-orbit" aria-hidden="true">
-          <div class="swim-users-core">
-            <img src="assets/packs/shop-full.png" alt="" />
+      <div class="swim-users reveal" data-swim-users data-active="">
+        <div class="swim-users-stage">
+          <div class="swim-users-orbit" data-swim-orbit>
+            <div class="swim-users-ring" data-swim-ring>
+              <!-- 12 slots: 4 interactive + 8 fillers close the ring -->
+              <button type="button" class="swim-users-node" style="--i: 0; --bubble-tint: 208, 56, 96" data-user="instructors" aria-pressed="false" aria-label="Swimming instructors">
+                <span class="swim-users-node-face">
+                  <img class="swim-users-node-photo" src="assets/icons/audience/swimming-instructors.jpg" alt="" />
+                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                </span>
+              </button>
+              <span class="swim-users-filler" style="--i: 1; --s: 48px; --bubble-tint: 136, 176, 192" aria-hidden="true"></span>
+              <span class="swim-users-filler" style="--i: 2; --s: 28px; --bubble-tint: 232, 168, 64" aria-hidden="true"></span>
+              <button type="button" class="swim-users-node" style="--i: 3; --bubble-tint: 136, 176, 192" data-user="schools" aria-pressed="false" aria-label="Schools and organisations">
+                <span class="swim-users-node-face">
+                  <img class="swim-users-node-photo" src="assets/photos/students.jpg" alt="" />
+                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                </span>
+              </button>
+              <span class="swim-users-filler" style="--i: 4; --s: 38px; --bubble-tint: 95, 138, 154" aria-hidden="true"></span>
+              <span class="swim-users-filler" style="--i: 5; --s: 22px; --bubble-tint: 208, 56, 96" aria-hidden="true"></span>
+              <button type="button" class="swim-users-node" style="--i: 6; --bubble-tint: 232, 168, 64" data-user="families" aria-pressed="false" aria-label="Families">
+                <span class="swim-users-node-face">
+                  <img class="swim-users-node-photo" src="assets/icons/audience/families.jpg" alt="" />
+                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                </span>
+              </button>
+              <span class="swim-users-filler" style="--i: 7; --s: 44px; --bubble-tint: 136, 176, 192" aria-hidden="true"></span>
+              <span class="swim-users-filler" style="--i: 8; --s: 26px; --bubble-tint: 232, 168, 64" aria-hidden="true"></span>
+              <button type="button" class="swim-users-node" style="--i: 9; --bubble-tint: 95, 138, 154" data-user="sen" aria-pressed="false" aria-label="SEN specialists and therapists">
+                <span class="swim-users-node-face">
+                  <img class="swim-users-node-photo" src="assets/icons/audience/occupational-therapist.jpg" alt="" />
+                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                </span>
+              </button>
+              <span class="swim-users-filler" style="--i: 10; --s: 34px; --bubble-tint: 208, 56, 96" aria-hidden="true"></span>
+              <span class="swim-users-filler" style="--i: 11; --s: 20px; --bubble-tint: 136, 176, 192" aria-hidden="true"></span>
+            </div>
+            <div class="swim-users-core">
+              <img src="assets/packs/shop-full-cutout.png" alt="PixtoLearn Swimming Full Pack kit" />
+            </div>
           </div>
+          <p class="swim-users-hint">Select a photo to see recommended packs for that role.</p>
         </div>
-        <div class="swim-users-panel">
+
+        <div class="swim-users-panel" data-swim-panel aria-hidden="true">
           <div class="swim-users-tabs" role="tablist" aria-label="Swimming audiences">
-            <button type="button" class="is-active" role="tab" aria-selected="true" data-user="instructors">
+            <button type="button" role="tab" aria-selected="false" data-user="instructors" id="swim-tab-instructors">
               <img src="assets/icons/svg/swim-instructor.svg" alt="" /><span>Swimming instructors</span>
             </button>
-            <button type="button" role="tab" aria-selected="false" data-user="schools">
+            <button type="button" role="tab" aria-selected="false" data-user="schools" id="swim-tab-schools">
               <img src="assets/icons/svg/swim-schools.svg" alt="" /><span>Schools &amp; organisations</span>
             </button>
-            <button type="button" role="tab" aria-selected="false" data-user="families">
+            <button type="button" role="tab" aria-selected="false" data-user="families" id="swim-tab-families">
               <img src="assets/icons/svg/swim-families.svg" alt="" /><span>Families</span>
             </button>
-            <button type="button" role="tab" aria-selected="false" data-user="sen">
+            <button type="button" role="tab" aria-selected="false" data-user="sen" id="swim-tab-sen">
               <img src="assets/icons/svg/swim-sen.svg" alt="" /><span>SEN specialists &amp; therapists</span>
             </button>
           </div>
-          <div class="swim-users-copy" data-user-panel="instructors">
-            <h3>Swimming instructors</h3>
+
+          <div class="swim-users-copy" data-user-panel="instructors" hidden role="tabpanel" aria-labelledby="swim-tab-instructors">
+            <h3 class="swim-users-title swim-users-title-pink">Swimming instructors</h3>
             <p>Teach skills with visible micro-steps. Less repetition of the same verbal cue, more shared understanding in the water.</p>
+            <div class="swim-users-packs">
+              <a class="swim-users-pack" href="product-full-pack.html">
+                <img src="assets/packs/shop-full.png" alt="Full Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Full Pack</span>
+                  <span class="swim-users-pack-why">Full progression for structured lessons</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-stands-holder.html">
+                <img src="assets/photos/stands-holder.png" alt="Stands &amp; Holder" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Stands &amp; Holder</span>
+                  <span class="swim-users-pack-why">First / Next / Then visible poolside</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-basic-pack.html">
+                <img src="assets/packs/shop-basic.png" alt="Basic Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Basic Pack</span>
+                  <span class="swim-users-pack-why">Compact starter for new instructors</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-fun-pack.html">
+                <img src="assets/packs/shop-fun.png" alt="Fun Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Fun Pack</span>
+                  <span class="swim-users-pack-why">Games and motivation in the water</span>
+                </span>
+              </a>
+            </div>
           </div>
-          <div class="swim-users-copy" data-user-panel="schools" hidden>
-            <h3>Schools &amp; organisations</h3>
+
+          <div class="swim-users-copy" data-user-panel="schools" hidden role="tabpanel" aria-labelledby="swim-tab-schools">
+            <h3 class="swim-users-title swim-users-title-slate">Schools &amp; organisations</h3>
             <p>Ready-to-use tools for consistent teaching across classes, clubs, and programmes without rewriting your scheme of work.</p>
+            <div class="swim-users-packs">
+              <a class="swim-users-pack" href="product-full-pack.html">
+                <img src="assets/packs/shop-full.png" alt="Full Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Full Pack</span>
+                  <span class="swim-users-pack-why">One kit across classes and programmes</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-stands-holder.html">
+                <img src="assets/photos/stands-holder.png" alt="Stands &amp; Holder" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Stands &amp; Holder</span>
+                  <span class="swim-users-pack-why">Shared routines every session</span>
+                </span>
+              </a>
+            </div>
           </div>
-          <div class="swim-users-copy" data-user-panel="families" hidden>
-            <h3>Families</h3>
+
+          <div class="swim-users-copy" data-user-panel="families" hidden role="tabpanel" aria-labelledby="swim-tab-families">
+            <h3 class="swim-users-title swim-users-title-amber">Families</h3>
             <p>Routines that stick: from getting ready to the first dip. Calm, clear, and confident at home and poolside.</p>
+            <div class="swim-users-packs">
+              <a class="swim-users-pack" href="product-fun-pack.html">
+                <img src="assets/packs/shop-fun.png" alt="Fun Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Fun Pack</span>
+                  <span class="swim-users-pack-why">Playful learning for shared pool time</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-basic-pack.html">
+                <img src="assets/packs/shop-basic.png" alt="Basic Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Basic Pack</span>
+                  <span class="swim-users-pack-why">Core skills without the full kit</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-keyring.html">
+                <img src="assets/photos/cards-hands.png" alt="Keyring + Lanyard" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Keyring + Lanyard</span>
+                  <span class="swim-users-pack-why">Portable visuals for everyday support</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-stands-holder.html">
+                <img src="assets/photos/stands-holder.png" alt="Stands &amp; Holder" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Stands &amp; Holder</span>
+                  <span class="swim-users-pack-why">Predictable First / Next / Then at home</span>
+                </span>
+              </a>
+            </div>
           </div>
-          <div class="swim-users-copy" data-user-panel="sen" hidden>
-            <h3>SEN specialists &amp; therapists</h3>
+
+          <div class="swim-users-copy" data-user-panel="sen" hidden role="tabpanel" aria-labelledby="swim-tab-sen">
+            <h3 class="swim-users-title swim-users-title-slate-deep">SEN specialists &amp; therapists</h3>
             <p>Integrate swimming into regulation, motor learning, and therapeutic goals with the same visual language used elsewhere.</p>
+            <div class="swim-users-packs">
+              <a class="swim-users-pack" href="product-full-pack.html">
+                <img src="assets/packs/shop-full.png" alt="Full Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Full Pack</span>
+                  <span class="swim-users-pack-why">Full visual system for therapy goals</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-stands-holder.html">
+                <img src="assets/photos/stands-holder.png" alt="Stands &amp; Holder" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Stands &amp; Holder</span>
+                  <span class="swim-users-pack-why">Predictable sequences poolside</span>
+                </span>
+              </a>
+              <a class="swim-users-pack" href="product-fun-pack.html">
+                <img src="assets/packs/shop-fun.png" alt="Fun Pack" loading="lazy" />
+                <span class="swim-users-pack-text">
+                  <span class="swim-users-pack-name">Fun Pack</span>
+                  <span class="swim-users-pack-why">Games, routines, and communication cards</span>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -229,7 +366,7 @@
         <div class="section-head" style="margin-top:2.5rem">
           <p class="eyebrow">The card</p>
           <h2>The PixtoLearn Swimming Flashcard</h2>
-          <p class="lede">Front for the goal. Back for the path.</p>
+          <p class="lede">Every card works as a pair: one clear action on the main side, and a break-it-down sequence on the reverse.</p>
         </div>
         <div class="flash-duo">
           <article class="flash-panel">
@@ -276,10 +413,10 @@
               </div>
             </div>
             <strong>Perfect A5 size</strong>
-            <span>148 × 210 mm</span>
+            <span>148 x 210 mm</span>
           </li>
           <li class="flash-trait-art">
-            <img src="assets/flashcards/trait-clear-art.jpg" alt="Clear action illustration: push off and glide on back" />
+            <img src="assets/flashcards/push-off-glide-art.jpg" alt="Clear action illustration from a PixtoLearn swimming flashcard" />
             <strong>Clear action art</strong>
             <span>One action. No clutter.</span>
           </li>
@@ -355,63 +492,46 @@
       <div class="btn-row feature-cta-row reveal">
         <a class="btn btn-primary" href="product-full-pack.html">Shop swimming packs</a>
         <a class="btn btn-ghost" href="around-the-world.html">PixtoLearn Swimming Around the World</a>
-        <a class="btn btn-ghost" href="academy.html">PixtoLearn Academy</a>
+        <a class="btn btn-ghost" href="academy.html">Learn the system</a>
       </div>
     </div>
   </section>
 
+
   </main>
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <a class="brand footer-logo" href="index.html" aria-label="PixtoLearn home">
-          <img src="assets/brand/logo.png" alt="PixtoLearn" />
-        </a>
-        <p class="footer-tagline">Real-life learning, powered by visual aids.</p>
-        <div class="footer-social">
-          <a class="footer-social-btn is-ig" href="https://www.instagram.com/pixtolearn" rel="noopener" target="_blank" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-          </a>
-          <a class="footer-social-btn is-mail" href="mailto:hello@pixtolearn.com" aria-label="Email PixtoLearn">
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3.5" y="5.5" width="17" height="13" rx="2"/>
-              <path d="m4.5 7.5 7.5 6 7.5-6"/>
-            </svg>
-          </a>
-        </div>
-        <form class="footer-news" data-footer-newsletter>
-          <span>Subscribe for product and Academy updates</span>
-          <div class="footer-news-row">
-            <input type="email" name="email" placeholder="Your email" required autocomplete="email" aria-label="Email address" />
-            <button class="btn btn-primary" type="submit">Subscribe</button>
-          </div>
-          <p class="footer-news-note" data-footer-news-note hidden></p>
-        </form>
+      <div>
+        <a class="brand" href="index.html" aria-label="PixtoLearn home"><img src="assets/brand/logo.png" alt="PixtoLearn" /></a>
+        <p class="muted" style="margin-top:0.85rem;max-width:28ch">Real-life learning, powered by visual aids. Physical packs and PixtoLearn App for clearer sessions.</p>
       </div>
       <div>
-        <h3>Explore</h3>
+        <h3>Our work</h3>
         <ul>
           <li><a href="swimming.html">Swimming</a></li>
-          <li><a href="routines.html">Routines</a></li>
-          <li><a href="app.html">App</a></li>
-          <li><a href="academy.html">Academy</a></li>
-          <li><a href="updates.html">Updates</a></li>
+          <li><a href="routines.html">Routines / WOW</a></li>
+          <li><a href="app.html">PixtoLearn App</a></li>
           <li><a href="shop.html">Shop</a></li>
+          <li><a href="updates.html">Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="account.html">My Account</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@pixtolearn.com">hello@pixtolearn.com</a></li>
+          <li><a href="https://www.instagram.com/pixtolearn" rel="noopener" target="_blank">Instagram</a></li>
         </ul>
       </div>
       <div>
         <h3>Care</h3>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
           <li><a href="privacy.html">Privacy policy</a></li>
           <li><a href="cookies.html">Cookies policy</a></li>
           <li><a href="legal.html">Legal notice</a></li>
-          <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
       </div>
     </div>
@@ -420,7 +540,6 @@
       <span>Because visuals speak louder</span>
     </div>
   </footer>
-  <script src="js/cart.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>

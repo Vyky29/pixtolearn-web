@@ -9,9 +9,10 @@
       "priority": 1,
       "order": "global-to-specific",
       "status": "available",
-      "href": "course/visual-teaching-foundations/index.html",
-      "outlineHref": "curriculum/foundations-outline.html",
-      "why": "Global method course first in the learning pathway."
+      "href": "/learn/course/visual-teaching-foundations/",
+      "outlineHref": "/learn/curriculum/foundations-outline.html",
+      "why": "Global method course first in the learning pathway.",
+      "price": "£19"
     },
     {
       "id": "using-pixtolearn-packs-and-app",
@@ -20,9 +21,10 @@
       "priority": 2,
       "order": "global-to-specific",
       "status": "available",
-      "href": "course/using-pixtolearn-packs-and-app/index.html",
-      "outlineHref": "curriculum/packs-app-outline.html",
-      "why": "Tools layer: how to materialise the method with PixtoLearn products."
+      "href": "/learn/course/using-pixtolearn-packs-and-app/",
+      "outlineHref": "/learn/curriculum/packs-app-outline.html",
+      "why": "Tools layer: how to materialise the method with PixtoLearn products.",
+      "price": "£29"
     },
     {
       "id": "teaching-swimming-visual-systems",
@@ -31,9 +33,10 @@
       "priority": 3,
       "order": "global-to-specific",
       "status": "available",
-      "href": "course/teaching-swimming-visual-systems/index.html",
-      "outlineHref": "curriculum/swimming-visual-systems-outline.html",
-      "why": "Specific aquatic application. Module 4 covers neurodiverse swimmers in the pool only."
+      "href": "/learn/course/teaching-swimming-visual-systems/",
+      "outlineHref": "/learn/curriculum/swimming-visual-systems-outline.html",
+      "why": "Specific aquatic application. Module 4 covers neurodiverse swimmers in the pool only.",
+      "price": "£29"
     },
     {
       "id": "everyday-visual-routines-toddlers",
@@ -42,9 +45,10 @@
       "priority": 4,
       "order": "global-to-specific",
       "status": "available",
-      "href": "course/everyday-visual-routines-toddlers/index.html",
-      "outlineHref": "curriculum/toddlers-routines-outline.html",
-      "why": "Specific home / early-years application."
+      "href": "/learn/course/everyday-visual-routines-toddlers/",
+      "outlineHref": "/learn/curriculum/toddlers-routines-outline.html",
+      "why": "Specific home / early-years application.",
+      "price": "£29"
     }
   ],
   "premiumCourses": [
@@ -82,10 +86,30 @@
       "outlineHref": "curriculum/dementia-older-adults-outline.html",
       "productLink": "Large clear sequences + App"
     },
-    { "id": "visual-supports-schools-sen", "title": "Visual Supports in Schools (SEN / inclusive classrooms)", "audience": "schools", "status": "idea" },
-    { "id": "calm-transitions-later-life-care", "title": "Calm Transitions in Later Life Care", "audience": "older-adults", "status": "idea" },
-    { "id": "workplace-community-visual-supports", "title": "Workplace and Community Visual Supports", "audience": "adults", "status": "idea" },
-    { "id": "parent-pathway-first-30-days", "title": "Parent Pathway: First 30 Days with Visual Routines", "audience": "families", "status": "idea" }
+    {
+      "id": "visual-supports-schools-sen",
+      "title": "Visual Supports in Schools (SEN / inclusive classrooms)",
+      "audience": "schools",
+      "status": "idea"
+    },
+    {
+      "id": "calm-transitions-later-life-care",
+      "title": "Calm Transitions in Later Life Care",
+      "audience": "older-adults",
+      "status": "idea"
+    },
+    {
+      "id": "workplace-community-visual-supports",
+      "title": "Workplace and Community Visual Supports",
+      "audience": "adults",
+      "status": "idea"
+    },
+    {
+      "id": "parent-pathway-first-30-days",
+      "title": "Parent Pathway: First 30 Days with Visual Routines",
+      "audience": "families",
+      "status": "idea"
+    }
   ],
   "collections": [
     {
@@ -100,34 +124,44 @@
           "title": "Teaching Swimming with Visual Systems",
           "summary": "Use waterproof visual supports to make swim skills clearer, calmer and easier to follow.",
           "status": "available",
-          "href": "course/teaching-swimming-visual-systems/index.html",
+          "href": "/learn/course/teaching-swimming-visual-systems/",
           "duration": "About 45 minutes",
           "modules": [
             {
               "id": "module-1",
               "title": "Why visuals in the pool",
               "summary": "How visual supports reduce overwhelm and make instructions clearer in the water.",
-              "href": "module-1/index.html"
+              "href": "/learn/course/teaching-swimming-visual-systems/module-1/"
             },
             {
               "id": "module-2",
               "title": "Breaking a swim skill into clear steps",
               "summary": "Turn complex skills into short, teachable sequences learners can follow.",
-              "href": "module-2/index.html"
+              "href": "/learn/course/teaching-swimming-visual-systems/module-2/"
             },
             {
               "id": "module-3",
               "title": "Using waterproof cards in a live lesson",
               "summary": "Practical placement, pacing and prompting with PixtoLearn cards poolside.",
-              "href": "module-3/index.html"
+              "href": "/learn/course/teaching-swimming-visual-systems/module-3/"
             },
             {
               "id": "module-4",
               "title": "Supporting neurodiverse swimmers with visual structure",
               "summary": "Adapt visual systems for sensory needs, transitions and emotional safety.",
-              "href": "module-4/index.html"
+              "href": "/learn/course/teaching-swimming-visual-systems/module-4/"
             }
-          ]
+          ],
+          "price": "£29"
+        },
+        {
+          "id": "aquatic-specialist-pathway",
+          "title": "Aquatic Specialist Pathway",
+          "summary": "Deep Pathway I + II for instructors and centres. Neurodiverse practice and PixtoLearn visual systems.",
+          "status": "available",
+          "price": "£199",
+          "href": "/learn/course/aquatic-specialist-pathway/",
+          "duration": "Specialist pathway"
         },
         {
           "id": "structuring-effective-swimming-lessons",
@@ -165,11 +199,24 @@
           "id": "everyday-visual-routines-toddlers",
           "title": "Everyday Visual Routines for Toddlers and Young Children",
           "status": "available",
-          "href": "course/everyday-visual-routines-toddlers/index.html"
+          "href": "/learn/course/everyday-visual-routines-toddlers/",
+          "price": "£29"
         },
-        { "id": "creating-effective-visual-routines", "title": "Creating Effective Visual Routines", "status": "coming-soon" },
-        { "id": "teaching-self-care-skills", "title": "Teaching Self-Care Skills", "status": "coming-soon" },
-        { "id": "supporting-transitions-and-regulation", "title": "Supporting Transitions and Regulation", "status": "coming-soon" }
+        {
+          "id": "creating-effective-visual-routines",
+          "title": "Creating Effective Visual Routines",
+          "status": "coming-soon"
+        },
+        {
+          "id": "teaching-self-care-skills",
+          "title": "Teaching Self-Care Skills",
+          "status": "coming-soon"
+        },
+        {
+          "id": "supporting-transitions-and-regulation",
+          "title": "Supporting Transitions and Regulation",
+          "status": "coming-soon"
+        }
       ]
     },
     {
@@ -182,11 +229,24 @@
           "id": "visual-teaching-foundations",
           "title": "Visual Teaching Foundations for Professionals",
           "status": "available",
-          "href": "course/visual-teaching-foundations/index.html"
+          "href": "/learn/course/visual-teaching-foundations/",
+          "price": "£19"
         },
-        { "id": "breaking-skills-into-clear-steps", "title": "Breaking Skills into Clear Steps", "status": "coming-soon" },
-        { "id": "communication-through-visual-supports", "title": "Communication Through Visual Supports", "status": "coming-soon" },
-        { "id": "applying-visual-systems-in-practice", "title": "Applying Visual Systems in Professional Practice", "status": "coming-soon" }
+        {
+          "id": "breaking-skills-into-clear-steps",
+          "title": "Breaking Skills into Clear Steps",
+          "status": "coming-soon"
+        },
+        {
+          "id": "communication-through-visual-supports",
+          "title": "Communication Through Visual Supports",
+          "status": "coming-soon"
+        },
+        {
+          "id": "applying-visual-systems-in-practice",
+          "title": "Applying Visual Systems in Professional Practice",
+          "status": "coming-soon"
+        }
       ]
     },
     {
@@ -199,12 +259,41 @@
           "id": "using-pixtolearn-packs-and-app",
           "title": "Using PixtoLearn Packs and App",
           "status": "available",
-          "href": "course/using-pixtolearn-packs-and-app/index.html"
+          "href": "/learn/course/using-pixtolearn-packs-and-app/",
+          "price": "£29"
         },
-        { "id": "using-pixtolearn-swimming-packs", "title": "Using PixtoLearn Swimming Packs", "status": "coming-soon" },
-        { "id": "using-pixtolearn-wow-routine-cards", "title": "Using PixtoLearn WOW Routine Cards", "status": "coming-soon" },
-        { "id": "pixtolearn-practitioner-pathway", "title": "PixtoLearn Practitioner Pathway", "status": "coming-soon", "note": "Future certification pathway" }
+        {
+          "id": "using-pixtolearn-swimming-packs",
+          "title": "Using PixtoLearn Swimming Packs",
+          "status": "coming-soon"
+        },
+        {
+          "id": "using-pixtolearn-wow-routine-cards",
+          "title": "Using PixtoLearn WOW Routine Cards",
+          "status": "coming-soon"
+        },
+        {
+          "id": "pixtolearn-practitioner-pathway",
+          "title": "PixtoLearn Practitioner Pathway",
+          "status": "coming-soon",
+          "note": "Future certification pathway"
+        }
       ]
+    }
+  ],
+  "specialistCourses": [
+    {
+      "id": "aquatic-specialist-pathway",
+      "title": "Aquatic Specialist Pathway",
+      "productLink": "Swimming Packs + App",
+      "priority": 5,
+      "tier": "specialist",
+      "status": "available",
+      "price": "£199",
+      "teamPrice": "£399",
+      "href": "course/aquatic-specialist-pathway/index.html",
+      "externalHub": "https://pixtolearn-aquatic-specialist.vercel.app/portal/",
+      "why": "Deep specialist aquatic pathway (I + II). Commercial PixtoLearn fork of the full swimming instructor training. Short swimming course remains the £29 intro."
     }
   ]
 }

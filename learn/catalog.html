@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Course Catalogue | PixtoLearn Academy</title>
   <meta name="description" content="Explore PixtoLearn Academy course collections for swimming, everyday skills, professionals and tools." />
-  <link rel="icon" href="../assets/brand/favicon.png" />
+  <link rel="icon" href="/assets/brand/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
   <header class="learn-header">
     <div class="learn-wrap learn-nav">
       <a class="learn-brand" href="index.html" aria-label="PixtoLearn Academy home">
-        <img src="../assets/brand/logo.png" alt="PixtoLearn" />
+        <img src="/assets/brand/logo.png" alt="PixtoLearn" />
         <span class="learn-brand-text">
           <strong>Academy</strong>
           <span>Catalogue</span>
@@ -25,8 +25,9 @@
       <ul class="learn-nav-links">
         <li><a href="index.html">Dashboard</a></li>
         <li><a href="catalog.html" aria-current="page">Catalogue</a></li>
-        <li><a href="../account.html">Account</a></li>
-        <li><a href="../academy.html">Marketing site</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="/account.html">Account</a></li>
+        <li><a href="/cart.html">Cart</a></li>
       </ul>
     </div>
   </header>
@@ -36,7 +37,7 @@
       <div class="learn-wrap">
         <p class="learn-eyebrow">Catalogue</p>
         <h1>Explore Academy courses</h1>
-        <p class="lede">Four focused collections for the places where visual teaching matters most. Start with swimming; more courses open as they launch.</p>
+        <p class="lede">Four launch courses with live pricing. Buy one course or the full pathway, then open modules in the learner hub.</p>
       </div>
     </section>
 
@@ -49,8 +50,8 @@
 
   <footer class="learn-footer">
     <div class="learn-wrap learn-footer-inner">
-      <span>&copy; 2026 PixtoLearn Academy (preview)</span>
-      <a href="../academy.html#waitlist">Register interest for upcoming courses</a>
+      <span>&copy; 2026 PixtoLearn Academy</span>
+      <a href="index.html#pricing">See pricing</a>
     </div>
   </footer>
 
@@ -111,16 +112,34 @@
 
               var badge = document.createElement("span");
               badge.className = "learn-badge " + (course.status === "available" ? "is-available" : "is-soon");
-              badge.textContent = course.status === "available" ? "Available" : "Coming soon";
+              var priceMap = {
+                "visual-teaching-foundations": "\u00a319",
+                "using-pixtolearn-packs-and-app": "\u00a329",
+                "teaching-swimming-visual-systems": "\u00a329",
+                "everyday-visual-routines-toddlers": "\u00a329"
+              };
+              if (course.status === "available") {
+                badge.textContent = course.price || priceMap[course.id] || "\u00a329";
+              } else {
+                badge.textContent = "Coming soon";
+              }
               li.appendChild(badge);
 
-              if (course.status !== "available") {
+              if (course.status === "available") {
+                var buy = document.createElement("a");
+                buy.href = "index.html#pricing";
+                buy.style.fontSize = "0.8rem";
+                buy.style.fontWeight = "650";
+                buy.style.color = "var(--slate-deep)";
+                buy.textContent = "Buy";
+                li.appendChild(buy);
+              } else {
                 var interest = document.createElement("a");
-                interest.href = "../academy.html#waitlist";
+                interest.href = "index.html#pricing";
                 interest.style.fontSize = "0.8rem";
                 interest.style.fontWeight = "650";
                 interest.style.color = "var(--slate-deep)";
-                interest.textContent = "Register interest";
+                interest.textContent = "Notify me";
                 li.appendChild(interest);
               }
               ul.appendChild(li);
