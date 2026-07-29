@@ -244,6 +244,7 @@
                 <label><input type="checkbox" name="gift_swim" value="1" checked disabled /> Free swimming printable trial</label>
                 <label><input type="checkbox" name="want_wow" value="1" /> Also send a WOW cards sample when ready</label>
                 <label><input type="checkbox" name="want_app" value="1" /> PixtoLearn App launch tips</label>
+                <label><input type="checkbox" name="want_academy" value="1" /> PixtoLearn Academy waiting list</label>
                 <label><input type="checkbox" name="privacy" value="1" required /> I agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a></label>
               </div>
               <button class="lead-submit" type="submit">Submit</button>
@@ -333,6 +334,7 @@
         gift_swim: true,
         want_wow: data.get("want_wow") === "1",
         want_app: data.get("want_app") === "1",
+        want_academy: data.get("want_academy") === "1",
         at: new Date().toISOString(),
         page: path,
       };
