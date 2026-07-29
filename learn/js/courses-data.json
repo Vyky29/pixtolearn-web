@@ -1,6 +1,92 @@
 {
   "academyName": "PixtoLearn Academy",
   "mvpCourseId": "teaching-swimming-visual-systems",
+  "launchCourses": [
+    {
+      "id": "visual-teaching-foundations",
+      "title": "Visual Teaching Foundations for Professionals",
+      "productLink": "Method (leads to Packs + App)",
+      "priority": 1,
+      "order": "global-to-specific",
+      "status": "available",
+      "href": "course/visual-teaching-foundations/index.html",
+      "outlineHref": "curriculum/foundations-outline.html",
+      "why": "Global method course first in the learning pathway."
+    },
+    {
+      "id": "using-pixtolearn-packs-and-app",
+      "title": "Using PixtoLearn Packs and App",
+      "productLink": "All Packs + App",
+      "priority": 2,
+      "order": "global-to-specific",
+      "status": "available",
+      "href": "course/using-pixtolearn-packs-and-app/index.html",
+      "outlineHref": "curriculum/packs-app-outline.html",
+      "why": "Tools layer: how to materialise the method with PixtoLearn products."
+    },
+    {
+      "id": "teaching-swimming-visual-systems",
+      "title": "Teaching Swimming with Visual Systems",
+      "productLink": "Swimming Packs",
+      "priority": 3,
+      "order": "global-to-specific",
+      "status": "available",
+      "href": "course/teaching-swimming-visual-systems/index.html",
+      "outlineHref": "curriculum/swimming-visual-systems-outline.html",
+      "why": "Specific aquatic application. Module 4 covers neurodiverse swimmers in the pool only."
+    },
+    {
+      "id": "everyday-visual-routines-toddlers",
+      "title": "Everyday Visual Routines for Toddlers and Young Children",
+      "productLink": "WOW Routine Cards",
+      "priority": 4,
+      "order": "global-to-specific",
+      "status": "available",
+      "href": "course/everyday-visual-routines-toddlers/index.html",
+      "outlineHref": "curriculum/toddlers-routines-outline.html",
+      "why": "Specific home / early-years application."
+    }
+  ],
+  "premiumCourses": [
+    {
+      "id": "visual-support-neurodiverse-nonverbal-learners",
+      "title": "Visual Support for Neurodiverse and Non-Verbal Learners",
+      "status": "planned",
+      "tier": "premium-flagship",
+      "modules": 10,
+      "duration": "About 3.5 to 4.5 hours",
+      "outlineHref": "curriculum/neurodiverse-nonverbal-outline.html",
+      "productLink": "Packs + WOW + App",
+      "prerequisite": "visual-teaching-foundations-professionals",
+      "why": "Full cross-setting system for autism, LD, limited verbal communication and sensory needs. Practitioner pathway candidate."
+    }
+  ],
+  "nichePipeline": [
+    {
+      "id": "visual-independence-adults-ld",
+      "title": "Visual Independence for Adults with Learning Disabilities",
+      "audience": "adults",
+      "status": "planned",
+      "modules": 7,
+      "duration": "About 2.5 to 3 hours",
+      "outlineHref": "curriculum/adults-ld-outline.html",
+      "productLink": "Routine sequences + App"
+    },
+    {
+      "id": "dementia-friendly-visual-routines",
+      "title": "Visual Routines for Older Adults and Dementia-Friendly Support",
+      "audience": "older-adults",
+      "status": "planned",
+      "modules": 7,
+      "duration": "About 2.5 to 3 hours",
+      "outlineHref": "curriculum/dementia-older-adults-outline.html",
+      "productLink": "Large clear sequences + App"
+    },
+    { "id": "visual-supports-schools-sen", "title": "Visual Supports in Schools (SEN / inclusive classrooms)", "audience": "schools", "status": "idea" },
+    { "id": "calm-transitions-later-life-care", "title": "Calm Transitions in Later Life Care", "audience": "older-adults", "status": "idea" },
+    { "id": "workplace-community-visual-supports", "title": "Workplace and Community Visual Supports", "audience": "adults", "status": "idea" },
+    { "id": "parent-pathway-first-30-days", "title": "Parent Pathway: First 30 Days with Visual Routines", "audience": "families", "status": "idea" }
+  ],
   "collections": [
     {
       "id": "swimming",
@@ -60,6 +146,12 @@
           "title": "Supporting Neurodiverse Swimmers",
           "summary": "Inclusive aquatic practice with structure, predictability and choice.",
           "status": "coming-soon"
+        },
+        {
+          "id": "supporting-neurodiverse-learners-visual-structure",
+          "title": "Supporting Neurodiverse Learners with Visual Structure",
+          "summary": "Cross-setting visual structure for sensory needs, transitions and emotional safety.",
+          "status": "coming-soon"
         }
       ]
     },
@@ -69,10 +161,15 @@
       "summary": "Visual strategies for routines, self-care and everyday participation.",
       "image": "../assets/icons/audience/families.jpg",
       "courses": [
+        {
+          "id": "everyday-visual-routines-toddlers",
+          "title": "Everyday Visual Routines for Toddlers and Young Children",
+          "status": "available",
+          "href": "course/everyday-visual-routines-toddlers/index.html"
+        },
         { "id": "creating-effective-visual-routines", "title": "Creating Effective Visual Routines", "status": "coming-soon" },
         { "id": "teaching-self-care-skills", "title": "Teaching Self-Care Skills", "status": "coming-soon" },
-        { "id": "supporting-transitions-and-regulation", "title": "Supporting Transitions and Regulation", "status": "coming-soon" },
-        { "id": "building-independence-at-home", "title": "Building Independence at Home", "status": "coming-soon" }
+        { "id": "supporting-transitions-and-regulation", "title": "Supporting Transitions and Regulation", "status": "coming-soon" }
       ]
     },
     {
@@ -81,7 +178,12 @@
       "summary": "Practical visual methods for education, therapy, sport and support services.",
       "image": "../assets/photos/workshop.jpg",
       "courses": [
-        { "id": "visual-learning-foundations", "title": "Visual Learning Foundations", "status": "coming-soon" },
+        {
+          "id": "visual-teaching-foundations",
+          "title": "Visual Teaching Foundations for Professionals",
+          "status": "available",
+          "href": "course/visual-teaching-foundations/index.html"
+        },
         { "id": "breaking-skills-into-clear-steps", "title": "Breaking Skills into Clear Steps", "status": "coming-soon" },
         { "id": "communication-through-visual-supports", "title": "Communication Through Visual Supports", "status": "coming-soon" },
         { "id": "applying-visual-systems-in-practice", "title": "Applying Visual Systems in Professional Practice", "status": "coming-soon" }
@@ -93,9 +195,14 @@
       "summary": "Learn how to plan, deliver and develop visual teaching with PixtoLearn.",
       "image": "../assets/photos/library/dsc_0795.jpg",
       "courses": [
+        {
+          "id": "using-pixtolearn-packs-and-app",
+          "title": "Using PixtoLearn Packs and App",
+          "status": "available",
+          "href": "course/using-pixtolearn-packs-and-app/index.html"
+        },
         { "id": "using-pixtolearn-swimming-packs", "title": "Using PixtoLearn Swimming Packs", "status": "coming-soon" },
         { "id": "using-pixtolearn-wow-routine-cards", "title": "Using PixtoLearn WOW Routine Cards", "status": "coming-soon" },
-        { "id": "planning-a-visual-teaching-session", "title": "Planning a Visual Teaching Session", "status": "coming-soon" },
         { "id": "pixtolearn-practitioner-pathway", "title": "PixtoLearn Practitioner Pathway", "status": "coming-soon", "note": "Future certification pathway" }
       ]
     }
