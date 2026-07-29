@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>PixtoLearn Academy | Practical visual teaching for real-life learning</title>
-  <meta name="description" content="PixtoLearn Academy: practical self-paced e-learning for swimming instructors, families, educators, therapists and professionals. Coming soon. Join the waiting list." />
+  <meta name="description" content="PixtoLearn Academy: practical self-paced e-learning for swimming instructors, families, educators, therapists and professionals. Preview the first swimming course or join the waiting list." />
   <link rel="icon" href="assets/brand/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
 </head>
-<body>
+<body class="page-academy">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
@@ -54,13 +54,14 @@
         <div class="hero-shade"></div>
       </div>
       <div class="wrap hero-content reveal">
-        <span class="aca-pill">Coming Soon</span>
+        <span class="aca-pill">Preview open</span>
         <h1>PixtoLearn Academy</h1>
         <p class="aca-hero-lead">Practical visual teaching for real-life learning.</p>
         <p class="lede">Self-paced e-learning courses for swimming instructors, families, educators, therapists and professionals who want to teach skills with greater clarity, structure and confidence.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="#waitlist">Join the Waiting List</a>
-          <a class="btn btn-ghost btn-ghost-light" href="#courses">Explore Upcoming Courses</a>
+          <a class="btn btn-ghost btn-ghost-light" href="learn/index.html">Preview Academy</a>
+          <a class="btn btn-ghost btn-ghost-light" href="#courses">Explore courses</a>
         </div>
       </div>
     </section>
@@ -68,6 +69,7 @@
     <section class="aca-intro">
       <div class="wrap aca-intro-grid reveal">
         <div class="aca-intro-copy">
+          <p class="eyebrow">The approach</p>
           <h2>Learn practical strategies. Apply them in real life.</h2>
           <p class="lede">PixtoLearn Academy brings together practical, evidence-informed courses on visual teaching, swimming instruction, everyday routines and independence.</p>
           <p class="muted">Learn at your own pace and apply each strategy across homes, pools, schools, therapy settings and community programmes.</p>
@@ -78,34 +80,39 @@
       </div>
     </section>
 
-    <section id="courses" class="section-tint">
+    <section id="courses" class="aca-courses">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">Upcoming courses</p>
-          <h2>Explore Our Upcoming Courses</h2>
-          <p class="lede">Four focused course collections designed around the environments and skills where visual teaching can make the greatest difference.</p>
+          <p class="eyebrow">Courses</p>
+          <h2>Explore Our Courses</h2>
+          <p class="lede">Four focused course collections. Preview Teaching Swimming with Visual Systems now; more releases follow via the waiting list.</p>
         </div>
 
-        <div class="aca-course-grid">
-          <article class="aca-course reveal">
-            <div class="aca-course-media">
-              <img src="assets/photos/ghana-1.jpg" alt="Swimming instructor teaching a learner with a PixtoLearn visual sequence card in the pool" loading="lazy" />
-              <span class="aca-course-soon">Coming Soon</span>
+        <article class="aca-feature reveal">
+          <div class="aca-feature-media">
+            <img src="assets/photos/ghana-1.jpg" alt="Swimming instructor teaching a learner with a PixtoLearn visual sequence card in the pool" loading="lazy" />
+            <div class="aca-feature-badges">
+              <span class="aca-course-soon aca-course-preview">Preview</span>
               <span class="aca-course-tag">Core expertise</span>
             </div>
-            <div class="aca-course-body">
-              <h3>Swimming &amp; Aquatic Teaching</h3>
-              <p>Clearer teaching for safer, more confident swimmers.</p>
-              <ul>
-                <li>Teaching Swimming with Visual Systems</li>
-                <li>Structuring Effective Swimming Lessons</li>
-                <li>Building Water Confidence and Safety</li>
-                <li>Supporting Neurodiverse Swimmers</li>
-              </ul>
-              <a class="linkish" href="#waitlist" data-aca-interest="swimming">Register Interest</a>
+          </div>
+          <div class="aca-feature-body">
+            <h3>Swimming &amp; Aquatic Teaching</h3>
+            <p>Clearer teaching for safer, more confident swimmers.</p>
+            <ul>
+              <li><a href="learn/course/teaching-swimming-visual-systems/index.html">Teaching Swimming with Visual Systems</a> <span class="aca-course-note">Preview available</span></li>
+              <li>Structuring Effective Swimming Lessons</li>
+              <li>Building Water Confidence and Safety</li>
+              <li>Supporting Neurodiverse Swimmers</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="learn/course/teaching-swimming-visual-systems/index.html" data-aca-interest="swimming">Open preview course</a>
+              <a class="btn btn-ghost btn-ghost-light" href="#waitlist" data-aca-interest="swimming">Register interest</a>
             </div>
-          </article>
+          </div>
+        </article>
 
+        <div class="aca-course-grid">
           <article class="aca-course reveal">
             <div class="aca-course-media">
               <img src="assets/icons/audience/families.jpg" alt="Family using visual learning cards together at home during a daily routine" loading="lazy" />
@@ -120,7 +127,7 @@
                 <li>Supporting Transitions and Regulation</li>
                 <li>Building Independence at Home</li>
               </ul>
-              <a class="linkish" href="#waitlist" data-aca-interest="everyday">Register Interest</a>
+              <a class="aca-text-link" href="#waitlist" data-aca-interest="everyday">Register interest</a>
             </div>
           </article>
 
@@ -138,7 +145,7 @@
                 <li>Communication Through Visual Supports</li>
                 <li>Applying Visual Systems in Professional Practice</li>
               </ul>
-              <a class="linkish" href="#waitlist" data-aca-interest="professionals">Register Interest</a>
+              <a class="aca-text-link" href="#waitlist" data-aca-interest="professionals">Register interest</a>
             </div>
           </article>
 
@@ -154,16 +161,23 @@
                 <li>Using PixtoLearn Swimming Packs</li>
                 <li>Using PixtoLearn WOW Routine Cards</li>
                 <li>Planning a Visual Teaching Session</li>
-                <li>PixtoLearn Practitioner Pathway <span class="aca-course-note">Future certification pathway</span></li>
+                <li>PixtoLearn Practitioner Pathway <span class="aca-course-note">Future pathway</span></li>
               </ul>
-              <a class="linkish" href="#waitlist" data-aca-interest="tools">Register Interest</a>
+              <a class="aca-text-link" href="#waitlist" data-aca-interest="tools">Register interest</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="aca-statement">
+      <div class="wrap reveal">
+        <p class="aca-statement-line">Learn once.</p>
+        <p class="aca-statement-line">Apply in the pool, at home, in practice.</p>
+      </div>
+    </section>
+
+    <section class="aca-benefits-sec">
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">How you learn</p>
@@ -171,18 +185,22 @@
         </div>
         <div class="aca-benefits reveal">
           <article class="aca-benefit" style="--aca-mark:var(--pink)">
+            <span class="aca-benefit-n">01</span>
             <h3>Self-paced</h3>
             <p>Learn when and where it works for you.</p>
           </article>
           <article class="aca-benefit" style="--aca-mark:var(--amber)">
+            <span class="aca-benefit-n">02</span>
             <h3>Practical</h3>
             <p>Use strategies immediately in real sessions and routines.</p>
           </article>
           <article class="aca-benefit" style="--aca-mark:var(--slate-deep)">
+            <span class="aca-benefit-n">03</span>
             <h3>Interactive</h3>
             <p>Explore scenarios, activities, demonstrations and knowledge checks.</p>
           </article>
           <article class="aca-benefit" style="--aca-mark:var(--pink)">
+            <span class="aca-benefit-n">04</span>
             <h3>Resource-led</h3>
             <p>Access downloadable templates, plans and supporting materials.</p>
           </article>
@@ -190,24 +208,13 @@
       </div>
     </section>
 
-    <section class="section-tint">
+    <section class="aca-audience-sec">
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">Who it is for</p>
           <h2>Designed for people who teach and support</h2>
           <p class="lede">Whether you are teaching a swimming skill, introducing a daily routine or supporting greater independence, PixtoLearn Academy will help you make learning clearer and easier to follow.</p>
         </div>
-
-        <ul class="aca-audience-list reveal">
-          <li>Swimming instructors</li>
-          <li>Families and carers</li>
-          <li>Educators</li>
-          <li>Therapists</li>
-          <li>Coaches</li>
-          <li>Support professionals</li>
-          <li>Organisations</li>
-        </ul>
-
         <div class="aca-audience-photos reveal">
           <figure>
             <img src="assets/icons/audience/swimming-instructors.jpg" alt="Swimming instructor showing a visual card during a lesson" loading="lazy" />
@@ -226,38 +233,39 @@
             <figcaption>Adult and later-life support</figcaption>
           </figure>
         </div>
+        <p class="aca-audience-note reveal">Also for families and carers, support professionals and organisations.</p>
       </div>
     </section>
 
-    <section>
+    <section class="aca-tools-sec">
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">Tools</p>
           <h2>Learn. Apply. Reinforce.</h2>
           <p class="lede">Academy provides the knowledge. PixtoLearn Packs and App provide the tools to apply it consistently in real-life environments.</p>
         </div>
-        <div class="aca-tools reveal">
-          <article class="aca-tool">
-            <div class="aca-tool-media">
-              <img src="assets/packs/shop-full.png" alt="PixtoLearn Full Pack swimming visual cards" loading="lazy" />
-            </div>
-            <div class="aca-tool-copy">
-              <h3>PixtoLearn Packs</h3>
-              <p>Practical visual tools for swimming, routines and real-life learning.</p>
-              <a class="btn btn-primary" href="shop.html">Explore PixtoLearn Packs</a>
-            </div>
-          </article>
-          <article class="aca-tool">
-            <div class="aca-tool-media">
-              <img src="assets/photos/hero-app.jpg" alt="PixtoLearn App on tablet and phone for Focus sessions" loading="lazy" />
-            </div>
-            <div class="aca-tool-copy">
-              <h3>PixtoLearn App</h3>
-              <p>Digital visual support for structured teaching and focused sessions.</p>
-              <a class="btn btn-ghost" href="app.html">Discover the PixtoLearn App</a>
-            </div>
-          </article>
-        </div>
+      </div>
+      <div class="aca-tools">
+        <article class="aca-tool reveal">
+          <div class="aca-tool-media">
+            <img src="assets/packs/shop-full.png" alt="PixtoLearn Full Pack swimming visual cards" loading="lazy" />
+          </div>
+          <div class="aca-tool-copy">
+            <h3>PixtoLearn Packs</h3>
+            <p>Practical visual tools for swimming, routines and real-life learning.</p>
+            <a class="btn btn-primary" href="shop.html">Explore PixtoLearn Packs</a>
+          </div>
+        </article>
+        <article class="aca-tool aca-tool-flip reveal">
+          <div class="aca-tool-media">
+            <img src="assets/photos/hero-app.jpg" alt="PixtoLearn App on tablet and phone for Focus sessions" loading="lazy" />
+          </div>
+          <div class="aca-tool-copy">
+            <h3>PixtoLearn App</h3>
+            <p>Digital visual support for structured teaching and focused sessions.</p>
+            <a class="btn btn-ghost" href="app.html">Discover the PixtoLearn App</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -302,7 +310,7 @@
     </section>
   </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
         <a class="brand footer-logo" href="index.html" aria-label="PixtoLearn home">

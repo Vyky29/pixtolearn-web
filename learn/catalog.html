@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Course Catalogue | PixtoLearn Academy</title>
+  <meta name="description" content="Explore PixtoLearn Academy course collections for swimming, everyday skills, professionals and tools." />
+  <link rel="icon" href="../assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/academy-learn.css" />
+</head>
+<body class="learn-body">
+  <a class="learn-skip" href="#main">Skip to content</a>
+  <header class="learn-header">
+    <div class="learn-wrap learn-nav">
+      <a class="learn-brand" href="index.html" aria-label="PixtoLearn Academy home">
+        <img src="../assets/brand/logo.png" alt="PixtoLearn" />
+        <span class="learn-brand-text">
+          <strong>Academy</strong>
+          <span>Catalogue</span>
+        </span>
+      </a>
+      <ul class="learn-nav-links">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="catalog.html" aria-current="page">Catalogue</a></li>
+        <li><a href="../account.html">Account</a></li>
+        <li><a href="../academy.html">Marketing site</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="learn-hero catalog-hero">
+      <div class="learn-wrap">
+        <p class="learn-eyebrow">Catalogue</p>
+        <h1>Explore Academy courses</h1>
+        <p class="lede">Four focused collections for the places where visual teaching matters most. Start with swimming; more courses open as they launch.</p>
+      </div>
+    </section>
+
+    <section class="learn-section">
+      <div class="learn-wrap learn-catalog-grid" data-catalog-root>
+        <p class="learn-muted">Loading catalogue...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="learn-footer">
+    <div class="learn-wrap learn-footer-inner">
+      <span>&copy; 2026 PixtoLearn Academy (preview)</span>
+      <a href="../academy.html#waitlist">Register interest for upcoming courses</a>
+    </div>
+  </footer>
+
+  <script src="js/progress.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector("[data-catalog-root]");
+      if (!root) return;
+
+      fetch("js/courses-data.json")
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          root.innerHTML = "";
+          (data.collections || []).forEach(function (col) {
+            var article = document.createElement("article");
+            article.className = "learn-collection";
+
+            var media = document.createElement("div");
+            media.className = "learn-collection-media";
+            if (col.image) {
+              var img = document.createElement("img");
+              img.src = col.image;
+              img.alt = "";
+              img.loading = "lazy";
+              media.appendChild(img);
+            }
+
+            var body = document.createElement("div");
+            body.className = "learn-collection-body";
+            if (col.tag) {
+              var tag = document.createElement("span");
+              tag.className = "learn-tag";
+              tag.textContent = col.tag;
+              body.appendChild(tag);
+            }
+            var h2 = document.createElement("h2");
+            h2.textContent = col.title;
+            body.appendChild(h2);
+            var p = document.createElement("p");
+            p.textContent = col.summary || "";
+            body.appendChild(p);
+
+            var ul = document.createElement("ul");
+            ul.className = "learn-course-list";
+            (col.courses || []).forEach(function (course) {
+              var li = document.createElement("li");
+              var left = document.createElement("span");
+              if (course.status === "available" && course.href) {
+                li.className = "is-available";
+                var a = document.createElement("a");
+                a.href = course.href;
+                a.textContent = course.title;
+                left.appendChild(a);
+              } else {
+                left.textContent = course.title;
+              }
+              li.appendChild(left);
+
+              var badge = document.createElement("span");
+              badge.className = "learn-badge " + (course.status === "available" ? "is-available" : "is-soon");
+              badge.textContent = course.status === "available" ? "Available" : "Coming soon";
+              li.appendChild(badge);
+
+              if (course.status !== "available") {
+                var interest = document.createElement("a");
+                interest.href = "../academy.html#waitlist";
+                interest.style.fontSize = "0.8rem";
+                interest.style.fontWeight = "650";
+                interest.style.color = "var(--slate-deep)";
+                interest.textContent = "Register interest";
+                li.appendChild(interest);
+              }
+              ul.appendChild(li);
+            });
+            body.appendChild(ul);
+
+            article.appendChild(media);
+            article.appendChild(body);
+            root.appendChild(article);
+          });
+        })
+        .catch(function () {
+          root.innerHTML = '<p class="learn-muted">Could not load the catalogue. <a href="course/teaching-swimming-visual-systems/index.html">Open the preview course</a>.</p>';
+        });
+    })();
+  </script>
+</body>
+</html>

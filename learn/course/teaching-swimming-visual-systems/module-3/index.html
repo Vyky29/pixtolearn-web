@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Module 3: Using waterproof cards in a live lesson | PixtoLearn Academy</title>
+  <meta name="description" content="Practical placement, pacing and prompting with PixtoLearn cards poolside." />
+  <link rel="icon" href="../../../../assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../css/academy-learn.css" />
+</head>
+<body class="learn-body">
+  <a class="learn-skip" href="#main">Skip to content</a>
+  <header class="learn-header">
+    <div class="learn-wrap learn-nav">
+      <a class="learn-brand" href="../../../index.html" aria-label="PixtoLearn Academy home">
+        <img src="../../../../assets/brand/logo.png" alt="PixtoLearn" />
+        <span class="learn-brand-text">
+          <strong>Academy</strong>
+          <span>Module 3</span>
+        </span>
+      </a>
+      <ul class="learn-nav-links">
+        <li><a href="../../../index.html">Dashboard</a></li>
+        <li><a href="../index.html">Course hub</a></li>
+        <li><a href="../../../../account.html">Account</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="learn-wrap learn-player">
+    <aside class="learn-side" aria-label="Course modules">
+      <h2>Course modules</h2>
+      <ul class="learn-side-list">
+        <li><a href="../module-1/index.html">1. Why visuals in the pool</a></li>
+        <li><a href="../module-2/index.html">2. Breaking skills into steps</a></li>
+        <li><a href="index.html" aria-current="page">3. Waterproof cards in lessons</a></li>
+        <li><a href="../module-4/index.html">4. Neurodiverse support</a></li>
+      </ul>
+      <a class="learn-side-back" href="../index.html">Back to course hub</a>
+    </aside>
+
+    <main id="main" class="learn-content">
+      <p class="learn-eyebrow">Module 3 of 4</p>
+      <h1>Using waterproof cards in a live lesson</h1>
+      <div class="learn-objective">
+        <strong>Learning objective</strong>
+        Place, pace and prompt with waterproof visual cards so they support teaching without becoming a distraction.
+      </div>
+
+      <section class="learn-block">
+        <h2>Placement matters</h2>
+        <p>Cards work when the learner can see them at the moment of action. Common options:</p>
+        <ul>
+          <li>Pool edge in reading order (left to right, or your agreed direction)</li>
+          <li>On a waterproof board or stand within the learner's line of sight</li>
+          <li>Held briefly by the instructor, then returned to the sequence</li>
+        </ul>
+        <p>Keep the active card clearer than the rest (slightly forward, highlighted, or pointed to) so attention stays on the current step.</p>
+        <figure class="learn-figure">
+          <img src="../../../../assets/photos/library/dsc_0795.jpg" alt="Instructors reviewing PixtoLearn swimming cards on a waterproof teaching board" />
+          <figcaption>A board or stand keeps the sequence visible without filling your hands.</figcaption>
+        </figure>
+      </section>
+
+      <section class="learn-block">
+        <h2>Pacing and prompting</h2>
+        <p>Point to the card, give a short spoken cue if needed, then allow time to try. Avoid stacking long verbal instructions on top of the visual.</p>
+        <p>If the learner is stuck, prompt toward the card first ("Look at the next picture") before adding more words. Fade prompts as independence grows.</p>
+      </section>
+
+      <section class="learn-block">
+        <h2>Keep the lesson flow calm</h2>
+        <p>Prepare your sequence before learners enter the water. Change cards between attempts, not mid-movement, unless safety requires it. End with a clear "finished" or cool-down visual so the session closes predictably.</p>
+      </section>
+
+      <section class="learn-activity" data-activity>
+        <h2>Activity - Check your understanding</h2>
+        <p class="learn-activity-guide">Choose the best answer, then check.</p>
+        <p class="learn-activity-q">When a learner is unsure what to do next, what should you try first?</p>
+        <div class="learn-options" role="radiogroup" aria-label="Module 3 question">
+          <label class="learn-option"><input type="radio" name="q3" value="a" /> Give a long verbal explanation of the whole skill again.</label>
+          <label class="learn-option"><input type="radio" name="q3" value="b" data-correct="1" /> Prompt them to look at the current visual card, then support if needed.</label>
+          <label class="learn-option"><input type="radio" name="q3" value="c" /> Remove all visuals so they rely only on memory.</label>
+        </div>
+        <button type="button" class="learn-btn learn-btn-amber" data-check>Check answer</button>
+        <p class="learn-feedback" data-feedback hidden></p>
+      </section>
+
+      <div class="learn-player-actions">
+        <button type="button" class="learn-btn learn-btn-primary" data-complete>Mark complete and go to Module 4</button>
+        <a class="learn-btn learn-btn-ghost" href="../module-2/index.html">Previous module</a>
+        <a class="learn-btn learn-btn-ghost" href="../index.html">Course hub</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="learn-footer">
+    <div class="learn-wrap learn-footer-inner">
+      <span>Teaching Swimming with Visual Systems</span>
+      <a href="../index.html">Course hub</a>
+    </div>
+  </footer>
+
+  <script src="../../../js/progress.js"></script>
+  <script>
+    (function () {
+      var COURSE_ID = "teaching-swimming-visual-systems";
+      var MODULE_ID = "module-3";
+      var NEXT = "../module-4/index.html";
+      var P = window.PixtoAcademyProgress;
+      if (P) P.markInProgress(COURSE_ID, MODULE_ID);
+
+      var activity = document.querySelector("[data-activity]");
+      var checkBtn = document.querySelector("[data-check]");
+      var feedback = document.querySelector("[data-feedback]");
+      if (checkBtn && activity) {
+        checkBtn.addEventListener("click", function () {
+          var chosen = activity.querySelector('input[name="q3"]:checked');
+          activity.querySelectorAll(".learn-option").forEach(function (el) {
+            el.classList.remove("is-correct", "is-wrong");
+          });
+          if (!chosen) {
+            feedback.hidden = false;
+            feedback.className = "learn-feedback is-bad";
+            feedback.textContent = "Select an answer first.";
+            return;
+          }
+          var label = chosen.closest(".learn-option");
+          var ok = chosen.hasAttribute("data-correct");
+          label.classList.add(ok ? "is-correct" : "is-wrong");
+          if (!ok) {
+            var right = activity.querySelector("[data-correct]");
+            if (right) right.closest(".learn-option").classList.add("is-correct");
+          }
+          feedback.hidden = false;
+          feedback.className = "learn-feedback " + (ok ? "is-ok" : "is-bad");
+          feedback.textContent = ok
+            ? "Correct. Point learners back to the visual before adding more talk."
+            : "Prompt toward the card first. Extra talk often adds load instead of clarity.";
+        });
+      }
+
+      var completeBtn = document.querySelector("[data-complete]");
+      if (completeBtn && P) {
+        completeBtn.addEventListener("click", function () {
+          P.markComplete(COURSE_ID, MODULE_ID);
+          location.href = NEXT;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Module 4: Supporting neurodiverse swimmers with visual structure | PixtoLearn Academy</title>
+  <meta name="description" content="Adapt visual systems for sensory needs, transitions and emotional safety in the pool." />
+  <link rel="icon" href="../../../../assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../css/academy-learn.css" />
+</head>
+<body class="learn-body">
+  <a class="learn-skip" href="#main">Skip to content</a>
+  <header class="learn-header">
+    <div class="learn-wrap learn-nav">
+      <a class="learn-brand" href="../../../index.html" aria-label="PixtoLearn Academy home">
+        <img src="../../../../assets/brand/logo.png" alt="PixtoLearn" />
+        <span class="learn-brand-text">
+          <strong>Academy</strong>
+          <span>Module 4</span>
+        </span>
+      </a>
+      <ul class="learn-nav-links">
+        <li><a href="../../../index.html">Dashboard</a></li>
+        <li><a href="../index.html">Course hub</a></li>
+        <li><a href="../../../../account.html">Account</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="learn-wrap learn-player">
+    <aside class="learn-side" aria-label="Course modules">
+      <h2>Course modules</h2>
+      <ul class="learn-side-list">
+        <li><a href="../module-1/index.html">1. Why visuals in the pool</a></li>
+        <li><a href="../module-2/index.html">2. Breaking skills into steps</a></li>
+        <li><a href="../module-3/index.html">3. Waterproof cards in lessons</a></li>
+        <li><a href="index.html" aria-current="page">4. Neurodiverse support</a></li>
+      </ul>
+      <a class="learn-side-back" href="../index.html">Back to course hub</a>
+    </aside>
+
+    <main id="main" class="learn-content">
+      <p class="learn-eyebrow">Module 4 of 4</p>
+      <h1>Supporting neurodiverse swimmers with visual structure</h1>
+      <div class="learn-objective">
+        <strong>Learning objective</strong>
+        Adapt visual systems to support sensory needs, transitions and emotional safety for neurodiverse swimmers.
+      </div>
+
+      <section class="learn-block">
+        <h2>Structure reduces uncertainty</h2>
+        <p>Many neurodiverse learners benefit from knowing what will happen, in what order, and when something finishes. Visual schedules and skill sequences make that structure visible.</p>
+        <p>Use the same start and end routines each session when you can. Predictability builds trust before skill teaching begins.</p>
+        <figure class="learn-figure">
+          <img src="../../../../assets/icons/audience/swimming-instructors.jpg" alt="Swimming instructor showing a visual card during a lesson" />
+          <figcaption>Consistent visual routines help learners know what comes next.</figcaption>
+        </figure>
+      </section>
+
+      <section class="learn-block">
+        <h2>Sensory and communication considerations</h2>
+        <ul>
+          <li>Offer a "next / then / finished" frame for transitions into and out of the water</li>
+          <li>Reduce competing visuals: show only the cards needed for this block</li>
+          <li>Allow processing time after pointing to a card before repeating instructions</li>
+          <li>Pair visuals with calm, short language rather than long explanations</li>
+        </ul>
+      </section>
+
+      <section class="learn-block">
+        <h2>Emotional safety first</h2>
+        <p>If a learner is dysregulated, prioritise co-regulation and a known visual routine over introducing a new skill. Return to teaching when the learner can engage with the sequence again.</p>
+        <p>Celebrate successful steps visually (point to "done" or move the card) so progress feels concrete.</p>
+      </section>
+
+      <section class="learn-activity" data-activity>
+        <h2>Activity - Check your understanding</h2>
+        <p class="learn-activity-guide">Choose the best answer, then check.</p>
+        <p class="learn-activity-q">What should you prioritise if a learner becomes dysregulated mid-lesson?</p>
+        <div class="learn-options" role="radiogroup" aria-label="Module 4 question">
+          <label class="learn-option"><input type="radio" name="q4" value="a" /> Push through the full skill sequence quickly to finish on time.</label>
+          <label class="learn-option"><input type="radio" name="q4" value="b" data-correct="1" /> Support regulation and a known visual routine before returning to new skill teaching.</label>
+          <label class="learn-option"><input type="radio" name="q4" value="c" /> Remove all structure so the learner can explore freely without cues.</label>
+        </div>
+        <button type="button" class="learn-btn learn-btn-amber" data-check>Check answer</button>
+        <p class="learn-feedback" data-feedback hidden></p>
+      </section>
+
+      <div class="learn-player-actions">
+        <button type="button" class="learn-btn learn-btn-primary" data-complete>Mark course complete</button>
+        <a class="learn-btn learn-btn-ghost" href="../module-3/index.html">Previous module</a>
+        <a class="learn-btn learn-btn-ghost" href="../index.html">Course hub</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="learn-footer">
+    <div class="learn-wrap learn-footer-inner">
+      <span>Teaching Swimming with Visual Systems</span>
+      <a href="../index.html">Course hub</a>
+    </div>
+  </footer>
+
+  <script src="../../../js/progress.js"></script>
+  <script>
+    (function () {
+      var COURSE_ID = "teaching-swimming-visual-systems";
+      var MODULE_ID = "module-4";
+      var NEXT = "../index.html";
+      var P = window.PixtoAcademyProgress;
+      if (P) P.markInProgress(COURSE_ID, MODULE_ID);
+
+      var activity = document.querySelector("[data-activity]");
+      var checkBtn = document.querySelector("[data-check]");
+      var feedback = document.querySelector("[data-feedback]");
+      if (checkBtn && activity) {
+        checkBtn.addEventListener("click", function () {
+          var chosen = activity.querySelector('input[name="q4"]:checked');
+          activity.querySelectorAll(".learn-option").forEach(function (el) {
+            el.classList.remove("is-correct", "is-wrong");
+          });
+          if (!chosen) {
+            feedback.hidden = false;
+            feedback.className = "learn-feedback is-bad";
+            feedback.textContent = "Select an answer first.";
+            return;
+          }
+          var label = chosen.closest(".learn-option");
+          var ok = chosen.hasAttribute("data-correct");
+          label.classList.add(ok ? "is-correct" : "is-wrong");
+          if (!ok) {
+            var right = activity.querySelector("[data-correct]");
+            if (right) right.closest(".learn-option").classList.add("is-correct");
+          }
+          feedback.hidden = false;
+          feedback.className = "learn-feedback " + (ok ? "is-ok" : "is-bad");
+          feedback.textContent = ok
+            ? "Correct. Regulation and a known routine come before new skill teaching."
+            : "Safety and regulation first. Return to new skill teaching when the learner can engage again.";
+        });
+      }
+
+      var completeBtn = document.querySelector("[data-complete]");
+      if (completeBtn && P) {
+        completeBtn.addEventListener("click", function () {
+          P.markComplete(COURSE_ID, MODULE_ID);
+          location.href = NEXT + "?completed=1";
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

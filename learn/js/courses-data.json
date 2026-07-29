@@ -1,0 +1,103 @@
+{
+  "academyName": "PixtoLearn Academy",
+  "mvpCourseId": "teaching-swimming-visual-systems",
+  "collections": [
+    {
+      "id": "swimming",
+      "title": "Swimming & Aquatic Teaching",
+      "summary": "Clearer teaching for safer, more confident swimmers.",
+      "image": "../assets/photos/ghana-1.jpg",
+      "tag": "Core expertise",
+      "courses": [
+        {
+          "id": "teaching-swimming-visual-systems",
+          "title": "Teaching Swimming with Visual Systems",
+          "summary": "Use waterproof visual supports to make swim skills clearer, calmer and easier to follow.",
+          "status": "available",
+          "href": "course/teaching-swimming-visual-systems/index.html",
+          "duration": "About 45 minutes",
+          "modules": [
+            {
+              "id": "module-1",
+              "title": "Why visuals in the pool",
+              "summary": "How visual supports reduce overwhelm and make instructions clearer in the water.",
+              "href": "module-1/index.html"
+            },
+            {
+              "id": "module-2",
+              "title": "Breaking a swim skill into clear steps",
+              "summary": "Turn complex skills into short, teachable sequences learners can follow.",
+              "href": "module-2/index.html"
+            },
+            {
+              "id": "module-3",
+              "title": "Using waterproof cards in a live lesson",
+              "summary": "Practical placement, pacing and prompting with PixtoLearn cards poolside.",
+              "href": "module-3/index.html"
+            },
+            {
+              "id": "module-4",
+              "title": "Supporting neurodiverse swimmers with visual structure",
+              "summary": "Adapt visual systems for sensory needs, transitions and emotional safety.",
+              "href": "module-4/index.html"
+            }
+          ]
+        },
+        {
+          "id": "structuring-effective-swimming-lessons",
+          "title": "Structuring Effective Swimming Lessons",
+          "summary": "Plan sessions with clear starts, skill blocks and calm endings.",
+          "status": "coming-soon"
+        },
+        {
+          "id": "building-water-confidence-and-safety",
+          "title": "Building Water Confidence and Safety",
+          "summary": "Grow trust, regulation and safety habits through visual routines.",
+          "status": "coming-soon"
+        },
+        {
+          "id": "supporting-neurodiverse-swimmers",
+          "title": "Supporting Neurodiverse Swimmers",
+          "summary": "Inclusive aquatic practice with structure, predictability and choice.",
+          "status": "coming-soon"
+        }
+      ]
+    },
+    {
+      "id": "everyday",
+      "title": "Everyday Skills & Independence",
+      "summary": "Visual strategies for routines, self-care and everyday participation.",
+      "image": "../assets/icons/audience/families.jpg",
+      "courses": [
+        { "id": "creating-effective-visual-routines", "title": "Creating Effective Visual Routines", "status": "coming-soon" },
+        { "id": "teaching-self-care-skills", "title": "Teaching Self-Care Skills", "status": "coming-soon" },
+        { "id": "supporting-transitions-and-regulation", "title": "Supporting Transitions and Regulation", "status": "coming-soon" },
+        { "id": "building-independence-at-home", "title": "Building Independence at Home", "status": "coming-soon" }
+      ]
+    },
+    {
+      "id": "professionals",
+      "title": "Visual Teaching for Professionals",
+      "summary": "Practical visual methods for education, therapy, sport and support services.",
+      "image": "../assets/photos/workshop.jpg",
+      "courses": [
+        { "id": "visual-learning-foundations", "title": "Visual Learning Foundations", "status": "coming-soon" },
+        { "id": "breaking-skills-into-clear-steps", "title": "Breaking Skills into Clear Steps", "status": "coming-soon" },
+        { "id": "communication-through-visual-supports", "title": "Communication Through Visual Supports", "status": "coming-soon" },
+        { "id": "applying-visual-systems-in-practice", "title": "Applying Visual Systems in Professional Practice", "status": "coming-soon" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "The PixtoLearn Method & Tools",
+      "summary": "Learn how to plan, deliver and develop visual teaching with PixtoLearn.",
+      "image": "../assets/photos/library/dsc_0795.jpg",
+      "courses": [
+        { "id": "using-pixtolearn-swimming-packs", "title": "Using PixtoLearn Swimming Packs", "status": "coming-soon" },
+        { "id": "using-pixtolearn-wow-routine-cards", "title": "Using PixtoLearn WOW Routine Cards", "status": "coming-soon" },
+        { "id": "planning-a-visual-teaching-session", "title": "Planning a Visual Teaching Session", "status": "coming-soon" },
+        { "id": "pixtolearn-practitioner-pathway", "title": "PixtoLearn Practitioner Pathway", "status": "coming-soon", "note": "Future certification pathway" }
+      ]
+    }
+  ]
+}

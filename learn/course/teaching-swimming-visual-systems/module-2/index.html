@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Module 2: Breaking a swim skill into clear steps | PixtoLearn Academy</title>
+  <meta name="description" content="Turn complex swimming skills into short, teachable visual sequences." />
+  <link rel="icon" href="../../../../assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../css/academy-learn.css" />
+</head>
+<body class="learn-body">
+  <a class="learn-skip" href="#main">Skip to content</a>
+  <header class="learn-header">
+    <div class="learn-wrap learn-nav">
+      <a class="learn-brand" href="../../../index.html" aria-label="PixtoLearn Academy home">
+        <img src="../../../../assets/brand/logo.png" alt="PixtoLearn" />
+        <span class="learn-brand-text">
+          <strong>Academy</strong>
+          <span>Module 2</span>
+        </span>
+      </a>
+      <ul class="learn-nav-links">
+        <li><a href="../../../index.html">Dashboard</a></li>
+        <li><a href="../index.html">Course hub</a></li>
+        <li><a href="../../../../account.html">Account</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="learn-wrap learn-player">
+    <aside class="learn-side" aria-label="Course modules">
+      <h2>Course modules</h2>
+      <ul class="learn-side-list">
+        <li><a href="../module-1/index.html">1. Why visuals in the pool</a></li>
+        <li><a href="index.html" aria-current="page">2. Breaking skills into steps</a></li>
+        <li><a href="../module-3/index.html">3. Waterproof cards in lessons</a></li>
+        <li><a href="../module-4/index.html">4. Neurodiverse support</a></li>
+      </ul>
+      <a class="learn-side-back" href="../index.html">Back to course hub</a>
+    </aside>
+
+    <main id="main" class="learn-content">
+      <p class="learn-eyebrow">Module 2 of 4</p>
+      <h1>Breaking a swim skill into clear steps</h1>
+      <div class="learn-objective">
+        <strong>Learning objective</strong>
+        Break one swimming skill into a short visual sequence that a learner can follow without overloaded verbal instructions.
+      </div>
+
+      <section class="learn-block">
+        <h2>One skill, a few clear steps</h2>
+        <p>Many swim skills look simple to an instructor but feel complex in the water. A strong visual sequence shows only the steps that matter for that skill, in order, with no extra noise.</p>
+        <ul>
+          <li>Choose one skill (for example: push and glide, or face in the water)</li>
+          <li>List the essential steps a learner must do in order</li>
+          <li>Remove optional detail that can wait for a later session</li>
+          <li>Match each step to one clear image or card</li>
+        </ul>
+        <figure class="learn-figure">
+          <img src="../../../../assets/photos/library/dsc_0764.jpg" alt="PixtoLearn waterproof visual cards lined up along a pool edge" />
+          <figcaption>A short sequence of cards keeps the skill order visible at the pool edge.</figcaption>
+        </figure>
+      </section>
+
+      <section class="learn-block">
+        <h2>Good sequence design</h2>
+        <p>Aim for 3 to 6 steps for most beginner skills. If you need more, split the skill into two teaching blocks. Each card should answer: "What do I do now?"</p>
+        <p>Use consistent layout and language across cards so learners recognise the system, not only individual pictures.</p>
+      </section>
+
+      <section class="learn-block">
+        <h2>Teach the sequence before the water work</h2>
+        <p>Show the sequence on the side first when you can. Point to the first card, model the step, then invite the learner to try. Move to the next card only when the current step is understood enough to practise safely.</p>
+      </section>
+
+      <section class="learn-activity" data-activity>
+        <h2>Activity - Check your understanding</h2>
+        <p class="learn-activity-guide">Choose true or false, then check.</p>
+        <p class="learn-activity-q">A visual sequence should include every possible detail of a swimming skill in one go.</p>
+        <div class="learn-options" role="radiogroup" aria-label="Module 2 question">
+          <label class="learn-option"><input type="radio" name="q2" value="true" /> True</label>
+          <label class="learn-option"><input type="radio" name="q2" value="false" data-correct="1" /> False</label>
+        </div>
+        <button type="button" class="learn-btn learn-btn-amber" data-check>Check answer</button>
+        <p class="learn-feedback" data-feedback hidden></p>
+      </section>
+
+      <div class="learn-player-actions">
+        <button type="button" class="learn-btn learn-btn-primary" data-complete>Mark complete and go to Module 3</button>
+        <a class="learn-btn learn-btn-ghost" href="../module-1/index.html">Previous module</a>
+        <a class="learn-btn learn-btn-ghost" href="../index.html">Course hub</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="learn-footer">
+    <div class="learn-wrap learn-footer-inner">
+      <span>Teaching Swimming with Visual Systems</span>
+      <a href="../index.html">Course hub</a>
+    </div>
+  </footer>
+
+  <script src="../../../js/progress.js"></script>
+  <script>
+    (function () {
+      var COURSE_ID = "teaching-swimming-visual-systems";
+      var MODULE_ID = "module-2";
+      var NEXT = "../module-3/index.html";
+      var P = window.PixtoAcademyProgress;
+      if (P) P.markInProgress(COURSE_ID, MODULE_ID);
+
+      var activity = document.querySelector("[data-activity]");
+      var checkBtn = document.querySelector("[data-check]");
+      var feedback = document.querySelector("[data-feedback]");
+      if (checkBtn && activity) {
+        checkBtn.addEventListener("click", function () {
+          var chosen = activity.querySelector('input[name="q2"]:checked');
+          activity.querySelectorAll(".learn-option").forEach(function (el) {
+            el.classList.remove("is-correct", "is-wrong");
+          });
+          if (!chosen) {
+            feedback.hidden = false;
+            feedback.className = "learn-feedback is-bad";
+            feedback.textContent = "Select an answer first.";
+            return;
+          }
+          var label = chosen.closest(".learn-option");
+          var ok = chosen.hasAttribute("data-correct");
+          label.classList.add(ok ? "is-correct" : "is-wrong");
+          if (!ok) {
+            var right = activity.querySelector("[data-correct]");
+            if (right) right.closest(".learn-option").classList.add("is-correct");
+          }
+          feedback.hidden = false;
+          feedback.className = "learn-feedback " + (ok ? "is-ok" : "is-bad");
+          feedback.textContent = ok
+            ? "Correct. Keep sequences short; split complex skills into teaching blocks."
+            : "False. Too much detail overwhelms. Keep only the essential steps for that skill.";
+        });
+      }
+
+      var completeBtn = document.querySelector("[data-complete]");
+      if (completeBtn && P) {
+        completeBtn.addEventListener("click", function () {
+          P.markComplete(COURSE_ID, MODULE_ID);
+          location.href = NEXT;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
