@@ -94,6 +94,35 @@
   initPackCarousel();
   initMissionProgress();
   initAcademyWaitlist();
+  initFooterNewsletter();
+
+  function initFooterNewsletter() {
+    document.querySelectorAll("[data-footer-newsletter]").forEach((form) => {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const email = String(data.get("email") || "").trim();
+        if (!email) return;
+        const payload = {
+          email,
+          source: "footer",
+          at: new Date().toISOString(),
+          page: location.pathname.split("/").pop() || "index.html",
+        };
+        try {
+          const prev = JSON.parse(localStorage.getItem("pixto_footer_newsletter") || "[]");
+          prev.push(payload);
+          localStorage.setItem("pixto_footer_newsletter", JSON.stringify(prev.slice(-80)));
+        } catch (_) {}
+        const note = form.querySelector("[data-footer-news-note]");
+        if (note) {
+          note.hidden = false;
+          note.textContent = "Thanks. You are subscribed for product and Academy updates.";
+        }
+        form.reset();
+      });
+    });
+  }
 
   function initAcademyWaitlist() {
     const form = document.querySelector("[data-academy-waitlist]");
