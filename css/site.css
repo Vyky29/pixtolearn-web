@@ -1638,9 +1638,9 @@ section {
   padding: clamp(3.25rem, 6vw, 4.5rem) 0 0;
   border-top: 0;
   background:
-    radial-gradient(ellipse 70% 80% at 12% 0%, rgba(136, 176, 192, 0.18), transparent 55%),
-    radial-gradient(ellipse 50% 60% at 90% 30%, rgba(208, 56, 96, 0.12), transparent 50%),
-    linear-gradient(135deg, #0f1c22 0%, #14242b 48%, #1a333a 100%);
+    radial-gradient(ellipse 55% 70% at 10% 0%, rgba(136, 176, 192, 0.1), transparent 58%),
+    radial-gradient(ellipse 45% 55% at 92% 18%, rgba(208, 56, 96, 0.14), transparent 52%),
+    linear-gradient(160deg, #14242b 0%, #162830 55%, #182e36 100%);
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -1653,11 +1653,17 @@ section {
 
 .footer-logo {
   display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 0.55rem 0.8rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .footer-logo img {
-  height: 42px;
+  height: 34px;
   width: auto;
+  display: block;
 }
 
 .footer-tagline {
@@ -1694,7 +1700,12 @@ section {
 }
 
 .footer-social-btn.is-mail {
-  background: var(--slate-deep);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-social-btn.is-mail:hover {
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .footer-social-btn svg {
@@ -6082,8 +6093,12 @@ a.post:hover {
 /* PixtoLearn Academy */
 .aca-hero .hero-shade {
   background:
-    linear-gradient(90deg, rgba(12, 28, 36, 0.72) 0%, rgba(12, 28, 36, 0.45) 48%, rgba(12, 28, 36, 0.35) 100%),
-    linear-gradient(180deg, rgba(12, 28, 36, 0.25) 0%, rgba(12, 28, 36, 0.55) 100%);
+    linear-gradient(90deg, rgba(18, 24, 28, 0.78) 0%, rgba(18, 24, 28, 0.48) 52%, rgba(18, 24, 28, 0.28) 100%),
+    linear-gradient(180deg, rgba(18, 24, 28, 0.2) 0%, rgba(18, 24, 28, 0.55) 100%);
+}
+
+.aca-hero .hero-media img {
+  object-position: center 42%;
 }
 
 .aca-pill {
