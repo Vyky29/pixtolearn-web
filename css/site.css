@@ -3563,9 +3563,19 @@ a.post:hover {
   box-shadow: 0 8px 18px rgba(20, 36, 43, 0.1);
 }
 
-.pack-badge-full { background: var(--pink); box-shadow: 3px 3px 0 rgba(232, 168, 64, 0.85); }
-.pack-badge-fun { background: var(--amber); color: var(--ink); }
-.pack-badge-basic { background: #9b7bb8; }
+.pack-badge-full {
+  background: var(--slate-deep);
+  box-shadow: 0 8px 18px rgba(95, 138, 154, 0.35);
+}
+.pack-badge-fun {
+  background: #f0c03a;
+  color: var(--ink);
+  box-shadow: 0 8px 18px rgba(240, 192, 58, 0.35);
+}
+.pack-badge-basic {
+  background: #6e7b84;
+  box-shadow: 0 8px 18px rgba(110, 123, 132, 0.3);
+}
 
 .pack-video {
   position: relative;
