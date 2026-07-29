@@ -93,6 +93,57 @@
   initSwimUsers();
   initPackCarousel();
   initMissionProgress();
+  initAcademyWaitlist();
+
+  function initAcademyWaitlist() {
+    const form = document.querySelector("[data-academy-waitlist]");
+    if (!form) return;
+
+    const params = new URLSearchParams(location.search);
+    const interest = params.get("interest");
+    if (interest) {
+      const box = form.querySelector(`input[name="interest"][value="${CSS.escape(interest)}"]`);
+      if (box) box.checked = true;
+    }
+
+    document.querySelectorAll("[data-aca-interest]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const value = link.getAttribute("data-aca-interest");
+        const box = form.querySelector(`input[name="interest"][value="${CSS.escape(value || "")}"]`);
+        if (box) box.checked = true;
+      });
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const interests = data.getAll("interest").map(String);
+      const payload = {
+        first_name: String(data.get("first_name") || "").trim(),
+        email: String(data.get("email") || "").trim(),
+        role: String(data.get("role") || "").trim(),
+        interests,
+        at: new Date().toISOString(),
+        page: "academy.html",
+      };
+      try {
+        const prev = JSON.parse(localStorage.getItem("pixto_academy_waitlist") || "[]");
+        prev.push(payload);
+        localStorage.setItem("pixto_academy_waitlist", JSON.stringify(prev.slice(-80)));
+      } catch (_) {}
+      const note = form.querySelector("[data-academy-note]");
+      if (note) {
+        note.hidden = false;
+        note.textContent =
+          "You are on the list. We will email you when PixtoLearn Academy opens. For anything urgent, write to hello@pixtolearn.com.";
+      }
+      form.reset();
+      if (interest) {
+        const box = form.querySelector(`input[name="interest"][value="${CSS.escape(interest)}"]`);
+        if (box) box.checked = true;
+      }
+    });
+  }
 
   function initMissionProgress() {
     document.querySelectorAll("[data-mission-progress]").forEach((panel) => {
