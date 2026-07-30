@@ -112,7 +112,128 @@
     </div>
   </section>
 
-  <!-- 2. WHO USES IT IN SWIMMING -->
+  <!-- 2. INSIDE + VIDEOS -->
+  <section id="inside">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Product</p>
+        <h2>Inside PixtoLearn Swimming</h2>
+        <p class="lede">Choose a pack, watch it in action, then explore how each flashcard is built.</p>
+      </div>
+
+      <div class="pack-carousel reveal" data-pack-carousel>
+        <button class="pack-nav pack-nav-prev" type="button" aria-label="Previous pack">&#8592;</button>
+        <div class="pack-track">
+          <article class="pack-slide" data-pack-slide data-index="0">
+            <span class="pack-badge pack-badge-basic">Basic Pack</span>
+            <div class="pack-video" data-video-card>
+              <button class="video-play" type="button" aria-label="Play Basic Pack video">
+                <img src="assets/videos/poster-basic.png" alt="PixtoLearn Basic Pack" />
+                <span class="video-play-btn" aria-hidden="true"></span>
+              </button>
+              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-basic.png">
+                <source src="assets/videos/basic-pack.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="pack-slide is-active" data-pack-slide data-index="1">
+            <span class="pack-badge pack-badge-full">Full Pack</span>
+            <div class="pack-video" data-video-card>
+              <button class="video-play" type="button" aria-label="Play Full Pack video">
+                <img src="assets/videos/poster-full.png" alt="PixtoLearn Full Pack" />
+                <span class="video-play-btn" aria-hidden="true"></span>
+              </button>
+              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-full.png">
+                <source src="assets/videos/team-swimming.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="pack-slide" data-pack-slide data-index="2">
+            <span class="pack-badge pack-badge-fun">Fun Pack</span>
+            <div class="pack-video" data-video-card>
+              <button class="video-play" type="button" aria-label="Play Fun Pack video">
+                <img src="assets/videos/poster-fun.png" alt="PixtoLearn Fun Pack" />
+                <span class="video-play-btn" aria-hidden="true"></span>
+              </button>
+              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-fun.png">
+                <source src="assets/videos/fun-pack.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+        </div>
+        <button class="pack-nav pack-nav-next" type="button" aria-label="Next pack">&#8594;</button>
+        <div class="pack-dots" aria-hidden="true">
+          <button type="button" data-pack-dot="0"></button>
+          <button type="button" class="is-active" data-pack-dot="1"></button>
+          <button type="button" data-pack-dot="2"></button>
+        </div>
+      </div>
+
+      <!-- Flashcard anatomy -->
+      <div class="flash-anatomy reveal" id="flashcard">
+        <div class="section-head" style="margin-top:2.5rem">
+          <p class="eyebrow">The card</p>
+          <h2>The PixtoLearn Swimming Flashcard</h2>
+          <p class="lede">Every card works as a pair: one clear action on the main side, and a break-it-down sequence on the reverse.</p>
+        </div>
+        <div class="flash-duo">
+          <article class="flash-panel">
+            <div class="flash-panel-media">
+              <img src="assets/flashcards/float-on-back-main.png" alt="Main side: float on back" />
+            </div>
+            <div class="flash-panel-copy">
+              <p class="flash-kicker">Main side</p>
+              <h3>Show the goal first</h3>
+              <p>One clear picture of success. Teachers and families start here so the learner knows what the skill looks like.</p>
+            </div>
+          </article>
+          <article class="flash-panel flash-panel-path">
+            <div class="flash-panel-media">
+              <img src="assets/flashcards/float-on-back-breakdown.png" alt="Break it down side: four steps for float on back" />
+            </div>
+            <div class="flash-panel-copy">
+              <p class="flash-kicker">Break it down</p>
+              <h3>Then teach the path</h3>
+              <p>Flip to rehearse the sequence: breath in, lean back, looking up, tummy up. Calm steps. Shared language in the water.</p>
+            </div>
+          </article>
+        </div>
+        <ul class="flash-traits">
+          <li>
+            <img src="assets/flashcards/trait-waterproof.jpg" alt="PixtoLearn flashcards floating in pool water" />
+            <strong>Durably waterproof</strong>
+            <span>Wet decks and splash</span>
+          </li>
+          <li class="flash-trait-a5">
+            <div class="a5-stage" aria-hidden="true">
+              <div class="a5-board">
+                <div class="a5-frame">
+                  <img class="a5-card" src="assets/flashcards/float-on-back-main.png" alt="" />
+                </div>
+                <div class="a5-dim a5-dim-h">
+                  <span class="a5-line"></span>
+                  <span class="a5-label">210 mm</span>
+                </div>
+                <div class="a5-dim a5-dim-w">
+                  <span class="a5-line"></span>
+                  <span class="a5-label">148 mm</span>
+                </div>
+              </div>
+            </div>
+            <strong>Perfect A5 size</strong>
+            <span>148 x 210 mm</span>
+          </li>
+          <li class="flash-trait-art">
+            <img src="assets/flashcards/push-off-glide-art.jpg" alt="Clear action illustration from a PixtoLearn swimming flashcard" />
+            <strong>Clear action art</strong>
+            <span>One action. No clutter.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHO USES IT IN SWIMMING -->
   <section id="swim-users" class="section-tint">
     <div class="wrap">
       <div class="section-head reveal">
@@ -256,7 +377,7 @@
                 </span>
               </a>
               <a class="swim-users-pack" href="product-keyring.html">
-                <img src="assets/photos/cards-hands.png" alt="Keyring + Lanyard" loading="lazy" />
+                <img src="assets/photos/keyring-lanyard.png" alt="Keyring + Lanyard" loading="lazy" />
                 <span class="swim-users-pack-text">
                   <span class="swim-users-pack-name">Keyring + Lanyard</span>
                   <span class="swim-users-pack-why">Portable visuals for everyday support</span>
@@ -300,127 +421,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. INSIDE + VIDEOS -->
-  <section id="inside">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Product</p>
-        <h2>Inside PixtoLearn Swimming</h2>
-        <p class="lede">Choose a pack, watch it in action, then explore how each flashcard is built.</p>
-      </div>
-
-      <div class="pack-carousel reveal" data-pack-carousel>
-        <button class="pack-nav pack-nav-prev" type="button" aria-label="Previous pack">&#8592;</button>
-        <div class="pack-track">
-          <article class="pack-slide" data-pack-slide data-index="0">
-            <span class="pack-badge pack-badge-basic">Basic Pack</span>
-            <div class="pack-video" data-video-card>
-              <button class="video-play" type="button" aria-label="Play Basic Pack video">
-                <img src="assets/videos/poster-basic.png" alt="PixtoLearn Basic Pack" />
-                <span class="video-play-btn" aria-hidden="true"></span>
-              </button>
-              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-basic.png">
-                <source src="assets/videos/basic-pack.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-          <article class="pack-slide is-active" data-pack-slide data-index="1">
-            <span class="pack-badge pack-badge-full">Full Pack</span>
-            <div class="pack-video" data-video-card>
-              <button class="video-play" type="button" aria-label="Play Full Pack video">
-                <img src="assets/videos/poster-full.png" alt="PixtoLearn Full Pack" />
-                <span class="video-play-btn" aria-hidden="true"></span>
-              </button>
-              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-full.png">
-                <source src="assets/videos/team-swimming.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-          <article class="pack-slide" data-pack-slide data-index="2">
-            <span class="pack-badge pack-badge-fun">Fun Pack</span>
-            <div class="pack-video" data-video-card>
-              <button class="video-play" type="button" aria-label="Play Fun Pack video">
-                <img src="assets/videos/poster-fun.png" alt="PixtoLearn Fun Pack" />
-                <span class="video-play-btn" aria-hidden="true"></span>
-              </button>
-              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-fun.png">
-                <source src="assets/videos/fun-pack.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-        </div>
-        <button class="pack-nav pack-nav-next" type="button" aria-label="Next pack">&#8594;</button>
-        <div class="pack-dots" aria-hidden="true">
-          <button type="button" data-pack-dot="0"></button>
-          <button type="button" class="is-active" data-pack-dot="1"></button>
-          <button type="button" data-pack-dot="2"></button>
-        </div>
-      </div>
-
-      <!-- Flashcard anatomy -->
-      <div class="flash-anatomy reveal" id="flashcard">
-        <div class="section-head" style="margin-top:2.5rem">
-          <p class="eyebrow">The card</p>
-          <h2>The PixtoLearn Swimming Flashcard</h2>
-          <p class="lede">Every card works as a pair: one clear action on the main side, and a break-it-down sequence on the reverse.</p>
-        </div>
-        <div class="flash-duo">
-          <article class="flash-panel">
-            <div class="flash-panel-media">
-              <img src="assets/flashcards/float-on-back-main.png" alt="Main side: float on back" />
-            </div>
-            <div class="flash-panel-copy">
-              <p class="flash-kicker">Main side</p>
-              <h3>Show the goal first</h3>
-              <p>One clear picture of success. Teachers and families start here so the learner knows what the skill looks like.</p>
-            </div>
-          </article>
-          <article class="flash-panel flash-panel-path">
-            <div class="flash-panel-media">
-              <img src="assets/flashcards/float-on-back-breakdown.png" alt="Break it down side: four steps for float on back" />
-            </div>
-            <div class="flash-panel-copy">
-              <p class="flash-kicker">Break it down</p>
-              <h3>Then teach the path</h3>
-              <p>Flip to rehearse the sequence: breath in, lean back, looking up, tummy up. Calm steps. Shared language in the water.</p>
-            </div>
-          </article>
-        </div>
-        <ul class="flash-traits">
-          <li>
-            <img src="assets/flashcards/trait-waterproof.jpg" alt="PixtoLearn flashcards floating in pool water" />
-            <strong>Durably waterproof</strong>
-            <span>Wet decks and splash</span>
-          </li>
-          <li class="flash-trait-a5">
-            <div class="a5-stage" aria-hidden="true">
-              <div class="a5-board">
-                <div class="a5-frame">
-                  <img class="a5-card" src="assets/flashcards/float-on-back-main.png" alt="" />
-                </div>
-                <div class="a5-dim a5-dim-h">
-                  <span class="a5-line"></span>
-                  <span class="a5-label">210 mm</span>
-                </div>
-                <div class="a5-dim a5-dim-w">
-                  <span class="a5-line"></span>
-                  <span class="a5-label">148 mm</span>
-                </div>
-              </div>
-            </div>
-            <strong>Perfect A5 size</strong>
-            <span>148 x 210 mm</span>
-          </li>
-          <li class="flash-trait-art">
-            <img src="assets/flashcards/push-off-glide-art.jpg" alt="Clear action illustration from a PixtoLearn swimming flashcard" />
-            <strong>Clear action art</strong>
-            <span>One action. No clutter.</span>
-          </li>
-        </ul>
       </div>
     </div>
   </section>
