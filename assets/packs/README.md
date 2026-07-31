@@ -9,5 +9,6 @@
 
 ## Existing shop assets
 - `pack-basic.png`, `pack-fun.png`, `pack-full.png`, `wow-*.png`: storefront imagery already in use
+- `shop-*-cutout.png`: transparent product cutouts for dark stages (never use white-box shop PNGs on Academy / swimming heroes)
 
 Note: the full `PIXTOLEARN SWIMMING JPG` library on Desktop is ~177MB and was not mirrored wholesale. Use `swimming-jpg` packs plus `assets/flashcards` for web.

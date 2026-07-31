@@ -12,7 +12,7 @@
       "href": "/learn/course/visual-teaching-foundations/",
       "outlineHref": "/learn/curriculum/foundations-outline.html",
       "why": "Global method course first in the learning pathway.",
-      "price": "Â£19"
+      "price": "£19"
     },
     {
       "id": "using-pixtolearn-packs-and-app",
@@ -24,7 +24,7 @@
       "href": "/learn/course/using-pixtolearn-packs-and-app/",
       "outlineHref": "/learn/curriculum/packs-app-outline.html",
       "why": "Tools layer: how to materialise the method with PixtoLearn products.",
-      "price": "Â£29"
+      "price": "£29"
     },
     {
       "id": "teaching-swimming-visual-systems",
@@ -36,7 +36,7 @@
       "href": "/learn/course/teaching-swimming-visual-systems/",
       "outlineHref": "/learn/curriculum/swimming-visual-systems-outline.html",
       "why": "Specific aquatic application. Module 4 covers neurodiverse swimmers in the pool only.",
-      "price": "Â£29"
+      "price": "£29"
     },
     {
       "id": "everyday-visual-routines-toddlers",
@@ -48,43 +48,129 @@
       "href": "/learn/course/everyday-visual-routines-toddlers/",
       "outlineHref": "/learn/curriculum/toddlers-routines-outline.html",
       "why": "Specific home / early-years application.",
-      "price": "Â£29"
+      "price": "£29"
     }
   ],
   "premiumCourses": [
     {
-      "id": "visual-support-neurodiverse-nonverbal-learners",
-      "title": "Visual Support for Neurodiverse and Non-Verbal Learners",
-      "status": "planned",
-      "tier": "premium-flagship",
-      "modules": 10,
-      "duration": "About 3.5 to 4.5 hours",
+      "id": "neurodiversity-visual-specialist",
+      "title": "Neurodiversity Visual Specialist",
+      "subtitle": "Visual Awareness for Neurodiverse and Non-Verbal Learners",
+      "status": "available",
+      "tier": "level-2-flagship",
+      "modules": 15,
+      "optionalModules": 1,
+      "duration": "Full pathway live (about 6 to 8 hours). 14 core + optional Practitioner.",
+      "price": "£199",
+      "teamPrice": "£399",
+      "href": "/learn/course/neurodiversity-visual-specialist/",
       "outlineHref": "curriculum/neurodiverse-nonverbal-outline.html",
-      "productLink": "Packs + WOW + App",
-      "prerequisite": "visual-teaching-foundations-professionals",
-      "why": "Full cross-setting system for autism, LD, limited verbal communication and sensory needs. Practitioner pathway candidate."
+      "productLink": "Packs + WOW + Keyring + App",
+      "prerequisite": "visual-teaching-foundations",
+      "why": "PixtoLearn Level 2 flagship. Visual Awareness across home, school, therapy, community and leisure. Scenario bank + solution library. Practitioner pathway candidate.",
+      "modulesBuilt": [
+        {
+          "id": "module-1",
+          "title": "Neurodiversity, communication and visual access",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-1/"
+        },
+        {
+          "id": "module-2",
+          "title": "Sensory load and environment design",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-2/"
+        },
+        {
+          "id": "module-3",
+          "title": "The visual toolkit that reduces uncertainty",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-3/"
+        },
+        {
+          "id": "module-4",
+          "title": "Packs, WOW cards and App as one system",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-4/"
+        },
+        {
+          "id": "module-5",
+          "title": "AAC-friendly visuals and communication pairing",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-5/"
+        },
+        {
+          "id": "module-6",
+          "title": "Regulation first: calm before teaching",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-6/"
+        },
+        {
+          "id": "module-7",
+          "title": "Home and family life with WOW",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-7/"
+        },
+        {
+          "id": "module-8",
+          "title": "School, early years and classroom",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-8/"
+        },
+        {
+          "id": "module-9",
+          "title": "Therapy and clinical-adjacent settings",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-9/"
+        },
+        {
+          "id": "module-10",
+          "title": "Community, travel and appointments",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-10/"
+        },
+        {
+          "id": "module-11",
+          "title": "Pool and leisure with visual structure",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-11/"
+        },
+        {
+          "id": "module-12",
+          "title": "Behaviour as communication",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-12/"
+        },
+        {
+          "id": "module-13",
+          "title": "Consistency across people and settings",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-13/"
+        },
+        {
+          "id": "module-14",
+          "title": "Capstone lab: one learner, one visual plan",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-14/"
+        },
+        {
+          "id": "module-15",
+          "title": "Practitioner portfolio (optional)",
+          "href": "/learn/course/neurodiversity-visual-specialist/module-15/"
+        }
+      ],
+      "note": "Parts A-D live including optional Practitioner portfolio."
     }
   ],
   "nichePipeline": [
-    {
-      "id": "visual-independence-adults-ld",
-      "title": "Visual Independence for Adults with Learning Disabilities",
-      "audience": "adults",
-      "status": "planned",
-      "modules": 7,
-      "duration": "About 2.5 to 3 hours",
-      "outlineHref": "curriculum/adults-ld-outline.html",
-      "productLink": "Routine sequences + App"
-    },
     {
       "id": "dementia-friendly-visual-routines",
       "title": "Visual Routines for Older Adults and Dementia-Friendly Support",
       "audience": "older-adults",
       "status": "planned",
+      "tier": "specialist",
       "modules": 7,
       "duration": "About 2.5 to 3 hours",
       "outlineHref": "curriculum/dementia-older-adults-outline.html",
-      "productLink": "Large clear sequences + App"
+      "productLink": "Large clear sequences + App",
+      "why": "Next Specialist after Neurodiversity. Distinct age and memory focus."
+    },
+    {
+      "id": "visual-independence-adults-ld",
+      "title": "Visual Independence for Adults with Learning Disabilities",
+      "audience": "adults",
+      "status": "absorbed-into-neuro-specialist",
+      "modules": 7,
+      "duration": "About 2.5 to 3 hours",
+      "outlineHref": "curriculum/adults-ld-outline.html",
+      "productLink": "Routine sequences + App",
+      "why": "Not a separate Specialist product. Adult LD contexts are covered inside Neurodiversity Visual Specialist."
     },
     {
       "id": "visual-supports-schools-sen",
@@ -152,16 +238,102 @@
               "href": "/learn/course/teaching-swimming-visual-systems/module-4/"
             }
           ],
-          "price": "Â£29"
+          "price": "£29"
         },
         {
           "id": "aquatic-specialist-pathway",
-          "title": "Aquatic Specialist Pathway",
-          "summary": "Deep Pathway I + II for instructors and centres. Neurodiverse practice and PixtoLearn visual systems.",
+          "title": "Aquatic Pathway I + II (PixtoLearn x clubSENsational)",
+          "summary": "Co-branded deep Pathway I + II for instructors and centres. Aquatic practice with PixtoLearn visual systems.",
           "status": "available",
-          "price": "Â£199",
+          "price": "£199",
           "href": "/learn/course/aquatic-specialist-pathway/",
-          "duration": "Specialist pathway"
+          "duration": "Co-brand aquatic pathway"
+        },
+        {
+          "id": "neurodiversity-visual-specialist",
+          "title": "Neurodiversity Visual Specialist",
+          "summary": "Level 2 flagship. Full pathway: foundations, tools, settings, mastery and optional Practitioner.",
+          "status": "available",
+          "price": "£199",
+          "href": "/learn/course/neurodiversity-visual-specialist/",
+          "duration": "Full pathway live",
+          "modules": [
+            {
+              "id": "module-1",
+              "title": "Neurodiversity, communication and visual access",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-1/"
+            },
+            {
+              "id": "module-2",
+              "title": "Sensory load and environment design",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-2/"
+            },
+            {
+              "id": "module-3",
+              "title": "The visual toolkit that reduces uncertainty",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-3/"
+            },
+            {
+              "id": "module-4",
+              "title": "Packs, WOW cards and App as one system",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-4/"
+            },
+            {
+              "id": "module-5",
+              "title": "AAC-friendly visuals and communication pairing",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-5/"
+            },
+            {
+              "id": "module-6",
+              "title": "Regulation first: calm before teaching",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-6/"
+            },
+            {
+              "id": "module-7",
+              "title": "Home and family life with WOW",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-7/"
+            },
+            {
+              "id": "module-8",
+              "title": "School, early years and classroom",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-8/"
+            },
+            {
+              "id": "module-9",
+              "title": "Therapy and clinical-adjacent settings",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-9/"
+            },
+            {
+              "id": "module-10",
+              "title": "Community, travel and appointments",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-10/"
+            },
+            {
+              "id": "module-11",
+              "title": "Pool and leisure with visual structure",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-11/"
+            },
+            {
+              "id": "module-12",
+              "title": "Behaviour as communication",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-12/"
+            },
+            {
+              "id": "module-13",
+              "title": "Consistency across people and settings",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-13/"
+            },
+            {
+              "id": "module-14",
+              "title": "Capstone lab: one learner, one visual plan",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-14/"
+            },
+            {
+              "id": "module-15",
+              "title": "Practitioner portfolio (optional)",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-15/"
+            }
+          ]
         },
         {
           "id": "structuring-effective-swimming-lessons",
@@ -200,7 +372,7 @@
           "title": "Everyday Visual Routines for Toddlers and Young Children",
           "status": "available",
           "href": "/learn/course/everyday-visual-routines-toddlers/",
-          "price": "Â£29"
+          "price": "£29"
         },
         {
           "id": "creating-effective-visual-routines",
@@ -230,7 +402,93 @@
           "title": "Visual Teaching Foundations for Professionals",
           "status": "available",
           "href": "/learn/course/visual-teaching-foundations/",
-          "price": "Â£19"
+          "price": "£19"
+        },
+        {
+          "id": "neurodiversity-visual-specialist",
+          "title": "Neurodiversity Visual Specialist",
+          "summary": "Level 2 flagship. Full pathway: foundations, tools, settings, mastery and optional Practitioner.",
+          "status": "available",
+          "price": "£199",
+          "href": "/learn/course/neurodiversity-visual-specialist/",
+          "duration": "Full pathway live",
+          "modules": [
+            {
+              "id": "module-1",
+              "title": "Neurodiversity, communication and visual access",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-1/"
+            },
+            {
+              "id": "module-2",
+              "title": "Sensory load and environment design",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-2/"
+            },
+            {
+              "id": "module-3",
+              "title": "The visual toolkit that reduces uncertainty",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-3/"
+            },
+            {
+              "id": "module-4",
+              "title": "Packs, WOW cards and App as one system",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-4/"
+            },
+            {
+              "id": "module-5",
+              "title": "AAC-friendly visuals and communication pairing",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-5/"
+            },
+            {
+              "id": "module-6",
+              "title": "Regulation first: calm before teaching",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-6/"
+            },
+            {
+              "id": "module-7",
+              "title": "Home and family life with WOW",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-7/"
+            },
+            {
+              "id": "module-8",
+              "title": "School, early years and classroom",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-8/"
+            },
+            {
+              "id": "module-9",
+              "title": "Therapy and clinical-adjacent settings",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-9/"
+            },
+            {
+              "id": "module-10",
+              "title": "Community, travel and appointments",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-10/"
+            },
+            {
+              "id": "module-11",
+              "title": "Pool and leisure with visual structure",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-11/"
+            },
+            {
+              "id": "module-12",
+              "title": "Behaviour as communication",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-12/"
+            },
+            {
+              "id": "module-13",
+              "title": "Consistency across people and settings",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-13/"
+            },
+            {
+              "id": "module-14",
+              "title": "Capstone lab: one learner, one visual plan",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-14/"
+            },
+            {
+              "id": "module-15",
+              "title": "Practitioner portfolio (optional)",
+              "href": "/learn/course/neurodiversity-visual-specialist/module-15/"
+            }
+          ]
         },
         {
           "id": "breaking-skills-into-clear-steps",
@@ -260,7 +518,7 @@
           "title": "Using PixtoLearn Packs and App",
           "status": "available",
           "href": "/learn/course/using-pixtolearn-packs-and-app/",
-          "price": "Â£29"
+          "price": "£29"
         },
         {
           "id": "using-pixtolearn-swimming-packs",
@@ -283,17 +541,33 @@
   ],
   "specialistCourses": [
     {
-      "id": "aquatic-specialist-pathway",
-      "title": "Aquatic Specialist Pathway",
-      "productLink": "Swimming Packs + App",
+      "id": "neurodiversity-visual-specialist",
+      "title": "Neurodiversity Visual Specialist",
+      "productLink": "Packs + WOW + Keyring + App",
       "priority": 5,
-      "tier": "specialist",
+      "tier": "level-2-flagship",
       "status": "available",
-      "price": "Â£199",
-      "teamPrice": "Â£399",
+      "price": "£199",
+      "teamPrice": "£399",
+      "href": "course/neurodiversity-visual-specialist/index.html",
+      "outlineHref": "curriculum/neurodiverse-nonverbal-outline.html",
+      "why": "PixtoLearn flagship specialist. Visual Awareness for neurodiverse and non-verbal learners. Not swimming pedagogy.",
+      "modulesBuilt": 15,
+      "note": "Full pathway live in Open-Check shell (15 modules)."
+    },
+    {
+      "id": "aquatic-specialist-pathway",
+      "title": "Aquatic Pathway I + II",
+      "productLink": "Swimming Packs + App",
+      "priority": 6,
+      "tier": "co-brand-aquatic",
+      "brand": "PixtoLearn x clubSENsational",
+      "status": "available",
+      "price": "£199",
+      "teamPrice": "£399",
       "href": "course/aquatic-specialist-pathway/index.html",
       "externalHub": "https://pixtolearn-aquatic-specialist.vercel.app/portal/",
-      "why": "Deep specialist aquatic pathway (I + II). Commercial PixtoLearn fork of the full swimming instructor training. Short swimming course remains the Â£29 intro."
+      "why": "Co-branded aquatic pathway (I + II) from clubSENsational Swim expertise with PixtoLearn visuals. Short swimming course remains the £29 intro."
     }
   ]
 }

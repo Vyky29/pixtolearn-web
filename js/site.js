@@ -95,7 +95,122 @@
   initFlashStage();
   initMissionProgress();
   initAcademyWaitlist();
+  initAcademyStage();
+  initAcademyGain();
+  initAcademyKits();
   initFooterNewsletter();
+
+  function initAcademyStage() {
+    const stage = document.querySelector("[data-aca-stage]");
+    if (!stage) return;
+    const tabs = stage.querySelectorAll("[data-aca-screen]");
+    const panels = stage.querySelectorAll("[data-aca-panel]");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const key = tab.getAttribute("data-aca-screen");
+        tabs.forEach((t) => {
+          const on = t === tab;
+          t.classList.toggle("is-active", on);
+          t.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        panels.forEach((panel) => {
+          panel.querySelectorAll(".aca-ui").forEach((ui) => {
+            ui.classList.toggle("is-active", ui.getAttribute("data-screen") === key);
+          });
+        });
+      });
+    });
+  }
+
+  function initAcademyGain() {
+    const root = document.querySelector("[data-aca-gain]");
+    if (!root) return;
+    const tabs = root.querySelectorAll("[data-gain-tab]");
+    const panels = root.querySelectorAll("[data-gain-panel]");
+    const imgs = root.querySelectorAll("[data-gain-img]");
+    const caption = root.querySelector("[data-gain-caption]");
+    const captions = {
+      you: "A method you can run tomorrow",
+      them: "Less confusion. More access. More dignity.",
+    };
+
+    const setSide = (side) => {
+      tabs.forEach((t) => {
+        const on = t.getAttribute("data-gain-tab") === side;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach((p) => {
+        const on = p.getAttribute("data-gain-panel") === side;
+        p.classList.toggle("is-active", on);
+        p.hidden = !on;
+      });
+      imgs.forEach((img) => {
+        img.classList.toggle("is-active", img.getAttribute("data-gain-img") === side);
+      });
+      if (caption) caption.textContent = captions[side] || "";
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => setSide(tab.getAttribute("data-gain-tab")));
+    });
+
+    root.querySelectorAll("[data-gain-panel]").forEach((panel) => {
+      panel.querySelectorAll("[data-gain-tile]").forEach((tile) => {
+        tile.addEventListener("click", () => {
+          panel.querySelectorAll("[data-gain-tile]").forEach((t) => t.classList.remove("is-open"));
+          tile.classList.add("is-open");
+        });
+      });
+    });
+  }
+
+  function initAcademyKits() {
+    document.querySelectorAll("[data-aca-kit]").forEach((kit) => {
+      const picks = kit.querySelectorAll("[data-kit-pick]");
+      if (!picks.length) return;
+      const imgs = kit.querySelectorAll("[data-kit-img]");
+      const lines = kit.querySelectorAll("[data-kit-line]");
+      const buys = kit.querySelectorAll("[data-kit-buy]");
+      const prices = kit.querySelectorAll("[data-kit-price]");
+      const badges = kit.querySelectorAll("[data-kit-badge]");
+      const screens = kit.querySelectorAll("[data-kit-screen]");
+      const phones = kit.querySelectorAll("[data-kit-phone]");
+
+      const setPack = (key) => {
+        picks.forEach((p) => {
+          const on = p.getAttribute("data-kit-pick") === key;
+          p.classList.toggle("is-active", on);
+          p.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        imgs.forEach((img) => {
+          img.classList.toggle("is-active", img.getAttribute("data-kit-img") === key);
+        });
+        lines.forEach((line) => {
+          line.classList.toggle("is-active", line.getAttribute("data-kit-line") === key);
+        });
+        prices.forEach((price) => {
+          price.hidden = price.getAttribute("data-kit-price") !== key;
+        });
+        badges.forEach((badge) => {
+          badge.hidden = badge.getAttribute("data-kit-badge") !== key;
+        });
+        screens.forEach((screen) => {
+          screen.classList.toggle("is-active", screen.getAttribute("data-kit-screen") === key);
+        });
+        phones.forEach((phone) => {
+          phone.hidden = phone.getAttribute("data-kit-phone") !== key;
+        });
+        buys.forEach((btn) => {
+          btn.hidden = btn.getAttribute("data-kit-buy") !== key;
+        });
+      };
+
+      picks.forEach((pick) => {
+        pick.addEventListener("click", () => setPack(pick.getAttribute("data-kit-pick")));
+      });
+    });
+  }
 
   function initFooterNewsletter() {
     document.querySelectorAll("[data-footer-newsletter]").forEach((form) => {
