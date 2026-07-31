@@ -69,59 +69,38 @@
       <div class="section-head reveal">
         <p class="eyebrow">The kit</p>
         <h2>What's in PixtoLearn Swimming</h2>
-        <p class="lede">Waterproof cards, stands, and packs built for the poolside. See the physical system first.</p>
+        <p class="lede">A physical system for the poolside: waterproof cards sorted by skill, stands that hold the plan upright, and toys that turn practice into play.</p>
       </div>
 
-      <div class="pack-carousel reveal" data-pack-carousel>
-        <button class="pack-nav pack-nav-prev" type="button" aria-label="Previous pack">&#8592;</button>
-        <div class="pack-track">
-          <article class="pack-slide" data-pack-slide data-index="0">
-            <span class="pack-badge pack-badge-basic">Basic Pack</span>
-            <div class="pack-video" data-video-card>
-              <button class="video-play" type="button" aria-label="Play Basic Pack video">
-                <img src="assets/packs/shop-basic.png" alt="PixtoLearn Basic Pack" />
-                <span class="video-play-btn" aria-hidden="true"></span>
-              </button>
-              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-basic.png">
-                <source src="assets/videos/basic-pack.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-          <article class="pack-slide is-active" data-pack-slide data-index="1">
-            <span class="pack-badge pack-badge-full">Full Pack</span>
-            <div class="pack-video" data-video-card>
-              <button class="video-play" type="button" aria-label="Play Full Pack video">
-                <img src="assets/packs/shop-full.png" alt="PixtoLearn Full Pack" />
-                <span class="video-play-btn" aria-hidden="true"></span>
-              </button>
-              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-full.png">
-                <source src="assets/videos/team-swimming.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-          <article class="pack-slide" data-pack-slide data-index="2">
-            <span class="pack-badge pack-badge-fun">Fun Pack</span>
-            <div class="pack-video" data-video-card>
-              <button class="video-play" type="button" aria-label="Play Fun Pack video">
-                <img src="assets/packs/shop-fun.png" alt="PixtoLearn Fun Pack" />
-                <span class="video-play-btn" aria-hidden="true"></span>
-              </button>
-              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-fun.png">
-                <source src="assets/videos/fun-pack.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-        </div>
-        <button class="pack-nav pack-nav-next" type="button" aria-label="Next pack">&#8594;</button>
-        <div class="pack-dots" aria-hidden="true">
-          <button type="button" data-pack-dot="0"></button>
-          <button type="button" class="is-active" data-pack-dot="1"></button>
-          <button type="button" data-pack-dot="2"></button>
-        </div>
-      </div>
-      <div class="btn-row feature-cta-row reveal" style="margin-top:1.75rem">
-        <a class="btn btn-primary" href="product-full-pack.html">Shop Full Pack</a>
-        <a class="btn btn-ghost" href="shop.html#swimming">Compare packs</a>
+      <div class="kit-grid reveal">
+        <article class="kit-item">
+          <div class="kit-item-media">
+            <img src="assets/photos/mode/product-three-cards.jpg?v=1" alt="Three PixtoLearn swimming cards in the water" loading="lazy" />
+          </div>
+          <h3>160 waterproof cards</h3>
+          <p>One action per card, A5, built for wet hands and busy decks.</p>
+        </article>
+        <article class="kit-item">
+          <div class="kit-item-media is-product">
+            <img src="assets/packs/shop-full-cutout.png" alt="PixtoLearn colour-coded folders, bag and toys" loading="lazy" />
+          </div>
+          <h3>Colour-coded folders</h3>
+          <p>Eight skill categories, from water adaptation to strokes and safety.</p>
+        </article>
+        <article class="kit-item">
+          <div class="kit-item-media is-product">
+            <img src="assets/photos/stands-holder.png" alt="PixtoLearn stands and holder" loading="lazy" />
+          </div>
+          <h3>Stands and holder</h3>
+          <p>First, Next, and Then stay visible at the water's edge.</p>
+        </article>
+        <article class="kit-item">
+          <div class="kit-item-media">
+            <img src="assets/photos/mode/method-toys.jpg?v=1" alt="PixtoLearn swimming toys used in a session" loading="lazy" />
+          </div>
+          <h3>Toys and extras</h3>
+          <p>Matching toy cards so play becomes part of the lesson, not a break from it.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -209,8 +188,72 @@
     </div>
   </section>
 
-  <!-- 3. WHO USES IT IN SWIMMING -->
-  <section id="swim-users" class="section-tint">
+  <!-- 4. PACKS -->
+  <section id="packs" class="section-tint">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Packs</p>
+        <h2>Choose the pack that fits your sessions</h2>
+        <p class="lede">Now that you know how the cards work, see each pack in the water and pick the one that matches how you teach.</p>
+      </div>
+
+      <div class="pack-grid reveal">
+        <article class="pack-card">
+          <div class="pack-video" data-video-card>
+            <button class="video-play" type="button" aria-label="Play Basic Pack video">
+              <img src="assets/videos/poster-basic.png" alt="PixtoLearn Basic Pack in a swimming session" loading="lazy" />
+              <span class="video-play-btn" aria-hidden="true"></span>
+            </button>
+            <video class="video-el" preload="none" playsinline controls poster="assets/videos/poster-basic.png">
+              <source src="assets/videos/basic-pack.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="pack-card-body">
+            <span class="pack-badge pack-badge-basic">Basic Pack</span>
+            <p>Core skills for teachers starting with visual support.</p>
+            <a class="btn btn-ghost" href="product-basic-pack.html">See Basic Pack</a>
+          </div>
+        </article>
+
+        <article class="pack-card is-featured">
+          <div class="pack-video" data-video-card>
+            <button class="video-play" type="button" aria-label="Play Full Pack video">
+              <img src="assets/videos/poster-full.png" alt="PixtoLearn Full Pack in a swimming session" loading="lazy" />
+              <span class="video-play-btn" aria-hidden="true"></span>
+            </button>
+            <video class="video-el" preload="none" playsinline controls poster="assets/videos/poster-full.png">
+              <source src="assets/videos/team-swimming.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="pack-card-body">
+            <span class="pack-badge pack-badge-full">Full Pack</span>
+            <p>The complete system: 160 cards, folders, stands, holder, and toys.</p>
+            <a class="btn btn-primary" href="product-full-pack.html">See Full Pack</a>
+          </div>
+        </article>
+
+        <article class="pack-card">
+          <div class="pack-video" data-video-card>
+            <button class="video-play" type="button" aria-label="Play Fun Pack video">
+              <img src="assets/videos/poster-fun.png" alt="PixtoLearn Fun Pack in a swimming session" loading="lazy" />
+              <span class="video-play-btn" aria-hidden="true"></span>
+            </button>
+            <video class="video-el" preload="none" playsinline controls poster="assets/videos/poster-fun.png">
+              <source src="assets/videos/fun-pack.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="pack-card-body">
+            <span class="pack-badge pack-badge-fun">Fun Pack</span>
+            <p>Games, toys, and motivation for playful sessions.</p>
+            <a class="btn btn-ghost" href="product-fun-pack.html">See Fun Pack</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHO USES IT IN SWIMMING -->
+  <section id="swim-users">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">In the pool</p>
