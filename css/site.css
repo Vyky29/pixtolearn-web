@@ -5552,53 +5552,63 @@ a.post:hover {
   margin-right: 0.35rem;
 }
 
-.kit-grid {
+.vsystem {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.1rem;
-  margin-top: 1.4rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
 
-.kit-item {
-  padding: 0.75rem 0.8rem 1.05rem;
+.vsystem-card {
+  padding: 1.4rem 1.35rem 1.5rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(20, 36, 43, 0.08);
-  box-shadow: 0 14px 34px rgba(20, 36, 43, 0.06);
+  box-shadow: 0 16px 38px rgba(20, 36, 43, 0.06);
+  border-top: 3px solid var(--slate);
 }
 
-.kit-item-media {
-  border-radius: 14px;
-  overflow: hidden;
-  background: rgba(136, 176, 192, 0.14);
-  aspect-ratio: 4 / 3;
+.vsystem-card:nth-child(1) {
+  border-top-color: var(--pink);
 }
 
-.kit-item-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.vsystem-card:nth-child(2) {
+  border-top-color: var(--slate-deep);
 }
 
-.kit-item-media.is-product img {
-  object-fit: contain;
-  padding: 0.6rem;
-  box-sizing: border-box;
+.vsystem-card:nth-child(3) {
+  border-top-color: #e8a840;
 }
 
-.kit-item h3 {
+.vsystem-kicker {
+  margin: 0 0 0.55rem;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-deep);
+}
+
+.vsystem-card:nth-child(1) .vsystem-kicker {
+  color: var(--pink);
+}
+
+.vsystem-card:nth-child(3) .vsystem-kicker {
+  color: #b8841f;
+}
+
+.vsystem-card h3 {
   font-family: var(--font-display);
-  font-size: 1.02rem;
-  letter-spacing: -0.01em;
-  margin: 0.8rem 0 0.3rem;
+  font-size: 1.16rem;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
 }
 
-.kit-item p {
+.vsystem-card p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .pack-grid {
@@ -5656,10 +5666,6 @@ a.post:hover {
 }
 
 @media (max-width: 960px) {
-  .kit-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .pack-grid {
     grid-template-columns: 1fr;
     max-width: min(30rem, 100%);
@@ -5672,13 +5678,11 @@ a.post:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .session-split {
+  .vsystem {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 560px) {
-  .kit-grid {
+  .session-split {
     grid-template-columns: 1fr;
   }
 }
