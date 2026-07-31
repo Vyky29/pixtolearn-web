@@ -50,9 +50,9 @@
   </header>
   <main id="main">
 
-  <section class="app-hero">
-    <div class="wrap app-hero-grid">
-      <div class="app-hero-copy reveal">
+  <section class="plapp-hero">
+    <div class="wrap plapp-hero-grid">
+      <div class="plapp-hero-copy reveal">
         <div class="app-badge">
           <img src="assets/brand/app-icon.png" alt="" width="40" height="40" />
           <span>PixtoLearn App</span>
@@ -63,43 +63,88 @@
           <a class="btn btn-primary btn-pulse" href="#plans">See memberships</a>
           <a class="btn btn-ghost" href="https://pixtolearn-parents.vercel.app" rel="noopener" target="_blank">Open PixtoLearn App</a>
         </div>
-        <p class="note app-hero-note">Works alongside waterproof swimming packs and WOW keyring cards.</p>
+        <div class="plapp-hero-meta">
+          <span class="plapp-tag is-pink">Schedule</span>
+          <span class="plapp-tag is-amber">Focus</span>
+          <span class="plapp-tag is-slate">First and Then</span>
+        </div>
+        <p class="note app-hero-note">Works alongside waterproof swimming packs and WOW card decks.</p>
       </div>
 
-      <div class="app-hero-stage reveal">
-        <img
-          class="app-hero-photo"
-          src="assets/photos/hero-app.jpg"
-          alt="PixtoLearn App on tablet and phone with matching WOW card"
-        />
-        <div class="app-hero-devices" aria-hidden="true">
-          <div class="device device-ipad">
-            <div class="device-bezel">
-              <div class="device-screen screen-tablet">
-                <div class="screen-top">
-                  <img src="assets/brand/logo.png" alt="" />
-                  <span>Library</span>
+      <div class="plapp-stage reveal" aria-hidden="true">
+        <div class="plapp-device plapp-pad">
+          <div class="plapp-bezel">
+            <div class="plapp-screen plapp-screen--pad">
+              <div class="plui">
+                <div class="plui-head">
+                  <div class="plui-brand">
+                    <img class="plui-mark" src="assets/brand/symbol-clear.png" alt="" />
+                    <span class="plui-word"><i>PIX</i><i class="to">TO</i><i>LEARN</i></span>
+                  </div>
+                  <span class="plui-chip is-slate">Families</span>
                 </div>
-                <div class="screen-grid">
-                  <img src="assets/packs/keyring-web/hold-hands.jpg" alt="" />
-                  <img src="assets/packs/keyring-web/wait.jpg" alt="" />
-                  <img src="assets/packs/keyring-web/help.jpg" alt="" />
-                  <img src="assets/packs/keyring-web/listen.jpg" alt="" />
+                <div class="plui-bar"></div>
+                <div>
+                  <p class="plui-title">Your routines</p>
+                  <p class="plui-sub">Visual schedules for every day</p>
+                </div>
+                <div class="plui-segment"><i class="is-on">Schedule</i><i>Library</i></div>
+                <div class="plui-cards plui-cards--3">
+                  <div class="plui-card" style="--pl-accent: var(--pink)">
+                    <img src="assets/packs/keyring-web/hold-hands.jpg" alt="" loading="lazy" />
+                    <div>
+                      <div class="plui-card-rule"></div>
+                      <div class="plui-card-meta"><b>Getting ready</b><span>6 steps</span></div>
+                    </div>
+                  </div>
+                  <div class="plui-card" style="--pl-accent: var(--amber)">
+                    <img src="assets/packs/keyring-web/wait.jpg" alt="" loading="lazy" />
+                    <div>
+                      <div class="plui-card-rule"></div>
+                      <div class="plui-card-meta"><b>Pool arrival</b><span>5 steps</span></div>
+                    </div>
+                  </div>
+                  <div class="plui-card" style="--pl-accent: var(--slate-deep)">
+                    <img src="assets/packs/keyring-web/listen.jpg" alt="" loading="lazy" />
+                    <div>
+                      <div class="plui-card-rule"></div>
+                      <div class="plui-card-meta"><b>Lesson start</b><span>8 steps</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="device device-phone">
-            <div class="device-bezel phone-bezel">
-              <div class="device-notch"></div>
-              <div class="device-screen screen-phone">
-                <p class="screen-focus-label">Focus</p>
-                <img src="assets/packs/keyring-web/well-done.jpg" alt="" />
-                <div class="screen-dots"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="plapp-device plapp-phone">
+          <div class="plapp-bezel">
+            <span class="plapp-phone-notch"></span>
+            <div class="plapp-screen plapp-screen--phone">
+              <div class="plui plui--focus">
+                <div class="plui-topbar">
+                  <span>Close</span>
+                  <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                  <span>Reset</span>
+                </div>
+                <div>
+                  <p class="plui-kicker">Focus mode</p>
+                  <div class="plui-progress"><i></i></div>
+                </div>
+                <div class="plui-step">
+                  <div class="plui-step-label"><span>Now</span><span>3 / 7</span></div>
+                  <img src="assets/packs/keyring-web/well-done.jpg" alt="" loading="lazy" />
+                </div>
+                <div class="plui-dots"><i></i><i class="is-on"></i><i></i></div>
+                <div class="plui-cta">Done</div>
               </div>
             </div>
           </div>
-          <img class="device-float-card" src="assets/packs/keyring-web/cap.jpg" alt="" />
+        </div>
+
+        <div class="plapp-float">
+          <img src="assets/packs/keyring-web/help.jpg" alt="" loading="lazy" />
+          <span>Library</span>
         </div>
       </div>
     </div>
@@ -107,19 +152,208 @@
 
 
   <section>
-    <div class="wrap split reveal">
-      <div class="media-frame wide app-product-shot"><img src="assets/photos/hero-app.jpg" alt="PixtoLearn App on tablet and phone" /></div>
-      <div class="stack-sm">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The new interface</p>
+        <h2>Screens built for calm sessions</h2>
+        <p class="lede">A quiet entry, a clear routine list, and one step at a time in Focus. The same visual language as your printed packs, now live on tablet and phone.</p>
+      </div>
+
+      <div class="plapp-screens reveal">
+        <div class="plapp-screen-item">
+          <div class="plapp-device plapp-pad">
+            <div class="plapp-bezel">
+              <div class="plapp-screen plapp-screen--pad">
+                <div class="plui">
+                  <div class="plui-head">
+                    <div class="plui-brand">
+                      <img class="plui-mark" src="assets/brand/symbol-clear.png" alt="" />
+                      <span class="plui-word"><i>PIX</i><i class="to">TO</i><i>LEARN</i></span>
+                    </div>
+                    <span class="plui-chip is-pink">Library</span>
+                  </div>
+                  <div class="plui-bar"></div>
+                  <div class="plui-segment"><i>Schedule</i><i class="is-on">Library</i></div>
+                  <div class="plui-cards plui-cards--3">
+                    <div class="plui-card" style="--pl-accent: var(--pink)">
+                      <img src="assets/packs/keyring-web/cap.jpg" alt="" loading="lazy" />
+                      <div>
+                        <div class="plui-card-rule"></div>
+                        <div class="plui-card-meta"><b>Swim cap</b><span>Swimming</span></div>
+                      </div>
+                    </div>
+                    <div class="plui-card" style="--pl-accent: var(--amber)">
+                      <img src="assets/packs/keyring-web/quiet.jpg" alt="" loading="lazy" />
+                      <div>
+                        <div class="plui-card-rule"></div>
+                        <div class="plui-card-meta"><b>Quiet</b><span>Regulation</span></div>
+                      </div>
+                    </div>
+                    <div class="plui-card" style="--pl-accent: var(--slate-deep)">
+                      <img src="assets/packs/keyring-web/break.jpg" alt="" loading="lazy" />
+                      <div>
+                        <div class="plui-card-rule"></div>
+                        <div class="plui-card-meta"><b>Break</b><span>Everyday</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="plapp-caption">
+            <h3>Routines and library</h3>
+            <p>Curated decks and saved schedules, ready on the tablet.</p>
+          </div>
+        </div>
+
+        <div class="plapp-screen-item">
+          <div class="plapp-device plapp-phone">
+            <div class="plapp-bezel">
+              <span class="plapp-phone-notch"></span>
+              <div class="plapp-screen plapp-screen--phone">
+                <div class="plui plui--center">
+                  <img class="plui-mark plui-mark--lg" src="assets/brand/symbol-clear.png" alt="" />
+                  <span class="plui-word"><i>PIX</i><i class="to">TO</i><i>LEARN</i></span>
+                  <div class="plui-bar plui-bar--center"></div>
+                  <p class="plui-capsule">Visual clarity for everyday routines.</p>
+                  <div class="plui-chips">
+                    <span class="plui-chip is-pink">Schedule</span>
+                    <span class="plui-chip is-amber">Focus</span>
+                  </div>
+                  <div class="plui-cta" style="width:100%">Sign in</div>
+                  <div class="plui-cta plui-cta--ghost" style="width:100%">Continue free</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="plapp-caption">
+            <h3>Calm entry</h3>
+            <p>Open the app, pick a profile, start. No clutter before a session.</p>
+          </div>
+        </div>
+
+        <div class="plapp-screen-item">
+          <div class="plapp-device plapp-phone">
+            <div class="plapp-bezel">
+              <span class="plapp-phone-notch"></span>
+              <div class="plapp-screen plapp-screen--phone">
+                <div class="plui plui--focus">
+                  <div class="plui-topbar">
+                    <span>Back</span>
+                    <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                    <span>Reset</span>
+                  </div>
+                  <div>
+                    <p class="plui-kicker">Getting ready</p>
+                    <div class="plui-progress"><i></i></div>
+                  </div>
+                  <div class="plui-step">
+                    <div class="plui-step-label"><span>Now</span><span>2 / 6</span></div>
+                    <img src="assets/packs/keyring-web/hold-hands.jpg" alt="" loading="lazy" />
+                  </div>
+                  <div class="plui-dots"><i class="is-on"></i><i></i><i></i></div>
+                  <div class="plui-cta">Done</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="plapp-caption">
+            <h3>Focus mode</h3>
+            <p>One card at a time, with progress the learner can see.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
         <p class="eyebrow">What you get</p>
         <h2>Library, player, Focus, Planner</h2>
         <p class="lede">From swimming sequences to everyday routines, staff and families can run clear visual sessions without rebuilding materials from scratch.</p>
-        <ul class="muted">
-          <li>Curated card libraries aligned to PixtoLearn packs</li>
-          <li>Focus mode for one-step-at-a-time sessions</li>
-          <li>Planner tools for practitioners and centres</li>
-          <li>Bridge back to waterproof and WOW physical decks</li>
-        </ul>
       </div>
+      <div class="plapp-features reveal">
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="9" width="15" height="30" rx="3" />
+              <rect x="27" y="9" width="15" height="30" rx="3" />
+              <path d="M10 17h7M31 17h7" />
+            </svg>
+          </div>
+          <h3>Card library</h3>
+          <p>Curated card libraries aligned to PixtoLearn packs.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="7" y="10" width="34" height="28" rx="4" />
+              <path d="M21 20l8 4-8 4z" />
+            </svg>
+          </div>
+          <h3>Session player</h3>
+          <p>Run a full routine in order, with clear step progress.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="24" cy="24" r="15" />
+              <circle cx="24" cy="24" r="7" />
+              <path d="M24 4v5M24 39v5M4 24h5M39 24h5" />
+            </svg>
+          </div>
+          <h3>Focus mode</h3>
+          <p>One step at a time for calm, low-stimulus moments.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="8" y="11" width="32" height="29" rx="4" />
+              <path d="M8 20h32M17 7v7M31 7v7M17 28h6M17 34h12" />
+            </svg>
+          </div>
+          <h3>Planner</h3>
+          <p>Planner tools for practitioners, swim teachers, and centres.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">How a session runs</p>
+        <h2>Three steps, poolside or at home</h2>
+      </div>
+      <div class="plapp-steps reveal">
+        <article class="plapp-step">
+          <h3>Pick the routine</h3>
+          <p>Choose a saved schedule or build one from the card library in seconds.</p>
+        </article>
+        <article class="plapp-step">
+          <h3>Run it together</h3>
+          <p>Focus mode shows one card at a time, so the next step is always clear.</p>
+        </article>
+        <article class="plapp-step">
+          <h3>Finish and repeat</h3>
+          <p>Celebrate the finish, then run the same sequence again tomorrow.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="wrap band band-teal reveal">
+      <div>
+        <h2 style="font-size:1.7rem;margin-bottom:0.45rem">Same language, screen and paper</h2>
+        <p class="lede">Cards in the app match your waterproof and WOW decks, so learners see one consistent system everywhere.</p>
+      </div>
+      <a class="btn btn-primary" href="shop.html">See packs</a>
     </div>
   </section>
 
@@ -156,7 +390,7 @@
         <article class="plan reveal">
           <h3>Pro / Centre</h3>
           <p class="lede">Practitioners, swim teachers, day centres.</p>
-          <div class="amount soon">From £19 / mo · Org quotes</div>
+          <div class="amount soon">From £19 / mo, org quotes</div>
           <ul>
             <li>Multi-learner Planner</li>
             <li>Staff seats &amp; roles</li>
@@ -165,16 +399,7 @@
           <a class="btn btn-ghost" href="contact.html">Talk to us</a>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap band band-teal reveal">
-      <div>
-        <h2 style="font-size:1.7rem;margin-bottom:0.45rem">Bundle idea</h2>
-        <p class="lede">Full Pack buyers can receive months of PixtoLearn App Family included. Ask when you order.</p>
-      </div>
-      <a class="btn btn-primary" href="shop.html">See packs</a>
+      <p class="note reveal" style="margin-top:1.25rem">Bundle idea: Full Pack buyers can receive months of PixtoLearn App Family included. Ask when you order.</p>
     </div>
   </section>
 

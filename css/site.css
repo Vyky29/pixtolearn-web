@@ -11051,3 +11051,754 @@ a.post:hover {
   --card-mark: var(--slate-deep);
 }
 
+/* ==========================================================
+   App page: live PixtoLearn App interface mockups
+   Pure CSS device shells rendering the real product UI.
+   ========================================================== */
+
+.plapp-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.25rem, 5.5vw, 4.25rem) 0 clamp(2.75rem, 6.5vw, 4.75rem);
+  background:
+    radial-gradient(ellipse 46% 52% at 88% 12%, rgba(95, 138, 154, 0.18), transparent 58%),
+    radial-gradient(ellipse 44% 46% at 4% 88%, rgba(232, 168, 64, 0.16), transparent 58%),
+    radial-gradient(ellipse 38% 40% at 68% 94%, rgba(208, 56, 96, 0.1), transparent 55%),
+    linear-gradient(180deg, #f2ede6 0%, var(--foam) 52%, #edf3f5 100%);
+}
+
+.plapp-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.plapp-hero-copy h1 {
+  margin: 0.6rem 0 0.8rem;
+  font-size: clamp(2.2rem, 4.8vw, 3.5rem);
+  max-width: 12ch;
+  letter-spacing: -0.035em;
+}
+
+.plapp-hero-copy .lede {
+  max-width: 36ch;
+  margin: 0 0 1.25rem;
+}
+
+.plapp-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.15rem 0 0.4rem;
+}
+
+.plapp-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.85),
+    0 8px 20px rgba(20, 36, 43, 0.07);
+}
+
+.plapp-tag.is-pink { color: var(--pink-deep); box-shadow: inset 0 0 0 1px rgba(208, 56, 96, 0.3), 0 8px 20px rgba(20, 36, 43, 0.07); }
+.plapp-tag.is-amber { color: #9a6a18; box-shadow: inset 0 0 0 1px rgba(232, 168, 64, 0.42), 0 8px 20px rgba(20, 36, 43, 0.07); }
+.plapp-tag.is-slate { color: var(--slate-deep); box-shadow: inset 0 0 0 1px rgba(95, 138, 154, 0.36), 0 8px 20px rgba(20, 36, 43, 0.07); }
+
+/* --- Hero stage --------------------------------------------------- */
+.plapp-stage {
+  position: relative;
+  min-height: min(58vw, 480px);
+}
+
+.plapp-stage .plapp-device {
+  position: absolute;
+}
+
+.plapp-stage .plapp-pad {
+  width: min(78%, 450px);
+  left: 8%;
+  top: 4%;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+.plapp-stage .plapp-phone {
+  width: min(28%, 164px);
+  right: 0;
+  bottom: 1%;
+  transform: rotate(6deg);
+  z-index: 3;
+}
+
+.plapp-float {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(15%, 90px);
+  z-index: 4;
+  transform: rotate(-8deg);
+  border-radius: 0.9rem;
+  padding: 0.4rem 0.4rem 0.5rem;
+  background: linear-gradient(158deg, rgba(255, 255, 255, 0.97), rgba(255, 252, 248, 0.88));
+  box-shadow:
+    0 20px 40px rgba(20, 36, 43, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.plapp-float img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+.plapp-float span {
+  display: block;
+  margin-top: 0.3rem;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--slate-deep);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .plapp-stage .plapp-pad { animation: plappFloat 7.5s ease-in-out infinite; --plr: -3deg; }
+  .plapp-stage .plapp-phone { animation: plappFloat 9s ease-in-out infinite reverse; --plr: 6deg; }
+  .plapp-float { animation: plappFloat 6.5s ease-in-out infinite; --plr: -8deg; }
+}
+
+@keyframes plappFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--plr, 0deg)); }
+  50% { transform: translateY(-9px) rotate(var(--plr, 0deg)); }
+}
+
+/* --- Device shells ------------------------------------------------ */
+.plapp-device {
+  container-type: inline-size;
+}
+
+.plapp-bezel {
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 0.6rem;
+  background: linear-gradient(158deg, #3d4d55 0%, #1c2c33 46%, #101d23 100%);
+  box-shadow:
+    0 30px 62px rgba(20, 36, 43, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.plapp-phone .plapp-bezel {
+  border-radius: 1.7rem;
+  padding: 0.42rem;
+}
+
+.plapp-phone-notch {
+  position: absolute;
+  top: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 0.42rem;
+  border-radius: 999px;
+  background: #0c171c;
+  z-index: 3;
+}
+
+.plapp-screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: linear-gradient(168deg, #efe6da 0%, #f7f4ef 46%, #e8eef2 100%);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.plapp-screen--pad {
+  aspect-ratio: 4 / 3;
+  font-size: clamp(6px, 1.05vw, 12px);
+  font-size: clamp(6px, 2.5cqi, 13px);
+}
+
+.plapp-screen--phone {
+  aspect-ratio: 9 / 18.5;
+  border-radius: 1.25rem;
+  font-size: clamp(5px, 0.7vw, 8px);
+  font-size: clamp(5px, 5.4cqi, 9.5px);
+}
+
+.plapp-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(122deg, rgba(255, 255, 255, 0.28) 0%, transparent 38%, transparent 72%, rgba(255, 255, 255, 0.14) 100%);
+}
+
+/* --- In-screen UI atoms (em-scaled) ------------------------------- */
+.plui {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.6em 1.5em;
+}
+
+.plui-ghost {
+  position: absolute;
+  border-radius: 0.9em;
+  opacity: 0.3;
+  background: linear-gradient(155deg, var(--pg, #d03860) 0%, rgba(255, 255, 255, 0.4) 100%);
+  box-shadow: 0 1em 2em rgba(20, 36, 43, 0.12);
+}
+
+.plui-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8em;
+}
+
+.plui-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.plui-mark {
+  width: 3.1em;
+  height: 3.1em;
+  object-fit: contain;
+  filter: drop-shadow(0 0.4em 0.8em rgba(20, 36, 43, 0.16));
+}
+
+.plui-mark--lg {
+  width: 6.4em;
+  height: 6.4em;
+}
+
+.plui-word {
+  display: inline-flex;
+  gap: 0.05em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15em;
+  letter-spacing: 0.09em;
+  line-height: 1;
+}
+
+.plui-word i { font-style: normal; color: var(--ink); }
+.plui-word i.to { color: var(--amber); }
+
+.plui-bar {
+  height: 0.32em;
+  width: 6em;
+  border-radius: 999px;
+  background: var(--brand-bar);
+}
+
+.plui-bar--center { margin: 0 auto; }
+
+.plui-kicker {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate-deep);
+}
+
+.plui-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.85em;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.plui-sub {
+  margin: 0;
+  font-size: 0.92em;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.plui-capsule {
+  margin: 0;
+  border-radius: 1.1em;
+  padding: 0.85em 1.1em;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15em;
+  line-height: 1.25;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 252, 248, 0.42));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.85),
+    0 1em 2.4em rgba(20, 36, 43, 0.1);
+  color: var(--pink-deep);
+}
+
+.plui-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  justify-content: center;
+}
+
+.plui-chip {
+  padding: 0.42em 0.8em;
+  border-radius: 999px;
+  font-size: 0.72em;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.plui-chip.is-pink { color: var(--pink-deep); box-shadow: inset 0 0 0 1px rgba(208, 56, 96, 0.32); }
+.plui-chip.is-amber { color: #9a6a18; box-shadow: inset 0 0 0 1px rgba(232, 168, 64, 0.44); }
+.plui-chip.is-slate { color: var(--slate-deep); box-shadow: inset 0 0 0 1px rgba(95, 138, 154, 0.38); }
+
+.plui-segment {
+  display: inline-flex;
+  align-self: center;
+  gap: 0.25em;
+  padding: 0.3em;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+  font-size: 0.82em;
+  font-weight: 800;
+}
+
+.plui-segment i {
+  font-style: normal;
+  padding: 0.42em 0.95em;
+  border-radius: 999px;
+  color: var(--ink-soft);
+}
+
+.plui-segment i.is-on {
+  color: #fff;
+  background: linear-gradient(180deg, var(--pink), var(--pink-deep));
+  box-shadow: 0 0.4em 1em rgba(208, 56, 96, 0.3);
+}
+
+.plui-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85em;
+  flex: 1;
+  min-height: 0;
+}
+
+.plui-cards--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.plui--center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.plui-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 0.5em;
+  padding: 0.6em;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow:
+    inset 0 0 0 1px rgba(20, 36, 43, 0.05),
+    0 0.9em 2em rgba(20, 36, 43, 0.1);
+  min-height: 0;
+}
+
+.plui-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  border-radius: 0.7em;
+}
+
+.plui-card-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4em;
+}
+
+.plui-card-meta b {
+  font-family: var(--font-display);
+  font-size: 0.92em;
+  letter-spacing: -0.01em;
+}
+
+.plui-card-meta span {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--slate-deep);
+}
+
+.plui-card-rule {
+  height: 0.24em;
+  border-radius: 999px;
+  background: var(--pl-accent, var(--pink));
+  opacity: 0.85;
+}
+
+.plui-cta {
+  border-radius: 999px;
+  padding: 0.8em 1.1em;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.95em;
+  color: #fff;
+  background: linear-gradient(180deg, var(--pink), var(--pink-deep));
+  box-shadow: 0 0.8em 1.8em rgba(208, 56, 96, 0.32);
+}
+
+.plui-cta--ghost {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(20, 36, 43, 0.1);
+}
+
+.plui-field {
+  display: grid;
+  gap: 0.35em;
+}
+
+.plui-field span {
+  font-size: 0.7em;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.plui-field i {
+  font-style: normal;
+  padding: 0.75em 0.9em;
+  border-radius: 0.85em;
+  font-size: 0.9em;
+  color: rgba(58, 81, 89, 0.55);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(20, 36, 43, 0.08);
+}
+
+.plui-panel {
+  display: grid;
+  gap: 0.75em;
+  padding: 1.1em;
+  border-radius: 1.4em;
+  background: rgba(255, 252, 248, 0.86);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.85),
+    0 1.4em 3em rgba(20, 36, 43, 0.14);
+}
+
+.plui-center {
+  display: grid;
+  justify-items: center;
+  gap: 0.7em;
+  text-align: center;
+}
+
+/* Focus / player screen */
+.plui--focus {
+  justify-content: space-between;
+  gap: 0.8em;
+}
+
+.plui-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6em;
+  font-size: 0.78em;
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+
+.plui-progress {
+  height: 0.34em;
+  border-radius: 999px;
+  background: rgba(20, 36, 43, 0.1);
+  overflow: hidden;
+}
+
+.plui-progress i {
+  display: block;
+  height: 100%;
+  width: 42%;
+  border-radius: 999px;
+  background: var(--brand-bar);
+}
+
+.plui-step {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0.5em;
+  padding: 0.7em;
+  border-radius: 1.2em;
+  background: #fff;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 1.4em 2.8em rgba(20, 36, 43, 0.16);
+}
+
+.plui-step-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pink-deep);
+}
+
+.plui-step img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  border-radius: 0.8em;
+}
+
+.plui-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.35em;
+}
+
+.plui-dots i {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 999px;
+  background: var(--slate);
+  opacity: 0.45;
+}
+
+.plui-dots i.is-on {
+  opacity: 1;
+  background: var(--pink);
+}
+
+/* --- Screens showcase strip -------------------------------------- */
+.plapp-screens {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr) minmax(0, 0.9fr);
+  gap: clamp(1rem, 2.5vw, 2.25rem);
+  align-items: stretch;
+}
+
+.plapp-screen-item {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: end;
+  gap: 1.1rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.plapp-screen-item .plapp-device {
+  align-self: end;
+  width: 100%;
+  max-width: 430px;
+}
+
+.plapp-screen-item .plapp-phone {
+  max-width: 200px;
+}
+
+.plapp-caption h3 {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+}
+
+.plapp-caption p {
+  margin: 0;
+  max-width: 26ch;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+/* --- Feature grid variant for the four app pillars ----------------- */
+.plapp-features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.plapp-features > *:nth-child(1) { --card-mark: var(--pink); }
+.plapp-features > *:nth-child(2) { --card-mark: var(--amber); }
+.plapp-features > *:nth-child(3) { --card-mark: var(--slate-deep); }
+.plapp-features > *:nth-child(4) { --card-mark: var(--pink-deep); }
+
+.plapp-features .feature-icon svg {
+  width: 46px;
+  height: 46px;
+  color: var(--card-mark, var(--pink));
+}
+
+/* --- Session steps ----------------------------------------------- */
+.plapp-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+  counter-reset: plstep;
+}
+
+.plapp-step {
+  position: relative;
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+  padding: 1.5rem 1.35rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 38px rgba(20, 36, 43, 0.07);
+}
+
+.plapp-step::before {
+  counter-increment: plstep;
+  content: counter(plstep);
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(180deg, var(--step-mark, var(--pink)), color-mix(in srgb, var(--step-mark, var(--pink)) 76%, #14242b));
+  box-shadow: 0 10px 22px rgba(20, 36, 43, 0.14);
+}
+
+.plapp-steps > *:nth-child(1) { --step-mark: var(--pink); }
+.plapp-steps > *:nth-child(2) { --step-mark: var(--amber); }
+.plapp-steps > *:nth-child(3) { --step-mark: var(--slate-deep); }
+
+.plapp-step h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+}
+
+.plapp-step p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* --- Responsive --------------------------------------------------- */
+@media (max-width: 1000px) {
+  .plapp-screens {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plapp-screens > *:first-child {
+    grid-column: 1 / -1;
+    justify-items: center;
+  }
+
+  .plapp-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .plapp-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plapp-stage {
+    order: -1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 1.5rem;
+  }
+
+  .plapp-stage .plapp-device {
+    position: relative;
+  }
+
+  .plapp-stage .plapp-pad {
+    width: min(66%, 430px);
+    left: auto;
+    top: auto;
+  }
+
+  .plapp-stage .plapp-phone {
+    width: min(24%, 152px);
+    right: auto;
+    bottom: auto;
+    margin-left: -7%;
+  }
+
+  .plapp-float {
+    display: none;
+  }
+
+  .plapp-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .plapp-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .plapp-features {
+    grid-template-columns: 1fr;
+  }
+
+  .plapp-screens {
+    grid-template-columns: 1fr;
+  }
+
+  .plapp-screens > *:first-child {
+    grid-column: auto;
+  }
+
+  .plapp-stage .plapp-pad {
+    width: min(74%, 340px);
+  }
+
+  .plapp-stage .plapp-phone {
+    width: min(26%, 124px);
+    margin-left: -8%;
+  }
+}
+
