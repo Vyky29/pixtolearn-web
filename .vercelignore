@@ -10,6 +10,9 @@ assets/photos/frames/
 assets/photos/try-*
 assets/photos/swimming-team.mp4
 
+# Internal kit guide: handed to customers after purchase, never published.
+guides/
+
 # Raw import/working folders the public site does NOT reference.
 # (Curated, web-ready copies live in assets/photos/mode/ and assets/videos/mode/.)
 assets/photos/mode-photoshoot/

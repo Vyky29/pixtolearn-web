@@ -1,6 +1,11 @@
 .DS_Store
 .vercel
 *.log
+
+# Internal kit guide (HTML replica of LIBRO Pixtolearn V8). Not part of the
+# public site: it is sent to customers after purchase and edited locally.
+guides/
+
 assets/photos/frames/
 assets/photos/try-*
 assets/photos/swimming-team.mp4
