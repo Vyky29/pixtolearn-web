@@ -1,0 +1,17 @@
+# Vercel deploy ignore (used instead of .gitignore when present).
+# Keep the production upload lean: only ship what the public site serves.
+
+.DS_Store
+.vercel
+*.log
+
+# Legacy/local-only photo scratch
+assets/photos/frames/
+assets/photos/try-*
+assets/photos/swimming-team.mp4
+
+# Raw import/working folders the public site does NOT reference.
+# (Curated, web-ready copies live in assets/photos/mode/ and assets/videos/mode/.)
+assets/photos/mode-photoshoot/
+assets/photos/phone-drop-2026-07-31/
+assets/media/
