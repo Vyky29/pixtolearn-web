@@ -7995,62 +7995,68 @@ a.post:hover {
   color: rgba(20, 36, 43, 0.58);
 }
 
-.aca-solve {
+.aca-problem {
   margin-bottom: clamp(2rem, 4vw, 3rem);
-}
-
-.aca-solve-head {
-  margin-bottom: 1.15rem;
-  max-width: 40rem;
-}
-
-.aca-solve-head .eyebrow { color: var(--pink); }
-
-.aca-solve-head h3 {
-  margin: 0.3rem 0 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
-  letter-spacing: -0.02em;
-}
-
-.aca-solve-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  align-items: end;
+  padding-top: clamp(1.35rem, 2.5vw, 1.85rem);
+  border-top: 1px solid rgba(20, 36, 43, 0.1);
 }
 
-.aca-solve-grid article {
-  padding: 1rem 1.05rem 1.1rem;
-  border-top: 3px solid var(--amber);
-  background: transparent;
+.aca-problem-copy .eyebrow {
+  color: var(--slate-deep);
 }
 
-.aca-solve-grid article:nth-child(odd) { border-top-color: var(--pink); }
-.aca-solve-grid article:nth-child(3n) { border-top-color: var(--slate-deep); }
-
-.aca-solve-grid span {
-  display: block;
-  margin-bottom: 0.35rem;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--pink);
-}
-
-.aca-solve-grid strong {
-  display: block;
-  margin-bottom: 0.35rem;
+.aca-problem-copy h3 {
+  margin: 0.4rem 0 0.85rem;
   font-family: var(--font-display);
-  font-size: 1.02rem;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--ink);
 }
 
-.aca-solve-grid p {
-  margin: 0;
-  font-size: 0.88rem;
+.aca-problem-copy .lede {
+  margin: 0 0 1rem;
   color: var(--ink-soft);
-  line-height: 1.4;
+  max-width: 42ch;
 }
+
+.aca-problem-bridge {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink);
+  max-width: 44ch;
+  line-height: 1.45;
+}
+
+.aca-problem-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.aca-problem-list li {
+  margin: 0;
+  padding: 0.9rem 1rem 0.9rem 1.05rem;
+  border-left: 3px solid var(--pink);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 24px rgba(20, 36, 43, 0.05);
+  font-family: var(--font-display);
+  font-size: clamp(0.98rem, 1.6vw, 1.08rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.aca-problem-list li:nth-child(2) { border-left-color: var(--amber); }
+.aca-problem-list li:nth-child(3) { border-left-color: var(--slate-deep); }
+.aca-problem-list li:nth-child(4) { border-left-color: var(--pink-deep); }
 
 .aca-gain {
   margin-bottom: clamp(2rem, 4vw, 3rem);
@@ -8578,13 +8584,28 @@ a.post:hover {
 
 .aca-text-link {
   font-weight: 740;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--pink-deep);
   text-decoration: none;
-  border-bottom: 1px solid rgba(232, 168, 64, 0.7);
+  border-bottom: 1px solid rgba(208, 56, 96, 0.45);
   width: fit-content;
 }
 
 .aca-text-link:hover {
+  color: var(--ink);
+  border-bottom-color: var(--pink);
+}
+
+/* Dark bands need the inverted treatment */
+.aca-statement .aca-text-link,
+.aca-next .aca-text-link,
+.aca-wait-aside .aca-text-link {
+  color: rgba(255, 255, 255, 0.92);
+  border-bottom-color: rgba(232, 168, 64, 0.7);
+}
+
+.aca-statement .aca-text-link:hover,
+.aca-next .aca-text-link:hover,
+.aca-wait-aside .aca-text-link:hover {
   color: #fff;
   border-bottom-color: var(--amber);
 }
@@ -8839,7 +8860,7 @@ a.post:hover {
 
 .aca-wait-rails {
   list-style: none;
-  margin: 0 0 1.5rem;
+  margin: 0;
   padding: 0;
   display: grid;
   gap: 0;
@@ -8878,20 +8899,6 @@ a.post:hover {
   font-size: 0.9rem;
   color: rgba(244, 240, 234, 0.68);
   line-height: 1.4;
-}
-
-.aca-wait-aside-link {
-  margin: 0;
-}
-
-.aca-wait-aside .aca-text-link {
-  color: #f4b4c4;
-  border-bottom-color: rgba(244, 180, 196, 0.45);
-}
-
-.aca-wait-aside .aca-text-link:hover {
-  color: #fff;
-  border-bottom-color: #fff;
 }
 
 .aca-wait-form {
@@ -9099,47 +9106,7 @@ a.post:hover {
   }
 }
 
-/* Academy restructure: problem / flow / pathway */
-.aca-problem {
-  padding: 3.5rem 0 2.5rem;
-  background:
-    linear-gradient(180deg, rgba(20, 36, 43, 0.04), transparent 70%);
-}
-
-.aca-problem-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 2rem;
-  align-items: end;
-}
-
-.aca-problem h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
-  letter-spacing: -0.03em;
-  margin: 0.35rem 0 0.75rem;
-  line-height: 1.15;
-}
-
-.aca-problem-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.65rem;
-}
-
-.aca-problem-list li {
-  padding: 0.75rem 0 0.75rem 1rem;
-  border-left: 3px solid var(--pink);
-  font-weight: 650;
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.aca-problem-list li:nth-child(2) { border-left-color: var(--amber); }
-.aca-problem-list li:nth-child(3) { border-left-color: var(--slate-deep); }
-.aca-problem-list li:nth-child(4) { border-left-color: var(--pink-deep); }
-
+/* Academy restructure: flow / pathway */
 .aca-how-learn {
   padding: clamp(3rem, 6vw, 4rem) 0;
   background: var(--band-slate-soft);
@@ -10880,7 +10847,7 @@ a.post:hover {
   .aca-wait-shell,
   .aca-tool,
   .aca-tool-flip,
-  .aca-problem-grid,
+  .aca-problem,
   .aca-path-course,
   .aca-next-grid,
   .aca-price-org,
@@ -10896,7 +10863,6 @@ a.post:hover {
     min-height: 240px;
   }
 
-  .aca-solve-grid,
   .aca-paths-bridge-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -10960,7 +10926,6 @@ a.post:hover {
   .aca-audience-photos,
   .aca-flow,
   .aca-price-grid,
-  .aca-solve-grid,
   .aca-paths-bridge-grid,
   .aca-gain-panel {
     grid-template-columns: 1fr;
