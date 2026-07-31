@@ -1,7 +1,7 @@
 (function () {
   function cartHref() {
     var path = location.pathname || "";
-    if (path.indexOf("/learn/") !== -1) return "../cart.html";
+    if (path.indexOf("/learn/") !== -1) return "/cart.html";
     return "cart.html";
   }
 
