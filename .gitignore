@@ -4,3 +4,21 @@
 assets/photos/frames/
 assets/photos/try-*
 assets/photos/swimming-team.mp4
+
+# Mode photoshoot: keep web/thumbs in git; originals are ~1GB local archive
+assets/photos/mode-photoshoot/originals/
+assets/photos/mode-photoshoot/_review/
+assets/photos/mode-photoshoot/_dims.json
+
+# Phone-drop originals (HEIC) stay local
+assets/photos/phone-drop-2026-07-31/originals/
+assets/photos/phone-drop-2026-07-31/_review/
+
+# Mode photos & videos: keep web/posters; originals (~500MB) local
+assets/media/mode-photos-videos/originals/
+assets/media/mode-photos-videos/_review/
+assets/media/mode-photos-videos/_video_meta.json
+assets/media/mode-photos-videos/_analysis-frames/
+assets/media/mode-photos-videos/_analysis-sheets/
+assets/media/mode-photos-videos/_edited-review/
+assets/media/mode-photos-videos/edits/selects/

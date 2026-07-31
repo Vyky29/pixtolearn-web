@@ -5547,6 +5547,51 @@ a.post:hover {
   margin: 0 0 1.5rem;
 }
 
+.mode-inwater .impact-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mode-reel {
+  margin: 0.35rem 0 0.25rem;
+  max-width: 420px;
+}
+
+.mode-reel-video {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  background: #0f1c22;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  box-shadow: 0 14px 30px rgba(20, 36, 43, 0.12);
+}
+
+.mode-reel-note {
+  margin: 0.55rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.hero-home .hero-media img {
+  object-position: center 28%;
+}
+
+.hero-swimming .hero-media img {
+  object-position: center 40%;
+}
+
+@media (max-width: 860px) {
+  .mode-inwater .impact-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-reel {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+}
+
 .impact-strip-item {
   margin: 0;
   display: grid;
