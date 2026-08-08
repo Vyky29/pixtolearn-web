@@ -93,12 +93,134 @@
   initSwimUsers();
   initPackCarousel();
   initFlashStage();
+  initModeStage();
+  initWowMoment();
+  initWowSpotlight();
+  initWowPortable();
   initMissionProgress();
   initAcademyWaitlist();
   initAcademyStage();
   initAcademyGain();
   initAcademyKits();
   initFooterNewsletter();
+  initSystemList();
+  initSystemRewrite();
+
+  function initSystemList() {
+    const root = document.querySelector("[data-system-list]");
+    if (!root) return;
+    const items = Array.from(root.querySelectorAll("[data-system-item]"));
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        const already = item.classList.contains("is-open");
+        items.forEach((el) => {
+          el.classList.remove("is-open");
+          el.setAttribute("aria-expanded", "false");
+        });
+        if (!already) {
+          item.classList.add("is-open");
+          item.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+
+  function initSystemRewrite() {
+    const root = document.querySelector("[data-system-rewrite]");
+    if (!root) return;
+    const lines = Array.from(root.querySelectorAll("[data-rewrite-line]"));
+    if (!lines.length) return;
+    const layout = root.closest("[data-system-layout]");
+    const result = layout ? layout.querySelector("[data-system-result]") : null;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      lines.forEach((line) => {
+        line.classList.add("is-striking", "is-flipped");
+      });
+      if (result) {
+        result.classList.remove("is-waiting");
+        result.classList.add("is-shown");
+      }
+      return;
+    }
+
+    let index = 0;
+    let timer = null;
+    let running = false;
+
+    const clearTimer = () => {
+      if (timer) {
+        window.clearTimeout(timer);
+        timer = null;
+      }
+    };
+
+    const reset = () => {
+      lines.forEach((line) => {
+        line.classList.remove("is-striking", "is-flipped");
+      });
+      if (result) {
+        result.classList.remove("is-shown");
+        result.classList.add("is-waiting");
+      }
+      index = 0;
+    };
+
+    const revealResult = () => {
+      if (result) {
+        result.classList.remove("is-waiting");
+        result.classList.add("is-shown");
+      }
+      timer = window.setTimeout(() => {
+        reset();
+        timer = window.setTimeout(tick, 800);
+      }, 2800);
+    };
+
+    const flipLine = (line) => {
+      line.classList.add("is-flipped");
+      index += 1;
+      timer = window.setTimeout(tick, 550);
+    };
+
+    const tick = () => {
+      if (index < lines.length) {
+        const line = lines[index];
+        line.classList.add("is-striking");
+        timer = window.setTimeout(() => flipLine(line), 420);
+        return;
+      }
+      revealResult();
+    };
+
+    const start = () => {
+      if (running) return;
+      running = true;
+      reset();
+      timer = window.setTimeout(tick, 500);
+    };
+
+    const stop = () => {
+      running = false;
+      clearTimer();
+    };
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) start();
+            else stop();
+          });
+        },
+        { threshold: 0.35 }
+      );
+      io.observe(layout || root);
+    } else {
+      start();
+    }
+  }
 
   function initAcademyStage() {
     const stage = document.querySelector("[data-aca-stage]");
@@ -408,6 +530,7 @@
 
   function initLeadPopup() {
     if (path === "printable-trial.html") return;
+    if (document.body.hasAttribute("data-launch-page") || document.body.classList.contains("launch-page")) return;
     const subscribed = localStorage.getItem("pixto_lead_subscribed") === "1";
     const foreverOff = localStorage.getItem("pixto_lead_dismissed") === "1";
     if (subscribed || foreverOff) return;
@@ -428,27 +551,30 @@
         <div class="lead-grid">
           <div class="lead-copy">
             <span class="lead-pill">Free gift</span>
-            <h2 id="lead-title">Let's be in touch</h2>
-            <p>Subscribe for PixtoLearn updates and get a <strong>free swimming printable trial</strong>. Tell us what else you want and we will tailor what we send.</p>
             <form class="lead-form" data-lead-form>
-              <div class="lead-row">
-                <label>Name<input type="text" name="name" placeholder="Name" required autocomplete="given-name" /></label>
-                <label>Surname<input type="text" name="surname" placeholder="Surname" required autocomplete="family-name" /></label>
+              <div class="lead-step is-active" data-lead-step="1">
+                <h2 id="lead-title">Get your free swimming printable</h2>
+                <p>Enter your email and we’ll send the trial. You can choose extra updates next — optional.</p>
+                <label>Email<input type="email" name="email" placeholder="you@email.com" required autocomplete="email" /></label>
+                <label class="lead-privacy"><input type="checkbox" name="privacy" value="1" required /> I agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a></label>
+                <button class="lead-submit" type="button" data-lead-next>Continue</button>
               </div>
-              <label>Email<input type="email" name="email" placeholder="Email" required autocomplete="email" /></label>
-              <div class="lead-checks">
-                <label><input type="checkbox" name="gift_swim" value="1" checked disabled /> Free swimming printable trial</label>
-                <label><input type="checkbox" name="want_wow" value="1" /> Also send a WOW cards sample when ready</label>
-                <label><input type="checkbox" name="want_app" value="1" /> PixtoLearn App launch tips</label>
-                <label><input type="checkbox" name="want_academy" value="1" /> PixtoLearn Academy waiting list</label>
-                <label><input type="checkbox" name="privacy" value="1" required /> I agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a></label>
+              <div class="lead-step" data-lead-step="2" hidden>
+                <h2 id="lead-title-2">Anything else?</h2>
+                <p>Optional — tap what you’d like to hear about. Then grab your free trial.</p>
+                <div class="lead-chips" role="group" aria-label="Optional updates">
+                  <label class="lead-chip"><input type="checkbox" name="want_wow" value="1" /><span>WOW sample</span></label>
+                  <label class="lead-chip"><input type="checkbox" name="want_app" value="1" /><span>App tips</span></label>
+                  <label class="lead-chip"><input type="checkbox" name="want_academy" value="1" /><span>Academy list</span></label>
+                </div>
+                <input type="hidden" name="gift_swim" value="1" />
+                <button class="lead-submit" type="submit">Get my free trial</button>
+                <button class="lead-skip" type="submit">Skip — just the trial</button>
               </div>
-              <button class="lead-submit" type="submit">Submit</button>
               <p class="lead-note" data-lead-note hidden></p>
             </form>
           </div>
           <div class="lead-visual" aria-hidden="true">
-            <img src="assets/packs/card-sample-a.jpeg" alt="" />
             <img src="assets/flashcards/float-on-back.png" alt="" />
           </div>
         </div>
@@ -487,7 +613,21 @@
       sessionStorage.setItem("pixto_lead_shown", "1");
       const modal = root.querySelector(".lead-modal");
       if (modal) modal.scrollTop = 0;
-      const first = root.querySelector('input[name="name"]');
+      const s1 = root.querySelector('[data-lead-step="1"]');
+      const s2 = root.querySelector('[data-lead-step="2"]');
+      if (s1 && s2) {
+        s1.hidden = false;
+        s1.classList.add("is-active");
+        s2.hidden = true;
+        s2.classList.remove("is-active");
+        root.setAttribute("aria-labelledby", "lead-title");
+      }
+      const note = root.querySelector("[data-lead-note]");
+      if (note) {
+        note.hidden = true;
+        note.textContent = "";
+      }
+      const first = root.querySelector('input[name="email"]');
       if (first) setTimeout(() => first.focus(), 180);
     };
 
@@ -520,12 +660,34 @@
     });
 
     const leadForm = root.querySelector("[data-lead-form]");
-    leadForm.addEventListener("submit", (e) => {
-      e.preventDefault();
+    const step1 = root.querySelector('[data-lead-step="1"]');
+    const step2 = root.querySelector('[data-lead-step="2"]');
+    const nextBtn = root.querySelector("[data-lead-next]");
+
+    const goStep2 = () => {
+      const email = leadForm.querySelector('input[name="email"]');
+      const privacy = leadForm.querySelector('input[name="privacy"]');
+      if (!email.checkValidity() || !privacy.checkValidity()) {
+        leadForm.reportValidity();
+        return;
+      }
+      step1.hidden = true;
+      step1.classList.remove("is-active");
+      step2.hidden = false;
+      step2.classList.add("is-active");
+      root.setAttribute("aria-labelledby", "lead-title-2");
+    };
+
+    nextBtn.addEventListener("click", goStep2);
+
+    const finishLead = (clearExtras) => {
       const data = new FormData(leadForm);
+      if (clearExtras) {
+        data.delete("want_wow");
+        data.delete("want_app");
+        data.delete("want_academy");
+      }
       const payload = {
-        name: String(data.get("name") || "").trim(),
-        surname: String(data.get("surname") || "").trim(),
         email: String(data.get("email") || "").trim(),
         gift_swim: true,
         want_wow: data.get("want_wow") === "1",
@@ -550,6 +712,12 @@
         hideMini();
         window.location.href = "printable-trial.html";
       }, 700);
+    };
+
+    leadForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const skip = e.submitter && e.submitter.classList.contains("lead-skip");
+      finishLead(Boolean(skip));
     });
 
     if (minimized) {
@@ -962,5 +1130,429 @@
         });
       });
     });
+  }
+
+  function initWowMoment() {
+    const root = document.querySelector("[data-wow-moment]");
+    if (!root) return;
+
+    const board = root.querySelector(".wow-moment-board");
+    const stage = root.querySelector("[data-wow-stage]");
+    const insight = root.querySelector("[data-wow-insight]");
+    const note = root.querySelector("[data-wow-note]");
+    const exampleTabs = Array.from(root.querySelectorAll("[data-wow-example]"));
+    const lensTabs = Array.from(root.querySelectorAll("[data-wow-lens]"));
+    const slots = Array.from(root.querySelectorAll("[data-wow-slot] img"));
+    if (!board || !stage || !slots.length) return;
+
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const lensCopy = {
+      words: {
+        insight: "Words name the moment.",
+        note: "Everyday vocabulary with clear image associations.",
+      },
+      objects: {
+        insight: "Objects unlock Ways.",
+        note: "Tangible items that unlock interaction with the world.",
+      },
+      ways: {
+        insight: "Ways show how it gets done.",
+        note: "Methods and sequences for how things get done.",
+      },
+    };
+
+    const moments = {
+      dressed: {
+        words: [
+          { src: "assets/packs/keyring/1/7_look.png", alt: "look" },
+          { src: "assets/packs/keyring/1/6_sitdown.png", alt: "sit down" },
+          { src: "assets/packs/keyring/1/24_help.png", alt: "help" },
+        ],
+        objects: [
+          { src: "assets/packs/keyring/2/1_shoes.png", alt: "shoes" },
+          { src: "assets/packs/keyring/2/2_socks.png", alt: "socks" },
+          { src: "assets/packs/keyring/2/8_jumper.png", alt: "jumper" },
+        ],
+        ways: [
+          { src: "assets/packs/keyring/2/1_shoeson.png", alt: "shoes on" },
+          { src: "assets/packs/keyring/2/3_sockson.png", alt: "socks on" },
+          { src: "assets/packs/keyring/2/15_jumperon.png", alt: "jumper on" },
+        ],
+      },
+      climb: {
+        words: [
+          { src: "assets/packs/keyring/1/7_look.png", alt: "look" },
+          { src: "assets/packs/keyring/1/17_wait.png", alt: "wait" },
+          { src: "assets/packs/keyring/1/25_listen.png", alt: "listen" },
+        ],
+        objects: [
+          { src: "assets/packs/keyring/5/2_harness.png", alt: "harness" },
+          { src: "assets/packs/keyring/5/5_helmet.png", alt: "helmet" },
+          { src: "assets/packs/keyring/5/4_climbingshoes.png", alt: "climbing shoes" },
+        ],
+        ways: [
+          { src: "assets/packs/keyring/5/2_putharnesson.png", alt: "put harness on" },
+          { src: "assets/packs/keyring/5/3_puthelmeton.png", alt: "put helmet on" },
+          { src: "assets/packs/keyring/5/4_putclimbingshoeson.png", alt: "put climbing shoes on" },
+        ],
+      },
+      teeth: {
+        words: [
+          { src: "assets/packs/keyring/1/7_look.png", alt: "look" },
+          { src: "assets/packs/keyring/1/4_get.png", alt: "get" },
+          { src: "assets/packs/keyring/1/14_finish.png", alt: "finish" },
+        ],
+        objects: [
+          { src: "assets/packs/keyring/3/1_toothbrush.png", alt: "toothbrush" },
+          { src: "assets/packs/keyring/3/2_toothpaste.png", alt: "toothpaste" },
+          { src: "assets/packs/keyring/3/6_cup.png", alt: "cup" },
+        ],
+        ways: [
+          { src: "assets/packs/keyring/3/1_gettoothbrush.png", alt: "get toothbrush" },
+          { src: "assets/packs/keyring/3/2_puttoothpaste.png", alt: "put toothpaste" },
+          { src: "assets/packs/keyring/3/3_brushtopteeth.png", alt: "brush top teeth" },
+        ],
+      },
+    };
+
+    let example = "dressed";
+    let lens = "objects";
+    let timer = null;
+
+    function paint(animate) {
+      const cards = moments[example][lens];
+      const copy = lensCopy[lens];
+      board.setAttribute("data-lens", lens);
+      if (insight) insight.textContent = copy.insight;
+      if (note) note.textContent = copy.note;
+
+      const apply = () => {
+        cards.forEach((card, i) => {
+          const img = slots[i];
+          if (!img) return;
+          img.src = card.src;
+          img.alt = card.alt;
+        });
+        stage.classList.remove("is-swap");
+      };
+
+      if (animate && !calm.matches) {
+        stage.classList.add("is-swap");
+        window.setTimeout(apply, 180);
+      } else {
+        apply();
+      }
+    }
+
+    function setExample(next, animate) {
+      example = next;
+      exampleTabs.forEach((tab) => {
+        const on = tab.getAttribute("data-wow-example") === example;
+        tab.classList.toggle("is-on", on);
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      paint(animate);
+    }
+
+    function setLens(next, animate) {
+      lens = next;
+      lensTabs.forEach((tab) => {
+        const on = tab.getAttribute("data-wow-lens") === lens;
+        tab.classList.toggle("is-on", on);
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      paint(animate);
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function play() {
+      if (calm.matches) return;
+      stop();
+      const order = ["objects", "ways", "words"];
+      timer = window.setInterval(() => {
+        const i = order.indexOf(lens);
+        setLens(order[(i + 1) % order.length], true);
+      }, 4200);
+    }
+
+    exampleTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        setExample(tab.getAttribute("data-wow-example"), true);
+        stop();
+      });
+    });
+
+    lensTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        setLens(tab.getAttribute("data-wow-lens"), true);
+        stop();
+      });
+    });
+
+    board.addEventListener("mouseenter", stop);
+    board.addEventListener("mouseleave", play);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) play();
+          else stop();
+        });
+      },
+      { threshold: 0.35 }
+    );
+    io.observe(board);
+
+    setExample(example, false);
+    setLens(lens, false);
+  }
+
+  function initWowSpotlight() {
+    const root = document.querySelector("[data-wow-spotlight]");
+    if (!root) return;
+
+    const cards = Array.from(root.querySelectorAll("[data-spotlight-card]"));
+    const labels = Array.from(root.querySelectorAll("[data-spotlight-label]"));
+    const live = root.querySelector("[data-spotlight-live]");
+    const note = root.querySelector("[data-spotlight-copy]");
+    if (!cards.length || !labels.length) return;
+
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = Math.max(
+      0,
+      labels.findIndex((label) => label.classList.contains("is-active"))
+    );
+    let timer = null;
+
+    function show(next) {
+      index = ((next % cards.length) + cards.length) % cards.length;
+      cards.forEach((card, i) => {
+        card.classList.toggle("is-active", i === index);
+      });
+      labels.forEach((label, i) => {
+        const on = i === index;
+        label.classList.toggle("is-active", on);
+        label.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      const label = labels[index];
+      const title = label.textContent.trim();
+      if (live) live.textContent = title;
+      if (note) note.textContent = label.getAttribute("data-note") || "";
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function play() {
+      if (calm.matches) return;
+      stop();
+      timer = window.setInterval(() => show(index + 1), 1800);
+    }
+
+    labels.forEach((label, i) => {
+      label.addEventListener("click", () => {
+        show(i);
+        stop();
+        play();
+      });
+    });
+
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", play);
+    root.addEventListener("focusin", stop);
+    root.addEventListener("focusout", (e) => {
+      if (!root.contains(e.relatedTarget)) play();
+    });
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) play();
+            else stop();
+          });
+        },
+        { threshold: 0.35 }
+      );
+      io.observe(root);
+    } else {
+      play();
+    }
+
+    show(index);
+  }
+
+  function initWowPortable() {
+    const rail = document.querySelector("[data-portable-rail]");
+    if (!rail) return;
+
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let down = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let timer = null;
+    let paused = false;
+
+    rail.addEventListener("pointerdown", (e) => {
+      down = true;
+      paused = true;
+      stop();
+      startX = e.pageX;
+      scrollLeft = rail.scrollLeft;
+      rail.setPointerCapture(e.pointerId);
+    });
+    rail.addEventListener("pointerup", () => {
+      down = false;
+      paused = false;
+      play();
+    });
+    rail.addEventListener("pointercancel", () => {
+      down = false;
+      paused = false;
+      play();
+    });
+    rail.addEventListener("pointermove", (e) => {
+      if (!down) return;
+      rail.scrollLeft = scrollLeft - (e.pageX - startX);
+    });
+    rail.addEventListener("wheel", () => {
+      paused = true;
+      stop();
+      window.clearTimeout(rail._wowResume);
+      rail._wowResume = window.setTimeout(() => {
+        paused = false;
+        play();
+      }, 2400);
+    }, { passive: true });
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function step() {
+      if (paused || calm.matches) return;
+      const shots = rail.querySelectorAll(".wow-portable-shot");
+      if (shots.length < 2) return;
+      const max = rail.scrollWidth - rail.clientWidth;
+      if (max <= 8) return;
+      const gap = 16;
+      const width = shots[0].getBoundingClientRect().width + gap;
+      const next = rail.scrollLeft + width;
+      if (next >= max - 4) {
+        rail.scrollTo({ left: 0, behavior: calm.matches ? "auto" : "smooth" });
+      } else {
+        rail.scrollBy({ left: width, behavior: calm.matches ? "auto" : "smooth" });
+      }
+    }
+
+    function play() {
+      if (calm.matches || paused) return;
+      stop();
+      timer = window.setInterval(step, 3200);
+    }
+
+    rail.addEventListener("mouseenter", () => {
+      paused = true;
+      stop();
+    });
+    rail.addEventListener("mouseleave", () => {
+      paused = false;
+      play();
+    });
+    rail.addEventListener("focusin", () => {
+      paused = true;
+      stop();
+    });
+    rail.addEventListener("focusout", (e) => {
+      if (!rail.contains(e.relatedTarget)) {
+        paused = false;
+        play();
+      }
+    });
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) play();
+            else stop();
+          });
+        },
+        { threshold: 0.25 }
+      );
+      io.observe(rail);
+    } else {
+      play();
+    }
+  }
+
+  function initModeStage() {
+    const stage = document.querySelector("[data-mode-stage]");
+    if (!stage) return;
+
+    const tabs = Array.from(stage.querySelectorAll(".plmode-tab"));
+    const panels = Array.from(stage.querySelectorAll(".plmode-panel"));
+    if (!tabs.length || !panels.length) return;
+
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = Math.max(
+      0,
+      tabs.findIndex((tab) => tab.classList.contains("is-on"))
+    );
+    let timer = null;
+
+    function show(next) {
+      index = ((next % panels.length) + panels.length) % panels.length;
+      const mode = tabs[index].getAttribute("data-mode");
+      tabs.forEach((tab, i) => {
+        const on = i === index;
+        tab.classList.toggle("is-on", on);
+        tab.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach((panel) => {
+        panel.classList.toggle("is-on", panel.getAttribute("data-panel") === mode);
+      });
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function play() {
+      if (calm.matches) return;
+      stop();
+      timer = window.setInterval(() => show(index + 1), 3600);
+    }
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => {
+        show(i);
+        stop();
+      });
+    });
+
+    stage.addEventListener("mouseenter", stop);
+    stage.addEventListener("mouseleave", play);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) play();
+          else stop();
+        });
+      },
+      { threshold: 0.35 }
+    );
+    io.observe(stage);
+    show(index);
   }
 })();

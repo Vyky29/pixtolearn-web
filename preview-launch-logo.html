@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Launch logo options 1 · 2 · 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;700&family=Fraunces:ital,wght@1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink: #d03860;
+      --amber: #e8a840;
+      --slate: #88b0c0;
+      --ink: #14242b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Figtree, system-ui, sans-serif;
+      background: #0c1c24;
+      color: #fff;
+    }
+    header {
+      padding: 1.25rem 1.5rem 0.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.35rem 0 0;
+      opacity: 0.65;
+      font-size: 0.9rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 1rem 1.25rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .opt {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 70vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .opt-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8,20,26,0.35), rgba(8,20,26,0.55)),
+        url("assets/photos/mode/product-three-alt.jpg") center / cover no-repeat;
+      filter: blur(2.5px);
+      transform: scale(1.05);
+    }
+    .opt-shade {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 55% at 50% 45%, rgba(8,20,26,0.15), rgba(8,20,26,0.55));
+    }
+    .opt-label {
+      position: relative;
+      z-index: 2;
+      margin: 0.9rem;
+      padding: 0.45rem 0.7rem;
+      width: fit-content;
+      border-radius: 999px;
+      background: rgba(8,20,26,0.55);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .opt-stage {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+    .opt-foot {
+      position: relative;
+      z-index: 2;
+      padding: 0 1rem 1.1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    /* 1 Soft float */
+    .float-logo {
+      width: min(72%, 280px);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+      animation: soft-float 4.8s ease-in-out infinite;
+    }
+    @keyframes soft-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* 2 Frosted glass */
+    .frost {
+      width: min(78%, 300px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      padding: 12%;
+      background: rgba(20, 36, 43, 0.42);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.28);
+      animation: frost-pulse 3.8s ease-in-out infinite;
+    }
+    .frost img {
+      width: 100%;
+      height: auto;
+      /* white logo plate needed for black text - soften */
+      border-radius: 12px;
+      opacity: 0.96;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+    }
+    @keyframes frost-pulse {
+      0%, 100% { box-shadow: 0 18px 42px rgba(0,0,0,0.28), 0 0 0 1px rgba(255,255,255,0.18); }
+      50% { box-shadow: 0 20px 48px rgba(0,0,0,0.32), 0 0 0 1px rgba(255,255,255,0.32); }
+    }
+
+    /* 5 Glow ring */
+    .glow-wrap {
+      position: relative;
+      width: min(78%, 300px);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+    }
+    .glow-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, var(--pink), var(--amber), var(--slate), var(--pink));
+      animation: spin-ring 10s linear infinite;
+      filter: blur(0.5px);
+      opacity: 0.85;
+    }
+    .glow-ring::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      background: rgba(12, 28, 36, 0.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .glow-wrap img {
+      position: relative;
+      z-index: 1;
+      width: 72%;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+    }
+    @keyframes spin-ring {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .float-logo, .frost, .glow-ring { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Logo options — pick 1, 2, or 5</h1>
+    <p>Same blurred product background. Reply with a number.</p>
+  </header>
+
+  <div class="grid">
+    <article class="opt">
+      <div class="opt-bg" aria-hidden="true"></div>
+      <div class="opt-shade" aria-hidden="true"></div>
+      <div class="opt-label">1 — Soft float</div>
+      <div class="opt-stage">
+        <img class="float-logo" src="assets/brand/logo-slogan.png" alt="PixtoLearn logo" />
+      </div>
+      <p class="opt-foot">No circle plate. Soft shadow + gentle float.</p>
+    </article>
+
+    <article class="opt">
+      <div class="opt-bg" aria-hidden="true"></div>
+      <div class="opt-shade" aria-hidden="true"></div>
+      <div class="opt-label">2 — Frosted glass</div>
+      <div class="opt-stage">
+        <div class="frost">
+          <img src="assets/brand/logo-slogan.png" alt="PixtoLearn logo" />
+        </div>
+      </div>
+      <p class="opt-foot">Translucent disc. Soft edge pulse. Product peeks through.</p>
+    </article>
+
+    <article class="opt">
+      <div class="opt-bg" aria-hidden="true"></div>
+      <div class="opt-shade" aria-hidden="true"></div>
+      <div class="opt-label">5 — Glow ring</div>
+      <div class="opt-stage">
+        <div class="glow-wrap">
+          <span class="glow-ring" aria-hidden="true"></span>
+          <img src="assets/brand/logo-slogan.png" alt="PixtoLearn logo" />
+        </div>
+      </div>
+      <p class="opt-foot">Brand-colour ring rotates slowly. Logo sits calm in the middle.</p>
+    </article>
+  </div>
+</body>
+</html>
