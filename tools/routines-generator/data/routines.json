@@ -1,0 +1,2303 @@
+{
+  "version": "1.4",
+  "art_cache_bust": "2026-08-09-toilet-sitfix-2",
+  "product": "wow-routines",
+  "format": {
+    "print_px": [
+      1214,
+      1656
+    ],
+    "art_slot_px": [
+      531,
+      648
+    ],
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by need.",
+    "style": "WOW keyring. Objects = single object no person. Actions = clear step. Adults on adult routines."
+  },
+  "families": [
+    {
+      "id": "core",
+      "label": {
+        "en": "Core vocabulary",
+        "es": "Vocabulario esencial"
+      },
+      "colour": "#CBCBC9",
+      "colour_name": "Neutral grey"
+    },
+    {
+      "id": "self-care",
+      "label": {
+        "en": "Self-care",
+        "es": "Autocuidado"
+      },
+      "colour": "#5B8C7A",
+      "colour_name": "Seafoam green"
+    },
+    {
+      "id": "intimate-care",
+      "label": {
+        "en": "Intimate care",
+        "es": "Cuidado intimo"
+      },
+      "colour": "#A894B0",
+      "access": "restricted",
+      "colour_name": "Soft lavender"
+    },
+    {
+      "id": "emotions",
+      "label": {
+        "en": "Emotions",
+        "es": "Emociones"
+      },
+      "colour": "#E8A840",
+      "colour_name": "Warm amber"
+    },
+    {
+      "id": "safety-mobility",
+      "label": {
+        "en": "Safety and mobility",
+        "es": "Seguridad y movilidad"
+      },
+      "colour": "#3D7EA6",
+      "colour_name": "Transport blue"
+    },
+    {
+      "id": "sports-prep",
+      "label": {
+        "en": "Sports and fitness prep",
+        "es": "Prep deporte y fitness"
+      },
+      "colour": "#C77830",
+      "colour_name": "Active amber"
+    },
+    {
+      "id": "travel",
+      "label": {
+        "en": "Travel and adventure",
+        "es": "Viajes y aventura"
+      },
+      "colour": "#2F6B4F",
+      "colour_name": "Adventure green"
+    },
+    {
+      "id": "public-spaces",
+      "label": {
+        "en": "Public spaces",
+        "es": "Espacios publicos"
+      },
+      "colour": "#D03860",
+      "colour_name": "Civic rose"
+    },
+    {
+      "id": "health-appointments",
+      "label": {
+        "en": "Health appointments",
+        "es": "Citas de salud"
+      },
+      "colour": "#7A8FA0",
+      "colour_name": "Clinic slate",
+      "architecture": "p1"
+    },
+    {
+      "id": "sensory-world",
+      "label": {
+        "en": "Sensory world",
+        "es": "Mundo sensorial"
+      },
+      "colour": "#5B9A8B",
+      "colour_name": "Sensory teal",
+      "architecture": "p1"
+    },
+    {
+      "id": "eating-out",
+      "label": {
+        "en": "Eating out",
+        "es": "Comer fuera"
+      },
+      "colour": "#B86B4A",
+      "colour_name": "Meal clay",
+      "architecture": "p1"
+    },
+    {
+      "id": "emergency-help",
+      "label": {
+        "en": "Emergency and help",
+        "es": "Emergencia y ayuda"
+      },
+      "colour": "#4A6670",
+      "colour_name": "Alert slate",
+      "architecture": "p1"
+    }
+  ],
+  "routines": [
+    {
+      "id": "core",
+      "family": "core",
+      "status": "ready",
+      "data": "core.json",
+      "label": {
+        "en": "Core vocabulary",
+        "es": "Vocabulario esencial"
+      },
+      "audience": "all",
+      "existing_dir": "core",
+      "character": {
+        "gender": "mixed",
+        "skin": "mixed"
+      },
+      "counts": {
+        "items": 25,
+        "actions": 0,
+        "cards": 26
+      }
+    },
+    {
+      "id": "clothes-boy",
+      "family": "self-care",
+      "data": "clothes-boy.json",
+      "status": "ready",
+      "audience": "child",
+      "label": {
+        "en": "Clothes (boy)",
+        "es": "Ropa (nino)"
+      },
+      "counts": {
+        "items": 15,
+        "actions": 30,
+        "dress_actions": 15,
+        "undress_actions": 15,
+        "cards": 46
+      }
+    },
+    {
+      "id": "clothes-girl",
+      "family": "self-care",
+      "data": "clothes-girl.json",
+      "status": "ready",
+      "audience": "child",
+      "label": {
+        "en": "Clothes (girl)",
+        "es": "Ropa (nina)"
+      },
+      "counts": {
+        "items": 17,
+        "actions": 34,
+        "dress_actions": 17,
+        "undress_actions": 17,
+        "cards": 52
+      }
+    },
+    {
+      "id": "shower",
+      "family": "self-care",
+      "status": "ready",
+      "data": "shower.json",
+      "label": {
+        "en": "Shower",
+        "es": "Ducha"
+      },
+      "audience": "child",
+      "existing_dir": "shower",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #4A90A8 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#5B8C7A",
+        "accent": "#4A90A8",
+        "accent_name": "water blue",
+        "highlight": "water / towel / soap",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 8,
+        "actions": 11,
+        "cards": 20
+      }
+    },
+    {
+      "id": "brushing-teeth",
+      "family": "self-care",
+      "status": "ready",
+      "data": "brushing-teeth.json",
+      "label": {
+        "en": "Brushing teeth",
+        "es": "Cepillarse los dientes"
+      },
+      "audience": "child",
+      "existing_dir": "brushing-teeth",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail or soft curls",
+        "clothes": "coral top, navy skirt or trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #5EC4A8 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#5B8C7A",
+        "accent": "#5EC4A8",
+        "accent_name": "mint",
+        "highlight": "toothbrush / toothpaste",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 10,
+        "actions": 11,
+        "cards": 22
+      }
+    },
+    {
+      "id": "shaving",
+      "family": "self-care",
+      "status": "ready",
+      "data": "shaving.json",
+      "label": {
+        "en": "Shaving",
+        "es": "Afeitarse"
+      },
+      "audience": "teen-adult-elder",
+      "character": {
+        "avatar_id": "YA2",
+        "band": "young-adult",
+        "gender": "man",
+        "skin": "dark",
+        "hair": "short black",
+        "clothes": "dark grey t-shirt, black trousers",
+        "age": "young-adult",
+        "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #6B7C8A highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA2",
+        "family_base": "#5B8C7A",
+        "accent": "#6B7C8A",
+        "accent_name": "steel grey",
+        "highlight": "razor / foam / face zone",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 9,
+        "cards": 16
+      },
+      "ageBands": [
+        "teen",
+        "adult",
+        "elder"
+      ],
+      "presentations": [
+        "girl",
+        "boy",
+        "neutral"
+      ]
+    },
+    {
+      "id": "haircare",
+      "family": "self-care",
+      "status": "ready",
+      "data": "haircare.json",
+      "label": {
+        "en": "Haircare",
+        "es": "Cuidado del cabello"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T2",
+        "band": "teen",
+        "gender": "woman",
+        "skin": "light",
+        "hair": "shoulder-length brown",
+        "clothes": "lilac long-sleeve top, navy trousers",
+        "age": "teen",
+        "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #8B7AB8 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T2",
+        "family_base": "#5B8C7A",
+        "accent": "#8B7AB8",
+        "accent_name": "soft lilac",
+        "highlight": "brush / hair / product",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 9,
+        "actions": 10,
+        "cards": 20
+      }
+    },
+    {
+      "id": "using-the-toilet-boy",
+      "family": "self-care",
+      "status": "ready",
+      "data": "using-the-toilet-boy.json",
+      "label": {
+        "en": "Using the toilet (boy)",
+        "es": "Usar el aseo (nino)"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #7A9EAE. Modest: top on; lower clothes to ankles on sit/wee/poo/wipe; no genitals."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#5B8C7A",
+        "accent": "#7A9EAE",
+        "accent_name": "slate aqua",
+        "highlight": "clothes down/up + toilet + paper + flush",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 15,
+        "cards": 21
+      },
+      "art": "installed"
+    },
+    {
+      "id": "using-the-toilet-girl",
+      "family": "self-care",
+      "status": "ready",
+      "data": "using-the-toilet-girl.json",
+      "label": {
+        "en": "Using the toilet (girl)",
+        "es": "Usar el aseo (nina)"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium",
+        "hair": "brown ponytail",
+        "clothes": "coral top, navy trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #7A9EAE. Modest: top on; lower clothes to ankles on sit/wee/poo/wipe; no genitals."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#5B8C7A",
+        "accent": "#7A9EAE",
+        "accent_name": "slate aqua",
+        "highlight": "clothes down/up + toilet + paper + flush",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 15,
+        "cards": 21
+      },
+      "art": "installed"
+    },
+    {
+      "id": "nail-care",
+      "family": "self-care",
+      "status": "ready",
+      "data": "nail-care.json",
+      "label": {
+        "en": "Nail care",
+        "es": "Cuidado de las unas"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T2",
+        "band": "teen",
+        "gender": "woman",
+        "skin": "light",
+        "hair": "shoulder-length brown",
+        "clothes": "teal jacket, navy trousers",
+        "age": "teen",
+        "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #D4A0B0 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T2",
+        "family_base": "#5B8C7A",
+        "accent": "#D4A0B0",
+        "accent_name": "dusty rose",
+        "highlight": "nail / clipper / file",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 5,
+        "cards": 11
+      }
+    },
+    {
+      "id": "foot-care",
+      "family": "self-care",
+      "status": "ready",
+      "data": "foot-care.json",
+      "label": {
+        "en": "Foot care",
+        "es": "Cuidado de los pies"
+      },
+      "audience": "adult",
+      "character": {
+        "avatar_id": "YA2",
+        "band": "young-adult",
+        "gender": "man",
+        "skin": "dark",
+        "hair": "short black",
+        "clothes": "dark grey t-shirt, black trousers",
+        "age": "young-adult",
+        "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #8A9B7A highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA2",
+        "family_base": "#5B8C7A",
+        "accent": "#8A9B7A",
+        "accent_name": "sage",
+        "highlight": "foot / cream / sock",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 7,
+        "actions": 7,
+        "cards": 15
+      }
+    },
+    {
+      "id": "intimate-care-male",
+      "family": "intimate-care",
+      "status": "ready",
+      "data": "intimate-care-male.json",
+      "label": {
+        "en": "Masturbation (male)",
+        "es": "Masturbacion (hombre)"
+      },
+      "audience": "teen-adult-elder",
+      "access": "restricted",
+      "character": {
+        "avatar_id": "YA2",
+        "band": "young-adult",
+        "gender": "man",
+        "skin": "dark",
+        "hair": "short black",
+        "clothes": "dark grey t-shirt, black trousers",
+        "age": "young-adult",
+        "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #8A9BB0 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA2",
+        "family_base": "#A894B0",
+        "accent": "#8A9BB0",
+        "accent_name": "calm blue-grey",
+        "highlight": "care step / product",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 11,
+        "cards": 16
+      },
+      "ageBands": [
+        "teen",
+        "adult",
+        "elder"
+      ],
+      "presentations": [
+        "boy",
+        "neutral"
+      ]
+    },
+    {
+      "id": "intimate-care-female",
+      "family": "intimate-care",
+      "status": "ready",
+      "data": "intimate-care-female.json",
+      "label": {
+        "en": "Masturbation (female)",
+        "es": "Masturbacion (mujer)"
+      },
+      "audience": "teen-adult-elder",
+      "access": "restricted",
+      "character": {
+        "avatar_id": "YA1",
+        "band": "young-adult",
+        "gender": "woman",
+        "skin": "medium",
+        "hair": "dark curly shoulder-length",
+        "clothes": "lavender lounge set",
+        "age": "young-adult",
+        "lock": "PRIMARY YA1 only on cover+all actions. Same outfit colours entire pack. Accent #D4A890 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA1",
+        "family_base": "#A894B0",
+        "accent": "#D4A890",
+        "accent_name": "soft peach",
+        "highlight": "care step / product",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 11,
+        "cards": 16
+      },
+      "ageBands": [
+        "teen",
+        "adult",
+        "elder"
+      ],
+      "presentations": [
+        "girl",
+        "neutral"
+      ]
+    },
+    {
+      "id": "menstrual-hygiene",
+      "family": "intimate-care",
+      "status": "ready",
+      "data": "menstrual-hygiene.json",
+      "label": {
+        "en": "Menstrual hygiene",
+        "es": "Higiene menstrual"
+      },
+      "audience": "teen-adult-elder",
+      "access": "restricted",
+      "character": {
+        "avatar_id": "YA1",
+        "band": "young-adult",
+        "gender": "woman",
+        "skin": "medium",
+        "hair": "dark curly shoulder-length",
+        "clothes": "lavender lounge set",
+        "age": "young-adult",
+        "lock": "PRIMARY YA1 only on cover+all actions. Same outfit colours entire pack. Accent #B8A0C8 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA1",
+        "family_base": "#A894B0",
+        "accent": "#B8A0C8",
+        "accent_name": "lavender",
+        "highlight": "pad/tampon pack + YA1 lavender outfit locked",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 9,
+        "actions": 9,
+        "cards": 19
+      },
+      "ageBands": [
+        "teen",
+        "adult",
+        "elder"
+      ],
+      "presentations": [
+        "girl"
+      ]
+    },
+    {
+      "id": "emotions-hub",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotions-hub.json",
+      "label": {
+        "en": "Emotions pack",
+        "es": "Pack emociones"
+      },
+      "audience": "all",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "family_base": "#E8A840",
+        "accent": "#E8A840",
+        "accent_name": "warm amber",
+        "highlight": "E1 gender-neutral faces",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 8,
+        "actions": 16,
+        "cards": 25
+      }
+    },
+    {
+      "id": "emotion-happy",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-happy.json",
+      "label": {
+        "en": "Happy",
+        "es": "Feliz"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#5FAE7A",
+        "colour_group": "green",
+        "sort_order": 0
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "emotion-calm",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-calm.json",
+      "label": {
+        "en": "Calm",
+        "es": "Tranquilo"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#5FAE7A",
+        "colour_group": "green",
+        "sort_order": 1
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "emotion-excited",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-excited.json",
+      "label": {
+        "en": "Excited",
+        "es": "Emocionado"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#E8C040",
+        "colour_group": "yellow",
+        "sort_order": 2
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "emotion-worried",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-worried.json",
+      "label": {
+        "en": "Worried",
+        "es": "Preocupado"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#E8C040",
+        "colour_group": "yellow",
+        "sort_order": 3
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "emotion-sad",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-sad.json",
+      "label": {
+        "en": "Sad",
+        "es": "Triste"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#5B8FC4",
+        "colour_group": "blue",
+        "sort_order": 4
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "emotion-tired",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-tired.json",
+      "label": {
+        "en": "Tired",
+        "es": "Cansado"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#5B8FC4",
+        "colour_group": "blue",
+        "sort_order": 5
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "emotion-angry",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-angry.json",
+      "label": {
+        "en": "Angry",
+        "es": "Enfadado"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#D05555",
+        "colour_group": "red",
+        "sort_order": 6
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "emotion-frustrated",
+      "family": "emotions",
+      "status": "ready",
+      "data": "emotion-frustrated.json",
+      "label": {
+        "en": "Frustrated",
+        "es": "Frustrado"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "E1",
+        "band": "youth",
+        "gender": "neutral",
+        "skin": "medium",
+        "hair": "short cropped brown, ears visible, no long hair",
+        "clothes": "soft amber crew sweater, soft grey trousers",
+        "age": "youth",
+        "lock": "PRIMARY E1 gender-neutral ONLY. Short cropped brown hair, medium skin, soft rounded face, NO makeup, NO long lashes, NO feminine/masculine coding. Amber crew sweater + grey trousers locked. Emotion faces = same head, expression only. Techniques = same E1 body. Accent highlights feeling/action."
+      },
+      "design": {
+        "avatar_id": "E1",
+        "accent": "#D05555",
+        "colour_group": "red",
+        "sort_order": 7
+      },
+      "counts": {
+        "items": 1,
+        "actions": 2,
+        "cards": 4
+      }
+    },
+    {
+      "id": "taking-a-plane",
+      "family": "safety-mobility",
+      "status": "ready",
+      "data": "taking-a-plane.json",
+      "label": {
+        "en": "Taking a plane",
+        "es": "Coger un avion"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5BA3D0 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#3D7EA6",
+        "accent": "#5BA3D0",
+        "accent_name": "sky blue",
+        "highlight": "seatbelt / window / ticket / action focus",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 16,
+        "cards": 23
+      }
+    },
+    {
+      "id": "taking-the-bus",
+      "family": "safety-mobility",
+      "status": "ready",
+      "data": "taking-the-bus.json",
+      "label": {
+        "en": "Taking the bus",
+        "es": "Coger el autobus"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T2",
+        "band": "teen",
+        "gender": "woman",
+        "skin": "light",
+        "hair": "shoulder-length brown",
+        "clothes": "teal jacket, navy trousers",
+        "age": "teen",
+        "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #E07830 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T2",
+        "family_base": "#3D7EA6",
+        "accent": "#E07830",
+        "accent_name": "bus orange",
+        "highlight": "bus stop / ticket / door",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 3,
+        "actions": 11,
+        "cards": 15
+      }
+    },
+    {
+      "id": "taking-the-train",
+      "family": "safety-mobility",
+      "status": "ready",
+      "data": "taking-the-train.json",
+      "label": {
+        "en": "Taking the train",
+        "es": "Coger el tren"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #A84858 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#3D7EA6",
+        "accent": "#A84858",
+        "accent_name": "rail wine",
+        "highlight": "ticket / door / seat",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 13,
+        "cards": 19
+      }
+    },
+    {
+      "id": "crossing-the-road",
+      "family": "safety-mobility",
+      "status": "ready",
+      "data": "crossing-the-road.json",
+      "label": {
+        "en": "Crossing the road",
+        "es": "Cruzar la calle"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #E8A020 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#3D7EA6",
+        "accent": "#E8A020",
+        "accent_name": "amber signal",
+        "highlight": "crossing / look / green man",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 3,
+        "actions": 9,
+        "cards": 13
+      }
+    },
+    {
+      "id": "taking-boat-ferry",
+      "family": "safety-mobility",
+      "status": "ready",
+      "data": "taking-boat-ferry.json",
+      "label": {
+        "en": "Boat / ferry",
+        "es": "Barco / ferry"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T2",
+        "band": "teen",
+        "gender": "woman",
+        "skin": "light",
+        "hair": "shoulder-length brown",
+        "clothes": "teal jacket, orange scarf, navy trousers",
+        "age": "teen",
+        "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #2A8A9A highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T2",
+        "family_base": "#3D7EA6",
+        "accent": "#2A8A9A",
+        "accent_name": "sea teal",
+        "highlight": "sea / life jacket / rail / ticket",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 13,
+        "cards": 20
+      }
+    },
+    {
+      "id": "taking-a-taxi",
+      "family": "safety-mobility",
+      "status": "ready",
+      "data": "taking-a-taxi.json",
+      "label": {
+        "en": "Taking a taxi",
+        "es": "Coger un taxi"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #E8C040 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#3D7EA6",
+        "accent": "#E8C040",
+        "accent_name": "taxi yellow",
+        "highlight": "taxi / door / seatbelt",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 3,
+        "actions": 11,
+        "cards": 15
+      }
+    },
+    {
+      "id": "using-the-tube",
+      "family": "safety-mobility",
+      "status": "ready",
+      "data": "using-the-tube.json",
+      "label": {
+        "en": "Using the tube",
+        "es": "Usar el metro"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T2",
+        "band": "teen",
+        "gender": "woman",
+        "skin": "light",
+        "hair": "shoulder-length brown",
+        "clothes": "teal jacket, navy trousers",
+        "age": "teen",
+        "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #C04050 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T2",
+        "family_base": "#3D7EA6",
+        "accent": "#C04050",
+        "accent_name": "tube red",
+        "highlight": "Oyster/card / handrail / doors",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 3,
+        "actions": 11,
+        "cards": 15
+      }
+    },
+    {
+      "id": "climbing-wow",
+      "family": "sports-prep",
+      "status": "ready",
+      "data": "climbing-wow.json",
+      "label": {
+        "en": "Climbing",
+        "es": "Escalada"
+      },
+      "audience": "teen",
+      "existing_dir": "climbing",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #D06830 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#C77830",
+        "accent": "#D06830",
+        "accent_name": "climb orange",
+        "highlight": "harness / hold / rope",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 11,
+        "cards": 18
+      }
+    },
+    {
+      "id": "swimming-wow",
+      "family": "sports-prep",
+      "status": "ready",
+      "data": "swimming-wow.json",
+      "label": {
+        "en": "Swimming visit",
+        "es": "Visita a la piscina"
+      },
+      "audience": "child",
+      "existing_dir": "swimming",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #3A9ABA highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#C77830",
+        "accent": "#3A9ABA",
+        "accent_name": "pool blue",
+        "highlight": "water / goggles / kick",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 11,
+        "cards": 17
+      }
+    },
+    {
+      "id": "gym-activities",
+      "family": "sports-prep",
+      "status": "ready",
+      "data": "gym-activities.json",
+      "label": {
+        "en": "Gym",
+        "es": "Gimnasio"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #D05050 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#C77830",
+        "accent": "#D05050",
+        "accent_name": "gym coral",
+        "highlight": "weights / mat / stretch",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 11,
+        "cards": 18
+      }
+    },
+    {
+      "id": "hiking",
+      "family": "sports-prep",
+      "status": "ready",
+      "data": "hiking.json",
+      "label": {
+        "en": "Hiking",
+        "es": "Senderismo"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T2",
+        "band": "teen",
+        "gender": "woman",
+        "skin": "light",
+        "hair": "shoulder-length brown",
+        "clothes": "teal jacket, navy trousers",
+        "age": "teen",
+        "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #4A8A50 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T2",
+        "family_base": "#C77830",
+        "accent": "#4A8A50",
+        "accent_name": "forest green",
+        "highlight": "boots / path / map",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 7,
+        "actions": 16,
+        "cards": 24
+      }
+    },
+    {
+      "id": "cycling-prep",
+      "family": "sports-prep",
+      "status": "ready",
+      "data": "cycling-prep.json",
+      "label": {
+        "en": "Cycling",
+        "es": "Ciclismo"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #E8B020 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#C77830",
+        "accent": "#E8B020",
+        "accent_name": "bike yellow",
+        "highlight": "helmet / bike / lights",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 10,
+        "cards": 15
+      }
+    },
+    {
+      "id": "tennis-prep",
+      "family": "sports-prep",
+      "status": "ready",
+      "data": "tennis-prep.json",
+      "label": {
+        "en": "Tennis",
+        "es": "Tenis"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail or soft curls",
+        "clothes": "coral top, navy skirt or trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #C0D040 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#C77830",
+        "accent": "#C0D040",
+        "accent_name": "court lime",
+        "highlight": "racket / ball",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 10,
+        "cards": 15
+      }
+    },
+    {
+      "id": "going-on-holidays",
+      "family": "travel",
+      "status": "ready",
+      "data": "going-on-holidays.json",
+      "label": {
+        "en": "Going on holidays",
+        "es": "Ir de vacaciones"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #E07050 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#2F6B4F",
+        "accent": "#E07050",
+        "accent_name": "holiday coral",
+        "highlight": "suitcase / passport",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 14,
+        "cards": 20
+      }
+    },
+    {
+      "id": "going-to-the-beach",
+      "family": "travel",
+      "status": "ready",
+      "data": "going-to-the-beach.json",
+      "label": {
+        "en": "Going to the beach",
+        "es": "Ir a la playa"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail or soft curls",
+        "clothes": "coral top, navy skirt or trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #40B0C0 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#2F6B4F",
+        "accent": "#40B0C0",
+        "accent_name": "turquoise",
+        "highlight": "towel / sea / sunscreen",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 8,
+        "actions": 14,
+        "cards": 23
+      }
+    },
+    {
+      "id": "going-to-the-mountain",
+      "family": "travel",
+      "status": "ready",
+      "data": "going-to-the-mountain.json",
+      "label": {
+        "en": "Mountain",
+        "es": "Montana"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5A7A4A highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#2F6B4F",
+        "accent": "#5A7A4A",
+        "accent_name": "mountain green",
+        "highlight": "backpack / path",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 11,
+        "cards": 17
+      }
+    },
+    {
+      "id": "going-camping",
+      "family": "travel",
+      "status": "ready",
+      "data": "going-camping.json",
+      "label": {
+        "en": "Camping",
+        "es": "Camping"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #A09050 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#2F6B4F",
+        "accent": "#A09050",
+        "accent_name": "khaki",
+        "highlight": "tent / torch",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 11,
+        "cards": 18
+      }
+    },
+    {
+      "id": "going-to-the-museum",
+      "family": "travel",
+      "status": "ready",
+      "data": "going-to-the-museum.json",
+      "label": {
+        "en": "Museum",
+        "es": "Museo"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #C0A040 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#2F6B4F",
+        "accent": "#C0A040",
+        "accent_name": "mustard",
+        "highlight": "ticket / exhibit",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 10,
+        "cards": 15
+      }
+    },
+    {
+      "id": "going-to-a-theme-park",
+      "family": "travel",
+      "status": "ready",
+      "data": "going-to-a-theme-park.json",
+      "label": {
+        "en": "Theme park",
+        "es": "Parque atracciones"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail or soft curls",
+        "clothes": "coral top, navy skirt or trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #E05080 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#2F6B4F",
+        "accent": "#E05080",
+        "accent_name": "fun pink",
+        "highlight": "ticket / ride queue",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 3,
+        "actions": 11,
+        "cards": 15
+      }
+    },
+    {
+      "id": "attending-a-sport-event",
+      "family": "travel",
+      "status": "ready",
+      "data": "attending-a-sport-event.json",
+      "label": {
+        "en": "Sport event",
+        "es": "Evento deportivo"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #D04040 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#2F6B4F",
+        "accent": "#D04040",
+        "accent_name": "stadium red",
+        "highlight": "ticket / seat / cheer",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 10,
+        "cards": 15
+      }
+    },
+    {
+      "id": "at-the-airport",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-airport.json",
+      "label": {
+        "en": "At the airport",
+        "es": "En el aeropuerto"
+      },
+      "audience": "teen",
+      "existing_dir": "at the airport",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green t-shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5BA3D0 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#D03860",
+        "accent": "#5BA3D0",
+        "accent_name": "sky blue",
+        "highlight": "same teen T1 as plane; passport / gate / bag",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 14,
+        "cards": 20
+      }
+    },
+    {
+      "id": "at-the-hotel",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-hotel.json",
+      "label": {
+        "en": "At the hotel",
+        "es": "En el hotel"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green long-sleeve shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #C4A882 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#D03860",
+        "accent": "#C4A882",
+        "accent_name": "hotel sand",
+        "highlight": "keycard / lift / door",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 13,
+        "cards": 20
+      }
+    },
+    {
+      "id": "at-the-hospital",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-hospital.json",
+      "label": {
+        "en": "At the hospital",
+        "es": "En el hospital"
+      },
+      "audience": "adult",
+      "character": {
+        "avatar_id": "YA1",
+        "band": "young-adult",
+        "gender": "woman",
+        "skin": "medium",
+        "hair": "dark curly shoulder-length",
+        "clothes": "lavender lounge set",
+        "age": "young-adult",
+        "lock": "PRIMARY YA1 only on cover+all actions. Same outfit colours entire pack. Accent #5AAA8A highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA1",
+        "family_base": "#D03860",
+        "accent": "#5AAA8A",
+        "accent_name": "clinical green",
+        "highlight": "appointment card / door / form",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 11,
+        "cards": 16
+      }
+    },
+    {
+      "id": "at-the-supermarket",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-supermarket.json",
+      "label": {
+        "en": "Supermarket",
+        "es": "Supermercado"
+      },
+      "audience": "teen",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "man",
+        "skin": "medium",
+        "hair": "short dark brown",
+        "clothes": "green long-sleeve shirt, blue joggers",
+        "age": "teen",
+        "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5A9A60 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#D03860",
+        "accent": "#5A9A60",
+        "accent_name": "fresh green",
+        "highlight": "trolley / product / till",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 12,
+        "cards": 18
+      }
+    },
+    {
+      "id": "at-the-shopping-mall",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-shopping-mall.json",
+      "label": {
+        "en": "Shopping mall",
+        "es": "Centro comercial"
+      },
+      "audience": "child",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail or soft curls",
+        "clothes": "coral top, navy skirt or trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #E07090 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#D03860",
+        "accent": "#E07090",
+        "accent_name": "mall pink",
+        "highlight": "bag / shop door",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 3,
+        "actions": 15,
+        "cards": 19
+      }
+    },
+    {
+      "id": "at-the-hairdresser",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-hairdresser.json",
+      "label": {
+        "en": "Hairdresser",
+        "es": "Peluqueria"
+      },
+      "audience": "adult",
+      "character": {
+        "avatar_id": "YA1",
+        "band": "young-adult",
+        "gender": "woman",
+        "skin": "medium",
+        "hair": "dark curly shoulder-length",
+        "clothes": "lavender lounge set",
+        "age": "young-adult",
+        "lock": "PRIMARY YA1 only on cover+all actions. Same outfit colours entire pack. Accent #9A80B8 highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA1",
+        "family_base": "#D03860",
+        "accent": "#9A80B8",
+        "accent_name": "salon lilac",
+        "highlight": "scissors / cape / mirror",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 11,
+        "cards": 18
+      }
+    },
+    {
+      "id": "at-the-barber",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-barber.json",
+      "label": {
+        "en": "Barber",
+        "es": "Barberia"
+      },
+      "audience": "adult",
+      "character": {
+        "avatar_id": "YA2",
+        "band": "young-adult",
+        "gender": "man",
+        "skin": "dark",
+        "hair": "short black",
+        "clothes": "dark grey t-shirt, black trousers",
+        "age": "young-adult",
+        "lock": "PRIMARY YA2 only. Accent #6A7A8A. Barber shop, not hairdresser salon."
+      },
+      "design": {
+        "avatar_id": "YA2",
+        "family_base": "#D03860",
+        "accent": "#6A7A8A",
+        "accent_name": "barber steel",
+        "highlight": "clippers / cape",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 11,
+        "cards": 18
+      }
+    },
+    {
+      "id": "at-the-pharmacy",
+      "family": "public-spaces",
+      "status": "ready",
+      "data": "at-the-pharmacy.json",
+      "label": {
+        "en": "Pharmacy",
+        "es": "Farmacia"
+      },
+      "audience": "adult",
+      "character": {
+        "avatar_id": "YA2",
+        "band": "young-adult",
+        "gender": "man",
+        "skin": "dark",
+        "hair": "short black",
+        "clothes": "dark grey t-shirt, black trousers",
+        "age": "young-adult",
+        "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #3A9A6A highlights action. Staff secondary OK."
+      },
+      "design": {
+        "avatar_id": "YA2",
+        "family_base": "#D03860",
+        "accent": "#3A9A6A",
+        "accent_name": "pharmacy green",
+        "highlight": "prescription / medicine",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 10,
+        "cards": 15
+      }
+    },
+    {
+      "id": "trampoline-wow",
+      "family": "sports-prep",
+      "status": "ready",
+      "data": "trampoline-wow.json",
+      "label": {
+        "en": "Trampoline visit",
+        "es": "Visita al trampolin"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 5,
+        "actions": 10,
+        "cards": 16
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#C77830",
+        "accent": "#5B9A8B",
+        "accent_name": "sensory teal",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "at-the-dentist",
+      "family": "health-appointments",
+      "status": "ready",
+      "data": "at-the-dentist.json",
+      "label": {
+        "en": "At the dentist",
+        "es": "En el dentista"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 6,
+        "actions": 10,
+        "cards": 17
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#7A8FA0",
+        "accent": "#5B9A8B",
+        "accent_name": "sensory teal",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "at-the-gp",
+      "family": "health-appointments",
+      "status": "ready",
+      "data": "at-the-gp.json",
+      "label": {
+        "en": "At the GP",
+        "es": "En el medico"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 6,
+        "actions": 9,
+        "cards": 16
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#7A8FA0",
+        "accent": "#5B9A8B",
+        "accent_name": "sensory teal",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "blood-test",
+      "family": "health-appointments",
+      "status": "ready",
+      "data": "blood-test.json",
+      "label": {
+        "en": "Blood test",
+        "es": "Analisis de sangre"
+      },
+      "audience": "teen",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 6,
+        "actions": 10,
+        "cards": 17
+      },
+      "design": {
+        "avatar_id": "T1",
+        "family_base": "#7A8FA0",
+        "accent": "#D03860",
+        "accent_name": "civic rose",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "T1",
+        "band": "teen",
+        "gender": "boy"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "vaccination",
+      "family": "health-appointments",
+      "status": "ready",
+      "data": "vaccination.json",
+      "label": {
+        "en": "Vaccination",
+        "es": "Vacuna"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 5,
+        "actions": 9,
+        "cards": 15
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#7A8FA0",
+        "accent": "#E8A840",
+        "accent_name": "warm amber",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "loud-places",
+      "family": "sensory-world",
+      "status": "ready",
+      "data": "loud-places.json",
+      "label": {
+        "en": "Loud places",
+        "es": "Sitios ruidosos"
+      },
+      "audience": "all",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 4,
+        "actions": 6,
+        "cards": 11
+      },
+      "design": {
+        "avatar_id": "E1",
+        "family_base": "#5B9A8B",
+        "accent": "#E8A840",
+        "accent_name": "warm amber",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "E1",
+        "band": "all",
+        "gender": "genderless"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "crowded-places",
+      "family": "sensory-world",
+      "status": "ready",
+      "data": "crowded-places.json",
+      "label": {
+        "en": "Crowded places",
+        "es": "Sitios llenos"
+      },
+      "audience": "all",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 4,
+        "actions": 6,
+        "cards": 11
+      },
+      "design": {
+        "avatar_id": "E1",
+        "family_base": "#5B9A8B",
+        "accent": "#D03860",
+        "accent_name": "civic rose",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "E1",
+        "band": "all",
+        "gender": "genderless"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "waiting",
+      "family": "sensory-world",
+      "status": "ready",
+      "data": "waiting.json",
+      "label": {
+        "en": "Waiting",
+        "es": "Esperar"
+      },
+      "audience": "all",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 4,
+        "actions": 6,
+        "cards": 11
+      },
+      "design": {
+        "avatar_id": "E1",
+        "family_base": "#5B9A8B",
+        "accent": "#3D7EA6",
+        "accent_name": "transport blue",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "E1",
+        "band": "all",
+        "gender": "genderless"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "headphones-and-breaks",
+      "family": "sensory-world",
+      "status": "ready",
+      "data": "headphones-and-breaks.json",
+      "label": {
+        "en": "Headphones and breaks",
+        "es": "Cascos y descansos"
+      },
+      "audience": "all",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 5,
+        "actions": 7,
+        "cards": 13
+      },
+      "design": {
+        "avatar_id": "E1",
+        "family_base": "#5B9A8B",
+        "accent": "#CBCBC9",
+        "accent_name": "neutral grey",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "E1",
+        "band": "all",
+        "gender": "genderless"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "at-a-cafe",
+      "family": "eating-out",
+      "status": "ready",
+      "data": "at-a-cafe.json",
+      "label": {
+        "en": "At a cafe",
+        "es": "En un cafe"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 6,
+        "actions": 8,
+        "cards": 15
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#B86B4A",
+        "accent": "#5B9A8B",
+        "accent_name": "sensory teal",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "school-lunch",
+      "family": "eating-out",
+      "status": "ready",
+      "data": "school-lunch.json",
+      "label": {
+        "en": "School lunch",
+        "es": "Comedor del cole"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 5,
+        "actions": 8,
+        "cards": 14
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#B86B4A",
+        "accent": "#5B9A8B",
+        "accent_name": "sensory teal",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "i-am-lost",
+      "family": "emergency-help",
+      "status": "ready",
+      "data": "i-am-lost.json",
+      "label": {
+        "en": "I am lost",
+        "es": "Estoy perdido"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 5,
+        "actions": 8,
+        "cards": 14
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#4A6670",
+        "accent": "#D03860",
+        "accent_name": "civic rose",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "ask-safe-adult",
+      "family": "emergency-help",
+      "status": "ready",
+      "data": "ask-safe-adult.json",
+      "label": {
+        "en": "Ask a safe adult",
+        "es": "Pedir a un adulto seguro"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 4,
+        "actions": 7,
+        "cards": 12
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#4A6670",
+        "accent": "#5B8C7A",
+        "accent_name": "seafoam green",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl"
+      },
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "fire-alarm",
+      "family": "emergency-help",
+      "status": "ready",
+      "data": "fire-alarm.json",
+      "label": {
+        "en": "Fire alarm",
+        "es": "Alarma de incendio"
+      },
+      "audience": "child",
+      "architecture_wave": "p1",
+      "art": "installed",
+      "counts": {
+        "items": 5,
+        "actions": 7,
+        "cards": 13
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#4A6670",
+        "accent": "#E8A840",
+        "accent_name": "warm amber",
+        "outfit_lock": true
+      },
+      "spec_status": "spec-ready",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      },
+      "content_review": "approved-pre-art"
+    }
+  ],
+  "design_system": "data/design-system.json",
+  "architecture": "family-architecture.json"
+}

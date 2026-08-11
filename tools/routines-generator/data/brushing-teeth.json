@@ -1,0 +1,452 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.3",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress. Same C2 avatar on all actions; crop to hands/gesture when face is not needed."
+  },
+  "id": "brushing-teeth",
+  "family": "self-care",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail or soft curls",
+    "clothes": "coral top, navy skirt or trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #5EC4A8 highlights action. Staff secondary OK. Face optional: crop to hands/sink when the gesture reads clearer."
+  },
+  "label": {
+    "en": "Brushing teeth",
+    "es": "Cepillarse los dientes"
+  },
+  "existing_dir": "brushing-teeth",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "brushing teeth",
+      "es": "cepillar dientes"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "toothbrush",
+      "slug": "toothbrush",
+      "title": {
+        "en": "toothbrush",
+        "es": "cepillo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "toothpaste",
+      "slug": "toothpaste",
+      "title": {
+        "en": "toothpaste",
+        "es": "pasta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cup",
+      "slug": "cup",
+      "title": {
+        "en": "cup",
+        "es": "vaso"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tap",
+      "slug": "tap",
+      "title": {
+        "en": "tap",
+        "es": "grifo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tooth-holder",
+      "slug": "tooth-holder",
+      "title": {
+        "en": "tooth holder",
+        "es": "soporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mouth",
+      "slug": "mouth",
+      "title": {
+        "en": "mouth",
+        "es": "boca"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "top-teeth",
+      "slug": "top-teeth",
+      "title": {
+        "en": "top teeth",
+        "es": "dientes arriba"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bottom-teeth",
+      "slug": "bottom-teeth",
+      "title": {
+        "en": "bottom teeth",
+        "es": "dientes abajo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tongue",
+      "slug": "tongue",
+      "title": {
+        "en": "tongue",
+        "es": "lengua"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "get-toothbrush",
+      "slug": "get-toothbrush",
+      "title": {
+        "en": "get brush",
+        "es": "coger cepillo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-toothpaste",
+      "slug": "put-toothpaste",
+      "title": {
+        "en": "put toothpaste",
+        "es": "poner pasta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wet-brush",
+      "slug": "wet-brush",
+      "title": {
+        "en": "wet brush",
+        "es": "mojar cepillo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-top-teeth",
+      "slug": "brush-top-teeth",
+      "title": {
+        "en": "brush top",
+        "es": "cepillar arriba"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-bottom-teeth",
+      "slug": "brush-bottom-teeth",
+      "title": {
+        "en": "brush bottom",
+        "es": "cepillar abajo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-tongue",
+      "slug": "brush-tongue",
+      "title": {
+        "en": "brush tongue",
+        "es": "cepillar lengua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fill-cup-up",
+      "slug": "fill-cup-up",
+      "title": {
+        "en": "fill cup",
+        "es": "llenar vaso"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-mouth-with-water",
+      "slug": "rinse-mouth-with-water",
+      "title": {
+        "en": "rinse mouth",
+        "es": "enjuagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "spit-out-water",
+      "slug": "spit-out-water",
+      "title": {
+        "en": "spit",
+        "es": "escupir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe-mouth",
+      "slug": "wipe-mouth",
+      "title": {
+        "en": "wipe mouth",
+        "es": "secar boca"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-toothbrush-away",
+      "slug": "put-toothbrush-away",
+      "title": {
+        "en": "put away",
+        "es": "guardar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "brushing teeth",
+        "es": "cepillar dientes"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "toothbrush",
+      "slug": "toothbrush",
+      "title": {
+        "en": "toothbrush",
+        "es": "cepillo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "toothpaste",
+      "slug": "toothpaste",
+      "title": {
+        "en": "toothpaste",
+        "es": "pasta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cup",
+      "slug": "cup",
+      "title": {
+        "en": "cup",
+        "es": "vaso"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tap",
+      "slug": "tap",
+      "title": {
+        "en": "tap",
+        "es": "grifo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tooth-holder",
+      "slug": "tooth-holder",
+      "title": {
+        "en": "tooth holder",
+        "es": "soporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mouth",
+      "slug": "mouth",
+      "title": {
+        "en": "mouth",
+        "es": "boca"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "top-teeth",
+      "slug": "top-teeth",
+      "title": {
+        "en": "top teeth",
+        "es": "dientes arriba"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bottom-teeth",
+      "slug": "bottom-teeth",
+      "title": {
+        "en": "bottom teeth",
+        "es": "dientes abajo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tongue",
+      "slug": "tongue",
+      "title": {
+        "en": "tongue",
+        "es": "lengua"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "get-toothbrush",
+      "slug": "get-toothbrush",
+      "title": {
+        "en": "get brush",
+        "es": "coger cepillo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-toothpaste",
+      "slug": "put-toothpaste",
+      "title": {
+        "en": "put toothpaste",
+        "es": "poner pasta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wet-brush",
+      "slug": "wet-brush",
+      "title": {
+        "en": "wet brush",
+        "es": "mojar cepillo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-top-teeth",
+      "slug": "brush-top-teeth",
+      "title": {
+        "en": "brush top",
+        "es": "cepillar arriba"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-bottom-teeth",
+      "slug": "brush-bottom-teeth",
+      "title": {
+        "en": "brush bottom",
+        "es": "cepillar abajo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-tongue",
+      "slug": "brush-tongue",
+      "title": {
+        "en": "brush tongue",
+        "es": "cepillar lengua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fill-cup-up",
+      "slug": "fill-cup-up",
+      "title": {
+        "en": "fill cup",
+        "es": "llenar vaso"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-mouth-with-water",
+      "slug": "rinse-mouth-with-water",
+      "title": {
+        "en": "rinse mouth",
+        "es": "enjuagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "spit-out-water",
+      "slug": "spit-out-water",
+      "title": {
+        "en": "spit",
+        "es": "escupir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe-mouth",
+      "slug": "wipe-mouth",
+      "title": {
+        "en": "wipe mouth",
+        "es": "secar boca"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-toothbrush-away",
+      "slug": "put-toothbrush-away",
+      "title": {
+        "en": "put away",
+        "es": "guardar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 10,
+    "actions": 11,
+    "cards": 22
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#5B8C7A",
+    "accent": "#5EC4A8",
+    "accent_name": "mint",
+    "highlight": "toothbrush / toothpaste",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only. Crop to hands/sink when face is not needed for the teaching point.",
+  "notes": {
+    "flow": "Natural water chain: put toothpaste -> wet brush under tap -> brush -> fill cup -> rinse -> spit. Same modern mixer tap in tap object and wet/fill/rinse/spit scenes.",
+    "tap": "Modern single-lever cylindrical deck mixer (not classic wall cross-handle)."
+  }
+}
