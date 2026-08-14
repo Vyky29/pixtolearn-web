@@ -41,19 +41,19 @@
     "washing-hands": "girl+boy complete",
     "public-toilet": "boy+girl complete",
     "at-the-optician": "girl+boy complete",
-    "basketball": "boy primary seeded; girl pending",
-    "yoga": "girl primary seeded; boy pending",
-    "fire-drill": "boy primary seeded; girl pending",
-    "hearing-test": "boy primary seeded; girl pending",
-    "changing-lessons": "girl primary seeded; boy pending",
+    "basketball": "boy+girl complete",
+    "yoga": "girl+boy complete",
+    "fire-drill": "boy+girl complete",
+    "hearing-test": "boy+girl complete",
+    "changing-lessons": "girl+boy complete",
     "bright-lights": "boy primary seeded; girl pending",
     "basic-first-aid": "girl primary seeded; boy pending",
     "physiotherapy": "girl primary seeded; boy pending"
   },
-  "in_progress": "yoga boy opposite cast",
+  "in_progress": "bright-lights girl opposite cast",
   "notes": [
-    "Toilet girl + optician boy opposite casts installed and synced to Parents",
-    "Wave 2 primary gender cast folders seeded from root art",
-    "pixtolearn-support push still blocked: HTTP 500 on ~6GB art pack; remote empty/no upstream"
+    "Dual-gender complete: toilet, optician, yoga, basketball, fire-drill, hearing-test, changing-lessons",
+    "Remaining Wave2 opposites: bright-lights, basic-first-aid, physiotherapy",
+    "pixtolearn-support push still blocked HTTP 500 (~6GB); local commits present"
   ]
 }
