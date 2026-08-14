@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>PixtoLearn App | Sessions, routines, Focus</title>
-  <meta name="description" content="PixtoLearn App turns visual routines into live sessions with membership plans for families, practitioners, and centres." />
+  <title>PixtoLearn App | Focus mode, routines, My Voice</title>
+  <meta name="description" content="PixtoLearn App for families: Focus mode (one step or First / Next / Then landscape), timers, voice, create-your-own routines, Break It Down activities, and My Voice." />
   <link rel="icon" href="assets/brand/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,297 +51,214 @@
   </header>
   <main id="main">
 
-  <section class="plapp-hero">
-    <div class="wrap plapp-hero-grid">
+  <section class="plapp-hero plapp-hero--focus">
+    <div class="wrap plapp-hero-grid plapp-hero-grid--wide">
       <div class="plapp-hero-copy reveal">
         <div class="app-badge">
           <img src="assets/brand/app-icon.png" alt="" width="40" height="40" />
           <span>PixtoLearn App</span>
         </div>
-        <h1>Same visuals. Live sessions.</h1>
-        <p class="lede">Run Focus mode on phone or tablet with the PixtoLearn language your packs already use.</p>
+        <h1>Focus mode for real life.</h1>
+        <p class="lede">One calm card, or rotate into First / Next / Then across the landscape. Same PixtoLearn visuals as your packs, live on phone and tablet.</p>
         <div class="btn-row">
-          <a class="btn btn-primary btn-pulse" href="#plans">See memberships</a>
-          <a class="btn btn-ghost" href="https://pixtolearn-parents.vercel.app" rel="noopener" target="_blank">Open PixtoLearn App</a>
+          <a class="btn btn-primary btn-pulse" href="https://pixtolearn-parents.vercel.app" rel="noopener" target="_blank">Open PixtoLearn App</a>
+          <a class="btn btn-ghost" href="#focus">See Focus</a>
         </div>
         <div class="plapp-hero-meta">
-          <span class="plapp-tag is-pink">Schedule</span>
           <span class="plapp-tag is-amber">Focus</span>
-          <span class="plapp-tag is-slate">First and Then</span>
+          <span class="plapp-tag is-pink">First &amp; Then</span>
+          <span class="plapp-tag is-slate">Voice + Timer</span>
         </div>
-        <p class="note app-hero-note">Works alongside waterproof swimming packs and WOW card decks.</p>
+        <p class="note app-hero-note">For families. Works alongside waterproof packs and WOW decks.</p>
       </div>
 
-      <div class="plapp-stage reveal" aria-hidden="true">
-        <div class="plapp-device plapp-pad">
-          <div class="plapp-bezel">
-            <div class="plapp-screen plapp-screen--pad">
-              <div class="plui">
-                <div class="plui-head">
-                  <div class="plui-brand">
-                    <img class="plui-mark" src="assets/brand/symbol-clear.png" alt="" />
-                    <span class="plui-word"><i>PIX</i><i class="to">TO</i><i>LEARN</i></span>
-                  </div>
-                  <span class="plui-chip is-slate">Families</span>
-                </div>
-                <div class="plui-bar"></div>
-                <div>
-                  <p class="plui-title">Your routines</p>
-                  <p class="plui-sub">Visual schedules for every day</p>
-                </div>
-                <div class="plui-segment"><i class="is-on">Schedule</i><i>Library</i></div>
-                <div class="plui-cards plui-cards--3">
-                  <div class="plui-card" style="--pl-accent: var(--pink)">
-                    <img src="assets/packs/keyring-web/hold-hands.jpg" alt="" loading="lazy" />
-                    <div>
-                      <div class="plui-card-rule"></div>
-                      <div class="plui-card-meta"><b>Getting ready</b><span>6 steps</span></div>
-                    </div>
-                  </div>
-                  <div class="plui-card" style="--pl-accent: var(--amber)">
-                    <img src="assets/packs/keyring-web/wait.jpg" alt="" loading="lazy" />
-                    <div>
-                      <div class="plui-card-rule"></div>
-                      <div class="plui-card-meta"><b>Pool arrival</b><span>5 steps</span></div>
-                    </div>
-                  </div>
-                  <div class="plui-card" style="--pl-accent: var(--slate-deep)">
-                    <img src="assets/packs/keyring-web/listen.jpg" alt="" loading="lazy" />
-                    <div>
-                      <div class="plui-card-rule"></div>
-                      <div class="plui-card-meta"><b>Lesson start</b><span>8 steps</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="plapp-device plapp-phone">
-          <div class="plapp-bezel">
-            <span class="plapp-phone-notch"></span>
-            <div class="plapp-screen plapp-screen--phone">
-              <div class="plui plui--focus">
-                <div class="plui-topbar">
-                  <span>Close</span>
-                  <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
-                  <span>Reset</span>
-                </div>
-                <div>
-                  <p class="plui-kicker">Focus mode</p>
-                  <div class="plui-progress"><i></i></div>
-                </div>
-                <div class="plui-step">
-                  <div class="plui-step-label"><span>Now</span><span>3 / 7</span></div>
-                  <img src="assets/packs/keyring-web/well-done.jpg" alt="" loading="lazy" />
-                </div>
-                <div class="plui-dots"><i></i><i class="is-on"></i><i></i></div>
-                <div class="plui-cta">Done</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <figure class="plapp-frame plapp-frame--landscape reveal">
+        <img src="assets/photos/app-ui/12-focus-landscape-3.jpg" alt="Focus mode in landscape: First, Next and Then cards for brushing teeth" width="900" height="420" loading="eager" />
+        <figcaption class="plapp-shot-cap">Focus Mode, landscape: First / Next / Then</figcaption>
+      </figure>
     </div>
   </section>
-
 
   <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">The new interface</p>
-        <h2>Screens built for calm sessions</h2>
-        <p class="lede">A quiet entry, a clear routine list, and one step at a time in Focus. The same visual language as your printed packs, now live on tablet and phone.</p>
+        <p class="eyebrow">Inside the app</p>
+        <h2>Three ways to support</h2>
+        <p class="lede">Home opens into Routines, Activities, and My Voice. Each pillar has its own job.</p>
       </div>
-
-      <div class="plapp-screens reveal">
-        <div class="plapp-screen-item">
-          <div class="plapp-device plapp-pad">
-            <div class="plapp-bezel">
-              <div class="plapp-screen plapp-screen--pad">
-                <div class="plui">
-                  <div class="plui-head">
-                    <div class="plui-brand">
-                      <img class="plui-mark" src="assets/brand/symbol-clear.png" alt="" />
-                      <span class="plui-word"><i>PIX</i><i class="to">TO</i><i>LEARN</i></span>
-                    </div>
-                    <span class="plui-chip is-pink">Library</span>
-                  </div>
-                  <div class="plui-bar"></div>
-                  <div class="plui-segment"><i>Schedule</i><i class="is-on">Library</i></div>
-                  <div class="plui-cards plui-cards--3">
-                    <div class="plui-card" style="--pl-accent: var(--pink)">
-                      <img src="assets/packs/keyring-web/cap.jpg" alt="" loading="lazy" />
-                      <div>
-                        <div class="plui-card-rule"></div>
-                        <div class="plui-card-meta"><b>Swim cap</b><span>Swimming</span></div>
-                      </div>
-                    </div>
-                    <div class="plui-card" style="--pl-accent: var(--amber)">
-                      <img src="assets/packs/keyring-web/quiet.jpg" alt="" loading="lazy" />
-                      <div>
-                        <div class="plui-card-rule"></div>
-                        <div class="plui-card-meta"><b>Quiet</b><span>Regulation</span></div>
-                      </div>
-                    </div>
-                    <div class="plui-card" style="--pl-accent: var(--slate-deep)">
-                      <img src="assets/packs/keyring-web/break.jpg" alt="" loading="lazy" />
-                      <div>
-                        <div class="plui-card-rule"></div>
-                        <div class="plui-card-meta"><b>Break</b><span>Everyday</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="plapp-caption">
-            <h3>Routines and library</h3>
-            <p>Curated decks and saved schedules, ready on the tablet.</p>
-          </div>
-        </div>
-
-        <div class="plapp-screen-item">
-          <div class="plapp-device plapp-phone">
-            <div class="plapp-bezel">
-              <span class="plapp-phone-notch"></span>
-              <div class="plapp-screen plapp-screen--phone">
-                <div class="plui plui--center">
-                  <img class="plui-mark plui-mark--lg" src="assets/brand/symbol-clear.png" alt="" />
-                  <span class="plui-word"><i>PIX</i><i class="to">TO</i><i>LEARN</i></span>
-                  <div class="plui-bar plui-bar--center"></div>
-                  <p class="plui-capsule">Visual clarity for everyday routines.</p>
-                  <div class="plui-chips">
-                    <span class="plui-chip is-pink">Schedule</span>
-                    <span class="plui-chip is-amber">Focus</span>
-                  </div>
-                  <div class="plui-cta" style="width:100%">Sign in</div>
-                  <div class="plui-cta plui-cta--ghost" style="width:100%">Continue free</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="plapp-caption">
-            <h3>Calm entry</h3>
-            <p>Open the app, pick a profile, start. No clutter before a session.</p>
-          </div>
-        </div>
-
-        <div class="plapp-screen-item">
-          <div class="plapp-device plapp-phone">
-            <div class="plapp-bezel">
-              <span class="plapp-phone-notch"></span>
-              <div class="plapp-screen plapp-screen--phone">
-                <div class="plui plui--focus">
-                  <div class="plui-topbar">
-                    <span>Back</span>
-                    <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
-                    <span>Reset</span>
-                  </div>
-                  <div>
-                    <p class="plui-kicker">Getting ready</p>
-                    <div class="plui-progress"><i></i></div>
-                  </div>
-                  <div class="plui-step">
-                    <div class="plui-step-label"><span>Now</span><span>2 / 6</span></div>
-                    <img src="assets/packs/keyring-web/hold-hands.jpg" alt="" loading="lazy" />
-                  </div>
-                  <div class="plui-dots"><i class="is-on"></i><i></i><i></i></div>
-                  <div class="plui-cta">Done</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="plapp-caption">
-            <h3>Focus mode</h3>
-            <p>One card at a time, with progress the learner can see.</p>
-          </div>
-        </div>
+      <div class="plapp-map reveal">
+        <article>
+          <h3>Routines</h3>
+          <p>Official WOW sequences for daily life. Free starts with brushing, shower and core. Plus opens the full everyday library.</p>
+        </article>
+        <article>
+          <h3>Activities</h3>
+          <p>Break It Down sports packs. Free: ABC, Football, Yoga. Flip a main action into smaller steps you can hear one by one.</p>
+        </article>
+        <article>
+          <h3>My Voice</h3>
+          <p>AAC board: tap symbols, build a sentence strip, speak it. Free Core, Quick Talk and Phrases. Premium deepens personal boards.</p>
+        </article>
       </div>
     </div>
   </section>
 
+  <section id="focus" class="plapp-focus-band">
+    <div class="wrap">
+      <div class="section-head reveal plapp-focus-head">
+        <p class="eyebrow">Focus mode</p>
+        <h2>One step, or the whole board</h2>
+        <p class="lede">Focus is the live session surface: dark chrome, nothing else competing for attention. Use it two ways.</p>
+      </div>
+
+      <div class="plapp-focus-pair reveal">
+        <article>
+          <figure class="plapp-frame plapp-frame--phone">
+            <img src="assets/photos/app-ui/04-focus.jpg" alt="Single-card Focus mode for get toothbrush" width="390" height="844" loading="lazy" />
+          </figure>
+          <h3>One card Focus</h3>
+          <p>From Schedule, tap Focus. One step fills the screen. Swipe or Done when finished. Ideal when the full sequence feels too loud.</p>
+        </article>
+        <article>
+          <figure class="plapp-frame plapp-frame--landscape">
+            <img src="assets/photos/app-ui/10-focus-landscape.jpg" alt="Landscape Focus with First and Then cards side by side" width="844" height="390" loading="lazy" />
+          </figure>
+          <h3>Landscape First &amp; Then</h3>
+          <p>From a First &amp; Then board, tap Focus Mode and rotate. First and Then sit side by side. Switch to 3 steps for First / Next / Then across the width.</p>
+        </article>
+      </div>
+
+      <div class="plapp-focus-controls reveal">
+        <figure class="plapp-frame plapp-frame--phone">
+          <img src="assets/photos/app-ui/13-focus-timer.jpg" alt="Focus timer picker with every-card presets and auto-advance" width="390" height="844" loading="lazy" />
+        </figure>
+        <div>
+          <p class="plapp-kicker plapp-kicker--light">Voice and timer</p>
+          <h3>You control the pace</h3>
+          <ul class="plapp-check">
+            <li><strong>Voice:</strong> unmute to hear each step title as it appears (Focus, Schedule, First &amp; Then, Break It Down). Mute mid-session in one tap.</li>
+            <li><strong>Timer:</strong> adult starts it when the child is ready. Never auto-starts on enter.</li>
+            <li><strong>Every card:</strong> set 30s to 6m (or custom) once; it repeats on every card until you clear it.</li>
+            <li><strong>Auto-advance:</strong> optional. Keep it off if you want to wait for Done.</li>
+          </ul>
+          <p class="plapp-note-light">Timers are part of the Plus story on memberships. The control lives in Focus chrome next to mute.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">What you get</p>
-        <h2>Library, player, Focus, Planner</h2>
-        <p class="lede">From swimming sequences to everyday routines, staff and families can run clear visual sessions without rebuilding materials from scratch.</p>
+        <p class="eyebrow">First &amp; Then</p>
+        <h2>Shrink a busy moment to 2 or 3 cards</h2>
+        <p class="lede">Suggested pairs are ready inside each pack. Or create your own, then open Focus Mode for the landscape board.</p>
       </div>
-      <div class="plapp-features reveal">
-        <article class="feature">
-          <div class="feature-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="6" y="9" width="15" height="30" rx="3" />
-              <rect x="27" y="9" width="15" height="30" rx="3" />
-              <path d="M10 17h7M31 17h7" />
-            </svg>
-          </div>
-          <h3>Card library</h3>
-          <p>Curated card libraries aligned to PixtoLearn packs.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="7" y="10" width="34" height="28" rx="4" />
-              <path d="M21 20l8 4-8 4z" />
-            </svg>
-          </div>
-          <h3>Session player</h3>
-          <p>Run a full routine in order, with clear step progress.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="24" cy="24" r="15" />
-              <circle cx="24" cy="24" r="7" />
-              <path d="M24 4v5M24 39v5M4 24h5M39 24h5" />
-            </svg>
-          </div>
-          <h3>Focus mode</h3>
-          <p>One step at a time for calm, low-stimulus moments.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="8" y="11" width="32" height="29" rx="4" />
-              <path d="M8 20h32M17 7v7M31 7v7M17 28h6M17 34h12" />
-            </svg>
-          </div>
-          <h3>Planner</h3>
-          <p>Planner tools for practitioners, swim teachers, and centres.</p>
-        </article>
+      <div class="plapp-split reveal">
+        <figure class="plapp-frame plapp-frame--phone">
+          <img src="assets/photos/app-ui/09-first-then-play.jpg" alt="First and Then light board with Focus Mode button" width="390" height="844" loading="lazy" />
+        </figure>
+        <div class="plapp-split-copy">
+          <h3>Play light, then go Focus</h3>
+          <p>On the light board you see First stacked above Then, with Timer and Focus Mode in the chrome. Finish a step with a flick or double-tap.</p>
+          <p>Need even less? From Schedule tap <strong>1-2</strong> to open Board 1-2 without leaving the session, choose 2 or 3 steps, then Focus Mode.</p>
+          <p class="plapp-example"><strong>Example:</strong> First get toothbrush / Then put toothpaste. Rotate into Focus so both cards sit across the landscape.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Create my routine</p>
+        <h2>Build a sequence from the library</h2>
+        <p class="lede">Not only official packs. Pick cards from your open libraries, name the routine, save it, then run Library, Schedule, First &amp; Then or Focus like any other pack.</p>
+      </div>
+      <div class="plapp-split plapp-split--flip reveal">
+        <div class="plapp-split-copy">
+          <ol class="plapp-howto">
+            <li>Open <strong>Create my routine</strong> from Routines.</li>
+            <li>Name it (for example Morning ready).</li>
+            <li>Open a library chip, tap miniatures in order (up to 20).</li>
+            <li>Drag to reorder, remove any card, then Save.</li>
+            <li>Run it with the same session tools as official WOW packs.</li>
+          </ol>
+          <p class="note">You can also create a First &amp; Then from any pack library: pick First + Then, or First + Next + Then.</p>
+        </div>
+        <figure class="plapp-frame plapp-frame--phone">
+          <img src="assets/photos/app-ui/08-create-routine.jpg" alt="Create my routine with five brushing cards selected" width="390" height="844" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">How a session runs</p>
-        <h2>Three steps, poolside or at home</h2>
+        <p class="eyebrow">Session toolkit</p>
+        <h2>Library and Schedule, same language</h2>
       </div>
-      <div class="plapp-steps reveal">
-        <article class="plapp-step">
-          <h3>Pick the routine</h3>
-          <p>Choose a saved schedule or build one from the card library in seconds.</p>
-        </article>
-        <article class="plapp-step">
-          <h3>Run it together</h3>
-          <p>Focus mode shows one card at a time, so the next step is always clear.</p>
-        </article>
-        <article class="plapp-step">
-          <h3>Finish and repeat</h3>
-          <p>Celebrate the finish, then run the same sequence again tomorrow.</p>
-        </article>
+      <div class="plapp-split reveal">
+        <figure class="plapp-frame plapp-frame--phone">
+          <img src="assets/photos/app-ui/02-routines-library.jpg" alt="Brushing teeth digital card library" width="390" height="844" loading="lazy" />
+        </figure>
+        <div class="plapp-split-copy">
+          <h3>Library</h3>
+          <p>Browse every digital card in the pack: objects and actions with the same titles and art as printed WOW decks.</p>
+          <h3>Schedule</h3>
+          <p>Run the full sequence in order. See progress (for example 0/11), an objects strip when useful, and chrome to jump into Focus or Board 1-2.</p>
+          <p class="plapp-example"><strong>Morning path:</strong> Library to explore cards → Schedule to run the day → Focus when you need one quiet step.</p>
+        </div>
+      </div>
+      <figure class="plapp-frame plapp-frame--phone plapp-inline-shot reveal">
+        <img src="assets/photos/app-ui/03-schedule.jpg" alt="Schedule player showing NOW step get toothbrush" width="390" height="844" loading="lazy" />
+        <figcaption class="plapp-shot-cap">Schedule with Focus and 1-2 in the chrome</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Activities</p>
+        <h2>Break It Down: flip the main action</h2>
+        <p class="lede">Side A shows the main action. Side B breaks it into numbered steps. Tap a step to hear it.</p>
+      </div>
+      <div class="plapp-bid reveal">
+        <figure class="plapp-frame plapp-frame--phone">
+          <img src="assets/photos/app-ui/15-break-it-down.jpg" alt="Football Side A main action eyes on football" width="390" height="844" loading="lazy" />
+          <figcaption class="plapp-shot-cap">Side A: main action</figcaption>
+        </figure>
+        <figure class="plapp-frame plapp-frame--phone">
+          <img src="assets/photos/app-ui/16-break-it-down-flip.jpg" alt="Break It Down side B with four numbered steps" width="390" height="844" loading="lazy" />
+          <figcaption class="plapp-shot-cap">Side B: Break It Down + voice</figcaption>
+        </figure>
+        <div class="plapp-split-copy">
+          <p>Free packs: ABC, Football, Yoga. Create my activity lets families build a workout from open libraries (also up to 20 cards).</p>
+          <p>When a routine step has Break It Down, the same flip appears inside Schedule and Focus.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">My Voice</p>
+        <h2>Tap. Build. Speak.</h2>
+      </div>
+      <div class="plapp-split reveal">
+        <figure class="plapp-frame plapp-frame--phone">
+          <img src="assets/photos/app-ui/07-my-voice.jpg" alt="My Voice Core board with sentence strip" width="390" height="844" loading="lazy" />
+        </figure>
+        <div class="plapp-split-copy">
+          <p>Free boards: Core, Quick Talk, Phrases. Build a message on the strip and play it aloud.</p>
+          <p>Premium unlocks deeper layers (Context, My World, Words) and personalisation. Communication sits beside routines, not instead of them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap band band-teal reveal">
@@ -357,48 +274,48 @@
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Memberships</p>
-        <h2>Plans that grow with you</h2>
-        <p class="lede">Three levels: try Free, unlock daily independence with Plus, go further with Premium. Checkout links will replace waitlist as Stripe goes live.</p>
+        <h2>Plans that grow with your family</h2>
+        <p class="lede">Try Free today. Unlock the full everyday library with Plus. Go deeper on communication with Premium. Checkout links will replace waitlist as Stripe goes live.</p>
       </div>
       <div class="plan-grid">
         <article class="plan reveal" id="plan-free">
           <h3>Free</h3>
-          <p class="lede">Try visual support at home. No card.</p>
+          <p class="lede">Try visual support</p>
           <div class="amount" style="font-family:var(--font-display);font-size:1.8rem;font-weight:800">£0</div>
           <ul>
             <li>Brushing, Shower, Core routines</li>
-            <li>ABC, Football, Yoga (starter cards)</li>
+            <li>ABC, Football, Yoga activities</li>
             <li>My Voice: Core, Quick Talk, Phrases</li>
-            <li>Schedule, First and Then, Focus (no timers)</li>
+            <li>Library, Schedule, First &amp; Then, Focus</li>
           </ul>
           <a class="btn btn-ghost" href="https://pixtolearn-parents.vercel.app/?plan=free" target="_blank" rel="noopener">Start free</a>
         </article>
         <article class="plan highlight reveal" id="plan-plus">
           <h3>Plus</h3>
-          <p class="lede">Everyday independence. First paid level.</p>
+          <p class="lede">Build everyday independence</p>
           <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:800">£7-12<span style="font-size:1rem;font-weight:600"> / mo</span></div>
           <ul>
-            <li>Self-care library (clothes, toilet, haircare…)</li>
-            <li>Emotions, sensory, emergency, eating out</li>
-            <li>Focus timers + more activity packs</li>
-            <li>My Voice + Context · 7-day trial planned</li>
+            <li>Full WOW everyday library unlock</li>
+            <li>Create routines from open libraries</li>
+            <li>More Break It Down activity packs</li>
+            <li>Focus timers + 7-day trial planned</li>
           </ul>
           <a class="btn btn-primary" href="contact.html?plan=plus#contact-form">Start Plus waitlist</a>
         </article>
         <article class="plan reveal" id="plan-premium">
           <h3>Premium</h3>
-          <p class="lede">Community life and deeper communication.</p>
+          <p class="lede">Personalise communication &amp; support</p>
           <div class="amount soon">From £19 / mo</div>
           <ul>
-            <li>Travel, public spaces, mobility, health packs</li>
-            <li>Full sports prep + richer activity decks</li>
-            <li>My Voice: My World, Words, personalisation</li>
-            <li>Centres: multi-seat quotes on request</li>
+            <li>My Voice: Context, My World, Words</li>
+            <li>Personal cards and deeper boards</li>
+            <li>Everything in Plus for the family</li>
+            <li>Multi-seat centre quotes on request</li>
           </ul>
           <a class="btn btn-ghost" href="contact.html?plan=premium#contact-form">Talk about Premium</a>
         </article>
       </div>
-      <p class="note reveal" style="margin-top:1.25rem">Bundle idea: Full Pack buyers can receive months of PixtoLearn App Plus included. Centres and Academy seats: ask when you order. Deep links: <a href="#plan-free">Free</a> · <a href="#plan-plus">Plus</a> · <a href="#plan-premium">Premium</a>.</p>
+      <p class="note reveal" style="margin-top:1.25rem">Plus unlocks the full everyday library. Premium deepens My Voice and personalisation. Bundle idea: Full Pack buyers can receive months of PixtoLearn App Plus included. Deep links: <a href="#plan-free">Free</a> | <a href="#plan-plus">Plus</a> | <a href="#plan-premium">Premium</a>.</p>
     </div>
   </section>
 
