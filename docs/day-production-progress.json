@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-14",
-  "block": "casts-opposite",
+  "block": "wave2-casts-complete",
   "completed_packs": [
     "washing-hands",
     "public-toilet",
@@ -38,22 +38,22 @@
   "wave2_art_todo": [],
   "casts": {
     "football": "boy+girl complete",
-    "washing-hands": "girl+boy complete",
+    "washing-hands": "boy+girl complete",
     "public-toilet": "boy+girl complete",
-    "at-the-optician": "girl+boy complete",
+    "at-the-optician": "boy+girl complete",
     "basketball": "boy+girl complete",
-    "yoga": "girl+boy complete",
+    "yoga": "boy+girl complete",
     "fire-drill": "boy+girl complete",
     "hearing-test": "boy+girl complete",
-    "changing-lessons": "girl+boy complete",
-    "bright-lights": "boy primary seeded; girl pending",
-    "basic-first-aid": "girl primary seeded; boy pending",
-    "physiotherapy": "girl primary seeded; boy pending"
+    "changing-lessons": "boy+girl complete",
+    "bright-lights": "boy+girl complete",
+    "basic-first-aid": "boy+girl complete",
+    "physiotherapy": "boy+girl complete"
   },
-  "in_progress": "bright-lights girl opposite cast",
+  "in_progress": null,
   "notes": [
-    "Dual-gender complete: toilet, optician, yoga, basketball, fire-drill, hearing-test, changing-lessons",
-    "Remaining Wave2 opposites: bright-lights, basic-first-aid, physiotherapy",
-    "pixtolearn-support push still blocked HTTP 500 (~6GB); local commits present"
+    "Wave1+Wave2 dual-gender casts complete for all listed packs",
+    "Parents cast manifest synced and pushed",
+    "pixtolearn-support still cannot push: HTTP 500 on ~6GB art; local commits ahead with no upstream"
   ]
 }
