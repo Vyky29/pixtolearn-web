@@ -1,0 +1,208 @@
+{
+  "version": "1.0",
+  "product": "wow-routines",
+  "family": {
+    "id": "cooking",
+    "status": "planned",
+    "locked_at": "2026-08-14",
+    "label": {
+      "en": "Cooking",
+      "es": "Cocina"
+    },
+    "colour": "#C45C26",
+    "colour_name": "Kitchen copper",
+    "axis": "home-kitchen",
+    "question": "Which simple cooking task am I doing at home?",
+    "not": [
+      "home-living chores (laundry, bins, bed)",
+      "eating-out (cafe, restaurant)",
+      "life-skills umbrella as family id"
+    ],
+    "membership": {
+      "free": ["make-toast"],
+      "plus": [
+        "pour-cereal",
+        "fruit-snack",
+        "make-sandwich",
+        "microwave-meal-with-adult",
+        "tidy-kitchen"
+      ],
+      "premium": ["scramble-eggs-with-adult"]
+    }
+  },
+  "safety_grain": {
+    "id": "cooking-safety-v1",
+    "note": "Every pack starts with wash hands. Heat and knives always with-adult steps.",
+    "prefix": [
+      {
+        "id": "wash-hands",
+        "en": "wash hands",
+        "es": "lavar manos"
+      }
+    ],
+    "suffix": [
+      {
+        "id": "clean-up",
+        "en": "clean up",
+        "es": "limpiar"
+      },
+      {
+        "id": "eat-or-put-away",
+        "en": "eat or put away",
+        "es": "comer o guardar"
+      }
+    ]
+  },
+  "packs": [
+    {
+      "id": "make-toast",
+      "status": "planned",
+      "membership": "free",
+      "title": {
+        "en": "Make toast",
+        "es": "Hacer tostada"
+      },
+      "actions": [
+        "wash hands",
+        "get bread",
+        "put in toaster",
+        "wait",
+        "take toast out (careful hot)",
+        "butter optional",
+        "plate",
+        "clean up",
+        "eat"
+      ]
+    },
+    {
+      "id": "pour-cereal",
+      "status": "planned",
+      "membership": "plus",
+      "title": {
+        "en": "Pour cereal",
+        "es": "Servir cereales"
+      },
+      "actions": [
+        "wash hands",
+        "get bowl",
+        "pour cereal",
+        "pour milk",
+        "get spoon",
+        "sit",
+        "eat",
+        "rinse bowl"
+      ]
+    },
+    {
+      "id": "fruit-snack",
+      "status": "planned",
+      "membership": "plus",
+      "title": {
+        "en": "Fruit snack",
+        "es": "Snack de fruta"
+      },
+      "actions": [
+        "wash hands",
+        "choose fruit",
+        "wash fruit",
+        "peel or cut with adult",
+        "plate",
+        "eat",
+        "bin scraps",
+        "clean up"
+      ]
+    },
+    {
+      "id": "make-sandwich",
+      "status": "planned",
+      "membership": "plus",
+      "title": {
+        "en": "Make a sandwich",
+        "es": "Hacer un sandwich"
+      },
+      "actions": [
+        "wash hands",
+        "get bread",
+        "spread",
+        "add filling",
+        "close sandwich",
+        "cut with adult optional",
+        "plate",
+        "clean up",
+        "eat"
+      ]
+    },
+    {
+      "id": "microwave-meal-with-adult",
+      "status": "planned",
+      "membership": "plus",
+      "title": {
+        "en": "Microwave meal (with adult)",
+        "es": "Comida microondas (con adulto)"
+      },
+      "actions": [
+        "wash hands",
+        "choose meal",
+        "open pack with adult",
+        "put in microwave with adult",
+        "set time with adult",
+        "wait",
+        "adult removes (hot)",
+        "stir or wait cool",
+        "eat",
+        "clean up"
+      ]
+    },
+    {
+      "id": "tidy-kitchen",
+      "status": "planned",
+      "membership": "plus",
+      "title": {
+        "en": "Tidy kitchen",
+        "es": "Ordenar cocina"
+      },
+      "actions": [
+        "wash hands",
+        "clear table",
+        "put food away",
+        "dishes to sink",
+        "wipe surface",
+        "bin",
+        "done"
+      ]
+    },
+    {
+      "id": "scramble-eggs-with-adult",
+      "status": "planned",
+      "membership": "premium",
+      "title": {
+        "en": "Scramble eggs (with adult)",
+        "es": "Huevos revueltos (con adulto)"
+      },
+      "actions": [
+        "wash hands",
+        "apron",
+        "get eggs",
+        "crack with adult",
+        "whisk",
+        "pan on with adult",
+        "cook with adult",
+        "plate",
+        "turn off with adult",
+        "clean up",
+        "eat"
+      ]
+    }
+  ],
+  "overlap_locks": [
+    {
+      "move_from_home_living": "simple-snack",
+      "to": "fruit-snack or pour-cereal",
+      "note": "home-living keeps chores; cooking owns food prep"
+    },
+    {
+      "keep_in_eating_out": ["at-a-cafe", "fast-food", "school-lunch"],
+      "note": "Eating out is not cooking"
+    }
+  ]
+}

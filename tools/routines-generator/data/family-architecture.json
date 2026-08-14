@@ -1,10 +1,10 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "product": "wow-routines",
   "status": "locked",
   "locked_at": "2026-08-07",
   "updated": "2026-08-14",
-  "goal": "WOW taxonomy with sports-prep vs sports-activities split; naming lock against skill decks and travel.",
+  "goal": "WOW taxonomy with one sports family and one pack per sport; naming lock against skill decks and travel.",
   "organising_axes": [
     {
       "id": "vocab-regulation",
@@ -19,7 +19,8 @@
       "id": "body-at-home",
       "families": [
         "self-care",
-        "home-living"
+        "home-living",
+        "cooking"
       ]
     },
     {
@@ -31,8 +32,7 @@
     {
       "id": "where-i-go",
       "families": [
-        "sports-prep",
-        "sports-activities",
+        "sports",
         "travel",
         "public-spaces",
         "eating-out",
@@ -101,20 +101,12 @@
       "colour_name": "Transport blue"
     },
     {
-      "id": "sports-prep",
-      "axis": "prep-before-sport",
-      "question": "How do I get ready before sport starts?",
+      "id": "sports",
+      "axis": "sport-session",
+      "question": "Which sport session am I doing?",
       "colour": "#C77830",
       "colour_name": "Active amber",
-      "note": "Kit, arrive, change, safety, wait, ready. No in-sport actions."
-    },
-    {
-      "id": "sports-activities",
-      "axis": "sport-session",
-      "question": "What do I do during the sport session?",
-      "colour": "#B85A2A",
-      "colour_name": "Session amber",
-      "note": "Warm-up through finish/exit. Short WOW grain; deep skills stay in sport skill decks."
+      "note": "One pack per sport: kit/arrive/ready then warm-up through finish/exit in one sequence."
     },
     {
       "id": "travel",
@@ -322,12 +314,31 @@
         "laundry",
         "washing-up",
         "taking-bins-out",
-        "simple-snack",
         "vacuum-or-tidy",
         "packing-school-bag",
         "bedtime-routine",
         "visiting-grandparents",
         "sleepover"
+      ],
+      "note": "simple-snack moved to cooking family (see cooking-family-stub.json)."
+    },
+    {
+      "id": "cooking",
+      "axis": "home-kitchen",
+      "question": "Which simple cooking task am I doing at home?",
+      "colour": "#C45C26",
+      "colour_name": "Kitchen copper",
+      "why": "Kitchen food-prep autonomy. Distinct from home-living chores and eating-out.",
+      "status": "planned-2026-08-14",
+      "spec": "docs/cooking-family-stub.json",
+      "packs": [
+        "make-toast",
+        "pour-cereal",
+        "fruit-snack",
+        "make-sandwich",
+        "microwave-meal-with-adult",
+        "tidy-kitchen",
+        "scramble-eggs-with-adult"
       ]
     },
     {
@@ -360,53 +371,6 @@
     }
   ],
   "add_to_existing": {
-    "sports-prep": {
-      "shipped": [
-        "climbing-prep",
-        "swimming-prep",
-        "gym-prep",
-        "hiking-prep",
-        "cycling-prep",
-        "tennis-prep",
-        "trampoline-prep"
-      ],
-      "p2": [
-        "basketball-prep",
-        "yoga-prep"
-      ],
-      "p3_adventure": [
-        "skiing-prep",
-        "snowboarding-prep",
-        "surfing-prep",
-        "snorkelling-prep",
-        "scuba-diving-prep",
-        "ice-skating-prep",
-        "horse-riding-prep",
-        "kayak-or-paddle-prep"
-      ],
-      "p3_leisure_team": [
-        "rugby-prep",
-        "volleyball-prep",
-        "badminton-prep",
-        "athletics-prep",
-        "martial-arts-prep",
-        "dance-prep",
-        "bowling-prep",
-        "soft-play-prep",
-        "skatepark-prep"
-      ],
-      "p3_optional": [
-        "movement-prep"
-      ],
-      "never": [
-        "abc-prep"
-      ],
-      "note": "abc-prep retired: ABC is a skill deck product, not a WOW prep pack.",
-      "pack_pattern": "objects (kit) -> arrive -> change -> safety -> wait -> ready",
-      "wave1": [
-        "football-prep"
-      ]
-    },
     "public-spaces": {
       "p2": [],
       "p3": [
@@ -452,45 +416,51 @@
     "core": {
       "new_required": []
     },
-    "sports-activities": {
+    "sports": {
       "shipped": [
-        "climbing-activity",
-        "swimming-activity",
-        "gym-activity",
-        "hiking-activity",
-        "cycling-activity",
-        "tennis-activity",
-        "trampoline-activity"
+        "climbing",
+        "swimming",
+        "gym",
+        "hiking",
+        "cycling",
+        "tennis",
+        "trampoline"
       ],
       "p2": [
-        "basketball-activity",
-        "yoga-activity"
+        "basketball",
+        "yoga"
       ],
       "p3_adventure": [
-        "skiing-activity",
-        "snowboarding-activity",
-        "surfing-activity",
-        "snorkelling-activity",
-        "scuba-diving-activity",
-        "ice-skating-activity",
-        "horse-riding-activity",
-        "kayak-or-paddle-activity"
+        "skiing",
+        "snowboarding",
+        "surfing",
+        "snorkelling",
+        "scuba-diving",
+        "ice-skating",
+        "horse-riding",
+        "kayak-or-paddle"
       ],
       "p3_leisure_team": [
-        "rugby-activity",
-        "volleyball-activity",
-        "badminton-activity",
-        "athletics-activity",
-        "martial-arts-activity",
-        "dance-activity",
-        "bowling-activity",
-        "soft-play-activity",
-        "skatepark-activity"
+        "rugby",
+        "volleyball",
+        "badminton",
+        "athletics",
+        "martial-arts",
+        "dance",
+        "bowling",
+        "soft-play",
+        "skatepark"
       ],
-      "pack_pattern": "warm-up -> sport actions -> rest -> finish / exit",
-      "skill_deck_handoff": "Swimming and Climbing deep skills stay in sport skill decks; WOW activity packs stay short session flows.",
+      "p3_optional": [
+        "movement"
+      ],
+      "never": [
+        "abc-prep"
+      ],
+      "note": "One pack per sport. Skill decks stay separate. No new -wow or sport -prep/-activity pairs.",
+      "pack_pattern": "objects (kit) -> arrive/change/safety -> ready -> warm-up -> sport actions -> rest -> finish/exit",
       "wave1": [
-        "football-activity"
+        "football"
       ]
     }
   },
@@ -499,7 +469,7 @@
       "id": "bundle-winter-trip",
       "mixes": [
         "cold-day",
-        "skiing-prep",
+        "skiing",
         "going-to-the-mountain",
         "waiting"
       ]
@@ -526,7 +496,7 @@
       "mixes": [
         "hot-day",
         "going-to-the-beach",
-        "surfing-prep or snorkelling-prep"
+        "surfing or snorkelling"
       ]
     },
     {
@@ -537,6 +507,17 @@
         "headphones-and-breaks",
         "waiting"
       ]
+    },
+    {
+      "id": "bundle-city-days",
+      "status": "planned-2026-08-14",
+      "product_home": "routines",
+      "membership": "premium",
+      "spec": "docs/city-days-catalogue.json",
+      "note": "Visit packs only (micro 4-5 steps). Transport stays in travel. Chain with Create my routine. Schedules may reuse covers as tiles but is not City home.",
+      "cities": 12,
+      "packs_planned": 84,
+      "visit_grain": "arrive → enter/look → photo optional → exit → next/meet adult"
     }
   ],
   "p1_pack_ids": [
@@ -562,7 +543,8 @@
     "4_situation_stories_align": "catalogue_mapped",
     "5_ui": "todo",
     "content_review_p1": "approved-pre-art",
-    "6_p3_named_scale": "named-2026-08-14"
+    "6_p3_named_scale": "named-2026-08-14",
+    "7_future_versions_locked": "docs/future-versions-locked-plan.html"
   },
   "overlap_locks": [
     {
@@ -608,11 +590,6 @@
       "plus": "inject noise/crowd cards into place packs when useful"
     },
     {
-      "keep_in": "sports-prep",
-      "vs": "sports-activities",
-      "rule": "Prep ends at ready / enter venue. Activity starts at first sport action."
-    },
-    {
       "keep_in": "travel",
       "ids": [
         "going-to-the-mountain",
@@ -620,12 +597,10 @@
         "attending-a-sport-event"
       ],
       "vs_sports": [
-        "hiking-prep",
-        "hiking-activity",
-        "swimming-prep",
-        "swimming-activity"
+        "hiking",
+        "swimming"
       ],
-      "rule": "Travel = day destination or spectator. Sports = prep + activity session."
+      "rule": "Travel = day destination or spectator. Sports = one pack per sport session (kit through finish)."
     },
     {
       "product": "sport-skill-deck",
@@ -636,38 +611,32 @@
         "Football",
         "Yoga"
       ],
-      "vs_wow": "WOW uses {sport}-prep / {sport}-activity labels. Skill decks never use -prep or -wow."
+      "vs_wow": "WOW uses one {sport} pack. Skill decks never use -prep or -wow."
     },
     {
       "legacy_redirects": {
-        "climbing-wow": {
-          "prep": "climbing-prep",
-          "activity": "climbing-activity"
-        },
-        "swimming-wow": {
-          "prep": "swimming-prep",
-          "activity": "swimming-activity"
-        },
-        "gym-activities": {
-          "prep": "gym-prep",
-          "activity": "gym-activity"
-        },
-        "hiking": {
-          "prep": "hiking-prep",
-          "activity": "hiking-activity"
-        },
-        "trampoline-wow": {
-          "prep": "trampoline-prep",
-          "activity": "trampoline-activity"
-        },
-        "cycling-prep-hybrid": {
-          "prep": "cycling-prep",
-          "activity": "cycling-activity"
-        },
-        "tennis-prep-hybrid": {
-          "prep": "tennis-prep",
-          "activity": "tennis-activity"
-        }
+        "climbing-wow": "climbing",
+        "swimming-wow": "swimming",
+        "gym-activities": "gym",
+        "trampoline-wow": "trampoline",
+        "climbing-prep": "climbing",
+        "climbing-activity": "climbing",
+        "swimming-prep": "swimming",
+        "swimming-activity": "swimming",
+        "gym-prep": "gym",
+        "gym-activity": "gym",
+        "hiking-prep": "hiking",
+        "hiking-activity": "hiking",
+        "cycling-prep": "cycling",
+        "cycling-activity": "cycling",
+        "tennis-prep": "tennis",
+        "tennis-activity": "tennis",
+        "trampoline-prep": "trampoline",
+        "trampoline-activity": "trampoline",
+        "football-prep": "football",
+        "football-activity": "football",
+        "cycling-prep-hybrid": "cycling",
+        "tennis-prep-hybrid": "tennis"
       }
     }
   ],
@@ -681,16 +650,17 @@
     "bundles": "Catalogue remix of shipped packs only; no new artwork"
   },
   "naming_convention": {
-    "wow_sports_prep": "{sport}-prep",
-    "wow_sports_activity": "{sport}-activity",
+    "wow_sports": "{sport}",
     "travel_day": "going-to-{place}",
     "public_place": "at-the-{place}",
     "forbidden_new_suffixes": [
       "-wow"
     ],
-    "shop_labels_must_include": [
-      "Prep",
-      "Activity"
-    ]
+    "forbidden_new_sport_pairs": [
+      "{sport}-prep",
+      "{sport}-activity"
+    ],
+    "shop_labels": "Sport name only (Climbing, Football). No Prep/Activity suffixes.",
+    "note": "Unified 2026-08-14: prep+activity collapsed into one pack per sport."
   }
 }

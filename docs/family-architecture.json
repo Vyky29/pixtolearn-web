@@ -19,7 +19,8 @@
       "id": "body-at-home",
       "families": [
         "self-care",
-        "home-living"
+        "home-living",
+        "cooking"
       ]
     },
     {
@@ -313,12 +314,31 @@
         "laundry",
         "washing-up",
         "taking-bins-out",
-        "simple-snack",
         "vacuum-or-tidy",
         "packing-school-bag",
         "bedtime-routine",
         "visiting-grandparents",
         "sleepover"
+      ],
+      "note": "simple-snack moved to cooking family (see cooking-family-stub.json)."
+    },
+    {
+      "id": "cooking",
+      "axis": "home-kitchen",
+      "question": "Which simple cooking task am I doing at home?",
+      "colour": "#C45C26",
+      "colour_name": "Kitchen copper",
+      "why": "Kitchen food-prep autonomy. Distinct from home-living chores and eating-out.",
+      "status": "planned-2026-08-14",
+      "spec": "docs/cooking-family-stub.json",
+      "packs": [
+        "make-toast",
+        "pour-cereal",
+        "fruit-snack",
+        "make-sandwich",
+        "microwave-meal-with-adult",
+        "tidy-kitchen",
+        "scramble-eggs-with-adult"
       ]
     },
     {
@@ -487,6 +507,17 @@
         "headphones-and-breaks",
         "waiting"
       ]
+    },
+    {
+      "id": "bundle-city-days",
+      "status": "planned-2026-08-14",
+      "product_home": "routines",
+      "membership": "premium",
+      "spec": "docs/city-days-catalogue.json",
+      "note": "Visit packs only (micro 4-5 steps). Transport stays in travel. Chain with Create my routine. Schedules may reuse covers as tiles but is not City home.",
+      "cities": 12,
+      "packs_planned": 84,
+      "visit_grain": "arrive → enter/look → photo optional → exit → next/meet adult"
     }
   ],
   "p1_pack_ids": [
@@ -512,7 +543,8 @@
     "4_situation_stories_align": "catalogue_mapped",
     "5_ui": "todo",
     "content_review_p1": "approved-pre-art",
-    "6_p3_named_scale": "named-2026-08-14"
+    "6_p3_named_scale": "named-2026-08-14",
+    "7_future_versions_locked": "docs/future-versions-locked-plan.html"
   },
   "overlap_locks": [
     {

@@ -1,0 +1,129 @@
+{
+  "title": "Future versions WOW art overnight",
+  "status": "in_progress",
+  "started": "2026-08-14",
+  "locked_plan": "docs/future-versions-locked-plan.html",
+  "style": {
+    "illustration": "flat 2D, thin black outlines, muted flat colours",
+    "background": "pure white",
+    "forbidden": [
+      "text",
+      "logos",
+      "watermarks",
+      "grey frames",
+      "inner vignettes"
+    ],
+    "install": "scripts/install_art.py --fill 0.72",
+    "size": [
+      531,
+      648
+    ],
+    "dest_support": "pixtolearn-support/public/wow-routines/cards/{pack-id}/",
+    "dest_generator": "PIXTOLEARN/tools/routines-generator/assets/cards/{pack-id}/"
+  },
+  "avatar_locks": {
+    "make-toast": "C1 apricot top #E8A070 grey trousers",
+    "pour-cereal": "C1",
+    "fruit-snack": "C2",
+    "make-sandwich": "C1",
+    "microwave-meal-with-adult": "C1 + adult hand",
+    "tidy-kitchen": "C2",
+    "scramble-eggs-with-adult": "C1 + adult",
+    "city-days": "C1 teal jacket grey trousers; landmark hero on cover"
+  },
+  "waves": [
+    {
+      "id": "A1",
+      "name": "cooking-pilot",
+      "packs": [
+        "make-toast"
+      ],
+      "priority": "P0",
+      "status": "complete"
+    },
+    {
+      "id": "A2",
+      "name": "city-pilot-london",
+      "packs": [
+        "visit-london-big-ben-parliament"
+      ],
+      "priority": "P0",
+      "status": "complete"
+    },
+    {
+      "id": "B",
+      "name": "cooking-rest",
+      "packs": [
+        "pour-cereal",
+        "fruit-snack",
+        "make-sandwich",
+        "microwave-meal-with-adult",
+        "tidy-kitchen",
+        "scramble-eggs-with-adult"
+      ],
+      "priority": "P1",
+      "status": "in_progress"
+    },
+    {
+      "id": "C",
+      "name": "city-london-full",
+      "packs": [
+        "visit-london-london-eye",
+        "visit-london-tower-bridge",
+        "visit-london-british-museum",
+        "visit-london-buckingham-palace",
+        "visit-london-hyde-park",
+        "visit-london-natural-history-museum"
+      ],
+      "priority": "P1",
+      "status": "queued"
+    },
+    {
+      "id": "D",
+      "name": "city-scale",
+      "note": "Remaining 11 cities x 7 visit packs after London pilot QA",
+      "priority": "P2",
+      "status": "queued"
+    },
+    {
+      "id": "E",
+      "name": "schedule-day-tiles",
+      "lemmas": "lemma-sources/schedule-day.json",
+      "style": "PECS square 1024, gender-neutral, Fitzgerald slate",
+      "priority": "P1",
+      "status": "partial",
+      "done": 6,
+      "total": 16
+    },
+    {
+      "id": "F",
+      "name": "my-voice-neutral-verbs-R1",
+      "spec": "ART-SPEC-NEUTRAL-VERBS.md",
+      "priority": "P1",
+      "status": "queued"
+    }
+  ],
+  "card_totals_estimate": {
+    "cooking_7_packs": "~100 cards",
+    "city_84_packs": "~1000 cards",
+    "schedule_day": 16,
+    "verbs_R1": "~50"
+  },
+  "progress": {
+    "installed_packs": [
+      "make-toast",
+      "visit-london-big-ben-parliament"
+    ],
+    "in_flight": [
+      "pour-cereal"
+    ],
+    "schedule_day_tiles_done": [
+      "morning",
+      "school",
+      "break",
+      "lunch",
+      "home",
+      "finished"
+    ]
+  }
+}

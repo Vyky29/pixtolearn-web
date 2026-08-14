@@ -1,0 +1,165 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.1-future-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "tidy-kitchen",
+  "family": "cooking",
+  "status": "planned",
+  "art": "pending",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "future-cooking",
+  "membership": "plus",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft apricot top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant. Heat/knife steps with adult."
+  },
+  "label": {
+    "en": "Tidy kitchen",
+    "es": "Ordenar cocina"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "tidy kitchen",
+      "es": "ordenar cocina"
+    },
+    "wow_layer": "cover",
+    "art": "pending"
+  },
+  "items": [
+    {
+      "id": "cloth",
+      "slug": "cloth",
+      "title": {
+        "en": "cloth",
+        "es": "pano"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "bin",
+      "slug": "bin",
+      "title": {
+        "en": "bin",
+        "es": "papelera"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "sponge",
+      "slug": "sponge",
+      "title": {
+        "en": "sponge",
+        "es": "esponja"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "sink",
+      "slug": "sink",
+      "title": {
+        "en": "sink",
+        "es": "fregadero"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "clear-table",
+      "slug": "clear-table",
+      "title": {
+        "en": "clear table",
+        "es": "quitar mesa"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "put-food-away",
+      "slug": "put-food-away",
+      "title": {
+        "en": "put food away",
+        "es": "guardar comida"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "dishes-to-sink",
+      "slug": "dishes-to-sink",
+      "title": {
+        "en": "dishes to sink",
+        "es": "platos al fregadero"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "wipe-surface",
+      "slug": "wipe-surface",
+      "title": {
+        "en": "wipe surface",
+        "es": "limpiar superficie"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "bin",
+      "slug": "bin",
+      "title": {
+        "en": "bin",
+        "es": "basura"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "done",
+      "slug": "done",
+      "title": {
+        "en": "done",
+        "es": "listo"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 7,
+    "cards": 12
+  },
+  "spec_status": "spec-ready"
+}

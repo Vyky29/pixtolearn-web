@@ -1,5 +1,5 @@
 {
-  "version": "1.6-wave1-high-demand",
+  "version": "1.7-future-versions-mounted",
   "art_cache_bust": "2026-08-09-toilet-sitfix-2",
   "product": "wow-routines",
   "format": {
@@ -126,6 +126,16 @@
       "colour": "#B86B4A",
       "colour_name": "Meal clay",
       "architecture": "p1"
+    },
+    {
+      "id": "cooking",
+      "label": {
+        "en": "Cooking",
+        "es": "Cocina"
+      },
+      "colour": "#C45C26",
+      "colour_name": "Kitchen copper",
+      "architecture": "future"
     },
     {
       "id": "emergency-help",
@@ -2731,8 +2741,8 @@
     {
       "id": "physiotherapy",
       "family": "health-appointments",
-      "status": "ready",
-      "art": "installed",
+      "status": "spec-ready",
+      "art": "todo",
       "data": "physiotherapy.json",
       "label": {
         "en": "Physiotherapy",
@@ -2841,6 +2851,2540 @@
       },
       "architecture_wave": "wave2",
       "content_review": "approved-pre-art"
+    },
+    {
+      "id": "make-toast",
+      "family": "cooking",
+      "status": "ready",
+      "data": "make-toast.json",
+      "label": {
+        "en": "Make toast",
+        "es": "Hacer tostada"
+      },
+      "audience": "child",
+      "architecture_wave": "future-cooking",
+      "membership": "free",
+      "art": "installed",
+      "counts": {
+        "items": 5,
+        "actions": 9,
+        "cards": 15
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "pour-cereal",
+      "family": "cooking",
+      "status": "planned",
+      "data": "pour-cereal.json",
+      "label": {
+        "en": "Pour cereal",
+        "es": "Servir cereales"
+      },
+      "audience": "child",
+      "architecture_wave": "future-cooking",
+      "membership": "plus",
+      "art": "pending",
+      "counts": {
+        "items": 4,
+        "actions": 8,
+        "cards": 13
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "fruit-snack",
+      "family": "cooking",
+      "status": "planned",
+      "data": "fruit-snack.json",
+      "label": {
+        "en": "Fruit snack",
+        "es": "Snack de fruta"
+      },
+      "audience": "child",
+      "architecture_wave": "future-cooking",
+      "membership": "plus",
+      "art": "pending",
+      "counts": {
+        "items": 4,
+        "actions": 8,
+        "cards": 13
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "make-sandwich",
+      "family": "cooking",
+      "status": "planned",
+      "data": "make-sandwich.json",
+      "label": {
+        "en": "Make a sandwich",
+        "es": "Hacer un sandwich"
+      },
+      "audience": "child",
+      "architecture_wave": "future-cooking",
+      "membership": "plus",
+      "art": "pending",
+      "counts": {
+        "items": 5,
+        "actions": 9,
+        "cards": 15
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "microwave-meal-with-adult",
+      "family": "cooking",
+      "status": "planned",
+      "data": "microwave-meal-with-adult.json",
+      "label": {
+        "en": "Microwave meal (with adult)",
+        "es": "Comida microondas (con adulto)"
+      },
+      "audience": "child",
+      "architecture_wave": "future-cooking",
+      "membership": "plus",
+      "art": "pending",
+      "counts": {
+        "items": 4,
+        "actions": 10,
+        "cards": 15
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "tidy-kitchen",
+      "family": "cooking",
+      "status": "planned",
+      "data": "tidy-kitchen.json",
+      "label": {
+        "en": "Tidy kitchen",
+        "es": "Ordenar cocina"
+      },
+      "audience": "child",
+      "architecture_wave": "future-cooking",
+      "membership": "plus",
+      "art": "pending",
+      "counts": {
+        "items": 4,
+        "actions": 7,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "scramble-eggs-with-adult",
+      "family": "cooking",
+      "status": "planned",
+      "data": "scramble-eggs-with-adult.json",
+      "label": {
+        "en": "Scramble eggs (with adult)",
+        "es": "Huevos revueltos (con adulto)"
+      },
+      "audience": "child",
+      "architecture_wave": "future-cooking",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 11,
+        "cards": 18
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-london-big-ben-parliament",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "london",
+      "status": "ready",
+      "data": "visit-london-big-ben-parliament.json",
+      "label": {
+        "en": "Visit Big Ben & Parliament",
+        "es": "Visitar Big Ben y Parlamento"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "installed",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-london-london-eye",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "london",
+      "status": "planned",
+      "data": "visit-london-london-eye.json",
+      "label": {
+        "en": "Visit London Eye",
+        "es": "Visitar London Eye"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-london-tower-bridge",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "london",
+      "status": "planned",
+      "data": "visit-london-tower-bridge.json",
+      "label": {
+        "en": "Visit Tower Bridge",
+        "es": "Visitar Tower Bridge"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-london-british-museum",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "london",
+      "status": "planned",
+      "data": "visit-london-british-museum.json",
+      "label": {
+        "en": "Visit British Museum",
+        "es": "Visitar Museo Britanico"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-london-buckingham-palace",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "london",
+      "status": "planned",
+      "data": "visit-london-buckingham-palace.json",
+      "label": {
+        "en": "Visit Buckingham Palace",
+        "es": "Visitar Palacio de Buckingham"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-london-hyde-park",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "london",
+      "status": "planned",
+      "data": "visit-london-hyde-park.json",
+      "label": {
+        "en": "Visit Hyde Park",
+        "es": "Visitar Hyde Park"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-london-natural-history-museum",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "london",
+      "status": "planned",
+      "data": "visit-london-natural-history-museum.json",
+      "label": {
+        "en": "Visit Natural History Museum",
+        "es": "Visitar Museo de Historia Natural"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-paris-eiffel-tower",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "paris",
+      "status": "planned",
+      "data": "visit-paris-eiffel-tower.json",
+      "label": {
+        "en": "Visit Eiffel Tower",
+        "es": "Visitar Torre Eiffel"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-paris-louvre-museum",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "paris",
+      "status": "planned",
+      "data": "visit-paris-louvre-museum.json",
+      "label": {
+        "en": "Visit Louvre Museum",
+        "es": "Visitar Museo del Louvre"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-paris-notre-dame",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "paris",
+      "status": "planned",
+      "data": "visit-paris-notre-dame.json",
+      "label": {
+        "en": "Visit Notre-Dame",
+        "es": "Visitar Notre-Dame"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-paris-arc-de-triomphe",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "paris",
+      "status": "planned",
+      "data": "visit-paris-arc-de-triomphe.json",
+      "label": {
+        "en": "Visit Arc de Triomphe",
+        "es": "Visitar Arco de Triunfo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-paris-seine-river-walk",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "paris",
+      "status": "planned",
+      "data": "visit-paris-seine-river-walk.json",
+      "label": {
+        "en": "Visit Seine river walk",
+        "es": "Visitar Paseo por el Sena"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-paris-luxembourg-gardens",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "paris",
+      "status": "planned",
+      "data": "visit-paris-luxembourg-gardens.json",
+      "label": {
+        "en": "Visit Luxembourg Gardens",
+        "es": "Visitar Jardin de Luxemburgo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-paris-sacre-coeur",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "paris",
+      "status": "planned",
+      "data": "visit-paris-sacre-coeur.json",
+      "label": {
+        "en": "Visit Sacre-Coeur",
+        "es": "Visitar Sacre-Coeur"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-new-york-statue-of-liberty-area",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "new-york",
+      "status": "planned",
+      "data": "visit-new-york-statue-of-liberty-area.json",
+      "label": {
+        "en": "Visit Statue of Liberty area",
+        "es": "Visitar Zona Estatua de la Libertad"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-new-york-central-park",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "new-york",
+      "status": "planned",
+      "data": "visit-new-york-central-park.json",
+      "label": {
+        "en": "Visit Central Park",
+        "es": "Visitar Central Park"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-new-york-times-square",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "new-york",
+      "status": "planned",
+      "data": "visit-new-york-times-square.json",
+      "label": {
+        "en": "Visit Times Square",
+        "es": "Visitar Times Square"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-new-york-empire-state-building",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "new-york",
+      "status": "planned",
+      "data": "visit-new-york-empire-state-building.json",
+      "label": {
+        "en": "Visit Empire State Building",
+        "es": "Visitar Empire State Building"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-new-york-brooklyn-bridge-walk",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "new-york",
+      "status": "planned",
+      "data": "visit-new-york-brooklyn-bridge-walk.json",
+      "label": {
+        "en": "Visit Brooklyn Bridge walk",
+        "es": "Visitar Paseo Brooklyn Bridge"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-new-york-metropolitan-museum",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "new-york",
+      "status": "planned",
+      "data": "visit-new-york-metropolitan-museum.json",
+      "label": {
+        "en": "Visit Metropolitan Museum",
+        "es": "Visitar Museo Metropolitano"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-new-york-natural-history-museum-nyc",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "new-york",
+      "status": "planned",
+      "data": "visit-new-york-natural-history-museum-nyc.json",
+      "label": {
+        "en": "Visit Natural History Museum NYC",
+        "es": "Visitar Museo Historia Natural NYC"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-tokyo-senso-ji-temple",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "tokyo",
+      "status": "planned",
+      "data": "visit-tokyo-senso-ji-temple.json",
+      "label": {
+        "en": "Visit Senso-ji Temple",
+        "es": "Visitar Templo Senso-ji"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-tokyo-shibuya-crossing",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "tokyo",
+      "status": "planned",
+      "data": "visit-tokyo-shibuya-crossing.json",
+      "label": {
+        "en": "Visit Shibuya Crossing",
+        "es": "Visitar Cruce de Shibuya"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-tokyo-meiji-shrine",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "tokyo",
+      "status": "planned",
+      "data": "visit-tokyo-meiji-shrine.json",
+      "label": {
+        "en": "Visit Meiji Shrine",
+        "es": "Visitar Santuario Meiji"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-tokyo-tokyo-skytree",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "tokyo",
+      "status": "planned",
+      "data": "visit-tokyo-tokyo-skytree.json",
+      "label": {
+        "en": "Visit Tokyo Skytree",
+        "es": "Visitar Tokyo Skytree"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-tokyo-ueno-park",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "tokyo",
+      "status": "planned",
+      "data": "visit-tokyo-ueno-park.json",
+      "label": {
+        "en": "Visit Ueno Park",
+        "es": "Visitar Parque Ueno"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-tokyo-teamlab-borderless",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "tokyo",
+      "status": "planned",
+      "data": "visit-tokyo-teamlab-borderless.json",
+      "label": {
+        "en": "Visit teamLab Borderless",
+        "es": "Visitar teamLab Borderless"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-tokyo-imperial-palace-gardens",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "tokyo",
+      "status": "planned",
+      "data": "visit-tokyo-imperial-palace-gardens.json",
+      "label": {
+        "en": "Visit Imperial Palace gardens",
+        "es": "Visitar Jardines Palacio Imperial"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rome-colosseum",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rome",
+      "status": "planned",
+      "data": "visit-rome-colosseum.json",
+      "label": {
+        "en": "Visit Colosseum",
+        "es": "Visitar Coliseo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rome-roman-forum",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rome",
+      "status": "planned",
+      "data": "visit-rome-roman-forum.json",
+      "label": {
+        "en": "Visit Roman Forum",
+        "es": "Visitar Foro Romano"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rome-trevi-fountain",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rome",
+      "status": "planned",
+      "data": "visit-rome-trevi-fountain.json",
+      "label": {
+        "en": "Visit Trevi Fountain",
+        "es": "Visitar Fuente de Trevi"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rome-pantheon",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rome",
+      "status": "planned",
+      "data": "visit-rome-pantheon.json",
+      "label": {
+        "en": "Visit Pantheon",
+        "es": "Visitar Panteon"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rome-vatican-museums",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rome",
+      "status": "planned",
+      "data": "visit-rome-vatican-museums.json",
+      "label": {
+        "en": "Visit Vatican Museums",
+        "es": "Visitar Museos Vaticanos"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rome-st-peters-basilica",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rome",
+      "status": "planned",
+      "data": "visit-rome-st-peters-basilica.json",
+      "label": {
+        "en": "Visit St Peter's Basilica",
+        "es": "Visitar Basilica de San Pedro"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rome-villa-borghese-gardens",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rome",
+      "status": "planned",
+      "data": "visit-rome-villa-borghese-gardens.json",
+      "label": {
+        "en": "Visit Villa Borghese gardens",
+        "es": "Visitar Jardines Villa Borghese"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-barcelona-sagrada-familia",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "barcelona",
+      "status": "planned",
+      "data": "visit-barcelona-sagrada-familia.json",
+      "label": {
+        "en": "Visit Sagrada Familia",
+        "es": "Visitar Sagrada Familia"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-barcelona-park-guell",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "barcelona",
+      "status": "planned",
+      "data": "visit-barcelona-park-guell.json",
+      "label": {
+        "en": "Visit Park Guell",
+        "es": "Visitar Park Guell"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-barcelona-la-rambla-walk",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "barcelona",
+      "status": "planned",
+      "data": "visit-barcelona-la-rambla-walk.json",
+      "label": {
+        "en": "Visit La Rambla walk",
+        "es": "Visitar Paseo por La Rambla"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-barcelona-gothic-quarter",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "barcelona",
+      "status": "planned",
+      "data": "visit-barcelona-gothic-quarter.json",
+      "label": {
+        "en": "Visit Gothic Quarter",
+        "es": "Visitar Barrio Gotico"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-barcelona-casa-batllo",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "barcelona",
+      "status": "planned",
+      "data": "visit-barcelona-casa-batllo.json",
+      "label": {
+        "en": "Visit Casa Batllo",
+        "es": "Visitar Casa Batllo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-barcelona-barceloneta-beach",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "barcelona",
+      "status": "planned",
+      "data": "visit-barcelona-barceloneta-beach.json",
+      "label": {
+        "en": "Visit Barceloneta beach",
+        "es": "Visitar Playa Barceloneta"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-barcelona-camp-nou-exterior",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "barcelona",
+      "status": "planned",
+      "data": "visit-barcelona-camp-nou-exterior.json",
+      "label": {
+        "en": "Visit Camp Nou exterior",
+        "es": "Visitar Exterior Camp Nou"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-dubai-burj-khalifa",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "dubai",
+      "status": "planned",
+      "data": "visit-dubai-burj-khalifa.json",
+      "label": {
+        "en": "Visit Burj Khalifa",
+        "es": "Visitar Burj Khalifa"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-dubai-dubai-mall",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "dubai",
+      "status": "planned",
+      "data": "visit-dubai-dubai-mall.json",
+      "label": {
+        "en": "Visit Dubai Mall",
+        "es": "Visitar Dubai Mall"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-dubai-dubai-fountain",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "dubai",
+      "status": "planned",
+      "data": "visit-dubai-dubai-fountain.json",
+      "label": {
+        "en": "Visit Dubai Fountain",
+        "es": "Visitar Fuente de Dubai"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-dubai-palm-jumeirah-view",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "dubai",
+      "status": "planned",
+      "data": "visit-dubai-palm-jumeirah-view.json",
+      "label": {
+        "en": "Visit Palm Jumeirah view",
+        "es": "Visitar Vista Palm Jumeirah"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-dubai-dubai-frame",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "dubai",
+      "status": "planned",
+      "data": "visit-dubai-dubai-frame.json",
+      "label": {
+        "en": "Visit Dubai Frame",
+        "es": "Visitar Dubai Frame"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-dubai-old-dubai-souk",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "dubai",
+      "status": "planned",
+      "data": "visit-dubai-old-dubai-souk.json",
+      "label": {
+        "en": "Visit Old Dubai souk",
+        "es": "Visitar Zoco Dubai antiguo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-dubai-desert-edge-viewpoint",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "dubai",
+      "status": "planned",
+      "data": "visit-dubai-desert-edge-viewpoint.json",
+      "label": {
+        "en": "Visit Desert edge viewpoint",
+        "es": "Visitar Mirador desierto"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-singapore-gardens-by-the-bay",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "singapore",
+      "status": "planned",
+      "data": "visit-singapore-gardens-by-the-bay.json",
+      "label": {
+        "en": "Visit Gardens by the Bay",
+        "es": "Visitar Gardens by the Bay"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-singapore-marina-bay-sands-view",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "singapore",
+      "status": "planned",
+      "data": "visit-singapore-marina-bay-sands-view.json",
+      "label": {
+        "en": "Visit Marina Bay Sands view",
+        "es": "Visitar Vista Marina Bay Sands"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-singapore-merlion-park",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "singapore",
+      "status": "planned",
+      "data": "visit-singapore-merlion-park.json",
+      "label": {
+        "en": "Visit Merlion Park",
+        "es": "Visitar Parque Merlion"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-singapore-singapore-zoo",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "singapore",
+      "status": "planned",
+      "data": "visit-singapore-singapore-zoo.json",
+      "label": {
+        "en": "Visit Singapore Zoo",
+        "es": "Visitar Zoo de Singapur"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-singapore-sentosa",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "singapore",
+      "status": "planned",
+      "data": "visit-singapore-sentosa.json",
+      "label": {
+        "en": "Visit Sentosa",
+        "es": "Visitar Sentosa"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-singapore-chinatown-singapore",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "singapore",
+      "status": "planned",
+      "data": "visit-singapore-chinatown-singapore.json",
+      "label": {
+        "en": "Visit Chinatown Singapore",
+        "es": "Visitar Chinatown Singapur"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-singapore-botanic-gardens",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "singapore",
+      "status": "planned",
+      "data": "visit-singapore-botanic-gardens.json",
+      "label": {
+        "en": "Visit Botanic Gardens",
+        "es": "Visitar Jardines Botanicos"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-sydney-sydney-opera-house",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "sydney",
+      "status": "planned",
+      "data": "visit-sydney-sydney-opera-house.json",
+      "label": {
+        "en": "Visit Sydney Opera House",
+        "es": "Visitar Opera de Sidney"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-sydney-harbour-bridge-walk",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "sydney",
+      "status": "planned",
+      "data": "visit-sydney-harbour-bridge-walk.json",
+      "label": {
+        "en": "Visit Harbour Bridge walk",
+        "es": "Visitar Paseo Harbour Bridge"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-sydney-circular-quay",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "sydney",
+      "status": "planned",
+      "data": "visit-sydney-circular-quay.json",
+      "label": {
+        "en": "Visit Circular Quay",
+        "es": "Visitar Circular Quay"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-sydney-bondi-beach",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "sydney",
+      "status": "planned",
+      "data": "visit-sydney-bondi-beach.json",
+      "label": {
+        "en": "Visit Bondi Beach",
+        "es": "Visitar Playa Bondi"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-sydney-taronga-zoo",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "sydney",
+      "status": "planned",
+      "data": "visit-sydney-taronga-zoo.json",
+      "label": {
+        "en": "Visit Taronga Zoo",
+        "es": "Visitar Zoo Taronga"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-sydney-royal-botanic-garden",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "sydney",
+      "status": "planned",
+      "data": "visit-sydney-royal-botanic-garden.json",
+      "label": {
+        "en": "Visit Royal Botanic Garden",
+        "es": "Visitar Jardin Botanico Real"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-sydney-darling-harbour",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "sydney",
+      "status": "planned",
+      "data": "visit-sydney-darling-harbour.json",
+      "label": {
+        "en": "Visit Darling Harbour",
+        "es": "Visitar Darling Harbour"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-istanbul-hagia-sophia",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "istanbul",
+      "status": "planned",
+      "data": "visit-istanbul-hagia-sophia.json",
+      "label": {
+        "en": "Visit Hagia Sophia",
+        "es": "Visitar Santa Sofia"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-istanbul-blue-mosque",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "istanbul",
+      "status": "planned",
+      "data": "visit-istanbul-blue-mosque.json",
+      "label": {
+        "en": "Visit Blue Mosque",
+        "es": "Visitar Mezquita Azul"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-istanbul-grand-bazaar",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "istanbul",
+      "status": "planned",
+      "data": "visit-istanbul-grand-bazaar.json",
+      "label": {
+        "en": "Visit Grand Bazaar",
+        "es": "Visitar Gran Bazar"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-istanbul-topkapi-palace",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "istanbul",
+      "status": "planned",
+      "data": "visit-istanbul-topkapi-palace.json",
+      "label": {
+        "en": "Visit Topkapi Palace",
+        "es": "Visitar Palacio Topkapi"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-istanbul-bosphorus-viewpoint",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "istanbul",
+      "status": "planned",
+      "data": "visit-istanbul-bosphorus-viewpoint.json",
+      "label": {
+        "en": "Visit Bosphorus viewpoint",
+        "es": "Visitar Mirador Bosforo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-istanbul-spice-bazaar",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "istanbul",
+      "status": "planned",
+      "data": "visit-istanbul-spice-bazaar.json",
+      "label": {
+        "en": "Visit Spice Bazaar",
+        "es": "Visitar Bazar de las Especias"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-istanbul-galata-tower-area",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "istanbul",
+      "status": "planned",
+      "data": "visit-istanbul-galata-tower-area.json",
+      "label": {
+        "en": "Visit Galata Tower area",
+        "es": "Visitar Zona Torre Galata"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-buenos-aires-obelisco",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "buenos-aires",
+      "status": "planned",
+      "data": "visit-buenos-aires-obelisco.json",
+      "label": {
+        "en": "Visit Obelisco",
+        "es": "Visitar Obelisco"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-buenos-aires-plaza-de-mayo",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "buenos-aires",
+      "status": "planned",
+      "data": "visit-buenos-aires-plaza-de-mayo.json",
+      "label": {
+        "en": "Visit Plaza de Mayo",
+        "es": "Visitar Plaza de Mayo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-buenos-aires-caminito-la-boca",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "buenos-aires",
+      "status": "planned",
+      "data": "visit-buenos-aires-caminito-la-boca.json",
+      "label": {
+        "en": "Visit Caminito La Boca",
+        "es": "Visitar Caminito La Boca"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-buenos-aires-teatro-colon-exterior",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "buenos-aires",
+      "status": "planned",
+      "data": "visit-buenos-aires-teatro-colon-exterior.json",
+      "label": {
+        "en": "Visit Teatro Colon exterior",
+        "es": "Visitar Exterior Teatro Colon"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-buenos-aires-recoleta-cemetery",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "buenos-aires",
+      "status": "planned",
+      "data": "visit-buenos-aires-recoleta-cemetery.json",
+      "label": {
+        "en": "Visit Recoleta Cemetery",
+        "es": "Visitar Cementerio de Recoleta"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-buenos-aires-palermo-parks",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "buenos-aires",
+      "status": "planned",
+      "data": "visit-buenos-aires-palermo-parks.json",
+      "label": {
+        "en": "Visit Palermo parks",
+        "es": "Visitar Parques de Palermo"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-buenos-aires-puerto-madero-walk",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "buenos-aires",
+      "status": "planned",
+      "data": "visit-buenos-aires-puerto-madero-walk.json",
+      "label": {
+        "en": "Visit Puerto Madero walk",
+        "es": "Visitar Paseo Puerto Madero"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rio-de-janeiro-christ-the-redeemer",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rio-de-janeiro",
+      "status": "planned",
+      "data": "visit-rio-de-janeiro-christ-the-redeemer.json",
+      "label": {
+        "en": "Visit Christ the Redeemer",
+        "es": "Visitar Cristo Redentor"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rio-de-janeiro-sugarloaf-mountain",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rio-de-janeiro",
+      "status": "planned",
+      "data": "visit-rio-de-janeiro-sugarloaf-mountain.json",
+      "label": {
+        "en": "Visit Sugarloaf Mountain",
+        "es": "Visitar Pan de Azucar"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rio-de-janeiro-copacabana-beach",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rio-de-janeiro",
+      "status": "planned",
+      "data": "visit-rio-de-janeiro-copacabana-beach.json",
+      "label": {
+        "en": "Visit Copacabana beach",
+        "es": "Visitar Playa Copacabana"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rio-de-janeiro-ipanema-beach",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rio-de-janeiro",
+      "status": "planned",
+      "data": "visit-rio-de-janeiro-ipanema-beach.json",
+      "label": {
+        "en": "Visit Ipanema beach",
+        "es": "Visitar Playa Ipanema"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rio-de-janeiro-selaron-steps",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rio-de-janeiro",
+      "status": "planned",
+      "data": "visit-rio-de-janeiro-selaron-steps.json",
+      "label": {
+        "en": "Visit Selaron Steps",
+        "es": "Visitar Escalera Selaron"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rio-de-janeiro-tijuca-forest-viewpoint",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rio-de-janeiro",
+      "status": "planned",
+      "data": "visit-rio-de-janeiro-tijuca-forest-viewpoint.json",
+      "label": {
+        "en": "Visit Tijuca Forest viewpoint",
+        "es": "Visitar Mirador Floresta da Tijuca"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
+    },
+    {
+      "id": "visit-rio-de-janeiro-maracana-exterior",
+      "family": "travel",
+      "bundle": "city-days",
+      "city_id": "rio-de-janeiro",
+      "status": "planned",
+      "data": "visit-rio-de-janeiro-maracana-exterior.json",
+      "label": {
+        "en": "Visit Maracana exterior",
+        "es": "Visitar Exterior Maracana"
+      },
+      "audience": "child",
+      "architecture_wave": "future-city-days",
+      "membership": "premium",
+      "art": "pending",
+      "counts": {
+        "items": 6,
+        "actions": 5,
+        "cards": 12
+      },
+      "spec_status": "spec-ready",
+      "content_review": "approved-pre-art",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy"
+      }
     }
   ],
   "design_system": "data/design-system.json",
@@ -2896,5 +5440,16 @@
     "physiotherapy",
     "bright-lights",
     "basic-first-aid"
-  ]
+  ],
+  "future_versions": {
+    "locked_at": "2026-08-14",
+    "docs": [
+      "docs/future-versions-locked-plan.html",
+      "docs/city-days-catalogue.json",
+      "docs/cooking-family-stub.json",
+      "docs/schedules-product-spec.html"
+    ],
+    "cooking_packs": 7,
+    "city_days_packs": 84
+  }
 }

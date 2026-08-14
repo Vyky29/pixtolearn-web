@@ -1,0 +1,175 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.1-future-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "pour-cereal",
+  "family": "cooking",
+  "status": "planned",
+  "art": "pending",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "future-cooking",
+  "membership": "plus",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft apricot top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant. Heat/knife steps with adult."
+  },
+  "label": {
+    "en": "Pour cereal",
+    "es": "Servir cereales"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "pour cereal",
+      "es": "servir cereales"
+    },
+    "wow_layer": "cover",
+    "art": "pending"
+  },
+  "items": [
+    {
+      "id": "bowl",
+      "slug": "bowl",
+      "title": {
+        "en": "bowl",
+        "es": "bol"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "cereal",
+      "slug": "cereal",
+      "title": {
+        "en": "cereal",
+        "es": "cereales"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "milk",
+      "slug": "milk",
+      "title": {
+        "en": "milk",
+        "es": "leche"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "spoon",
+      "slug": "spoon",
+      "title": {
+        "en": "spoon",
+        "es": "cuchara"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "get-bowl",
+      "slug": "get-bowl",
+      "title": {
+        "en": "get bowl",
+        "es": "coger bol"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "pour-cereal",
+      "slug": "pour-cereal",
+      "title": {
+        "en": "pour cereal",
+        "es": "echar cereales"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "pour-milk",
+      "slug": "pour-milk",
+      "title": {
+        "en": "pour milk",
+        "es": "echar leche"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "get-spoon",
+      "slug": "get-spoon",
+      "title": {
+        "en": "get spoon",
+        "es": "coger cuchara"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "sit",
+      "slug": "sit",
+      "title": {
+        "en": "sit",
+        "es": "sentarse"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "eat",
+      "slug": "eat",
+      "title": {
+        "en": "eat",
+        "es": "comer"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "rinse-bowl",
+      "slug": "rinse-bowl",
+      "title": {
+        "en": "rinse bowl",
+        "es": "aclarar bol"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 8,
+    "cards": 13
+  },
+  "spec_status": "spec-ready"
+}

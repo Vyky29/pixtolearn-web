@@ -1,0 +1,173 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.1-future-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "visit-paris-louvre-museum",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "paris",
+  "status": "planned",
+  "art": "pending",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "future-city-days",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Landmark is hero of cover. Casts provide girl variant."
+  },
+  "label": {
+    "en": "Visit Louvre Museum",
+    "es": "Visitar Museo del Louvre"
+  },
+  "attraction": {
+    "en": "Louvre Museum",
+    "es": "Museo del Louvre"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "visit louvre museum",
+      "es": "visitar museo del louvre"
+    },
+    "wow_layer": "cover",
+    "art": "pending"
+  },
+  "items": [
+    {
+      "id": "louvre-museum",
+      "slug": "louvre-museum",
+      "title": {
+        "en": "Louvre Museum",
+        "es": "Museo del Louvre"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map-sign",
+        "es": "mapa o senal"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "camera",
+      "slug": "camera",
+      "title": {
+        "en": "camera",
+        "es": "camara"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water-bottle",
+        "es": "botella de agua"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    },
+    {
+      "id": "adult-hand",
+      "slug": "adult-hand",
+      "title": {
+        "en": "adult-hand",
+        "es": "mano adulto"
+      },
+      "wow_layer": "object",
+      "art": "pending"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "enter-look",
+      "slug": "enter-look",
+      "title": {
+        "en": "enter / look",
+        "es": "entrar / mirar"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "photo-optional",
+      "slug": "photo-optional",
+      "title": {
+        "en": "photo optional",
+        "es": "foto opcional"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "exit",
+      "slug": "exit",
+      "title": {
+        "en": "exit",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    },
+    {
+      "id": "next-meet-adult",
+      "slug": "next-meet-adult",
+      "title": {
+        "en": "next / meet adult",
+        "es": "siguiente / adulto"
+      },
+      "wow_layer": "way",
+      "art": "pending"
+    }
+  ],
+  "grain": "city-visit-v1",
+  "counts": {
+    "items": 6,
+    "actions": 5,
+    "cards": 12
+  },
+  "spec_status": "spec-ready"
+}
