@@ -208,9 +208,13 @@
     "outfit_lock": true
   },
   "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person. Boy/girl delivery via teen-boy-medium and teen-girl-medium casts where available.",
-  "notes": [
-    "Universal hygiene pack. Gender via casts."
-  ],
+  "notes": {
+    "bullets": [
+      "Universal hygiene pack. Gender via casts."
+    ],
+    "flow": "go to sink -> tap on -> wet -> soap -> rub palms -> rub between fingers -> rinse -> tap off -> dry -> finish. Same modern mixer tap in tap object, sink object, and every action that shows water or the faucet.",
+    "tap": "Modern single-lever cylindrical deck mixer (not classic wall cross-handle, not gooseneck, not side lever). Match washing-hands/tap.png exactly across cover, sink, and all actions."
+  },
   "gender_delivery": "casts-boy-girl",
   "steps": [
     {
