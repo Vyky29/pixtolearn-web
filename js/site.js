@@ -62,15 +62,21 @@
   if (form) {
     const params = new URLSearchParams(location.search);
     const interest = params.get("interest");
-    if (interest && form.interest) {
-      const opt = Array.from(form.interest.options).find(
-        (o) => o.value === interest || interest.startsWith(o.value)
-      );
-      if (opt) form.interest.value = opt.value;
-      else if (interest.startsWith("wow")) form.interest.value = "wow";
-      else if (interest.includes("pack")) {
-        const match = Array.from(form.interest.options).find((o) => interest.includes(o.value));
-        if (match) form.interest.value = match.value;
+    const plan = params.get("plan");
+    if (form.interest) {
+      if (plan === "plus") form.interest.value = "app-plus";
+      else if (plan === "premium") form.interest.value = "app-premium";
+      else if (plan === "free" || plan === "app") form.interest.value = "app";
+      else if (interest) {
+        const opt = Array.from(form.interest.options).find(
+          (o) => o.value === interest || interest.startsWith(o.value)
+        );
+        if (opt) form.interest.value = opt.value;
+        else if (interest.startsWith("wow")) form.interest.value = "wow";
+        else if (interest.includes("pack")) {
+          const match = Array.from(form.interest.options).find((o) => interest.includes(o.value));
+          if (match) form.interest.value = match.value;
+        }
       }
     }
     form.addEventListener("submit", (e) => {

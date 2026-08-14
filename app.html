@@ -25,6 +25,7 @@
         <li><a href="academy.html" data-nav="academy.html">Academy</a></li>
         <li><a href="updates.html" data-nav="updates.html">Updates</a></li>
         <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
+        <li class="nav-extra"><a href="about.html" data-nav="about.html">About</a></li>
       </ul>
       <div class="nav-icons">
         <a class="nav-icon" href="shop.html" aria-label="Shop basket">
@@ -140,11 +141,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="plapp-float">
-          <img src="assets/packs/keyring-web/help.jpg" alt="" loading="lazy" />
-          <span>Library</span>
         </div>
       </div>
     </div>
@@ -362,44 +358,47 @@
       <div class="section-head reveal">
         <p class="eyebrow">Memberships</p>
         <h2>Plans that grow with you</h2>
-        <p class="lede">Guide pricing for launch. Final checkout comes next; contact us for centre contracts and pack bundles.</p>
+        <p class="lede">Three levels: try Free, unlock daily independence with Plus, go further with Premium. Checkout links will replace waitlist as Stripe goes live.</p>
       </div>
       <div class="plan-grid">
-        <article class="plan reveal">
-          <h3>Free preview</h3>
-          <p class="lede">Try demo routines and the player.</p>
+        <article class="plan reveal" id="plan-free">
+          <h3>Free</h3>
+          <p class="lede">Try visual support at home. No card.</p>
           <div class="amount" style="font-family:var(--font-display);font-size:1.8rem;font-weight:800">£0</div>
           <ul>
-            <li>1-2 demo routines</li>
-            <li>Basic player</li>
-            <li>No card required</li>
+            <li>Brushing, Shower, Core routines</li>
+            <li>ABC, Football, Yoga (starter cards)</li>
+            <li>My Voice: Core, Quick Talk, Phrases</li>
+            <li>Schedule, First and Then, Focus (no timers)</li>
           </ul>
-          <a class="btn btn-ghost" href="https://pixtolearn-parents.vercel.app" target="_blank" rel="noopener">Start free</a>
+          <a class="btn btn-ghost" href="https://pixtolearn-parents.vercel.app/?plan=free" target="_blank" rel="noopener">Start free</a>
         </article>
-        <article class="plan highlight reveal">
-          <h3>Family</h3>
-          <p class="lede">Home routines with Focus sessions.</p>
+        <article class="plan highlight reveal" id="plan-plus">
+          <h3>Plus</h3>
+          <p class="lede">Everyday independence. First paid level.</p>
           <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:800">£7-12<span style="font-size:1rem;font-weight:600"> / mo</span></div>
           <ul>
-            <li>Personal library</li>
-            <li>Focus mode</li>
-            <li>1-2 learner profiles</li>
+            <li>Self-care library (clothes, toilet, haircare…)</li>
+            <li>Emotions, sensory, emergency, eating out</li>
+            <li>Focus timers + more activity packs</li>
+            <li>My Voice + Context · 7-day trial planned</li>
           </ul>
-          <a class="btn btn-primary" href="contact.html">Join waitlist</a>
+          <a class="btn btn-primary" href="contact.html?plan=plus#contact-form">Start Plus waitlist</a>
         </article>
-        <article class="plan reveal">
-          <h3>Pro / Centre</h3>
-          <p class="lede">Practitioners, swim teachers, day centres.</p>
-          <div class="amount soon">From £19 / mo, org quotes</div>
+        <article class="plan reveal" id="plan-premium">
+          <h3>Premium</h3>
+          <p class="lede">Community life and deeper communication.</p>
+          <div class="amount soon">From £19 / mo</div>
           <ul>
-            <li>Multi-learner Planner</li>
-            <li>Staff seats &amp; roles</li>
-            <li>Bundle with Full / WOW packs</li>
+            <li>Travel, public spaces, mobility, health packs</li>
+            <li>Full sports prep + richer activity decks</li>
+            <li>My Voice: My World, Words, personalisation</li>
+            <li>Centres: multi-seat quotes on request</li>
           </ul>
-          <a class="btn btn-ghost" href="contact.html">Talk to us</a>
+          <a class="btn btn-ghost" href="contact.html?plan=premium#contact-form">Talk about Premium</a>
         </article>
       </div>
-      <p class="note reveal" style="margin-top:1.25rem">Bundle idea: Full Pack buyers can receive months of PixtoLearn App Family included. Ask when you order.</p>
+      <p class="note reveal" style="margin-top:1.25rem">Bundle idea: Full Pack buyers can receive months of PixtoLearn App Plus included. Centres and Academy seats: ask when you order. Deep links: <a href="#plan-free">Free</a> · <a href="#plan-plus">Plus</a> · <a href="#plan-premium">Premium</a>.</p>
     </div>
   </section>
 
@@ -453,13 +452,13 @@
           <li><a href="app.html">App</a></li>
           <li><a href="academy.html">Academy</a></li>
           <li><a href="updates.html">Updates</a></li>
-          <li><a href="shop.html">Shop</a></li>
+                    <li><a href="shop.html">Shop</a></li>
         </ul>
       </div>
       <div>
         <h3>Care</h3>
         <ul>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html">About us</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="privacy.html">Privacy policy</a></li>
           <li><a href="cookies.html">Cookies policy</a></li>
@@ -474,6 +473,6 @@
     </div>
   </footer>
   <script src="js/cart.js"></script>
-  <script src="js/site.js"></script>
+  <script src="js/site.js?v=2"></script>
 </body>
 </html>
