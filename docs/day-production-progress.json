@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-14",
-  "block": "DONE-afternoon",
+  "block": "casts-opposite",
   "completed_packs": [
     "washing-hands",
     "public-toilet",
@@ -39,12 +39,21 @@
   "casts": {
     "football": "boy+girl complete",
     "washing-hands": "girl+boy complete",
-    "public-toilet": "boy seeded; girl cover only",
-    "at-the-optician": "girl seeded; boy pending"
+    "public-toilet": "boy+girl complete",
+    "at-the-optician": "girl+boy complete",
+    "basketball": "boy primary seeded; girl pending",
+    "yoga": "girl primary seeded; boy pending",
+    "fire-drill": "boy primary seeded; girl pending",
+    "hearing-test": "boy primary seeded; girl pending",
+    "changing-lessons": "girl primary seeded; boy pending",
+    "bright-lights": "boy primary seeded; girl pending",
+    "basic-first-aid": "girl primary seeded; boy pending",
+    "physiotherapy": "girl primary seeded; boy pending"
   },
-  "in_progress": null,
+  "in_progress": "yoga boy opposite cast",
   "notes": [
-    "Afternoon complete: all Wave1+Wave2 packs have legacy art",
-    "Casts: football + washing-hands dual gender done; toilet/optician opposite still partial"
+    "Toilet girl + optician boy opposite casts installed and synced to Parents",
+    "Wave 2 primary gender cast folders seeded from root art",
+    "pixtolearn-support push still blocked: HTTP 500 on ~6GB art pack; remote empty/no upstream"
   ]
 }
