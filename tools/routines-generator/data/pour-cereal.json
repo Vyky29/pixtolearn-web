@@ -12,8 +12,8 @@
   },
   "id": "pour-cereal",
   "family": "cooking",
-  "status": "planned",
-  "art": "pending",
+  "status": "ready",
+  "art": "installed",
   "content_review": "approved-pre-art",
   "architecture_wave": "future-cooking",
   "membership": "plus",
@@ -40,7 +40,7 @@
       "es": "servir cereales"
     },
     "wow_layer": "cover",
-    "art": "pending"
+    "art": "installed"
   },
   "items": [
     {
@@ -51,7 +51,7 @@
         "es": "bol"
       },
       "wow_layer": "object",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "cereal",
@@ -61,7 +61,7 @@
         "es": "cereales"
       },
       "wow_layer": "object",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "milk",
@@ -71,7 +71,7 @@
         "es": "leche"
       },
       "wow_layer": "object",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "spoon",
@@ -81,7 +81,7 @@
         "es": "cuchara"
       },
       "wow_layer": "object",
-      "art": "pending"
+      "art": "installed"
     }
   ],
   "actions": [
@@ -93,7 +93,7 @@
         "es": "lavar manos"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "get-bowl",
@@ -103,7 +103,7 @@
         "es": "coger bol"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "pour-cereal",
@@ -113,7 +113,7 @@
         "es": "echar cereales"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "pour-milk",
@@ -123,7 +123,7 @@
         "es": "echar leche"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "get-spoon",
@@ -133,7 +133,7 @@
         "es": "coger cuchara"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "sit",
@@ -143,7 +143,7 @@
         "es": "sentarse"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "eat",
@@ -153,7 +153,7 @@
         "es": "comer"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     },
     {
       "id": "rinse-bowl",
@@ -163,7 +163,7 @@
         "es": "aclarar bol"
       },
       "wow_layer": "way",
-      "art": "pending"
+      "art": "installed"
     }
   ],
   "counts": {

@@ -2881,7 +2881,7 @@
     {
       "id": "pour-cereal",
       "family": "cooking",
-      "status": "planned",
+      "status": "ready",
       "data": "pour-cereal.json",
       "label": {
         "en": "Pour cereal",
@@ -2890,7 +2890,7 @@
       "audience": "child",
       "architecture_wave": "future-cooking",
       "membership": "plus",
-      "art": "pending",
+      "art": "installed",
       "counts": {
         "items": 4,
         "actions": 8,
@@ -3067,7 +3067,7 @@
       "family": "travel",
       "bundle": "city-days",
       "city_id": "london",
-      "status": "planned",
+      "status": "ready",
       "data": "visit-london-london-eye.json",
       "label": {
         "en": "Visit London Eye",
@@ -3076,7 +3076,7 @@
       "audience": "child",
       "architecture_wave": "future-city-days",
       "membership": "premium",
-      "art": "pending",
+      "art": "installed",
       "counts": {
         "items": 6,
         "actions": 5,

@@ -62,7 +62,11 @@
         "scramble-eggs-with-adult"
       ],
       "priority": "P1",
-      "status": "in_progress"
+      "status": "in_progress",
+      "done_packs": [
+        "make-toast",
+        "pour-cereal"
+      ]
     },
     {
       "id": "C",
@@ -76,7 +80,11 @@
         "visit-london-natural-history-museum"
       ],
       "priority": "P1",
-      "status": "queued"
+      "status": "in_progress",
+      "done_packs": [
+        "visit-london-big-ben-parliament",
+        "visit-london-london-eye"
+      ]
     },
     {
       "id": "D",
@@ -92,7 +100,7 @@
       "style": "PECS square 1024, gender-neutral, Fitzgerald slate",
       "priority": "P1",
       "status": "partial",
-      "done": 6,
+      "done": 10,
       "total": 16
     },
     {
@@ -112,7 +120,9 @@
   "progress": {
     "installed_packs": [
       "make-toast",
-      "visit-london-big-ben-parliament"
+      "visit-london-big-ben-parliament",
+      "pour-cereal",
+      "visit-london-london-eye"
     ],
     "in_flight": [
       "pour-cereal"
@@ -123,7 +133,11 @@
       "break",
       "lunch",
       "home",
-      "finished"
+      "finished",
+      "snack",
+      "therapy",
+      "bath",
+      "bedtime"
     ]
   }
 }
