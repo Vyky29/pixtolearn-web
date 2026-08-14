@@ -1,0 +1,311 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "yoga",
+  "family": "sports",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave2",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail",
+    "clothes": "soft lavender top, grey leggings",
+    "age": "child",
+    "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant. Same outfit whole pack."
+  },
+  "label": {
+    "en": "Yoga",
+    "es": "Yoga"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "yoga",
+      "es": "yoga"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "yoga-mat",
+      "slug": "yoga-mat",
+      "title": {
+        "en": "yoga mat",
+        "es": "esterilla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella de agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "comfy-clothes",
+      "slug": "comfy-clothes",
+      "title": {
+        "en": "comfy clothes",
+        "es": "ropa comoda"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "yoga-block",
+      "slug": "yoga-block",
+      "title": {
+        "en": "yoga block",
+        "es": "bloque"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "mat-down",
+      "slug": "mat-down",
+      "title": {
+        "en": "mat down",
+        "es": "poner esterilla"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "shoes-off",
+      "slug": "shoes-off",
+      "title": {
+        "en": "shoes off",
+        "es": "quitarse zapatos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-on-mat",
+      "slug": "sit-on-mat",
+      "title": {
+        "en": "sit on mat",
+        "es": "sentarse en la esterilla"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "listen-teacher",
+      "slug": "listen-teacher",
+      "title": {
+        "en": "listen teacher",
+        "es": "escuchar al profesor"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "breathe",
+      "slug": "breathe",
+      "title": {
+        "en": "breathe",
+        "es": "respirar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "do-pose",
+      "slug": "do-pose",
+      "title": {
+        "en": "do pose",
+        "es": "hacer postura"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "rest",
+      "slug": "rest",
+      "title": {
+        "en": "rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "pose-again",
+      "slug": "pose-again",
+      "title": {
+        "en": "pose again",
+        "es": "otra postura"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish",
+      "slug": "finish",
+      "title": {
+        "en": "finish",
+        "es": "terminar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "roll-mat",
+      "slug": "roll-mat",
+      "title": {
+        "en": "roll mat",
+        "es": "enrollar esterilla"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "shoes-on",
+      "slug": "shoes-on",
+      "title": {
+        "en": "shoes on",
+        "es": "ponerse zapatos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 13,
+    "cards": 18
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#C77830",
+    "accent": "#A894B0",
+    "accent_name": "calm lavender",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Objects never show a person. Boy/girl delivery via casts where available.",
+  "notes": [
+    "Unified sports pack: arrive/setup then session."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "yoga-mat"
+    },
+    {
+      "kind": "object",
+      "id": "water-bottle"
+    },
+    {
+      "kind": "object",
+      "id": "comfy-clothes"
+    },
+    {
+      "kind": "object",
+      "id": "yoga-block"
+    },
+    {
+      "kind": "action",
+      "id": "arrive"
+    },
+    {
+      "kind": "action",
+      "id": "mat-down"
+    },
+    {
+      "kind": "action",
+      "id": "shoes-off"
+    },
+    {
+      "kind": "action",
+      "id": "sit-on-mat"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "listen-teacher"
+    },
+    {
+      "kind": "action",
+      "id": "breathe"
+    },
+    {
+      "kind": "action",
+      "id": "do-pose"
+    },
+    {
+      "kind": "action",
+      "id": "rest"
+    },
+    {
+      "kind": "action",
+      "id": "pose-again"
+    },
+    {
+      "kind": "action",
+      "id": "finish"
+    },
+    {
+      "kind": "action",
+      "id": "roll-mat"
+    },
+    {
+      "kind": "action",
+      "id": "shoes-on"
+    }
+  ],
+  "existing_dir": "yoga",
+  "art_dir": "yoga"
+}

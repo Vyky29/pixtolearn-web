@@ -1,0 +1,112 @@
+{
+  "title": "PixtoLearn WOW day production plan",
+  "updated": "2026-08-14",
+  "goal": "Create a large volume of WOW specs + legacy art + cast seeds across Wave 1 and into Wave 2 while the operator is away.",
+  "operating_rules": [
+    "One pack complete (cover + objects + actions installed + audit) before starting the next pack art.",
+    "One pack per sport (kit through finish). No new -prep/-activity sport pairs.",
+    "Gender: one pack + boy/girl casts. Never duplicate football-boy/football-girl packs.",
+    "Objects: single object, white bg, no person. Actions: locked avatar + outfit.",
+    "Install with install_art.py fill 0.72 into support + routines-generator card dirs.",
+    "After each pack: audit_art_quality.py; mark art installed / status ready; sync Parents.",
+    "Casts: seed boy from legacy, then girl cast batch. Do not block Wave 2 specs on casts finishing."
+  ],
+  "pipeline_per_pack": [
+    "1. Confirm/lock JSON spec (already done for Wave 1)",
+    "2. Generate raw PNGs (GenerateImage)",
+    "3. install_art.py SRC -> pixtolearn-support/public/wow-routines/cards/{pack}/{slug}.png",
+    "4. Mirror to PIXTOLEARN/tools/routines-generator/assets/cards/{pack}/",
+    "5. audit_art_quality.py for pack",
+    "6. Flip pack JSON art fields to installed; routines.json status ready",
+    "7. python3 pixtolearn-parents/scripts/sync-wow-packs-from-support.py",
+    "8. Optional same day: seed-boy cast + queue girl casts"
+  ],
+  "day_blocks": [
+    {
+      "block": "A - Wave 1 art (priority)",
+      "target_hours": "first large chunk of the day",
+      "packs_in_order": [
+        {
+          "id": "washing-hands",
+          "cards": 16,
+          "why": "Self-care base; public-toilet hands off to it"
+        },
+        {
+          "id": "public-toilet",
+          "cards": 16,
+          "why": "Community access; reuse soap/dryer visual language"
+        },
+        {
+          "id": "football",
+          "cards": 21,
+          "why": "Unified sports pack (kit then session)"
+        },
+        {
+          "id": "at-the-optician",
+          "cards": 17,
+          "why": "Health clinic; independent of sports"
+        }
+      ],
+      "card_budget": 70,
+      "done_when": "Wave 1 packs legacy art installed (washing-hands, public-toilet, football, at-the-optician), audited, Parents synced"
+    },
+    {
+      "block": "B - Wave 1 casts",
+      "target_hours": "after Block A or interleaved per pack",
+      "work": [
+        "seed teen-boy-medium from legacy for each Wave 1 pack",
+        "build girl-missing queue",
+        "claim/complete girl casts in batches of 6-8",
+        "sync-wow-casts-from-support.py"
+      ],
+      "done_when": "Boy+girl casts present for covers + schedule actions of Wave 1"
+    },
+    {
+      "block": "C - Wave 2 specs (parallelizable with cast work)",
+      "target_hours": "mid/late day if Block A finishing",
+      "packs": [
+        "basketball",
+        "yoga",
+        "fire-drill",
+        "changing-lessons",
+        "hearing-test",
+        "physiotherapy",
+        "bright-lights",
+        "basic-first-aid"
+      ],
+      "done_when": "JSON specs registered in routines.json like Wave 1 (spec-ready, art todo)"
+    },
+    {
+      "block": "D - Wave 2 art stretch (if time remains)",
+      "order": [
+        "basketball",
+        "yoga",
+        "fire-drill",
+        "hearing-test"
+      ],
+      "done_when": "As many legacy packs installed as time allows; never leave a pack half-installed without notes"
+    }
+  ],
+  "volume_targets": {
+    "minimum_success": "Wave 1 all 5 packs legacy art + Parents sync",
+    "strong_day": "Wave 1 art + casts started + Wave 2 specs written",
+    "excellent_day": "Wave 1 art+casts + Wave 2 specs + at least 2 Wave 2 packs legacy art"
+  },
+  "qa_gates": [
+    "No MD5 duplicates inside a pack",
+    "No text/logos/watermarks in art",
+    "Objects have no person",
+    "Same avatar outfit across all actions of a pack",
+    "Prep packs end at ready; Activity packs do not redo full kit-on story",
+    "UTF-8 labels; no em dashes in docs"
+  ],
+  "do_not_do_today": [
+    "Funeral/life-events art before editorial review",
+    "New -wow pack ids",
+    "Regenerating unrelated shipped packs unless broken",
+    "Membership pricing changes"
+  ],
+  "progress_log_file": "PIXTOLEARN/docs/day-production-progress.json",
+  "start_now": "football",
+  "note_unify": "Sports prep/activity split reversed; portal shows one sports family."
+}

@@ -1,0 +1,358 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.5",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "going-to-the-mountain",
+  "family": "travel",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5A7A4A highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Going to the mountain",
+    "es": "Ir a la montana"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "mountain",
+      "es": "montana"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "hiking-boots",
+      "slug": "hiking-boots",
+      "title": {
+        "en": "boots",
+        "es": "botas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jacket",
+      "slug": "jacket",
+      "title": {
+        "en": "jacket",
+        "es": "chaqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "backpack",
+      "slug": "backpack",
+      "title": {
+        "en": "backpack",
+        "es": "mochila"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "binoculars",
+      "slug": "binoculars",
+      "title": {
+        "en": "binoculars",
+        "es": "prismaticos"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "put-boots-on",
+      "slug": "put-boots-on",
+      "title": {
+        "en": "boots on",
+        "es": "poner botas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-warm-gear",
+      "slug": "put-warm-gear",
+      "title": {
+        "en": "warm clothes on",
+        "es": "ponerse abrigo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-bag",
+      "slug": "pack-bag",
+      "title": {
+        "en": "pack bag",
+        "es": "preparar mochila"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "start-trail",
+      "slug": "start-trail",
+      "title": {
+        "en": "start walk",
+        "es": "empezar paseo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "climb-uphill",
+      "slug": "climb-uphill",
+      "title": {
+        "en": "walk up path",
+        "es": "subir camino"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rest-viewpoint",
+      "slug": "rest-viewpoint",
+      "title": {
+        "en": "rest view",
+        "es": "descansar vista"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-mountains",
+      "slug": "look-mountains",
+      "title": {
+        "en": "look mountains",
+        "es": "mirar montanas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-binoculars",
+      "slug": "use-binoculars",
+      "title": {
+        "en": "use binoculars",
+        "es": "usar prismaticos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "drink-water",
+      "slug": "drink-water",
+      "title": {
+        "en": "drink water",
+        "es": "beber agua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-photo",
+      "slug": "take-photo",
+      "title": {
+        "en": "take photo",
+        "es": "hacer foto"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "return-down",
+      "slug": "return-down",
+      "title": {
+        "en": "go down",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "mountain",
+        "es": "montana"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "hiking-boots",
+      "slug": "hiking-boots",
+      "title": {
+        "en": "boots",
+        "es": "botas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jacket",
+      "slug": "jacket",
+      "title": {
+        "en": "jacket",
+        "es": "chaqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "backpack",
+      "slug": "backpack",
+      "title": {
+        "en": "backpack",
+        "es": "mochila"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "binoculars",
+      "slug": "binoculars",
+      "title": {
+        "en": "binoculars",
+        "es": "prismaticos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "put-boots-on",
+      "slug": "put-boots-on",
+      "title": {
+        "en": "boots on",
+        "es": "poner botas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-warm-gear",
+      "slug": "put-warm-gear",
+      "title": {
+        "en": "warm clothes on",
+        "es": "ponerse abrigo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-bag",
+      "slug": "pack-bag",
+      "title": {
+        "en": "pack bag",
+        "es": "preparar mochila"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "start-trail",
+      "slug": "start-trail",
+      "title": {
+        "en": "start walk",
+        "es": "empezar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "climb-uphill",
+      "slug": "climb-uphill",
+      "title": {
+        "en": "climb up",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rest-viewpoint",
+      "slug": "rest-viewpoint",
+      "title": {
+        "en": "rest view",
+        "es": "descansar vista"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-mountains",
+      "slug": "look-mountains",
+      "title": {
+        "en": "look mountains",
+        "es": "mirar montanas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-binoculars",
+      "slug": "use-binoculars",
+      "title": {
+        "en": "use binoculars",
+        "es": "usar prismaticos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "drink-water",
+      "slug": "drink-water",
+      "title": {
+        "en": "drink water",
+        "es": "beber agua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-photo",
+      "slug": "take-photo",
+      "title": {
+        "en": "take photo",
+        "es": "hacer foto"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "return-down",
+      "slug": "return-down",
+      "title": {
+        "en": "go down",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 11,
+    "cards": 17
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#2F6B4F",
+    "accent": "#5A7A4A",
+    "accent_name": "mountain green",
+    "highlight": "backpack / path",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "overlap_note": "Travel day out. Trail sport session is hiking-prep + hiking-activity."
+}

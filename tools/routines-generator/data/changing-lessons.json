@@ -1,0 +1,269 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "changing-lessons",
+  "family": "school-college",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave2",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark ponytail",
+    "clothes": "school jumper, dark skirt or trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant."
+  },
+  "label": {
+    "en": "Changing lessons",
+    "es": "Cambio de clase"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "changing lessons",
+      "es": "cambio de clase"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "school-bag",
+      "slug": "school-bag",
+      "title": {
+        "en": "school bag",
+        "es": "mochila"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "timetable",
+      "slug": "timetable",
+      "title": {
+        "en": "timetable",
+        "es": "horario"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "classroom-door",
+      "slug": "classroom-door",
+      "title": {
+        "en": "classroom door",
+        "es": "puerta del aula"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "corridor",
+      "slug": "corridor",
+      "title": {
+        "en": "corridor",
+        "es": "pasillo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "lesson-ends",
+      "slug": "lesson-ends",
+      "title": {
+        "en": "lesson ends",
+        "es": "termina la clase"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "pack-bag",
+      "slug": "pack-bag",
+      "title": {
+        "en": "pack bag",
+        "es": "recoger mochila"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stand-up",
+      "slug": "stand-up",
+      "title": {
+        "en": "stand up",
+        "es": "levantarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-corridor",
+      "slug": "walk-corridor",
+      "title": {
+        "en": "walk corridor",
+        "es": "caminar por el pasillo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "quiet-voice",
+      "slug": "quiet-voice",
+      "title": {
+        "en": "quiet voice",
+        "es": "voz baja"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "find-next-room",
+      "slug": "find-next-room",
+      "title": {
+        "en": "find next room",
+        "es": "buscar aula"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait-at-door",
+      "slug": "wait-at-door",
+      "title": {
+        "en": "wait at door",
+        "es": "esperar en la puerta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "enter",
+      "slug": "enter",
+      "title": {
+        "en": "enter",
+        "es": "entrar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-down",
+      "slug": "sit-down",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 10,
+    "cards": 15
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#5B6B8C",
+    "accent": "#3D7EA6",
+    "accent_name": "corridor blue",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Objects never show a person. Boy/girl delivery via casts where available.",
+  "notes": [
+    "School transitions."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "school-bag"
+    },
+    {
+      "kind": "object",
+      "id": "timetable"
+    },
+    {
+      "kind": "object",
+      "id": "classroom-door"
+    },
+    {
+      "kind": "object",
+      "id": "corridor"
+    },
+    {
+      "kind": "action",
+      "id": "lesson-ends"
+    },
+    {
+      "kind": "action",
+      "id": "pack-bag"
+    },
+    {
+      "kind": "action",
+      "id": "stand-up"
+    },
+    {
+      "kind": "action",
+      "id": "walk-corridor"
+    },
+    {
+      "kind": "action",
+      "id": "quiet-voice"
+    },
+    {
+      "kind": "action",
+      "id": "find-next-room"
+    },
+    {
+      "kind": "action",
+      "id": "wait-at-door"
+    },
+    {
+      "kind": "action",
+      "id": "enter"
+    },
+    {
+      "kind": "action",
+      "id": "sit-down"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    }
+  ],
+  "existing_dir": "changing-lessons",
+  "art_dir": "changing-lessons"
+}

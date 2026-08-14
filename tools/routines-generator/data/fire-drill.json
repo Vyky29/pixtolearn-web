@@ -1,0 +1,283 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "fire-drill",
+  "family": "school-college",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave2",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "school jumper, dark trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+  },
+  "label": {
+    "en": "Fire drill",
+    "es": "Simulacro de incendio"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "fire drill",
+      "es": "simulacro"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "alarm",
+      "slug": "alarm",
+      "title": {
+        "en": "alarm",
+        "es": "alarma"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "exit-sign",
+      "slug": "exit-sign",
+      "title": {
+        "en": "exit sign",
+        "es": "salida"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "line-marker",
+      "slug": "line-marker",
+      "title": {
+        "en": "line marker",
+        "es": "marca de fila"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "coat",
+      "slug": "coat",
+      "title": {
+        "en": "coat",
+        "es": "abrigo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "assembly-point",
+      "slug": "assembly-point",
+      "title": {
+        "en": "assembly point",
+        "es": "punto de reunion"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "hear-alarm",
+      "slug": "hear-alarm",
+      "title": {
+        "en": "hear alarm",
+        "es": "oir alarma"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stand-up",
+      "slug": "stand-up",
+      "title": {
+        "en": "stand up",
+        "es": "levantarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave-bag",
+      "slug": "leave-bag",
+      "title": {
+        "en": "leave bag",
+        "es": "dejar mochila"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-to-exit",
+      "slug": "walk-to-exit",
+      "title": {
+        "en": "walk to exit",
+        "es": "ir a la salida"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "no-running",
+      "slug": "no-running",
+      "title": {
+        "en": "no running",
+        "es": "sin correr"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "quiet-voice",
+      "slug": "quiet-voice",
+      "title": {
+        "en": "quiet voice",
+        "es": "voz baja"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "line-up-outside",
+      "slug": "line-up-outside",
+      "title": {
+        "en": "line up outside",
+        "es": "hacer fila fuera"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait",
+      "slug": "wait",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "listen-adult",
+      "slug": "listen-adult",
+      "title": {
+        "en": "listen adult",
+        "es": "escuchar al adulto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-back-in",
+      "slug": "go-back-in",
+      "title": {
+        "en": "go back in",
+        "es": "volver dentro"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 10,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#5B6B8C",
+    "accent": "#D03860",
+    "accent_name": "alarm rose",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Objects never show a person. Boy/girl delivery via casts where available.",
+  "notes": [
+    "School safety drill. Calm pace."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "alarm"
+    },
+    {
+      "kind": "object",
+      "id": "exit-sign"
+    },
+    {
+      "kind": "object",
+      "id": "line-marker"
+    },
+    {
+      "kind": "object",
+      "id": "coat"
+    },
+    {
+      "kind": "object",
+      "id": "assembly-point"
+    },
+    {
+      "kind": "action",
+      "id": "hear-alarm"
+    },
+    {
+      "kind": "action",
+      "id": "stand-up"
+    },
+    {
+      "kind": "action",
+      "id": "leave-bag"
+    },
+    {
+      "kind": "action",
+      "id": "walk-to-exit"
+    },
+    {
+      "kind": "action",
+      "id": "no-running"
+    },
+    {
+      "kind": "action",
+      "id": "quiet-voice"
+    },
+    {
+      "kind": "action",
+      "id": "line-up-outside"
+    },
+    {
+      "kind": "action",
+      "id": "wait"
+    },
+    {
+      "kind": "action",
+      "id": "listen-adult"
+    },
+    {
+      "kind": "action",
+      "id": "go-back-in"
+    }
+  ],
+  "existing_dir": "fire-drill",
+  "art_dir": "fire-drill"
+}

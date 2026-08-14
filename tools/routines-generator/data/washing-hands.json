@@ -1,0 +1,283 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave1-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "washing-hands",
+  "family": "self-care",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave1-high-demand",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail or soft curls",
+    "clothes": "soft coral top, navy trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant. Same outfit colours whole pack."
+  },
+  "label": {
+    "en": "Washing hands",
+    "es": "Lavarse las manos"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "washing hands",
+      "es": "lavarse las manos"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "soap",
+      "slug": "soap",
+      "title": {
+        "en": "soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "tap",
+      "slug": "tap",
+      "title": {
+        "en": "tap",
+        "es": "grifo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "sink",
+      "slug": "sink",
+      "title": {
+        "en": "sink",
+        "es": "lavabo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "hand-dryer",
+      "slug": "hand-dryer",
+      "title": {
+        "en": "hand dryer",
+        "es": "secador de manos"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "go-to-sink",
+      "slug": "go-to-sink",
+      "title": {
+        "en": "go to sink",
+        "es": "ir al lavabo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "tap-on",
+      "slug": "tap-on",
+      "title": {
+        "en": "tap on",
+        "es": "abrir grifo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wet-hands",
+      "slug": "wet-hands",
+      "title": {
+        "en": "wet hands",
+        "es": "mojar manos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "soap-on",
+      "slug": "soap-on",
+      "title": {
+        "en": "soap on",
+        "es": "poner jabon"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "rub-palms",
+      "slug": "rub-palms",
+      "title": {
+        "en": "rub palms",
+        "es": "frotar palmas"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "rub-between-fingers",
+      "slug": "rub-between-fingers",
+      "title": {
+        "en": "rub between fingers",
+        "es": "frotar entre dedos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "rinse-hands",
+      "slug": "rinse-hands",
+      "title": {
+        "en": "rinse hands",
+        "es": "aclarar manos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "tap-off",
+      "slug": "tap-off",
+      "title": {
+        "en": "tap off",
+        "es": "cerrar grifo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "dry-hands",
+      "slug": "dry-hands",
+      "title": {
+        "en": "dry hands",
+        "es": "secar manos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish",
+      "slug": "finish",
+      "title": {
+        "en": "finish",
+        "es": "terminar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 10,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#5B8C7A",
+    "accent": "#4A90A8",
+    "accent_name": "water blue",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person. Boy/girl delivery via teen-boy-medium and teen-girl-medium casts where available.",
+  "notes": [
+    "Universal hygiene pack. Gender via casts."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "soap"
+    },
+    {
+      "kind": "object",
+      "id": "tap"
+    },
+    {
+      "kind": "object",
+      "id": "sink"
+    },
+    {
+      "kind": "object",
+      "id": "towel"
+    },
+    {
+      "kind": "object",
+      "id": "hand-dryer"
+    },
+    {
+      "kind": "action",
+      "id": "go-to-sink"
+    },
+    {
+      "kind": "action",
+      "id": "tap-on"
+    },
+    {
+      "kind": "action",
+      "id": "wet-hands"
+    },
+    {
+      "kind": "action",
+      "id": "soap-on"
+    },
+    {
+      "kind": "action",
+      "id": "rub-palms"
+    },
+    {
+      "kind": "action",
+      "id": "rub-between-fingers"
+    },
+    {
+      "kind": "action",
+      "id": "rinse-hands"
+    },
+    {
+      "kind": "action",
+      "id": "tap-off"
+    },
+    {
+      "kind": "action",
+      "id": "dry-hands"
+    },
+    {
+      "kind": "action",
+      "id": "finish"
+    }
+  ],
+  "existing_dir": "washing-hands",
+  "art_dir": "washing-hands"
+}

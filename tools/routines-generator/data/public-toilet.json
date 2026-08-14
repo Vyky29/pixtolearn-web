@@ -1,0 +1,285 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave1-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "public-toilet",
+  "family": "public-spaces",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave1-high-demand",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant. Same kit colours whole pack."
+  },
+  "label": {
+    "en": "Public toilet",
+    "es": "Aseo publico"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "public toilet",
+      "es": "aseo publico"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "toilet-door",
+      "slug": "toilet-door",
+      "title": {
+        "en": "toilet door",
+        "es": "puerta del aseo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "door-lock",
+      "slug": "door-lock",
+      "title": {
+        "en": "door lock",
+        "es": "pestillo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "toilet-paper",
+      "slug": "toilet-paper",
+      "title": {
+        "en": "toilet paper",
+        "es": "papel higienico"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "soap",
+      "slug": "soap",
+      "title": {
+        "en": "soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "hand-dryer",
+      "slug": "hand-dryer",
+      "title": {
+        "en": "hand dryer",
+        "es": "secador de manos"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "find-toilet",
+      "slug": "find-toilet",
+      "title": {
+        "en": "find toilet",
+        "es": "buscar aseo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait-if-busy",
+      "slug": "wait-if-busy",
+      "title": {
+        "en": "wait if busy",
+        "es": "esperar si esta ocupado"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "enter",
+      "slug": "enter",
+      "title": {
+        "en": "enter",
+        "es": "entrar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "lock-door",
+      "slug": "lock-door",
+      "title": {
+        "en": "lock door",
+        "es": "cerrar pestillo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "use-toilet",
+      "slug": "use-toilet",
+      "title": {
+        "en": "use toilet",
+        "es": "usar el aseo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wipe",
+      "slug": "wipe",
+      "title": {
+        "en": "wipe",
+        "es": "limpiarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "flush",
+      "slug": "flush",
+      "title": {
+        "en": "flush",
+        "es": "tirar de la cadena"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "unlock-door",
+      "slug": "unlock-door",
+      "title": {
+        "en": "unlock door",
+        "es": "abrir pestillo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavarse las manos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 10,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#D03860",
+    "accent": "#3D7EA6",
+    "accent_name": "civic blue",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person. Boy/girl delivery via teen-boy-medium and teen-girl-medium casts where available.",
+  "notes": [
+    "Community toilet flow. Home toilet stays using-the-toilet-boy/girl.",
+    "wash-hands step can hand off to washing-hands pack.",
+    "Gender via casts."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "toilet-door"
+    },
+    {
+      "kind": "object",
+      "id": "door-lock"
+    },
+    {
+      "kind": "object",
+      "id": "toilet-paper"
+    },
+    {
+      "kind": "object",
+      "id": "soap"
+    },
+    {
+      "kind": "object",
+      "id": "hand-dryer"
+    },
+    {
+      "kind": "action",
+      "id": "find-toilet"
+    },
+    {
+      "kind": "action",
+      "id": "wait-if-busy"
+    },
+    {
+      "kind": "action",
+      "id": "enter"
+    },
+    {
+      "kind": "action",
+      "id": "lock-door"
+    },
+    {
+      "kind": "action",
+      "id": "use-toilet"
+    },
+    {
+      "kind": "action",
+      "id": "wipe"
+    },
+    {
+      "kind": "action",
+      "id": "flush"
+    },
+    {
+      "kind": "action",
+      "id": "unlock-door"
+    },
+    {
+      "kind": "action",
+      "id": "wash-hands"
+    },
+    {
+      "kind": "action",
+      "id": "leave"
+    }
+  ],
+  "existing_dir": "public-toilet",
+  "art_dir": "public-toilet"
+}

@@ -1,0 +1,184 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "headphones-and-breaks",
+  "family": "sensory-world",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "all",
+    "gender": "genderless",
+    "skin": "medium",
+    "hair": "short neutral",
+    "clothes": "soft teal sweater, grey trousers",
+    "age": "flexible",
+    "lock": "PRIMARY E1 genderless style. Same outfit entire pack."
+  },
+  "label": {
+    "en": "Headphones and breaks",
+    "es": "Cascos y descansos"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "headphones and breaks",
+      "es": "cascos y descansos"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "cascos"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "break-card",
+      "slug": "break-card",
+      "title": {
+        "en": "break card",
+        "es": "tarjeta de descanso"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "help-card",
+      "slug": "help-card",
+      "title": {
+        "en": "help card",
+        "es": "tarjeta de ayuda"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "quiet-corner-mat",
+      "slug": "quiet-corner-mat",
+      "title": {
+        "en": "quiet corner mat",
+        "es": "esterilla tranquila"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella de agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "choose-tool",
+      "slug": "choose-tool",
+      "title": {
+        "en": "choose a tool",
+        "es": "elegir una herramienta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "put-headphones",
+      "slug": "put-headphones",
+      "title": {
+        "en": "put headphones on",
+        "es": "ponerse cascos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "show-break-card",
+      "slug": "show-break-card",
+      "title": {
+        "en": "show break card",
+        "es": "mostrar tarjeta de descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "show-help-card",
+      "slug": "show-help-card",
+      "title": {
+        "en": "show help card",
+        "es": "mostrar tarjeta de ayuda"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-quiet-spot",
+      "slug": "go-quiet-spot",
+      "title": {
+        "en": "go to quiet spot",
+        "es": "ir al sitio tranquilo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "drink-water",
+      "slug": "drink-water",
+      "title": {
+        "en": "drink water",
+        "es": "beber agua"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "return-or-leave",
+      "slug": "return-or-leave",
+      "title": {
+        "en": "return or leave",
+        "es": "volver o irse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 7,
+    "cards": 13
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#5B9A8B",
+    "accent": "#CBCBC9",
+    "accent_name": "neutral grey",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Agency toolkit pack. Does not retell loud-places."
+  ]
+}

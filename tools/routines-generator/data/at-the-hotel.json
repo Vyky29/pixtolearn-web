@@ -1,0 +1,411 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "at-the-hotel",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green long-sleeve shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #C4A882 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "At the hotel",
+    "es": "En el hotel"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "hotel",
+      "es": "hotel"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "hotel-key",
+      "slug": "hotel-key",
+      "title": {
+        "en": "room key",
+        "es": "llave"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "id-card",
+      "slug": "id-card",
+      "title": {
+        "en": "ID",
+        "es": "documento"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hotel-reservation",
+      "slug": "hotel-reservation",
+      "title": {
+        "en": "reservation",
+        "es": "reserva"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bed",
+      "slug": "bed",
+      "title": {
+        "en": "bed",
+        "es": "cama"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive-hotel",
+      "slug": "arrive-hotel",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-in-reception",
+      "slug": "check-in-reception",
+      "title": {
+        "en": "check in",
+        "es": "check-in"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-id-reservation",
+      "slug": "show-id-reservation",
+      "title": {
+        "en": "show ID",
+        "es": "mostrar documento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "receive-key",
+      "slug": "receive-key",
+      "title": {
+        "en": "get key",
+        "es": "coger llave"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-elevator",
+      "slug": "take-elevator",
+      "title": {
+        "en": "take lift",
+        "es": "coger ascensor"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enter-room",
+      "slug": "enter-room",
+      "title": {
+        "en": "enter room",
+        "es": "entrar habitacion"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "unpack",
+      "slug": "unpack",
+      "title": {
+        "en": "unpack",
+        "es": "deshacer maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-bathroom",
+      "slug": "use-bathroom",
+      "title": {
+        "en": "use bathroom",
+        "es": "usar bano"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "relax",
+      "slug": "relax",
+      "title": {
+        "en": "relax",
+        "es": "relajarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-out",
+      "slug": "check-out",
+      "title": {
+        "en": "check out",
+        "es": "check-out"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "noisy-corridor",
+      "slug": "noisy-corridor",
+      "title": {
+        "en": "noisy corridor",
+        "es": "pasillo ruidoso"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-lobby",
+      "slug": "crowded-lobby",
+      "title": {
+        "en": "crowded lobby",
+        "es": "hall lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-reception",
+      "slug": "ask-reception",
+      "title": {
+        "en": "ask reception",
+        "es": "preguntar recepcion"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "hotel",
+        "es": "hotel"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "hotel-key",
+      "slug": "hotel-key",
+      "title": {
+        "en": "room key",
+        "es": "llave"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "id-card",
+      "slug": "id-card",
+      "title": {
+        "en": "ID",
+        "es": "documento"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hotel-reservation",
+      "slug": "hotel-reservation",
+      "title": {
+        "en": "reservation",
+        "es": "reserva"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bed",
+      "slug": "bed",
+      "title": {
+        "en": "bed",
+        "es": "cama"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "arrive-hotel",
+      "slug": "arrive-hotel",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-in-reception",
+      "slug": "check-in-reception",
+      "title": {
+        "en": "check in",
+        "es": "check-in"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-id-reservation",
+      "slug": "show-id-reservation",
+      "title": {
+        "en": "show ID",
+        "es": "mostrar documento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "receive-key",
+      "slug": "receive-key",
+      "title": {
+        "en": "get key",
+        "es": "coger llave"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-elevator",
+      "slug": "take-elevator",
+      "title": {
+        "en": "take lift",
+        "es": "coger ascensor"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enter-room",
+      "slug": "enter-room",
+      "title": {
+        "en": "enter room",
+        "es": "entrar habitacion"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "unpack",
+      "slug": "unpack",
+      "title": {
+        "en": "unpack",
+        "es": "deshacer maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-bathroom",
+      "slug": "use-bathroom",
+      "title": {
+        "en": "use bathroom",
+        "es": "usar bano"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "relax",
+      "slug": "relax",
+      "title": {
+        "en": "relax",
+        "es": "relajarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-out",
+      "slug": "check-out",
+      "title": {
+        "en": "check out",
+        "es": "check-out"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "noisy-corridor",
+      "slug": "noisy-corridor",
+      "title": {
+        "en": "noisy corridor",
+        "es": "pasillo ruidoso"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-lobby",
+      "slug": "crowded-lobby",
+      "title": {
+        "en": "crowded lobby",
+        "es": "hall lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-reception",
+      "slug": "ask-reception",
+      "title": {
+        "en": "ask reception",
+        "es": "preguntar recepcion"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 13,
+    "cards": 20
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#D03860",
+    "accent": "#C4A882",
+    "accent_name": "hotel sand",
+    "highlight": "keycard / lift / door",
+    "outfit_lock": true
+  }
+}

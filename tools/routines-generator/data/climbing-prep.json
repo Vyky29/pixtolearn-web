@@ -1,0 +1,8 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "id": "climbing-prep",
+  "status": "redirect",
+  "redirect_to": "climbing",
+  "legacy_note": "Unified into climbing. Do not use for new art.",
+  "unified_at": "2026-08-14"
+}

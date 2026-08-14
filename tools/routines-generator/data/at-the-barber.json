@@ -1,0 +1,375 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items + actions",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Match hairdresser clinical style."
+  },
+  "id": "at-the-barber",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "adult",
+  "character": {
+    "avatar_id": "YA2",
+    "band": "young-adult",
+    "gender": "man",
+    "skin": "dark",
+    "hair": "short black",
+    "clothes": "dark grey t-shirt, black trousers",
+    "age": "young-adult",
+    "lock": "PRIMARY YA2 only. Accent #6A7A8A. Barber shop, not hairdresser salon."
+  },
+  "label": {
+    "en": "Barber",
+    "es": "Barberia"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "barber",
+      "es": "barberia"
+    },
+    "wow_layer": "cover"
+  },
+  "design": {
+    "avatar_id": "YA2",
+    "family_base": "#D03860",
+    "accent": "#6A7A8A",
+    "accent_name": "barber steel",
+    "highlight": "clippers / cape",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar YA2. Locked outfit.",
+  "items": [
+    {
+      "id": "clippers",
+      "slug": "clippers",
+      "title": {
+        "en": "clippers",
+        "es": "maquina"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "barber-cape",
+      "slug": "barber-cape",
+      "title": {
+        "en": "cape",
+        "es": "capa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "scissors",
+      "slug": "scissors",
+      "title": {
+        "en": "scissors",
+        "es": "tijeras"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "aftershave",
+      "slug": "aftershave",
+      "title": {
+        "en": "aftershave",
+        "es": "aftershave"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive-barber",
+      "slug": "arrive-barber",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-chair",
+      "slug": "sit-chair",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-cape",
+      "slug": "put-cape",
+      "title": {
+        "en": "cape on",
+        "es": "poner capa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "discuss-cut",
+      "slug": "discuss-cut",
+      "title": {
+        "en": "talk cut",
+        "es": "decir corte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-clippers",
+      "slug": "use-clippers",
+      "title": {
+        "en": "use clippers",
+        "es": "usar maquina"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cut-hair",
+      "slug": "cut-hair",
+      "title": {
+        "en": "cut hair",
+        "es": "cortar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trim-beard",
+      "slug": "trim-beard",
+      "title": {
+        "en": "trim beard",
+        "es": "arreglar barba"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-off",
+      "slug": "brush-off",
+      "title": {
+        "en": "brush off",
+        "es": "cepillar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-mirror",
+      "slug": "check-mirror",
+      "title": {
+        "en": "check mirror",
+        "es": "mirar espejo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "barber",
+        "es": "barberia"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "clippers",
+      "slug": "clippers",
+      "title": {
+        "en": "clippers",
+        "es": "maquina"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "barber-cape",
+      "slug": "barber-cape",
+      "title": {
+        "en": "cape",
+        "es": "capa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "scissors",
+      "slug": "scissors",
+      "title": {
+        "en": "scissors",
+        "es": "tijeras"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "aftershave",
+      "slug": "aftershave",
+      "title": {
+        "en": "aftershave",
+        "es": "aftershave"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "arrive-barber",
+      "slug": "arrive-barber",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-chair",
+      "slug": "sit-chair",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-cape",
+      "slug": "put-cape",
+      "title": {
+        "en": "cape on",
+        "es": "poner capa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "discuss-cut",
+      "slug": "discuss-cut",
+      "title": {
+        "en": "talk cut",
+        "es": "decir corte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-clippers",
+      "slug": "use-clippers",
+      "title": {
+        "en": "use clippers",
+        "es": "usar maquina"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cut-hair",
+      "slug": "cut-hair",
+      "title": {
+        "en": "cut hair",
+        "es": "cortar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trim-beard",
+      "slug": "trim-beard",
+      "title": {
+        "en": "trim beard",
+        "es": "arreglar barba"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-off",
+      "slug": "brush-off",
+      "title": {
+        "en": "brush off",
+        "es": "cepillar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-mirror",
+      "slug": "check-mirror",
+      "title": {
+        "en": "check mirror",
+        "es": "mirar espejo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 11,
+    "cards": 18
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "at-the-airport",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5BA3D0 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "At the airport",
+    "es": "En el aeropuerto"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "airport",
+      "es": "aeropuerto"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "flight-ticket",
+      "slug": "flight-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "passport",
+      "slug": "passport",
+      "title": {
+        "en": "passport",
+        "es": "pasaporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "boarding-pass",
+      "slug": "boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "tarjeta embarque"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "id-card",
+      "slug": "id-card",
+      "title": {
+        "en": "ID",
+        "es": "documento"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "checkin-counter",
+      "slug": "checkin-counter",
+      "title": {
+        "en": "check in",
+        "es": "facturar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-boarding-pass",
+      "slug": "get-boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "coger tarjeta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "proceed-security",
+      "slug": "proceed-security",
+      "title": {
+        "en": "security",
+        "es": "seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-passport-ticket",
+      "slug": "show-passport-ticket",
+      "title": {
+        "en": "show passport",
+        "es": "mostrar pasaporte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "security-scanner",
+      "slug": "security-scanner",
+      "title": {
+        "en": "walk through",
+        "es": "pasar escaner"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "head-gate",
+      "slug": "head-gate",
+      "title": {
+        "en": "go to gate",
+        "es": "ir puerta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-boarding",
+      "slug": "wait-boarding",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board-plane",
+      "slug": "board-plane",
+      "title": {
+        "en": "board",
+        "es": "embarcar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-seat",
+      "slug": "take-seat",
+      "title": {
+        "en": "take seat",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "prepare-takeoff",
+      "slug": "prepare-takeoff",
+      "title": {
+        "en": "takeoff",
+        "es": "despegue"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-announcements",
+      "slug": "loud-announcements",
+      "title": {
+        "en": "loud speakers",
+        "es": "altavoces"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-security",
+      "slug": "crowded-security",
+      "title": {
+        "en": "crowded security",
+        "es": "seguridad llena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-long-queue",
+      "slug": "wait-long-queue",
+      "title": {
+        "en": "long queue",
+        "es": "cola larga"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-headphones",
+      "slug": "use-headphones",
+      "title": {
+        "en": "use headphones",
+        "es": "poner cascos"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "airport",
+        "es": "aeropuerto"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "flight-ticket",
+      "slug": "flight-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "passport",
+      "slug": "passport",
+      "title": {
+        "en": "passport",
+        "es": "pasaporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "boarding-pass",
+      "slug": "boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "tarjeta embarque"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "id-card",
+      "slug": "id-card",
+      "title": {
+        "en": "ID",
+        "es": "documento"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "checkin-counter",
+      "slug": "checkin-counter",
+      "title": {
+        "en": "check in",
+        "es": "facturar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-boarding-pass",
+      "slug": "get-boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "coger tarjeta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "proceed-security",
+      "slug": "proceed-security",
+      "title": {
+        "en": "security",
+        "es": "seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-passport-ticket",
+      "slug": "show-passport-ticket",
+      "title": {
+        "en": "show passport",
+        "es": "mostrar pasaporte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "security-scanner",
+      "slug": "security-scanner",
+      "title": {
+        "en": "walk through",
+        "es": "pasar escaner"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "head-gate",
+      "slug": "head-gate",
+      "title": {
+        "en": "go to gate",
+        "es": "ir puerta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-boarding",
+      "slug": "wait-boarding",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board-plane",
+      "slug": "board-plane",
+      "title": {
+        "en": "board",
+        "es": "embarcar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-seat",
+      "slug": "take-seat",
+      "title": {
+        "en": "take seat",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "prepare-takeoff",
+      "slug": "prepare-takeoff",
+      "title": {
+        "en": "takeoff",
+        "es": "despegue"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-announcements",
+      "slug": "loud-announcements",
+      "title": {
+        "en": "loud speakers",
+        "es": "altavoces"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-security",
+      "slug": "crowded-security",
+      "title": {
+        "en": "crowded security",
+        "es": "seguridad llena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-long-queue",
+      "slug": "wait-long-queue",
+      "title": {
+        "en": "long queue",
+        "es": "cola larga"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-headphones",
+      "slug": "use-headphones",
+      "title": {
+        "en": "use headphones",
+        "es": "poner cascos"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 14,
+    "cards": 20
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#D03860",
+    "accent": "#5BA3D0",
+    "accent_name": "sky blue",
+    "highlight": "same teen T1 as plane; passport / gate / bag",
+    "outfit_lock": true
+  }
+}

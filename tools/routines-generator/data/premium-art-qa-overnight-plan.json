@@ -1,0 +1,64 @@
+{
+  "title": "Premium art QA overnight",
+  "status": "complete",
+  "started": "2026-08-08",
+  "style": {
+    "illustration": "flat 2D, thin black outlines, muted flat colours",
+    "background": "pure white",
+    "forbidden_global": [
+      "text",
+      "logos",
+      "watermarks",
+      "grey frames",
+      "trampoline outside trampoline-wow",
+      "soap bottle as tube-map or yellow-line",
+      "cafeteria tray outside school-lunch"
+    ],
+    "context_rule": "Place packs: 1-2 unmistakable place props on white bg (beach pattern). No floating icon bubbles.",
+    "install": "scripts/install_art.py --fill 0.94",
+    "size": [
+      531,
+      648
+    ]
+  },
+  "force_regen": {},
+  "context_cues": {
+    "at-the-gp": "clinic waiting chairs, reception desk, stethoscope, doctor secondary",
+    "at-the-dentist": "dental chair silhouette, dental cape, mouth mirror, clinic waiting",
+    "at-a-cafe": "cafe table, chair, menu, cup, counter",
+    "using-the-tube": "folded tube map sheet, yellow platform safety line on floor",
+    "attending-a-sport-event": "stadium stands/arch, numbered seat, ticket",
+    "at-the-airport": "check-in desk, boarding gate, plane door, suitcase",
+    "haircare": "shower cubicle, shower head, tiles for wet steps; same T2 lilac"
+  },
+  "waves": [
+    "0-audit",
+    "1-contamination",
+    "2-avatars",
+    "3-haircare",
+    "4-place",
+    "5-sweep",
+    "6-close"
+  ],
+  "execution_progress": {
+    "0": "complete",
+    "1": "complete",
+    "2": "complete",
+    "3": "complete",
+    "4": "complete",
+    "5": "complete",
+    "6": "complete"
+  },
+  "prompt_prefix": "PixtoLearn WOW flashcard illustration, flat 2D children's educational style, thin clean black outlines, muted flat colours, pure white background, no text no letters no logos no watermarks no grey frame. Full headroom, do not crop head. FORBIDDEN: trampoline unless this is trampoline-wow; soap or shampoo bottle unless this pack is haircare or shower object.",
+  "regen_done": [
+    "at-the-gp wait/name-called",
+    "at-a-cafe look-menu/enter/find-table/order",
+    "using-the-tube tube-map/yellow-line",
+    "at-the-dentist wait/name-called",
+    "using-the-toilet wee/poo",
+    "clothes-boy cap-off",
+    "haircare full",
+    "attending-a-sport-event head-stadium/find-seat",
+    "at-the-airport get-boarding-pass/head-gate/board-plane/prepare-takeoff"
+  ]
+}

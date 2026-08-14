@@ -1,0 +1,169 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-14",
+  "title": "High-demand WOW creation queue (unified sports)",
+  "gender_rule": {
+    "default": "One pack per routine. Boy/girl via teen-boy-medium and teen-girl-medium casts (same objects + actions).",
+    "split_packs_only_when": "Anatomy or clothing differs (clothes, toilet, intimate-care, menstrual, shaving, barber/hairdresser).",
+    "sports": "Never duplicate football-boy / football-girl. Ship casts for both."
+  },
+  "pack_shape": {
+    "prep": "cover + objects (kit) + actions ending in ready",
+    "activity": "cover + shared kit objects + session actions to finish/exit",
+    "art": "Reuse shared objects where style matches; new actions need new art"
+  },
+  "wave_1_ship_next": {
+    "why": "Highest family/school pull after current library; fills clear gaps.",
+    "pairs_or_packs": [
+      {
+        "id": "football",
+        "family": [
+          "sports"
+        ],
+        "demand": "very high UK/ES schools and clubs",
+        "gender": "casts boy+girl",
+        "objects_prep": [
+          "kit",
+          "boots",
+          "shin pads",
+          "ball",
+          "water bottle"
+        ],
+        "actions_prep": [
+          "arrive",
+          "change kit",
+          "shin pads on",
+          "boots on",
+          "water ready",
+          "ready"
+        ],
+        "actions_activity": [
+          "warm up",
+          "listen coach",
+          "play",
+          "drink water",
+          "rest",
+          "finish",
+          "change"
+        ]
+      },
+      {
+        "id": "washing-hands",
+        "family": "self-care",
+        "demand": "daily independence; school hygiene",
+        "gender": "casts",
+        "objects": [
+          "soap",
+          "tap",
+          "sink",
+          "towel or dryer"
+        ],
+        "actions": [
+          "tap on",
+          "wet hands",
+          "soap",
+          "rub",
+          "rinse",
+          "tap off",
+          "dry",
+          "finish"
+        ]
+      },
+      {
+        "id": "public-toilet",
+        "family": "public-spaces",
+        "demand": "community access anxiety",
+        "gender": "casts; keep toilet-boy/girl for home intimate flow",
+        "objects": [
+          "door",
+          "lock",
+          "toilet paper",
+          "soap",
+          "dryer"
+        ],
+        "actions": [
+          "find toilet",
+          "wait if busy",
+          "enter",
+          "lock",
+          "use",
+          "flush",
+          "wash hands",
+          "leave"
+        ]
+      },
+      {
+        "id": "at-the-optician",
+        "family": "health-appointments",
+        "demand": "common NHS/clinic visit; sensory (lights, sit still)",
+        "gender": "casts",
+        "objects": [
+          "waiting chair",
+          "eye chart",
+          "trial frames",
+          "chair",
+          "glasses case"
+        ],
+        "actions": [
+          "arrive",
+          "check in",
+          "wait",
+          "sit",
+          "look at chart",
+          "cover one eye",
+          "try frames",
+          "finish",
+          "leave"
+        ]
+      }
+    ]
+  },
+  "wave_2": {
+    "why": "School week + second sports.",
+    "items": [
+      "fire-drill (school-college)",
+      "changing-lessons (school-college)",
+      "basketball + basketball",
+      "yoga + yoga",
+      "hearing-test (health)",
+      "physiotherapy (health)"
+    ]
+  },
+  "wave_3": {
+    "why": "Holiday and sensory-heavy outings.",
+    "items": [
+      "skiing-prep + skiing-activity",
+      "surfing-prep + surfing-activity OR snorkelling pair",
+      "bonfire-night-fireworks (weather-seasons)",
+      "bright-lights (sensory-world)",
+      "fast-food (eating-out)"
+    ]
+  },
+  "do_not_start_yet": [
+    "life-events funeral (editorial review first)",
+    "abc-prep as WOW (use ABC skill deck)",
+    "new -wow ids",
+    "duplicate gender packs for sports"
+  ],
+  "parents_status": {
+    "synced": "2026-08-14",
+    "catalogue_packs": 72,
+    "sports_prep_count": 7,
+    "sports_activities_count": 7,
+    "legacy_aliases": [
+      "climbing-wow",
+      "swimming-wow",
+      "gym-activities",
+      "hiking",
+      "trampoline-wow"
+    ]
+  },
+  "wave_1_status": "specs-ready-art-todo",
+  "wave_1_pack_ids": [
+    "football",
+    "washing-hands",
+    "public-toilet",
+    "at-the-optician"
+  ],
+  "sports_model": "One pack per sport"
+}

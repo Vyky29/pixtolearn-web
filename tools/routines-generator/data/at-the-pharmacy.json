@@ -1,0 +1,321 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "at-the-pharmacy",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "adult",
+  "character": {
+    "avatar_id": "YA2",
+    "band": "young-adult",
+    "gender": "man",
+    "skin": "dark",
+    "hair": "short black",
+    "clothes": "dark grey t-shirt, black trousers",
+    "age": "young-adult",
+    "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #3A9A6A highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Pharmacy",
+    "es": "Farmacia"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "pharmacy",
+      "es": "farmacia"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "prescription",
+      "slug": "prescription",
+      "title": {
+        "en": "prescription",
+        "es": "receta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "medicine-bottles",
+      "slug": "medicine-bottles",
+      "title": {
+        "en": "medicine",
+        "es": "medicina"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pill-box",
+      "slug": "pill-box",
+      "title": {
+        "en": "pill box",
+        "es": "pastillero"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pharmacy-bag",
+      "slug": "pharmacy-bag",
+      "title": {
+        "en": "bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "hand-prescription",
+      "slug": "hand-prescription",
+      "title": {
+        "en": "give prescription",
+        "es": "dar receta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-medicine",
+      "slug": "wait-medicine",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-medicine",
+      "slug": "collect-medicine",
+      "title": {
+        "en": "get medicine",
+        "es": "coger medicina"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-instructions",
+      "slug": "ask-instructions",
+      "title": {
+        "en": "ask how",
+        "es": "preguntar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-match",
+      "slug": "check-match",
+      "title": {
+        "en": "check medicine",
+        "es": "comprobar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-bag",
+      "slug": "pack-bag",
+      "title": {
+        "en": "pack bag",
+        "es": "meter bolsa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-in-queue",
+      "slug": "wait-in-queue",
+      "title": {
+        "en": "wait in queue",
+        "es": "hacer cola"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-shop",
+      "slug": "crowded-shop",
+      "title": {
+        "en": "crowded",
+        "es": "lleno"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "pharmacy",
+        "es": "farmacia"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "prescription",
+      "slug": "prescription",
+      "title": {
+        "en": "prescription",
+        "es": "receta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "medicine-bottles",
+      "slug": "medicine-bottles",
+      "title": {
+        "en": "medicine",
+        "es": "medicina"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pill-box",
+      "slug": "pill-box",
+      "title": {
+        "en": "pill box",
+        "es": "pastillero"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pharmacy-bag",
+      "slug": "pharmacy-bag",
+      "title": {
+        "en": "bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-prescription",
+      "slug": "hand-prescription",
+      "title": {
+        "en": "give prescription",
+        "es": "dar receta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-medicine",
+      "slug": "wait-medicine",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-medicine",
+      "slug": "collect-medicine",
+      "title": {
+        "en": "get medicine",
+        "es": "coger medicina"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-instructions",
+      "slug": "ask-instructions",
+      "title": {
+        "en": "ask how",
+        "es": "preguntar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-match",
+      "slug": "check-match",
+      "title": {
+        "en": "check medicine",
+        "es": "comprobar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-bag",
+      "slug": "pack-bag",
+      "title": {
+        "en": "pack bag",
+        "es": "meter bolsa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-in-queue",
+      "slug": "wait-in-queue",
+      "title": {
+        "en": "wait in queue",
+        "es": "hacer cola"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-shop",
+      "slug": "crowded-shop",
+      "title": {
+        "en": "crowded",
+        "es": "lleno"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 10,
+    "cards": 15
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "YA2",
+    "family_base": "#D03860",
+    "accent": "#3A9A6A",
+    "accent_name": "pharmacy green",
+    "highlight": "prescription / medicine",
+    "outfit_lock": true
+  }
+}

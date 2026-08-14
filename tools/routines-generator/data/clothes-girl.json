@@ -1,0 +1,1035 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.4",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects once) + dress actions + undress actions",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects match actions. Actions: gesture zoom. Staff can print a subset for morning or evening."
+  },
+  "id": "clothes-girl",
+  "family": "self-care",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail or soft curls",
+    "clothes": "coral top, navy trousers or skirt",
+    "age": "child",
+    "lock": "PRIMARY C2 only. Accent #D4A0B0 dusty rose on garment being put on."
+  },
+  "label": {
+    "en": "Clothes (girl)",
+    "es": "Ropa (nina)"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "clothes",
+      "es": "ropa"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "knickers",
+      "slug": "knickers",
+      "title": {
+        "en": "knickers",
+        "es": "bragas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "socks",
+      "slug": "socks",
+      "title": {
+        "en": "socks",
+        "es": "calcetines"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trousers",
+      "slug": "trousers",
+      "title": {
+        "en": "trousers",
+        "es": "pantalon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "skirt",
+      "slug": "skirt",
+      "title": {
+        "en": "skirt",
+        "es": "falda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tshirt",
+      "slug": "tshirt",
+      "title": {
+        "en": "t-shirt",
+        "es": "camiseta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shirt",
+      "slug": "shirt",
+      "title": {
+        "en": "shirt",
+        "es": "camisa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "vest",
+      "slug": "vest",
+      "title": {
+        "en": "vest",
+        "es": "camiseta interior"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bra",
+      "slug": "bra",
+      "title": {
+        "en": "bra",
+        "es": "sujetador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jumper",
+      "slug": "jumper",
+      "title": {
+        "en": "jumper",
+        "es": "jersey"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jacket",
+      "slug": "jacket",
+      "title": {
+        "en": "jacket",
+        "es": "chaqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "scarf",
+      "slug": "scarf",
+      "title": {
+        "en": "scarf",
+        "es": "bufanda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "gloves",
+      "slug": "gloves",
+      "title": {
+        "en": "gloves",
+        "es": "guantes"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hat",
+      "slug": "hat",
+      "title": {
+        "en": "hat",
+        "es": "gorro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cap",
+      "slug": "cap",
+      "title": {
+        "en": "cap",
+        "es": "gorra"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shoes",
+      "slug": "shoes",
+      "title": {
+        "en": "shoes",
+        "es": "zapatos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trainers",
+      "slug": "trainers",
+      "title": {
+        "en": "trainers",
+        "es": "zapatillas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "swimsuit",
+      "slug": "swimsuit",
+      "title": {
+        "en": "swimsuit",
+        "es": "banador"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "knickers-on",
+      "slug": "knickers-on",
+      "title": {
+        "en": "knickers on",
+        "es": "poner bragas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "socks-on",
+      "slug": "socks-on",
+      "title": {
+        "en": "socks on",
+        "es": "poner calcetines"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-on",
+      "slug": "trousers-on",
+      "title": {
+        "en": "trousers on",
+        "es": "poner pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "skirt-on",
+      "slug": "skirt-on",
+      "title": {
+        "en": "skirt on",
+        "es": "poner falda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "vest-on",
+      "slug": "vest-on",
+      "title": {
+        "en": "vest on",
+        "es": "poner interior"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "bra-on",
+      "slug": "bra-on",
+      "title": {
+        "en": "bra on",
+        "es": "poner sujetador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tshirt-on",
+      "slug": "tshirt-on",
+      "title": {
+        "en": "t-shirt on",
+        "es": "poner camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shirt-on",
+      "slug": "shirt-on",
+      "title": {
+        "en": "shirt on",
+        "es": "poner camisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jumper-on",
+      "slug": "jumper-on",
+      "title": {
+        "en": "jumper on",
+        "es": "poner jersey"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jacket-on",
+      "slug": "jacket-on",
+      "title": {
+        "en": "jacket on",
+        "es": "poner chaqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scarf-on",
+      "slug": "scarf-on",
+      "title": {
+        "en": "scarf on",
+        "es": "poner bufanda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gloves-on",
+      "slug": "gloves-on",
+      "title": {
+        "en": "gloves on",
+        "es": "poner guantes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hat-on",
+      "slug": "hat-on",
+      "title": {
+        "en": "hat on",
+        "es": "poner gorro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cap-on",
+      "slug": "cap-on",
+      "title": {
+        "en": "cap on",
+        "es": "poner gorra"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shoes-on",
+      "slug": "shoes-on",
+      "title": {
+        "en": "shoes on",
+        "es": "poner zapatos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trainers-on",
+      "slug": "trainers-on",
+      "title": {
+        "en": "trainers on",
+        "es": "poner zapatillas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "swimsuit-on",
+      "slug": "swimsuit-on",
+      "title": {
+        "en": "swimsuit on",
+        "es": "poner banador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trainers-off",
+      "slug": "trainers-off",
+      "title": {
+        "en": "trainers off",
+        "es": "quitar zapatillas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shoes-off",
+      "slug": "shoes-off",
+      "title": {
+        "en": "shoes off",
+        "es": "quitar zapatos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cap-off",
+      "slug": "cap-off",
+      "title": {
+        "en": "cap off",
+        "es": "quitar gorra"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hat-off",
+      "slug": "hat-off",
+      "title": {
+        "en": "hat off",
+        "es": "quitar gorro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gloves-off",
+      "slug": "gloves-off",
+      "title": {
+        "en": "gloves off",
+        "es": "quitar guantes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scarf-off",
+      "slug": "scarf-off",
+      "title": {
+        "en": "scarf off",
+        "es": "quitar bufanda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jacket-off",
+      "slug": "jacket-off",
+      "title": {
+        "en": "jacket off",
+        "es": "quitar chaqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jumper-off",
+      "slug": "jumper-off",
+      "title": {
+        "en": "jumper off",
+        "es": "quitar jersey"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shirt-off",
+      "slug": "shirt-off",
+      "title": {
+        "en": "shirt off",
+        "es": "quitar camisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tshirt-off",
+      "slug": "tshirt-off",
+      "title": {
+        "en": "t-shirt off",
+        "es": "quitar camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "bra-off",
+      "slug": "bra-off",
+      "title": {
+        "en": "bra off",
+        "es": "quitar sujetador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "vest-off",
+      "slug": "vest-off",
+      "title": {
+        "en": "vest off",
+        "es": "quitar interior"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "skirt-off",
+      "slug": "skirt-off",
+      "title": {
+        "en": "skirt off",
+        "es": "quitar falda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-off",
+      "slug": "trousers-off",
+      "title": {
+        "en": "trousers off",
+        "es": "quitar pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "socks-off",
+      "slug": "socks-off",
+      "title": {
+        "en": "socks off",
+        "es": "quitar calcetines"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "swimsuit-off",
+      "slug": "swimsuit-off",
+      "title": {
+        "en": "swimsuit off",
+        "es": "quitar banador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "knickers-off",
+      "slug": "knickers-off",
+      "title": {
+        "en": "knickers off",
+        "es": "quitar bragas"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "action_groups": {
+    "dress": [
+      "knickers-on",
+      "socks-on",
+      "trousers-on",
+      "skirt-on",
+      "vest-on",
+      "bra-on",
+      "tshirt-on",
+      "shirt-on",
+      "jumper-on",
+      "jacket-on",
+      "scarf-on",
+      "gloves-on",
+      "hat-on",
+      "cap-on",
+      "shoes-on",
+      "trainers-on",
+      "swimsuit-on"
+    ],
+    "undress": [
+      "trainers-off",
+      "shoes-off",
+      "cap-off",
+      "hat-off",
+      "gloves-off",
+      "scarf-off",
+      "jacket-off",
+      "jumper-off",
+      "shirt-off",
+      "tshirt-off",
+      "bra-off",
+      "vest-off",
+      "skirt-off",
+      "trousers-off",
+      "socks-off",
+      "swimsuit-off",
+      "knickers-off"
+    ]
+  },
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "clothes",
+        "es": "ropa"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "knickers",
+      "slug": "knickers",
+      "title": {
+        "en": "knickers",
+        "es": "bragas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "socks",
+      "slug": "socks",
+      "title": {
+        "en": "socks",
+        "es": "calcetines"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trousers",
+      "slug": "trousers",
+      "title": {
+        "en": "trousers",
+        "es": "pantalon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "skirt",
+      "slug": "skirt",
+      "title": {
+        "en": "skirt",
+        "es": "falda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tshirt",
+      "slug": "tshirt",
+      "title": {
+        "en": "t-shirt",
+        "es": "camiseta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shirt",
+      "slug": "shirt",
+      "title": {
+        "en": "shirt",
+        "es": "camisa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "vest",
+      "slug": "vest",
+      "title": {
+        "en": "vest",
+        "es": "camiseta interior"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bra",
+      "slug": "bra",
+      "title": {
+        "en": "bra",
+        "es": "sujetador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jumper",
+      "slug": "jumper",
+      "title": {
+        "en": "jumper",
+        "es": "jersey"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jacket",
+      "slug": "jacket",
+      "title": {
+        "en": "jacket",
+        "es": "chaqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "scarf",
+      "slug": "scarf",
+      "title": {
+        "en": "scarf",
+        "es": "bufanda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "gloves",
+      "slug": "gloves",
+      "title": {
+        "en": "gloves",
+        "es": "guantes"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hat",
+      "slug": "hat",
+      "title": {
+        "en": "hat",
+        "es": "gorro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cap",
+      "slug": "cap",
+      "title": {
+        "en": "cap",
+        "es": "gorra"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shoes",
+      "slug": "shoes",
+      "title": {
+        "en": "shoes",
+        "es": "zapatos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trainers",
+      "slug": "trainers",
+      "title": {
+        "en": "trainers",
+        "es": "zapatillas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "swimsuit",
+      "slug": "swimsuit",
+      "title": {
+        "en": "swimsuit",
+        "es": "banador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "knickers-on",
+      "slug": "knickers-on",
+      "title": {
+        "en": "knickers on",
+        "es": "poner bragas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "socks-on",
+      "slug": "socks-on",
+      "title": {
+        "en": "socks on",
+        "es": "poner calcetines"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-on",
+      "slug": "trousers-on",
+      "title": {
+        "en": "trousers on",
+        "es": "poner pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "skirt-on",
+      "slug": "skirt-on",
+      "title": {
+        "en": "skirt on",
+        "es": "poner falda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "vest-on",
+      "slug": "vest-on",
+      "title": {
+        "en": "vest on",
+        "es": "poner interior"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "bra-on",
+      "slug": "bra-on",
+      "title": {
+        "en": "bra on",
+        "es": "poner sujetador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tshirt-on",
+      "slug": "tshirt-on",
+      "title": {
+        "en": "t-shirt on",
+        "es": "poner camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shirt-on",
+      "slug": "shirt-on",
+      "title": {
+        "en": "shirt on",
+        "es": "poner camisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jumper-on",
+      "slug": "jumper-on",
+      "title": {
+        "en": "jumper on",
+        "es": "poner jersey"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jacket-on",
+      "slug": "jacket-on",
+      "title": {
+        "en": "jacket on",
+        "es": "poner chaqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scarf-on",
+      "slug": "scarf-on",
+      "title": {
+        "en": "scarf on",
+        "es": "poner bufanda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gloves-on",
+      "slug": "gloves-on",
+      "title": {
+        "en": "gloves on",
+        "es": "poner guantes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hat-on",
+      "slug": "hat-on",
+      "title": {
+        "en": "hat on",
+        "es": "poner gorro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cap-on",
+      "slug": "cap-on",
+      "title": {
+        "en": "cap on",
+        "es": "poner gorra"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shoes-on",
+      "slug": "shoes-on",
+      "title": {
+        "en": "shoes on",
+        "es": "poner zapatos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trainers-on",
+      "slug": "trainers-on",
+      "title": {
+        "en": "trainers on",
+        "es": "poner zapatillas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "swimsuit-on",
+      "slug": "swimsuit-on",
+      "title": {
+        "en": "swimsuit on",
+        "es": "poner banador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trainers-off",
+      "slug": "trainers-off",
+      "title": {
+        "en": "trainers off",
+        "es": "quitar zapatillas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shoes-off",
+      "slug": "shoes-off",
+      "title": {
+        "en": "shoes off",
+        "es": "quitar zapatos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cap-off",
+      "slug": "cap-off",
+      "title": {
+        "en": "cap off",
+        "es": "quitar gorra"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hat-off",
+      "slug": "hat-off",
+      "title": {
+        "en": "hat off",
+        "es": "quitar gorro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gloves-off",
+      "slug": "gloves-off",
+      "title": {
+        "en": "gloves off",
+        "es": "quitar guantes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scarf-off",
+      "slug": "scarf-off",
+      "title": {
+        "en": "scarf off",
+        "es": "quitar bufanda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jacket-off",
+      "slug": "jacket-off",
+      "title": {
+        "en": "jacket off",
+        "es": "quitar chaqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jumper-off",
+      "slug": "jumper-off",
+      "title": {
+        "en": "jumper off",
+        "es": "quitar jersey"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shirt-off",
+      "slug": "shirt-off",
+      "title": {
+        "en": "shirt off",
+        "es": "quitar camisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tshirt-off",
+      "slug": "tshirt-off",
+      "title": {
+        "en": "t-shirt off",
+        "es": "quitar camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "bra-off",
+      "slug": "bra-off",
+      "title": {
+        "en": "bra off",
+        "es": "quitar sujetador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "vest-off",
+      "slug": "vest-off",
+      "title": {
+        "en": "vest off",
+        "es": "quitar interior"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "skirt-off",
+      "slug": "skirt-off",
+      "title": {
+        "en": "skirt off",
+        "es": "quitar falda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-off",
+      "slug": "trousers-off",
+      "title": {
+        "en": "trousers off",
+        "es": "quitar pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "socks-off",
+      "slug": "socks-off",
+      "title": {
+        "en": "socks off",
+        "es": "quitar calcetines"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "swimsuit-off",
+      "slug": "swimsuit-off",
+      "title": {
+        "en": "swimsuit off",
+        "es": "quitar banador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "knickers-off",
+      "slug": "knickers-off",
+      "title": {
+        "en": "knickers off",
+        "es": "quitar bragas"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 17,
+    "actions": 34,
+    "dress_actions": 17,
+    "undress_actions": 17,
+    "cards": 52
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#5B8C7A",
+    "accent": "#D4A0B0",
+    "accent_name": "dusty rose",
+    "highlight": "garment being put on",
+    "outfit_lock": true,
+    "undress_accent": "#C090A0",
+    "undress_accent_name": "soft rose"
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit. Accent highlights garment. Never mix ages/genders mid-routine.",
+  "merged_from": [
+    "getting-dressed-female",
+    "getting-undressed-female"
+  ]
+}

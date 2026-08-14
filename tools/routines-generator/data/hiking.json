@@ -1,0 +1,389 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.7-unified",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "hiking",
+  "family": "sports",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T2",
+    "band": "teen",
+    "gender": "woman",
+    "skin": "light",
+    "hair": "shoulder-length brown",
+    "clothes": "teal jacket, navy trousers",
+    "age": "teen",
+    "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #4A8A50 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Hiking",
+    "es": "Senderismo"
+  },
+  "existing_dir": "hiking",
+  "art_dir": "hiking",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "hiking",
+      "es": "senderismo"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "hiking-boots",
+      "slug": "hiking-boots",
+      "title": {
+        "en": "hiking boots",
+        "es": "botas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "backpack",
+      "slug": "backpack",
+      "title": {
+        "en": "backpack",
+        "es": "mochila"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trail-map",
+      "slug": "trail-map",
+      "title": {
+        "en": "trail map",
+        "es": "mapa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "snacks",
+      "slug": "snacks",
+      "title": {
+        "en": "snacks",
+        "es": "snack"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jacket",
+      "slug": "jacket",
+      "title": {
+        "en": "jacket",
+        "es": "chaqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "walking-stick",
+      "slug": "walking-stick",
+      "title": {
+        "en": "walking stick",
+        "es": "baston"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "put-boots",
+      "slug": "put-boots",
+      "title": {
+        "en": "boots on",
+        "es": "poner botas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tie-laces",
+      "slug": "tie-laces",
+      "title": {
+        "en": "tie laces",
+        "es": "atar cordones"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-jacket",
+      "slug": "put-jacket",
+      "title": {
+        "en": "jacket on",
+        "es": "poner chaqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-backpack",
+      "slug": "pack-backpack",
+      "title": {
+        "en": "pack bag",
+        "es": "preparar mochila"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-map",
+      "slug": "check-map",
+      "title": {
+        "en": "check map",
+        "es": "mirar mapa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stretch-warm-up",
+      "slug": "stretch-warm-up",
+      "title": {
+        "en": "warm up",
+        "es": "calentar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "begin-hike",
+      "slug": "begin-hike",
+      "title": {
+        "en": "start hike",
+        "es": "empezar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "follow-path",
+      "slug": "follow-path",
+      "title": {
+        "en": "follow path",
+        "es": "seguir camino"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "climb-hill",
+      "slug": "climb-hill",
+      "title": {
+        "en": "climb hill",
+        "es": "subir cuesta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cross-stream",
+      "slug": "cross-stream",
+      "title": {
+        "en": "cross stream",
+        "es": "cruzar arroyo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-viewpoint",
+      "slug": "look-viewpoint",
+      "title": {
+        "en": "look view",
+        "es": "mirar vista"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "drink-water",
+      "slug": "drink-water",
+      "title": {
+        "en": "drink water",
+        "es": "beber agua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "snack-break",
+      "slug": "snack-break",
+      "title": {
+        "en": "snack break",
+        "es": "merienda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rest-on-rock",
+      "slug": "rest-on-rock",
+      "title": {
+        "en": "rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-trail-photo",
+      "slug": "take-trail-photo",
+      "title": {
+        "en": "take photo",
+        "es": "foto"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "return-start",
+      "slug": "return-start",
+      "title": {
+        "en": "go back",
+        "es": "volver"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 7,
+    "actions": 17,
+    "cards": 25
+  },
+  "design": {
+    "avatar_id": "T2",
+    "family_base": "#C77830",
+    "accent": "#4A8A50",
+    "accent_name": "forest green",
+    "highlight": "boots / path / map",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "notes": [
+    "Unified sports pack: prep then session in one sequence.",
+    "Gender via casts where available."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "hiking-boots"
+    },
+    {
+      "kind": "object",
+      "id": "backpack"
+    },
+    {
+      "kind": "object",
+      "id": "water-bottle"
+    },
+    {
+      "kind": "object",
+      "id": "trail-map"
+    },
+    {
+      "kind": "object",
+      "id": "snacks"
+    },
+    {
+      "kind": "object",
+      "id": "jacket"
+    },
+    {
+      "kind": "object",
+      "id": "walking-stick"
+    },
+    {
+      "kind": "action",
+      "id": "put-boots"
+    },
+    {
+      "kind": "action",
+      "id": "tie-laces"
+    },
+    {
+      "kind": "action",
+      "id": "put-jacket"
+    },
+    {
+      "kind": "action",
+      "id": "pack-backpack"
+    },
+    {
+      "kind": "action",
+      "id": "check-map"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "stretch-warm-up"
+    },
+    {
+      "kind": "action",
+      "id": "begin-hike"
+    },
+    {
+      "kind": "action",
+      "id": "follow-path"
+    },
+    {
+      "kind": "action",
+      "id": "climb-hill"
+    },
+    {
+      "kind": "action",
+      "id": "cross-stream"
+    },
+    {
+      "kind": "action",
+      "id": "look-viewpoint"
+    },
+    {
+      "kind": "action",
+      "id": "drink-water"
+    },
+    {
+      "kind": "action",
+      "id": "snack-break"
+    },
+    {
+      "kind": "action",
+      "id": "rest-on-rock"
+    },
+    {
+      "kind": "action",
+      "id": "take-trail-photo"
+    },
+    {
+      "kind": "action",
+      "id": "return-start"
+    }
+  ],
+  "unified_from": [
+    "hiking-prep",
+    "hiking-activity"
+  ],
+  "unified_at": "2026-08-14",
+  "art": "installed"
+}

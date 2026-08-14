@@ -1,0 +1,321 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "foot-care",
+  "family": "self-care",
+  "status": "ready",
+  "audience": "adult",
+  "character": {
+    "avatar_id": "YA2",
+    "band": "young-adult",
+    "gender": "man",
+    "skin": "dark",
+    "hair": "short black",
+    "clothes": "dark grey t-shirt, black trousers",
+    "age": "young-adult",
+    "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #8A9B7A highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Foot care",
+    "es": "Cuidado de los pies"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "foot care",
+      "es": "cuidado pies"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "foot-soak-basin",
+      "slug": "foot-soak-basin",
+      "title": {
+        "en": "basin",
+        "es": "palangana"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "soap",
+      "slug": "soap",
+      "title": {
+        "en": "soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pumice-stone",
+      "slug": "pumice-stone",
+      "title": {
+        "en": "pumice",
+        "es": "piedra pomez"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "nail-clippers",
+      "slug": "nail-clippers",
+      "title": {
+        "en": "nail clippers",
+        "es": "cortaunas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "foot-lotion",
+      "slug": "foot-lotion",
+      "title": {
+        "en": "foot lotion",
+        "es": "crema pies"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towels",
+      "slug": "towels",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "socks",
+      "slug": "socks",
+      "title": {
+        "en": "socks",
+        "es": "calcetines"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "soak-feet",
+      "slug": "soak-feet",
+      "title": {
+        "en": "soak feet",
+        "es": "remojar pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scrub-feet",
+      "slug": "scrub-feet",
+      "title": {
+        "en": "scrub feet",
+        "es": "lavar pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-pumice",
+      "slug": "use-pumice",
+      "title": {
+        "en": "use pumice",
+        "es": "piedra pomez"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trim-toenails",
+      "slug": "trim-toenails",
+      "title": {
+        "en": "trim toenails",
+        "es": "cortar unas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-dry-feet",
+      "slug": "rinse-dry-feet",
+      "title": {
+        "en": "dry feet",
+        "es": "secar pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-foot-lotion",
+      "slug": "apply-foot-lotion",
+      "title": {
+        "en": "foot lotion",
+        "es": "crema pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-socks-on",
+      "slug": "put-socks-on",
+      "title": {
+        "en": "socks on",
+        "es": "poner calcetines"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "foot care",
+        "es": "cuidado pies"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "foot-soak-basin",
+      "slug": "foot-soak-basin",
+      "title": {
+        "en": "basin",
+        "es": "palangana"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "soap",
+      "slug": "soap",
+      "title": {
+        "en": "soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pumice-stone",
+      "slug": "pumice-stone",
+      "title": {
+        "en": "pumice",
+        "es": "piedra pomez"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "nail-clippers",
+      "slug": "nail-clippers",
+      "title": {
+        "en": "nail clippers",
+        "es": "cortaunas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "foot-lotion",
+      "slug": "foot-lotion",
+      "title": {
+        "en": "foot lotion",
+        "es": "crema pies"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towels",
+      "slug": "towels",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "socks",
+      "slug": "socks",
+      "title": {
+        "en": "socks",
+        "es": "calcetines"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "soak-feet",
+      "slug": "soak-feet",
+      "title": {
+        "en": "soak feet",
+        "es": "remojar pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scrub-feet",
+      "slug": "scrub-feet",
+      "title": {
+        "en": "scrub feet",
+        "es": "lavar pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-pumice",
+      "slug": "use-pumice",
+      "title": {
+        "en": "use pumice",
+        "es": "piedra pomez"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trim-toenails",
+      "slug": "trim-toenails",
+      "title": {
+        "en": "trim toenails",
+        "es": "cortar unas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-dry-feet",
+      "slug": "rinse-dry-feet",
+      "title": {
+        "en": "dry feet",
+        "es": "secar pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-foot-lotion",
+      "slug": "apply-foot-lotion",
+      "title": {
+        "en": "foot lotion",
+        "es": "crema pies"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-socks-on",
+      "slug": "put-socks-on",
+      "title": {
+        "en": "socks on",
+        "es": "poner calcetines"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 7,
+    "actions": 7,
+    "cards": 15
+  },
+  "design": {
+    "avatar_id": "YA2",
+    "family_base": "#5B8C7A",
+    "accent": "#8A9B7A",
+    "accent_name": "sage",
+    "highlight": "foot / cream / sock",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

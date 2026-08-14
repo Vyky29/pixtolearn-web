@@ -1,0 +1,255 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "bright-lights",
+  "family": "sensory-world",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave2",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+  },
+  "label": {
+    "en": "Bright lights",
+    "es": "Luces fuertes"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "bright lights",
+      "es": "luces fuertes"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "sunglasses",
+      "slug": "sunglasses",
+      "title": {
+        "en": "sunglasses",
+        "es": "gafas de sol"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "hat",
+      "slug": "hat",
+      "title": {
+        "en": "hat",
+        "es": "gorra"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "hoodie",
+      "slug": "hoodie",
+      "title": {
+        "en": "hoodie",
+        "es": "sudadera"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "quiet-corner",
+      "slug": "quiet-corner",
+      "title": {
+        "en": "quiet corner",
+        "es": "rinc\u00f3n tranquilo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "notice-bright-lights",
+      "slug": "notice-bright-lights",
+      "title": {
+        "en": "notice bright lights",
+        "es": "notar luces fuertes"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "tell-adult",
+      "slug": "tell-adult",
+      "title": {
+        "en": "tell adult",
+        "es": "decir al adulto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "put-sunglasses",
+      "slug": "put-sunglasses",
+      "title": {
+        "en": "put sunglasses",
+        "es": "ponerse gafas"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-down",
+      "slug": "look-down",
+      "title": {
+        "en": "look down",
+        "es": "mirar abajo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ask-for-break",
+      "slug": "ask-for-break",
+      "title": {
+        "en": "ask for break",
+        "es": "pedir descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-to-quieter-spot",
+      "slug": "go-to-quieter-spot",
+      "title": {
+        "en": "go to quieter spot",
+        "es": "ir a sitio tranquilo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "breathe",
+      "slug": "breathe",
+      "title": {
+        "en": "breathe",
+        "es": "respirar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "return-when-ready",
+      "slug": "return-when-ready",
+      "title": {
+        "en": "return when ready",
+        "es": "volver cuando listo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave-bright-area",
+      "slug": "leave-bright-area",
+      "title": {
+        "en": "leave bright area",
+        "es": "dejar zona brillante"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 9,
+    "cards": 14
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#5B9A8B",
+    "accent": "#E8A840",
+    "accent_name": "glare amber",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Objects never show a person. Boy/girl delivery via casts where available.",
+  "notes": [
+    "Sensory coping pack."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "sunglasses"
+    },
+    {
+      "kind": "object",
+      "id": "hat"
+    },
+    {
+      "kind": "object",
+      "id": "hoodie"
+    },
+    {
+      "kind": "object",
+      "id": "quiet-corner"
+    },
+    {
+      "kind": "action",
+      "id": "notice-bright-lights"
+    },
+    {
+      "kind": "action",
+      "id": "tell-adult"
+    },
+    {
+      "kind": "action",
+      "id": "put-sunglasses"
+    },
+    {
+      "kind": "action",
+      "id": "look-down"
+    },
+    {
+      "kind": "action",
+      "id": "ask-for-break"
+    },
+    {
+      "kind": "action",
+      "id": "go-to-quieter-spot"
+    },
+    {
+      "kind": "action",
+      "id": "breathe"
+    },
+    {
+      "kind": "action",
+      "id": "return-when-ready"
+    },
+    {
+      "kind": "action",
+      "id": "leave-bright-area"
+    }
+  ],
+  "existing_dir": "bright-lights",
+  "art_dir": "bright-lights"
+}

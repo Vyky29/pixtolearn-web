@@ -1,0 +1,224 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "at-the-dentist",
+  "family": "health-appointments",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium",
+    "hair": "brown ponytail",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack."
+  },
+  "label": {
+    "en": "At the dentist",
+    "es": "En el dentista"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "dentist",
+      "es": "dentista"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "dental-chair",
+      "slug": "dental-chair",
+      "title": {
+        "en": "dental chair",
+        "es": "silla del dentista"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "mouth-mirror",
+      "slug": "mouth-mirror",
+      "title": {
+        "en": "mouth mirror",
+        "es": "espejo dental"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "suction-tube",
+      "slug": "suction-tube",
+      "title": {
+        "en": "suction tube",
+        "es": "aspirador"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "dental-cape",
+      "slug": "dental-cape",
+      "title": {
+        "en": "dental cape",
+        "es": "capa dental"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "safety-glasses",
+      "slug": "safety-glasses",
+      "title": {
+        "en": "safety glasses",
+        "es": "gafas de proteccion"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "stop-card",
+      "slug": "stop-card",
+      "title": {
+        "en": "stop card",
+        "es": "tarjeta de stop"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "check-in",
+      "slug": "check-in",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait",
+      "slug": "wait",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "name-called",
+      "slug": "name-called",
+      "title": {
+        "en": "name called",
+        "es": "llaman el nombre"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-in-chair",
+      "slug": "sit-in-chair",
+      "title": {
+        "en": "sit in chair",
+        "es": "sentarse en la silla"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "cape-on",
+      "slug": "cape-on",
+      "title": {
+        "en": "cape on",
+        "es": "ponerse la capa"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "open-mouth",
+      "slug": "open-mouth",
+      "title": {
+        "en": "open mouth",
+        "es": "abrir la boca"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-at-teeth",
+      "slug": "look-at-teeth",
+      "title": {
+        "en": "look at teeth",
+        "es": "mirar los dientes"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "rinse",
+      "slug": "rinse",
+      "title": {
+        "en": "rinse",
+        "es": "enjuagar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ask-pause",
+      "slug": "ask-pause",
+      "title": {
+        "en": "ask for a pause",
+        "es": "pedir una pausa"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 10,
+    "cards": 17
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#7A8FA0",
+    "accent": "#5B9A8B",
+    "accent_name": "sensory teal",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "No toothbrush object. Cape is an item matching cape-on action."
+  ]
+}

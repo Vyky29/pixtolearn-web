@@ -1,0 +1,204 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "vaccination",
+  "family": "health-appointments",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium",
+    "hair": "brown ponytail",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack."
+  },
+  "label": {
+    "en": "Vaccination",
+    "es": "Vacuna"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "vaccination",
+      "es": "vacuna"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "clinic-chair",
+      "slug": "clinic-chair",
+      "title": {
+        "en": "clinic chair",
+        "es": "silla de clinica"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "alcohol-wipe",
+      "slug": "alcohol-wipe",
+      "title": {
+        "en": "alcohol wipe",
+        "es": "toallita de alcohol"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "syringe",
+      "slug": "syringe",
+      "title": {
+        "en": "syringe",
+        "es": "jeringuilla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "plaster",
+      "slug": "plaster",
+      "title": {
+        "en": "plaster",
+        "es": "tirita"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "sticker",
+      "slug": "sticker",
+      "title": {
+        "en": "sticker",
+        "es": "sticker"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-down",
+      "slug": "sit-down",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "uncover-arm",
+      "slug": "uncover-arm",
+      "title": {
+        "en": "uncover arm",
+        "es": "descubrir el brazo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ask-moment",
+      "slug": "ask-moment",
+      "title": {
+        "en": "ask for a moment",
+        "es": "pedir un momento"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wipe-skin",
+      "slug": "wipe-skin",
+      "title": {
+        "en": "wipe skin",
+        "es": "limpiar la piel"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "injection",
+      "slug": "injection",
+      "title": {
+        "en": "injection",
+        "es": "inyeccion"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "plaster-on",
+      "slug": "plaster-on",
+      "title": {
+        "en": "plaster on",
+        "es": "poner tirita"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait-minutes",
+      "slug": "wait-minutes",
+      "title": {
+        "en": "wait a few minutes",
+        "es": "esperar unos minutos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 9,
+    "cards": 15
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#7A8FA0",
+    "accent": "#E8A840",
+    "accent_name": "warm amber",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Ask for a moment comes before wipe/injection."
+  ]
+}

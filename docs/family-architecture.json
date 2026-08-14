@@ -1,0 +1,634 @@
+{
+  "version": "1.3",
+  "product": "wow-routines",
+  "status": "locked",
+  "locked_at": "2026-08-07",
+  "updated": "2026-08-14",
+  "goal": "WOW taxonomy with one sports family and one pack per sport; naming lock against skill decks and travel.",
+  "organising_axes": [
+    {
+      "id": "vocab-regulation",
+      "families": [
+        "core",
+        "emotions",
+        "intimate-care",
+        "sensory-world"
+      ]
+    },
+    {
+      "id": "body-at-home",
+      "families": [
+        "self-care",
+        "home-living"
+      ]
+    },
+    {
+      "id": "how-i-move",
+      "families": [
+        "safety-mobility"
+      ]
+    },
+    {
+      "id": "where-i-go",
+      "families": [
+        "sports",
+        "travel",
+        "public-spaces",
+        "eating-out",
+        "school-college",
+        "life-events",
+        "work-experience"
+      ]
+    },
+    {
+      "id": "procedure-or-skill",
+      "families": [
+        "health-appointments",
+        "money-and-shopping",
+        "emergency-help",
+        "weather-seasons"
+      ]
+    }
+  ],
+  "golden_rule": {
+    "en": "One pack = one step routine (cover + objects + actions). A Situation Story is an A/B/C preview that hands off to a pack, not a replacement. A bundle remixes shipped packs; it is not new art.",
+    "es": "Un pack = una rutina de pasos (cover + objects + actions). Una Situation Story es una preview A/B/C que enlaza a un pack, no lo sustituye. Un bundle remezcla packs ya enviados; no es arte nuevo."
+  },
+  "family_acceptance": {
+    "need_3_of_4": [
+      "Distinct job from other families",
+      "At least 3 real packs planned",
+      "Justified shop colour and filter",
+      "Clear Situation Story handoff to WOW packs"
+    ]
+  },
+  "families_keep": [
+    {
+      "id": "core",
+      "axis": "vocab",
+      "question": "What universal words or gestures?",
+      "colour": "#CBCBC9",
+      "colour_name": "Neutral grey"
+    },
+    {
+      "id": "self-care",
+      "axis": "body",
+      "question": "How do I care for my body at home?",
+      "colour": "#5B8C7A",
+      "colour_name": "Seafoam green"
+    },
+    {
+      "id": "intimate-care",
+      "axis": "clinical-restricted",
+      "question": "Intimate care / menstrual education?",
+      "colour": "#A894B0",
+      "colour_name": "Soft lavender",
+      "access": "restricted"
+    },
+    {
+      "id": "emotions",
+      "axis": "regulation",
+      "question": "What do I feel and what can my body do?",
+      "colour": "#E8A840",
+      "colour_name": "Warm amber"
+    },
+    {
+      "id": "safety-mobility",
+      "axis": "journey",
+      "question": "How do I travel safely?",
+      "colour": "#3D7EA6",
+      "colour_name": "Transport blue"
+    },
+    {
+      "id": "sports",
+      "axis": "sport-session",
+      "question": "Which sport session am I doing?",
+      "colour": "#C77830",
+      "colour_name": "Active amber",
+      "note": "One pack per sport: kit/arrive/ready then warm-up through finish/exit in one sequence."
+    },
+    {
+      "id": "travel",
+      "axis": "leisure-outing",
+      "question": "Which leisure destination?",
+      "colour": "#2F6B4F",
+      "colour_name": "Adventure green"
+    },
+    {
+      "id": "public-spaces",
+      "axis": "civic-service",
+      "question": "Which civic or service building?",
+      "colour": "#D03860",
+      "colour_name": "Civic rose",
+      "note": "Hospital and pharmacy stay here. Dentist/GP/vaccine do not. Faith venues and funerals go to life-events."
+    }
+  ],
+  "families_create_p1": [
+    {
+      "id": "health-appointments",
+      "axis": "health-procedure",
+      "question": "Which clinical procedure appointment?",
+      "colour": "#7A8FA0",
+      "colour_name": "Clinic slate",
+      "why": "Separate procedure packs from hospital building visit in public-spaces.",
+      "packs_p1": [
+        "at-the-dentist",
+        "at-the-gp",
+        "blood-test",
+        "vaccination"
+      ],
+      "packs_p2": [
+        "hearing-test",
+        "physiotherapy",
+        "x-ray-or-scan"
+      ],
+      "packs_p3": [
+        "speech-therapy",
+        "occupational-therapy",
+        "dermatologist",
+        "podiatrist",
+        "orthodontist",
+        "ent-appointment",
+        "allergy-test",
+        "mri-scan",
+        "outpatient-clinic",
+        "eye-or-ear-drops-clinic",
+        "taking-medicine"
+      ],
+      "packs_wave1": [
+        "at-the-optician"
+      ]
+    },
+    {
+      "id": "sensory-world",
+      "axis": "predictive-transversal",
+      "question": "What sensory load might this place have?",
+      "colour": "#5B9A8B",
+      "colour_name": "Sensory teal",
+      "why": "Home for loud/crowd/wait/headphones; feeds transversal Situation Stories.",
+      "packs_p1": [
+        "loud-places",
+        "crowded-places",
+        "waiting",
+        "headphones-and-breaks"
+      ],
+      "packs_p2": [
+        "bright-lights"
+      ],
+      "hybrid_rule": "Place packs (public/travel/sports/life-events) should include at least one noise or crowd card when clinically useful, reusing sensory-world objects where possible."
+    },
+    {
+      "id": "eating-out",
+      "axis": "food-place",
+      "question": "Where and how do we eat away from home?",
+      "colour": "#B86B4A",
+      "colour_name": "Meal clay",
+      "why": "Cafe and school lunch are not travel leisure or supermarket shopping.",
+      "packs_p1": [
+        "at-a-cafe",
+        "school-lunch"
+      ],
+      "packs_p2": [
+        "fast-food",
+        "allergies-and-choices"
+      ],
+      "packs_p3": [
+        "family-restaurant",
+        "buffet-or-self-service"
+      ]
+    },
+    {
+      "id": "emergency-help",
+      "axis": "crisis-safety",
+      "question": "What do I do if I am lost, need a safe adult, or hear a fire alarm?",
+      "colour": "#4A6670",
+      "colour_name": "Alert slate",
+      "why": "Distinct from day-to-day mobility journeys.",
+      "packs_p1": [
+        "i-am-lost",
+        "ask-safe-adult",
+        "fire-alarm"
+      ],
+      "packs_p2": [
+        "basic-first-aid"
+      ]
+    }
+  ],
+  "families_create_p2": [
+    {
+      "id": "school-college",
+      "axis": "education-context",
+      "colour": "#5C6B8A",
+      "colour_name": "School slate",
+      "packs": [
+        "fire-drill",
+        "changing-lessons",
+        "assembly",
+        "asking-teacher"
+      ],
+      "packs_p3": [
+        "pe-changing-room",
+        "school-photo-day",
+        "parents-evening-wait"
+      ]
+    },
+    {
+      "id": "money-and-shopping",
+      "axis": "payment-skill",
+      "colour": "#8B7355",
+      "colour_name": "Coin brown",
+      "packs": [
+        "using-money",
+        "contactless-pay",
+        "asking-price",
+        "returns"
+      ],
+      "note": "Supermarket and mall stay in public-spaces."
+    }
+  ],
+  "families_create_p3": [
+    {
+      "id": "life-events",
+      "axis": "ceremony-milestone",
+      "question": "Which ceremony, faith visit, or family milestone?",
+      "colour": "#6B5B7A",
+      "colour_name": "Ceremony plum",
+      "why": "Faith venues, funerals, weddings, and celebrations are not civic public-spaces.",
+      "design_rules": [
+        "One pack = one ceremony or place context",
+        "Never mix religions in a single pack",
+        "Reuse quiet / sit / stand / wait / dress smart across packs",
+        "Funeral and memorial: calm tone; staff-only or restricted at first release"
+      ],
+      "packs_first": [
+        "church-service",
+        "mosque-visit",
+        "funeral-or-memorial",
+        "wedding-guest"
+      ],
+      "packs_later": [
+        "synagogue-service",
+        "hindu-temple-visit",
+        "sikh-gurdwara-visit",
+        "baptism-or-naming",
+        "first-communion",
+        "bar-or-bat-mitzvah",
+        "birthday-party",
+        "eid-celebration",
+        "diwali-celebration",
+        "christmas-gathering"
+      ]
+    },
+    {
+      "id": "weather-seasons",
+      "axis": "seasonal-coping",
+      "question": "What weather or seasonal life moment am I preparing for?",
+      "colour": "#4A7C8A",
+      "colour_name": "Season teal",
+      "why": "Short weather coping packs plus seasonal life moments; bundles remix shipped packs.",
+      "packs_weather": [
+        "rainy-day",
+        "hot-day",
+        "cold-day",
+        "storm-or-wind"
+      ],
+      "packs_seasonal_life": [
+        "back-to-school",
+        "halloween",
+        "bonfire-night-fireworks",
+        "summer-holidays-week",
+        "winter-sports-trip",
+        "exam-season-wait"
+      ]
+    },
+    {
+      "id": "home-living",
+      "axis": "home-independence",
+      "question": "Which home chore or family-home flow?",
+      "colour": "#7A6B55",
+      "colour_name": "Home taupe",
+      "why": "Adult and teen independence beyond body self-care.",
+      "packs": [
+        "making-bed",
+        "laundry",
+        "washing-up",
+        "taking-bins-out",
+        "simple-snack",
+        "vacuum-or-tidy",
+        "packing-school-bag",
+        "bedtime-routine",
+        "visiting-grandparents",
+        "sleepover"
+      ]
+    },
+    {
+      "id": "work-experience",
+      "axis": "adult-work",
+      "question": "Which work or volunteering situation?",
+      "colour": "#5A6A6E",
+      "colour_name": "Work slate",
+      "why": "Adult destinations after school-college.",
+      "packs": [
+        "first-day-at-work",
+        "using-break-room",
+        "asking-supervisor",
+        "wearing-uniform",
+        "clocking-in"
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "id": "relationships-consent",
+      "reason": "Restricted track like intimate-care; separate clinical process.",
+      "access": "restricted",
+      "example_packs": [
+        "private-vs-public",
+        "asking-permission",
+        "saying-no",
+        "online-chat-safety"
+      ]
+    }
+  ],
+  "add_to_existing": {
+    "public-spaces": {
+      "p2": [],
+      "p3": [
+        "at-the-library",
+        "at-the-cinema",
+        "at-the-theatre",
+        "at-a-concert",
+        "at-the-bank",
+        "at-the-post-office"
+      ],
+      "never": [
+        "at-the-dentist",
+        "at-the-gp",
+        "blood-test",
+        "vaccination",
+        "church-service",
+        "mosque-visit",
+        "funeral-or-memorial"
+      ],
+      "wave1": [
+        "public-toilet"
+      ]
+    },
+    "self-care": {
+      "p2": [],
+      "p3_optional": [
+        "getting-ready-morning"
+      ],
+      "wave1": [
+        "washing-hands"
+      ]
+    },
+    "travel": {
+      "new_required": [],
+      "p3_optional": []
+    },
+    "safety-mobility": {
+      "new_required": []
+    },
+    "emotions": {
+      "new_required": []
+    },
+    "core": {
+      "new_required": []
+    },
+    "sports": {
+      "shipped": [
+        "climbing",
+        "swimming",
+        "gym",
+        "hiking",
+        "cycling",
+        "tennis",
+        "trampoline"
+      ],
+      "p2": [
+        "basketball",
+        "yoga"
+      ],
+      "p3_adventure": [
+        "skiing",
+        "snowboarding",
+        "surfing",
+        "snorkelling",
+        "scuba-diving",
+        "ice-skating",
+        "horse-riding",
+        "kayak-or-paddle"
+      ],
+      "p3_leisure_team": [
+        "rugby",
+        "volleyball",
+        "badminton",
+        "athletics",
+        "martial-arts",
+        "dance",
+        "bowling",
+        "soft-play",
+        "skatepark"
+      ],
+      "p3_optional": [
+        "movement"
+      ],
+      "never": [
+        "abc-prep"
+      ],
+      "note": "One pack per sport. Skill decks stay separate. No new -wow or sport -prep/-activity pairs.",
+      "pack_pattern": "objects (kit) -> arrive/change/safety -> ready -> warm-up -> sport actions -> rest -> finish/exit",
+      "wave1": [
+        "football"
+      ]
+    }
+  },
+  "seasonal_bundles": [
+    {
+      "id": "bundle-winter-trip",
+      "mixes": [
+        "cold-day",
+        "skiing",
+        "going-to-the-mountain",
+        "waiting"
+      ]
+    },
+    {
+      "id": "bundle-clinic-day",
+      "mixes": [
+        "waiting",
+        "at-the-gp",
+        "loud-places",
+        "headphones-and-breaks"
+      ]
+    },
+    {
+      "id": "bundle-faith-visit",
+      "mixes": [
+        "church-service or mosque-visit",
+        "crowded-places",
+        "waiting"
+      ]
+    },
+    {
+      "id": "bundle-beach-week",
+      "mixes": [
+        "hot-day",
+        "going-to-the-beach",
+        "surfing or snorkelling"
+      ]
+    },
+    {
+      "id": "bundle-fireworks-night",
+      "mixes": [
+        "bonfire-night-fireworks",
+        "loud-places",
+        "headphones-and-breaks",
+        "waiting"
+      ]
+    }
+  ],
+  "p1_pack_ids": [
+    "trampoline-wow",
+    "at-the-dentist",
+    "at-the-gp",
+    "blood-test",
+    "vaccination",
+    "loud-places",
+    "crowded-places",
+    "waiting",
+    "headphones-and-breaks",
+    "at-a-cafe",
+    "school-lunch",
+    "i-am-lost",
+    "ask-safe-adult",
+    "fire-alarm"
+  ],
+  "pipeline": {
+    "1_taxonomy": "done",
+    "2_pack_specs": "done",
+    "3_artwork": "todo",
+    "4_situation_stories_align": "catalogue_mapped",
+    "5_ui": "todo",
+    "content_review_p1": "approved-pre-art",
+    "6_p3_named_scale": "named-2026-08-14"
+  },
+  "overlap_locks": [
+    {
+      "keep_in": "public-spaces",
+      "ids": [
+        "at-the-hospital",
+        "at-the-pharmacy"
+      ],
+      "move_to": "health-appointments",
+      "ids_move": [
+        "at-the-dentist",
+        "at-the-gp",
+        "blood-test",
+        "vaccination",
+        "at-the-optician",
+        "hearing-test",
+        "physiotherapy",
+        "x-ray-or-scan"
+      ]
+    },
+    {
+      "keep_in": "public-spaces",
+      "ids": [
+        "at-the-supermarket",
+        "at-the-shopping-mall"
+      ],
+      "skill_family": "money-and-shopping"
+    },
+    {
+      "keep_out_of": "public-spaces",
+      "move_to": "life-events",
+      "ids_move": [
+        "church-service",
+        "mosque-visit",
+        "synagogue-service",
+        "funeral-or-memorial",
+        "wedding-guest"
+      ]
+    },
+    {
+      "sensory": "hybrid",
+      "family": "sensory-world",
+      "plus": "inject noise/crowd cards into place packs when useful"
+    },
+    {
+      "keep_in": "travel",
+      "ids": [
+        "going-to-the-mountain",
+        "going-to-the-beach",
+        "attending-a-sport-event"
+      ],
+      "vs_sports": [
+        "hiking",
+        "swimming"
+      ],
+      "rule": "Travel = day destination or spectator. Sports = one pack per sport session (kit through finish)."
+    },
+    {
+      "product": "sport-skill-deck",
+      "examples": [
+        "Climbing skills",
+        "Swimming waterproof/skills",
+        "ABC",
+        "Football",
+        "Yoga"
+      ],
+      "vs_wow": "WOW uses one {sport} pack. Skill decks never use -prep or -wow."
+    },
+    {
+      "legacy_redirects": {
+        "climbing-wow": "climbing",
+        "swimming-wow": "swimming",
+        "gym-activities": "gym",
+        "trampoline-wow": "trampoline",
+        "climbing-prep": "climbing",
+        "climbing-activity": "climbing",
+        "swimming-prep": "swimming",
+        "swimming-activity": "swimming",
+        "gym-prep": "gym",
+        "gym-activity": "gym",
+        "hiking-prep": "hiking",
+        "hiking-activity": "hiking",
+        "cycling-prep": "cycling",
+        "cycling-activity": "cycling",
+        "tennis-prep": "tennis",
+        "tennis-activity": "tennis",
+        "trampoline-prep": "trampoline",
+        "trampoline-activity": "trampoline",
+        "football-prep": "football",
+        "football-activity": "football",
+        "cycling-prep-hybrid": "cycling",
+        "tennis-prep-hybrid": "tennis"
+      }
+    }
+  ],
+  "p1_pack_count": 14,
+  "content_rules": {
+    "objects": "Physical object only, white bg, no person",
+    "actions": "Ordered steps with pack avatar; staff secondary OK",
+    "no_trailing_noise_actions": true,
+    "sensory_hybrid": "Place packs may include one support object (headphones/fidget), not a junk noise action at the end",
+    "life_events": "One faith or ceremony per pack; shared etiquette cards may be reused",
+    "bundles": "Catalogue remix of shipped packs only; no new artwork"
+  },
+  "naming_convention": {
+    "wow_sports": "{sport}",
+    "travel_day": "going-to-{place}",
+    "public_place": "at-the-{place}",
+    "forbidden_new_suffixes": [
+      "-wow"
+    ],
+    "forbidden_new_sport_pairs": [
+      "{sport}-prep",
+      "{sport}-activity"
+    ],
+    "shop_labels": "Sport name only (Climbing, Football). No Prep/Activity suffixes.",
+    "note": "Unified 2026-08-14: prep+activity collapsed into one pack per sport."
+  }
+}

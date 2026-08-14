@@ -1,0 +1,50 @@
+{
+  "updated": "2026-08-14",
+  "block": "DONE-afternoon",
+  "completed_packs": [
+    "washing-hands",
+    "public-toilet",
+    "football",
+    "at-the-optician",
+    "basketball",
+    "yoga",
+    "fire-drill",
+    "hearing-test",
+    "changing-lessons",
+    "bright-lights",
+    "basic-first-aid",
+    "physiotherapy"
+  ],
+  "wave2_specs_ready": [
+    "basketball",
+    "yoga",
+    "fire-drill",
+    "changing-lessons",
+    "hearing-test",
+    "physiotherapy",
+    "bright-lights",
+    "basic-first-aid"
+  ],
+  "wave2_art_ready": [
+    "basketball",
+    "yoga",
+    "fire-drill",
+    "hearing-test",
+    "changing-lessons",
+    "bright-lights",
+    "basic-first-aid",
+    "physiotherapy"
+  ],
+  "wave2_art_todo": [],
+  "casts": {
+    "football": "boy+girl complete",
+    "washing-hands": "girl+boy complete",
+    "public-toilet": "boy seeded; girl cover only",
+    "at-the-optician": "girl seeded; boy pending"
+  },
+  "in_progress": null,
+  "notes": [
+    "Afternoon complete: all Wave1+Wave2 packs have legacy art",
+    "Casts: football + washing-hands dual gender done; toilet/optician opposite still partial"
+  ]
+}

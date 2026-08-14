@@ -1,0 +1,375 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.5",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "going-camping",
+  "family": "travel",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #A09050 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Camping",
+    "es": "Camping"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "camping",
+      "es": "camping"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "tent",
+      "slug": "tent",
+      "title": {
+        "en": "tent",
+        "es": "tienda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sleeping-bag",
+      "slug": "sleeping-bag",
+      "title": {
+        "en": "sleeping bag",
+        "es": "saco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "flashlight",
+      "slug": "flashlight",
+      "title": {
+        "en": "torch",
+        "es": "linterna"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "camp-stove",
+      "slug": "camp-stove",
+      "title": {
+        "en": "stove",
+        "es": "hornillo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "camp-chair",
+      "slug": "camp-chair",
+      "title": {
+        "en": "camp chair",
+        "es": "silla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive-campsite",
+      "slug": "arrive-campsite",
+      "title": {
+        "en": "arrive camp",
+        "es": "llegar camping"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clear-ground",
+      "slug": "clear-ground",
+      "title": {
+        "en": "clear ground",
+        "es": "limpiar suelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "set-up-tent",
+      "slug": "set-up-tent",
+      "title": {
+        "en": "pitch tent",
+        "es": "montar tienda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "unroll-sleeping-bag",
+      "slug": "unroll-sleeping-bag",
+      "title": {
+        "en": "make bed",
+        "es": "preparar cama"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fetch-water",
+      "slug": "fetch-water",
+      "title": {
+        "en": "get water",
+        "es": "coger agua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cook-food",
+      "slug": "cook-food",
+      "title": {
+        "en": "cook",
+        "es": "cocinar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "eat-outside",
+      "slug": "eat-outside",
+      "title": {
+        "en": "eat outside",
+        "es": "comer fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-campfire",
+      "slug": "sit-campfire",
+      "title": {
+        "en": "sit and rest",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-flashlight",
+      "slug": "use-flashlight",
+      "title": {
+        "en": "use torch",
+        "es": "usar linterna"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sleep-in-tent",
+      "slug": "sleep-in-tent",
+      "title": {
+        "en": "sleep in tent",
+        "es": "dormir tienda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-campsite",
+      "slug": "pack-campsite",
+      "title": {
+        "en": "pack up",
+        "es": "recoger"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "camping",
+        "es": "camping"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "tent",
+      "slug": "tent",
+      "title": {
+        "en": "tent",
+        "es": "tienda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sleeping-bag",
+      "slug": "sleeping-bag",
+      "title": {
+        "en": "sleeping bag",
+        "es": "saco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "flashlight",
+      "slug": "flashlight",
+      "title": {
+        "en": "torch",
+        "es": "linterna"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "camp-stove",
+      "slug": "camp-stove",
+      "title": {
+        "en": "stove",
+        "es": "hornillo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "camp-chair",
+      "slug": "camp-chair",
+      "title": {
+        "en": "camp chair",
+        "es": "silla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "arrive-campsite",
+      "slug": "arrive-campsite",
+      "title": {
+        "en": "arrive camp",
+        "es": "llegar camping"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clear-ground",
+      "slug": "clear-ground",
+      "title": {
+        "en": "clear ground",
+        "es": "limpiar suelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "set-up-tent",
+      "slug": "set-up-tent",
+      "title": {
+        "en": "pitch tent",
+        "es": "montar tienda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "unroll-sleeping-bag",
+      "slug": "unroll-sleeping-bag",
+      "title": {
+        "en": "make bed",
+        "es": "preparar cama"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fetch-water",
+      "slug": "fetch-water",
+      "title": {
+        "en": "get water",
+        "es": "coger agua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cook-food",
+      "slug": "cook-food",
+      "title": {
+        "en": "cook",
+        "es": "cocinar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "eat-outside",
+      "slug": "eat-outside",
+      "title": {
+        "en": "eat outside",
+        "es": "comer fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-campfire",
+      "slug": "sit-campfire",
+      "title": {
+        "en": "sit and rest",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-flashlight",
+      "slug": "use-flashlight",
+      "title": {
+        "en": "use torch",
+        "es": "usar linterna"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sleep-in-tent",
+      "slug": "sleep-in-tent",
+      "title": {
+        "en": "sleep in tent",
+        "es": "dormir tienda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-campsite",
+      "slug": "pack-campsite",
+      "title": {
+        "en": "pack up",
+        "es": "recoger"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 11,
+    "cards": 18
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#2F6B4F",
+    "accent": "#A09050",
+    "accent_name": "khaki",
+    "highlight": "tent / torch",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

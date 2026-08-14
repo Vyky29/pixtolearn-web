@@ -1,0 +1,404 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "menstrual-hygiene",
+  "family": "intimate-care",
+  "status": "ready",
+  "access": "restricted",
+  "audience": "teen-adult-elder",
+  "character": {
+    "avatar_id": "YA1",
+    "band": "young-adult",
+    "gender": "woman",
+    "skin": "medium",
+    "hair": "dark curly shoulder-length",
+    "clothes": "lavender lounge set",
+    "age": "young-adult",
+    "lock": "PRIMARY YA1 only on cover+all actions. Same outfit colours entire pack. Accent #B8A0C8 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Menstrual hygiene",
+    "es": "Higiene menstrual"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "period care",
+      "es": "higiene menstrual"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "pad",
+      "slug": "pad",
+      "title": {
+        "en": "pad",
+        "es": "compresa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tampon",
+      "slug": "tampon",
+      "title": {
+        "en": "tampon",
+        "es": "tampon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "menstrual-cup",
+      "slug": "menstrual-cup",
+      "title": {
+        "en": "menstrual cup",
+        "es": "copa menstrual"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "toilet-paper",
+      "slug": "toilet-paper",
+      "title": {
+        "en": "toilet paper",
+        "es": "papel"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-soap",
+      "slug": "hand-soap",
+      "title": {
+        "en": "hand soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "clean-towel",
+      "slug": "clean-towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "plastic-bag",
+      "slug": "plastic-bag",
+      "title": {
+        "en": "plastic bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "underwear",
+      "slug": "underwear",
+      "title": {
+        "en": "underwear",
+        "es": "ropa interior"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trash-bin",
+      "slug": "trash-bin",
+      "title": {
+        "en": "bin",
+        "es": "papelera"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wash-hands-before-after",
+      "slug": "wash-hands-before-after",
+      "title": {
+        "en": "wash hands first",
+        "es": "lavar manos primero"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "choose-product",
+      "slug": "choose-product",
+      "title": {
+        "en": "choose product",
+        "es": "elegir producto"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-pad-on",
+      "slug": "put-pad-on",
+      "title": {
+        "en": "put pad on",
+        "es": "poner compresa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-tampon",
+      "slug": "put-tampon",
+      "title": {
+        "en": "put tampon",
+        "es": "poner tampon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-menstrual-cup",
+      "slug": "put-menstrual-cup",
+      "title": {
+        "en": "put menstrual cup",
+        "es": "poner copa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe-front-to-back",
+      "slug": "wipe-front-to-back",
+      "title": {
+        "en": "wipe front to back",
+        "es": "limpiar delante atras"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dispose-bag",
+      "slug": "dispose-bag",
+      "title": {
+        "en": "bag and bin",
+        "es": "bolsa y papelera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "change-underwear",
+      "slug": "change-underwear",
+      "title": {
+        "en": "clean underwear",
+        "es": "ropa interior limpia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hands-again",
+      "slug": "wash-hands-again",
+      "title": {
+        "en": "wash hands again",
+        "es": "lavar manos otra vez"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "period care",
+        "es": "higiene menstrual"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "pad",
+      "slug": "pad",
+      "title": {
+        "en": "pad",
+        "es": "compresa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tampon",
+      "slug": "tampon",
+      "title": {
+        "en": "tampon",
+        "es": "tampon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "menstrual-cup",
+      "slug": "menstrual-cup",
+      "title": {
+        "en": "menstrual cup",
+        "es": "copa menstrual"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "toilet-paper",
+      "slug": "toilet-paper",
+      "title": {
+        "en": "toilet paper",
+        "es": "papel"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-soap",
+      "slug": "hand-soap",
+      "title": {
+        "en": "hand soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "clean-towel",
+      "slug": "clean-towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "plastic-bag",
+      "slug": "plastic-bag",
+      "title": {
+        "en": "plastic bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "underwear",
+      "slug": "underwear",
+      "title": {
+        "en": "underwear",
+        "es": "ropa interior"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trash-bin",
+      "slug": "trash-bin",
+      "title": {
+        "en": "bin",
+        "es": "papelera"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wash-hands-before-after",
+      "slug": "wash-hands-before-after",
+      "title": {
+        "en": "wash hands first",
+        "es": "lavar manos primero"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "choose-product",
+      "slug": "choose-product",
+      "title": {
+        "en": "choose product",
+        "es": "elegir producto"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-pad-on",
+      "slug": "put-pad-on",
+      "title": {
+        "en": "put pad on",
+        "es": "poner compresa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-tampon",
+      "slug": "put-tampon",
+      "title": {
+        "en": "put tampon",
+        "es": "poner tampon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-menstrual-cup",
+      "slug": "put-menstrual-cup",
+      "title": {
+        "en": "put menstrual cup",
+        "es": "poner copa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe-front-to-back",
+      "slug": "wipe-front-to-back",
+      "title": {
+        "en": "wipe front to back",
+        "es": "limpiar delante atras"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dispose-bag",
+      "slug": "dispose-bag",
+      "title": {
+        "en": "bag and bin",
+        "es": "bolsa y papelera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "change-underwear",
+      "slug": "change-underwear",
+      "title": {
+        "en": "clean underwear",
+        "es": "ropa interior limpia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hands-again",
+      "slug": "wash-hands-again",
+      "title": {
+        "en": "wash hands again",
+        "es": "lavar manos otra vez"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "YA1",
+    "family_base": "#A894B0",
+    "accent": "#B8A0C8",
+    "accent_name": "lavender",
+    "highlight": "pad/tampon pack + YA1 lavender outfit locked",
+    "outfit_lock": true
+  },
+  "framing_note": "Actions are CLOSE-UP / hands-zone. Each step must look clearly different. Arrow for wipe direction.",
+  "art_notes": "Close-up. put-tampon and put-menstrual-cup are clinical education. Pad vs tampon vs cup clearly different.",
+  "ageBands": [
+    "teen",
+    "adult",
+    "elder"
+  ],
+  "presentations": [
+    "girl"
+  ]
+}

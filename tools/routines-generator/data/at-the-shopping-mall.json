@@ -1,0 +1,393 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "at-the-shopping-mall",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail or soft curls",
+    "clothes": "coral top, navy skirt or trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #E07090 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Shopping mall",
+    "es": "Centro comercial"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "shopping mall",
+      "es": "centro comercial"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "mall-map",
+      "slug": "mall-map",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shopping-bag",
+      "slug": "shopping-bag",
+      "title": {
+        "en": "bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cash-card",
+      "slug": "cash-card",
+      "title": {
+        "en": "card",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "enter-mall",
+      "slug": "enter-mall",
+      "title": {
+        "en": "enter mall",
+        "es": "entrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-map",
+      "slug": "use-map",
+      "title": {
+        "en": "use map",
+        "es": "usar mapa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ride-escalator",
+      "slug": "ride-escalator",
+      "title": {
+        "en": "escalator",
+        "es": "escalera mecanica"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "visit-stores",
+      "slug": "visit-stores",
+      "title": {
+        "en": "visit shops",
+        "es": "visitar tiendas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "try-on",
+      "slug": "try-on",
+      "title": {
+        "en": "try on",
+        "es": "probarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-staff",
+      "slug": "ask-staff",
+      "title": {
+        "en": "ask staff",
+        "es": "preguntar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "eat-food-court",
+      "slug": "eat-food-court",
+      "title": {
+        "en": "food court",
+        "es": "comer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rest-bench",
+      "slug": "rest-bench",
+      "title": {
+        "en": "rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "meet-up",
+      "slug": "meet-up",
+      "title": {
+        "en": "meet up",
+        "es": "quedar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit-mall",
+      "slug": "exit-mall",
+      "title": {
+        "en": "exit",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-noise",
+      "slug": "loud-noise",
+      "title": {
+        "en": "loud noise",
+        "es": "ruido fuerte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-place",
+      "slug": "crowded-place",
+      "title": {
+        "en": "crowded",
+        "es": "mucho gentio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-your-turn",
+      "slug": "wait-your-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-quiet-spot",
+      "slug": "find-quiet-spot",
+      "title": {
+        "en": "quiet spot",
+        "es": "sitio tranquilo"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "shopping mall",
+        "es": "centro comercial"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "mall-map",
+      "slug": "mall-map",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shopping-bag",
+      "slug": "shopping-bag",
+      "title": {
+        "en": "bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cash-card",
+      "slug": "cash-card",
+      "title": {
+        "en": "card",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "enter-mall",
+      "slug": "enter-mall",
+      "title": {
+        "en": "enter mall",
+        "es": "entrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-map",
+      "slug": "use-map",
+      "title": {
+        "en": "use map",
+        "es": "usar mapa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ride-escalator",
+      "slug": "ride-escalator",
+      "title": {
+        "en": "escalator",
+        "es": "escalera mecanica"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "visit-stores",
+      "slug": "visit-stores",
+      "title": {
+        "en": "visit shops",
+        "es": "visitar tiendas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "try-on",
+      "slug": "try-on",
+      "title": {
+        "en": "try on",
+        "es": "probarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-staff",
+      "slug": "ask-staff",
+      "title": {
+        "en": "ask staff",
+        "es": "preguntar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "eat-food-court",
+      "slug": "eat-food-court",
+      "title": {
+        "en": "food court",
+        "es": "comer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rest-bench",
+      "slug": "rest-bench",
+      "title": {
+        "en": "rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "meet-up",
+      "slug": "meet-up",
+      "title": {
+        "en": "meet up",
+        "es": "quedar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit-mall",
+      "slug": "exit-mall",
+      "title": {
+        "en": "exit",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-noise",
+      "slug": "loud-noise",
+      "title": {
+        "en": "loud noise",
+        "es": "ruido fuerte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-place",
+      "slug": "crowded-place",
+      "title": {
+        "en": "crowded",
+        "es": "mucho gentio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-your-turn",
+      "slug": "wait-your-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-quiet-spot",
+      "slug": "find-quiet-spot",
+      "title": {
+        "en": "quiet spot",
+        "es": "sitio tranquilo"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 3,
+    "actions": 15,
+    "cards": 19
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#D03860",
+    "accent": "#E07090",
+    "accent_name": "mall pink",
+    "highlight": "bag / escalator / meet",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

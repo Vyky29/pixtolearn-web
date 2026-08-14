@@ -1,0 +1,321 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "taking-the-bus",
+  "family": "safety-mobility",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T2",
+    "band": "teen",
+    "gender": "woman",
+    "skin": "light",
+    "hair": "shoulder-length brown",
+    "clothes": "teal jacket, navy trousers",
+    "age": "teen",
+    "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #E07830 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Taking the bus",
+    "es": "Coger el autobus"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "bus",
+      "es": "autobus"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "bus-pass",
+      "slug": "bus-pass",
+      "title": {
+        "en": "bus pass",
+        "es": "abono"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bus-stop-sign",
+      "slug": "bus-stop-sign",
+      "title": {
+        "en": "bus stop",
+        "es": "parada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "backpack",
+      "slug": "backpack",
+      "title": {
+        "en": "bag",
+        "es": "mochila"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wait-at-stop",
+      "slug": "wait-at-stop",
+      "title": {
+        "en": "wait at stop",
+        "es": "esperar parada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-pass",
+      "slug": "show-pass",
+      "title": {
+        "en": "show pass",
+        "es": "mostrar abono"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-on",
+      "slug": "get-on",
+      "title": {
+        "en": "get on",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-down",
+      "slug": "sit-down",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "press-stop",
+      "slug": "press-stop",
+      "title": {
+        "en": "press stop",
+        "es": "pulsar parada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-off",
+      "slug": "get-off",
+      "title": {
+        "en": "get off",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-bus",
+      "slug": "crowded-bus",
+      "title": {
+        "en": "crowded bus",
+        "es": "bus lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-bus",
+      "slug": "loud-bus",
+      "title": {
+        "en": "loud bus",
+        "es": "bus ruidoso"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "offer-seat",
+      "slug": "offer-seat",
+      "title": {
+        "en": "offer seat",
+        "es": "ceder asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-rail",
+      "slug": "hold-rail",
+      "title": {
+        "en": "hold rail",
+        "es": "coger barra"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "bus",
+        "es": "autobus"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "bus-pass",
+      "slug": "bus-pass",
+      "title": {
+        "en": "bus pass",
+        "es": "abono"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bus-stop-sign",
+      "slug": "bus-stop-sign",
+      "title": {
+        "en": "bus stop",
+        "es": "parada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "backpack",
+      "slug": "backpack",
+      "title": {
+        "en": "bag",
+        "es": "mochila"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wait-at-stop",
+      "slug": "wait-at-stop",
+      "title": {
+        "en": "wait at stop",
+        "es": "esperar parada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-pass",
+      "slug": "show-pass",
+      "title": {
+        "en": "show pass",
+        "es": "mostrar abono"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-on",
+      "slug": "get-on",
+      "title": {
+        "en": "get on",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-down",
+      "slug": "sit-down",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "press-stop",
+      "slug": "press-stop",
+      "title": {
+        "en": "press stop",
+        "es": "pulsar parada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-off",
+      "slug": "get-off",
+      "title": {
+        "en": "get off",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-bus",
+      "slug": "crowded-bus",
+      "title": {
+        "en": "crowded bus",
+        "es": "bus lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-bus",
+      "slug": "loud-bus",
+      "title": {
+        "en": "loud bus",
+        "es": "bus ruidoso"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "offer-seat",
+      "slug": "offer-seat",
+      "title": {
+        "en": "offer seat",
+        "es": "ceder asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-rail",
+      "slug": "hold-rail",
+      "title": {
+        "en": "hold rail",
+        "es": "coger barra"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 3,
+    "actions": 11,
+    "cards": 15
+  },
+  "design": {
+    "avatar_id": "T2",
+    "family_base": "#3D7EA6",
+    "accent": "#E07830",
+    "accent_name": "bus orange",
+    "highlight": "bus stop / ticket / door",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

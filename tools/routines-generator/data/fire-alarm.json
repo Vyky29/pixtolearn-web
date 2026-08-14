@@ -1,0 +1,184 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "fire-alarm",
+  "family": "emergency-help",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack."
+  },
+  "label": {
+    "en": "Fire alarm",
+    "es": "Alarma de incendio"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "fire alarm",
+      "es": "alarma"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "alarm-beacon",
+      "slug": "alarm-beacon",
+      "title": {
+        "en": "alarm beacon",
+        "es": "baliza de alarma"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "exit-sign",
+      "slug": "exit-sign",
+      "title": {
+        "en": "exit sign",
+        "es": "salida"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "meeting-point-sign",
+      "slug": "meeting-point-sign",
+      "title": {
+        "en": "meeting point sign",
+        "es": "punto de reunion"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ear-defenders",
+      "slug": "ear-defenders",
+      "title": {
+        "en": "ear defenders",
+        "es": "cascos protectores"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "door",
+      "slug": "door",
+      "title": {
+        "en": "door",
+        "es": "puerta"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "hear-see-alarm",
+      "slug": "hear-see-alarm",
+      "title": {
+        "en": "hear or see alarm",
+        "es": "oir o ver la alarma"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stop",
+      "slug": "stop",
+      "title": {
+        "en": "stop",
+        "es": "parar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "line-up",
+      "slug": "line-up",
+      "title": {
+        "en": "line up",
+        "es": "hacer fila"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-to-exit",
+      "slug": "walk-to-exit",
+      "title": {
+        "en": "walk to exit",
+        "es": "caminar a la salida"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-meeting-point",
+      "slug": "go-meeting-point",
+      "title": {
+        "en": "go to meeting point",
+        "es": "ir al punto de reunion"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait",
+      "slug": "wait",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "return-when-told",
+      "slug": "return-when-told",
+      "title": {
+        "en": "return when told",
+        "es": "volver cuando lo digan"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 7,
+    "cards": 13
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#4A6670",
+    "accent": "#E8A840",
+    "accent_name": "warm amber",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Works for drill and real alarm; adult notes distinguish practice days."
+  ]
+}

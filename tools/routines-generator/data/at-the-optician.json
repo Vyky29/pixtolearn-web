@@ -1,0 +1,298 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave1-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "at-the-optician",
+  "family": "health-appointments",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave1-high-demand",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail or soft curls",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant. Same outfit colours whole pack."
+  },
+  "label": {
+    "en": "At the optician",
+    "es": "En el oculista"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "optician",
+      "es": "oculista"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "appointment-letter",
+      "slug": "appointment-letter",
+      "title": {
+        "en": "appointment letter",
+        "es": "carta de cita"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "waiting-chair",
+      "slug": "waiting-chair",
+      "title": {
+        "en": "waiting chair",
+        "es": "silla de espera"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "eye-chart",
+      "slug": "eye-chart",
+      "title": {
+        "en": "eye chart",
+        "es": "cartel de letras"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "trial-frames",
+      "slug": "trial-frames",
+      "title": {
+        "en": "trial frames",
+        "es": "montura de prueba"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "optician-chair",
+      "slug": "optician-chair",
+      "title": {
+        "en": "optician chair",
+        "es": "silla del oculista"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "glasses-case",
+      "slug": "glasses-case",
+      "title": {
+        "en": "glasses case",
+        "es": "estuche de gafas"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive-clinic",
+      "slug": "arrive-clinic",
+      "title": {
+        "en": "arrive at clinic",
+        "es": "llegar a la clinica"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "check-in",
+      "slug": "check-in",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-in-chair",
+      "slug": "sit-in-chair",
+      "title": {
+        "en": "sit in chair",
+        "es": "sentarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-at-chart",
+      "slug": "look-at-chart",
+      "title": {
+        "en": "look at chart",
+        "es": "mirar el cartel"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "cover-one-eye",
+      "slug": "cover-one-eye",
+      "title": {
+        "en": "cover one eye",
+        "es": "tapar un ojo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "try-frames",
+      "slug": "try-frames",
+      "title": {
+        "en": "try frames",
+        "es": "probar montura"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ask-adult",
+      "slug": "ask-adult",
+      "title": {
+        "en": "ask adult",
+        "es": "preguntar al adulto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish",
+      "slug": "finish",
+      "title": {
+        "en": "finish",
+        "es": "terminar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 10,
+    "cards": 17
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#7A8FA0",
+    "accent": "#5B9A8B",
+    "accent_name": "clinic teal",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person. Boy/girl delivery via teen-boy-medium and teen-girl-medium casts where available.",
+  "notes": [
+    "Health procedure pack. Distinct from hospital building visit.",
+    "Gender via casts."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "appointment-letter"
+    },
+    {
+      "kind": "object",
+      "id": "waiting-chair"
+    },
+    {
+      "kind": "object",
+      "id": "eye-chart"
+    },
+    {
+      "kind": "object",
+      "id": "trial-frames"
+    },
+    {
+      "kind": "object",
+      "id": "optician-chair"
+    },
+    {
+      "kind": "object",
+      "id": "glasses-case"
+    },
+    {
+      "kind": "action",
+      "id": "arrive-clinic"
+    },
+    {
+      "kind": "action",
+      "id": "check-in"
+    },
+    {
+      "kind": "action",
+      "id": "wait-turn"
+    },
+    {
+      "kind": "action",
+      "id": "sit-in-chair"
+    },
+    {
+      "kind": "action",
+      "id": "look-at-chart"
+    },
+    {
+      "kind": "action",
+      "id": "cover-one-eye"
+    },
+    {
+      "kind": "action",
+      "id": "try-frames"
+    },
+    {
+      "kind": "action",
+      "id": "ask-adult"
+    },
+    {
+      "kind": "action",
+      "id": "finish"
+    },
+    {
+      "kind": "action",
+      "id": "leave"
+    }
+  ],
+  "existing_dir": "at-the-optician",
+  "art_dir": "at-the-optician"
+}

@@ -1,0 +1,465 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "taking-a-plane",
+  "family": "safety-mobility",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5BA3D0 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Taking a plane",
+    "es": "Coger un avion"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "plane",
+      "es": "avion"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "passport",
+      "slug": "passport",
+      "title": {
+        "en": "passport",
+        "es": "pasaporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "boarding-pass",
+      "slug": "boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "tarjeta embarque"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "seatbelt",
+      "slug": "seatbelt",
+      "title": {
+        "en": "seatbelt",
+        "es": "cinturon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "auriculares"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "book",
+      "slug": "book",
+      "title": {
+        "en": "book",
+        "es": "libro"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive-airport",
+      "slug": "arrive-airport",
+      "title": {
+        "en": "arrive airport",
+        "es": "llegar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-in",
+      "slug": "check-in",
+      "title": {
+        "en": "check in",
+        "es": "facturar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "security",
+      "slug": "security",
+      "title": {
+        "en": "security",
+        "es": "seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board",
+      "slug": "board",
+      "title": {
+        "en": "board",
+        "es": "embarcar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-seat",
+      "slug": "take-seat",
+      "title": {
+        "en": "take seat",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fasten-seatbelt",
+      "slug": "fasten-seatbelt",
+      "title": {
+        "en": "seatbelt on",
+        "es": "cinturon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-safety",
+      "slug": "listen-safety",
+      "title": {
+        "en": "listen safety",
+        "es": "escuchar seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-out",
+      "slug": "look-out",
+      "title": {
+        "en": "look out",
+        "es": "mirar fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "read",
+      "slug": "read",
+      "title": {
+        "en": "read",
+        "es": "leer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "watch-movie",
+      "slug": "watch-movie",
+      "title": {
+        "en": "watch movie",
+        "es": "ver pelicula"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-music",
+      "slug": "listen-music",
+      "title": {
+        "en": "listen music",
+        "es": "escuchar musica"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sleep",
+      "slug": "sleep",
+      "title": {
+        "en": "sleep",
+        "es": "dormir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave-plane",
+      "slug": "leave-plane",
+      "title": {
+        "en": "leave plane",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-luggage",
+      "slug": "collect-luggage",
+      "title": {
+        "en": "get luggage",
+        "es": "recoger maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ear-pressure",
+      "slug": "ear-pressure",
+      "title": {
+        "en": "ear pressure",
+        "es": "oidos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "turbulence-sit",
+      "slug": "turbulence-sit",
+      "title": {
+        "en": "turbulence sit",
+        "es": "turbulencia"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "plane",
+        "es": "avion"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "passport",
+      "slug": "passport",
+      "title": {
+        "en": "passport",
+        "es": "pasaporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "boarding-pass",
+      "slug": "boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "tarjeta embarque"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "seatbelt",
+      "slug": "seatbelt",
+      "title": {
+        "en": "seatbelt",
+        "es": "cinturon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "auriculares"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "book",
+      "slug": "book",
+      "title": {
+        "en": "book",
+        "es": "libro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "arrive-airport",
+      "slug": "arrive-airport",
+      "title": {
+        "en": "arrive airport",
+        "es": "llegar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-in",
+      "slug": "check-in",
+      "title": {
+        "en": "check in",
+        "es": "facturar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "security",
+      "slug": "security",
+      "title": {
+        "en": "security",
+        "es": "seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board",
+      "slug": "board",
+      "title": {
+        "en": "board",
+        "es": "embarcar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-seat",
+      "slug": "take-seat",
+      "title": {
+        "en": "take seat",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fasten-seatbelt",
+      "slug": "fasten-seatbelt",
+      "title": {
+        "en": "seatbelt on",
+        "es": "cinturon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-safety",
+      "slug": "listen-safety",
+      "title": {
+        "en": "listen safety",
+        "es": "escuchar seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-out",
+      "slug": "look-out",
+      "title": {
+        "en": "look out",
+        "es": "mirar fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "read",
+      "slug": "read",
+      "title": {
+        "en": "read",
+        "es": "leer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "watch-movie",
+      "slug": "watch-movie",
+      "title": {
+        "en": "watch movie",
+        "es": "ver pelicula"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-music",
+      "slug": "listen-music",
+      "title": {
+        "en": "listen music",
+        "es": "escuchar musica"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sleep",
+      "slug": "sleep",
+      "title": {
+        "en": "sleep",
+        "es": "dormir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave-plane",
+      "slug": "leave-plane",
+      "title": {
+        "en": "leave plane",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-luggage",
+      "slug": "collect-luggage",
+      "title": {
+        "en": "get luggage",
+        "es": "recoger maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ear-pressure",
+      "slug": "ear-pressure",
+      "title": {
+        "en": "ear pressure",
+        "es": "oidos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "turbulence-sit",
+      "slug": "turbulence-sit",
+      "title": {
+        "en": "turbulence sit",
+        "es": "turbulencia"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 16,
+    "cards": 23
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#3D7EA6",
+    "accent": "#5BA3D0",
+    "accent_name": "sky blue",
+    "highlight": "seatbelt / window / ticket / action focus",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

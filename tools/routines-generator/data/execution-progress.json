@@ -1,0 +1,321 @@
+{
+  "overnight_status": "GREEN",
+  "started": "2026-08-05 night",
+  "message_for_morning": "Hard refresh. Catalogue green. Check Emotions (colour+2 actions), Barber, Period tampon/cup, Intimate finishes, Ticket≠boarding, Public noise/crowd, Sports/mobility extras. Roadmap: data/expansion-roadmap.json",
+  "master_plan": "data/overnight-master-plan.json",
+  "art_rule": "Illustration ONLY. Objects match actions. One avatar lock. Unique art. No scrub. Gesture framing.",
+  "framing_rule": "Cover=full/3/4. Objects=object. Face/hands=close-up. Garment=zone crop. Body=3/4.",
+  "clothes_structure": "clothes-boy (C1) and clothes-girl (C2): cover + objects once + dress actions + undress actions",
+  "gold_standard_ready": [
+    "at-the-airport",
+    "at-the-hairdresser",
+    "at-the-hospital",
+    "at-the-pharmacy",
+    "at-the-shopping-mall",
+    "at-the-supermarket",
+    "attending-a-sport-event",
+    "brushing-teeth",
+    "climbing-wow",
+    "clothes-boy",
+    "clothes-girl",
+    "core",
+    "crossing-the-road",
+    "cycling-prep",
+    "emotion-angry",
+    "emotion-calm",
+    "emotion-excited",
+    "emotion-frustrated",
+    "emotion-happy",
+    "emotion-sad",
+    "emotion-tired",
+    "emotion-worried",
+    "emotions-hub",
+    "foot-care",
+    "going-camping",
+    "going-on-holidays",
+    "going-to-a-theme-park",
+    "going-to-the-beach",
+    "going-to-the-mountain",
+    "going-to-the-museum",
+    "gym-activities",
+    "haircare",
+    "hiking",
+    "intimate-care-female",
+    "intimate-care-male",
+    "menstrual-hygiene",
+    "nail-care",
+    "shaving",
+    "shower",
+    "swimming-wow",
+    "taking-a-taxi",
+    "taking-the-bus",
+    "taking-the-train",
+    "tennis-prep",
+    "using-the-toilet",
+    "using-the-tube"
+  ],
+  "overnight_waves_launched": [
+    "dedupe emotions/bus/tube/airport/haircare/menstrual",
+    "scrub fixes + climbing-wow full",
+    "YA hospital/pharmacy/hairdresser/shaving/foot",
+    "toilet + crossing-the-road",
+    "emotions unique covers",
+    "sports polish",
+    "travel/public polish",
+    "core vocab + intimate + nail"
+  ],
+  "definition_of_done": [
+    "Zero missing needed arts on active routines",
+    "Zero same-pack hash duplicates",
+    "Zero scrub bites",
+    "Status ready on quality-passed packs",
+    "Final audit script green"
+  ],
+  "dedupe_wave": "DONE",
+  "dedupe_packs": [
+    "emotion-happy",
+    "emotion-sad",
+    "emotion-angry",
+    "emotion-worried",
+    "emotion-tired",
+    "emotion-excited",
+    "emotion-calm",
+    "emotion-frustrated",
+    "taking-the-bus",
+    "using-the-tube",
+    "at-the-airport",
+    "haircare",
+    "menstrual-hygiene"
+  ],
+  "emotions_wave": "DONE_E1_GENDERLESS",
+  "scrub_climbing_wave": "DONE",
+  "toilet_road_wave": "DONE",
+  "clean_ready": [
+    "at-the-airport",
+    "at-the-hairdresser",
+    "at-the-hospital",
+    "at-the-pharmacy",
+    "at-the-shopping-mall",
+    "at-the-supermarket",
+    "attending-a-sport-event",
+    "brushing-teeth",
+    "climbing-wow",
+    "clothes-boy",
+    "clothes-girl",
+    "core",
+    "crossing-the-road",
+    "cycling-prep",
+    "emotion-angry",
+    "emotion-calm",
+    "emotion-excited",
+    "emotion-frustrated",
+    "emotion-happy",
+    "emotion-sad",
+    "emotion-tired",
+    "emotion-worried",
+    "emotions-hub",
+    "foot-care",
+    "going-camping",
+    "going-on-holidays",
+    "going-to-a-theme-park",
+    "going-to-the-beach",
+    "going-to-the-mountain",
+    "going-to-the-museum",
+    "gym-activities",
+    "haircare",
+    "hiking",
+    "intimate-care-female",
+    "intimate-care-male",
+    "menstrual-hygiene",
+    "nail-care",
+    "shaving",
+    "shower",
+    "swimming-wow",
+    "taking-a-taxi",
+    "taking-the-bus",
+    "taking-the-train",
+    "tennis-prep",
+    "using-the-toilet",
+    "using-the-tube"
+  ],
+  "pending": [],
+  "sports_wave": "DONE",
+  "wave4_ya_public": {
+    "at-the-hospital": 13,
+    "at-the-pharmacy": 13,
+    "at-the-hairdresser": 16,
+    "shaving": 16,
+    "foot-care": 15
+  },
+  "notes": [
+    "Emotions redesigned: gender-neutral E1 avatar; face=expression; ES nouns not gendered -ado",
+    "Overnight agents finished: YA 73, sports 75, travel 87, core+intimate+nail 68. Intimate touch bubbles preserved. Emotions E1 techniques reinstalled unique.",
+    "Night continuar: 4 parallel polish waves launched; sun-hat closed; camping/holidays/mountain/hiking marked ready when complete",
+    "Clinical micro-polish: restored male gentle-movements speech bubble; emotions/toilet/period/intimate verified OK",
+    "Tiny-fill: 8 catalogue cards enlarged; skipped non-catalogue orphans (gym/swim extras etc.)",
+    "taking-the-train quality pass: regen find-seat, place-luggage, read, listen-music, get-off (plane/branding removed); cover!=wait-platform; marked ready",
+    "taking-the-train ready: regen find-seat/place-luggage/read/listen-music/get-off; cover≠wait-platform",
+    "Thin packs expanded: sport-event, taxi, mall, cycling; museum already complete",
+    "Emotion coping actions: 16/16 installed via install_art.py; hub mirrored; emotion-* + emotions-hub status ready",
+    "Emotions premium: 16 unique colour-matched coping actions ready",
+    "Barber/period/intimate finishes/tickets done; plane ear-pressure+turbulence filled; taking-a-plane ready",
+    "Public/sports/mobility: 56 new action arts filled; 20 packs ready"
+  ],
+  "travel_public_wave": "DONE",
+  "core_intimate_nail_wave": "DONE",
+  "ya_wave": "DONE",
+  "overnight_waves_active": [
+    "tiny-fill object polish",
+    "train + travel ready",
+    "emotions+intimate+toilet micro-polish",
+    "expand thin public packs"
+  ],
+  "travel_expand_wave": "DONE",
+  "clinical_micro_polish": "DONE",
+  "tiny_fill_wave": "DONE_PARTIAL",
+  "train_wave": "DONE",
+  "log": [
+    {
+      "at": "2026-08-04T23:31:58Z",
+      "wave": "public-travel-expand",
+      "packs": {
+        "attending-a-sport-event": {
+          "new_slugs": [
+            "snack",
+            "buy-snack",
+            "use-toilet",
+            "clap",
+            "leave-early"
+          ],
+          "actions": 10,
+          "cards": 15,
+          "status": "ready"
+        },
+        "taking-a-taxi": {
+          "new_slugs": [
+            "wait-taxi",
+            "confirm-driver",
+            "tip-optional",
+            "thank-driver"
+          ],
+          "actions": 10,
+          "cards": 14,
+          "status": "ready"
+        },
+        "going-to-the-museum": {
+          "new_slugs": [],
+          "actions": 10,
+          "cards": 15,
+          "status": "ready",
+          "note": "art complete, no expand"
+        },
+        "at-the-shopping-mall": {
+          "new_slugs": [
+            "ride-escalator",
+            "meet-up"
+          ],
+          "actions": 11,
+          "cards": 15,
+          "status": "ready"
+        },
+        "cycling-prep": {
+          "new_slugs": [
+            "look-both-ways",
+            "signal-turn",
+            "park-bike"
+          ],
+          "actions": 8,
+          "cards": 13,
+          "status": "ready"
+        }
+      }
+    },
+    {
+      "time": "2026-08-05T01:50",
+      "event": "Installed WOW art: at-the-barber full, menstrual pad/tampon/cup + put-tampon/put-cup, intimate ejaculate-finish + climax-finish, airport/plane ticket vs boarding-pass pairs. Marked ready where complete."
+    }
+  ],
+  "packs": {
+    "attending-a-sport-event": {
+      "status": "ready",
+      "new_slugs": [
+        "snack",
+        "buy-snack",
+        "use-toilet",
+        "clap",
+        "leave-early"
+      ],
+      "actions": 10,
+      "cards": 15
+    },
+    "taking-a-taxi": {
+      "status": "ready",
+      "new_slugs": [
+        "wait-taxi",
+        "confirm-driver",
+        "tip-optional",
+        "thank-driver"
+      ],
+      "actions": 10,
+      "cards": 14
+    },
+    "going-to-the-museum": {
+      "status": "ready",
+      "new_slugs": [],
+      "actions": 10,
+      "cards": 15,
+      "note": "art complete, no expand"
+    },
+    "at-the-shopping-mall": {
+      "status": "ready",
+      "new_slugs": [
+        "ride-escalator",
+        "meet-up"
+      ],
+      "actions": 11,
+      "cards": 15
+    },
+    "cycling-prep": {
+      "status": "ready",
+      "new_slugs": [
+        "look-both-ways",
+        "signal-turn",
+        "park-bike"
+      ],
+      "actions": 8,
+      "cards": 13
+    },
+    "at-the-barber": {
+      "status": "ready",
+      "art": "complete",
+      "note": "WOW art installed overnight"
+    },
+    "menstrual-hygiene": {
+      "status": "ready",
+      "art": "complete",
+      "note": "WOW art installed overnight"
+    },
+    "intimate-care-male": {
+      "status": "ready",
+      "art": "complete",
+      "note": "WOW art installed overnight"
+    },
+    "intimate-care-female": {
+      "status": "ready",
+      "art": "complete",
+      "note": "WOW art installed overnight"
+    },
+    "at-the-airport": {
+      "status": "ready",
+      "art": "complete",
+      "note": "WOW art installed overnight"
+    }
+  },
+  "thin_pack_expand_wave": "DONE",
+  "roadmap": "data/expansion-roadmap.json",
+  "premium_audit": "data/catalogue-audit-premium.json",
+  "emotions_coping_actions": "DONE_16_INSTALLED",
+  "emotions_premium_actions": "DONE",
+  "barber_period_intimate_ticket": "DONE",
+  "public_sports_mobility_wave": "DONE"
+}

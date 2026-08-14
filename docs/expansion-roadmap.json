@@ -1,0 +1,653 @@
+{
+  "title": "PixtoLearn WOW Routines expansion roadmap",
+  "purpose": "Aligned to family-architecture.json. Useful new packs paced after taxonomy lock.",
+  "architecture_source": "family-architecture.json",
+  "updated": "2026-08-14",
+  "research_lens": [
+    "What do staff actually rehearse before community access?",
+    "What sensory surprises cause meltdown if not previewed (noise, queue, crowd, smell, touch)?",
+    "What health / puberty / adult living steps need restricted clinical packs?",
+    "What vocabulary is shared across many routines (core) vs place-specific?",
+    "UK context: NHS, public transport, shops, leisure centres, college, work experience",
+    "Faith and life events: shared etiquette cards plus place-specific packs, never one mixed-religion pack",
+    "Seasonal and adventure: predict kit, cold/heat, queues, and sensory load before the outing"
+  ],
+  "status_model": {
+    "ready": "Shipped with art",
+    "planned": "In routines.json; pack spec JSON may exist; art todo",
+    "spec-ready": "Pack JSON has cover/items/actions text; art todo",
+    "deferred": "Not creating family or packs yet",
+    "p3-named": "Named in roadmap for scale; no art, no routines.json stubs yet"
+  },
+  "p1_now": {
+    "goal": "Four new families + trampoline-wow in sports; write specs then art",
+    "new_families": [
+      "health-appointments",
+      "sensory-world",
+      "eating-out",
+      "emergency-help"
+    ],
+    "packs": [
+      "trampoline-prep",
+      "at-the-dentist",
+      "at-the-gp",
+      "blood-test",
+      "vaccination",
+      "loud-places",
+      "crowded-places",
+      "waiting",
+      "headphones-and-breaks",
+      "at-a-cafe",
+      "school-lunch",
+      "i-am-lost",
+      "ask-safe-adult",
+      "fire-alarm"
+    ],
+    "sensory_hybrid": "sensory-world family packs plus inject 1 noise/crowd card into place packs when clinically useful",
+    "sports_note": "Trampoline split into trampoline-prep + trampoline-activity after naming lock."
+  },
+  "p2_next": {
+    "goal": "School, money, deeper health, and core team sports after P1 art ships",
+    "new_families": [
+      {
+        "id": "school-college",
+        "packs": [
+          "fire-drill",
+          "changing-lessons",
+          "assembly",
+          "asking-teacher"
+        ]
+      },
+      {
+        "id": "money-and-shopping",
+        "packs": [
+          "using-money",
+          "contactless-pay",
+          "asking-price",
+          "returns"
+        ]
+      }
+    ],
+    "add_to_existing": {
+      "public-spaces": [
+        "public-toilet"
+      ],
+      "self-care": [
+        "washing-hands"
+      ],
+      "health-appointments": [
+        "at-the-optician",
+        "hearing-test",
+        "physiotherapy",
+        "x-ray-or-scan"
+      ],
+      "sensory-world": [
+        "bright-lights"
+      ],
+      "eating-out": [
+        "fast-food",
+        "allergies-and-choices"
+      ],
+      "emergency-help": [
+        "basic-first-aid"
+      ],
+      "sports": [
+        "football",
+        "basketball",
+        "yoga"
+      ]
+    }
+  },
+  "p3_scale": {
+    "goal": "Product-at-scale: life events and faith, adventure sports, weather and seasons, home living, work. Named packs only; no art until P1/P2 ship.",
+    "priority_order": [
+      "health-appointments extras",
+      "life-events first packs",
+      "adventure sports (ski, surf, snorkel)",
+      "weather-seasons + seasonal bundles",
+      "home-living",
+      "work-experience",
+      "relationships-consent (restricted)"
+    ],
+    "new_families": [
+      {
+        "id": "life-events",
+        "label": {
+          "en": "Life events and faith",
+          "es": "Eventos de vida y fe"
+        },
+        "priority": 1,
+        "architecture": "create_p3",
+        "why": "Ceremonies and family milestones are not civic buildings. Shared etiquette plus place-specific packs.",
+        "design_rules": [
+          "One pack = one ceremony or place context",
+          "Never mix religions in a single pack",
+          "Reuse quiet / sit / stand / wait / dress smart across packs",
+          "Funeral and memorial: calm tone; staff-only or restricted at first release"
+        ],
+        "packs_first": [
+          "church-service",
+          "mosque-visit",
+          "funeral-or-memorial",
+          "wedding-guest"
+        ],
+        "packs_later": [
+          "synagogue-service",
+          "hindu-temple-visit",
+          "sikh-gurdwara-visit",
+          "baptism-or-naming",
+          "first-communion",
+          "bar-or-bat-mitzvah",
+          "birthday-party",
+          "eid-celebration",
+          "diwali-celebration",
+          "christmas-gathering"
+        ]
+      },
+      {
+        "id": "weather-seasons",
+        "label": {
+          "en": "Weather and seasons",
+          "es": "Tiempo y estaciones"
+        },
+        "priority": 2,
+        "architecture": "create_p3",
+        "why": "Short coping packs plus seasonal life moments. Attach to travel and sports when useful.",
+        "packs_weather": [
+          "rainy-day",
+          "hot-day",
+          "cold-day",
+          "storm-or-wind"
+        ],
+        "packs_seasonal_life": [
+          "back-to-school",
+          "halloween",
+          "bonfire-night-fireworks",
+          "summer-holidays-week",
+          "winter-sports-trip",
+          "exam-season-wait"
+        ],
+        "bundles": [
+          {
+            "id": "bundle-winter-trip",
+            "mixes": [
+              "cold-day",
+              "skiing-prep + skiing-activity",
+              "going-to-the-mountain",
+              "waiting"
+            ]
+          },
+          {
+            "id": "bundle-clinic-day",
+            "mixes": [
+              "waiting",
+              "at-the-gp",
+              "loud-places",
+              "headphones-and-breaks"
+            ]
+          },
+          {
+            "id": "bundle-faith-visit",
+            "mixes": [
+              "quiet etiquette cards",
+              "church-service or mosque-visit",
+              "crowded-places"
+            ]
+          },
+          {
+            "id": "bundle-beach-week",
+            "mixes": [
+              "hot-day",
+              "going-to-the-beach",
+              "surfing-prep/activity or snorkelling-prep/activity"
+            ]
+          },
+          {
+            "id": "bundle-fireworks-night",
+            "mixes": [
+              "bonfire-night-fireworks",
+              "loud-places",
+              "headphones-and-breaks",
+              "waiting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "home-living",
+        "label": {
+          "en": "Home living",
+          "es": "Vida en casa"
+        },
+        "priority": 3,
+        "architecture": "create_p3",
+        "why": "Adult and teen independence: chores and daily home flows.",
+        "packs": [
+          "making-bed",
+          "laundry",
+          "washing-up",
+          "taking-bins-out",
+          "simple-snack",
+          "vacuum-or-tidy",
+          "packing-school-bag",
+          "bedtime-routine",
+          "visiting-grandparents",
+          "sleepover"
+        ]
+      },
+      {
+        "id": "work-experience",
+        "label": {
+          "en": "Work and volunteering",
+          "es": "Trabajo y voluntariado"
+        },
+        "priority": 4,
+        "architecture": "create_p3",
+        "why": "Adult destinations after school-college.",
+        "packs": [
+          "first-day-at-work",
+          "using-break-room",
+          "asking-supervisor",
+          "wearing-uniform",
+          "clocking-in"
+        ]
+      }
+    ],
+    "add_to_existing": {
+      "health-appointments": {
+        "priority": 1,
+        "packs": [
+          "speech-therapy",
+          "occupational-therapy",
+          "dermatologist",
+          "podiatrist",
+          "orthodontist",
+          "ent-appointment",
+          "allergy-test",
+          "mri-scan",
+          "outpatient-clinic",
+          "eye-or-ear-drops-clinic",
+          "taking-medicine"
+        ]
+      },
+      "public-spaces": {
+        "priority": 3,
+        "packs": [
+          "at-the-library",
+          "at-the-cinema",
+          "at-the-theatre",
+          "at-a-concert",
+          "at-the-bank",
+          "at-the-post-office"
+        ]
+      },
+      "travel": {
+        "priority": 3,
+        "packs": [
+          "going-to-the-cinema-trip",
+          "family-restaurant-night"
+        ],
+        "note": "Prefer eating-out and public-spaces when the place is the job; keep travel for leisure destinations."
+      },
+      "school-college": {
+        "priority": 3,
+        "packs": [
+          "pe-changing-room",
+          "school-photo-day",
+          "parents-evening-wait"
+        ]
+      },
+      "eating-out": {
+        "priority": 3,
+        "packs": [
+          "family-restaurant",
+          "buffet-or-self-service"
+        ]
+      },
+      "sports": {
+        "priority": 1,
+        "adventure": [
+          "skiing",
+          "snowboarding",
+          "surfing",
+          "snorkelling",
+          "scuba-diving",
+          "ice-skating",
+          "horse-riding",
+          "kayak-or-paddle"
+        ],
+        "leisure_team": [
+          "rugby",
+          "volleyball",
+          "badminton",
+          "athletics",
+          "martial-arts",
+          "dance",
+          "bowling",
+          "soft-play",
+          "skatepark"
+        ],
+        "pack_pattern": "objects (kit) -> arrive -> change -> safety -> wait -> ready"
+      }
+    },
+    "deferred_restricted": [
+      {
+        "id": "relationships-consent",
+        "example_packs": [
+          "private-vs-public",
+          "asking-permission",
+          "saying-no",
+          "online-chat-safety"
+        ],
+        "access": "restricted",
+        "reason": "Restricted clinical track like intimate-care; separate review process"
+      }
+    ],
+    "do_not_ship_yet": [
+      "No routines.json stubs for P3 until P1 art is largely shipped",
+      "No public shop listing for funeral-or-memorial until content review",
+      "No mixed multi-faith pack",
+      "Adventure sports art only after ski/surf/snorkel specs are locked"
+    ]
+  },
+  "deferred": [
+    {
+      "id": "relationships-consent",
+      "example_packs": [
+        "private-vs-public",
+        "asking-permission",
+        "saying-no",
+        "online-chat-safety"
+      ],
+      "access": "restricted",
+      "reason": "Restricted clinical track like intimate-care"
+    }
+  ],
+  "proposed_new_categories": [
+    {
+      "id": "health-appointments",
+      "label": {
+        "en": "Health appointments",
+        "es": "Citas de salud"
+      },
+      "why": "Clinical procedures distinct from hospital building visit.",
+      "example_packs": [
+        "at-the-dentist",
+        "at-the-gp",
+        "blood-test",
+        "vaccination",
+        "at-the-optician",
+        "hearing-test",
+        "physiotherapy",
+        "x-ray-or-scan"
+      ],
+      "priority": 1,
+      "architecture": "create_p1"
+    },
+    {
+      "id": "sensory-world",
+      "label": {
+        "en": "Sensory world",
+        "es": "Mundo sensorial"
+      },
+      "why": "Predict and cope with loud, bright, crowded, waiting. Hybrid with place-pack noise cards.",
+      "example_packs": [
+        "loud-places",
+        "crowded-places",
+        "waiting",
+        "headphones-and-breaks",
+        "bright-lights"
+      ],
+      "priority": 1,
+      "architecture": "create_p1"
+    },
+    {
+      "id": "eating-out",
+      "label": {
+        "en": "Eating out",
+        "es": "Comer fuera"
+      },
+      "why": "Cafe, school lunch, fast food: order, wait, eat, leave.",
+      "example_packs": [
+        "at-a-cafe",
+        "school-lunch",
+        "fast-food",
+        "allergies-and-choices"
+      ],
+      "priority": 1,
+      "architecture": "create_p1"
+    },
+    {
+      "id": "emergency-help",
+      "label": {
+        "en": "Emergency and help",
+        "es": "Emergencia y ayuda"
+      },
+      "why": "Lost, safe adult, fire alarm, first aid.",
+      "example_packs": [
+        "i-am-lost",
+        "ask-safe-adult",
+        "fire-alarm",
+        "basic-first-aid"
+      ],
+      "priority": 1,
+      "architecture": "create_p1"
+    },
+    {
+      "id": "school-college",
+      "label": {
+        "en": "School and college",
+        "es": "Colegio y college"
+      },
+      "why": "Timetable, assembly, fire drill, asking teacher.",
+      "example_packs": [
+        "fire-drill",
+        "changing-lessons",
+        "assembly",
+        "asking-teacher"
+      ],
+      "priority": 2,
+      "architecture": "create_p2"
+    },
+    {
+      "id": "money-and-shopping",
+      "label": {
+        "en": "Money and shopping",
+        "es": "Dinero y compras"
+      },
+      "why": "Payment skill separate from supermarket place pack.",
+      "example_packs": [
+        "using-money",
+        "contactless-pay",
+        "asking-price",
+        "returns"
+      ],
+      "priority": 2,
+      "architecture": "create_p2"
+    },
+    {
+      "id": "life-events",
+      "label": {
+        "en": "Life events and faith",
+        "es": "Eventos de vida y fe"
+      },
+      "why": "Church, mosque, funeral, wedding, celebrations. Not civic public-spaces.",
+      "example_packs": [
+        "church-service",
+        "mosque-visit",
+        "funeral-or-memorial",
+        "wedding-guest",
+        "synagogue-service",
+        "birthday-party"
+      ],
+      "priority": 3,
+      "architecture": "create_p3"
+    },
+    {
+      "id": "weather-seasons",
+      "label": {
+        "en": "Weather and seasons",
+        "es": "Tiempo y estaciones"
+      },
+      "why": "Weather coping plus seasonal life (fireworks, back to school, holiday weeks).",
+      "example_packs": [
+        "rainy-day",
+        "hot-day",
+        "cold-day",
+        "bonfire-night-fireworks",
+        "back-to-school",
+        "halloween"
+      ],
+      "priority": 3,
+      "architecture": "create_p3"
+    },
+    {
+      "id": "home-living",
+      "label": {
+        "en": "Home living",
+        "es": "Vida en casa"
+      },
+      "why": "Laundry, washing up, bed, bins, cooking basics, family visits.",
+      "example_packs": [
+        "making-bed",
+        "laundry",
+        "washing-up",
+        "taking-bins-out",
+        "simple-snack",
+        "visiting-grandparents"
+      ],
+      "priority": 3,
+      "architecture": "create_p3"
+    },
+    {
+      "id": "work-experience",
+      "label": {
+        "en": "Work and volunteering",
+        "es": "Trabajo y voluntariado"
+      },
+      "why": "Adult destinations: clock in, uniform, break, ask supervisor.",
+      "example_packs": [
+        "first-day-at-work",
+        "using-break-room",
+        "asking-supervisor"
+      ],
+      "priority": 4,
+      "architecture": "create_p3"
+    },
+    {
+      "id": "relationships-consent",
+      "label": {
+        "en": "Relationships and consent",
+        "es": "Relaciones y consentimiento"
+      },
+      "why": "Restricted: private vs public, yes/no touch, online safety.",
+      "example_packs": [
+        "private-vs-public",
+        "asking-permission",
+        "saying-no",
+        "online-chat-safety"
+      ],
+      "priority": 4,
+      "access": "restricted",
+      "architecture": "deferred"
+    }
+  ],
+  "extra_cards_over_time": {
+    "principle": "Ship thin vertical slices: 1 pack complete (cover+objects+actions) before starting the next. Sensory hybrid: family packs plus predictive cards inside place packs. Bundles remix shipped packs; they are not new art.",
+    "cadence": [
+      {
+        "phase": "A - taxonomy lock",
+        "goal": "Families + planned stubs + pack specs",
+        "deliverables": [
+          "family-architecture.json",
+          "routines.json families p1 + planned packs",
+          "spec-ready JSON for 14 p1 packs"
+        ]
+      },
+      {
+        "phase": "B - art p1",
+        "goal": "Artwork for p1 packs",
+        "deliverables": [
+          "trampoline-wow art",
+          "sensory-world art",
+          "health-appointments art",
+          "eating-out + emergency-help art"
+        ]
+      },
+      {
+        "phase": "C - stories align",
+        "goal": "Situation Stories handoff to shipped WOW only",
+        "deliverables": [
+          "Remap catalogue linked_routines",
+          "Ship stories where WOW art is ready"
+        ]
+      },
+      {
+        "phase": "D0b - sports unify",
+        "goal": "One sports family; one pack per sport; redirect prep/activity halves",
+        "deliverables": [
+          "family sports (collapsed prep+activities)",
+          "8 unified sport packs",
+          "naming-governance.json + docs HTML",
+          "legacy redirects to unified ids"
+        ]
+      },
+      {
+        "phase": "D - p2",
+        "goal": "school-college + money + health extras + sports",
+        "deliverables": [
+          "school-college family",
+          "money-and-shopping family",
+          "optician, hearing, physio, x-ray-or-scan",
+          "football/basket/yoga unified packs",
+          "public-toilet",
+          "washing-hands"
+        ]
+      },
+      {
+        "phase": "E - p3 scale",
+        "goal": "life-events + adventure sports + weather-seasons + home-living",
+        "deliverables": [
+          "life-events family (church, mosque, funeral, wedding first)",
+          "skiing/surfing/snorkelling unified packs",
+          "weather-seasons family + fireworks / back-to-school",
+          "named seasonal bundles in catalogue UI",
+          "home-living first five packs",
+          "work-experience after school-college demand"
+        ]
+      }
+    ],
+    "card_budget_tips": [
+      "Aim 12-18 cards per pack (cover + 4-7 objects + 7-12 actions); sensory and weather packs can be shorter",
+      "Reuse shared objects (soap, towel, headphones) with pack-local accents when style matches",
+      "Every public/travel/life-event pack should include at least 1 noise and 1 crowd card when clinically useful",
+      "Emotions stay face-first; coping actions stay body+gesture with colour-matched sweater",
+      "Restricted packs never in public shop filters",
+      "Faith packs: shared etiquette objects where possible; place-specific cover and steps",
+      "Sports: one pack per sport (kit through finish)",
+      "Adventure sports: one pack covering kit/arrive/ready then on-slope/in-water session",
+      "Never create new -wow ids"
+    ]
+  },
+  "metrics_for_premium": [
+    "Staff can preview the hard moment (noise/crowd/wait) before the outing",
+    "No two tickets look interchangeable",
+    "Every emotion has two distinct, teachable coping moves",
+    "Zero missing catalogue arts; zero same-pack hash dupes",
+    "Genderless where the concept is universal (core, emotions, sensory)",
+    "Health procedures never mixed into public-spaces hospital pack",
+    "Life-event packs never collapse multiple faiths into one routine",
+    "Bundles only reference packs that already have art"
+  ],
+  "naming_lock": {
+    "sports_model": "Every sport is one pack in family sports: kit through finish in one sequence.",
+    "forbidden_new": [
+      "-wow",
+      "{sport}-prep",
+      "{sport}-activity"
+    ],
+    "skill_decks": "Separate product; never named -prep.",
+    "legacy_redirects": "All prep/activity halves and old hybrids redirect to {sport}",
+    "unified_at": "2026-08-14"
+  }
+}

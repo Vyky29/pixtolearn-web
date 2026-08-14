@@ -1,0 +1,8 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "id": "football-prep",
+  "status": "redirect",
+  "redirect_to": "football",
+  "legacy_note": "Unified into football. Do not use for new art.",
+  "unified_at": "2026-08-14"
+}

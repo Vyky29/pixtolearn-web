@@ -1,0 +1,549 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "emotions-hub",
+  "family": "emotions",
+  "status": "ready",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "youth",
+    "gender": "neutral",
+    "skin": "medium",
+    "hair": "soft short rounded bowl cut, neither boy buzz nor girl long hair, ears lightly visible",
+    "clothes": "soft crew sweater in emotion colour, soft grey trousers",
+    "age": "youth",
+    "lock": "E1 TRUE gender-neutral. Soft short rounded bowl-cut hair (not masculine buzz, not feminine long). Soft oval face, NO eyelashes, NO makeup, NO sharp jaw, NO pink lips. Crew sweater colour = emotion group. Same head every emotion; only expression + sweater/halo colour change."
+  },
+  "label": {
+    "en": "Emotions pack",
+    "es": "Pack emociones"
+  },
+  "notes": "Faces ordered green→yellow→blue→red. Actions = full coping library; per-emotion packs use 2 specific ones.",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "emotions",
+      "es": "emociones"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "happy",
+      "slug": "happy",
+      "title": {
+        "en": "happy",
+        "es": "feliz"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "calm",
+      "slug": "calm",
+      "title": {
+        "en": "calm",
+        "es": "calma"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "excited",
+      "slug": "excited",
+      "title": {
+        "en": "excited",
+        "es": "emocion"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "worried",
+      "slug": "worried",
+      "title": {
+        "en": "worried",
+        "es": "preocupacion"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sad",
+      "slug": "sad",
+      "title": {
+        "en": "sad",
+        "es": "triste"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tired",
+      "slug": "tired",
+      "title": {
+        "en": "tired",
+        "es": "cansancio"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "angry",
+      "slug": "angry",
+      "title": {
+        "en": "angry",
+        "es": "enfado"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "frustrated",
+      "slug": "frustrated",
+      "title": {
+        "en": "frustrated",
+        "es": "frustracion"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "share-smile",
+      "slug": "share-smile",
+      "title": {
+        "en": "share smile",
+        "es": "compartir sonrisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "celebrate-move",
+      "slug": "celebrate-move",
+      "title": {
+        "en": "celebrate",
+        "es": "celebrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "slow-breath",
+      "slug": "slow-breath",
+      "title": {
+        "en": "slow breath",
+        "es": "respirar lento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "still-hands",
+      "slug": "still-hands",
+      "title": {
+        "en": "still hands",
+        "es": "manos quietas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "big-energy-move",
+      "slug": "big-energy-move",
+      "title": {
+        "en": "big moves",
+        "es": "mover energia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "settle-count",
+      "slug": "settle-count",
+      "title": {
+        "en": "settle count",
+        "es": "contar y calmar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-for-help",
+      "slug": "ask-for-help",
+      "title": {
+        "en": "ask for help",
+        "es": "pedir ayuda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-comfort",
+      "slug": "hold-comfort",
+      "title": {
+        "en": "hold comfort",
+        "es": "coger consuelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-hug",
+      "slug": "ask-hug",
+      "title": {
+        "en": "ask for hug",
+        "es": "pedir abrazo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-comfort",
+      "slug": "use-comfort",
+      "title": {
+        "en": "use comfort",
+        "es": "usar consuelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "lie-down-rest",
+      "slug": "lie-down-rest",
+      "title": {
+        "en": "lie down",
+        "es": "tumbarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "go-to-sleep",
+      "slug": "go-to-sleep",
+      "title": {
+        "en": "go to sleep",
+        "es": "dormir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "squeeze-pillow",
+      "slug": "squeeze-pillow",
+      "title": {
+        "en": "squeeze pillow",
+        "es": "apretar almohada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "step-away",
+      "slug": "step-away",
+      "title": {
+        "en": "step away",
+        "es": "alejarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pause-break",
+      "slug": "pause-break",
+      "title": {
+        "en": "pause break",
+        "es": "hacer pausa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "try-again-later",
+      "slug": "try-again-later",
+      "title": {
+        "en": "try later",
+        "es": "probar luego"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "emotions",
+        "es": "emociones"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "happy",
+      "slug": "happy",
+      "title": {
+        "en": "happy",
+        "es": "feliz"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "calm",
+      "slug": "calm",
+      "title": {
+        "en": "calm",
+        "es": "calma"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "excited",
+      "slug": "excited",
+      "title": {
+        "en": "excited",
+        "es": "emocion"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "worried",
+      "slug": "worried",
+      "title": {
+        "en": "worried",
+        "es": "preocupacion"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sad",
+      "slug": "sad",
+      "title": {
+        "en": "sad",
+        "es": "triste"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tired",
+      "slug": "tired",
+      "title": {
+        "en": "tired",
+        "es": "cansancio"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "angry",
+      "slug": "angry",
+      "title": {
+        "en": "angry",
+        "es": "enfado"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "frustrated",
+      "slug": "frustrated",
+      "title": {
+        "en": "frustrated",
+        "es": "frustracion"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "share-smile",
+      "slug": "share-smile",
+      "title": {
+        "en": "share smile",
+        "es": "compartir sonrisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "celebrate-move",
+      "slug": "celebrate-move",
+      "title": {
+        "en": "celebrate",
+        "es": "celebrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "slow-breath",
+      "slug": "slow-breath",
+      "title": {
+        "en": "slow breath",
+        "es": "respirar lento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "still-hands",
+      "slug": "still-hands",
+      "title": {
+        "en": "still hands",
+        "es": "manos quietas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "big-energy-move",
+      "slug": "big-energy-move",
+      "title": {
+        "en": "big moves",
+        "es": "mover energia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "settle-count",
+      "slug": "settle-count",
+      "title": {
+        "en": "settle count",
+        "es": "contar y calmar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-for-help",
+      "slug": "ask-for-help",
+      "title": {
+        "en": "ask for help",
+        "es": "pedir ayuda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-comfort",
+      "slug": "hold-comfort",
+      "title": {
+        "en": "hold comfort",
+        "es": "coger consuelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-hug",
+      "slug": "ask-hug",
+      "title": {
+        "en": "ask for hug",
+        "es": "pedir abrazo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-comfort",
+      "slug": "use-comfort",
+      "title": {
+        "en": "use comfort",
+        "es": "usar consuelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "lie-down-rest",
+      "slug": "lie-down-rest",
+      "title": {
+        "en": "lie down",
+        "es": "tumbarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "go-to-sleep",
+      "slug": "go-to-sleep",
+      "title": {
+        "en": "go to sleep",
+        "es": "dormir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "squeeze-pillow",
+      "slug": "squeeze-pillow",
+      "title": {
+        "en": "squeeze pillow",
+        "es": "apretar almohada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "step-away",
+      "slug": "step-away",
+      "title": {
+        "en": "step away",
+        "es": "alejarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pause-break",
+      "slug": "pause-break",
+      "title": {
+        "en": "pause break",
+        "es": "hacer pausa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "try-again-later",
+      "slug": "try-again-later",
+      "title": {
+        "en": "try later",
+        "es": "probar luego"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 8,
+    "actions": 16,
+    "cards": 25
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#E8A840",
+    "accent": "#5FAE7A",
+    "colour_groups": {
+      "green": [
+        "happy",
+        "calm"
+      ],
+      "yellow": [
+        "excited",
+        "worried"
+      ],
+      "blue": [
+        "sad",
+        "tired"
+      ],
+      "red": [
+        "angry",
+        "frustrated"
+      ]
+    },
+    "highlight": "E1 genderless colour-ordered hub"
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "colour_groups": {
+    "green": {
+      "emotions": [
+        "happy",
+        "calm"
+      ],
+      "hex": "#5FAE7A"
+    },
+    "yellow": {
+      "emotions": [
+        "excited",
+        "worried"
+      ],
+      "hex": "#E8C040"
+    },
+    "blue": {
+      "emotions": [
+        "sad",
+        "tired"
+      ],
+      "hex": "#5B8FC4"
+    },
+    "red": {
+      "emotions": [
+        "angry",
+        "frustrated"
+      ],
+      "hex": "#D05555"
+    }
+  },
+  "sort_order": -1
+}

@@ -1,0 +1,322 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.3",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "attending-a-sport-event",
+  "family": "travel",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #D04040 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Watching a sport event",
+    "es": "Ver un evento deportivo"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "watching sport",
+      "es": "ver deporte"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "team-merchandise",
+      "slug": "team-merchandise",
+      "title": {
+        "en": "team shirt",
+        "es": "camiseta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "fan-banner",
+      "slug": "fan-banner",
+      "title": {
+        "en": "banner",
+        "es": "bandera"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "purchase-ticket",
+      "slug": "purchase-ticket",
+      "title": {
+        "en": "buy ticket",
+        "es": "comprar entrada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-merchandise",
+      "slug": "put-merchandise",
+      "title": {
+        "en": "team shirt on",
+        "es": "poner camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "head-stadium",
+      "slug": "head-stadium",
+      "title": {
+        "en": "go to stadium",
+        "es": "ir estadio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "buy-snack",
+      "slug": "buy-snack",
+      "title": {
+        "en": "buy snack",
+        "es": "comprar snack"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-toilet",
+      "slug": "use-toilet",
+      "title": {
+        "en": "use toilet",
+        "es": "ir al ba\u00f1o"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enjoy-game",
+      "slug": "enjoy-game",
+      "title": {
+        "en": "cheer",
+        "es": "animar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clap",
+      "slug": "clap",
+      "title": {
+        "en": "clap",
+        "es": "aplaudir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave-early",
+      "slug": "leave-early",
+      "title": {
+        "en": "leave early",
+        "es": "salir antes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit-stadium",
+      "slug": "exit-stadium",
+      "title": {
+        "en": "exit",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "sport event",
+        "es": "evento"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "team-merchandise",
+      "slug": "team-merchandise",
+      "title": {
+        "en": "team shirt",
+        "es": "camiseta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "fan-banner",
+      "slug": "fan-banner",
+      "title": {
+        "en": "banner",
+        "es": "bandera"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "purchase-ticket",
+      "slug": "purchase-ticket",
+      "title": {
+        "en": "buy ticket",
+        "es": "comprar entrada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-merchandise",
+      "slug": "put-merchandise",
+      "title": {
+        "en": "team shirt on",
+        "es": "poner camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "head-stadium",
+      "slug": "head-stadium",
+      "title": {
+        "en": "go to stadium",
+        "es": "ir estadio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "buy-snack",
+      "slug": "buy-snack",
+      "title": {
+        "en": "buy snack",
+        "es": "comprar snack"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-toilet",
+      "slug": "use-toilet",
+      "title": {
+        "en": "use toilet",
+        "es": "ir al ba\u00f1o"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enjoy-game",
+      "slug": "enjoy-game",
+      "title": {
+        "en": "cheer",
+        "es": "animar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clap",
+      "slug": "clap",
+      "title": {
+        "en": "clap",
+        "es": "aplaudir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave-early",
+      "slug": "leave-early",
+      "title": {
+        "en": "leave early",
+        "es": "salir antes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit-stadium",
+      "slug": "exit-stadium",
+      "title": {
+        "en": "exit",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 10,
+    "cards": 15
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#2F6B4F",
+    "accent": "#D04040",
+    "accent_name": "stadium red",
+    "highlight": "ticket / cheer / snack",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "overlap_note": "Spectator outing (travel). Playing sport is sports-prep + sports-activities."
+}

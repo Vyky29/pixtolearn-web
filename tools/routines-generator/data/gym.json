@@ -1,0 +1,314 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.7-unified",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "gym",
+  "family": "sports",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #D05050 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Gym",
+    "es": "Gimnasio"
+  },
+  "existing_dir": "gym-activities",
+  "art_dir": "gym-activities",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "gym",
+      "es": "gimnasio"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "gym-clothes",
+      "slug": "gym-clothes",
+      "title": {
+        "en": "gym clothes",
+        "es": "ropa gym"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "locker",
+      "slug": "locker",
+      "title": {
+        "en": "locker",
+        "es": "taquilla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "dumbbells",
+      "slug": "dumbbells",
+      "title": {
+        "en": "dumbbells",
+        "es": "mancuernas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "exercise-mat",
+      "slug": "exercise-mat",
+      "title": {
+        "en": "mat",
+        "es": "esterilla"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "put-gym-clothes",
+      "slug": "put-gym-clothes",
+      "title": {
+        "en": "kit on",
+        "es": "poner ropa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "grab-water",
+      "slug": "grab-water",
+      "title": {
+        "en": "get water",
+        "es": "coger agua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "warm-up",
+      "slug": "warm-up",
+      "title": {
+        "en": "warm up",
+        "es": "calentar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-mat",
+      "slug": "use-mat",
+      "title": {
+        "en": "use mat",
+        "es": "usar esterilla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "light-weights",
+      "slug": "light-weights",
+      "title": {
+        "en": "lift weights",
+        "es": "levantar peso"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rest-sets",
+      "slug": "rest-sets",
+      "title": {
+        "en": "rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stretch",
+      "slug": "stretch",
+      "title": {
+        "en": "stretch",
+        "es": "estirar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cool-down",
+      "slug": "cool-down",
+      "title": {
+        "en": "cool down",
+        "es": "enfriar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hydrate",
+      "slug": "hydrate",
+      "title": {
+        "en": "drink water",
+        "es": "beber agua"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe-equipment",
+      "slug": "wipe-equipment",
+      "title": {
+        "en": "wipe bench",
+        "es": "limpiar banco"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "change-locker",
+      "slug": "change-locker",
+      "title": {
+        "en": "change clothes",
+        "es": "cambiarse"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 12,
+    "cards": 19
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#C77830",
+    "accent": "#D05050",
+    "accent_name": "gym coral",
+    "highlight": "weights / mat / stretch",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "notes": [
+    "Unified sports pack: prep then session in one sequence.",
+    "Gender via casts where available."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "gym-clothes"
+    },
+    {
+      "kind": "object",
+      "id": "water-bottle"
+    },
+    {
+      "kind": "object",
+      "id": "towel"
+    },
+    {
+      "kind": "object",
+      "id": "locker"
+    },
+    {
+      "kind": "object",
+      "id": "dumbbells"
+    },
+    {
+      "kind": "object",
+      "id": "exercise-mat"
+    },
+    {
+      "kind": "action",
+      "id": "put-gym-clothes"
+    },
+    {
+      "kind": "action",
+      "id": "grab-water"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "warm-up"
+    },
+    {
+      "kind": "action",
+      "id": "use-mat"
+    },
+    {
+      "kind": "action",
+      "id": "light-weights"
+    },
+    {
+      "kind": "action",
+      "id": "rest-sets"
+    },
+    {
+      "kind": "action",
+      "id": "stretch"
+    },
+    {
+      "kind": "action",
+      "id": "cool-down"
+    },
+    {
+      "kind": "action",
+      "id": "hydrate"
+    },
+    {
+      "kind": "action",
+      "id": "wipe-equipment"
+    },
+    {
+      "kind": "action",
+      "id": "change-locker"
+    }
+  ],
+  "unified_from": [
+    "gym-prep",
+    "gym-activity"
+  ],
+  "unified_at": "2026-08-14",
+  "art": "installed",
+  "legacy_ids": [
+    "gym-activities"
+  ]
+}

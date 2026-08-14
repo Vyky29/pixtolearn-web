@@ -1,0 +1,8 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "id": "trampoline-wow",
+  "status": "redirect",
+  "redirect_to": "trampoline",
+  "legacy_note": "Legacy hybrid redirected to unified trampoline.",
+  "unified_at": "2026-08-14"
+}

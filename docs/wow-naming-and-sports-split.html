@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixtoLearn WOW - Naming and sports (unified)</title>
+  <style>
+    body{font-family:system-ui,sans-serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#1a1a1a}
+    code{background:#f3f3f3;padding:0.1em 0.35em;border-radius:4px}
+    table{border-collapse:collapse;width:100%;margin:1rem 0}
+    th,td{border:1px solid #ddd;padding:0.45rem 0.6rem;text-align:left;font-size:0.95rem}
+    th{background:#f7f7f7}
+    .note{color:#555;font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <h1>Naming governance: one pack per sport</h1>
+  <p class="note">Updated 14 Aug 2026. The Prep/Activity split was reversed to reduce portal clutter.</p>
+
+  <h2>Model</h2>
+  <ul>
+    <li><strong>sports</strong>: one pack per sport. Kit/arrive/ready then warm-up through finish/exit in one sequence.</li>
+    <li><strong>travel</strong>: day destination / spectator (not playing).</li>
+    <li><strong>skill decks</strong>: separate product; never <code>-prep</code> or <code>-wow</code>.</li>
+  </ul>
+
+  <h2>IDs</h2>
+  <ul>
+    <li>Pattern: <code>{sport}</code> (climbing, swimming, football, ...)</li>
+    <li>Forbidden for new packs: <code>-wow</code>, <code>{sport}-prep</code>, <code>{sport}-activity</code></li>
+  </ul>
+
+  <h2>Redirects</h2>
+  <p>Old halves and hybrids redirect to the unified id:</p>
+  <table>
+    <thead><tr><th>From</th><th>To</th></tr></thead>
+    <tbody>
+      <tr><td><code>climbing-prep</code>, <code>climbing-activity</code>, <code>climbing-wow</code></td><td><code>climbing</code></td></tr>
+      <tr><td><code>swimming-prep</code>, <code>swimming-activity</code>, <code>swimming-wow</code></td><td><code>swimming</code></td></tr>
+      <tr><td><code>gym-prep</code>, <code>gym-activity</code>, <code>gym-activities</code></td><td><code>gym</code></td></tr>
+      <tr><td><code>hiking-prep</code>, <code>hiking-activity</code></td><td><code>hiking</code></td></tr>
+      <tr><td><code>cycling-prep</code>, <code>cycling-activity</code></td><td><code>cycling</code></td></tr>
+      <tr><td><code>tennis-prep</code>, <code>tennis-activity</code></td><td><code>tennis</code></td></tr>
+      <tr><td><code>trampoline-prep</code>, <code>trampoline-activity</code>, <code>trampoline-wow</code></td><td><code>trampoline</code></td></tr>
+      <tr><td><code>football-prep</code>, <code>football-activity</code></td><td><code>football</code></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Source of truth</h2>
+  <ul>
+    <li><code>pixtolearn-support/data/wow-routines/naming-governance.json</code></li>
+    <li><code>family-architecture.json</code> v1.3</li>
+    <li><code>routines.json</code> family <code>sports</code></li>
+  </ul>
+</body>
+</html>

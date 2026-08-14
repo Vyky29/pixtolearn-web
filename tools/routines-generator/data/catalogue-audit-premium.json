@@ -1,0 +1,47 @@
+{
+  "title": "WOW Routines premium audit",
+  "date": "2026-08-05",
+  "verdict": "Catalogue structure expanded overnight; art generation in flight for new slugs. Portal needs hard refresh.",
+  "colour_emotions": {
+    "order": ["happy", "calm", "excited", "worried", "sad", "tired", "angry", "frustrated"],
+    "groups": {
+      "green": ["happy", "calm"],
+      "yellow": ["excited", "worried"],
+      "blue": ["sad", "tired"],
+      "red": ["angry", "frustrated"]
+    },
+    "rule": "Each emotion has exactly 2 unique coping actions (not shared templates). Sweater+halo match group colour. E1 genderless bowl-cut."
+  },
+  "premium_gaps_fixed_in_catalogue": [
+    "at-the-barber (new YA2 pack)",
+    "emotions unique action pairs + colour order in routines.json",
+    "menstrual: put-pad-on, put-tampon, put-menstrual-cup",
+    "intimate male: ejaculate-finish replaces empty checkmark finish",
+    "intimate female: climax-finish clinical",
+    "public spaces: noise/crowd/wait predictive steps",
+    "sports + safety/mobility: richer place actions"
+  ],
+  "art_priority_queue": [
+    "emotion-* new coping actions (16 unique)",
+    "at-the-barber full pack",
+    "menstrual put-tampon + put-menstrual-cup + pad/tampon/cup objects",
+    "intimate ejaculate-finish + climax-finish",
+    "airport/plane ticket vs boarding-pass clearer differentiation",
+    "core quiet genderless profile hands",
+    "new public/sports/mobility slugs"
+  ],
+  "known_quality_issues": [
+    "taking-a-plane ticket/boarding-pass historically looked too similar; airport boarding-pass has stub+barcode but ticket still generic - regenerate both as a clear pair",
+    "male finish was trousers+checkmark (wrong clinical meaning) - catalogue replaced",
+    "core quiet was gendered boy face-on - regenerate genderless profile",
+    "orphan non-catalogue PNGs still on disk (harmless)"
+  ],
+  "definition_of_premium": [
+    "One clear gesture per card",
+    "Locked avatar + outfit per pack",
+    "Unique MD5 within pack",
+    "Predictable sensory steps in public/travel (noise, crowd, wait)",
+    "Clinical intimate/period steps unambiguous",
+    "Emotions readable by colour before reading face"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "id": "swimming-activity",
+  "status": "redirect",
+  "redirect_to": "swimming",
+  "legacy_note": "Unified into swimming. Do not use for new art.",
+  "unified_at": "2026-08-14"
+}

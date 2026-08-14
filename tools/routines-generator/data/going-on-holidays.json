@@ -1,0 +1,411 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.5",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "going-on-holidays",
+  "family": "travel",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #E07050 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Going on holidays",
+    "es": "Ir de vacaciones"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "holidays",
+      "es": "vacaciones"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "passport",
+      "slug": "passport",
+      "title": {
+        "en": "passport",
+        "es": "pasaporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "travel-ticket",
+      "slug": "travel-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "camera",
+      "slug": "camera",
+      "title": {
+        "en": "camera",
+        "es": "camara"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sun-hat",
+      "slug": "sun-hat",
+      "title": {
+        "en": "sun hat",
+        "es": "sombrero"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "pack-luggage",
+      "slug": "pack-luggage",
+      "title": {
+        "en": "pack bag",
+        "es": "hacer maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-passport",
+      "slug": "check-passport",
+      "title": {
+        "en": "check passport",
+        "es": "revisar pasaporte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "arrive-station",
+      "slug": "arrive-station",
+      "title": {
+        "en": "arrive station",
+        "es": "llegar estacion"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-in-drop",
+      "slug": "check-in-drop",
+      "title": {
+        "en": "check in",
+        "es": "facturar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board-transport",
+      "slug": "board-transport",
+      "title": {
+        "en": "board",
+        "es": "embarcar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "arrive-destination",
+      "slug": "arrive-destination",
+      "title": {
+        "en": "arrive place",
+        "es": "llegar destino"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-into-hotel",
+      "slug": "check-into-hotel",
+      "title": {
+        "en": "hotel check in",
+        "es": "entrar hotel"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "unpack-room",
+      "slug": "unpack-room",
+      "title": {
+        "en": "unpack",
+        "es": "deshacer maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "visit-sights",
+      "slug": "visit-sights",
+      "title": {
+        "en": "see sights",
+        "es": "visitar sitios"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-photos",
+      "slug": "take-photos",
+      "title": {
+        "en": "take photos",
+        "es": "hacer fotos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "eat-out",
+      "slug": "eat-out",
+      "title": {
+        "en": "eat out",
+        "es": "comer fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "buy-souvenir",
+      "slug": "buy-souvenir",
+      "title": {
+        "en": "buy souvenir",
+        "es": "comprar recuerdo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "relax-holiday",
+      "slug": "relax-holiday",
+      "title": {
+        "en": "relax",
+        "es": "relajarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-return",
+      "slug": "pack-return",
+      "title": {
+        "en": "pack to go home",
+        "es": "hacer maleta vuelta"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "holidays",
+        "es": "vacaciones"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "passport",
+      "slug": "passport",
+      "title": {
+        "en": "passport",
+        "es": "pasaporte"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "travel-ticket",
+      "slug": "travel-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "camera",
+      "slug": "camera",
+      "title": {
+        "en": "camera",
+        "es": "camara"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sun-hat",
+      "slug": "sun-hat",
+      "title": {
+        "en": "sun hat",
+        "es": "sombrero"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pack-luggage",
+      "slug": "pack-luggage",
+      "title": {
+        "en": "pack bag",
+        "es": "hacer maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-passport",
+      "slug": "check-passport",
+      "title": {
+        "en": "check passport",
+        "es": "revisar pasaporte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "arrive-station",
+      "slug": "arrive-station",
+      "title": {
+        "en": "arrive station",
+        "es": "llegar estacion"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-in-drop",
+      "slug": "check-in-drop",
+      "title": {
+        "en": "check in",
+        "es": "facturar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board-transport",
+      "slug": "board-transport",
+      "title": {
+        "en": "board",
+        "es": "embarcar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "arrive-destination",
+      "slug": "arrive-destination",
+      "title": {
+        "en": "arrive place",
+        "es": "llegar destino"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-into-hotel",
+      "slug": "check-into-hotel",
+      "title": {
+        "en": "hotel check in",
+        "es": "entrar hotel"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "unpack-room",
+      "slug": "unpack-room",
+      "title": {
+        "en": "unpack",
+        "es": "deshacer maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "visit-sights",
+      "slug": "visit-sights",
+      "title": {
+        "en": "see sights",
+        "es": "visitar sitios"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "take-photos",
+      "slug": "take-photos",
+      "title": {
+        "en": "take photos",
+        "es": "hacer fotos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "eat-out",
+      "slug": "eat-out",
+      "title": {
+        "en": "eat out",
+        "es": "comer fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "buy-souvenir",
+      "slug": "buy-souvenir",
+      "title": {
+        "en": "buy souvenir",
+        "es": "comprar recuerdo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "relax-holiday",
+      "slug": "relax-holiday",
+      "title": {
+        "en": "relax",
+        "es": "relajarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-return",
+      "slug": "pack-return",
+      "title": {
+        "en": "pack to go home",
+        "es": "hacer maleta vuelta"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 14,
+    "cards": 20
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#2F6B4F",
+    "accent": "#E07050",
+    "accent_name": "holiday coral",
+    "highlight": "suitcase / passport",
+    "outfit_lock": true
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "haircare",
+  "family": "self-care",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T2",
+    "band": "teen",
+    "gender": "woman",
+    "skin": "light",
+    "hair": "shoulder-length brown",
+    "clothes": "lilac long-sleeve top, navy trousers",
+    "age": "teen",
+    "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #8B7AB8 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Haircare",
+    "es": "Cuidado del cabello"
+  },
+  "notes": "All action arts use the same girl avatar.",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "haircare",
+      "es": "cuidado del pelo"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "shampoo",
+      "slug": "shampoo",
+      "title": {
+        "en": "shampoo",
+        "es": "champu"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "conditioner",
+      "slug": "conditioner",
+      "title": {
+        "en": "conditioner",
+        "es": "acondicionador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hairbrush",
+      "slug": "hairbrush",
+      "title": {
+        "en": "hairbrush",
+        "es": "cepillo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-dryer",
+      "slug": "hair-dryer",
+      "title": {
+        "en": "hair dryer",
+        "es": "secador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-clips",
+      "slug": "hair-clips",
+      "title": {
+        "en": "hair clips",
+        "es": "pinzas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-gel",
+      "slug": "hair-gel",
+      "title": {
+        "en": "hair gel",
+        "es": "gel"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wet-hair",
+      "slug": "wet-hair",
+      "title": {
+        "en": "wet hair",
+        "es": "mojar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-shampoo",
+      "slug": "apply-shampoo",
+      "title": {
+        "en": "apply shampoo",
+        "es": "poner champu"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-shampoo",
+      "slug": "rinse-shampoo",
+      "title": {
+        "en": "rinse shampoo",
+        "es": "aclarar champu"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-conditioner",
+      "slug": "apply-conditioner",
+      "title": {
+        "en": "apply conditioner",
+        "es": "poner acondicionador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-conditioner",
+      "slug": "rinse-conditioner",
+      "title": {
+        "en": "rinse conditioner",
+        "es": "aclarar acondicionador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "detangle-comb",
+      "slug": "detangle-comb",
+      "title": {
+        "en": "comb hair",
+        "es": "peinar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "towel-dry-hair",
+      "slug": "towel-dry-hair",
+      "title": {
+        "en": "towel dry",
+        "es": "secar toalla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "blow-dry-hair",
+      "slug": "blow-dry-hair",
+      "title": {
+        "en": "blow dry",
+        "es": "secar secador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-hair-gel",
+      "slug": "apply-hair-gel",
+      "title": {
+        "en": "apply gel",
+        "es": "poner gel"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "style-hairbrush",
+      "slug": "style-hairbrush",
+      "title": {
+        "en": "brush hair",
+        "es": "cepillar pelo"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "haircare",
+        "es": "cuidado del pelo"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "shampoo",
+      "slug": "shampoo",
+      "title": {
+        "en": "shampoo",
+        "es": "champu"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "conditioner",
+      "slug": "conditioner",
+      "title": {
+        "en": "conditioner",
+        "es": "acondicionador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hairbrush",
+      "slug": "hairbrush",
+      "title": {
+        "en": "hairbrush",
+        "es": "cepillo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-dryer",
+      "slug": "hair-dryer",
+      "title": {
+        "en": "hair dryer",
+        "es": "secador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-clips",
+      "slug": "hair-clips",
+      "title": {
+        "en": "hair clips",
+        "es": "pinzas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-gel",
+      "slug": "hair-gel",
+      "title": {
+        "en": "hair gel",
+        "es": "gel"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wet-hair",
+      "slug": "wet-hair",
+      "title": {
+        "en": "wet hair",
+        "es": "mojar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-shampoo",
+      "slug": "apply-shampoo",
+      "title": {
+        "en": "apply shampoo",
+        "es": "poner champu"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-shampoo",
+      "slug": "rinse-shampoo",
+      "title": {
+        "en": "rinse shampoo",
+        "es": "aclarar champu"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-conditioner",
+      "slug": "apply-conditioner",
+      "title": {
+        "en": "apply conditioner",
+        "es": "poner acondicionador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-conditioner",
+      "slug": "rinse-conditioner",
+      "title": {
+        "en": "rinse conditioner",
+        "es": "aclarar acondicionador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "detangle-comb",
+      "slug": "detangle-comb",
+      "title": {
+        "en": "comb hair",
+        "es": "peinar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "towel-dry-hair",
+      "slug": "towel-dry-hair",
+      "title": {
+        "en": "towel dry",
+        "es": "secar toalla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "blow-dry-hair",
+      "slug": "blow-dry-hair",
+      "title": {
+        "en": "blow dry",
+        "es": "secar secador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-hair-gel",
+      "slug": "apply-hair-gel",
+      "title": {
+        "en": "apply gel",
+        "es": "poner gel"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "style-hairbrush",
+      "slug": "style-hairbrush",
+      "title": {
+        "en": "brush hair",
+        "es": "cepillar pelo"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 10,
+    "cards": 20
+  },
+  "design": {
+    "avatar_id": "T2",
+    "family_base": "#5B8C7A",
+    "accent": "#8B7AB8",
+    "accent_name": "soft lilac",
+    "highlight": "brush / hair / product",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

@@ -1,0 +1,1650 @@
+{
+  "title": "Premium art QA report",
+  "pack_count": 77,
+  "ok": 32,
+  "warn": 26,
+  "regen": 0,
+  "fail": 19,
+  "p0_packs": [
+    "climbing-prep",
+    "climbing-activity",
+    "swimming-prep",
+    "swimming-activity",
+    "gym-prep",
+    "gym-activity",
+    "hiking-prep",
+    "hiking-activity",
+    "cycling-prep",
+    "cycling-activity",
+    "tennis-prep",
+    "tennis-activity",
+    "trampoline-prep",
+    "football-prep",
+    "trampoline-activity",
+    "football-activity",
+    "going-to-the-beach",
+    "public-toilet",
+    "at-the-optician"
+  ],
+  "packs": [
+    {
+      "id": "core",
+      "status": "ok",
+      "have": 26,
+      "need": 26,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": null
+    },
+    {
+      "id": "clothes-boy",
+      "status": "ok",
+      "have": 46,
+      "need": 46,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "clothes-girl",
+      "status": "ok",
+      "have": 52,
+      "need": 52,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "shower",
+      "status": "ok",
+      "have": 20,
+      "need": 20,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "brushing-teeth",
+      "status": "warn",
+      "have": 22,
+      "need": 22,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "bottom-teeth",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            70,
+            202,
+            459,
+            445
+          ],
+          "aspect": 1.6
+        },
+        {
+          "slug": "wet-brush",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            32,
+            176,
+            499,
+            471
+          ],
+          "aspect": 1.58
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "shaving",
+      "status": "ok",
+      "have": 16,
+      "need": 16,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA2"
+    },
+    {
+      "id": "haircare",
+      "status": "warn",
+      "have": 20,
+      "need": 20,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "towel",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            206,
+            515,
+            442
+          ],
+          "aspect": 2.11
+        },
+        {
+          "slug": "comb",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            238,
+            515,
+            410
+          ],
+          "aspect": 2.9
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T2"
+    },
+    {
+      "id": "using-the-toilet-boy",
+      "status": "ok",
+      "have": 21,
+      "need": 21,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "using-the-toilet-girl",
+      "status": "ok",
+      "have": 21,
+      "need": 21,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "nail-care",
+      "status": "ok",
+      "have": 11,
+      "need": 11,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T2"
+    },
+    {
+      "id": "foot-care",
+      "status": "ok",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA2"
+    },
+    {
+      "id": "washing-hands",
+      "status": "warn",
+      "have": 16,
+      "need": 16,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "soap",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            74,
+            214,
+            456,
+            432
+          ],
+          "aspect": 1.75
+        },
+        {
+          "slug": "towel",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            74,
+            212,
+            456,
+            436
+          ],
+          "aspect": 1.71
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "intimate-care-male",
+      "status": "ok",
+      "have": 16,
+      "need": 16,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA2"
+    },
+    {
+      "id": "intimate-care-female",
+      "status": "ok",
+      "have": 16,
+      "need": 16,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA1"
+    },
+    {
+      "id": "menstrual-hygiene",
+      "status": "ok",
+      "have": 19,
+      "need": 19,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA1"
+    },
+    {
+      "id": "emotions-hub",
+      "status": "ok",
+      "have": 25,
+      "need": 25,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-happy",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-calm",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-excited",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-worried",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-sad",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-tired",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-angry",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "emotion-frustrated",
+      "status": "ok",
+      "have": 4,
+      "need": 4,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "taking-a-plane",
+      "status": "warn",
+      "have": 23,
+      "need": 23,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "seatbelt",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            77,
+            272,
+            453,
+            375
+          ],
+          "aspect": 3.65
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "taking-the-bus",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "bus-pass",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            96,
+            236,
+            434,
+            411
+          ],
+          "aspect": 1.93
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T2"
+    },
+    {
+      "id": "taking-the-train",
+      "status": "ok",
+      "have": 19,
+      "need": 19,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "crossing-the-road",
+      "status": "warn",
+      "have": 13,
+      "need": 13,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "crossing-sign",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            17,
+            187,
+            513,
+            461
+          ],
+          "aspect": 1.81
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "taking-boat-ferry",
+      "status": "warn",
+      "have": 20,
+      "need": 20,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "boat-ticket",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            172,
+            513,
+            475
+          ],
+          "aspect": 1.64
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T2"
+    },
+    {
+      "id": "taking-a-taxi",
+      "status": "ok",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "using-the-tube",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "travel-card",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            81,
+            210,
+            449,
+            438
+          ],
+          "aspect": 1.61
+        },
+        {
+          "slug": "tube-map",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            175,
+            515,
+            473
+          ],
+          "aspect": 1.67
+        },
+        {
+          "slug": "yellow-line",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            269,
+            515,
+            379
+          ],
+          "aspect": 4.54
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T2"
+    },
+    {
+      "id": "climbing-prep",
+      "status": "fail",
+      "have": 0,
+      "need": 13,
+      "missing": [
+        "cover",
+        "helmet",
+        "harness",
+        "climbing-shoes",
+        "rope",
+        "carabiner",
+        "magnesium-bag",
+        "put-helmet-on",
+        "put-harness-on",
+        "put-climbing-shoes-on",
+        "make-an-eight-knot",
+        "check-gear",
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "climbing-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 13,
+      "missing": [
+        "cover",
+        "helmet",
+        "harness",
+        "climbing-shoes",
+        "rope",
+        "carabiner",
+        "magnesium-bag",
+        "grab-hold",
+        "climb-up",
+        "climb-down",
+        "belay-partner",
+        "rest-on-hold",
+        "celebrate-top"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "swimming-prep",
+      "status": "fail",
+      "have": 0,
+      "need": 12,
+      "missing": [
+        "cover",
+        "swim-cap",
+        "goggles",
+        "swimsuit",
+        "towel",
+        "flip-flops",
+        "changing-room",
+        "swim-cap-on",
+        "goggles-on",
+        "wearing-flip-flops",
+        "enter-pool",
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "swimming-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 12,
+      "missing": [
+        "cover",
+        "swim-cap",
+        "goggles",
+        "swimsuit",
+        "towel",
+        "flip-flops",
+        "blow-bubbles",
+        "kick-legs",
+        "float-on-back",
+        "hold-wall",
+        "exit-pool",
+        "swimming-shower"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "gym-prep",
+      "status": "fail",
+      "have": 0,
+      "need": 8,
+      "missing": [
+        "cover",
+        "gym-clothes",
+        "water-bottle",
+        "towel",
+        "locker",
+        "put-gym-clothes",
+        "grab-water",
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "gym-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 16,
+      "missing": [
+        "cover",
+        "gym-clothes",
+        "water-bottle",
+        "towel",
+        "dumbbells",
+        "exercise-mat",
+        "locker",
+        "warm-up",
+        "use-mat",
+        "light-weights",
+        "rest-sets",
+        "stretch",
+        "cool-down",
+        "hydrate",
+        "wipe-equipment",
+        "change-locker"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "hiking-prep",
+      "status": "fail",
+      "have": 0,
+      "need": 14,
+      "missing": [
+        "cover",
+        "hiking-boots",
+        "backpack",
+        "water-bottle",
+        "trail-map",
+        "snacks",
+        "jacket",
+        "walking-stick",
+        "put-boots",
+        "tie-laces",
+        "put-jacket",
+        "pack-backpack",
+        "check-map",
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T2"
+    },
+    {
+      "id": "hiking-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 19,
+      "missing": [
+        "cover",
+        "hiking-boots",
+        "backpack",
+        "water-bottle",
+        "trail-map",
+        "snacks",
+        "jacket",
+        "walking-stick",
+        "stretch-warm-up",
+        "begin-hike",
+        "follow-path",
+        "climb-hill",
+        "cross-stream",
+        "look-viewpoint",
+        "drink-water",
+        "snack-break",
+        "rest-on-rock",
+        "take-trail-photo",
+        "return-start"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T2"
+    },
+    {
+      "id": "cycling-prep",
+      "status": "fail",
+      "have": 7,
+      "need": 8,
+      "missing": [
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "cycling-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 13,
+      "missing": [
+        "cover",
+        "bicycle",
+        "helmet",
+        "bike-lock",
+        "water-bottle",
+        "look-both-ways",
+        "start-pedalling",
+        "signal-turn",
+        "stop-lights",
+        "ring-bell",
+        "ride-path",
+        "park-bike",
+        "lock-bike"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "tennis-prep",
+      "status": "fail",
+      "have": 7,
+      "need": 8,
+      "missing": [
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "tennis-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 13,
+      "missing": [
+        "cover",
+        "racket",
+        "tennis-ball",
+        "tennis-shoes",
+        "water-bottle",
+        "warm-up",
+        "bounce-ball",
+        "serve",
+        "hit-back-forth",
+        "change-ends",
+        "drink-break",
+        "cool-down",
+        "pack-up"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "trampoline-prep",
+      "status": "fail",
+      "have": 0,
+      "need": 12,
+      "missing": [
+        "cover",
+        "grip-socks",
+        "trampoline-bed",
+        "safety-pad",
+        "water-bottle",
+        "headphones",
+        "arrive",
+        "shoes-off",
+        "socks-on",
+        "meet-coach",
+        "wait-turn",
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "football-prep",
+      "status": "fail",
+      "have": 0,
+      "need": 13,
+      "missing": [
+        "cover",
+        "football-kit",
+        "football-boots",
+        "shin-pads",
+        "football",
+        "water-bottle",
+        "arrive",
+        "find-changing-space",
+        "kit-on",
+        "shin-pads-on",
+        "boots-on",
+        "water-ready",
+        "ready"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "trampoline-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 11,
+      "missing": [
+        "cover",
+        "grip-socks",
+        "trampoline-bed",
+        "safety-pad",
+        "water-bottle",
+        "headphones",
+        "step-on",
+        "small-bounce",
+        "stop-steady",
+        "step-off",
+        "shoes-on"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "football-activity",
+      "status": "fail",
+      "have": 0,
+      "need": 14,
+      "missing": [
+        "cover",
+        "football-kit",
+        "football-boots",
+        "shin-pads",
+        "football",
+        "water-bottle",
+        "warm-up",
+        "listen-coach",
+        "play",
+        "drink-water",
+        "rest",
+        "play-again",
+        "finish",
+        "change-clothes"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "going-on-holidays",
+      "status": "warn",
+      "have": 20,
+      "need": 20,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "travel-ticket",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            207,
+            515,
+            441
+          ],
+          "aspect": 2.13
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "going-to-the-beach",
+      "status": "fail",
+      "have": 22,
+      "need": 23,
+      "missing": [
+        "paddle-or-splash"
+      ],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "sand",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            18,
+            174,
+            513,
+            473
+          ],
+          "aspect": 1.66
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "going-to-the-mountain",
+      "status": "ok",
+      "have": 17,
+      "need": 17,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "going-camping",
+      "status": "warn",
+      "have": 18,
+      "need": 18,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "tent",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            17,
+            198,
+            515,
+            450
+          ],
+          "aspect": 1.98
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "going-to-the-museum",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "museum-ticket",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            189,
+            515,
+            459
+          ],
+          "aspect": 1.85
+        },
+        {
+          "slug": "museum-map",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            164,
+            515,
+            482
+          ],
+          "aspect": 1.57
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "going-to-a-theme-park",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "theme-park-ticket",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            190,
+            515,
+            459
+          ],
+          "aspect": 1.86
+        },
+        {
+          "slug": "head-exit",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            165,
+            515,
+            483
+          ],
+          "aspect": 1.57
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "attending-a-sport-event",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "ticket",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            183,
+            515,
+            465
+          ],
+          "aspect": 1.77
+        },
+        {
+          "slug": "find-seat",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            17,
+            168,
+            515,
+            479
+          ],
+          "aspect": 1.6
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "at-the-airport",
+      "status": "warn",
+      "have": 20,
+      "need": 20,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "id-card",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            77,
+            222,
+            453,
+            425
+          ],
+          "aspect": 1.85
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "at-the-hotel",
+      "status": "ok",
+      "have": 20,
+      "need": 20,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "at-the-hospital",
+      "status": "ok",
+      "have": 16,
+      "need": 16,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA1"
+    },
+    {
+      "id": "at-the-supermarket",
+      "status": "ok",
+      "have": 18,
+      "need": 18,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "at-the-shopping-mall",
+      "status": "warn",
+      "have": 19,
+      "need": 19,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "cash-card",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            17,
+            165,
+            515,
+            482
+          ],
+          "aspect": 1.57
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "at-the-hairdresser",
+      "status": "ok",
+      "have": 18,
+      "need": 18,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA1"
+    },
+    {
+      "id": "at-the-barber",
+      "status": "ok",
+      "have": 18,
+      "need": 18,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "YA2"
+    },
+    {
+      "id": "at-the-pharmacy",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "pill-box",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            18,
+            179,
+            514,
+            468
+          ],
+          "aspect": 1.72
+        }
+      ],
+      "force_regen": [],
+      "avatar": "YA2"
+    },
+    {
+      "id": "public-toilet",
+      "status": "fail",
+      "have": 0,
+      "need": 16,
+      "missing": [
+        "cover",
+        "toilet-door",
+        "door-lock",
+        "toilet-paper",
+        "soap",
+        "hand-dryer",
+        "find-toilet",
+        "wait-if-busy",
+        "enter",
+        "lock-door",
+        "use-toilet",
+        "wipe",
+        "flush",
+        "unlock-door",
+        "wash-hands",
+        "leave"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "at-the-dentist",
+      "status": "warn",
+      "have": 17,
+      "need": 17,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "mouth-mirror",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            207,
+            515,
+            440
+          ],
+          "aspect": 2.14
+        },
+        {
+          "slug": "safety-glasses",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            17,
+            232,
+            515,
+            415
+          ],
+          "aspect": 2.72
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "at-the-gp",
+      "status": "warn",
+      "have": 16,
+      "need": 16,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "thermometer",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            17,
+            191,
+            515,
+            456
+          ],
+          "aspect": 1.88
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "blood-test",
+      "status": "warn",
+      "have": 17,
+      "need": 17,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "arm-band",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            254,
+            515,
+            393
+          ],
+          "aspect": 3.59
+        },
+        {
+          "slug": "plaster",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            254,
+            515,
+            392
+          ],
+          "aspect": 3.62
+        }
+      ],
+      "force_regen": [],
+      "avatar": "T1"
+    },
+    {
+      "id": "vaccination",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "plaster",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            254,
+            515,
+            392
+          ],
+          "aspect": 3.62
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "at-the-optician",
+      "status": "fail",
+      "have": 0,
+      "need": 17,
+      "missing": [
+        "cover",
+        "appointment-letter",
+        "waiting-chair",
+        "eye-chart",
+        "trial-frames",
+        "optician-chair",
+        "glasses-case",
+        "arrive-clinic",
+        "check-in",
+        "wait-turn",
+        "sit-in-chair",
+        "look-at-chart",
+        "cover-one-eye",
+        "try-frames",
+        "ask-adult",
+        "finish",
+        "leave"
+      ],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "loud-places",
+      "status": "ok",
+      "have": 11,
+      "need": 11,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "crowded-places",
+      "status": "warn",
+      "have": 11,
+      "need": 11,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "exit-sign",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            192,
+            515,
+            456
+          ],
+          "aspect": 1.89
+        }
+      ],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "waiting",
+      "status": "warn",
+      "have": 11,
+      "need": 11,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "ticket-number",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            198,
+            515,
+            449
+          ],
+          "aspect": 1.99
+        },
+        {
+          "slug": "use-fidget",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            205,
+            515,
+            443
+          ],
+          "aspect": 2.1
+        }
+      ],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "headphones-and-breaks",
+      "status": "ok",
+      "have": 13,
+      "need": 13,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "E1"
+    },
+    {
+      "id": "at-a-cafe",
+      "status": "warn",
+      "have": 15,
+      "need": 15,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "plate",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            176,
+            515,
+            471
+          ],
+          "aspect": 1.69
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "school-lunch",
+      "status": "warn",
+      "have": 14,
+      "need": 14,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "lunchbox",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            17,
+            174,
+            515,
+            474
+          ],
+          "aspect": 1.66
+        },
+        {
+          "slug": "line-up",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            167,
+            514,
+            480
+          ],
+          "aspect": 1.59
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "i-am-lost",
+      "status": "warn",
+      "have": 14,
+      "need": 14,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "staff-desk",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            213,
+            514,
+            433
+          ],
+          "aspect": 2.26
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C1"
+    },
+    {
+      "id": "ask-safe-adult",
+      "status": "ok",
+      "have": 12,
+      "need": 12,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [],
+      "force_regen": [],
+      "avatar": "C2"
+    },
+    {
+      "id": "fire-alarm",
+      "status": "warn",
+      "have": 13,
+      "need": 13,
+      "missing": [],
+      "dups": [],
+      "crop_risk": [
+        {
+          "slug": "exit-sign",
+          "flags": [
+            "very_wide"
+          ],
+          "bbox": [
+            16,
+            192,
+            515,
+            457
+          ],
+          "aspect": 1.88
+        }
+      ],
+      "force_regen": [],
+      "avatar": "C1"
+    }
+  ]
+}

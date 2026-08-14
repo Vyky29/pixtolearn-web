@@ -1,0 +1,305 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.7-unified",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "swimming",
+  "family": "sports",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #3A9ABA highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Swimming",
+    "es": "Natacion"
+  },
+  "existing_dir": "swimming-wow",
+  "art_dir": "swimming-wow",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "swimming",
+      "es": "natacion"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "swim-cap",
+      "slug": "swim-cap",
+      "title": {
+        "en": "swim cap",
+        "es": "gorro"
+      },
+      "wow_layer": "object",
+      "file": "swim-cap.png"
+    },
+    {
+      "id": "goggles",
+      "slug": "goggles",
+      "title": {
+        "en": "goggles",
+        "es": "gafas"
+      },
+      "wow_layer": "object",
+      "file": "googles.png"
+    },
+    {
+      "id": "swimsuit",
+      "slug": "swimsuit",
+      "title": {
+        "en": "swimsuit",
+        "es": "banador"
+      },
+      "wow_layer": "object",
+      "file": "swimming-costume.png"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "flip-flops",
+      "slug": "flip-flops",
+      "title": {
+        "en": "flip-flops",
+        "es": "chanclas"
+      },
+      "wow_layer": "object",
+      "file": "flip-flops.png"
+    }
+  ],
+  "actions": [
+    {
+      "id": "changing-room",
+      "slug": "changing-room",
+      "title": {
+        "en": "changing room",
+        "es": "vestuario"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "swim-cap-on",
+      "slug": "swim-cap-on",
+      "title": {
+        "en": "cap on",
+        "es": "poner gorro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "goggles-on",
+      "slug": "goggles-on",
+      "title": {
+        "en": "goggles on",
+        "es": "poner gafas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wearing-flip-flops",
+      "slug": "wearing-flip-flops",
+      "title": {
+        "en": "flip-flops on",
+        "es": "poner chanclas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enter-pool",
+      "slug": "enter-pool",
+      "title": {
+        "en": "enter pool",
+        "es": "entrar piscina"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "blow-bubbles",
+      "slug": "blow-bubbles",
+      "title": {
+        "en": "blow bubbles",
+        "es": "burbujas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "kick-legs",
+      "slug": "kick-legs",
+      "title": {
+        "en": "kick legs",
+        "es": "patear"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "float-on-back",
+      "slug": "float-on-back",
+      "title": {
+        "en": "float back",
+        "es": "flotar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-wall",
+      "slug": "hold-wall",
+      "title": {
+        "en": "hold wall",
+        "es": "coger borde"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit-pool",
+      "slug": "exit-pool",
+      "title": {
+        "en": "exit pool",
+        "es": "salir piscina"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "swimming-shower",
+      "slug": "swimming-shower",
+      "title": {
+        "en": "shower",
+        "es": "ducharse"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 12,
+    "cards": 18
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#C77830",
+    "accent": "#3A9ABA",
+    "accent_name": "pool blue",
+    "highlight": "water / goggles / kick",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "notes": [
+    "Unified sports pack: prep then session in one sequence.",
+    "Gender via casts where available."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "swim-cap"
+    },
+    {
+      "kind": "object",
+      "id": "goggles"
+    },
+    {
+      "kind": "object",
+      "id": "swimsuit"
+    },
+    {
+      "kind": "object",
+      "id": "towel"
+    },
+    {
+      "kind": "object",
+      "id": "flip-flops"
+    },
+    {
+      "kind": "action",
+      "id": "changing-room"
+    },
+    {
+      "kind": "action",
+      "id": "swim-cap-on"
+    },
+    {
+      "kind": "action",
+      "id": "goggles-on"
+    },
+    {
+      "kind": "action",
+      "id": "wearing-flip-flops"
+    },
+    {
+      "kind": "action",
+      "id": "enter-pool"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "blow-bubbles"
+    },
+    {
+      "kind": "action",
+      "id": "kick-legs"
+    },
+    {
+      "kind": "action",
+      "id": "float-on-back"
+    },
+    {
+      "kind": "action",
+      "id": "hold-wall"
+    },
+    {
+      "kind": "action",
+      "id": "exit-pool"
+    },
+    {
+      "kind": "action",
+      "id": "swimming-shower"
+    }
+  ],
+  "unified_from": [
+    "swimming-prep",
+    "swimming-activity"
+  ],
+  "unified_at": "2026-08-14",
+  "art": "installed",
+  "legacy_ids": [
+    "swimming-wow"
+  ]
+}

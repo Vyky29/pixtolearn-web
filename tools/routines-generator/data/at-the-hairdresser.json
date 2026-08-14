@@ -1,0 +1,375 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "at-the-hairdresser",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "adult",
+  "character": {
+    "avatar_id": "YA1",
+    "band": "young-adult",
+    "gender": "woman",
+    "skin": "medium",
+    "hair": "dark curly shoulder-length",
+    "clothes": "lavender lounge set",
+    "age": "young-adult",
+    "lock": "PRIMARY YA1 only on cover+all actions. Same outfit colours entire pack. Accent #9A80B8 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Hairdresser",
+    "es": "Peluqueria"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "hairdresser",
+      "es": "peluqueria"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "scissors",
+      "slug": "scissors",
+      "title": {
+        "en": "scissors",
+        "es": "tijeras"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shampoo",
+      "slug": "shampoo",
+      "title": {
+        "en": "shampoo",
+        "es": "champu"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-dryer",
+      "slug": "hair-dryer",
+      "title": {
+        "en": "hair dryer",
+        "es": "secador"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive-checkin",
+      "slug": "arrive-checkin",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-chair",
+      "slug": "sit-chair",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "discuss-style",
+      "slug": "discuss-style",
+      "title": {
+        "en": "choose style",
+        "es": "elegir peinado"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cover-towel",
+      "slug": "cover-towel",
+      "title": {
+        "en": "cape on",
+        "es": "poner capa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-shampoo",
+      "slug": "wash-shampoo",
+      "title": {
+        "en": "wash hair",
+        "es": "lavar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cut-hair",
+      "slug": "cut-hair",
+      "title": {
+        "en": "cut hair",
+        "es": "cortar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-hair",
+      "slug": "dry-hair",
+      "title": {
+        "en": "dry hair",
+        "es": "secar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-mirror",
+      "slug": "check-mirror",
+      "title": {
+        "en": "check mirror",
+        "es": "mirar espejo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-dryer",
+      "slug": "loud-dryer",
+      "title": {
+        "en": "loud dryer",
+        "es": "secador fuerte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "hairdresser",
+        "es": "peluqueria"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "scissors",
+      "slug": "scissors",
+      "title": {
+        "en": "scissors",
+        "es": "tijeras"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shampoo",
+      "slug": "shampoo",
+      "title": {
+        "en": "shampoo",
+        "es": "champu"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-dryer",
+      "slug": "hair-dryer",
+      "title": {
+        "en": "hair dryer",
+        "es": "secador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "arrive-checkin",
+      "slug": "arrive-checkin",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-chair",
+      "slug": "sit-chair",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "discuss-style",
+      "slug": "discuss-style",
+      "title": {
+        "en": "choose style",
+        "es": "elegir peinado"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cover-towel",
+      "slug": "cover-towel",
+      "title": {
+        "en": "cape on",
+        "es": "poner capa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-shampoo",
+      "slug": "wash-shampoo",
+      "title": {
+        "en": "wash hair",
+        "es": "lavar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cut-hair",
+      "slug": "cut-hair",
+      "title": {
+        "en": "cut hair",
+        "es": "cortar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-hair",
+      "slug": "dry-hair",
+      "title": {
+        "en": "dry hair",
+        "es": "secar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-mirror",
+      "slug": "check-mirror",
+      "title": {
+        "en": "check mirror",
+        "es": "mirar espejo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-dryer",
+      "slug": "loud-dryer",
+      "title": {
+        "en": "loud dryer",
+        "es": "secador fuerte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 11,
+    "cards": 18
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "YA1",
+    "family_base": "#D03860",
+    "accent": "#9A80B8",
+    "accent_name": "salon lilac",
+    "highlight": "scissors / cape / mirror",
+    "outfit_lock": true
+  }
+}

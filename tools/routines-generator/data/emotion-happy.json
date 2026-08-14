@@ -1,0 +1,128 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "emotion-happy",
+  "family": "emotions",
+  "status": "ready",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "youth",
+    "gender": "neutral",
+    "skin": "medium",
+    "hair": "soft short rounded bowl cut, androgynous",
+    "clothes": "green crew sweater #5FAE7A, soft grey trousers",
+    "age": "youth",
+    "lock": "E1 genderless. Sweater+halo #5FAE7A. Two unique coping actions only."
+  },
+  "label": {
+    "en": "Happy",
+    "es": "Feliz"
+  },
+  "existing_dir": null,
+  "emotions_asset_dir": "emotions-keyring",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "happy",
+      "es": "feliz"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "happy",
+      "slug": "happy",
+      "title": {
+        "en": "happy",
+        "es": "feliz"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "share-smile",
+      "slug": "share-smile",
+      "title": {
+        "en": "share smile",
+        "es": "compartir sonrisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "celebrate-move",
+      "slug": "celebrate-move",
+      "title": {
+        "en": "celebrate",
+        "es": "celebrar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "happy",
+        "es": "feliz"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "happy",
+      "slug": "happy",
+      "title": {
+        "en": "happy",
+        "es": "feliz"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "share-smile",
+      "slug": "share-smile",
+      "title": {
+        "en": "share smile",
+        "es": "compartir sonrisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "celebrate-move",
+      "slug": "celebrate-move",
+      "title": {
+        "en": "celebrate",
+        "es": "celebrar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 1,
+    "actions": 2,
+    "cards": 4
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#E8A840",
+    "accent": "#5FAE7A",
+    "accent_name": "green",
+    "colour_group": "green",
+    "highlight": "E1 genderless green; unique premium coping pair",
+    "outfit_lock": true,
+    "sort_order": 0
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "art_notes": "Premium: face+cover green. Actions unique to this emotion, sweater #5FAE7A. Not shared across emotions."
+}

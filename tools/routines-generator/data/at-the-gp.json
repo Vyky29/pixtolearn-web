@@ -1,0 +1,214 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "at-the-gp",
+  "family": "health-appointments",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack."
+  },
+  "label": {
+    "en": "At the GP",
+    "es": "En el medico"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "GP",
+      "es": "medico"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "appointment-card",
+      "slug": "appointment-card",
+      "title": {
+        "en": "appointment card",
+        "es": "tarjeta de cita"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "waiting-chair",
+      "slug": "waiting-chair",
+      "title": {
+        "en": "waiting chair",
+        "es": "silla de espera"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "stethoscope",
+      "slug": "stethoscope",
+      "title": {
+        "en": "stethoscope",
+        "es": "estetoscopio"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "thermometer",
+      "slug": "thermometer",
+      "title": {
+        "en": "thermometer",
+        "es": "termometro"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "prescription-paper",
+      "slug": "prescription-paper",
+      "title": {
+        "en": "prescription paper",
+        "es": "receta"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "fidget",
+      "slug": "fidget",
+      "title": {
+        "en": "fidget",
+        "es": "fidget"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "check-in",
+      "slug": "check-in",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait",
+      "slug": "wait",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "name-called",
+      "slug": "name-called",
+      "title": {
+        "en": "name called",
+        "es": "llaman el nombre"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "enter-room",
+      "slug": "enter-room",
+      "title": {
+        "en": "enter room",
+        "es": "entrar a la consulta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "answer-questions",
+      "slug": "answer-questions",
+      "title": {
+        "en": "answer questions",
+        "es": "responder preguntas"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "listen-chest",
+      "slug": "listen-chest",
+      "title": {
+        "en": "listen to chest",
+        "es": "escuchar el pecho"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-throat",
+      "slug": "look-throat",
+      "title": {
+        "en": "look at throat",
+        "es": "mirar la garganta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "get-advice",
+      "slug": "get-advice",
+      "title": {
+        "en": "get advice",
+        "es": "recibir consejo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 9,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#7A8FA0",
+    "accent": "#5B9A8B",
+    "accent_name": "sensory teal",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "No blood-pressure cuff in child pack. Hybrid fidget object."
+  ]
+}

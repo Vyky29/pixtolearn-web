@@ -1,0 +1,179 @@
+{
+  "title": "WOW Routines overnight master plan",
+  "goal": "Portal at top quality by morning: every active routine has unique on-style art, locked avatars, gesture framing, matching objects/actions.",
+  "non_negotiables": [
+    "Illustration only: flat 2D, thin black outlines, muted flat colours",
+    "PURE WHITE background; no grey frame; no inner vignette box",
+    "NO text, logos, PixtoLearn, WOW, captions, watermarks on art",
+    "install_art.py only (no scrub_branding); 531x648; fill ~0.94",
+    "One PRIMARY avatar + locked outfit per routine; never mix ages/genders mid-pack",
+    "Accent colour highlights the action or hero object (design-system.json)",
+    "UNIQUE art per card: never reuse cover as an action; never duplicate hashes inside a pack",
+    "Objects must match action style (same outline language and palette family)",
+    "Framing: cover = full/3/4 recognition; objects = single object; hygiene face/hands = close-up; garments = zone crop; body steps = 3/4 when posture teaches",
+    "Clothes = two packs only: clothes-boy (C1) and clothes-girl (C2); objects once; dress actions then undress actions",
+    "Gender-split when clinical garments differ (already done for clothes)"
+  ],
+  "avatar_locks": {
+    "C1": "child boy - shower, toilet-boy, road, museum, cycling, swimming, clothes-boy",
+    "C2": "child girl - brushing-teeth, toilet-girl, beach, theme-park, mall, tennis, clothes-girl",
+    "T1": "teen boy - plane, train, taxi, hotel, supermarket, airport, gym, camping, holidays, mountain, sport-event",
+    "T2": "teen girl - ferry, bus, tube, haircare, nail-care, hiking",
+    "YA1": "young-adult woman - period, intimate-female, hospital, hairdresser",
+    "YA2": "young-adult man - intimate-male, shaving, foot-care, pharmacy",
+    "E1": "gender-neutral youth - all emotion packs + emotions-hub"
+  },
+  "waves": [
+    {
+      "id": 0,
+      "name": "Polish gold standard",
+      "packs": [
+        "clothes-boy",
+        "clothes-girl",
+        "shower",
+        "brushing-teeth"
+      ],
+      "work": "Fix any scrub false/true hits; ensure objects match actions; portal groups OK"
+    },
+    {
+      "id": 1,
+      "name": "Kill duplicates",
+      "packs": [
+        "emotion-*",
+        "taking-the-bus",
+        "using-the-tube",
+        "at-the-airport",
+        "haircare",
+        "menstrual-hygiene"
+      ],
+      "work": "Regenerate one side of each duplicate pair so every slug is unique"
+    },
+    {
+      "id": 2,
+      "name": "Kill scrub / style bites",
+      "packs": [
+        "at-the-hospital",
+        "at-the-supermarket",
+        "crossing-the-road",
+        "going-to-a-theme-park",
+        "attending-a-sport-event",
+        "clothes-girl"
+      ],
+      "work": "Regenerate flagged cards clean"
+    },
+    {
+      "id": 3,
+      "name": "Fill empty sports",
+      "packs": [
+        "climbing-wow"
+      ],
+      "work": "Generate full cover+items+actions T1"
+    },
+    {
+      "id": 4,
+      "name": "YA public quality pass",
+      "packs": [
+        "at-the-hospital",
+        "at-the-pharmacy",
+        "at-the-hairdresser",
+        "shaving",
+        "foot-care"
+      ],
+      "work": "Full regen to locked YA + framing rules; objects match actions"
+    },
+    {
+      "id": 5,
+      "name": "Child safety + toilet",
+      "packs": [
+        "using-the-toilet-boy",
+        "using-the-toilet-girl",
+        "crossing-the-road",
+        "cycling-prep"
+      ],
+      "work": "C1 gesture framing; unique cards"
+    },
+    {
+      "id": 6,
+      "name": "Emotions unique covers",
+      "packs": [
+        "emotion-happy",
+        "emotion-sad",
+        "emotion-angry",
+        "emotion-worried",
+        "emotion-tired",
+        "emotion-excited",
+        "emotion-calm",
+        "emotion-frustrated",
+        "emotions-hub"
+      ],
+      "work": "Distinct cover vs emotion face; technique cards clear"
+    },
+    {
+      "id": 7,
+      "name": "Mobility / travel polish",
+      "packs": [
+        "taking-the-train",
+        "taking-a-taxi",
+        "taking-the-bus",
+        "using-the-tube",
+        "at-the-airport",
+        "going-on-holidays",
+        "going-camping",
+        "going-to-the-mountain",
+        "going-to-the-beach",
+        "going-to-the-museum",
+        "going-to-a-theme-park"
+      ],
+      "work": "Dedupe + style unify to locked teen/child avatars"
+    },
+    {
+      "id": 8,
+      "name": "Sports polish",
+      "packs": [
+        "gym-activities",
+        "tennis-prep",
+        "hiking",
+        "swimming-wow",
+        "attending-a-sport-event",
+        "climbing-wow"
+      ],
+      "work": "Unique arts; ready status"
+    },
+    {
+      "id": 9,
+      "name": "Intimate / self-care remainder",
+      "packs": [
+        "intimate-care-female",
+        "intimate-care-male",
+        "nail-care",
+        "haircare",
+        "menstrual-hygiene"
+      ],
+      "work": "Dedupe; clinical framing; YA/T2 locks"
+    },
+    {
+      "id": 10,
+      "name": "Core vocabulary",
+      "packs": [
+        "core"
+      ],
+      "work": "Generate missing core pictogram objects if still in product scope"
+    },
+    {
+      "id": 11,
+      "name": "Final audit loop",
+      "packs": [
+        "*"
+      ],
+      "work": "Zero missing needed slots; zero same-pack hash dupes; zero scrub bites; mark ready; update execution-progress"
+    }
+  ],
+  "definition_of_done": [
+    "Every non-deprecated routine in routines.json has art for cover+items+actions",
+    "No same-pack MD5 duplicates among needed cards",
+    "No scrub-notch hits on needed cards",
+    "Clothes boy/girl show Dress then Undress groups in portal",
+    "Status ready where quality pass completed",
+    "execution-progress.json reflects morning state"
+  ]
+}

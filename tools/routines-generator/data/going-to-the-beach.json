@@ -1,0 +1,467 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.5",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "going-to-the-beach",
+  "family": "travel",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail or soft curls",
+    "clothes": "coral top, navy skirt or trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #40B0C0 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Going to the beach",
+    "es": "Ir a la playa"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "beach",
+      "es": "playa"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "beach-towel",
+      "slug": "beach-towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sunscreen",
+      "slug": "sunscreen",
+      "title": {
+        "en": "sunscreen",
+        "es": "crema solar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "swimsuit",
+      "slug": "swimsuit",
+      "title": {
+        "en": "swimsuit",
+        "es": "banador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "flip-flops",
+      "slug": "flip-flops",
+      "title": {
+        "en": "flip-flops",
+        "es": "chanclas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sand",
+      "slug": "sand",
+      "title": {
+        "en": "sand",
+        "es": "arena"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sea",
+      "slug": "sea",
+      "title": {
+        "en": "sea",
+        "es": "mar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bucket",
+      "slug": "bucket",
+      "title": {
+        "en": "bucket",
+        "es": "cubo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "beach-ball",
+      "slug": "beach-ball",
+      "title": {
+        "en": "beach ball",
+        "es": "pelota"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "pack-beach",
+      "slug": "pack-beach",
+      "title": {
+        "en": "pack bag",
+        "es": "preparar bolsa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-sunscreen",
+      "slug": "apply-sunscreen",
+      "title": {
+        "en": "sunscreen on",
+        "es": "poner crema"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "walk-to-beach",
+      "slug": "walk-to-beach",
+      "title": {
+        "en": "walk to beach",
+        "es": "ir a la playa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "walk-on-sand",
+      "slug": "walk-on-sand",
+      "title": {
+        "en": "walk on sand",
+        "es": "andar en arena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "lay-towel",
+      "slug": "lay-towel",
+      "title": {
+        "en": "lay towel",
+        "es": "poner toalla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dig-sand",
+      "slug": "dig-sand",
+      "title": {
+        "en": "dig sand",
+        "es": "cavar arena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "build-sandcastle",
+      "slug": "build-sandcastle",
+      "title": {
+        "en": "sandcastle",
+        "es": "castillo arena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "go-in-sea",
+      "slug": "go-in-sea",
+      "title": {
+        "en": "go in sea",
+        "es": "entrar al mar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "splash-sea",
+      "slug": "splash-sea",
+      "title": {
+        "en": "splash water",
+        "es": "chapotear"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "paddle-or-splash",
+      "slug": "paddle-or-splash",
+      "title": {
+        "en": "paddle or splash",
+        "es": "chapuzon suave"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-shells",
+      "slug": "collect-shells",
+      "title": {
+        "en": "collect shells",
+        "es": "coger conchas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "play-ball",
+      "slug": "play-ball",
+      "title": {
+        "en": "play ball",
+        "es": "jugar pelota"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-off",
+      "slug": "dry-off",
+      "title": {
+        "en": "dry off",
+        "es": "secarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-leave",
+      "slug": "pack-leave",
+      "title": {
+        "en": "pack up",
+        "es": "recoger"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "beach",
+        "es": "playa"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "beach-towel",
+      "slug": "beach-towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sunscreen",
+      "slug": "sunscreen",
+      "title": {
+        "en": "sunscreen",
+        "es": "crema solar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "swimsuit",
+      "slug": "swimsuit",
+      "title": {
+        "en": "swimsuit",
+        "es": "banador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "flip-flops",
+      "slug": "flip-flops",
+      "title": {
+        "en": "flip-flops",
+        "es": "chanclas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sand",
+      "slug": "sand",
+      "title": {
+        "en": "sand",
+        "es": "arena"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sea",
+      "slug": "sea",
+      "title": {
+        "en": "sea",
+        "es": "mar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bucket",
+      "slug": "bucket",
+      "title": {
+        "en": "bucket",
+        "es": "cubo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "beach-ball",
+      "slug": "beach-ball",
+      "title": {
+        "en": "beach ball",
+        "es": "pelota"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pack-beach",
+      "slug": "pack-beach",
+      "title": {
+        "en": "pack bag",
+        "es": "preparar bolsa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-sunscreen",
+      "slug": "apply-sunscreen",
+      "title": {
+        "en": "sunscreen on",
+        "es": "poner crema"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "walk-to-beach",
+      "slug": "walk-to-beach",
+      "title": {
+        "en": "walk to beach",
+        "es": "ir a la playa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "walk-on-sand",
+      "slug": "walk-on-sand",
+      "title": {
+        "en": "walk on sand",
+        "es": "andar en arena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "lay-towel",
+      "slug": "lay-towel",
+      "title": {
+        "en": "lay towel",
+        "es": "poner toalla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dig-sand",
+      "slug": "dig-sand",
+      "title": {
+        "en": "dig sand",
+        "es": "cavar arena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "build-sandcastle",
+      "slug": "build-sandcastle",
+      "title": {
+        "en": "sandcastle",
+        "es": "castillo arena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "go-in-sea",
+      "slug": "go-in-sea",
+      "title": {
+        "en": "go in sea",
+        "es": "entrar al mar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "splash-sea",
+      "slug": "splash-sea",
+      "title": {
+        "en": "splash water",
+        "es": "chapotear"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "swim-or-relax",
+      "slug": "swim-or-relax",
+      "title": {
+        "en": "swim",
+        "es": "nadar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-shells",
+      "slug": "collect-shells",
+      "title": {
+        "en": "collect shells",
+        "es": "coger conchas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "play-ball",
+      "slug": "play-ball",
+      "title": {
+        "en": "play ball",
+        "es": "jugar pelota"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-off",
+      "slug": "dry-off",
+      "title": {
+        "en": "dry off",
+        "es": "secarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-leave",
+      "slug": "pack-leave",
+      "title": {
+        "en": "pack up",
+        "es": "recoger"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 8,
+    "actions": 14,
+    "cards": 23
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#2F6B4F",
+    "accent": "#40B0C0",
+    "accent_name": "turquoise",
+    "highlight": "towel / sea / sunscreen",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "art_notes": "Beach actions MUST show sand (beige ground) and/or sea (blue water). Cover shows sand+sea clearly. Objects sand/sea = single pictogram on white.",
+  "overlap_note": "Beach day only. Deep swim/surf/snorkel live in swimming-* / surfing-* / snorkelling-* WOW packs."
+}

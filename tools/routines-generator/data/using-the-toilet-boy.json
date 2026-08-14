@@ -1,0 +1,475 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "2.0-toilet-split",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Modest clinical toilet framing."
+  },
+  "id": "using-the-toilet-boy",
+  "family": "self-care",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #7A9EAE. Modest: top on; lower clothes to ankles on sit/wee/poo/wipe; no genitals."
+  },
+  "label": {
+    "en": "Using the toilet (boy)",
+    "es": "Usar el aseo (nino)"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "toilet",
+      "es": "aseo"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "toilet-paper",
+      "slug": "toilet-paper",
+      "title": {
+        "en": "toilet paper",
+        "es": "papel"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "toilet-seat",
+      "slug": "toilet-seat",
+      "title": {
+        "en": "toilet seat",
+        "es": "asiento"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "hand-soap",
+      "slug": "hand-soap",
+      "title": {
+        "en": "hand soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "waste-bin",
+      "slug": "waste-bin",
+      "title": {
+        "en": "bin",
+        "es": "papelera"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "open-door",
+      "slug": "open-door",
+      "title": {
+        "en": "open door",
+        "es": "abrir puerta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "trousers-down",
+      "slug": "trousers-down",
+      "title": {
+        "en": "trousers down",
+        "es": "bajar pantalon"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "pants-down",
+      "slug": "pants-down",
+      "title": {
+        "en": "pants down",
+        "es": "bajar ropa interior"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-on-seat",
+      "slug": "sit-on-seat",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wee",
+      "slug": "wee",
+      "title": {
+        "en": "wee",
+        "es": "pis"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "poo",
+      "slug": "poo",
+      "title": {
+        "en": "poo",
+        "es": "caca"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "use-toilet-paper",
+      "slug": "use-toilet-paper",
+      "title": {
+        "en": "use paper",
+        "es": "usar papel"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wipe",
+      "slug": "wipe",
+      "title": {
+        "en": "wipe",
+        "es": "limpiarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stand-up",
+      "slug": "stand-up",
+      "title": {
+        "en": "stand up",
+        "es": "levantarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "pants-up",
+      "slug": "pants-up",
+      "title": {
+        "en": "pants up",
+        "es": "subir ropa interior"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "trousers-up",
+      "slug": "trousers-up",
+      "title": {
+        "en": "trousers up",
+        "es": "subir pantalon"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "flush",
+      "slug": "flush",
+      "title": {
+        "en": "flush",
+        "es": "tirar cadena"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wash-hands-soap",
+      "slug": "wash-hands-soap",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "dry-hands",
+      "slug": "dry-hands",
+      "title": {
+        "en": "dry hands",
+        "es": "secar manos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "close-door",
+      "slug": "close-door",
+      "title": {
+        "en": "close door",
+        "es": "cerrar puerta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "toilet",
+        "es": "aseo"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "toilet-paper",
+      "slug": "toilet-paper",
+      "title": {
+        "en": "toilet paper",
+        "es": "papel"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "toilet-seat",
+      "slug": "toilet-seat",
+      "title": {
+        "en": "toilet seat",
+        "es": "asiento"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-soap",
+      "slug": "hand-soap",
+      "title": {
+        "en": "hand soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "waste-bin",
+      "slug": "waste-bin",
+      "title": {
+        "en": "bin",
+        "es": "papelera"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "open-door",
+      "slug": "open-door",
+      "title": {
+        "en": "open door",
+        "es": "abrir puerta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-down",
+      "slug": "trousers-down",
+      "title": {
+        "en": "trousers down",
+        "es": "bajar pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pants-down",
+      "slug": "pants-down",
+      "title": {
+        "en": "pants down",
+        "es": "bajar ropa interior"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-on-seat",
+      "slug": "sit-on-seat",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wee",
+      "slug": "wee",
+      "title": {
+        "en": "wee",
+        "es": "pis"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "poo",
+      "slug": "poo",
+      "title": {
+        "en": "poo",
+        "es": "caca"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-toilet-paper",
+      "slug": "use-toilet-paper",
+      "title": {
+        "en": "use paper",
+        "es": "usar papel"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe",
+      "slug": "wipe",
+      "title": {
+        "en": "wipe",
+        "es": "limpiarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stand-up",
+      "slug": "stand-up",
+      "title": {
+        "en": "stand up",
+        "es": "levantarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pants-up",
+      "slug": "pants-up",
+      "title": {
+        "en": "pants up",
+        "es": "subir ropa interior"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-up",
+      "slug": "trousers-up",
+      "title": {
+        "en": "trousers up",
+        "es": "subir pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "flush",
+      "slug": "flush",
+      "title": {
+        "en": "flush",
+        "es": "tirar cadena"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hands-soap",
+      "slug": "wash-hands-soap",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-hands",
+      "slug": "dry-hands",
+      "title": {
+        "en": "dry hands",
+        "es": "secar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "close-door",
+      "slug": "close-door",
+      "title": {
+        "en": "close door",
+        "es": "cerrar puerta"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 15,
+    "cards": 21
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#5B8C7A",
+    "accent": "#7A9EAE",
+    "accent_name": "slate aqua",
+    "highlight": "clothes down/up + toilet + paper + flush",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit. Modest clinical framing.",
+  "notes": "After sit, staff pick wee and/or poo (optional). Clothing steps required. Wee/poo use clear circular pictogram badges (yellow drop / brown swirl), not emoji faces.",
+  "action_groups": {
+    "main": [
+      "open-door",
+      "trousers-down",
+      "pants-down",
+      "sit-on-seat",
+      "use-toilet-paper",
+      "wipe",
+      "stand-up",
+      "pants-up",
+      "trousers-up",
+      "flush",
+      "wash-hands-soap",
+      "dry-hands",
+      "close-door"
+    ],
+    "options": [
+      "wee",
+      "poo"
+    ]
+  },
+  "art_notes": "Sit/wee/poo/wipe: trousers and pants at ankles, top on, toilet hides private area. Wee = soft yellow circle with simple drop. Poo = soft brown circle with simple swirl. Pure white bg, flat 2D, thin black outlines."
+}

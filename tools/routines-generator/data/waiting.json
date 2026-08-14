@@ -1,0 +1,162 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "waiting",
+  "family": "sensory-world",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "all",
+    "gender": "genderless",
+    "skin": "medium",
+    "hair": "short neutral",
+    "clothes": "soft teal sweater, grey trousers",
+    "age": "flexible",
+    "lock": "PRIMARY E1 genderless style. Same outfit entire pack."
+  },
+  "label": {
+    "en": "Waiting",
+    "es": "Esperar"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "waiting",
+      "es": "esperar"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "visual-timer",
+      "slug": "visual-timer",
+      "title": {
+        "en": "visual timer",
+        "es": "temporizador visual"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "fidget",
+      "slug": "fidget",
+      "title": {
+        "en": "fidget",
+        "es": "fidget"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "first-then-board",
+      "slug": "first-then-board",
+      "title": {
+        "en": "first then board",
+        "es": "tablero primero-despues"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket-number",
+      "slug": "ticket-number",
+      "title": {
+        "en": "ticket number",
+        "es": "numero de turno"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "see-queue",
+      "slug": "see-queue",
+      "title": {
+        "en": "see the queue",
+        "es": "ver la cola"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stand-or-sit",
+      "slug": "stand-or-sit",
+      "title": {
+        "en": "stand or sit",
+        "es": "estar de pie o sentado"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "check-timer",
+      "slug": "check-timer",
+      "title": {
+        "en": "check timer",
+        "es": "mirar el temporizador"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "use-fidget",
+      "slug": "use-fidget",
+      "title": {
+        "en": "use fidget",
+        "es": "usar fidget"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "check-number",
+      "slug": "check-number",
+      "title": {
+        "en": "check number",
+        "es": "mirar el numero"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "my-turn",
+      "slug": "my-turn",
+      "title": {
+        "en": "my turn",
+        "es": "mi turno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 6,
+    "cards": 11
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#5B9A8B",
+    "accent": "#3D7EA6",
+    "accent_name": "transport blue",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": []
+}

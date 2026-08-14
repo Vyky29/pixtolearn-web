@@ -1,0 +1,174 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "ask-safe-adult",
+  "family": "emergency-help",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium",
+    "hair": "brown ponytail",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack."
+  },
+  "label": {
+    "en": "Ask a safe adult",
+    "es": "Pedir a un adulto seguro"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "safe adult",
+      "es": "adulto seguro"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "help-card",
+      "slug": "help-card",
+      "title": {
+        "en": "help card",
+        "es": "tarjeta de ayuda"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "staff-badge",
+      "slug": "staff-badge",
+      "title": {
+        "en": "staff badge",
+        "es": "credencial"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "phone",
+      "slug": "phone",
+      "title": {
+        "en": "phone",
+        "es": "telefono"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "meeting-point-sign",
+      "slug": "meeting-point-sign",
+      "title": {
+        "en": "meeting point sign",
+        "es": "punto de reunion"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "spot-badge",
+      "slug": "spot-badge",
+      "title": {
+        "en": "spot badge or desk",
+        "es": "ver credencial o mostrador"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-closer",
+      "slug": "walk-closer",
+      "title": {
+        "en": "walk closer",
+        "es": "acercarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "get-attention",
+      "slug": "get-attention",
+      "title": {
+        "en": "get attention",
+        "es": "llamar la atencion"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "show-help-card",
+      "slug": "show-help-card",
+      "title": {
+        "en": "show help card",
+        "es": "mostrar tarjeta de ayuda"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ask-help",
+      "slug": "ask-help",
+      "title": {
+        "en": "ask for help",
+        "es": "pedir ayuda"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stay",
+      "slug": "stay",
+      "title": {
+        "en": "stay with them",
+        "es": "quedarse con esa persona"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait-adult",
+      "slug": "wait-adult",
+      "title": {
+        "en": "wait for my adult",
+        "es": "esperar a mi adulto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 7,
+    "cards": 12
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#4A6670",
+    "accent": "#5B8C7A",
+    "accent_name": "seafoam green",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Teaches asking. Differs from i-am-lost separation sequence."
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "i-am-lost",
+  "family": "emergency-help",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack."
+  },
+  "label": {
+    "en": "I am lost",
+    "es": "Estoy perdido"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "I am lost",
+      "es": "estoy perdido"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "name-card",
+      "slug": "name-card",
+      "title": {
+        "en": "name card",
+        "es": "tarjeta con nombre"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "phone",
+      "slug": "phone",
+      "title": {
+        "en": "phone",
+        "es": "telefono"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "staff-desk",
+      "slug": "staff-desk",
+      "title": {
+        "en": "staff desk",
+        "es": "mostrador"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "info-sign",
+      "slug": "info-sign",
+      "title": {
+        "en": "info sign",
+        "es": "senal de informacion"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "high-vis-vest",
+      "slug": "high-vis-vest",
+      "title": {
+        "en": "high-vis vest",
+        "es": "chaleco reflectante"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "stop",
+      "slug": "stop",
+      "title": {
+        "en": "stop",
+        "es": "pararse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stay-put",
+      "slug": "stay-put",
+      "title": {
+        "en": "stay put",
+        "es": "quedarse quieto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-for-desk",
+      "slug": "look-for-desk",
+      "title": {
+        "en": "look for desk or vest",
+        "es": "buscar mostrador o chaleco"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-to-desk",
+      "slug": "go-to-desk",
+      "title": {
+        "en": "go to desk",
+        "es": "ir al mostrador"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "say-lost",
+      "slug": "say-lost",
+      "title": {
+        "en": "say I am lost",
+        "es": "decir que estoy perdido"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "show-name-card",
+      "slug": "show-name-card",
+      "title": {
+        "en": "show name card",
+        "es": "mostrar tarjeta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait",
+      "slug": "wait",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "reunite",
+      "slug": "reunite",
+      "title": {
+        "en": "reunite",
+        "es": "reunirse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 8,
+    "cards": 14
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#4A6670",
+    "accent": "#D03860",
+    "accent_name": "civic rose",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Sequence if separated. Vest/desk are objects, not people drawings in items."
+  ]
+}

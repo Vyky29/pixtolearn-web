@@ -1,0 +1,321 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.5",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "going-to-the-museum",
+  "family": "travel",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #C0A040 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Museum",
+    "es": "Museo"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "museum",
+      "es": "museo"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "museum-ticket",
+      "slug": "museum-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "museum-map",
+      "slug": "museum-map",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "museum-guide",
+      "slug": "museum-guide",
+      "title": {
+        "en": "guide",
+        "es": "guia"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "audio-guide",
+      "slug": "audio-guide",
+      "title": {
+        "en": "audio guide",
+        "es": "audioguia"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "buy-ticket",
+      "slug": "buy-ticket",
+      "title": {
+        "en": "buy ticket",
+        "es": "comprar entrada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enter",
+      "slug": "enter",
+      "title": {
+        "en": "enter",
+        "es": "entrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-map",
+      "slug": "get-map",
+      "title": {
+        "en": "get map",
+        "es": "coger mapa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-exhibits",
+      "slug": "look-exhibits",
+      "title": {
+        "en": "look exhibits",
+        "es": "mirar obras"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-audio",
+      "slug": "listen-audio",
+      "title": {
+        "en": "listen audio",
+        "es": "escuchar audio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stay-quiet",
+      "slug": "stay-quiet",
+      "title": {
+        "en": "be quiet",
+        "es": "estar en silencio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-guide",
+      "slug": "ask-guide",
+      "title": {
+        "en": "ask guide",
+        "es": "preguntar guia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-rest",
+      "slug": "sit-rest",
+      "title": {
+        "en": "sit rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "visit-shop",
+      "slug": "visit-shop",
+      "title": {
+        "en": "visit shop",
+        "es": "tienda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit",
+      "slug": "exit",
+      "title": {
+        "en": "exit",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "museum",
+        "es": "museo"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "museum-ticket",
+      "slug": "museum-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "museum-map",
+      "slug": "museum-map",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "museum-guide",
+      "slug": "museum-guide",
+      "title": {
+        "en": "guide",
+        "es": "guia"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "audio-guide",
+      "slug": "audio-guide",
+      "title": {
+        "en": "audio guide",
+        "es": "audioguia"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "buy-ticket",
+      "slug": "buy-ticket",
+      "title": {
+        "en": "buy ticket",
+        "es": "comprar entrada"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enter",
+      "slug": "enter",
+      "title": {
+        "en": "enter",
+        "es": "entrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-map",
+      "slug": "get-map",
+      "title": {
+        "en": "get map",
+        "es": "coger mapa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-exhibits",
+      "slug": "look-exhibits",
+      "title": {
+        "en": "look exhibits",
+        "es": "mirar obras"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-audio",
+      "slug": "listen-audio",
+      "title": {
+        "en": "listen audio",
+        "es": "escuchar audio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stay-quiet",
+      "slug": "stay-quiet",
+      "title": {
+        "en": "be quiet",
+        "es": "estar en silencio"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-guide",
+      "slug": "ask-guide",
+      "title": {
+        "en": "ask guide",
+        "es": "preguntar guia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-rest",
+      "slug": "sit-rest",
+      "title": {
+        "en": "sit rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "visit-shop",
+      "slug": "visit-shop",
+      "title": {
+        "en": "visit shop",
+        "es": "tienda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit",
+      "slug": "exit",
+      "title": {
+        "en": "exit",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 10,
+    "cards": 15
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#2F6B4F",
+    "accent": "#C0A040",
+    "accent_name": "mustard",
+    "highlight": "ticket / exhibit",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

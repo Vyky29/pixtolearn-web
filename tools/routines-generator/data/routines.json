@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "1.6-wave1-high-demand",
   "art_cache_bust": "2026-08-09-toilet-sitfix-2",
   "product": "wow-routines",
   "format": {
@@ -62,10 +62,10 @@
       "colour_name": "Transport blue"
     },
     {
-      "id": "sports-prep",
+      "id": "sports",
       "label": {
-        "en": "Sports and fitness prep",
-        "es": "Prep deporte y fitness"
+        "en": "Sports",
+        "es": "Deporte"
       },
       "colour": "#C77830",
       "colour_name": "Active amber"
@@ -87,6 +87,15 @@
       },
       "colour": "#D03860",
       "colour_name": "Civic rose"
+    },
+    {
+      "id": "school-college",
+      "label": {
+        "en": "School and college",
+        "es": "Colegio e instituto"
+      },
+      "colour": "#5B6B8C",
+      "colour_name": "School slate"
     },
     {
       "id": "health-appointments",
@@ -472,6 +481,46 @@
         "actions": 7,
         "cards": 15
       }
+    },
+    {
+      "id": "washing-hands",
+      "family": "self-care",
+      "status": "ready",
+      "data": "washing-hands.json",
+      "label": {
+        "en": "Washing hands",
+        "es": "Lavarse las manos"
+      },
+      "audience": "child",
+      "existing_dir": "washing-hands",
+      "art_dir": "washing-hands",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail or soft curls",
+        "clothes": "soft coral top, navy trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant. Same outfit colours whole pack."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#5B8C7A",
+        "accent": "#4A90A8",
+        "accent_name": "water blue",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 10,
+        "cards": 16
+      },
+      "architecture_wave": "wave1-high-demand",
+      "art": "installed",
+      "split_role": null,
+      "pair": null,
+      "gender_delivery": "casts-boy-girl"
     },
     {
       "id": "intimate-care-male",
@@ -1133,16 +1182,17 @@
       }
     },
     {
-      "id": "climbing-wow",
-      "family": "sports-prep",
+      "id": "climbing",
+      "family": "sports",
       "status": "ready",
-      "data": "climbing-wow.json",
+      "data": "climbing.json",
       "label": {
         "en": "Climbing",
         "es": "Escalada"
       },
       "audience": "teen",
-      "existing_dir": "climbing",
+      "existing_dir": "climbing-wow",
+      "art_dir": "climbing-wow",
       "character": {
         "avatar_id": "T1",
         "band": "teen",
@@ -1163,21 +1213,31 @@
       },
       "counts": {
         "items": 6,
-        "actions": 11,
-        "cards": 18
-      }
+        "actions": 12,
+        "cards": 19
+      },
+      "unified_from": [
+        "climbing-prep",
+        "climbing-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "legacy_ids": [
+        "climbing-wow"
+      ],
+      "art": "installed"
     },
     {
-      "id": "swimming-wow",
-      "family": "sports-prep",
+      "id": "swimming",
+      "family": "sports",
       "status": "ready",
-      "data": "swimming-wow.json",
+      "data": "swimming.json",
       "label": {
-        "en": "Swimming visit",
-        "es": "Visita a la piscina"
+        "en": "Swimming",
+        "es": "Natacion"
       },
       "audience": "child",
-      "existing_dir": "swimming",
+      "existing_dir": "swimming-wow",
+      "art_dir": "swimming-wow",
       "character": {
         "avatar_id": "C1",
         "band": "child",
@@ -1198,20 +1258,31 @@
       },
       "counts": {
         "items": 5,
-        "actions": 11,
-        "cards": 17
-      }
+        "actions": 12,
+        "cards": 18
+      },
+      "unified_from": [
+        "swimming-prep",
+        "swimming-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "legacy_ids": [
+        "swimming-wow"
+      ],
+      "art": "installed"
     },
     {
-      "id": "gym-activities",
-      "family": "sports-prep",
+      "id": "gym",
+      "family": "sports",
       "status": "ready",
-      "data": "gym-activities.json",
+      "data": "gym.json",
       "label": {
         "en": "Gym",
         "es": "Gimnasio"
       },
       "audience": "teen",
+      "existing_dir": "gym-activities",
+      "art_dir": "gym-activities",
       "character": {
         "avatar_id": "T1",
         "band": "teen",
@@ -1232,13 +1303,22 @@
       },
       "counts": {
         "items": 6,
-        "actions": 11,
-        "cards": 18
-      }
+        "actions": 12,
+        "cards": 19
+      },
+      "unified_from": [
+        "gym-prep",
+        "gym-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "legacy_ids": [
+        "gym-activities"
+      ],
+      "art": "installed"
     },
     {
       "id": "hiking",
-      "family": "sports-prep",
+      "family": "sports",
       "status": "ready",
       "data": "hiking.json",
       "label": {
@@ -1246,6 +1326,8 @@
         "es": "Senderismo"
       },
       "audience": "teen",
+      "existing_dir": "hiking",
+      "art_dir": "hiking",
       "character": {
         "avatar_id": "T2",
         "band": "teen",
@@ -1266,20 +1348,28 @@
       },
       "counts": {
         "items": 7,
-        "actions": 16,
-        "cards": 24
-      }
+        "actions": 17,
+        "cards": 25
+      },
+      "unified_from": [
+        "hiking-prep",
+        "hiking-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "art": "installed"
     },
     {
-      "id": "cycling-prep",
-      "family": "sports-prep",
+      "id": "cycling",
+      "family": "sports",
       "status": "ready",
-      "data": "cycling-prep.json",
+      "data": "cycling.json",
       "label": {
         "en": "Cycling",
         "es": "Ciclismo"
       },
       "audience": "child",
+      "existing_dir": "cycling-prep",
+      "art_dir": "cycling-prep",
       "character": {
         "avatar_id": "C1",
         "band": "child",
@@ -1295,25 +1385,33 @@
         "family_base": "#C77830",
         "accent": "#E8B020",
         "accent_name": "bike yellow",
-        "highlight": "helmet / bike / lights",
+        "highlight": "helmet / look / signal / park",
         "outfit_lock": true
       },
       "counts": {
         "items": 4,
-        "actions": 10,
-        "cards": 15
-      }
+        "actions": 11,
+        "cards": 16
+      },
+      "unified_from": [
+        "cycling-prep",
+        "cycling-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "art": "installed"
     },
     {
-      "id": "tennis-prep",
-      "family": "sports-prep",
+      "id": "tennis",
+      "family": "sports",
       "status": "ready",
-      "data": "tennis-prep.json",
+      "data": "tennis.json",
       "label": {
         "en": "Tennis",
         "es": "Tenis"
       },
       "audience": "child",
+      "existing_dir": "tennis-prep",
+      "art_dir": "tennis-prep",
       "character": {
         "avatar_id": "C2",
         "band": "child",
@@ -1334,9 +1432,104 @@
       },
       "counts": {
         "items": 4,
-        "actions": 10,
-        "cards": 15
-      }
+        "actions": 11,
+        "cards": 16
+      },
+      "unified_from": [
+        "tennis-prep",
+        "tennis-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "art": "installed"
+    },
+    {
+      "id": "trampoline",
+      "family": "sports",
+      "status": "ready",
+      "data": "trampoline.json",
+      "label": {
+        "en": "Trampoline",
+        "es": "Trampolin"
+      },
+      "audience": "child",
+      "existing_dir": "trampoline-wow",
+      "art_dir": "trampoline-wow",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft teal top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#C77830",
+        "accent": "#5B9A8B",
+        "accent_name": "sensory teal",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 11,
+        "cards": 17
+      },
+      "unified_from": [
+        "trampoline-prep",
+        "trampoline-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "legacy_ids": [
+        "trampoline-wow"
+      ],
+      "art": "installed",
+      "architecture_wave": "p1",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "football",
+      "family": "sports",
+      "status": "ready",
+      "data": "football.json",
+      "label": {
+        "en": "Football",
+        "es": "Futbol"
+      },
+      "audience": "child",
+      "existing_dir": "football",
+      "art_dir": "football",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "green football shirt, dark shorts",
+        "age": "child",
+        "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant. Same kit colours whole pack."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#C77830",
+        "accent": "#2F6B4F",
+        "accent_name": "pitch green",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 15,
+        "cards": 21
+      },
+      "unified_from": [
+        "football-prep",
+        "football-activity"
+      ],
+      "unified_at": "2026-08-14",
+      "art": "installed",
+      "architecture_wave": "wave1-high-demand",
+      "content_review": "approved-pre-art"
     },
     {
       "id": "going-on-holidays",
@@ -1412,8 +1605,8 @@
       "status": "ready",
       "data": "going-to-the-mountain.json",
       "label": {
-        "en": "Mountain",
-        "es": "Montana"
+        "en": "Going to the mountain",
+        "es": "Ir a la montana"
       },
       "audience": "teen",
       "character": {
@@ -1548,8 +1741,8 @@
       "status": "ready",
       "data": "attending-a-sport-event.json",
       "label": {
-        "en": "Sport event",
-        "es": "Evento deportivo"
+        "en": "Watching a sport event",
+        "es": "Ver un evento deportivo"
       },
       "audience": "teen",
       "character": {
@@ -1850,36 +2043,44 @@
       }
     },
     {
-      "id": "trampoline-wow",
-      "family": "sports-prep",
+      "id": "public-toilet",
+      "family": "public-spaces",
       "status": "ready",
-      "data": "trampoline-wow.json",
+      "data": "public-toilet.json",
       "label": {
-        "en": "Trampoline visit",
-        "es": "Visita al trampolin"
+        "en": "Public toilet",
+        "es": "Aseo publico"
       },
       "audience": "child",
-      "architecture_wave": "p1",
-      "art": "installed",
+      "existing_dir": "public-toilet",
+      "art_dir": "public-toilet",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant. Same kit colours whole pack."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#D03860",
+        "accent": "#3D7EA6",
+        "accent_name": "civic blue",
+        "outfit_lock": true
+      },
       "counts": {
         "items": 5,
         "actions": 10,
         "cards": 16
       },
-      "design": {
-        "avatar_id": "C1",
-        "family_base": "#C77830",
-        "accent": "#5B9A8B",
-        "accent_name": "sensory teal",
-        "outfit_lock": true
-      },
-      "spec_status": "spec-ready",
-      "character": {
-        "avatar_id": "C1",
-        "band": "child",
-        "gender": "boy"
-      },
-      "content_review": "approved-pre-art"
+      "architecture_wave": "wave1-high-demand",
+      "art": "installed",
+      "split_role": null,
+      "pair": null,
+      "gender_delivery": "casts-boy-girl"
     },
     {
       "id": "at-the-dentist",
@@ -2008,6 +2209,46 @@
         "gender": "girl"
       },
       "content_review": "approved-pre-art"
+    },
+    {
+      "id": "at-the-optician",
+      "family": "health-appointments",
+      "status": "ready",
+      "data": "at-the-optician.json",
+      "label": {
+        "en": "At the optician",
+        "es": "En el oculista"
+      },
+      "audience": "child",
+      "existing_dir": "at-the-optician",
+      "art_dir": "at-the-optician",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail or soft curls",
+        "clothes": "soft teal top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant. Same outfit colours whole pack."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#7A8FA0",
+        "accent": "#5B9A8B",
+        "accent_name": "clinic teal",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 10,
+        "cards": 17
+      },
+      "architecture_wave": "wave1-high-demand",
+      "art": "installed",
+      "split_role": null,
+      "pair": null,
+      "gender_delivery": "casts-boy-girl"
     },
     {
       "id": "loud-places",
@@ -2296,8 +2537,364 @@
         "gender": "boy"
       },
       "content_review": "approved-pre-art"
+    },
+    {
+      "id": "basketball",
+      "family": "sports",
+      "status": "ready",
+      "art": "installed",
+      "data": "basketball.json",
+      "label": {
+        "en": "Basketball",
+        "es": "Baloncesto"
+      },
+      "audience": "child",
+      "existing_dir": "basketball",
+      "art_dir": "basketball",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "orange basketball shirt, dark shorts",
+        "age": "child",
+        "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant. Same kit colours whole pack."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#C77830",
+        "accent": "#D06830",
+        "accent_name": "court orange",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 13,
+        "cards": 18
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "yoga",
+      "family": "sports",
+      "status": "ready",
+      "art": "installed",
+      "data": "yoga.json",
+      "label": {
+        "en": "Yoga",
+        "es": "Yoga"
+      },
+      "audience": "child",
+      "existing_dir": "yoga",
+      "art_dir": "yoga",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark with ponytail",
+        "clothes": "soft lavender top, grey leggings",
+        "age": "child",
+        "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant. Same outfit whole pack."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#C77830",
+        "accent": "#A894B0",
+        "accent_name": "calm lavender",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 13,
+        "cards": 18
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "fire-drill",
+      "family": "school-college",
+      "status": "ready",
+      "art": "installed",
+      "data": "fire-drill.json",
+      "label": {
+        "en": "Fire drill",
+        "es": "Simulacro de incendio"
+      },
+      "audience": "child",
+      "existing_dir": "fire-drill",
+      "art_dir": "fire-drill",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "school jumper, dark trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#5B6B8C",
+        "accent": "#D03860",
+        "accent_name": "alarm rose",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 10,
+        "cards": 16
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "changing-lessons",
+      "family": "school-college",
+      "status": "ready",
+      "art": "installed",
+      "data": "changing-lessons.json",
+      "label": {
+        "en": "Changing lessons",
+        "es": "Cambio de clase"
+      },
+      "audience": "child",
+      "existing_dir": "changing-lessons",
+      "art_dir": "changing-lessons",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark ponytail",
+        "clothes": "school jumper, dark skirt or trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#5B6B8C",
+        "accent": "#3D7EA6",
+        "accent_name": "corridor blue",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 10,
+        "cards": 15
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "hearing-test",
+      "family": "health-appointments",
+      "status": "ready",
+      "art": "installed",
+      "data": "hearing-test.json",
+      "label": {
+        "en": "Hearing test",
+        "es": "Prueba de audicion"
+      },
+      "audience": "child",
+      "existing_dir": "hearing-test",
+      "art_dir": "hearing-test",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft teal top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#7A8FA0",
+        "accent": "#5B9A8B",
+        "accent_name": "clinic teal",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 12,
+        "cards": 18
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "physiotherapy",
+      "family": "health-appointments",
+      "status": "ready",
+      "art": "installed",
+      "data": "physiotherapy.json",
+      "label": {
+        "en": "Physiotherapy",
+        "es": "Fisioterapia"
+      },
+      "audience": "child",
+      "existing_dir": "physiotherapy",
+      "art_dir": "physiotherapy",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark ponytail",
+        "clothes": "soft teal top, grey joggers",
+        "age": "child",
+        "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#7A8FA0",
+        "accent": "#3D7EA6",
+        "accent_name": "physio blue",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 6,
+        "actions": 12,
+        "cards": 19
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "bright-lights",
+      "family": "sensory-world",
+      "status": "ready",
+      "art": "installed",
+      "data": "bright-lights.json",
+      "label": {
+        "en": "Bright lights",
+        "es": "Luces fuertes"
+      },
+      "audience": "child",
+      "existing_dir": "bright-lights",
+      "art_dir": "bright-lights",
+      "character": {
+        "avatar_id": "C1",
+        "band": "child",
+        "gender": "boy",
+        "skin": "light-olive",
+        "hair": "short brown",
+        "clothes": "soft blue top, grey trousers",
+        "age": "child",
+        "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+      },
+      "design": {
+        "avatar_id": "C1",
+        "family_base": "#5B9A8B",
+        "accent": "#E8A840",
+        "accent_name": "glare amber",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 4,
+        "actions": 9,
+        "cards": 14
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
+    },
+    {
+      "id": "basic-first-aid",
+      "family": "emergency-help",
+      "status": "ready",
+      "art": "installed",
+      "data": "basic-first-aid.json",
+      "label": {
+        "en": "Basic first aid",
+        "es": "Primeros auxilios"
+      },
+      "audience": "child",
+      "existing_dir": "basic-first-aid",
+      "art_dir": "basic-first-aid",
+      "character": {
+        "avatar_id": "C2",
+        "band": "child",
+        "gender": "girl",
+        "skin": "medium-dark",
+        "hair": "dark ponytail",
+        "clothes": "soft coral top, navy trousers",
+        "age": "child",
+        "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant."
+      },
+      "design": {
+        "avatar_id": "C2",
+        "family_base": "#D03860",
+        "accent": "#5B8C7A",
+        "accent_name": "care green",
+        "outfit_lock": true
+      },
+      "counts": {
+        "items": 5,
+        "actions": 9,
+        "cards": 15
+      },
+      "architecture_wave": "wave2",
+      "content_review": "approved-pre-art"
     }
   ],
   "design_system": "data/design-system.json",
-  "architecture": "family-architecture.json"
+  "architecture": "family-architecture.json",
+  "legacy_redirects": {
+    "climbing-wow": "climbing",
+    "swimming-wow": "swimming",
+    "gym-activities": "gym",
+    "trampoline-wow": "trampoline",
+    "climbing-prep": "climbing",
+    "climbing-activity": "climbing",
+    "swimming-prep": "swimming",
+    "swimming-activity": "swimming",
+    "gym-prep": "gym",
+    "gym-activity": "gym",
+    "hiking-prep": "hiking",
+    "hiking-activity": "hiking",
+    "cycling-prep": "cycling",
+    "cycling-activity": "cycling",
+    "tennis-prep": "tennis",
+    "tennis-activity": "tennis",
+    "trampoline-prep": "trampoline",
+    "trampoline-activity": "trampoline",
+    "football-prep": "football",
+    "football-activity": "football",
+    "cycling-prep-hybrid": "cycling",
+    "tennis-prep-hybrid": "tennis"
+  },
+  "naming_convention": {
+    "sports_id": "{sport}",
+    "forbidden_suffixes_new": [
+      "-wow"
+    ],
+    "forbidden_new_sport_pairs": [
+      "{sport}-prep",
+      "{sport}-activity"
+    ],
+    "note": "One pack per sport; prep then session in one action sequence.",
+    "updated": "2026-08-14"
+  },
+  "wave1_high_demand": [
+    "football",
+    "washing-hands",
+    "public-toilet",
+    "at-the-optician"
+  ],
+  "wave2_high_demand": [
+    "basketball",
+    "yoga",
+    "fire-drill",
+    "changing-lessons",
+    "hearing-test",
+    "physiotherapy",
+    "bright-lights",
+    "basic-first-aid"
+  ]
 }

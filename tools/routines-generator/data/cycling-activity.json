@@ -1,0 +1,8 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "id": "cycling-activity",
+  "status": "redirect",
+  "redirect_to": "cycling",
+  "legacy_note": "Unified into cycling. Do not use for new art.",
+  "unified_at": "2026-08-14"
+}

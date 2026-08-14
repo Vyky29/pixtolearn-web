@@ -1,0 +1,164 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "crowded-places",
+  "family": "sensory-world",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "all",
+    "gender": "genderless",
+    "skin": "medium",
+    "hair": "short neutral",
+    "clothes": "soft teal sweater, grey trousers",
+    "age": "flexible",
+    "lock": "PRIMARY E1 genderless style. Same outfit entire pack."
+  },
+  "label": {
+    "en": "Crowded places",
+    "es": "Sitios llenos"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "crowded places",
+      "es": "sitios llenos"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "exit-sign",
+      "slug": "exit-sign",
+      "title": {
+        "en": "exit sign",
+        "es": "salida"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "queue-barrier",
+      "slug": "queue-barrier",
+      "title": {
+        "en": "queue barrier",
+        "es": "cinta de cola"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "backpack",
+      "slug": "backpack",
+      "title": {
+        "en": "backpack",
+        "es": "mochila"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "cascos"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "notice-crowd",
+      "slug": "notice-crowd",
+      "title": {
+        "en": "notice crowd",
+        "es": "notar la gente"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "hold-strap",
+      "slug": "hold-strap",
+      "title": {
+        "en": "hold bag strap",
+        "es": "agarrar la correa"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stand-at-edge",
+      "slug": "stand-at-edge",
+      "title": {
+        "en": "stand at the edge",
+        "es": "quedarse al borde"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "shorter-visit",
+      "slug": "shorter-visit",
+      "title": {
+        "en": "shorter visit",
+        "es": "visita mas corta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-to-exit",
+      "slug": "go-to-exit",
+      "title": {
+        "en": "go to exit",
+        "es": "ir a la salida"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 6,
+    "cards": 11
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#5B9A8B",
+    "accent": "#D03860",
+    "accent_name": "civic rose",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "No person objects. Crowd density shown via actions + place cues."
+  ]
+}

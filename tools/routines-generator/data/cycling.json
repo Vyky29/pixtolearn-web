@@ -1,0 +1,272 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.7-unified",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "cycling",
+  "family": "sports",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #E8B020 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Cycling",
+    "es": "Ciclismo"
+  },
+  "existing_dir": "cycling-prep",
+  "art_dir": "cycling-prep",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "cycling",
+      "es": "ciclismo"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "bicycle",
+      "slug": "bicycle",
+      "title": {
+        "en": "bike",
+        "es": "bici"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "helmet",
+      "slug": "helmet",
+      "title": {
+        "en": "helmet",
+        "es": "casco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bike-lock",
+      "slug": "bike-lock",
+      "title": {
+        "en": "bike lock",
+        "es": "candado"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "put-helmet-gloves",
+      "slug": "put-helmet-gloves",
+      "title": {
+        "en": "helmet on",
+        "es": "poner casco"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-bike",
+      "slug": "check-bike",
+      "title": {
+        "en": "check bike",
+        "es": "revisar bici"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-both-ways",
+      "slug": "look-both-ways",
+      "title": {
+        "en": "look both ways",
+        "es": "mirar lados"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "start-pedalling",
+      "slug": "start-pedalling",
+      "title": {
+        "en": "pedal",
+        "es": "pedalear"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "signal-turn",
+      "slug": "signal-turn",
+      "title": {
+        "en": "signal turn",
+        "es": "se\u00f1alizar giro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stop-lights",
+      "slug": "stop-lights",
+      "title": {
+        "en": "stop at lights",
+        "es": "parar semaforo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ring-bell",
+      "slug": "ring-bell",
+      "title": {
+        "en": "ring bell",
+        "es": "tocar timbre"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ride-path",
+      "slug": "ride-path",
+      "title": {
+        "en": "ride path",
+        "es": "ir por camino"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "park-bike",
+      "slug": "park-bike",
+      "title": {
+        "en": "park bike",
+        "es": "aparcar bici"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "lock-bike",
+      "slug": "lock-bike",
+      "title": {
+        "en": "lock bike",
+        "es": "candado"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 11,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#C77830",
+    "accent": "#E8B020",
+    "accent_name": "bike yellow",
+    "highlight": "helmet / look / signal / park",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "notes": [
+    "Unified sports pack: prep then session in one sequence.",
+    "Gender via casts where available."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "bicycle"
+    },
+    {
+      "kind": "object",
+      "id": "helmet"
+    },
+    {
+      "kind": "object",
+      "id": "bike-lock"
+    },
+    {
+      "kind": "object",
+      "id": "water-bottle"
+    },
+    {
+      "kind": "action",
+      "id": "put-helmet-gloves"
+    },
+    {
+      "kind": "action",
+      "id": "check-bike"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "look-both-ways"
+    },
+    {
+      "kind": "action",
+      "id": "start-pedalling"
+    },
+    {
+      "kind": "action",
+      "id": "signal-turn"
+    },
+    {
+      "kind": "action",
+      "id": "stop-lights"
+    },
+    {
+      "kind": "action",
+      "id": "ring-bell"
+    },
+    {
+      "kind": "action",
+      "id": "ride-path"
+    },
+    {
+      "kind": "action",
+      "id": "park-bike"
+    },
+    {
+      "kind": "action",
+      "id": "lock-bike"
+    }
+  ],
+  "unified_from": [
+    "cycling-prep",
+    "cycling-activity"
+  ],
+  "unified_at": "2026-08-14",
+  "art": "installed"
+}

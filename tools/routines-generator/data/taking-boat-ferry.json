@@ -1,0 +1,411 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "taking-boat-ferry",
+  "family": "safety-mobility",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T2",
+    "band": "teen",
+    "gender": "woman",
+    "skin": "light",
+    "hair": "shoulder-length brown",
+    "clothes": "teal jacket, orange scarf, navy trousers",
+    "age": "teen",
+    "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #2A8A9A highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Boat / ferry",
+    "es": "Barco / ferry"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "ferry",
+      "es": "ferry"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "boat-ticket",
+      "slug": "boat-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "life-jacket",
+      "slug": "life-jacket",
+      "title": {
+        "en": "life jacket",
+        "es": "chaleco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "boarding-pass",
+      "slug": "boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "ferry-map",
+      "slug": "ferry-map",
+      "title": {
+        "en": "deck map",
+        "es": "mapa"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "show-ticket",
+      "slug": "show-ticket",
+      "title": {
+        "en": "show ticket",
+        "es": "mostrar billete"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-dock",
+      "slug": "wait-dock",
+      "title": {
+        "en": "wait at dock",
+        "es": "esperar muelle"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-life-jacket",
+      "slug": "put-life-jacket",
+      "title": {
+        "en": "life jacket on",
+        "es": "poner chaleco"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board",
+      "slug": "board",
+      "title": {
+        "en": "board",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-cabin",
+      "slug": "find-cabin",
+      "title": {
+        "en": "find cabin",
+        "es": "buscar camarote"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-safety",
+      "slug": "listen-safety",
+      "title": {
+        "en": "listen safety",
+        "es": "escuchar seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-rail",
+      "slug": "hold-rail",
+      "title": {
+        "en": "hold rail",
+        "es": "sujetar barandilla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-out",
+      "slug": "look-out",
+      "title": {
+        "en": "look out",
+        "es": "mirar el mar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "disembark",
+      "slug": "disembark",
+      "title": {
+        "en": "get off",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "feel-wobbly",
+      "slug": "feel-wobbly",
+      "title": {
+        "en": "feel wobbly",
+        "es": "mareo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-inside",
+      "slug": "sit-inside",
+      "title": {
+        "en": "sit inside",
+        "es": "sentarse dentro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-horn",
+      "slug": "loud-horn",
+      "title": {
+        "en": "loud horn",
+        "es": "bocina"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "ferry",
+        "es": "ferry"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "boat-ticket",
+      "slug": "boat-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "life-jacket",
+      "slug": "life-jacket",
+      "title": {
+        "en": "life jacket",
+        "es": "chaleco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "boarding-pass",
+      "slug": "boarding-pass",
+      "title": {
+        "en": "boarding pass",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "ferry-map",
+      "slug": "ferry-map",
+      "title": {
+        "en": "deck map",
+        "es": "mapa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "show-ticket",
+      "slug": "show-ticket",
+      "title": {
+        "en": "show ticket",
+        "es": "mostrar billete"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-dock",
+      "slug": "wait-dock",
+      "title": {
+        "en": "wait at dock",
+        "es": "esperar muelle"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-life-jacket",
+      "slug": "put-life-jacket",
+      "title": {
+        "en": "life jacket on",
+        "es": "poner chaleco"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board",
+      "slug": "board",
+      "title": {
+        "en": "board",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-cabin",
+      "slug": "find-cabin",
+      "title": {
+        "en": "find cabin",
+        "es": "buscar camarote"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-safety",
+      "slug": "listen-safety",
+      "title": {
+        "en": "listen safety",
+        "es": "escuchar seguridad"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-rail",
+      "slug": "hold-rail",
+      "title": {
+        "en": "hold rail",
+        "es": "sujetar barandilla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-out",
+      "slug": "look-out",
+      "title": {
+        "en": "look out",
+        "es": "mirar el mar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "disembark",
+      "slug": "disembark",
+      "title": {
+        "en": "get off",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "feel-wobbly",
+      "slug": "feel-wobbly",
+      "title": {
+        "en": "feel wobbly",
+        "es": "mareo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-inside",
+      "slug": "sit-inside",
+      "title": {
+        "en": "sit inside",
+        "es": "sentarse dentro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-horn",
+      "slug": "loud-horn",
+      "title": {
+        "en": "loud horn",
+        "es": "bocina"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 13,
+    "cards": 20
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "T2",
+    "family_base": "#3D7EA6",
+    "accent": "#2A8A9A",
+    "accent_name": "sea teal",
+    "highlight": "sea / life jacket / rail / ticket",
+    "outfit_lock": true
+  }
+}

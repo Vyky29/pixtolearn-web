@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PixtoLearn WOW Routines - Master plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--ink:#1a2a32;--muted:#5a6d76;--line:#d7e2e6;--bg:#f4f8f9;--card:#fff;--accent:#2f6b4f;--plus:#c77830;--premium:#3d7ea6}
+*{box-sizing:border-box}body{margin:0;font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:radial-gradient(900px 400px at 10% -10%,#d9efe8,transparent 55%),radial-gradient(700px 360px at 100% 0%,#dceaf3,transparent 50%),var(--bg);line-height:1.5}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque",sans-serif;line-height:1.15;margin:0 0 .5rem}a{color:var(--accent)}
+.wrap{width:min(1100px,calc(100% - 2rem));margin:0 auto}
+header.hero{padding:2.5rem 0 1.5rem;border-bottom:1px solid var(--line)}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:700;color:var(--muted)}
+.lede{color:var(--muted);font-size:1.05rem;max-width:62ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:1.25rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem}
+.stat b{display:block;font-size:1.6rem;font-family:"Bricolage Grotesque",sans-serif}
+.stat span{color:var(--muted);font-size:.85rem}
+nav.toc{position:sticky;top:0;z-index:5;background:rgba(244,248,249,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:.65rem 0}
+nav.toc ul{display:flex;flex-wrap:wrap;gap:.5rem .85rem;list-style:none;margin:0;padding:0;font-size:.86rem}
+section{padding:2rem 0 .5rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;margin:0 0 1rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.price{font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;font-weight:800;margin:.35rem 0 .6rem}
+.badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.2rem .45rem;border-radius:999px;margin-right:.25rem}
+.badge-free{background:#d8f0e6;color:#1f5c45}.badge-plus{background:#f7e5d0;color:#7a4510}.badge-premium{background:#d7e8f4;color:#1f4f6d}
+.badge-proposed{background:#ebe4f0;color:#4a3a58}.badge-ready{background:#e2f2ea;color:#21553d}
+.badge-prep{background:#fff0e0;color:#8a4b12}.badge-activity{background:#fde8dc;color:#8a3a12}
+ul.clean{margin:.4rem 0 0;padding-left:1.1rem}
+.note{color:var(--muted);font-size:.9rem}
+.decision{border-left:3px solid var(--plus);padding-left:.85rem;margin:.7rem 0}
+.phase{display:grid;grid-template-columns:90px 1fr;gap:.75rem;margin:.7rem 0}
+.phase .num{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;background:#e8f2ee;color:var(--accent);border-radius:10px;text-align:center;padding:.55rem .3rem;height:fit-content}
+.fam-head{display:flex;align-items:center;gap:.65rem;margin:1.5rem 0 .75rem;padding-bottom:.4rem;border-bottom:2px solid var(--line)}
+.swatch{width:14px;height:14px;border-radius:4px;flex:none}
+details.routine{border:1px solid var(--line);border-radius:12px;background:var(--card);margin:0 0 .55rem;overflow:hidden}
+details.routine>summary{cursor:pointer;list-style:none;padding:.75rem 1rem;display:flex;flex-wrap:wrap;gap:.4rem .7rem;align-items:center;font-weight:600}
+details.routine>summary::-webkit-details-marker{display:none}
+details.routine[open]>summary{border-bottom:1px solid var(--line)}
+.meta{font-weight:500;color:var(--muted);font-size:.82rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 1rem 1rem}
+.cols h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:.35rem}
+ol.steps,ul.objs{margin:0;padding-left:1.15rem;font-size:.92rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.85rem}
+@media(max-width:860px){.stats,.grid-3,.cols{grid-template-columns:1fr}.phase{grid-template-columns:1fr}}
+</style></head><body>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow">PixtoLearn internal · 14 Aug 2026 · unified sports</p>
+<h1>WOW Routines: mapa maestro</h1>
+<p class="lede">Catalogue con familia unica <strong>sports</strong> (un pack por deporte). Naming lock en <a href="wow-naming-and-sports-split.html">wow-naming-and-sports-split.html</a>.</p>
+<div class="stats">
+<div class="stat"><b>72</b><span>Rutinas catalogue</span></div>
+<div class="stat"><b>119</b><span>Propuestas</span></div>
+<div class="stat"><b>7</b><span>Pares prep+activity shipped</span></div>
+<div class="stat"><b>13</b><span>Familias en index</span></div>
+</div></div></header>
+<nav class="toc"><div class="wrap"><ul>
+<li><a href="#split">Sports unificados</a></li>
+<li><a href="#membresias">Membresias</a></li>
+<li><a href="#decisiones">Decisiones</a></li>
+<li><a href="#expansion">Expansion</a></li>
+<li><a href="#rutinas">Rutinas</a></li>
+</ul></div></nav>
+
+<section id="split"><div class="wrap">
+<h2>1. Prep vs Activities (lock)</h2>
+<div class="card">
+<p><strong>sports (secuencia completa):</strong> kit, arrive, change, safety, wait, <em>ready</em>. Sin deporte en si.</p>
+<p><strong>sports:</strong> warm-up + acciones del deporte + finish/exit. Grain WOW corto.</p>
+<p><strong>Skill decks</strong> (Climbing/Swimming/ABC…): producto aparte. Nunca <code>-prep</code> ni <code>-wow</code>.</p>
+<p class="note">Legacy: climbing-wow, swimming-wow, gym-activities, hiking, trampoline-wow -> redirects a pares. Sufijo <code>-wow</code> prohibido en packs nuevos.</p>
+</div></div></section>
+
+<section id="membresias"><div class="wrap"><h2>2. Membresias</h2>
+<div class="grid-3">
+<article class="card"><span class="badge badge-free">Free</span><h3>Free</h3><div class="price">£0</div>
+<ul class="clean"><li>Brushing, Shower, Core</li><li>Skill starters ABC/Football/Yoga</li><li>Focus sin timers</li></ul></article>
+<article class="card"><span class="badge badge-plus">Plus</span><h3>Plus</h3><div class="price">£7-12 / mo</div>
+<ul class="clean"><li>Self-care + emotions</li><li>Sensory, emergency, eating-out</li></ul></article>
+<article class="card"><span class="badge badge-premium">Premium</span><h3>Premium</h3><div class="price">From £19 / mo</div>
+<ul class="clean"><li>Travel, public, mobility</li><li>Health</li><li>Sports prep + sports activities</li></ul></article>
+</div></div></section>
+
+<section id="decisiones"><div class="wrap"><h2>3. Decisiones</h2><div class="card">
+<div class="decision"><strong>D1.</strong> Parents free|plus vs web Free/Plus/Premium.</div>
+<div class="decision"><strong>D2.</strong> Precios Stripe.</div>
+<div class="decision"><strong>D3.</strong> Intimate-care / funeral restricted.</div>
+<div class="decision"><strong>D4.</strong> School/money: Plus o Premium.</div>
+<div class="decision"><strong>D5.</strong> Remap Situation Stories linked_routines a IDs nuevos.</div>
+<div class="decision"><strong>D6.</strong> Un pack por fe/contexto.</div>
+</div></div></section>
+<section id="expansion"><div class="wrap"><h2>4. Expansion</h2><div class="phase card"><div class="num">A</div><div><h3>A - taxonomy lock</h3><p class="note">Families + planned stubs + pack specs</p><ul class="clean"><li>family-architecture.json</li><li>routines.json families p1 + planned packs</li><li>spec-ready JSON for 14 p1 packs</li></ul></div></div><div class="phase card"><div class="num">B</div><div><h3>B - art p1</h3><p class="note">Artwork for p1 packs</p><ul class="clean"><li>trampoline-wow art</li><li>sensory-world art</li><li>health-appointments art</li><li>eating-out + emergency-help art</li></ul></div></div><div class="phase card"><div class="num">C</div><div><h3>C - stories align</h3><p class="note">Situation Stories handoff to shipped WOW only</p><ul class="clean"><li>Remap catalogue linked_routines</li><li>Ship stories where WOW art is ready</li></ul></div></div><div class="phase card"><div class="num">D</div><div><h3>D0 - sports naming split</h3><p class="note">Lock prep vs activity; split hybrid packs; retire -wow ids</p><ul class="clean"><li>family sports</li><li>7 sports split into prep + activity</li><li>naming-governance.json + docs HTML</li><li>legacy redirects for -wow hybrids</li></ul></div></div><div class="phase card"><div class="num">E</div><div><h3>D - p2</h3><p class="note">school-college + money + health extras + sports team</p><ul class="clean"><li>school-college family</li><li>money-and-shopping family</li><li>optician, hearing, physio, x-ray-or-scan</li><li>football/basket/yoga prep + activity pairs</li><li>public-toilet</li><li>washing-hands</li></ul></div></div><div class="phase card"><div class="num">F</div><div><h3>E - p3 scale</h3><p class="note">life-events + adventure sports + weather-seasons + home-living</p><ul class="clean"><li>life-events family (church, mosque, funeral, wedding first)</li><li>skiing/surfing/snorkelling prep + activity pairs</li><li>weather-seasons family + fireworks / back-to-school</li><li>named seasonal bundles in catalogue UI</li><li>home-living first five packs</li><li>work-experience after school-college demand</li></ul></div></div></div></section>
+<section id="rutinas"><div class="wrap">
+<h2>5. Todas las rutinas</h2>
+<p class="lede"><span class="badge badge-ready">existing</span> <span class="badge badge-proposed">proposed</span> <span class="badge badge-prep">prep</span> <span class="badge badge-activity">activity</span></p>
+<div class="fam-head" id="fam-core"><span class="swatch" style="background:#CBCBC9"></span><h3>Core vocabulary <span class="meta">(core) · 1</span></h3></div><details class="routine"><summary>Core vocabulary · Vocabulario esencial
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-free">free</span>
+<span class="meta">25 objects · 0 actions · core</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>wash hands / lavar manos</li><li>toilet / aseo</li><li>eat / comer</li><li>drink / beber</li><li>listen / escuchar</li><li>look / mirar</li><li>speak / hablar</li><li>quiet / silencio</li><li>wait / esperar</li><li>stand / de pie</li><li>sit down / sentarse</li><li>walk / caminar</li><li>hold hands / coger mano</li><li>help / ayuda</li><li>get / coger</li><li>put / poner</li><li>give / dar</li><li>yes / si</li><li>no</li><li>stop / parar</li><li>choose / elegir</li><li>more / mas</li><li>break / descanso</li><li>finish / terminar</li><li>well done / muy bien</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li class='note'>(sin secuencia)</li></ol></div></div></details><div class="fam-head" id="fam-self-care"><span class="swatch" style="background:#5B8C7A"></span><h3>Self-care <span class="meta">(self-care) · 11</span></h3></div><details class="routine"><summary>Brushing teeth · Cepillarse los dientes
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-free">free</span>
+<span class="meta">10 objects · 11 actions · brushing-teeth</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>toothbrush / cepillo</li><li>toothpaste / pasta</li><li>cup / vaso</li><li>tap / grifo</li><li>towel / toalla</li><li>tooth holder / soporte</li><li>mouth / boca</li><li>top teeth / dientes arriba</li><li>bottom teeth / dientes abajo</li><li>tongue / lengua</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>get brush / coger cepillo</li><li>put toothpaste / poner pasta</li><li>wet brush / mojar cepillo</li><li>brush top / cepillar arriba</li><li>brush bottom / cepillar abajo</li><li>brush tongue / cepillar lengua</li><li>fill cup / llenar vaso</li><li>rinse mouth / enjuagar</li><li>spit / escupir</li><li>wipe mouth / secar boca</li><li>put away / guardar</li></ol></div></div></details><details class="routine"><summary>Clothes (boy) · Ropa (nino)
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">15 objects · 30 actions · clothes-boy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>pants / calzoncillos</li><li>socks / calcetines</li><li>trousers / pantalon</li><li>t-shirt / camiseta</li><li>shirt / camisa</li><li>vest / camiseta interior</li><li>jumper / jersey</li><li>jacket / chaqueta</li><li>scarf / bufanda</li><li>gloves / guantes</li><li>hat / gorro</li><li>cap / gorra</li><li>shoes / zapatos</li><li>trainers / zapatillas</li><li>trunks / banador</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pants on / poner calzoncillos</li><li>socks on / poner calcetines</li><li>trousers on / poner pantalon</li><li>t-shirt on / poner camiseta</li><li>shirt on / poner camisa</li><li>vest on / poner interior</li><li>jumper on / poner jersey</li><li>jacket on / poner chaqueta</li><li>scarf on / poner bufanda</li><li>gloves on / poner guantes</li><li>hat on / poner gorro</li><li>cap on / poner gorra</li><li>shoes on / poner zapatos</li><li>trainers on / poner zapatillas</li><li>trunks on / poner banador</li><li>trainers off / quitar zapatillas</li><li>shoes off / quitar zapatos</li><li>cap off / quitar gorra</li><li>hat off / quitar gorro</li><li>gloves off / quitar guantes</li><li>scarf off / quitar bufanda</li><li>jacket off / quitar chaqueta</li><li>jumper off / quitar jersey</li><li>vest off / quitar interior</li><li>shirt off / quitar camisa</li><li>t-shirt off / quitar camiseta</li><li>trousers off / quitar pantalon</li><li>socks off / quitar calcetines</li><li>trunks off / quitar banador</li><li>pants off / quitar calzoncillos</li></ol></div></div></details><details class="routine"><summary>Clothes (girl) · Ropa (nina)
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">17 objects · 34 actions · clothes-girl</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>knickers / bragas</li><li>socks / calcetines</li><li>trousers / pantalon</li><li>skirt / falda</li><li>t-shirt / camiseta</li><li>shirt / camisa</li><li>vest / camiseta interior</li><li>bra / sujetador</li><li>jumper / jersey</li><li>jacket / chaqueta</li><li>scarf / bufanda</li><li>gloves / guantes</li><li>hat / gorro</li><li>cap / gorra</li><li>shoes / zapatos</li><li>trainers / zapatillas</li><li>swimsuit / banador</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>knickers on / poner bragas</li><li>socks on / poner calcetines</li><li>trousers on / poner pantalon</li><li>skirt on / poner falda</li><li>vest on / poner interior</li><li>bra on / poner sujetador</li><li>t-shirt on / poner camiseta</li><li>shirt on / poner camisa</li><li>jumper on / poner jersey</li><li>jacket on / poner chaqueta</li><li>scarf on / poner bufanda</li><li>gloves on / poner guantes</li><li>hat on / poner gorro</li><li>cap on / poner gorra</li><li>shoes on / poner zapatos</li><li>trainers on / poner zapatillas</li><li>swimsuit on / poner banador</li><li>trainers off / quitar zapatillas</li><li>shoes off / quitar zapatos</li><li>cap off / quitar gorra</li><li>hat off / quitar gorro</li><li>gloves off / quitar guantes</li><li>scarf off / quitar bufanda</li><li>jacket off / quitar chaqueta</li><li>jumper off / quitar jersey</li><li>shirt off / quitar camisa</li><li>t-shirt off / quitar camiseta</li><li>bra off / quitar sujetador</li><li>vest off / quitar interior</li><li>skirt off / quitar falda</li><li>trousers off / quitar pantalon</li><li>socks off / quitar calcetines</li><li>swimsuit off / quitar banador</li><li>knickers off / quitar bragas</li></ol></div></div></details><details class="routine"><summary>Foot care · Cuidado de los pies
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">7 objects · 7 actions · foot-care</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>basin / palangana</li><li>soap / jabon</li><li>pumice / piedra pomez</li><li>nail clippers / cortaunas</li><li>foot lotion / crema pies</li><li>towel / toalla</li><li>socks / calcetines</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>soak feet / remojar pies</li><li>scrub feet / lavar pies</li><li>use pumice / piedra pomez</li><li>trim toenails / cortar unas</li><li>dry feet / secar pies</li><li>foot lotion / crema pies</li><li>socks on / poner calcetines</li></ol></div></div></details><details class="routine"><summary>Haircare · Cuidado del cabello
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">9 objects · 10 actions · haircare</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>shampoo / champu</li><li>conditioner / acondicionador</li><li>towel / toalla</li><li>comb / peine</li><li>hairbrush / cepillo</li><li>hair dryer / secador</li><li>hair clips / pinzas</li><li>hair gel / gel</li><li>mirror / espejo</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wet hair / mojar pelo</li><li>apply shampoo / poner champu</li><li>rinse shampoo / aclarar champu</li><li>apply conditioner / poner acondicionador</li><li>rinse conditioner / aclarar acondicionador</li><li>comb hair / peinar</li><li>towel dry / secar toalla</li><li>blow dry / secar secador</li><li>apply gel / poner gel</li><li>brush hair / cepillar pelo</li></ol></div></div></details><details class="routine"><summary>Nail care · Cuidado de las unas
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 5 actions · nail-care</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>nail clippers / cortaunas</li><li>nail file / lima</li><li>hand lotion / crema manos</li><li>towel / toalla</li><li>bin / papelera</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wash hands / lavar manos</li><li>trim nails / cortar unas</li><li>file nails / limar unas</li><li>moisturise / hidratar</li><li>bin clippings / tirar recortes</li></ol></div></div></details><details class="routine"><summary>Shaving · Afeitarse
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">6 objects · 9 actions · shaving</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>razor / maquinilla</li><li>shaving cream / crema afeitar</li><li>towel / toalla</li><li>mirror / espejo</li><li>sink / lavabo</li><li>aftershave</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wet face / mojar cara</li><li>apply cream / poner crema</li><li>shave sides / afeitar lados</li><li>shave chin / afeitar barbilla</li><li>shave neck / afeitar cuello</li><li>rinse razor / aclarar maquinilla</li><li>wipe face / secar cara</li><li>apply aftershave / poner aftershave</li><li>clean up / limpiar</li></ol></div></div></details><details class="routine"><summary>Shower · Ducha
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-free">free</span>
+<span class="meta">9 objects · 12 actions · shower</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>shower / ducha</li><li>sponge / esponja</li><li>shampoo / champu</li><li>conditioner / acondicionador</li><li>towel / toalla</li><li>comb / peine</li><li>hair dryer / secador</li><li>gel</li><li>body lotion / crema</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wet body / mojar cuerpo</li><li>wash body / lavar cuerpo</li><li>rinse body / aclarar cuerpo</li><li>squeeze shampoo / echar champu</li><li>wash hair / lavar pelo</li><li>rinse hair / aclarar pelo</li><li>squeeze conditioner / echar acondicionador</li><li>rinse conditioner / enjuagar acondicionador</li><li>dry body / secar cuerpo</li><li>dry hair / secar pelo</li><li>brush hair / peinar</li><li>hydrate body / hidratar</li></ol></div></div></details><details class="routine"><summary>Using the toilet (boy) · Usar el aseo (nino)
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 15 actions · using-the-toilet-boy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>toilet paper / papel</li><li>toilet seat / asiento</li><li>hand soap / jabon</li><li>towel / toalla</li><li>bin / papelera</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>open door / abrir puerta</li><li>trousers down / bajar pantalon</li><li>pants down / bajar ropa interior</li><li>sit down / sentarse</li><li>wee / pis</li><li>poo / caca</li><li>use paper / usar papel</li><li>wipe / limpiarse</li><li>stand up / levantarse</li><li>pants up / subir ropa interior</li><li>trousers up / subir pantalon</li><li>flush / tirar cadena</li><li>wash hands / lavar manos</li><li>dry hands / secar manos</li><li>close door / cerrar puerta</li></ol></div></div></details><details class="routine"><summary>Using the toilet (girl) · Usar el aseo (nina)
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 15 actions · using-the-toilet-girl</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>toilet paper / papel</li><li>toilet seat / asiento</li><li>hand soap / jabon</li><li>towel / toalla</li><li>bin / papelera</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>open door / abrir puerta</li><li>trousers or skirt down / bajar pantalon o falda</li><li>pants down / bajar ropa interior</li><li>sit down / sentarse</li><li>wee / pis</li><li>poo / caca</li><li>use paper / usar papel</li><li>wipe / limpiarse</li><li>stand up / levantarse</li><li>pants up / subir ropa interior</li><li>trousers or skirt up / subir pantalon o falda</li><li>flush / tirar cadena</li><li>wash hands / lavar manos</li><li>dry hands / secar manos</li><li>close door / cerrar puerta</li></ol></div></div></details><details class="routine"><summary>washing hands
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 10 actions · washing-hands</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>soap</li><li>tap</li><li>sink</li><li>towel or dryer</li><li>bin</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>go to sink</li><li>turn tap on</li><li>wet hands</li><li>soap on</li><li>rub palms</li><li>rub between fingers</li><li>rinse</li><li>tap off</li><li>dry hands</li><li>finish</li></ol></div></div></details><div class="fam-head" id="fam-intimate-care"><span class="swatch" style="background:#A894B0"></span><h3>Intimate care <span class="meta">(intimate-care) · 3</span></h3></div><details class="routine"><summary>Masturbation (female) · Masturbacion (mujer)
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 11 actions · intimate-care-female</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>closed door / puerta cerrada</li><li>lubricant / lubricante</li><li>towel / toalla</li><li>hand soap / jabon</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>private space / espacio privado</li><li>close door / cerrar puerta</li><li>wash hands / lavar manos</li><li>sit or lie / sentarse</li><li>apply lubricant / poner lubricante</li><li>touch vulva / tocar vulva</li><li>gentle movement / mover suave</li><li>climax finish / orgasmo</li><li>clean up / limpiar</li><li>wash hands / lavar manos</li><li>get dressed / vestirse</li></ol></div></div></details><details class="routine"><summary>Masturbation (male) · Masturbacion (hombre)
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 11 actions · intimate-care-male</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>closed door / puerta cerrada</li><li>lubricant / lubricante</li><li>towel / toalla</li><li>hand soap / jabon</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>private space / espacio privado</li><li>close door / cerrar puerta</li><li>wash hands / lavar manos</li><li>sit or lie / sentarse</li><li>apply lubricant / poner lubricante</li><li>touch penis / tocar pene</li><li>gentle movement / mover suave</li><li>ejaculate / eyacular</li><li>clean up / limpiar</li><li>wash hands / lavar manos</li><li>get dressed / vestirse</li></ol></div></div></details><details class="routine"><summary>Menstrual hygiene · Higiene menstrual
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">9 objects · 9 actions · menstrual-hygiene</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>pad / compresa</li><li>tampon</li><li>menstrual cup / copa menstrual</li><li>toilet paper / papel</li><li>hand soap / jabon</li><li>towel / toalla</li><li>plastic bag / bolsa</li><li>underwear / ropa interior</li><li>bin / papelera</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wash hands first / lavar manos primero</li><li>choose product / elegir producto</li><li>put pad on / poner compresa</li><li>put tampon / poner tampon</li><li>put menstrual cup / poner copa</li><li>wipe front to back / limpiar delante atras</li><li>bag and bin / bolsa y papelera</li><li>clean underwear / ropa interior limpia</li><li>wash hands again / lavar manos otra vez</li></ol></div></div></details><div class="fam-head" id="fam-emotions"><span class="swatch" style="background:#E8A840"></span><h3>Emotions <span class="meta">(emotions) · 9</span></h3></div><details class="routine"><summary>Angry · Enfadado
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-angry</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>angry / enfado</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>squeeze pillow / apretar almohada</li><li>step away / alejarse</li></ol></div></div></details><details class="routine"><summary>Calm · Tranquilo
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-calm</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>calm / calma</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>slow breath / respirar lento</li><li>still hands / manos quietas</li></ol></div></div></details><details class="routine"><summary>Emotions pack · Pack emociones
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">8 objects · 16 actions · emotions-hub</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>happy / feliz</li><li>calm / calma</li><li>excited / emocion</li><li>worried / preocupacion</li><li>sad / triste</li><li>tired / cansancio</li><li>angry / enfado</li><li>frustrated / frustracion</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>share smile / compartir sonrisa</li><li>celebrate / celebrar</li><li>slow breath / respirar lento</li><li>still hands / manos quietas</li><li>big moves / mover energia</li><li>settle count / contar y calmar</li><li>ask for help / pedir ayuda</li><li>hold comfort / coger consuelo</li><li>ask for hug / pedir abrazo</li><li>use comfort / usar consuelo</li><li>lie down / tumbarse</li><li>go to sleep / dormir</li><li>squeeze pillow / apretar almohada</li><li>step away / alejarse</li><li>pause break / hacer pausa</li><li>try later / probar luego</li></ol></div></div></details><details class="routine"><summary>Excited · Emocionado
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-excited</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>excited / emocion</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>big moves / mover energia</li><li>settle count / contar y calmar</li></ol></div></div></details><details class="routine"><summary>Frustrated · Frustrado
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-frustrated</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>frustrated / frustracion</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pause break / hacer pausa</li><li>try later / probar luego</li></ol></div></div></details><details class="routine"><summary>Happy · Feliz
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-happy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>happy / feliz</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>share smile / compartir sonrisa</li><li>celebrate / celebrar</li></ol></div></div></details><details class="routine"><summary>Sad · Triste
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-sad</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>sad / triste</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>ask for hug / pedir abrazo</li><li>use comfort / usar consuelo</li></ol></div></div></details><details class="routine"><summary>Tired · Cansado
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-tired</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>tired / cansancio</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>lie down / tumbarse</li><li>go to sleep / dormir</li></ol></div></div></details><details class="routine"><summary>Worried · Preocupado
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">1 objects · 2 actions · emotion-worried</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>worried / preocupacion</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>ask for help / pedir ayuda</li><li>hold comfort / coger consuelo</li></ol></div></div></details><div class="fam-head" id="fam-safety-mobility"><span class="swatch" style="background:#3D7EA6"></span><h3>Safety and mobility <span class="meta">(safety-mobility) · 7</span></h3></div><details class="routine"><summary>Boat / ferry · Barco / ferry
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 13 actions · taking-boat-ferry</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket / billete</li><li>life jacket / chaleco</li><li>boarding pass / tarjeta</li><li>luggage / maleta</li><li>water bottle / botella</li><li>deck map / mapa</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>show ticket / mostrar billete</li><li>wait at dock / esperar muelle</li><li>life jacket on / poner chaleco</li><li>board / subir</li><li>find cabin / buscar camarote</li><li>find seat / buscar asiento</li><li>listen safety / escuchar seguridad</li><li>hold rail / sujetar barandilla</li><li>look out / mirar el mar</li><li>get off / bajar</li><li>feel wobbly / mareo</li><li>sit inside / sentarse dentro</li><li>loud horn / bocina</li></ol></div></div></details><details class="routine"><summary>Crossing the road · Cruzar la calle
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">3 objects · 9 actions · crossing-the-road</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>traffic lights / semaforo</li><li>green man / hombre verde</li><li>crossing / paso peatones</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wait / esperar</li><li>look both ways / mirar lados</li><li>check lights / mirar semaforo</li><li>cross safely / cruzar seguro</li><li>cross road / cruzar</li><li>other side / otro lado</li><li>hold hand / coger mano</li><li>stop at kerb / parar en bordillo</li><li>listen cars / escuchar coches</li></ol></div></div></details><details class="routine"><summary>Taking a plane · Coger un avion
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 16 actions · taking-a-plane</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>passport / pasaporte</li><li>ticket / billete</li><li>boarding pass / tarjeta embarque</li><li>seatbelt / cinturon</li><li>headphones / auriculares</li><li>book / libro</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive airport / llegar</li><li>check in / facturar</li><li>security / seguridad</li><li>board / embarcar</li><li>take seat / sentarse</li><li>seatbelt on / cinturon</li><li>listen safety / escuchar seguridad</li><li>look out / mirar fuera</li><li>read / leer</li><li>watch movie / ver pelicula</li><li>listen music / escuchar musica</li><li>sleep / dormir</li><li>leave plane / bajar</li><li>get luggage / recoger maleta</li><li>ear pressure / oidos</li><li>turbulence sit / turbulencia</li></ol></div></div></details><details class="routine"><summary>Taking a taxi · Coger un taxi
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">3 objects · 11 actions · taking-a-taxi</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>taxi app / app taxi</li><li>seatbelt / cinturon</li><li>payment / pago</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>book taxi / pedir taxi</li><li>wait for taxi / esperar taxi</li><li>confirm driver / confirmar conductor</li><li>get in / subir</li><li>say address / decir direccion</li><li>seatbelt on / cinturon</li><li>pay / pagar</li><li>tip optional / propina opcional</li><li>thank driver / agradecer</li><li>get out / bajar</li><li>noisy traffic / trafico ruidoso</li></ol></div></div></details><details class="routine"><summary>Taking the bus · Coger el autobus
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">3 objects · 11 actions · taking-the-bus</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bus pass / abono</li><li>bus stop / parada</li><li>bag / mochila</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wait at stop / esperar parada</li><li>show pass / mostrar abono</li><li>get on / subir</li><li>find seat / buscar asiento</li><li>sit down / sentarse</li><li>press stop / pulsar parada</li><li>get off / bajar</li><li>crowded bus / bus lleno</li><li>loud bus / bus ruidoso</li><li>offer seat / ceder asiento</li><li>hold rail / coger barra</li></ol></div></div></details><details class="routine"><summary>Taking the train · Coger el tren
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 13 actions · taking-the-train</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket / billete</li><li>platform / anden</li><li>luggage / maleta</li><li>headphones / auriculares</li><li>book / libro</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>buy ticket / comprar billete</li><li>wait platform / esperar anden</li><li>board / subir</li><li>find seat / buscar asiento</li><li>store bag / guardar maleta</li><li>look out / mirar fuera</li><li>read / leer</li><li>watch movie / ver pelicula</li><li>listen music / escuchar musica</li><li>sleep / dormir</li><li>get off / bajar</li><li>crowded / lleno</li><li>loud speaker / altavoz</li></ol></div></div></details><details class="routine"><summary>Using the tube · Usar el metro
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">3 objects · 11 actions · using-the-tube</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>travel card / tarjeta</li><li>tube map / mapa metro</li><li>yellow line / linea amarilla</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>tap in / pasar tarjeta</li><li>find line / buscar linea</li><li>wait behind line / esperar linea</li><li>let people off / dejar salir</li><li>get on / subir</li><li>hold on / sujetarse</li><li>get off / bajar</li><li>tap out / salir</li><li>crowded train / vagon lleno</li><li>loud train / tren ruidoso</li><li>mind the gap / ojo al hueco</li></ol></div></div></details><div class="fam-head" id="fam-sports"><span class="swatch" style="background:#C77830"></span><h3>Sports prep <span class="meta">(sports) · 27</span></h3></div><details class="routine"><summary>Climbing · Escalada
+<span class="badge badge-ready">existing</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 6 actions · climbing-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>helmet / casco</li><li>harness / arnes</li><li>climbing shoes / pies de gato</li><li>rope / cuerda</li><li>carabiner / mosqueton</li><li>magnesium / magnesio</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>helmet on / poner casco</li><li>harness on / poner arnes</li><li>shoes on / poner pies de gato</li><li>eight knot / nudo ocho</li><li>check gear / revisar material</li><li>ready / listo</li></ol></div></div></details><details class="routine"><summary>Cycling prep · Prep ciclismo
+<span class="badge badge-ready">existing</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 3 actions · cycling-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bike / bici</li><li>helmet / casco</li><li>bike lock / candado</li><li>water bottle / botella</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>helmet on / poner casco</li><li>check bike / revisar bici</li><li>ready / listo</li></ol></div></div></details><details class="routine"><summary>Gym prep · Prep gimnasio
+<span class="badge badge-ready">existing</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 3 actions · gym-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>gym clothes / ropa gym</li><li>water bottle / botella</li><li>towel / toalla</li><li>locker / taquilla</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>kit on / poner ropa</li><li>get water / coger agua</li><li>ready / listo</li></ol></div></div></details><details class="routine"><summary>Hiking prep · Prep senderismo
+<span class="badge badge-ready">existing</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">7 objects · 6 actions · hiking-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>hiking boots / botas</li><li>backpack / mochila</li><li>water bottle / botella</li><li>trail map / mapa</li><li>snacks / snack</li><li>jacket / chaqueta</li><li>walking stick / baston</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>boots on / poner botas</li><li>tie laces / atar cordones</li><li>jacket on / poner chaqueta</li><li>pack bag / preparar mochila</li><li>check map / mirar mapa</li><li>ready / listo</li></ol></div></div></details><details class="routine"><summary>Swimming prep · Prep natacion
+<span class="badge badge-ready">existing</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 6 actions · swimming-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>swim cap / gorro</li><li>goggles / gafas</li><li>swimsuit / banador</li><li>towel / toalla</li><li>flip-flops / chanclas</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>changing room / vestuario</li><li>cap on / poner gorro</li><li>goggles on / poner gafas</li><li>flip-flops on / poner chanclas</li><li>enter pool / entrar piscina</li><li>ready / listo</li></ol></div></div></details><details class="routine"><summary>Tennis prep · Prep tenis
+<span class="badge badge-ready">existing</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 3 actions · tennis-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>racket / raqueta</li><li>tennis ball / pelota</li><li>tennis shoes / zapatillas</li><li>water bottle / botella</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>kit on / poner ropa</li><li>get racket / coger raqueta</li><li>ready / listo</li></ol></div></div></details><details class="routine"><summary>Trampoline prep · Prep trampolin
+<span class="badge badge-ready">existing</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 6 actions · trampoline-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>grip socks / calcetines antideslizantes</li><li>trampoline bed / cama del trampolin</li><li>safety pad / proteccion</li><li>water bottle / botella de agua</li><li>headphones / cascos</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive / llegar</li><li>shoes off / quitar zapatos</li><li>socks on / poner calcetines</li><li>meet coach / saludar al coach</li><li>wait turn / esperar turno</li><li>ready / listo</li></ol></div></div></details><details class="routine"><summary>athletics prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 3 actions · athletics-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>trainers or spikes</li><li>number bib</li><li>water</li><li>lane</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>bib on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>badminton prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 4 actions · badminton-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>racket</li><li>shuttle</li><li>trainers</li><li>grip</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>trainers on</li><li>racket ready</li><li>ready</li></ol></div></div></details><details class="routine"><summary>basketball prep
+<span class="badge badge-proposed">p2-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 5 actions · basketball-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>trainers</li><li>ball</li><li>kit</li><li>water bottle</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>change kit</li><li>trainers on</li><li>water ready</li><li>ready</li></ol></div></div></details><details class="routine"><summary>bowling prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 6 actions · bowling-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bowling shoes</li><li>ball</li><li>lane</li><li>score screen</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>get shoes</li><li>shoes on</li><li>choose ball</li><li>wait turn</li><li>ready</li></ol></div></div></details><details class="routine"><summary>dance prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 5 actions · dance-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>dance shoes</li><li>water</li><li>speaker</li><li>mirror</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>change shoes</li><li>bag away</li><li>line up</li><li>ready</li></ol></div></div></details><details class="routine"><summary>football prep
+<span class="badge badge-proposed">p2-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 7 actions · football</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>boots</li><li>ball</li><li>shin pads</li><li>kit</li><li>water bottle</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>find changing space</li><li>kit on</li><li>shin pads on</li><li>boots on</li><li>water ready</li><li>ready</li></ol></div></div></details><details class="routine"><summary>horse riding prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 4 actions · horse-riding-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>helmet</li><li>boots</li><li>horse</li><li>reins</li><li>mounting block</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>helmet on</li><li>boots on</li><li>meet horse</li><li>ready</li></ol></div></div></details><details class="routine"><summary>ice skating prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 4 actions · ice-skating-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>skates</li><li>helmet</li><li>gloves</li><li>rail</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>hire skates</li><li>skates on</li><li>helmet on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>kayak or paddle prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 3 actions · kayak-or-paddle-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>kayak</li><li>paddle</li><li>life vest</li><li>helmet</li><li>splash jacket</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>life vest on</li><li>helmet on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>martial arts prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 4 actions · martial-arts-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>gi</li><li>belt</li><li>mat</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>change into gi</li><li>belt on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>rugby prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 5 actions · rugby-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>boots</li><li>ball</li><li>gum shield</li><li>kit</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>kit on</li><li>gum shield in</li><li>boots on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>scuba diving prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 4 actions · scuba-diving-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>tank</li><li>BCD</li><li>regulator</li><li>mask</li><li>fins</li><li>buddy</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>listen briefing</li><li>kit on with instructor</li><li>buddy check</li><li>ready</li></ol></div></div></details><details class="routine"><summary>skatepark prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 3 actions · skatepark-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>helmet</li><li>skateboard</li><li>pads</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>helmet on</li><li>pads on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>skiing prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 7 actions · skiing-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>skis</li><li>boots</li><li>helmet</li><li>poles</li><li>pass</li><li>goggles</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>hire or collect kit</li><li>boots on</li><li>helmet on</li><li>goggles on</li><li>skis on</li><li>poles ready</li><li>ready</li></ol></div></div></details><details class="routine"><summary>snorkelling prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 6 actions · snorkelling-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>mask</li><li>snorkel</li><li>fins</li><li>life vest</li><li>towel</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>life vest on</li><li>mask on</li><li>clear mask</li><li>snorkel in mouth</li><li>fins on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>snowboarding prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 6 actions · snowboarding-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>board</li><li>boots</li><li>helmet</li><li>bindings</li><li>goggles</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>boots on</li><li>helmet on</li><li>goggles on</li><li>board on</li><li>check bindings</li><li>ready</li></ol></div></div></details><details class="routine"><summary>soft play prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 6 actions · soft-play-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>socks</li><li>wristband</li><li>shoes bag</li><li>exit gate</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>shoes off</li><li>socks on</li><li>wristband on</li><li>enter</li><li>ready</li></ol></div></div></details><details class="routine"><summary>surfing prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 5 actions · surfing-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>board</li><li>wetsuit</li><li>wax</li><li>leash</li><li>towel</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wetsuit on</li><li>wax board</li><li>leash on</li><li>carry board</li><li>ready</li></ol></div></div></details><details class="routine"><summary>volleyball prep
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 4 actions · volleyball-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ball</li><li>trainers</li><li>kit</li><li>net</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>change kit</li><li>trainers on</li><li>ready</li></ol></div></div></details><details class="routine"><summary>yoga prep
+<span class="badge badge-proposed">p2-proposed</span><span class="badge badge-prep">prep</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 5 actions · yoga-prep</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>mat</li><li>water bottle</li><li>comfy clothes</li><li>block optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>mat down</li><li>shoes off</li><li>sit on mat</li><li>ready</li></ol></div></div></details><div class="fam-head" id="fam-sports"><span class="swatch" style="background:#B85A2A"></span><h3>Sports activities <span class="meta">(sports) · 27</span></h3></div><details class="routine"><summary>Climbing activity · Actividad escalada
+<span class="badge badge-ready">existing</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 6 actions · climbing-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>helmet / casco</li><li>harness / arnes</li><li>climbing shoes / pies de gato</li><li>rope / cuerda</li><li>carabiner / mosqueton</li><li>magnesium / magnesio</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>grab hold / coger presa</li><li>climb up / subir</li><li>climb down / bajar</li><li>belay / asegurar</li><li>rest hold / descansar presa</li><li>top out / llegar arriba</li></ol></div></div></details><details class="routine"><summary>Cycling activity · Actividad ciclismo
+<span class="badge badge-ready">existing</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 8 actions · cycling-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bike / bici</li><li>helmet / casco</li><li>bike lock / candado</li><li>water bottle / botella</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>look both ways / mirar lados</li><li>pedal / pedalear</li><li>signal turn / señalizar giro</li><li>stop at lights / parar semaforo</li><li>ring bell / tocar timbre</li><li>ride path / ir por camino</li><li>park bike / aparcar bici</li><li>lock bike / candado</li></ol></div></div></details><details class="routine"><summary>Gym activity · Actividad gimnasio
+<span class="badge badge-ready">existing</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 9 actions · gym-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>gym clothes / ropa gym</li><li>water bottle / botella</li><li>towel / toalla</li><li>dumbbells / mancuernas</li><li>mat / esterilla</li><li>locker / taquilla</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up / calentar</li><li>use mat / usar esterilla</li><li>lift weights / levantar peso</li><li>rest / descansar</li><li>stretch / estirar</li><li>cool down / enfriar</li><li>drink water / beber agua</li><li>wipe bench / limpiar banco</li><li>change clothes / cambiarse</li></ol></div></div></details><details class="routine"><summary>Hiking activity · Actividad senderismo
+<span class="badge badge-ready">existing</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">7 objects · 11 actions · hiking-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>hiking boots / botas</li><li>backpack / mochila</li><li>water bottle / botella</li><li>trail map / mapa</li><li>snacks / snack</li><li>jacket / chaqueta</li><li>walking stick / baston</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up / calentar</li><li>start hike / empezar</li><li>follow path / seguir camino</li><li>climb hill / subir cuesta</li><li>cross stream / cruzar arroyo</li><li>look view / mirar vista</li><li>drink water / beber agua</li><li>snack break / merienda</li><li>rest / descansar</li><li>take photo / foto</li><li>go back / volver</li></ol></div></div></details><details class="routine"><summary>Swimming activity · Actividad natacion
+<span class="badge badge-ready">existing</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 6 actions · swimming-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>swim cap / gorro</li><li>goggles / gafas</li><li>swimsuit / banador</li><li>towel / toalla</li><li>flip-flops / chanclas</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>blow bubbles / burbujas</li><li>kick legs / patear</li><li>float back / flotar</li><li>hold wall / coger borde</li><li>exit pool / salir piscina</li><li>shower / ducharse</li></ol></div></div></details><details class="routine"><summary>Tennis activity · Actividad tenis
+<span class="badge badge-ready">existing</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 8 actions · tennis-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>racket / raqueta</li><li>tennis ball / pelota</li><li>tennis shoes / zapatillas</li><li>water bottle / botella</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up / calentar</li><li>bounce ball / botar pelota</li><li>serve / sacar</li><li>hit ball / golpear</li><li>change ends / cambiar lado</li><li>drink break / beber</li><li>cool down / enfriar</li><li>pack up / recoger</li></ol></div></div></details><details class="routine"><summary>Trampoline activity · Actividad trampolin
+<span class="badge badge-ready">existing</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 5 actions · trampoline-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>grip socks / calcetines antideslizantes</li><li>trampoline bed / cama del trampolin</li><li>safety pad / proteccion</li><li>water bottle / botella de agua</li><li>headphones / cascos</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>step on / subir</li><li>small bounce / bote pequeno</li><li>stop and steady / parar y estabilizar</li><li>step off / bajar</li><li>shoes on / poner zapatos</li></ol></div></div></details><details class="routine"><summary>athletics activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 8 actions · athletics-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>trainers or spikes</li><li>number bib</li><li>water</li><li>lane</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up</li><li>listen starter</li><li>line up</li><li>race or jump</li><li>finish line</li><li>cool down</li><li>drink water</li><li>leave track</li></ol></div></div></details><details class="routine"><summary>badminton activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 7 actions · badminton-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>racket</li><li>shuttle</li><li>trainers</li><li>grip</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up</li><li>serve practice</li><li>play rally</li><li>rest</li><li>play again</li><li>finish</li><li>pack racket</li></ol></div></div></details><details class="routine"><summary>basketball activity
+<span class="badge badge-proposed">p2-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 8 actions · basketball-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>trainers</li><li>ball</li><li>kit</li><li>water bottle</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up</li><li>listen coach</li><li>dribble practice</li><li>play</li><li>rest</li><li>drink water</li><li>finish</li><li>change</li></ol></div></div></details><details class="routine"><summary>bowling activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 6 actions · bowling-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bowling shoes</li><li>ball</li><li>lane</li><li>score screen</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>bowl</li><li>sit</li><li>watch screen</li><li>next turn</li><li>shoes off</li><li>leave</li></ol></div></div></details><details class="routine"><summary>dance activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 7 actions · dance-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>dance shoes</li><li>water</li><li>speaker</li><li>mirror</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>listen teacher</li><li>copy steps</li><li>rest</li><li>try again</li><li>finish</li><li>shoes off</li><li>leave</li></ol></div></div></details><details class="routine"><summary>football activity
+<span class="badge badge-proposed">p2-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 8 actions · football</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>boots</li><li>ball</li><li>shin pads</li><li>kit</li><li>water bottle</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up</li><li>listen coach</li><li>play</li><li>drink water</li><li>rest</li><li>play again</li><li>finish</li><li>change</li></ol></div></div></details><details class="routine"><summary>horse riding activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 8 actions · horse-riding-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>helmet</li><li>boots</li><li>horse</li><li>reins</li><li>mounting block</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>mount with help</li><li>hold reins</li><li>listen instructor</li><li>walk horse</li><li>stop</li><li>dismount</li><li>thank horse</li><li>helmet off</li></ol></div></div></details><details class="routine"><summary>ice skating activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 8 actions · ice-skating-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>skates</li><li>helmet</li><li>gloves</li><li>rail</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>gloves on</li><li>hold rail</li><li>stand up</li><li>skate slow</li><li>sit rest</li><li>skate again</li><li>skates off</li><li>leave ice</li></ol></div></div></details><details class="routine"><summary>kayak or paddle activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 8 actions · kayak-or-paddle-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>kayak</li><li>paddle</li><li>life vest</li><li>helmet</li><li>splash jacket</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>listen safety</li><li>get in kayak</li><li>paddle</li><li>stay with group</li><li>rest</li><li>come to shore</li><li>exit kayak</li><li>kit off</li></ol></div></div></details><details class="routine"><summary>martial arts activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 8 actions · martial-arts-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>gi</li><li>belt</li><li>mat</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>bow</li><li>warm up</li><li>listen coach</li><li>practice</li><li>rest</li><li>bow</li><li>change</li><li>leave</li></ol></div></div></details><details class="routine"><summary>rugby activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 6 actions · rugby-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>boots</li><li>ball</li><li>gum shield</li><li>kit</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up</li><li>listen coach</li><li>play</li><li>drink water</li><li>finish</li><li>change</li></ol></div></div></details><details class="routine"><summary>scuba diving activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 8 actions · scuba-diving-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>tank</li><li>BCD</li><li>regulator</li><li>mask</li><li>fins</li><li>buddy</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter water</li><li>regulator in mouth</li><li>breathe slow</li><li>stay with buddy</li><li>hand signals</li><li>exit water</li><li>kit off</li><li>rest</li></ol></div></div></details><details class="routine"><summary>skatepark activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · skatepark-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>helmet</li><li>skateboard</li><li>pads</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter park</li><li>wait turn</li><li>skate</li><li>fall ok get up</li><li>rest</li><li>drink water</li><li>skate again</li><li>leave</li><li>helmet off</li></ol></div></div></details><details class="routine"><summary>skiing activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 6 actions · skiing-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>skis</li><li>boots</li><li>helmet</li><li>poles</li><li>pass</li><li>goggles</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>listen instructor</li><li>queue for lift</li><li>slope with support</li><li>skis off</li><li>warm inside</li><li>rest</li></ol></div></div></details><details class="routine"><summary>snorkelling activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 7 actions · snorkelling-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>mask</li><li>snorkel</li><li>fins</li><li>life vest</li><li>towel</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter water with adult</li><li>face in water</li><li>breathe slow</li><li>stay with buddy</li><li>exit water</li><li>kit off</li><li>towel dry</li></ol></div></div></details><details class="routine"><summary>snowboarding activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 5 actions · snowboarding-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>board</li><li>boots</li><li>helmet</li><li>bindings</li><li>goggles</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>listen instructor</li><li>practice stance</li><li>ride with support</li><li>board off</li><li>rest</li></ol></div></div></details><details class="routine"><summary>soft play activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 6 actions · soft-play-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>socks</li><li>wristband</li><li>shoes bag</li><li>exit gate</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>play</li><li>slide rules</li><li>ask adult if lost</li><li>exit gate</li><li>shoes on</li><li>leave</li></ol></div></div></details><details class="routine"><summary>surfing activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 7 actions · surfing-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>board</li><li>wetsuit</li><li>wax</li><li>leash</li><li>towel</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter water with adult</li><li>paddle</li><li>rest on board</li><li>come to beach</li><li>rinse</li><li>wetsuit off</li><li>towel dry</li></ol></div></div></details><details class="routine"><summary>volleyball activity
+<span class="badge badge-proposed">p3-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 7 actions · volleyball-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ball</li><li>trainers</li><li>kit</li><li>net</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>warm up</li><li>positions</li><li>listen coach</li><li>play</li><li>rest</li><li>finish</li><li>change</li></ol></div></div></details><details class="routine"><summary>yoga activity
+<span class="badge badge-proposed">p2-proposed</span><span class="badge badge-activity">activity</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 8 actions · yoga-activity</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>mat</li><li>water bottle</li><li>comfy clothes</li><li>block optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>listen teacher</li><li>breathe</li><li>do pose</li><li>rest</li><li>pose again</li><li>finish</li><li>roll mat</li><li>shoes on</li></ol></div></div></details><div class="fam-head" id="fam-travel"><span class="swatch" style="background:#2F6B4F"></span><h3>Travel and adventure <span class="meta">(travel) · 7</span></h3></div><details class="routine"><summary>Camping · Camping
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 11 actions · going-camping</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>tent / tienda</li><li>sleeping bag / saco</li><li>torch / linterna</li><li>stove / hornillo</li><li>camp chair / silla</li><li>water bottle / botella</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive camp / llegar camping</li><li>clear ground / limpiar suelo</li><li>pitch tent / montar tienda</li><li>make bed / preparar cama</li><li>get water / coger agua</li><li>cook / cocinar</li><li>eat outside / comer fuera</li><li>sit and rest / sentarse</li><li>use torch / usar linterna</li><li>sleep in tent / dormir tienda</li><li>pack up / recoger</li></ol></div></div></details><details class="routine"><summary>Going on holidays · Ir de vacaciones
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 14 actions · going-on-holidays</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>luggage / maleta</li><li>passport / pasaporte</li><li>ticket / billete</li><li>camera / camara</li><li>sun hat / sombrero</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pack bag / hacer maleta</li><li>check passport / revisar pasaporte</li><li>arrive station / llegar estacion</li><li>check in / facturar</li><li>board / embarcar</li><li>arrive place / llegar destino</li><li>hotel check in / entrar hotel</li><li>unpack / deshacer maleta</li><li>see sights / visitar sitios</li><li>take photos / hacer fotos</li><li>eat out / comer fuera</li><li>buy souvenir / comprar recuerdo</li><li>relax / relajarse</li><li>pack to go home / hacer maleta vuelta</li></ol></div></div></details><details class="routine"><summary>Going to the beach · Ir a la playa
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">8 objects · 14 actions · going-to-the-beach</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>towel / toalla</li><li>sunscreen / crema solar</li><li>swimsuit / banador</li><li>flip-flops / chanclas</li><li>sand / arena</li><li>sea / mar</li><li>bucket / cubo</li><li>beach ball / pelota</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pack bag / preparar bolsa</li><li>sunscreen on / poner crema</li><li>walk to beach / ir a la playa</li><li>walk on sand / andar en arena</li><li>lay towel / poner toalla</li><li>dig sand / cavar arena</li><li>sandcastle / castillo arena</li><li>go in sea / entrar al mar</li><li>splash water / chapotear</li><li>paddle or splash / chapuzon suave</li><li>collect shells / coger conchas</li><li>play ball / jugar pelota</li><li>dry off / secarse</li><li>pack up / recoger</li></ol></div></div></details><details class="routine"><summary>Going to the mountain · Ir a la montana
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · going-to-the-mountain</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>boots / botas</li><li>jacket / chaqueta</li><li>backpack / mochila</li><li>water bottle / botella</li><li>binoculars / prismaticos</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>boots on / poner botas</li><li>warm clothes on / ponerse abrigo</li><li>pack bag / preparar mochila</li><li>start walk / empezar paseo</li><li>walk up path / subir camino</li><li>rest view / descansar vista</li><li>look mountains / mirar montanas</li><li>use binoculars / usar prismaticos</li><li>drink water / beber agua</li><li>take photo / hacer foto</li><li>go down / bajar</li></ol></div></div></details><details class="routine"><summary>Museum · Museo
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · going-to-the-museum</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket / entrada</li><li>map / mapa</li><li>guide / guia</li><li>audio guide / audioguia</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>buy ticket / comprar entrada</li><li>enter / entrar</li><li>get map / coger mapa</li><li>look exhibits / mirar obras</li><li>listen audio / escuchar audio</li><li>be quiet / estar en silencio</li><li>ask guide / preguntar guia</li><li>sit rest / descansar</li><li>visit shop / tienda</li><li>exit / salir</li></ol></div></div></details><details class="routine"><summary>Theme park · Parque atracciones
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">3 objects · 11 actions · going-to-a-theme-park</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket / entrada</li><li>map / mapa</li><li>water bottle / botella</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>buy ticket / comprar entrada</li><li>enter park / entrar</li><li>use map / usar mapa</li><li>wait in queue / hacer cola</li><li>first ride / primera atraccion</li><li>big ride / atraccion grande</li><li>watch show / ver show</li><li>eat snack / merendar</li><li>more rides / mas atracciones</li><li>buy souvenir / comprar recuerdo</li><li>exit park / salir</li></ol></div></div></details><details class="routine"><summary>Watching a sport event · Ver un evento deportivo
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · attending-a-sport-event</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket / entrada</li><li>team shirt / camiseta</li><li>banner / bandera</li><li>snack</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>buy ticket / comprar entrada</li><li>team shirt on / poner camiseta</li><li>go to stadium / ir estadio</li><li>find seat / buscar asiento</li><li>buy snack / comprar snack</li><li>use toilet / ir al baño</li><li>cheer / animar</li><li>clap / aplaudir</li><li>leave early / salir antes</li><li>exit / salir</li></ol></div></div></details><div class="fam-head" id="fam-public-spaces"><span class="swatch" style="background:#D03860"></span><h3>Public spaces <span class="meta">(public-spaces) · 15</span></h3></div><details class="routine"><summary>At the airport · En el aeropuerto
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 14 actions · at-the-airport</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket / billete</li><li>passport / pasaporte</li><li>luggage / maleta</li><li>boarding pass / tarjeta embarque</li><li>ID / documento</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check in / facturar</li><li>boarding pass / coger tarjeta</li><li>security / seguridad</li><li>show passport / mostrar pasaporte</li><li>walk through / pasar escaner</li><li>go to gate / ir puerta</li><li>wait / esperar</li><li>board / embarcar</li><li>take seat / sentarse</li><li>takeoff / despegue</li><li>loud speakers / altavoces</li><li>crowded security / seguridad llena</li><li>long queue / cola larga</li><li>use headphones / poner cascos</li></ol></div></div></details><details class="routine"><summary>At the hospital · En el hospital
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 11 actions · at-the-hospital</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>appointment / cita</li><li>hospital ID / tarjeta</li><li>prescription / receta</li><li>form / formulario</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check in / registrarse</li><li>show ID / mostrar cita</li><li>wait / esperar</li><li>enter room / entrar</li><li>fill form / rellenar</li><li>listen / escuchar</li><li>get prescription / coger receta</li><li>leave / salir</li><li>long wait / espera larga</li><li>loud noise / ruido</li><li>crowded waiting / sala llena</li></ol></div></div></details><details class="routine"><summary>At the hotel · En el hotel
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 13 actions · at-the-hotel</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>room key / llave</li><li>luggage / maleta</li><li>towel / toalla</li><li>ID / documento</li><li>reservation / reserva</li><li>bed / cama</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive / llegar</li><li>check in / check-in</li><li>show ID / mostrar documento</li><li>get key / coger llave</li><li>take lift / coger ascensor</li><li>enter room / entrar habitacion</li><li>unpack / deshacer maleta</li><li>use bathroom / usar bano</li><li>relax / relajarse</li><li>check out / check-out</li><li>noisy corridor / pasillo ruidoso</li><li>crowded lobby / hall lleno</li><li>ask reception / preguntar recepcion</li></ol></div></div></details><details class="routine"><summary>Barber · Barberia
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 11 actions · at-the-barber</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>clippers / maquina</li><li>comb / peine</li><li>cape / capa</li><li>scissors / tijeras</li><li>mirror / espejo</li><li>aftershave</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive / llegar</li><li>wait turn / esperar turno</li><li>sit down / sentarse</li><li>cape on / poner capa</li><li>talk cut / decir corte</li><li>use clippers / usar maquina</li><li>cut hair / cortar pelo</li><li>trim beard / arreglar barba</li><li>brush off / cepillar</li><li>check mirror / mirar espejo</li><li>pay / pagar</li></ol></div></div></details><details class="routine"><summary>Hairdresser · Peluqueria
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 11 actions · at-the-hairdresser</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>scissors / tijeras</li><li>comb / peine</li><li>towel / toalla</li><li>mirror / espejo</li><li>shampoo / champu</li><li>hair dryer / secador</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check in / registrarse</li><li>sit down / sentarse</li><li>choose style / elegir peinado</li><li>cape on / poner capa</li><li>wash hair / lavar pelo</li><li>cut hair / cortar pelo</li><li>dry hair / secar pelo</li><li>check mirror / mirar espejo</li><li>pay / pagar</li><li>loud dryer / secador fuerte</li><li>wait turn / esperar turno</li></ol></div></div></details><details class="routine"><summary>Pharmacy · Farmacia
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · at-the-pharmacy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>prescription / receta</li><li>medicine / medicina</li><li>pill box / pastillero</li><li>bag / bolsa</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>give prescription / dar receta</li><li>wait / esperar</li><li>get medicine / coger medicina</li><li>ask how / preguntar</li><li>check medicine / comprobar</li><li>pay / pagar</li><li>pack bag / meter bolsa</li><li>leave / salir</li><li>wait in queue / hacer cola</li><li>crowded / lleno</li></ol></div></div></details><details class="routine"><summary>Shopping mall · Centro comercial
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">3 objects · 15 actions · at-the-shopping-mall</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>map / mapa</li><li>bag / bolsa</li><li>card / tarjeta</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter mall / entrar</li><li>use map / usar mapa</li><li>escalator / escalera mecanica</li><li>visit shops / visitar tiendas</li><li>try on / probarse</li><li>ask staff / preguntar</li><li>pay / pagar</li><li>food court / comer</li><li>rest / descansar</li><li>meet up / quedar</li><li>exit / salir</li><li>loud noise / ruido fuerte</li><li>crowded / mucho gentio</li><li>wait turn / esperar turno</li><li>quiet spot / sitio tranquilo</li></ol></div></div></details><details class="routine"><summary>Supermarket · Supermercado
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 12 actions · at-the-supermarket</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>trolley / carro</li><li>list / lista</li><li>card / tarjeta</li><li>bag / bolsa</li><li>receipt / ticket</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>get trolley / coger carro</li><li>check list / mirar lista</li><li>pick items / coger productos</li><li>in trolley / al carro</li><li>go to till / ir a caja</li><li>pay / pagar</li><li>pack bags / llenar bolsas</li><li>leave / salir</li><li>crowded aisle / pasillo lleno</li><li>loud noise / ruido fuerte</li><li>wait in queue / hacer cola</li><li>ask staff / pedir ayuda</li></ol></div></div></details><details class="routine"><summary>at a concert
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · at-a-concert</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket</li><li>ear defenders</li><li>seat or standing spot</li><li>exit sign</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>ear defenders on</li><li>find place</li><li>loud music ok</li><li>stand or sit</li><li>ask break</li><li>ask leave</li><li>walk to exit</li><li>leave</li><li>quiet outside</li></ol></div></div></details><details class="routine"><summary>at the bank
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · at-the-bank</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bank card</li><li>queue ticket</li><li>counter</li><li>pen</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter</li><li>take ticket</li><li>wait</li><li>listen for number</li><li>go to desk</li><li>sit or stand</li><li>speak</li><li>sign if asked</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>at the cinema
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 11 actions · at-the-cinema</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket</li><li>seat stub</li><li>popcorn optional</li><li>headphones optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>buy or show ticket</li><li>find screen</li><li>find seat</li><li>sit</li><li>headphones if needed</li><li>lights down</li><li>quiet voice</li><li>watch</li><li>credits</li><li>stand</li><li>leave</li></ol></div></div></details><details class="routine"><summary>at the library
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · at-the-library</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>library card</li><li>book</li><li>quiet card</li><li>self checkout</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter quietly</li><li>quiet voice</li><li>find book</li><li>sit and look</li><li>choose book</li><li>borrow with card</li><li>wait if queue</li><li>say thank you</li><li>leave quietly</li></ol></div></div></details><details class="routine"><summary>at the post office
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · at-the-post-office</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>parcel</li><li>stamp</li><li>queue</li><li>receipt</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter</li><li>queue</li><li>wait turn</li><li>hand parcel</li><li>choose stamp</li><li>pay</li><li>take receipt</li><li>put receipt away</li><li>leave</li></ol></div></div></details><details class="routine"><summary>at the theatre
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 11 actions · at-the-theatre</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ticket</li><li>programme</li><li>seat</li><li>quiet card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>show ticket</li><li>find seat</li><li>sit</li><li>quiet voice</li><li>lights down</li><li>watch</li><li>clap</li><li>interval optional</li><li>end</li><li>leave</li></ol></div></div></details><details class="routine"><summary>public toilet
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · public-toilet</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>toilet door</li><li>lock</li><li>toilet paper</li><li>soap</li><li>dryer</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>find toilet</li><li>wait if busy</li><li>enter</li><li>lock door</li><li>use toilet</li><li>wipe</li><li>flush</li><li>unlock</li><li>wash hands</li><li>leave</li></ol></div></div></details><div class="fam-head" id="fam-health-appointments"><span class="swatch" style="background:#7A8FA0"></span><h3>Health appointments <span class="meta">(health-appointments) · 19</span></h3></div><details class="routine"><summary>At the dentist · En el dentista
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 10 actions · at-the-dentist</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>dental chair / silla del dentista</li><li>mouth mirror / espejo dental</li><li>suction tube / aspirador</li><li>dental cape / capa dental</li><li>safety glasses / gafas de proteccion</li><li>stop card / tarjeta de stop</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check in / registrarse</li><li>wait / esperar</li><li>name called / llaman el nombre</li><li>sit in chair / sentarse en la silla</li><li>cape on / ponerse la capa</li><li>open mouth / abrir la boca</li><li>look at teeth / mirar los dientes</li><li>rinse / enjuagar</li><li>ask for a pause / pedir una pausa</li><li>leave / salir</li></ol></div></div></details><details class="routine"><summary>At the GP · En el medico
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 9 actions · at-the-gp</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>appointment card / tarjeta de cita</li><li>waiting chair / silla de espera</li><li>stethoscope / estetoscopio</li><li>thermometer / termometro</li><li>prescription paper / receta</li><li>fidget</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check in / registrarse</li><li>wait / esperar</li><li>name called / llaman el nombre</li><li>enter room / entrar a la consulta</li><li>answer questions / responder preguntas</li><li>listen to chest / escuchar el pecho</li><li>look at throat / mirar la garganta</li><li>get advice / recibir consejo</li><li>leave / salir</li></ol></div></div></details><details class="routine"><summary>Blood test · Analisis de sangre
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 10 actions · blood-test</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>clinic chair / silla de clinica</li><li>arm band / banda del brazo</li><li>alcohol wipe / toallita de alcohol</li><li>sample tube / tubo de muestra</li><li>cotton wool / algodon</li><li>plaster / tirita</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>sit down / sentarse</li><li>roll up sleeve / subir la manga</li><li>band on / poner la banda</li><li>wipe skin / limpiar la piel</li><li>needle in / entrar la aguja</li><li>fill tube / llenar el tubo</li><li>needle out / sacar la aguja</li><li>plaster on / poner tirita</li><li>sit a moment / quedarse un momento</li><li>leave / salir</li></ol></div></div></details><details class="routine"><summary>Vaccination · Vacuna
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 9 actions · vaccination</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>clinic chair / silla de clinica</li><li>alcohol wipe / toallita de alcohol</li><li>syringe / jeringuilla</li><li>plaster / tirita</li><li>sticker</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive / llegar</li><li>sit down / sentarse</li><li>uncover arm / descubrir el brazo</li><li>ask for a moment / pedir un momento</li><li>wipe skin / limpiar la piel</li><li>injection / inyeccion</li><li>plaster on / poner tirita</li><li>wait a few minutes / esperar unos minutos</li><li>leave / salir</li></ol></div></div></details><details class="routine"><summary>allergy test
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 12 actions · allergy-test</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>arm rest</li><li>drops</li><li>lancet</li><li>timer</li><li>wipe</li><li>waiting chair</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>check in</li><li>wait turn</li><li>sit</li><li>arm ready</li><li>drops on skin</li><li>wait timer</li><li>itchy ok</li><li>do not scratch</li><li>wipe</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>at the optician
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">7 objects · 12 actions · at-the-optician</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>appointment letter</li><li>waiting chair</li><li>eye chart</li><li>trial frames</li><li>chair</li><li>drop bottle</li><li>glasses case</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive at clinic</li><li>check in</li><li>wait turn</li><li>sit in chair</li><li>look at chart</li><li>cover one eye</li><li>try frames</li><li>drops if needed</li><li>choose glasses</li><li>ask adult question</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>dermatologist
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · dermatologist</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>exam bed</li><li>lamp</li><li>gown</li><li>cream</li><li>waiting chair</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>check in</li><li>wait turn</li><li>change if asked</li><li>sit or lie</li><li>show skin</li><li>stay still</li><li>cream if needed</li><li>get dressed</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>ent appointment
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 11 actions · ent-appointment</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>chair</li><li>ear light</li><li>tongue depressor</li><li>spray</li><li>tissue</li><li>waiting chair</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>check in</li><li>wait turn</li><li>sit</li><li>open mouth</li><li>ear look</li><li>spray if needed</li><li>stay still</li><li>wipe</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>eye or ear drops clinic
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · eye-or-ear-drops-clinic</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>drops bottle</li><li>tissue</li><li>chair</li><li>mirror</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>sit</li><li>wash hands if asked</li><li>tilt head</li><li>open eye or ear</li><li>drops in</li><li>blink or wait</li><li>wipe</li><li>stay still</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>hearing test
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 12 actions · hearing-test</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>headphones</li><li>test booth</li><li>button</li><li>audiometer</li><li>waiting chair</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>check in</li><li>wait turn</li><li>enter booth</li><li>sit still</li><li>put headphones on</li><li>listen for beep</li><li>press button</li><li>quiet voice</li><li>headphones off</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>mri scan
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 12 actions · mri-scan</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>gown</li><li>ear plugs</li><li>mri bed</li><li>call button</li><li>headphones</li><li>locker</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>remove metal</li><li>locker bag</li><li>change gown</li><li>ear plugs on</li><li>lie on bed</li><li>stay still</li><li>loud noise ok</li><li>hold button if needed</li><li>done</li><li>get dressed</li><li>leave</li></ol></div></div></details><details class="routine"><summary>occupational therapy
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 11 actions · occupational-therapy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>fidget</li><li>scissors</li><li>blocks</li><li>mat</li><li>timer</li><li>headphones</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>choose activity</li><li>listen to adult</li><li>try task</li><li>ask for help</li><li>take break</li><li>headphones if needed</li><li>try again</li><li>tidy tools</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>orthodontist
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 10 actions · orthodontist</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>dental chair</li><li>mouth mirror</li><li>braces tools</li><li>wax</li><li>water cup</li><li>waiting chair</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>check in</li><li>wait turn</li><li>sit in chair</li><li>open mouth</li><li>stay still</li><li>rinse</li><li>wax if sore</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>outpatient clinic
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · outpatient-clinic</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>appointment letter</li><li>hospital map</li><li>waiting room</li><li>clinic door</li><li>chair</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive hospital</li><li>find clinic</li><li>check in</li><li>wait</li><li>quiet voice</li><li>go in when called</li><li>sit</li><li>talk to doctor</li><li>ask adult</li><li>finish</li><li>leave</li></ol></div></div></details><details class="routine"><summary>physiotherapy
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 12 actions · physiotherapy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>mat</li><li>exercise ball</li><li>resistance band</li><li>bench</li><li>water bottle</li><li>trainers</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>wait turn</li><li>change shoes</li><li>listen to physio</li><li>warm up</li><li>do exercise</li><li>rest</li><li>try again</li><li>ask for help</li><li>finish</li><li>shoes on</li><li>leave</li></ol></div></div></details><details class="routine"><summary>podiatrist
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · podiatrist</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>foot stool</li><li>clippers</li><li>cream</li><li>socks</li><li>shoes</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>wait turn</li><li>remove shoes</li><li>remove socks</li><li>sit</li><li>foot check</li><li>treatment</li><li>cream if needed</li><li>socks on</li><li>shoes on</li><li>leave</li></ol></div></div></details><details class="routine"><summary>speech therapy
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 12 actions · speech-therapy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>picture cards</li><li>mirror</li><li>table</li><li>chair</li><li>timer</li><li>stickers</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>say hello</li><li>sit at table</li><li>look</li><li>listen</li><li>copy sound</li><li>practice word</li><li>take turn</li><li>ask for break</li><li>finish</li><li>goodbye</li><li>leave</li></ol></div></div></details><details class="routine"><summary>taking medicine
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · taking-medicine</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>medicine bottle</li><li>spoon or syringe</li><li>water</li><li>timer</li><li>tissue</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wash hands</li><li>get medicine</li><li>check dose with adult</li><li>pour or draw dose</li><li>take medicine</li><li>drink water</li><li>wipe mouth</li><li>put away</li><li>mark time</li><li>finish</li></ol></div></div></details><details class="routine"><summary>x ray or scan
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">6 objects · 11 actions · x-ray-or-scan</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>gown</li><li>scan bed</li><li>machine</li><li>lead apron</li><li>call button</li><li>waiting chair</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>check in</li><li>wait turn</li><li>change into gown</li><li>lie on bed</li><li>stay still</li><li>hold breath if asked</li><li>machine moves / loud ok</li><li>done</li><li>get dressed</li><li>leave</li></ol></div></div></details><div class="fam-head" id="fam-sensory-world"><span class="swatch" style="background:#5B9A8B"></span><h3>Sensory world <span class="meta">(sensory-world) · 5</span></h3></div><details class="routine"><summary>Crowded places · Sitios llenos
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 6 actions · crowded-places</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>exit sign / salida</li><li>queue barrier / cinta de cola</li><li>backpack / mochila</li><li>headphones / cascos</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>notice crowd / notar la gente</li><li>hold bag strap / agarrar la correa</li><li>stand at the edge / quedarse al borde</li><li>shorter visit / visita mas corta</li><li>go to exit / ir a la salida</li><li>leave / salir</li></ol></div></div></details><details class="routine"><summary>Headphones and breaks · Cascos y descansos
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 7 actions · headphones-and-breaks</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>headphones / cascos</li><li>break card / tarjeta de descanso</li><li>help card / tarjeta de ayuda</li><li>quiet corner mat / esterilla tranquila</li><li>water bottle / botella de agua</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>choose a tool / elegir una herramienta</li><li>put headphones on / ponerse cascos</li><li>show break card / mostrar tarjeta de descanso</li><li>show help card / mostrar tarjeta de ayuda</li><li>go to quiet spot / ir al sitio tranquilo</li><li>drink water / beber agua</li><li>return or leave / volver o irse</li></ol></div></div></details><details class="routine"><summary>Loud places · Sitios ruidosos
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 6 actions · loud-places</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ear defenders / cascos protectores</li><li>headphones / cascos</li><li>speaker / altavoz</li><li>door / puerta</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>notice sound / notar el sonido</li><li>choose ear tool / elegir proteccion</li><li>put on / ponerse</li><li>step to door / acercarse a la puerta</li><li>tell a trusted adult / decir a un adulto de confianza</li><li>take a break / tomarse un descanso</li></ol></div></div></details><details class="routine"><summary>Waiting · Esperar
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 6 actions · waiting</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>visual timer / temporizador visual</li><li>fidget</li><li>first then board / tablero primero-despues</li><li>ticket number / numero de turno</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>see the queue / ver la cola</li><li>stand or sit / estar de pie o sentado</li><li>check timer / mirar el temporizador</li><li>use fidget / usar fidget</li><li>check number / mirar el numero</li><li>my turn / mi turno</li></ol></div></div></details><details class="routine"><summary>bright lights
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 9 actions · bright-lights</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>sunglasses</li><li>hat</li><li>hoodie</li><li>quiet corner</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>notice bright lights</li><li>tell adult</li><li>put sunglasses or hat</li><li>look down</li><li>ask for break</li><li>go to quieter spot</li><li>breathe</li><li>return when ready</li><li>leave bright area if needed</li></ol></div></div></details><div class="fam-head" id="fam-eating-out"><span class="swatch" style="background:#B86B4A"></span><h3>Eating out <span class="meta">(eating-out) · 6</span></h3></div><details class="routine"><summary>At a cafe · En un cafe
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">6 objects · 8 actions · at-a-cafe</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>menu / carta</li><li>table / mesa</li><li>cup / taza</li><li>plate / plato</li><li>napkin / servilleta</li><li>card machine / datafono</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter / entrar</li><li>find a table / buscar mesa</li><li>look at menu / mirar la carta</li><li>order / pedir</li><li>wait for food / esperar la comida</li><li>eat / comer</li><li>pay / pagar</li><li>leave / salir</li></ol></div></div></details><details class="routine"><summary>School lunch · Comedor del cole
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 8 actions · school-lunch</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>lunch tray / bandeja</li><li>lunchbox / tupper</li><li>water bottle / botella de agua</li><li>cutlery / cubiertos</li><li>seat marker / marcador de asiento</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>line up / hacer fila</li><li>get food / coger comida</li><li>open lunchbox / abrir el tupper</li><li>find a seat / buscar asiento</li><li>eat / comer</li><li>drink / beber</li><li>clear or pack / recoger o guardar</li><li>leave hall / salir del comedor</li></ol></div></div></details><details class="routine"><summary>allergies and choices
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 10 actions · allergies-and-choices</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>menu</li><li>allergy card</li><li>staff</li><li>safe plate</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>sit</li><li>read menu with adult</li><li>show allergy card</li><li>ask safe food</li><li>listen</li><li>choose</li><li>order</li><li>check plate</li><li>eat</li><li>tell adult if unsure</li></ol></div></div></details><details class="routine"><summary>buffet or self service
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 10 actions · buffet-or-self-service</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>tray</li><li>plate</li><li>food stations</li><li>cutlery</li><li>bin</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>get tray</li><li>get plate</li><li>choose food</li><li>serve small amount</li><li>find seat</li><li>sit</li><li>eat</li><li>more food optional</li><li>clear tray</li><li>leave</li></ol></div></div></details><details class="routine"><summary>family restaurant
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 10 actions · family-restaurant</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>menu</li><li>table</li><li>waiter</li><li>water</li><li>bill</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>wait for table</li><li>sit</li><li>look at menu</li><li>order</li><li>wait food</li><li>eat</li><li>ask break if needed</li><li>pay</li><li>leave</li></ol></div></div></details><details class="routine"><summary>fast food
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">6 objects · 13 actions · fast-food</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>menu board</li><li>till</li><li>tray</li><li>seat</li><li>bin</li><li>headphones optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter</li><li>look at menu</li><li>choose food</li><li>queue</li><li>wait turn</li><li>order</li><li>pay</li><li>wait for number</li><li>get tray</li><li>sit</li><li>eat</li><li>bin rubbish</li><li>leave</li></ol></div></div></details><div class="fam-head" id="fam-emergency-help"><span class="swatch" style="background:#4A6670"></span><h3>Emergency and help <span class="meta">(emergency-help) · 4</span></h3></div><details class="routine"><summary>Ask a safe adult · Pedir a un adulto seguro
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 7 actions · ask-safe-adult</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>help card / tarjeta de ayuda</li><li>staff badge / credencial</li><li>phone / telefono</li><li>meeting point sign / punto de reunion</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>spot badge or desk / ver credencial o mostrador</li><li>walk closer / acercarse</li><li>get attention / llamar la atencion</li><li>show help card / mostrar tarjeta de ayuda</li><li>ask for help / pedir ayuda</li><li>stay with them / quedarse con esa persona</li><li>wait for my adult / esperar a mi adulto</li></ol></div></div></details><details class="routine"><summary>Fire alarm · Alarma de incendio
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 7 actions · fire-alarm</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>alarm beacon / baliza de alarma</li><li>exit sign / salida</li><li>meeting point sign / punto de reunion</li><li>ear defenders / cascos protectores</li><li>door / puerta</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>hear or see alarm / oir o ver la alarma</li><li>stop / parar</li><li>line up / hacer fila</li><li>walk to exit / caminar a la salida</li><li>go to meeting point / ir al punto de reunion</li><li>wait / esperar</li><li>return when told / volver cuando lo digan</li></ol></div></div></details><details class="routine"><summary>I am lost · Estoy perdido
+<span class="badge badge-ready">existing</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 8 actions · i-am-lost</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>name card / tarjeta con nombre</li><li>phone / telefono</li><li>staff desk / mostrador</li><li>info sign / senal de informacion</li><li>high-vis vest / chaleco reflectante</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>stop / pararse</li><li>stay put / quedarse quieto</li><li>look for desk or vest / buscar mostrador o chaleco</li><li>go to desk / ir al mostrador</li><li>say I am lost / decir que estoy perdido</li><li>show name card / mostrar tarjeta</li><li>wait / esperar</li><li>reunite / reunirse</li></ol></div></div></details><details class="routine"><summary>basic first aid
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 10 actions · basic-first-aid</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>plaster</li><li>wipe</li><li>ice pack</li><li>first aid kit</li><li>safe adult</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>stop activity</li><li>tell safe adult</li><li>sit down</li><li>look at hurt place</li><li>clean if needed</li><li>plaster or ice</li><li>rest</li><li>drink water</li><li>ask help if worse</li><li>finish</li></ol></div></div></details><div class="fam-head" id="fam-school-college"><span class="swatch" style="background:#5C6B8A"></span><h3>School and college <span class="meta">(school-college) · 7</span></h3></div><details class="routine"><summary>asking teacher
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · asking-teacher</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>hand up card</li><li>teacher desk</li><li>workbook</li><li>help card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>need help</li><li>put hand up</li><li>wait</li><li>quiet voice</li><li>teacher comes</li><li>ask</li><li>listen answer</li><li>try again</li><li>say thank you</li><li>carry on</li></ol></div></div></details><details class="routine"><summary>assembly
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 11 actions · assembly</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>hall</li><li>bench or floor spot</li><li>microphone</li><li>quiet card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>line up</li><li>walk to hall</li><li>find place</li><li>sit</li><li>quiet voice</li><li>look at stage</li><li>listen</li><li>stand if asked</li><li>clap if asked</li><li>line up</li><li>leave hall</li></ol></div></div></details><details class="routine"><summary>changing lessons
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · changing-lessons</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bag</li><li>timetable</li><li>classroom door</li><li>corridor</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>lesson ends</li><li>pack bag</li><li>stand up</li><li>walk corridor</li><li>quiet voice</li><li>find next room</li><li>wait at door if needed</li><li>enter</li><li>sit down</li><li>ready</li></ol></div></div></details><details class="routine"><summary>fire drill
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · fire-drill</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>alarm</li><li>exit sign</li><li>line marker</li><li>coat</li><li>assembly point</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>hear alarm</li><li>stand up</li><li>leave bag</li><li>walk to exit</li><li>no running</li><li>quiet voice</li><li>line up outside</li><li>wait</li><li>listen adult</li><li>go back in when safe</li></ol></div></div></details><details class="routine"><summary>parents evening wait
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · parents-evening-wait</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>waiting chair</li><li>name list</li><li>classroom door</li><li>book optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive with adult</li><li>find name list</li><li>wait</li><li>sit quiet</li><li>look at book if wanted</li><li>go in when called</li><li>sit</li><li>listen</li><li>leave when finished</li></ol></div></div></details><details class="routine"><summary>pe changing room
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · pe-changing-room</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>PE kit</li><li>locker or bag</li><li>shoes</li><li>deodorant optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>enter changing room</li><li>find space</li><li>bag down</li><li>clothes off</li><li>PE kit on</li><li>shoes on</li><li>bag away</li><li>line up</li><li>go to PE</li><li>change back after</li></ol></div></div></details><details class="routine"><summary>school photo day
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · school-photo-day</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>camera</li><li>chair</li><li>backdrop</li><li>smile or still face card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wait turn</li><li>quiet voice</li><li>walk to chair</li><li>sit</li><li>look at camera</li><li>still face or smile</li><li>click done</li><li>stand up</li><li>go back to class</li></ol></div></div></details><div class="fam-head" id="fam-money-and-shopping"><span class="swatch" style="background:#8B7355"></span><h3>Money and shopping <span class="meta">(money-and-shopping) · 4</span></h3></div><details class="routine"><summary>asking price
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · asking-price</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>item</li><li>price tag</li><li>staff badge</li><li>help card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>find item</li><li>look for price</li><li>find staff</li><li>wait</li><li>show item</li><li>ask price</li><li>listen</li><li>choose yes or no</li><li>say thank you</li></ol></div></div></details><details class="routine"><summary>contactless pay
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · contactless-pay</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bank card</li><li>phone</li><li>card reader</li><li>shopping bag</li><li>receipt</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>queue</li><li>wait turn</li><li>place items</li><li>get card ready</li><li>tap card</li><li>wait beep</li><li>take receipt</li><li>take bag</li><li>put card away</li><li>leave</li></ol></div></div></details><details class="routine"><summary>returns
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · returns</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>receipt</li><li>item in bag</li><li>returns desk</li><li>ticket number</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>bring item and receipt</li><li>find returns desk</li><li>queue</li><li>wait turn</li><li>show receipt</li><li>give item</li><li>listen options</li><li>get money or swap</li><li>say thank you</li><li>leave</li></ol></div></div></details><details class="routine"><summary>using money
+<span class="badge badge-proposed">p2-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · using-money</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>coins</li><li>notes</li><li>purse or wallet</li><li>price tag</li><li>till</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>choose item</li><li>check price</li><li>get money ready</li><li>queue</li><li>wait turn</li><li>give money</li><li>take change</li><li>put money away</li><li>take bag</li><li>leave</li></ol></div></div></details><div class="fam-head" id="fam-life-events"><span class="swatch" style="background:#6B5B7A"></span><h3>Life events and faith <span class="meta">(life-events) · 14</span></h3></div><details class="routine"><summary>baptism or naming
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · baptism-or-naming</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>smart clothes</li><li>water or font</li><li>candle optional</li><li>family seats</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress smart</li><li>arrive</li><li>sit with family</li><li>quiet voice</li><li>watch ceremony</li><li>water moment ok</li><li>clap soft if asked</li><li>photos</li><li>say congratulations</li><li>leave</li></ol></div></div></details><details class="routine"><summary>bar or bat mitzvah
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 11 actions · bar-or-bat-mitzvah</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>smart clothes</li><li>synagogue</li><li>order of service</li><li>party invitation</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress smart</li><li>arrive</li><li>cover head if asked</li><li>sit quiet</li><li>listen</li><li>stand if asked</li><li>congratulate</li><li>party after</li><li>eat</li><li>say goodbye</li><li>leave</li></ol></div></div></details><details class="routine"><summary>birthday party
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 12 actions · birthday-party</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>gift</li><li>balloon</li><li>cake</li><li>party games</li><li>party bag</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>say hello</li><li>give gift</li><li>put coat away</li><li>play games</li><li>wait turn</li><li>sing</li><li>cake</li><li>say thank you</li><li>party bag</li><li>goodbye</li><li>leave</li></ol></div></div></details><details class="routine"><summary>christmas gathering
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · christmas-gathering</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>decorations</li><li>food</li><li>present</li><li>cracker optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>say hello</li><li>coat off</li><li>sit at table</li><li>eat</li><li>open gift if any</li><li>noise break if needed</li><li>help tidy optional</li><li>goodbye</li><li>home</li></ol></div></div></details><details class="routine"><summary>church service
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · church-service</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>smart clothes</li><li>hymn book or sheet</li><li>pew</li><li>quiet card</li><li>collection plate optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress smart</li><li>travel with adult</li><li>arrive</li><li>enter quietly</li><li>find seat</li><li>sit</li><li>quiet voice</li><li>stand if asked</li><li>listen or sing soft</li><li>sit again</li><li>leave when finished</li></ol></div></div></details><details class="routine"><summary>diwali celebration
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · diwali-celebration</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>lights</li><li>sweets</li><li>clothes</li><li>headphones optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress up</li><li>arrive</li><li>look at lights</li><li>loud or bright ok</li><li>headphones if needed</li><li>share sweets</li><li>ask break</li><li>say goodbye</li><li>leave when ready</li></ol></div></div></details><details class="routine"><summary>eid celebration
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · eid-celebration</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>smart clothes</li><li>food</li><li>family home</li><li>gift optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress smart</li><li>travel</li><li>arrive</li><li>greet family</li><li>sit</li><li>eat together</li><li>quiet play</li><li>photos</li><li>say goodbye</li><li>home</li></ol></div></div></details><details class="routine"><summary>first communion
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · first-communion</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>smart clothes</li><li>church</li><li>candle</li><li>communion rail</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress smart</li><li>arrive church</li><li>find seat</li><li>sit quiet</li><li>stand or kneel if asked</li><li>walk when called</li><li>receive if ready</li><li>return to seat</li><li>photos</li><li>leave</li></ol></div></div></details><details class="routine"><summary>funeral or memorial
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 12 actions · funeral-or-memorial</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>smart dark clothes</li><li>tissue</li><li>quiet card</li><li>chair</li><li>photo optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress quiet clothes</li><li>travel with adult</li><li>arrive</li><li>enter quietly</li><li>find seat</li><li>sit</li><li>quiet voice</li><li>people may cry</li><li>hug optional</li><li>listen</li><li>leave when adult says</li><li>home rest</li></ol></div></div></details><details class="routine"><summary>hindu temple visit
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · hindu-temple-visit</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>shoes bag</li><li>offering</li><li>bell</li><li>quiet card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>remove shoes</li><li>enter quietly</li><li>look</li><li>offer if given</li><li>quiet voice</li><li>sit or stand</li><li>listen or pray</li><li>shoes on</li><li>leave</li></ol></div></div></details><details class="routine"><summary>mosque visit
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 12 actions · mosque-visit</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>shoes bag</li><li>prayer mat</li><li>head covering</li><li>wash area</li><li>quiet card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress ready</li><li>arrive</li><li>remove shoes</li><li>wash if needed</li><li>put covering if asked</li><li>enter quietly</li><li>find place</li><li>sit or stand</li><li>quiet voice</li><li>pray or watch</li><li>shoes on</li><li>leave</li></ol></div></div></details><details class="routine"><summary>sikh gurdwara visit
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 11 actions · sikh-gurdwara-visit</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>head covering</li><li>shoes bag</li><li>prayer hall</li><li>langar tray</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>cover head</li><li>arrive</li><li>remove shoes</li><li>wash hands</li><li>enter quietly</li><li>sit</li><li>listen</li><li>shared meal if offered</li><li>say thank you</li><li>shoes on</li><li>leave</li></ol></div></div></details><details class="routine"><summary>synagogue service
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 11 actions · synagogue-service</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>kippah or covering</li><li>prayer book</li><li>seat</li><li>quiet card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress smart</li><li>arrive</li><li>cover head if asked</li><li>enter quietly</li><li>find seat</li><li>sit</li><li>stand if asked</li><li>quiet voice</li><li>listen</li><li>sit again</li><li>leave</li></ol></div></div></details><details class="routine"><summary>wedding guest
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 12 actions · wedding-guest</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>smart clothes</li><li>gift</li><li>seat card</li><li>party favour optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress smart</li><li>bring gift</li><li>arrive</li><li>find seat</li><li>sit quiet</li><li>watch ceremony</li><li>stand if asked</li><li>clap if asked</li><li>photos</li><li>meal or party</li><li>say congratulations</li><li>leave</li></ol></div></div></details><div class="fam-head" id="fam-weather-seasons"><span class="swatch" style="background:#4A7C8A"></span><h3>Weather and seasons <span class="meta">(weather-seasons) · 10</span></h3></div><details class="routine"><summary>back to school
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · back-to-school</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>uniform</li><li>school bag</li><li>lunch</li><li>shoes</li><li>timetable</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wake up</li><li>wash face or toilet</li><li>uniform on</li><li>breakfast</li><li>pack bag</li><li>lunch in bag</li><li>shoes on</li><li>leave home</li><li>travel</li><li>arrive school</li><li>find class</li></ol></div></div></details><details class="routine"><summary>bonfire night fireworks
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · bonfire-night-fireworks</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ear defenders</li><li>hat</li><li>hot drink</li><li>glow stick</li><li>exit path</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive with adult</li><li>ear defenders on</li><li>stand back</li><li>loud bangs ok</li><li>watch or look away</li><li>hold adult hand</li><li>ask for break</li><li>ask to leave</li><li>walk to exit</li><li>go home</li></ol></div></div></details><details class="routine"><summary>cold day
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · cold-day</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>coat</li><li>hat</li><li>gloves</li><li>scarf</li><li>warm drink</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check cold day</li><li>coat on</li><li>hat on</li><li>gloves on</li><li>scarf if needed</li><li>go out</li><li>keep moving</li><li>come in warm</li><li>coat off</li><li>warm drink</li></ol></div></div></details><details class="routine"><summary>exam season wait
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · exam-season-wait</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>exam desk</li><li>pencil case</li><li>clock</li><li>candidate number</li><li>water</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive early</li><li>wait quiet</li><li>bag away</li><li>sit at desk</li><li>listen instructions</li><li>start when told</li><li>work</li><li>ask invigilator if allowed</li><li>finish</li><li>leave quiet</li></ol></div></div></details><details class="routine"><summary>halloween
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · halloween</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>costume</li><li>mask optional</li><li>bucket</li><li>torch</li><li>adult hand</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>put costume on</li><li>mask optional</li><li>torch ready</li><li>hold adult hand</li><li>walk to door</li><li>wait turn</li><li>knock or ring</li><li>say trick or treat</li><li>take sweet</li><li>say thank you</li><li>home</li></ol></div></div></details><details class="routine"><summary>hot day
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · hot-day</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>hat</li><li>water bottle</li><li>sunscreen</li><li>shade spot</li><li>fan optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check hot day</li><li>hat on</li><li>sunscreen with adult</li><li>water ready</li><li>go out</li><li>drink water</li><li>find shade</li><li>rest</li><li>drink again</li><li>come inside cool</li></ol></div></div></details><details class="routine"><summary>rainy day
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 10 actions · rainy-day</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>coat</li><li>umbrella</li><li>boots</li><li>towel</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>check weather</li><li>boots on</li><li>coat on</li><li>umbrella ready</li><li>go out</li><li>walk careful</li><li>come inside</li><li>umbrella down</li><li>boots off</li><li>dry off</li></ol></div></div></details><details class="routine"><summary>storm or wind
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · storm-or-wind</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>coat</li><li>indoor activity</li><li>headphones</li><li>window away card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>notice storm</li><li>stay inside</li><li>away from windows</li><li>choose quiet activity</li><li>headphones if loud</li><li>ask adult</li><li>wait until safe</li><li>check weather again</li><li>go out only when adult says</li></ol></div></div></details><details class="routine"><summary>summer holidays week
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 10 actions · summer-holidays-week</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>suitcase</li><li>sunscreen</li><li>swim kit</li><li>water bottle</li><li>ticket</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pack bag</li><li>check list with adult</li><li>travel</li><li>arrive</li><li>unpack</li><li>sunscreen</li><li>choose activity</li><li>water break</li><li>rest</li><li>evening tidy</li></ol></div></div></details><details class="routine"><summary>winter sports trip
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · winter-sports-trip</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>ski jacket</li><li>gloves</li><li>helmet</li><li>lift pass</li><li>goggles</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pack kit</li><li>travel</li><li>arrive resort</li><li>get kit on</li><li>helmet on</li><li>goggles on</li><li>listen instructor</li><li>slope or lesson</li><li>warm inside</li><li>kit off</li><li>rest</li></ol></div></div></details><div class="fam-head" id="fam-home-living"><span class="swatch" style="background:#7A6B55"></span><h3>Home living <span class="meta">(home-living) · 10</span></h3></div><details class="routine"><summary>bedtime routine
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 9 actions · bedtime-routine</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>pyjamas</li><li>toothbrush</li><li>book</li><li>bed</li><li>night light</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>toilet</li><li>wash face or hands</li><li>pyjamas on</li><li>brush teeth</li><li>story</li><li>lights low</li><li>into bed</li><li>quiet voice</li><li>sleep</li></ol></div></div></details><details class="routine"><summary>laundry
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 10 actions · laundry</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>laundry basket</li><li>washing machine</li><li>detergent</li><li>pegs</li><li>dryer or line</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>collect clothes</li><li>sort colours</li><li>load machine</li><li>add detergent with adult</li><li>start machine</li><li>wait</li><li>unload</li><li>hang or tumble</li><li>fold</li><li>put away</li></ol></div></div></details><details class="routine"><summary>making bed
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 7 actions · making-bed</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>sheet</li><li>duvet</li><li>pillow</li><li>bed</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pull sheet flat</li><li>tuck corners if needed</li><li>duvet on</li><li>smooth duvet</li><li>pillows on</li><li>check tidy</li><li>finish</li></ol></div></div></details><details class="routine"><summary>packing school bag
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 9 actions · packing-school-bag</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>school bag</li><li>books</li><li>lunch</li><li>planner</li><li>pencil case</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>open planner</li><li>check list</li><li>books in</li><li>pencil case in</li><li>lunch in</li><li>water bottle in</li><li>zip bag</li><li>place by door</li><li>ready</li></ol></div></div></details><details class="routine"><summary>simple snack
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 11 actions · simple-snack</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>plate</li><li>safe knife or spoon</li><li>food</li><li>drink</li><li>cloth</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>wash hands</li><li>get plate</li><li>get food</li><li>prepare with adult</li><li>pour drink</li><li>sit</li><li>eat</li><li>drink</li><li>clear plate</li><li>wipe table</li><li>wash hands</li></ol></div></div></details><details class="routine"><summary>sleepover
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 12 actions · sleepover</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>overnight bag</li><li>pyjamas</li><li>toothbrush</li><li>sleeping bag or bed</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pack bag</li><li>arrive</li><li>say hello</li><li>put bag down</li><li>play</li><li>eat</li><li>brush teeth</li><li>pyjamas on</li><li>sleep</li><li>morning pack</li><li>say thank you</li><li>home</li></ol></div></div></details><details class="routine"><summary>taking bins out
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 9 actions · taking-bins-out</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>bin bag</li><li>indoor bin</li><li>outdoor bin</li><li>gloves optional</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>tie bag</li><li>open door</li><li>carry bag</li><li>open outdoor bin</li><li>put bag in</li><li>close lid</li><li>come inside</li><li>wash hands</li><li>finish</li></ol></div></div></details><details class="routine"><summary>vacuum or tidy
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 10 actions · vacuum-or-tidy</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>vacuum</li><li>toys box</li><li>cloth</li><li>bin</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>pick up toys</li><li>put toys in box</li><li>bin rubbish</li><li>get vacuum</li><li>plug in with adult</li><li>vacuum floor</li><li>turn off</li><li>wipe surface</li><li>put vacuum away</li><li>finish</li></ol></div></div></details><details class="routine"><summary>visiting grandparents
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">4 objects · 12 actions · visiting-grandparents</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>coat</li><li>bag</li><li>gift optional</li><li>quiet activity</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>dress</li><li>pack bag</li><li>travel</li><li>arrive</li><li>say hello</li><li>coat off</li><li>sit</li><li>talk or play</li><li>snack</li><li>say goodbye</li><li>coat on</li><li>home</li></ol></div></div></details><details class="routine"><summary>washing up
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-plus">plus</span>
+<span class="meta">5 objects · 10 actions · washing-up</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>sponge</li><li>washing up liquid</li><li>plate</li><li>tea towel</li><li>drainer</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>scrape plate</li><li>fill or turn tap</li><li>soap sponge</li><li>wash</li><li>rinse</li><li>place on drainer</li><li>dry</li><li>put away</li><li>wipe sink</li><li>finish</li></ol></div></div></details><div class="fam-head" id="fam-work-experience"><span class="swatch" style="background:#5A6A6E"></span><h3>Work and volunteering <span class="meta">(work-experience) · 5</span></h3></div><details class="routine"><summary>asking supervisor
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">3 objects · 9 actions · asking-supervisor</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>supervisor</li><li>task sheet</li><li>help card</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>need help</li><li>finish safe stop</li><li>find supervisor</li><li>wait</li><li>ask</li><li>listen</li><li>repeat back</li><li>try task</li><li>check again if unsure</li></ol></div></div></details><details class="routine"><summary>clocking in
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">4 objects · 9 actions · clocking-in</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>time clock</li><li>badge</li><li>phone app</li><li>locker</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive</li><li>bag in locker</li><li>find clock</li><li>tap badge or app</li><li>check confirmed</li><li>start work</li><li>end of day tap out</li><li>bag</li><li>leave</li></ol></div></div></details><details class="routine"><summary>first day at work
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 11 actions · first-day-at-work</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>uniform</li><li>badge</li><li>bag</li><li>supervisor</li><li>timetable</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>arrive on time</li><li>find supervisor</li><li>say hello</li><li>put bag away</li><li>badge on</li><li>listen tour</li><li>ask question</li><li>start task</li><li>break</li><li>finish shift</li><li>say goodbye</li></ol></div></div></details><details class="routine"><summary>using break room
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 8 actions · using-break-room</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>locker</li><li>mug</li><li>table</li><li>sink</li><li>clock</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>clock break</li><li>go to break room</li><li>get drink</li><li>sit</li><li>quiet chat or alone</li><li>clean cup</li><li>check time</li><li>back to work</li></ol></div></div></details><details class="routine"><summary>wearing uniform
+<span class="badge badge-proposed">p3-proposed</span>
+<span class="badge badge-premium">premium</span>
+<span class="meta">5 objects · 8 actions · wearing-uniform</span></summary>
+<div class="cols"><div><h4>Objects</h4><ul class="objs"><li>uniform top</li><li>trousers</li><li>shoes</li><li>badge</li><li>mirror</li></ul></div>
+<div><h4>Action steps</h4><ol class="steps"><li>get uniform</li><li>clothes off</li><li>uniform on</li><li>shoes on</li><li>badge on</li><li>check mirror</li><li>bag ready</li><li>ready for work</li></ol></div></div></details></div></section>
+<footer><div class="wrap">
+<p>PixtoLearn · unified sports · 2026-08-14</p>
+<p><a href="wow-naming-and-sports-split.html">Naming governance</a> · PIXTOLEARN/docs/wow-routines-master-plan.html</p>
+</div></footer></body></html>

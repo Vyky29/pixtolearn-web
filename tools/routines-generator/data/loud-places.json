@@ -1,0 +1,164 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "loud-places",
+  "family": "sensory-world",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "all",
+    "gender": "genderless",
+    "skin": "medium",
+    "hair": "short neutral",
+    "clothes": "soft teal sweater, grey trousers",
+    "age": "flexible",
+    "lock": "PRIMARY E1 genderless style. Same outfit entire pack."
+  },
+  "label": {
+    "en": "Loud places",
+    "es": "Sitios ruidosos"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "loud places",
+      "es": "sitios ruidosos"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "ear-defenders",
+      "slug": "ear-defenders",
+      "title": {
+        "en": "ear defenders",
+        "es": "cascos protectores"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "cascos"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "speaker",
+      "slug": "speaker",
+      "title": {
+        "en": "speaker",
+        "es": "altavoz"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "door",
+      "slug": "door",
+      "title": {
+        "en": "door",
+        "es": "puerta"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "notice-sound",
+      "slug": "notice-sound",
+      "title": {
+        "en": "notice sound",
+        "es": "notar el sonido"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "choose-ear-tool",
+      "slug": "choose-ear-tool",
+      "title": {
+        "en": "choose ear tool",
+        "es": "elegir proteccion"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "put-on",
+      "slug": "put-on",
+      "title": {
+        "en": "put on",
+        "es": "ponerse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "step-to-door",
+      "slug": "step-to-door",
+      "title": {
+        "en": "step to door",
+        "es": "acercarse a la puerta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "tell-adult",
+      "slug": "tell-adult",
+      "title": {
+        "en": "tell a trusted adult",
+        "es": "decir a un adulto de confianza"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "take-break",
+      "slug": "take-break",
+      "title": {
+        "en": "take a break",
+        "es": "tomarse un descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 6,
+    "cards": 11
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#5B9A8B",
+    "accent": "#E8A840",
+    "accent_name": "warm amber",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Job: what a loud place is + coping. Overlap with headphones-and-breaks kept minimal."
+  ]
+}

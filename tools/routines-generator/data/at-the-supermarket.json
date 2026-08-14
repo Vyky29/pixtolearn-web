@@ -1,0 +1,375 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "at-the-supermarket",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green long-sleeve shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #5A9A60 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Supermarket",
+    "es": "Supermercado"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "supermarket",
+      "es": "supermercado"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "shopping-cart",
+      "slug": "shopping-cart",
+      "title": {
+        "en": "trolley",
+        "es": "carro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shopping-list",
+      "slug": "shopping-list",
+      "title": {
+        "en": "list",
+        "es": "lista"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cash-card",
+      "slug": "cash-card",
+      "title": {
+        "en": "card",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shopping-bag",
+      "slug": "shopping-bag",
+      "title": {
+        "en": "bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "receipt",
+      "slug": "receipt",
+      "title": {
+        "en": "receipt",
+        "es": "ticket"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "grab-cart",
+      "slug": "grab-cart",
+      "title": {
+        "en": "get trolley",
+        "es": "coger carro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-list",
+      "slug": "check-list",
+      "title": {
+        "en": "check list",
+        "es": "mirar lista"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pick-items",
+      "slug": "pick-items",
+      "title": {
+        "en": "pick items",
+        "es": "coger productos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "place-in-cart",
+      "slug": "place-in-cart",
+      "title": {
+        "en": "in trolley",
+        "es": "al carro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "go-checkout",
+      "slug": "go-checkout",
+      "title": {
+        "en": "go to till",
+        "es": "ir a caja"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-bags",
+      "slug": "pack-bags",
+      "title": {
+        "en": "pack bags",
+        "es": "llenar bolsas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit",
+      "slug": "exit",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-aisle",
+      "slug": "crowded-aisle",
+      "title": {
+        "en": "crowded aisle",
+        "es": "pasillo lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-noise",
+      "slug": "loud-noise",
+      "title": {
+        "en": "loud noise",
+        "es": "ruido fuerte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-in-queue",
+      "slug": "wait-in-queue",
+      "title": {
+        "en": "wait in queue",
+        "es": "hacer cola"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-staff-help",
+      "slug": "ask-staff-help",
+      "title": {
+        "en": "ask staff",
+        "es": "pedir ayuda"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "supermarket",
+        "es": "supermercado"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "shopping-cart",
+      "slug": "shopping-cart",
+      "title": {
+        "en": "trolley",
+        "es": "carro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shopping-list",
+      "slug": "shopping-list",
+      "title": {
+        "en": "list",
+        "es": "lista"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cash-card",
+      "slug": "cash-card",
+      "title": {
+        "en": "card",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shopping-bag",
+      "slug": "shopping-bag",
+      "title": {
+        "en": "bag",
+        "es": "bolsa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "receipt",
+      "slug": "receipt",
+      "title": {
+        "en": "receipt",
+        "es": "ticket"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "grab-cart",
+      "slug": "grab-cart",
+      "title": {
+        "en": "get trolley",
+        "es": "coger carro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-list",
+      "slug": "check-list",
+      "title": {
+        "en": "check list",
+        "es": "mirar lista"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pick-items",
+      "slug": "pick-items",
+      "title": {
+        "en": "pick items",
+        "es": "coger productos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "place-in-cart",
+      "slug": "place-in-cart",
+      "title": {
+        "en": "in trolley",
+        "es": "al carro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "go-checkout",
+      "slug": "go-checkout",
+      "title": {
+        "en": "go to till",
+        "es": "ir a caja"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-bags",
+      "slug": "pack-bags",
+      "title": {
+        "en": "pack bags",
+        "es": "llenar bolsas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit",
+      "slug": "exit",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-aisle",
+      "slug": "crowded-aisle",
+      "title": {
+        "en": "crowded aisle",
+        "es": "pasillo lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-noise",
+      "slug": "loud-noise",
+      "title": {
+        "en": "loud noise",
+        "es": "ruido fuerte"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-in-queue",
+      "slug": "wait-in-queue",
+      "title": {
+        "en": "wait in queue",
+        "es": "hacer cola"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ask-staff-help",
+      "slug": "ask-staff-help",
+      "title": {
+        "en": "ask staff",
+        "es": "pedir ayuda"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 12,
+    "cards": 18
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#D03860",
+    "accent": "#5A9A60",
+    "accent_name": "fresh green",
+    "highlight": "trolley / product / till",
+    "outfit_lock": true
+  }
+}

@@ -1,0 +1,507 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "core",
+  "family": "core",
+  "status": "ready",
+  "audience": "all",
+  "character": {
+    "gender": "mixed",
+    "skin": "mixed"
+  },
+  "label": {
+    "en": "Core vocabulary",
+    "es": "Vocabulario esencial"
+  },
+  "existing_dir": "core",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "core",
+      "es": "esencial"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "toilet",
+      "slug": "toilet",
+      "title": {
+        "en": "toilet",
+        "es": "aseo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "eat",
+      "slug": "eat",
+      "title": {
+        "en": "eat",
+        "es": "comer"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "drink",
+      "slug": "drink",
+      "title": {
+        "en": "drink",
+        "es": "beber"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "listen",
+      "slug": "listen",
+      "title": {
+        "en": "listen",
+        "es": "escuchar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "look",
+      "slug": "look",
+      "title": {
+        "en": "look",
+        "es": "mirar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "speak",
+      "slug": "speak",
+      "title": {
+        "en": "speak",
+        "es": "hablar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "quiet",
+      "slug": "quiet",
+      "title": {
+        "en": "quiet",
+        "es": "silencio"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wait",
+      "slug": "wait",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "stand",
+      "slug": "stand",
+      "title": {
+        "en": "stand",
+        "es": "de pie"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sit-down",
+      "slug": "sit-down",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "walk",
+      "slug": "walk",
+      "title": {
+        "en": "walk",
+        "es": "caminar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hold-hands",
+      "slug": "hold-hands",
+      "title": {
+        "en": "hold hands",
+        "es": "coger mano"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "help",
+      "slug": "help",
+      "title": {
+        "en": "help",
+        "es": "ayuda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "get",
+      "slug": "get",
+      "title": {
+        "en": "get",
+        "es": "coger"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "put",
+      "slug": "put",
+      "title": {
+        "en": "put",
+        "es": "poner"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "give",
+      "slug": "give",
+      "title": {
+        "en": "give",
+        "es": "dar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "yes",
+      "slug": "yes",
+      "title": {
+        "en": "yes",
+        "es": "si"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "no",
+      "slug": "no",
+      "title": {
+        "en": "no",
+        "es": "no"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "stop",
+      "slug": "stop",
+      "title": {
+        "en": "stop",
+        "es": "parar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "choose",
+      "slug": "choose",
+      "title": {
+        "en": "choose",
+        "es": "elegir"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "more",
+      "slug": "more",
+      "title": {
+        "en": "more",
+        "es": "mas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "break",
+      "slug": "break",
+      "title": {
+        "en": "break",
+        "es": "descanso"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "finish",
+      "slug": "finish",
+      "title": {
+        "en": "finish",
+        "es": "terminar"
+      },
+      "wow_layer": "object",
+      "file": "finish3D.png"
+    },
+    {
+      "id": "welldone",
+      "slug": "welldone",
+      "title": {
+        "en": "well done",
+        "es": "muy bien"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "core",
+        "es": "esencial"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "toilet",
+      "slug": "toilet",
+      "title": {
+        "en": "toilet",
+        "es": "aseo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "eat",
+      "slug": "eat",
+      "title": {
+        "en": "eat",
+        "es": "comer"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "drink",
+      "slug": "drink",
+      "title": {
+        "en": "drink",
+        "es": "beber"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "listen",
+      "slug": "listen",
+      "title": {
+        "en": "listen",
+        "es": "escuchar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "look",
+      "slug": "look",
+      "title": {
+        "en": "look",
+        "es": "mirar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "speak",
+      "slug": "speak",
+      "title": {
+        "en": "speak",
+        "es": "hablar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "quiet",
+      "slug": "quiet",
+      "title": {
+        "en": "quiet",
+        "es": "silencio"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wait",
+      "slug": "wait",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "stand",
+      "slug": "stand",
+      "title": {
+        "en": "stand",
+        "es": "de pie"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sit-down",
+      "slug": "sit-down",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "walk",
+      "slug": "walk",
+      "title": {
+        "en": "walk",
+        "es": "caminar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hold-hands",
+      "slug": "hold-hands",
+      "title": {
+        "en": "hold hands",
+        "es": "coger mano"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "help",
+      "slug": "help",
+      "title": {
+        "en": "help",
+        "es": "ayuda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "get",
+      "slug": "get",
+      "title": {
+        "en": "get",
+        "es": "coger"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "put",
+      "slug": "put",
+      "title": {
+        "en": "put",
+        "es": "poner"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "give",
+      "slug": "give",
+      "title": {
+        "en": "give",
+        "es": "dar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "yes",
+      "slug": "yes",
+      "title": {
+        "en": "yes",
+        "es": "si"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "no",
+      "slug": "no",
+      "title": {
+        "en": "no",
+        "es": "no"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "stop",
+      "slug": "stop",
+      "title": {
+        "en": "stop",
+        "es": "parar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "choose",
+      "slug": "choose",
+      "title": {
+        "en": "choose",
+        "es": "elegir"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "more",
+      "slug": "more",
+      "title": {
+        "en": "more",
+        "es": "mas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "break",
+      "slug": "break",
+      "title": {
+        "en": "break",
+        "es": "descanso"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "finish",
+      "slug": "finish",
+      "title": {
+        "en": "finish",
+        "es": "terminar"
+      },
+      "wow_layer": "object",
+      "file": "finish3D.png"
+    },
+    {
+      "id": "welldone",
+      "slug": "welldone",
+      "title": {
+        "en": "well done",
+        "es": "muy bien"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "counts": {
+    "items": 25,
+    "actions": 0,
+    "cards": 26
+  },
+  "design_note": "No accent in design-system yet"
+}

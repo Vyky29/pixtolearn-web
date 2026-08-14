@@ -1,0 +1,226 @@
+{
+  "title": "P1 WOW art overnight plan",
+  "status": "complete",
+  "started": "2026-08-07",
+  "scope": "14 P1 packs only; no Situation Stories; no P2",
+  "style": {
+    "illustration": "flat 2D, thin black outlines, muted flat colours",
+    "background": "pure white",
+    "forbidden": [
+      "text",
+      "logos",
+      "watermarks",
+      "grey frames",
+      "inner vignettes"
+    ],
+    "install": "scripts/install_art.py --fill 0.94",
+    "size": [
+      531,
+      648
+    ]
+  },
+  "avatar_locks": {
+    "trampoline-wow": "C1",
+    "at-the-dentist": "C2",
+    "at-the-gp": "C1",
+    "blood-test": "T1",
+    "vaccination": "C2",
+    "loud-places": "E1",
+    "crowded-places": "E1",
+    "waiting": "E1",
+    "headphones-and-breaks": "E1",
+    "at-a-cafe": "C1",
+    "school-lunch": "C2",
+    "i-am-lost": "C1",
+    "ask-safe-adult": "C2",
+    "fire-alarm": "C1"
+  },
+  "outfit_tops": {
+    "trampoline-wow": "#C77830",
+    "health-appointments": "#7A8FA0",
+    "sensory-world": "#5B9A8B",
+    "eating-out": "#B86B4A",
+    "emergency-help": "#4A6670"
+  },
+  "waves": [
+    {
+      "id": "A",
+      "packs": [
+        "loud-places",
+        "waiting",
+        "headphones-and-breaks",
+        "crowded-places"
+      ],
+      "avatar": "E1"
+    },
+    {
+      "id": "B",
+      "packs": [
+        "trampoline-wow"
+      ],
+      "avatar": "C1"
+    },
+    {
+      "id": "C",
+      "packs": [
+        "at-a-cafe",
+        "school-lunch"
+      ],
+      "avatars": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "D",
+      "packs": [
+        "at-the-gp",
+        "at-the-dentist"
+      ],
+      "avatars": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "E",
+      "packs": [
+        "vaccination",
+        "blood-test"
+      ],
+      "avatars": [
+        "C2",
+        "T1"
+      ]
+    },
+    {
+      "id": "F",
+      "packs": [
+        "i-am-lost",
+        "ask-safe-adult",
+        "fire-alarm"
+      ],
+      "avatars": [
+        "C1",
+        "C2",
+        "C1"
+      ]
+    }
+  ],
+  "definition_of_done": [
+    "Every P1 pack has cover+items+actions PNGs installed",
+    "No same-pack MD5 duplicates",
+    "Avatar and outfit locked per pack",
+    "routines.json art status updated",
+    "Morning note written"
+  ],
+  "prompt_prefix": "PixtoLearn WOW flashcard illustration, flat 2D children's educational style, thin clean black outlines, muted flat colours, pure white background, no text no letters no logos no watermarks no grey frame.",
+  "execution_progress": {
+    "A": "complete",
+    "B": "complete",
+    "C": "complete",
+    "D": "complete",
+    "E": "complete",
+    "F": "complete"
+  },
+  "audit": {
+    "loud-places": {
+      "have": 11,
+      "need": 11,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "waiting": {
+      "have": 11,
+      "need": 11,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "headphones-and-breaks": {
+      "have": 13,
+      "need": 13,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "crowded-places": {
+      "have": 11,
+      "need": 11,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "trampoline-wow": {
+      "have": 16,
+      "need": 16,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "at-a-cafe": {
+      "have": 15,
+      "need": 15,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "school-lunch": {
+      "have": 14,
+      "need": 14,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "at-the-gp": {
+      "have": 16,
+      "need": 16,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "at-the-dentist": {
+      "have": 17,
+      "need": 17,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "vaccination": {
+      "have": 15,
+      "need": 15,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "blood-test": {
+      "have": 17,
+      "need": 17,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "i-am-lost": {
+      "have": 14,
+      "need": 14,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "ask-safe-adult": {
+      "have": 12,
+      "need": 12,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    },
+    "fire-alarm": {
+      "have": 13,
+      "need": 13,
+      "ok": true,
+      "miss": [],
+      "dups": []
+    }
+  }
+}

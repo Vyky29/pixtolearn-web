@@ -1,0 +1,128 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "emotion-sad",
+  "family": "emotions",
+  "status": "ready",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "youth",
+    "gender": "neutral",
+    "skin": "medium",
+    "hair": "soft short rounded bowl cut, androgynous",
+    "clothes": "blue crew sweater #5B8FC4, soft grey trousers",
+    "age": "youth",
+    "lock": "E1 genderless. Sweater+halo #5B8FC4. Two unique coping actions only."
+  },
+  "label": {
+    "en": "Sad",
+    "es": "Triste"
+  },
+  "existing_dir": null,
+  "emotions_asset_dir": "emotions-keyring",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "sad",
+      "es": "triste"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "sad",
+      "slug": "sad",
+      "title": {
+        "en": "sad",
+        "es": "triste"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "ask-hug",
+      "slug": "ask-hug",
+      "title": {
+        "en": "ask for hug",
+        "es": "pedir abrazo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-comfort",
+      "slug": "use-comfort",
+      "title": {
+        "en": "use comfort",
+        "es": "usar consuelo"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "sad",
+        "es": "triste"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "sad",
+      "slug": "sad",
+      "title": {
+        "en": "sad",
+        "es": "triste"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "ask-hug",
+      "slug": "ask-hug",
+      "title": {
+        "en": "ask for hug",
+        "es": "pedir abrazo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "use-comfort",
+      "slug": "use-comfort",
+      "title": {
+        "en": "use comfort",
+        "es": "usar consuelo"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 1,
+    "actions": 2,
+    "cards": 4
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#E8A840",
+    "accent": "#5B8FC4",
+    "accent_name": "blue",
+    "colour_group": "blue",
+    "highlight": "E1 genderless blue; unique premium coping pair",
+    "outfit_lock": true,
+    "sort_order": 4
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "art_notes": "Premium: face+cover blue. Actions unique to this emotion, sweater #5B8FC4. Not shared across emotions."
+}

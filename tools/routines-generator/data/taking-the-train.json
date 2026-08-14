@@ -1,0 +1,393 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "taking-the-train",
+  "family": "safety-mobility",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #A84858 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Taking the train",
+    "es": "Coger el tren"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "train",
+      "es": "tren"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "train-ticket",
+      "slug": "train-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "platform",
+      "slug": "platform",
+      "title": {
+        "en": "platform",
+        "es": "anden"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "auriculares"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "book",
+      "slug": "book",
+      "title": {
+        "en": "book",
+        "es": "libro"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "buy-ticket",
+      "slug": "buy-ticket",
+      "title": {
+        "en": "buy ticket",
+        "es": "comprar billete"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-platform",
+      "slug": "wait-platform",
+      "title": {
+        "en": "wait platform",
+        "es": "esperar anden"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board",
+      "slug": "board",
+      "title": {
+        "en": "board",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "place-luggage",
+      "slug": "place-luggage",
+      "title": {
+        "en": "store bag",
+        "es": "guardar maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-out",
+      "slug": "look-out",
+      "title": {
+        "en": "look out",
+        "es": "mirar fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "read",
+      "slug": "read",
+      "title": {
+        "en": "read",
+        "es": "leer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "watch-movie",
+      "slug": "watch-movie",
+      "title": {
+        "en": "watch movie",
+        "es": "ver pelicula"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-music",
+      "slug": "listen-music",
+      "title": {
+        "en": "listen music",
+        "es": "escuchar musica"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sleep",
+      "slug": "sleep",
+      "title": {
+        "en": "sleep",
+        "es": "dormir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-off",
+      "slug": "get-off",
+      "title": {
+        "en": "get off",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-carriage",
+      "slug": "crowded-carriage",
+      "title": {
+        "en": "crowded",
+        "es": "lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-announcement",
+      "slug": "loud-announcement",
+      "title": {
+        "en": "loud speaker",
+        "es": "altavoz"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "train",
+        "es": "tren"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "train-ticket",
+      "slug": "train-ticket",
+      "title": {
+        "en": "ticket",
+        "es": "billete"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "platform",
+      "slug": "platform",
+      "title": {
+        "en": "platform",
+        "es": "anden"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "luggage",
+      "slug": "luggage",
+      "title": {
+        "en": "luggage",
+        "es": "maleta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "auriculares"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "book",
+      "slug": "book",
+      "title": {
+        "en": "book",
+        "es": "libro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "buy-ticket",
+      "slug": "buy-ticket",
+      "title": {
+        "en": "buy ticket",
+        "es": "comprar billete"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-platform",
+      "slug": "wait-platform",
+      "title": {
+        "en": "wait platform",
+        "es": "esperar anden"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "board",
+      "slug": "board",
+      "title": {
+        "en": "board",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "find-seat",
+      "slug": "find-seat",
+      "title": {
+        "en": "find seat",
+        "es": "buscar asiento"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "place-luggage",
+      "slug": "place-luggage",
+      "title": {
+        "en": "store bag",
+        "es": "guardar maleta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-out",
+      "slug": "look-out",
+      "title": {
+        "en": "look out",
+        "es": "mirar fuera"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "read",
+      "slug": "read",
+      "title": {
+        "en": "read",
+        "es": "leer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "watch-movie",
+      "slug": "watch-movie",
+      "title": {
+        "en": "watch movie",
+        "es": "ver pelicula"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-music",
+      "slug": "listen-music",
+      "title": {
+        "en": "listen music",
+        "es": "escuchar musica"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sleep",
+      "slug": "sleep",
+      "title": {
+        "en": "sleep",
+        "es": "dormir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-off",
+      "slug": "get-off",
+      "title": {
+        "en": "get off",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-carriage",
+      "slug": "crowded-carriage",
+      "title": {
+        "en": "crowded",
+        "es": "lleno"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-announcement",
+      "slug": "loud-announcement",
+      "title": {
+        "en": "loud speaker",
+        "es": "altavoz"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 13,
+    "cards": 19
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#3D7EA6",
+    "accent": "#A84858",
+    "accent_name": "rail wine",
+    "highlight": "ticket / door / seat",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

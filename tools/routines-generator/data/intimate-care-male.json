@@ -1,0 +1,351 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "intimate-care-male",
+  "family": "intimate-care",
+  "status": "ready",
+  "access": "restricted",
+  "audience": "teen-adult-elder",
+  "character": {
+    "avatar_id": "YA2",
+    "band": "young-adult",
+    "gender": "man",
+    "skin": "dark",
+    "hair": "short black",
+    "clothes": "dark grey t-shirt, black trousers",
+    "age": "young-adult",
+    "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #8A9BB0 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Masturbation (male)",
+    "es": "Masturbacion (hombre)"
+  },
+  "notes": "Restricted educational pack. Calm clinical. Male body cues. Not for public shop.",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "masturbation male",
+      "es": "masturbacion hombre"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "closed-door",
+      "slug": "closed-door",
+      "title": {
+        "en": "closed door",
+        "es": "puerta cerrada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "lubricant",
+      "slug": "lubricant",
+      "title": {
+        "en": "lubricant",
+        "es": "lubricante"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel-tissue",
+      "slug": "towel-tissue",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-soap",
+      "slug": "hand-soap",
+      "title": {
+        "en": "hand soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "find-private-space",
+      "slug": "find-private-space",
+      "title": {
+        "en": "private space",
+        "es": "espacio privado"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "close-door",
+      "slug": "close-door",
+      "title": {
+        "en": "close door",
+        "es": "cerrar puerta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-or-lie",
+      "slug": "sit-or-lie",
+      "title": {
+        "en": "sit or lie",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-lubricant",
+      "slug": "apply-lubricant",
+      "title": {
+        "en": "apply lubricant",
+        "es": "poner lubricante"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "touch-penis",
+      "slug": "touch-penis",
+      "title": {
+        "en": "touch penis",
+        "es": "tocar pene"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gentle-movements",
+      "slug": "gentle-movements",
+      "title": {
+        "en": "gentle movement",
+        "es": "mover suave"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ejaculate-finish",
+      "slug": "ejaculate-finish",
+      "title": {
+        "en": "ejaculate",
+        "es": "eyacular"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clean-up",
+      "slug": "clean-up",
+      "title": {
+        "en": "clean up",
+        "es": "limpiar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hands-again",
+      "slug": "wash-hands-again",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-dressed",
+      "slug": "get-dressed",
+      "title": {
+        "en": "get dressed",
+        "es": "vestirse"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "masturbation male",
+        "es": "masturbacion hombre"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "closed-door",
+      "slug": "closed-door",
+      "title": {
+        "en": "closed door",
+        "es": "puerta cerrada"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "lubricant",
+      "slug": "lubricant",
+      "title": {
+        "en": "lubricant",
+        "es": "lubricante"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel-tissue",
+      "slug": "towel-tissue",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-soap",
+      "slug": "hand-soap",
+      "title": {
+        "en": "hand soap",
+        "es": "jabon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "find-private-space",
+      "slug": "find-private-space",
+      "title": {
+        "en": "private space",
+        "es": "espacio privado"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "close-door",
+      "slug": "close-door",
+      "title": {
+        "en": "close door",
+        "es": "cerrar puerta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-or-lie",
+      "slug": "sit-or-lie",
+      "title": {
+        "en": "sit or lie",
+        "es": "sentarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-lubricant",
+      "slug": "apply-lubricant",
+      "title": {
+        "en": "apply lubricant",
+        "es": "poner lubricante"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "touch-penis",
+      "slug": "touch-penis",
+      "title": {
+        "en": "touch penis",
+        "es": "tocar pene"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gentle-movements",
+      "slug": "gentle-movements",
+      "title": {
+        "en": "gentle movement",
+        "es": "mover suave"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ejaculate-finish",
+      "slug": "ejaculate-finish",
+      "title": {
+        "en": "ejaculate",
+        "es": "eyacular"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clean-up",
+      "slug": "clean-up",
+      "title": {
+        "en": "clean up",
+        "es": "limpiar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hands-again",
+      "slug": "wash-hands-again",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-dressed",
+      "slug": "get-dressed",
+      "title": {
+        "en": "get dressed",
+        "es": "vestirse"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 11,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "YA2",
+    "family_base": "#A894B0",
+    "accent": "#8A9BB0",
+    "accent_name": "calm blue-grey",
+    "highlight": "care step / product",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "art_notes": "ejaculate-finish: modest clinical - semen drops on towel/tissue, YA2, towel over lap, NOT clothed trousers checkmark. Calm education. touch-penis vs gentle-movement must never look alike: touch = still hand, bubble shows accent target ring plus single arrow (where to touch). gentle-movement = hand in motion on towel, bubble shows up/down double arrow plus speed arcs (how to move). Accent marks only, never extra anatomy.",
+  "ageBands": [
+    "teen",
+    "adult",
+    "elder"
+  ],
+  "presentations": [
+    "boy",
+    "neutral"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "2.0-deprecated",
+  "id": "using-the-toilet",
+  "status": "deprecated",
+  "replaced_by": [
+    "using-the-toilet-boy",
+    "using-the-toilet-girl"
+  ],
+  "notes": "Split into boy/girl packs with clothing steps. Do not ship this id."
+}

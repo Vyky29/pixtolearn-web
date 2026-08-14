@@ -1,0 +1,272 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.7-unified",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "tennis",
+  "family": "sports",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark with ponytail or soft curls",
+    "clothes": "coral top, navy skirt or trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 only on cover+all actions. Same outfit colours entire pack. Accent #C0D040 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Tennis",
+    "es": "Tenis"
+  },
+  "existing_dir": "tennis-prep",
+  "art_dir": "tennis-prep",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "tennis",
+      "es": "tenis"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "racket",
+      "slug": "racket",
+      "title": {
+        "en": "racket",
+        "es": "raqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tennis-ball",
+      "slug": "tennis-ball",
+      "title": {
+        "en": "tennis ball",
+        "es": "pelota"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tennis-shoes",
+      "slug": "tennis-shoes",
+      "title": {
+        "en": "tennis shoes",
+        "es": "zapatillas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "put-sportswear",
+      "slug": "put-sportswear",
+      "title": {
+        "en": "kit on",
+        "es": "poner ropa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "grab-gear",
+      "slug": "grab-gear",
+      "title": {
+        "en": "get racket",
+        "es": "coger raqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "warm-up",
+      "slug": "warm-up",
+      "title": {
+        "en": "warm up",
+        "es": "calentar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "bounce-ball",
+      "slug": "bounce-ball",
+      "title": {
+        "en": "bounce ball",
+        "es": "botar pelota"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "serve",
+      "slug": "serve",
+      "title": {
+        "en": "serve",
+        "es": "sacar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hit-back-forth",
+      "slug": "hit-back-forth",
+      "title": {
+        "en": "hit ball",
+        "es": "golpear"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "change-ends",
+      "slug": "change-ends",
+      "title": {
+        "en": "change ends",
+        "es": "cambiar lado"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "drink-break",
+      "slug": "drink-break",
+      "title": {
+        "en": "drink break",
+        "es": "beber"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cool-down",
+      "slug": "cool-down",
+      "title": {
+        "en": "cool down",
+        "es": "enfriar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pack-up",
+      "slug": "pack-up",
+      "title": {
+        "en": "pack up",
+        "es": "recoger"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 11,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "C2",
+    "family_base": "#C77830",
+    "accent": "#C0D040",
+    "accent_name": "court lime",
+    "highlight": "racket / ball",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "notes": [
+    "Unified sports pack: prep then session in one sequence.",
+    "Gender via casts where available."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "racket"
+    },
+    {
+      "kind": "object",
+      "id": "tennis-ball"
+    },
+    {
+      "kind": "object",
+      "id": "tennis-shoes"
+    },
+    {
+      "kind": "object",
+      "id": "water-bottle"
+    },
+    {
+      "kind": "action",
+      "id": "put-sportswear"
+    },
+    {
+      "kind": "action",
+      "id": "grab-gear"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "warm-up"
+    },
+    {
+      "kind": "action",
+      "id": "bounce-ball"
+    },
+    {
+      "kind": "action",
+      "id": "serve"
+    },
+    {
+      "kind": "action",
+      "id": "hit-back-forth"
+    },
+    {
+      "kind": "action",
+      "id": "change-ends"
+    },
+    {
+      "kind": "action",
+      "id": "drink-break"
+    },
+    {
+      "kind": "action",
+      "id": "cool-down"
+    },
+    {
+      "kind": "action",
+      "id": "pack-up"
+    }
+  ],
+  "unified_from": [
+    "tennis-prep",
+    "tennis-activity"
+  ],
+  "unified_at": "2026-08-14",
+  "art": "installed"
+}

@@ -1,0 +1,224 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "blood-test",
+  "family": "health-appointments",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "clinic-friendly soft blue top, grey trousers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions."
+  },
+  "label": {
+    "en": "Blood test",
+    "es": "Analisis de sangre"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "blood test",
+      "es": "analisis"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "clinic-chair",
+      "slug": "clinic-chair",
+      "title": {
+        "en": "clinic chair",
+        "es": "silla de clinica"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "arm-band",
+      "slug": "arm-band",
+      "title": {
+        "en": "arm band",
+        "es": "banda del brazo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "alcohol-wipe",
+      "slug": "alcohol-wipe",
+      "title": {
+        "en": "alcohol wipe",
+        "es": "toallita de alcohol"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "sample-tube",
+      "slug": "sample-tube",
+      "title": {
+        "en": "sample tube",
+        "es": "tubo de muestra"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "cotton-wool",
+      "slug": "cotton-wool",
+      "title": {
+        "en": "cotton wool",
+        "es": "algodon"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "plaster",
+      "slug": "plaster",
+      "title": {
+        "en": "plaster",
+        "es": "tirita"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "sit-down",
+      "slug": "sit-down",
+      "title": {
+        "en": "sit down",
+        "es": "sentarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "roll-sleeve",
+      "slug": "roll-sleeve",
+      "title": {
+        "en": "roll up sleeve",
+        "es": "subir la manga"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "band-on",
+      "slug": "band-on",
+      "title": {
+        "en": "band on",
+        "es": "poner la banda"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wipe-skin",
+      "slug": "wipe-skin",
+      "title": {
+        "en": "wipe skin",
+        "es": "limpiar la piel"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "needle-in",
+      "slug": "needle-in",
+      "title": {
+        "en": "needle in",
+        "es": "entrar la aguja"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "fill-tube",
+      "slug": "fill-tube",
+      "title": {
+        "en": "fill tube",
+        "es": "llenar el tubo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "needle-out",
+      "slug": "needle-out",
+      "title": {
+        "en": "needle out",
+        "es": "sacar la aguja"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "plaster-on",
+      "slug": "plaster-on",
+      "title": {
+        "en": "plaster on",
+        "es": "poner tirita"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-moment",
+      "slug": "sit-moment",
+      "title": {
+        "en": "sit a moment",
+        "es": "quedarse un momento"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 10,
+    "cards": 17
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#7A8FA0",
+    "accent": "#D03860",
+    "accent_name": "civic rose",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Object is sample tube; needle appears in actions. Cover stays calm, not graphic."
+  ]
+}

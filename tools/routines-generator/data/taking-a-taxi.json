@@ -1,0 +1,321 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "taking-a-taxi",
+  "family": "safety-mobility",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #E8C040 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Taking a taxi",
+    "es": "Coger un taxi"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "taxi",
+      "es": "taxi"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "taxi-app",
+      "slug": "taxi-app",
+      "title": {
+        "en": "taxi app",
+        "es": "app taxi"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "seat-belt",
+      "slug": "seat-belt",
+      "title": {
+        "en": "seatbelt",
+        "es": "cinturon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "payment",
+      "slug": "payment",
+      "title": {
+        "en": "payment",
+        "es": "pago"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "book-taxi",
+      "slug": "book-taxi",
+      "title": {
+        "en": "book taxi",
+        "es": "pedir taxi"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-taxi",
+      "slug": "wait-taxi",
+      "title": {
+        "en": "wait for taxi",
+        "es": "esperar taxi"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "confirm-driver",
+      "slug": "confirm-driver",
+      "title": {
+        "en": "confirm driver",
+        "es": "confirmar conductor"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-in",
+      "slug": "get-in",
+      "title": {
+        "en": "get in",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tell-destination",
+      "slug": "tell-destination",
+      "title": {
+        "en": "say address",
+        "es": "decir direccion"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "seatbelt",
+      "slug": "seatbelt",
+      "title": {
+        "en": "seatbelt on",
+        "es": "cinturon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tip-optional",
+      "slug": "tip-optional",
+      "title": {
+        "en": "tip optional",
+        "es": "propina opcional"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "thank-driver",
+      "slug": "thank-driver",
+      "title": {
+        "en": "thank driver",
+        "es": "agradecer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit",
+      "slug": "exit",
+      "title": {
+        "en": "get out",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "noisy-traffic",
+      "slug": "noisy-traffic",
+      "title": {
+        "en": "noisy traffic",
+        "es": "trafico ruidoso"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "taxi",
+        "es": "taxi"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "taxi-app",
+      "slug": "taxi-app",
+      "title": {
+        "en": "taxi app",
+        "es": "app taxi"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "seat-belt",
+      "slug": "seat-belt",
+      "title": {
+        "en": "seatbelt",
+        "es": "cinturon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "payment",
+      "slug": "payment",
+      "title": {
+        "en": "payment",
+        "es": "pago"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "book-taxi",
+      "slug": "book-taxi",
+      "title": {
+        "en": "book taxi",
+        "es": "pedir taxi"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-taxi",
+      "slug": "wait-taxi",
+      "title": {
+        "en": "wait for taxi",
+        "es": "esperar taxi"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "confirm-driver",
+      "slug": "confirm-driver",
+      "title": {
+        "en": "confirm driver",
+        "es": "confirmar conductor"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "get-in",
+      "slug": "get-in",
+      "title": {
+        "en": "get in",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tell-destination",
+      "slug": "tell-destination",
+      "title": {
+        "en": "say address",
+        "es": "decir direccion"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "seatbelt",
+      "slug": "seatbelt",
+      "title": {
+        "en": "seatbelt on",
+        "es": "cinturon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "pay",
+      "slug": "pay",
+      "title": {
+        "en": "pay",
+        "es": "pagar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tip-optional",
+      "slug": "tip-optional",
+      "title": {
+        "en": "tip optional",
+        "es": "propina opcional"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "thank-driver",
+      "slug": "thank-driver",
+      "title": {
+        "en": "thank driver",
+        "es": "agradecer"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "exit",
+      "slug": "exit",
+      "title": {
+        "en": "get out",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "noisy-traffic",
+      "slug": "noisy-traffic",
+      "title": {
+        "en": "noisy traffic",
+        "es": "trafico ruidoso"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 3,
+    "actions": 11,
+    "cards": 15
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#3D7EA6",
+    "accent": "#E8C040",
+    "accent_name": "taxi yellow",
+    "highlight": "taxi / confirm / tip",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

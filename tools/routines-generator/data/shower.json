@@ -1,0 +1,412 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "shower",
+  "family": "self-care",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #4A90A8 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Shower",
+    "es": "Ducha"
+  },
+  "existing_dir": "shower",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "shower",
+      "es": "ducha"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "sponge",
+      "slug": "sponge",
+      "title": {
+        "en": "sponge",
+        "es": "esponja"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shampoo",
+      "slug": "shampoo",
+      "title": {
+        "en": "shampoo",
+        "es": "champu"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "conditioner",
+      "slug": "conditioner",
+      "title": {
+        "en": "conditioner",
+        "es": "acondicionador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-dryer",
+      "slug": "hair-dryer",
+      "title": {
+        "en": "hair dryer",
+        "es": "secador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "gel",
+      "slug": "gel",
+      "title": {
+        "en": "gel",
+        "es": "gel"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "body-lotion",
+      "slug": "body-lotion",
+      "title": {
+        "en": "body lotion",
+        "es": "crema"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wet-hair",
+      "slug": "wet-hair",
+      "title": {
+        "en": "wet hair",
+        "es": "mojar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-body",
+      "slug": "wash-body",
+      "title": {
+        "en": "wash body",
+        "es": "lavar cuerpo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-body",
+      "slug": "rinse-body",
+      "title": {
+        "en": "rinse body",
+        "es": "aclarar cuerpo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "squeeze-shampoo",
+      "slug": "squeeze-shampoo",
+      "title": {
+        "en": "squeeze shampoo",
+        "es": "echar champu"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hair",
+      "slug": "wash-hair",
+      "title": {
+        "en": "wash hair",
+        "es": "lavar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-hair",
+      "slug": "rinse-hair",
+      "title": {
+        "en": "rinse hair",
+        "es": "aclarar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "squeeze-conditioner",
+      "slug": "squeeze-conditioner",
+      "title": {
+        "en": "squeeze conditioner",
+        "es": "echar acondicionador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-body",
+      "slug": "dry-body",
+      "title": {
+        "en": "dry body",
+        "es": "secar cuerpo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-hair",
+      "slug": "dry-hair",
+      "title": {
+        "en": "dry hair",
+        "es": "secar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-hair",
+      "slug": "brush-hair",
+      "title": {
+        "en": "brush hair",
+        "es": "peinar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hydratate-body",
+      "slug": "hydratate-body",
+      "title": {
+        "en": "hydrate body",
+        "es": "hidratar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "shower",
+        "es": "ducha"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "sponge",
+      "slug": "sponge",
+      "title": {
+        "en": "sponge",
+        "es": "esponja"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shampoo",
+      "slug": "shampoo",
+      "title": {
+        "en": "shampoo",
+        "es": "champu"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "conditioner",
+      "slug": "conditioner",
+      "title": {
+        "en": "conditioner",
+        "es": "acondicionador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "comb",
+      "slug": "comb",
+      "title": {
+        "en": "comb",
+        "es": "peine"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hair-dryer",
+      "slug": "hair-dryer",
+      "title": {
+        "en": "hair dryer",
+        "es": "secador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "gel",
+      "slug": "gel",
+      "title": {
+        "en": "gel",
+        "es": "gel"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "body-lotion",
+      "slug": "body-lotion",
+      "title": {
+        "en": "body lotion",
+        "es": "crema"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wet-hair",
+      "slug": "wet-hair",
+      "title": {
+        "en": "wet hair",
+        "es": "mojar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-body",
+      "slug": "wash-body",
+      "title": {
+        "en": "wash body",
+        "es": "lavar cuerpo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-body",
+      "slug": "rinse-body",
+      "title": {
+        "en": "rinse body",
+        "es": "aclarar cuerpo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "squeeze-shampoo",
+      "slug": "squeeze-shampoo",
+      "title": {
+        "en": "squeeze shampoo",
+        "es": "echar champu"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wash-hair",
+      "slug": "wash-hair",
+      "title": {
+        "en": "wash hair",
+        "es": "lavar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-hair",
+      "slug": "rinse-hair",
+      "title": {
+        "en": "rinse hair",
+        "es": "aclarar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "squeeze-conditioner",
+      "slug": "squeeze-conditioner",
+      "title": {
+        "en": "squeeze conditioner",
+        "es": "echar acondicionador"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-body",
+      "slug": "dry-body",
+      "title": {
+        "en": "dry body",
+        "es": "secar cuerpo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "dry-hair",
+      "slug": "dry-hair",
+      "title": {
+        "en": "dry hair",
+        "es": "secar pelo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "brush-hair",
+      "slug": "brush-hair",
+      "title": {
+        "en": "brush hair",
+        "es": "peinar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hydratate-body",
+      "slug": "hydratate-body",
+      "title": {
+        "en": "hydrate body",
+        "es": "hidratar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 8,
+    "actions": 11,
+    "cards": 20
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#5B8C7A",
+    "accent": "#4A90A8",
+    "accent_name": "water blue",
+    "highlight": "water / towel / soap",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

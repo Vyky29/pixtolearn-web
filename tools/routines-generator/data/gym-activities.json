@@ -1,0 +1,8 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "id": "gym-activities",
+  "status": "redirect",
+  "redirect_to": "gym",
+  "legacy_note": "Legacy hybrid redirected to unified gym.",
+  "unified_at": "2026-08-14"
+}

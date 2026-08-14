@@ -1,0 +1,285 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "crossing-the-road",
+  "family": "safety-mobility",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #E8A020 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Crossing the road",
+    "es": "Cruzar la calle"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "cross road",
+      "es": "cruzar calle"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "traffic-lights",
+      "slug": "traffic-lights",
+      "title": {
+        "en": "traffic lights",
+        "es": "semaforo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pedestrian-signal",
+      "slug": "pedestrian-signal",
+      "title": {
+        "en": "green man",
+        "es": "hombre verde"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "crossing-sign",
+      "slug": "crossing-sign",
+      "title": {
+        "en": "crossing",
+        "es": "paso peatones"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wait-at-crossing",
+      "slug": "wait-at-crossing",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-both-ways",
+      "slug": "look-both-ways",
+      "title": {
+        "en": "look both ways",
+        "es": "mirar lados"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-lights",
+      "slug": "check-lights",
+      "title": {
+        "en": "check lights",
+        "es": "mirar semaforo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cross-when-safe",
+      "slug": "cross-when-safe",
+      "title": {
+        "en": "cross safely",
+        "es": "cruzar seguro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "walk-across",
+      "slug": "walk-across",
+      "title": {
+        "en": "cross road",
+        "es": "cruzar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "reach-other-side",
+      "slug": "reach-other-side",
+      "title": {
+        "en": "other side",
+        "es": "otro lado"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-adult-hand",
+      "slug": "hold-adult-hand",
+      "title": {
+        "en": "hold hand",
+        "es": "coger mano"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stop-at-kerb",
+      "slug": "stop-at-kerb",
+      "title": {
+        "en": "stop at kerb",
+        "es": "parar en bordillo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-for-cars",
+      "slug": "listen-for-cars",
+      "title": {
+        "en": "listen cars",
+        "es": "escuchar coches"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "cross road",
+        "es": "cruzar calle"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "traffic-lights",
+      "slug": "traffic-lights",
+      "title": {
+        "en": "traffic lights",
+        "es": "semaforo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pedestrian-signal",
+      "slug": "pedestrian-signal",
+      "title": {
+        "en": "green man",
+        "es": "hombre verde"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "crossing-sign",
+      "slug": "crossing-sign",
+      "title": {
+        "en": "crossing",
+        "es": "paso peatones"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wait-at-crossing",
+      "slug": "wait-at-crossing",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "look-both-ways",
+      "slug": "look-both-ways",
+      "title": {
+        "en": "look both ways",
+        "es": "mirar lados"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-lights",
+      "slug": "check-lights",
+      "title": {
+        "en": "check lights",
+        "es": "mirar semaforo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cross-when-safe",
+      "slug": "cross-when-safe",
+      "title": {
+        "en": "cross safely",
+        "es": "cruzar seguro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "walk-across",
+      "slug": "walk-across",
+      "title": {
+        "en": "cross road",
+        "es": "cruzar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "reach-other-side",
+      "slug": "reach-other-side",
+      "title": {
+        "en": "other side",
+        "es": "otro lado"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hold-adult-hand",
+      "slug": "hold-adult-hand",
+      "title": {
+        "en": "hold hand",
+        "es": "coger mano"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "stop-at-kerb",
+      "slug": "stop-at-kerb",
+      "title": {
+        "en": "stop at kerb",
+        "es": "parar en bordillo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "listen-for-cars",
+      "slug": "listen-for-cars",
+      "title": {
+        "en": "listen cars",
+        "es": "escuchar coches"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 3,
+    "actions": 9,
+    "cards": 13
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#3D7EA6",
+    "accent": "#E8A020",
+    "accent_name": "amber signal",
+    "highlight": "crossing / look / green man",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

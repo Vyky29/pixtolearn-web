@@ -1,0 +1,306 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.7-unified",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "trampoline",
+  "family": "sports",
+  "status": "ready",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack."
+  },
+  "label": {
+    "en": "Trampoline",
+    "es": "Trampolin"
+  },
+  "existing_dir": "trampoline-wow",
+  "art_dir": "trampoline-wow",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "trampoline",
+      "es": "trampolin"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "grip-socks",
+      "slug": "grip-socks",
+      "title": {
+        "en": "grip socks",
+        "es": "calcetines antideslizantes"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "trampoline-bed",
+      "slug": "trampoline-bed",
+      "title": {
+        "en": "trampoline bed",
+        "es": "cama del trampolin"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "safety-pad",
+      "slug": "safety-pad",
+      "title": {
+        "en": "safety pad",
+        "es": "proteccion"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella de agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "cascos"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "shoes-off",
+      "slug": "shoes-off",
+      "title": {
+        "en": "shoes off",
+        "es": "quitar zapatos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "socks-on",
+      "slug": "socks-on",
+      "title": {
+        "en": "socks on",
+        "es": "poner calcetines"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "meet-coach",
+      "slug": "meet-coach",
+      "title": {
+        "en": "meet coach",
+        "es": "saludar al coach"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "step-on",
+      "slug": "step-on",
+      "title": {
+        "en": "step on",
+        "es": "subir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "small-bounce",
+      "slug": "small-bounce",
+      "title": {
+        "en": "small bounce",
+        "es": "bote pequeno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stop-steady",
+      "slug": "stop-steady",
+      "title": {
+        "en": "stop and steady",
+        "es": "parar y estabilizar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "step-off",
+      "slug": "step-off",
+      "title": {
+        "en": "step off",
+        "es": "bajar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "shoes-on",
+      "slug": "shoes-on",
+      "title": {
+        "en": "shoes on",
+        "es": "poner zapatos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 11,
+    "cards": 17
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#C77830",
+    "accent": "#5B9A8B",
+    "accent_name": "sensory teal",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary OK. Objects never show a person.",
+  "notes": [
+    "Unified sports pack: prep then session in one sequence.",
+    "Gender via casts where available."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "grip-socks"
+    },
+    {
+      "kind": "object",
+      "id": "trampoline-bed"
+    },
+    {
+      "kind": "object",
+      "id": "safety-pad"
+    },
+    {
+      "kind": "object",
+      "id": "water-bottle"
+    },
+    {
+      "kind": "object",
+      "id": "headphones"
+    },
+    {
+      "kind": "action",
+      "id": "arrive"
+    },
+    {
+      "kind": "action",
+      "id": "shoes-off"
+    },
+    {
+      "kind": "action",
+      "id": "socks-on"
+    },
+    {
+      "kind": "action",
+      "id": "meet-coach"
+    },
+    {
+      "kind": "action",
+      "id": "wait-turn"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "step-on"
+    },
+    {
+      "kind": "action",
+      "id": "small-bounce"
+    },
+    {
+      "kind": "action",
+      "id": "stop-steady"
+    },
+    {
+      "kind": "action",
+      "id": "step-off"
+    },
+    {
+      "kind": "action",
+      "id": "shoes-on"
+    }
+  ],
+  "unified_from": [
+    "trampoline-prep",
+    "trampoline-activity"
+  ],
+  "unified_at": "2026-08-14",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p1",
+  "legacy_ids": [
+    "trampoline-wow"
+  ]
+}

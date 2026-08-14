@@ -1,0 +1,311 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-wave2-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "hearing-test",
+  "family": "health-appointments",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "wave2",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft teal top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+  },
+  "label": {
+    "en": "Hearing test",
+    "es": "Prueba de audicion"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "hearing test",
+      "es": "prueba de audicion"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "headphones",
+      "slug": "headphones",
+      "title": {
+        "en": "headphones",
+        "es": "auriculares"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "test-booth",
+      "slug": "test-booth",
+      "title": {
+        "en": "test booth",
+        "es": "cabina"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "button",
+      "slug": "button",
+      "title": {
+        "en": "button",
+        "es": "boton"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "audiometer",
+      "slug": "audiometer",
+      "title": {
+        "en": "audiometer",
+        "es": "audiometro"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "waiting-chair",
+      "slug": "waiting-chair",
+      "title": {
+        "en": "waiting chair",
+        "es": "silla de espera"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "check-in",
+      "slug": "check-in",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "enter-booth",
+      "slug": "enter-booth",
+      "title": {
+        "en": "enter booth",
+        "es": "entrar en cabina"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit-still",
+      "slug": "sit-still",
+      "title": {
+        "en": "sit still",
+        "es": "estar quieto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "headphones-on",
+      "slug": "headphones-on",
+      "title": {
+        "en": "headphones on",
+        "es": "ponerse auriculares"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "listen-for-beep",
+      "slug": "listen-for-beep",
+      "title": {
+        "en": "listen for beep",
+        "es": "escuchar pitido"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "press-button",
+      "slug": "press-button",
+      "title": {
+        "en": "press button",
+        "es": "pulsar boton"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "quiet-voice",
+      "slug": "quiet-voice",
+      "title": {
+        "en": "quiet voice",
+        "es": "voz baja"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "headphones-off",
+      "slug": "headphones-off",
+      "title": {
+        "en": "headphones off",
+        "es": "quitar auriculares"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish",
+      "slug": "finish",
+      "title": {
+        "en": "finish",
+        "es": "terminar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 12,
+    "cards": 18
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#7A8FA0",
+    "accent": "#5B9A8B",
+    "accent_name": "clinic teal",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Objects never show a person. Boy/girl delivery via casts where available.",
+  "notes": [
+    "Health procedure. Distinct from GP visit."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "headphones"
+    },
+    {
+      "kind": "object",
+      "id": "test-booth"
+    },
+    {
+      "kind": "object",
+      "id": "button"
+    },
+    {
+      "kind": "object",
+      "id": "audiometer"
+    },
+    {
+      "kind": "object",
+      "id": "waiting-chair"
+    },
+    {
+      "kind": "action",
+      "id": "arrive"
+    },
+    {
+      "kind": "action",
+      "id": "check-in"
+    },
+    {
+      "kind": "action",
+      "id": "wait-turn"
+    },
+    {
+      "kind": "action",
+      "id": "enter-booth"
+    },
+    {
+      "kind": "action",
+      "id": "sit-still"
+    },
+    {
+      "kind": "action",
+      "id": "headphones-on"
+    },
+    {
+      "kind": "action",
+      "id": "listen-for-beep"
+    },
+    {
+      "kind": "action",
+      "id": "press-button"
+    },
+    {
+      "kind": "action",
+      "id": "quiet-voice"
+    },
+    {
+      "kind": "action",
+      "id": "headphones-off"
+    },
+    {
+      "kind": "action",
+      "id": "finish"
+    },
+    {
+      "kind": "action",
+      "id": "leave"
+    }
+  ],
+  "existing_dir": "hearing-test",
+  "art_dir": "hearing-test"
+}

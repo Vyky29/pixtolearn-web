@@ -1,0 +1,647 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "getting-dressed",
+  "family": "self-care",
+  "status": "deprecated",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "soft blue top, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 only on cover+all actions. Same outfit colours entire pack. Accent #6FA89A highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Getting dressed",
+    "es": "Vestirse"
+  },
+  "existing_dir": "getting-dress-&-undress",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "getting dressed",
+      "es": "vestirse"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "trunks",
+      "slug": "trunks",
+      "title": {
+        "en": "trunks",
+        "es": "banador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "knickers",
+      "slug": "knickers",
+      "title": {
+        "en": "knickers",
+        "es": "bragas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pants",
+      "slug": "pants",
+      "title": {
+        "en": "pants",
+        "es": "calzoncillos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bra",
+      "slug": "bra",
+      "title": {
+        "en": "bra",
+        "es": "sujetador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "socks",
+      "slug": "socks",
+      "title": {
+        "en": "socks",
+        "es": "calcetines"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trousers",
+      "slug": "trousers",
+      "title": {
+        "en": "trousers",
+        "es": "pantalon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tshirt",
+      "slug": "tshirt",
+      "title": {
+        "en": "t-shirt",
+        "es": "camiseta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shirt",
+      "slug": "shirt",
+      "title": {
+        "en": "shirt",
+        "es": "camisa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "vest",
+      "slug": "vest",
+      "title": {
+        "en": "vest",
+        "es": "chaleco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jumper",
+      "slug": "jumper",
+      "title": {
+        "en": "jumper",
+        "es": "jersey"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jacket",
+      "slug": "jacket",
+      "title": {
+        "en": "jacket",
+        "es": "chaqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "scarf",
+      "slug": "scarf",
+      "title": {
+        "en": "scarf",
+        "es": "bufanda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "gloves",
+      "slug": "gloves",
+      "title": {
+        "en": "gloves",
+        "es": "guantes"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hat",
+      "slug": "hat",
+      "title": {
+        "en": "hat",
+        "es": "gorro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cap",
+      "slug": "cap",
+      "title": {
+        "en": "cap",
+        "es": "gorra"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shoes",
+      "slug": "shoes",
+      "title": {
+        "en": "shoes",
+        "es": "zapatos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trainers",
+      "slug": "trainers",
+      "title": {
+        "en": "trainers",
+        "es": "zapatillas"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "pants-on",
+      "slug": "pants-on",
+      "title": {
+        "en": "pants on",
+        "es": "poner calzoncillos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "socks-on",
+      "slug": "socks-on",
+      "title": {
+        "en": "socks on",
+        "es": "poner calcetines"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-on",
+      "slug": "trousers-on",
+      "title": {
+        "en": "trousers on",
+        "es": "poner pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tshirt-on",
+      "slug": "tshirt-on",
+      "title": {
+        "en": "t-shirt on",
+        "es": "poner camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shirt-on",
+      "slug": "shirt-on",
+      "title": {
+        "en": "shirt on",
+        "es": "poner camisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "vest-on",
+      "slug": "vest-on",
+      "title": {
+        "en": "vest on",
+        "es": "poner chaleco"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jumper-on",
+      "slug": "jumper-on",
+      "title": {
+        "en": "jumper on",
+        "es": "poner jersey"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jacket-on",
+      "slug": "jacket-on",
+      "title": {
+        "en": "jacket on",
+        "es": "poner chaqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scarf-on",
+      "slug": "scarf-on",
+      "title": {
+        "en": "scarf on",
+        "es": "poner bufanda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gloves-on",
+      "slug": "gloves-on",
+      "title": {
+        "en": "gloves on",
+        "es": "poner guantes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hat-on",
+      "slug": "hat-on",
+      "title": {
+        "en": "hat on",
+        "es": "poner gorro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cap-on",
+      "slug": "cap-on",
+      "title": {
+        "en": "cap on",
+        "es": "poner gorra"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shoes-on",
+      "slug": "shoes-on",
+      "title": {
+        "en": "shoes on",
+        "es": "poner zapatos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trainers-on",
+      "slug": "trainers-on",
+      "title": {
+        "en": "trainers on",
+        "es": "poner zapatillas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trunks-on",
+      "slug": "trunks-on",
+      "title": {
+        "en": "trunks on",
+        "es": "poner banador"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "getting dressed",
+        "es": "vestirse"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "trunks",
+      "slug": "trunks",
+      "title": {
+        "en": "trunks",
+        "es": "banador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "knickers",
+      "slug": "knickers",
+      "title": {
+        "en": "knickers",
+        "es": "bragas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pants",
+      "slug": "pants",
+      "title": {
+        "en": "pants",
+        "es": "calzoncillos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "bra",
+      "slug": "bra",
+      "title": {
+        "en": "bra",
+        "es": "sujetador"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "socks",
+      "slug": "socks",
+      "title": {
+        "en": "socks",
+        "es": "calcetines"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trousers",
+      "slug": "trousers",
+      "title": {
+        "en": "trousers",
+        "es": "pantalon"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "tshirt",
+      "slug": "tshirt",
+      "title": {
+        "en": "t-shirt",
+        "es": "camiseta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shirt",
+      "slug": "shirt",
+      "title": {
+        "en": "shirt",
+        "es": "camisa"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "vest",
+      "slug": "vest",
+      "title": {
+        "en": "vest",
+        "es": "chaleco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jumper",
+      "slug": "jumper",
+      "title": {
+        "en": "jumper",
+        "es": "jersey"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "jacket",
+      "slug": "jacket",
+      "title": {
+        "en": "jacket",
+        "es": "chaqueta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "scarf",
+      "slug": "scarf",
+      "title": {
+        "en": "scarf",
+        "es": "bufanda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "gloves",
+      "slug": "gloves",
+      "title": {
+        "en": "gloves",
+        "es": "guantes"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hat",
+      "slug": "hat",
+      "title": {
+        "en": "hat",
+        "es": "gorro"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "cap",
+      "slug": "cap",
+      "title": {
+        "en": "cap",
+        "es": "gorra"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shoes",
+      "slug": "shoes",
+      "title": {
+        "en": "shoes",
+        "es": "zapatos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trainers",
+      "slug": "trainers",
+      "title": {
+        "en": "trainers",
+        "es": "zapatillas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pants-on",
+      "slug": "pants-on",
+      "title": {
+        "en": "pants on",
+        "es": "poner calzoncillos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "socks-on",
+      "slug": "socks-on",
+      "title": {
+        "en": "socks on",
+        "es": "poner calcetines"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trousers-on",
+      "slug": "trousers-on",
+      "title": {
+        "en": "trousers on",
+        "es": "poner pantalon"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "tshirt-on",
+      "slug": "tshirt-on",
+      "title": {
+        "en": "t-shirt on",
+        "es": "poner camiseta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shirt-on",
+      "slug": "shirt-on",
+      "title": {
+        "en": "shirt on",
+        "es": "poner camisa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "vest-on",
+      "slug": "vest-on",
+      "title": {
+        "en": "vest on",
+        "es": "poner chaleco"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jumper-on",
+      "slug": "jumper-on",
+      "title": {
+        "en": "jumper on",
+        "es": "poner jersey"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "jacket-on",
+      "slug": "jacket-on",
+      "title": {
+        "en": "jacket on",
+        "es": "poner chaqueta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "scarf-on",
+      "slug": "scarf-on",
+      "title": {
+        "en": "scarf on",
+        "es": "poner bufanda"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "gloves-on",
+      "slug": "gloves-on",
+      "title": {
+        "en": "gloves on",
+        "es": "poner guantes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "hat-on",
+      "slug": "hat-on",
+      "title": {
+        "en": "hat on",
+        "es": "poner gorro"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "cap-on",
+      "slug": "cap-on",
+      "title": {
+        "en": "cap on",
+        "es": "poner gorra"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shoes-on",
+      "slug": "shoes-on",
+      "title": {
+        "en": "shoes on",
+        "es": "poner zapatos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trainers-on",
+      "slug": "trainers-on",
+      "title": {
+        "en": "trainers on",
+        "es": "poner zapatillas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trunks-on",
+      "slug": "trunks-on",
+      "title": {
+        "en": "trunks on",
+        "es": "poner banador"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 17,
+    "actions": 15,
+    "cards": 33
+  },
+  "design": {
+    "avatar_id": "C1",
+    "family_base": "#5B8C7A",
+    "accent": "#6FA89A",
+    "accent_name": "mint sage",
+    "highlight": "garment being put on",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "replaced_by": "clothes-boy / clothes-girl"
+}

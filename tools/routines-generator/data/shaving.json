@@ -1,0 +1,349 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "shaving",
+  "family": "self-care",
+  "status": "ready",
+  "audience": "teen-adult-elder",
+  "character": {
+    "avatar_id": "YA2",
+    "band": "young-adult",
+    "gender": "man",
+    "skin": "dark",
+    "hair": "short black",
+    "clothes": "dark grey t-shirt, black trousers",
+    "age": "young-adult",
+    "lock": "PRIMARY YA2 only on cover+all actions. Same outfit colours entire pack. Accent #6B7C8A highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Shaving",
+    "es": "Afeitarse"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "shaving",
+      "es": "afeitarse"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "razor",
+      "slug": "razor",
+      "title": {
+        "en": "razor",
+        "es": "maquinilla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shaving-cream",
+      "slug": "shaving-cream",
+      "title": {
+        "en": "shaving cream",
+        "es": "crema afeitar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sink",
+      "slug": "sink",
+      "title": {
+        "en": "sink",
+        "es": "lavabo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "aftershave",
+      "slug": "aftershave",
+      "title": {
+        "en": "aftershave",
+        "es": "aftershave"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wet-face",
+      "slug": "wet-face",
+      "title": {
+        "en": "wet face",
+        "es": "mojar cara"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-cream",
+      "slug": "apply-cream",
+      "title": {
+        "en": "apply cream",
+        "es": "poner crema"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shave-sides",
+      "slug": "shave-sides",
+      "title": {
+        "en": "shave sides",
+        "es": "afeitar lados"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shave-chin",
+      "slug": "shave-chin",
+      "title": {
+        "en": "shave chin",
+        "es": "afeitar barbilla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shave-neck",
+      "slug": "shave-neck",
+      "title": {
+        "en": "shave neck",
+        "es": "afeitar cuello"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-razor",
+      "slug": "rinse-razor",
+      "title": {
+        "en": "rinse razor",
+        "es": "aclarar maquinilla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe-face",
+      "slug": "wipe-face",
+      "title": {
+        "en": "wipe face",
+        "es": "secar cara"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-aftershave",
+      "slug": "apply-aftershave",
+      "title": {
+        "en": "apply aftershave",
+        "es": "poner aftershave"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clean-up",
+      "slug": "clean-up",
+      "title": {
+        "en": "clean up",
+        "es": "limpiar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "shaving",
+        "es": "afeitarse"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "razor",
+      "slug": "razor",
+      "title": {
+        "en": "razor",
+        "es": "maquinilla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "shaving-cream",
+      "slug": "shaving-cream",
+      "title": {
+        "en": "shaving cream",
+        "es": "crema afeitar"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "mirror",
+      "slug": "mirror",
+      "title": {
+        "en": "mirror",
+        "es": "espejo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "sink",
+      "slug": "sink",
+      "title": {
+        "en": "sink",
+        "es": "lavabo"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "aftershave",
+      "slug": "aftershave",
+      "title": {
+        "en": "aftershave",
+        "es": "aftershave"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wet-face",
+      "slug": "wet-face",
+      "title": {
+        "en": "wet face",
+        "es": "mojar cara"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-cream",
+      "slug": "apply-cream",
+      "title": {
+        "en": "apply cream",
+        "es": "poner crema"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shave-sides",
+      "slug": "shave-sides",
+      "title": {
+        "en": "shave sides",
+        "es": "afeitar lados"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shave-chin",
+      "slug": "shave-chin",
+      "title": {
+        "en": "shave chin",
+        "es": "afeitar barbilla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "shave-neck",
+      "slug": "shave-neck",
+      "title": {
+        "en": "shave neck",
+        "es": "afeitar cuello"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rinse-razor",
+      "slug": "rinse-razor",
+      "title": {
+        "en": "rinse razor",
+        "es": "aclarar maquinilla"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wipe-face",
+      "slug": "wipe-face",
+      "title": {
+        "en": "wipe face",
+        "es": "secar cara"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "apply-aftershave",
+      "slug": "apply-aftershave",
+      "title": {
+        "en": "apply aftershave",
+        "es": "poner aftershave"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "clean-up",
+      "slug": "clean-up",
+      "title": {
+        "en": "clean up",
+        "es": "limpiar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 9,
+    "cards": 16
+  },
+  "design": {
+    "avatar_id": "YA2",
+    "family_base": "#5B8C7A",
+    "accent": "#6B7C8A",
+    "accent_name": "steel grey",
+    "highlight": "razor / foam / face zone",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "ageBands": [
+    "teen",
+    "adult",
+    "elder"
+  ],
+  "presentations": [
+    "girl",
+    "boy",
+    "neutral"
+  ]
+}

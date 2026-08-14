@@ -1,0 +1,8 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "id": "tennis-prep",
+  "status": "redirect",
+  "redirect_to": "tennis",
+  "legacy_note": "Unified into tennis. Do not use for new art.",
+  "unified_at": "2026-08-14"
+}

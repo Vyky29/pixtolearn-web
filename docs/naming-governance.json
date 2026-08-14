@@ -1,0 +1,81 @@
+{
+  "version": "1.1",
+  "updated": "2026-08-14",
+  "model": {
+    "sports": "One pack per sport: kit/arrive/ready then warm-up through finish/exit",
+    "travel": "Day destination / spectator",
+    "skill_decks": "Separate product; teach skills with Break It Down; never -prep/-wow"
+  },
+  "sequence_rule": {
+    "optional_ready_midpoint": "Keep one ready step when useful as the boundary between kit and session",
+    "full_arc": "arrive/kit/safety -> ready -> warm-up/sport -> finish/exit"
+  },
+  "patterns": {
+    "wow_sports": "{sport}",
+    "travel": "going-to-{place}",
+    "public": "at-the-{place}",
+    "mobility": "taking-* / using-* / crossing-*",
+    "forbidden_new": [
+      "-wow",
+      "{sport}-prep",
+      "{sport}-activity"
+    ]
+  },
+  "legacy_redirects": {
+    "climbing-wow": "climbing",
+    "swimming-wow": "swimming",
+    "gym-activities": "gym",
+    "trampoline-wow": "trampoline",
+    "climbing-prep": "climbing",
+    "climbing-activity": "climbing",
+    "swimming-prep": "swimming",
+    "swimming-activity": "swimming",
+    "gym-prep": "gym",
+    "gym-activity": "gym",
+    "hiking-prep": "hiking",
+    "hiking-activity": "hiking",
+    "cycling-prep": "cycling",
+    "cycling-activity": "cycling",
+    "tennis-prep": "tennis",
+    "tennis-activity": "tennis",
+    "trampoline-prep": "trampoline",
+    "trampoline-activity": "trampoline",
+    "football-prep": "football",
+    "football-activity": "football",
+    "cycling-prep-hybrid": "cycling",
+    "tennis-prep-hybrid": "tennis"
+  },
+  "unified_packs": [
+    "climbing",
+    "swimming",
+    "gym",
+    "hiking",
+    "cycling",
+    "tennis",
+    "trampoline",
+    "football"
+  ],
+  "overlap_boundaries": [
+    {
+      "a": "hiking",
+      "b": "going-to-the-mountain",
+      "rule": "Trail sport vs mountain day out"
+    },
+    {
+      "a": "swimming",
+      "b": "going-to-the-beach",
+      "rule": "Pool session vs beach day; beach uses paddle/splash only"
+    },
+    {
+      "a": "WOW climbing",
+      "b": "Climbing skill deck",
+      "rule": "WOW = visit flow; skill deck = Break It Down skills"
+    },
+    {
+      "a": "attending-a-sport-event",
+      "b": "sports",
+      "rule": "Spectator (travel) vs playing"
+    }
+  ],
+  "note": "Prep/activity split reversed 2026-08-14 to reduce portal clutter."
+}

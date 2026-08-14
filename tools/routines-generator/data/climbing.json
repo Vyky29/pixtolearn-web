@@ -1,0 +1,314 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.7-unified",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "climbing",
+  "family": "sports",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T1",
+    "band": "teen",
+    "gender": "man",
+    "skin": "medium",
+    "hair": "short dark brown",
+    "clothes": "green t-shirt, blue joggers",
+    "age": "teen",
+    "lock": "PRIMARY T1 only on cover+all actions. Same outfit colours entire pack. Accent #D06830 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Climbing",
+    "es": "Escalada"
+  },
+  "existing_dir": "climbing-wow",
+  "art_dir": "climbing-wow",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "climbing",
+      "es": "escalada"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "helmet",
+      "slug": "helmet",
+      "title": {
+        "en": "helmet",
+        "es": "casco"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "harness",
+      "slug": "harness",
+      "title": {
+        "en": "harness",
+        "es": "arnes"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "climbing-shoes",
+      "slug": "climbing-shoes",
+      "title": {
+        "en": "climbing shoes",
+        "es": "pies de gato"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "rope",
+      "slug": "rope",
+      "title": {
+        "en": "rope",
+        "es": "cuerda"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "carabiner",
+      "slug": "carabiner",
+      "title": {
+        "en": "carabiner",
+        "es": "mosqueton"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "magnesium-bag",
+      "slug": "magnesium-bag",
+      "title": {
+        "en": "magnesium",
+        "es": "magnesio"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "put-helmet-on",
+      "slug": "put-helmet-on",
+      "title": {
+        "en": "helmet on",
+        "es": "poner casco"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-harness-on",
+      "slug": "put-harness-on",
+      "title": {
+        "en": "harness on",
+        "es": "poner arnes"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "put-climbing-shoes-on",
+      "slug": "put-climbing-shoes-on",
+      "title": {
+        "en": "shoes on",
+        "es": "poner pies de gato"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "make-an-eight-knot",
+      "slug": "make-an-eight-knot",
+      "title": {
+        "en": "eight knot",
+        "es": "nudo ocho"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "check-gear",
+      "slug": "check-gear",
+      "title": {
+        "en": "check gear",
+        "es": "revisar material"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "ready",
+      "slug": "ready",
+      "title": {
+        "en": "ready",
+        "es": "listo"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "grab-hold",
+      "slug": "grab-hold",
+      "title": {
+        "en": "grab hold",
+        "es": "coger presa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "climb-up",
+      "slug": "climb-up",
+      "title": {
+        "en": "climb up",
+        "es": "subir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "climb-down",
+      "slug": "climb-down",
+      "title": {
+        "en": "climb down",
+        "es": "bajar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "belay-partner",
+      "slug": "belay-partner",
+      "title": {
+        "en": "belay",
+        "es": "asegurar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "rest-on-hold",
+      "slug": "rest-on-hold",
+      "title": {
+        "en": "rest hold",
+        "es": "descansar presa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "celebrate-top",
+      "slug": "celebrate-top",
+      "title": {
+        "en": "top out",
+        "es": "llegar arriba"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 6,
+    "actions": 12,
+    "cards": 19
+  },
+  "design": {
+    "avatar_id": "T1",
+    "family_base": "#C77830",
+    "accent": "#D06830",
+    "accent_name": "climb orange",
+    "highlight": "harness / hold / rope",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "notes": [
+    "Unified sports pack: prep then session in one sequence.",
+    "Gender via casts where available."
+  ],
+  "gender_delivery": "casts-boy-girl",
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "cover"
+    },
+    {
+      "kind": "object",
+      "id": "helmet"
+    },
+    {
+      "kind": "object",
+      "id": "harness"
+    },
+    {
+      "kind": "object",
+      "id": "climbing-shoes"
+    },
+    {
+      "kind": "object",
+      "id": "rope"
+    },
+    {
+      "kind": "object",
+      "id": "carabiner"
+    },
+    {
+      "kind": "object",
+      "id": "magnesium-bag"
+    },
+    {
+      "kind": "action",
+      "id": "put-helmet-on"
+    },
+    {
+      "kind": "action",
+      "id": "put-harness-on"
+    },
+    {
+      "kind": "action",
+      "id": "put-climbing-shoes-on"
+    },
+    {
+      "kind": "action",
+      "id": "make-an-eight-knot"
+    },
+    {
+      "kind": "action",
+      "id": "check-gear"
+    },
+    {
+      "kind": "action",
+      "id": "ready"
+    },
+    {
+      "kind": "action",
+      "id": "grab-hold"
+    },
+    {
+      "kind": "action",
+      "id": "climb-up"
+    },
+    {
+      "kind": "action",
+      "id": "climb-down"
+    },
+    {
+      "kind": "action",
+      "id": "belay-partner"
+    },
+    {
+      "kind": "action",
+      "id": "rest-on-hold"
+    },
+    {
+      "kind": "action",
+      "id": "celebrate-top"
+    }
+  ],
+  "unified_from": [
+    "climbing-prep",
+    "climbing-activity"
+  ],
+  "unified_at": "2026-08-14",
+  "art": "installed",
+  "legacy_ids": [
+    "climbing-wow"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "emotion-excited",
+  "family": "emotions",
+  "status": "ready",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "youth",
+    "gender": "neutral",
+    "skin": "medium",
+    "hair": "soft short rounded bowl cut, androgynous",
+    "clothes": "yellow crew sweater #E8C040, soft grey trousers",
+    "age": "youth",
+    "lock": "E1 genderless. Sweater+halo #E8C040. Two unique coping actions only."
+  },
+  "label": {
+    "en": "Excited",
+    "es": "Emocion"
+  },
+  "existing_dir": null,
+  "emotions_asset_dir": "emotions-keyring",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "excited",
+      "es": "emocion"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "excited",
+      "slug": "excited",
+      "title": {
+        "en": "excited",
+        "es": "emocion"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "big-energy-move",
+      "slug": "big-energy-move",
+      "title": {
+        "en": "big moves",
+        "es": "mover energia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "settle-count",
+      "slug": "settle-count",
+      "title": {
+        "en": "settle count",
+        "es": "contar y calmar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "excited",
+        "es": "emocion"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "excited",
+      "slug": "excited",
+      "title": {
+        "en": "excited",
+        "es": "emocion"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "big-energy-move",
+      "slug": "big-energy-move",
+      "title": {
+        "en": "big moves",
+        "es": "mover energia"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "settle-count",
+      "slug": "settle-count",
+      "title": {
+        "en": "settle count",
+        "es": "contar y calmar"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 1,
+    "actions": 2,
+    "cards": 4
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#E8A840",
+    "accent": "#E8C040",
+    "accent_name": "yellow",
+    "colour_group": "yellow",
+    "highlight": "E1 genderless yellow; unique premium coping pair",
+    "outfit_lock": true,
+    "sort_order": 2
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "art_notes": "Premium: face+cover yellow. Actions unique to this emotion, sweater #E8C040. Not shared across emotions."
+}

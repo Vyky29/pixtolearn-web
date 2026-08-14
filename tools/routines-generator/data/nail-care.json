@@ -1,0 +1,249 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "nail-care",
+  "family": "self-care",
+  "status": "ready",
+  "audience": "teen",
+  "character": {
+    "avatar_id": "T2",
+    "band": "teen",
+    "gender": "woman",
+    "skin": "light",
+    "hair": "shoulder-length brown",
+    "clothes": "teal jacket, navy trousers",
+    "age": "teen",
+    "lock": "PRIMARY T2 only on cover+all actions. Same outfit colours entire pack. Accent #D4A0B0 highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "Nail care",
+    "es": "Cuidado de las unas"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "nail care",
+      "es": "cuidado unas"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "nail-clippers",
+      "slug": "nail-clippers",
+      "title": {
+        "en": "nail clippers",
+        "es": "cortaunas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "nail-file",
+      "slug": "nail-file",
+      "title": {
+        "en": "nail file",
+        "es": "lima"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-lotion",
+      "slug": "hand-lotion",
+      "title": {
+        "en": "hand lotion",
+        "es": "crema manos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trash-bin",
+      "slug": "trash-bin",
+      "title": {
+        "en": "bin",
+        "es": "papelera"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trim-nails",
+      "slug": "trim-nails",
+      "title": {
+        "en": "trim nails",
+        "es": "cortar unas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "file-nails",
+      "slug": "file-nails",
+      "title": {
+        "en": "file nails",
+        "es": "limar unas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "moisturise-hands",
+      "slug": "moisturise-hands",
+      "title": {
+        "en": "moisturise",
+        "es": "hidratar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "bin-clippings",
+      "slug": "bin-clippings",
+      "title": {
+        "en": "bin clippings",
+        "es": "tirar recortes"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "nail care",
+        "es": "cuidado unas"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "nail-clippers",
+      "slug": "nail-clippers",
+      "title": {
+        "en": "nail clippers",
+        "es": "cortaunas"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "nail-file",
+      "slug": "nail-file",
+      "title": {
+        "en": "nail file",
+        "es": "lima"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hand-lotion",
+      "slug": "hand-lotion",
+      "title": {
+        "en": "hand lotion",
+        "es": "crema manos"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "trash-bin",
+      "slug": "trash-bin",
+      "title": {
+        "en": "bin",
+        "es": "papelera"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "wash-hands",
+      "slug": "wash-hands",
+      "title": {
+        "en": "wash hands",
+        "es": "lavar manos"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "trim-nails",
+      "slug": "trim-nails",
+      "title": {
+        "en": "trim nails",
+        "es": "cortar unas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "file-nails",
+      "slug": "file-nails",
+      "title": {
+        "en": "file nails",
+        "es": "limar unas"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "moisturise-hands",
+      "slug": "moisturise-hands",
+      "title": {
+        "en": "moisturise",
+        "es": "hidratar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "bin-clippings",
+      "slug": "bin-clippings",
+      "title": {
+        "en": "bin clippings",
+        "es": "tirar recortes"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 5,
+    "actions": 5,
+    "cards": 11
+  },
+  "design": {
+    "avatar_id": "T2",
+    "family_base": "#5B8C7A",
+    "accent": "#D4A0B0",
+    "accent_name": "dusty rose",
+    "highlight": "nail / clipper / file",
+    "outfit_lock": true
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only."
+}

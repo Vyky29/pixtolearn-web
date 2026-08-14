@@ -1,0 +1,506 @@
+{
+  "version": "1.0",
+  "product": "PixtoLearn WOW Routines",
+  "rule": "Option A: family base colour (corporate) + routine accent. Accent highlights the ACTION or hero object. White background always. One primary avatar + locked outfit per routine. Never mix ages mid-routine.",
+  "framing": {
+    "rule": "Frame for the gesture, not always full body. Cover = recognition (full or 3/4). Objects = single object. Actions = zoom on the clinical gesture.",
+    "cover": "Full body or 3/4 so the routine is recognisable.",
+    "object": "Single object, white bg, no person.",
+    "action_face_hands": "Close-up face and/or hands. Use for brushing teeth, rinsing mouth, hair wash/rinse/dry/brush, squeeze bottle into hand.",
+    "action_zone": "Crop to the body zone of the garment or step (feet for socks/shoes; waist/legs for trousers/pants; upper body for tops/jackets; head/hands for hat/scarf/gloves).",
+    "action_body": "3/4 or full body only when the whole posture is the teaching point (wash body, dry body, cover-like steps).",
+    "never": "Tiny full-body figure with a microscopic tool. Cropped forehead when a face is shown. Inner vignette boxes."
+  },
+  "avatars": {
+    "T1": {
+      "band": "teen",
+      "gender": "man",
+      "skin": "medium",
+      "hair": "short dark brown",
+      "default_outfit": "green t-shirt, blue joggers",
+      "note": "Teen boy - travel, hotel, supermarket, gym"
+    },
+    "T2": {
+      "band": "teen",
+      "gender": "woman",
+      "skin": "light",
+      "hair": "shoulder-length brown",
+      "default_outfit": "teal jacket, navy trousers",
+      "note": "Teen girl - ferry, tube, bus, haircare, nail care, hiking"
+    },
+    "YA1": {
+      "band": "young-adult",
+      "gender": "woman",
+      "skin": "medium",
+      "hair": "dark curly shoulder-length",
+      "default_outfit": "lavender lounge set",
+      "note": "Young adult woman - period, intimate female, hospital, hairdresser"
+    },
+    "YA2": {
+      "band": "young-adult",
+      "gender": "man",
+      "skin": "dark",
+      "hair": "short black",
+      "default_outfit": "dark grey t-shirt, black trousers",
+      "note": "Young adult man - intimate male, shaving, foot care, pharmacy"
+    },
+    "C1": {
+      "band": "child",
+      "gender": "boy",
+      "skin": "light-olive",
+      "hair": "short brown",
+      "default_outfit": "soft blue top, grey trousers",
+      "note": "Child boy - core self-care, road, swim, cycle, museum"
+    },
+    "C2": {
+      "band": "child",
+      "gender": "girl",
+      "skin": "medium-dark",
+      "hair": "dark with ponytail or soft curls",
+      "default_outfit": "coral top, navy skirt or trousers",
+      "note": "Child girl - teeth/haircare if child pack, beach, theme park, mall, tennis"
+    },
+    "E1": {
+      "band": "youth",
+      "gender": "neutral",
+      "skin": "medium",
+      "hair": "soft short rounded bowl cut, neither boy buzz nor girl long hair, ears lightly visible",
+      "default_outfit": "crew sweater in emotion colour, soft grey trousers",
+      "note": "Gender-neutral emotions. Colour groups: green=happy/calm, yellow=excited/worried, blue=sad/tired, red=angry/frustrated. Techniques shirt matches emotion colour."
+    }
+  },
+  "families": {
+    "core": {
+      "base": "#CBCBC9",
+      "name": "Neutral grey",
+      "feel": "vocabulary / tools"
+    },
+    "self-care": {
+      "base": "#5B8C7A",
+      "name": "Seafoam green",
+      "feel": "water, calm hygiene"
+    },
+    "intimate-care": {
+      "base": "#A894B0",
+      "name": "Soft lavender",
+      "feel": "calm clinical privacy"
+    },
+    "emotions": {
+      "base": "#E8A840",
+      "name": "Warm amber",
+      "feel": "feelings hub; gender-neutral E1 face"
+    },
+    "safety-mobility": {
+      "base": "#3D7EA6",
+      "name": "Transport blue",
+      "feel": "travel systems"
+    },
+    "sports-prep": {
+      "base": "#C77830",
+      "name": "Active amber",
+      "feel": "movement energy"
+    },
+    "travel": {
+      "base": "#2F6B4F",
+      "name": "Adventure green",
+      "feel": "outdoors and trips"
+    },
+    "public-spaces": {
+      "base": "#D03860",
+      "name": "Civic rose",
+      "feel": "places in the community"
+    }
+  },
+  "routines": {
+    "shower": {
+      "avatar": "C1",
+      "family": "self-care",
+      "accent": "#4A90A8",
+      "accent_name": "water blue",
+      "highlight": "water / towel / soap"
+    },
+    "brushing-teeth": {
+      "avatar": "C2",
+      "family": "self-care",
+      "accent": "#5EC4A8",
+      "accent_name": "mint",
+      "highlight": "toothbrush / toothpaste"
+    },
+    "using-the-toilet-boy": {
+      "avatar": "C1",
+      "family": "self-care",
+      "accent": "#7A9EAE",
+      "accent_name": "slate aqua",
+      "highlight": "clothes down/up + toilet / paper / flush"
+    },
+    "using-the-toilet-girl": {
+      "avatar": "C2",
+      "family": "self-care",
+      "accent": "#7A9EAE",
+      "accent_name": "slate aqua",
+      "highlight": "clothes down/up + toilet / paper / flush"
+    },
+    "haircare": {
+      "avatar": "T2",
+      "family": "self-care",
+      "accent": "#8B7AB8",
+      "accent_name": "soft lilac",
+      "highlight": "brush / hair / product"
+    },
+    "nail-care": {
+      "avatar": "T2",
+      "family": "self-care",
+      "accent": "#D4A0B0",
+      "accent_name": "dusty rose",
+      "highlight": "nail / clipper / file"
+    },
+    "shaving": {
+      "avatar": "YA2",
+      "family": "self-care",
+      "accent": "#6B7C8A",
+      "accent_name": "steel grey",
+      "highlight": "razor / foam / face zone"
+    },
+    "foot-care": {
+      "avatar": "YA2",
+      "family": "self-care",
+      "accent": "#8A9B7A",
+      "accent_name": "sage",
+      "highlight": "foot / cream / sock"
+    },
+    "menstrual-hygiene": {
+      "avatar": "YA1",
+      "family": "intimate-care",
+      "accent": "#B8A0C8",
+      "accent_name": "lavender",
+      "highlight": "pad/tampon pack + YA1 lavender outfit locked"
+    },
+    "intimate-care-female": {
+      "avatar": "YA1",
+      "family": "intimate-care",
+      "accent": "#D4A890",
+      "accent_name": "soft peach",
+      "highlight": "care step / product"
+    },
+    "intimate-care-male": {
+      "avatar": "YA2",
+      "family": "intimate-care",
+      "accent": "#8A9BB0",
+      "accent_name": "calm blue-grey",
+      "highlight": "care step / product"
+    },
+    "emotions-hub": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#E8A840",
+      "accent_name": "amber",
+      "highlight": "E1 gender-neutral emotion faces + shared techniques"
+    },
+    "emotion-happy": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#5FAE7A",
+      "accent_name": "calm green",
+      "highlight": "E1 green sweater+halo; techniques match"
+    },
+    "emotion-sad": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#5B8FC4",
+      "accent_name": "soft blue",
+      "highlight": "E1 blue sweater+halo; techniques match"
+    },
+    "emotion-angry": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#D05555",
+      "accent_name": "soft red",
+      "highlight": "E1 red sweater+halo; techniques match"
+    },
+    "emotion-worried": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#E8C040",
+      "accent_name": "warm yellow",
+      "highlight": "E1 yellow sweater+halo; techniques match"
+    },
+    "emotion-tired": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#5B8FC4",
+      "accent_name": "soft blue",
+      "highlight": "E1 blue sweater+halo; techniques match"
+    },
+    "emotion-excited": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#E8C040",
+      "accent_name": "warm yellow",
+      "highlight": "E1 yellow sweater+halo; techniques match"
+    },
+    "emotion-calm": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#5FAE7A",
+      "accent_name": "calm green",
+      "highlight": "E1 green sweater+halo; techniques match"
+    },
+    "emotion-frustrated": {
+      "avatar": "E1",
+      "family": "emotions",
+      "accent": "#D05555",
+      "accent_name": "soft red",
+      "highlight": "E1 red sweater+halo; techniques match"
+    },
+    "taking-a-plane": {
+      "avatar": "T1",
+      "family": "safety-mobility",
+      "accent": "#5BA3D0",
+      "accent_name": "sky blue",
+      "highlight": "seatbelt / window / ticket / action focus"
+    },
+    "at-the-airport": {
+      "avatar": "T1",
+      "family": "public-spaces",
+      "accent": "#5BA3D0",
+      "accent_name": "sky blue",
+      "highlight": "same teen T1 as plane; passport / gate / bag"
+    },
+    "taking-the-train": {
+      "avatar": "T1",
+      "family": "safety-mobility",
+      "accent": "#A84858",
+      "accent_name": "rail wine",
+      "highlight": "ticket / door / seat"
+    },
+    "taking-the-bus": {
+      "avatar": "T2",
+      "family": "safety-mobility",
+      "accent": "#E07830",
+      "accent_name": "bus orange",
+      "highlight": "bus stop / ticket / door"
+    },
+    "using-the-tube": {
+      "avatar": "T2",
+      "family": "safety-mobility",
+      "accent": "#C04050",
+      "accent_name": "tube red",
+      "highlight": "Oyster/card / handrail / doors"
+    },
+    "taking-boat-ferry": {
+      "avatar": "T2",
+      "family": "safety-mobility",
+      "accent": "#2A8A9A",
+      "accent_name": "sea teal",
+      "highlight": "sea / life jacket / rail / ticket"
+    },
+    "taking-a-taxi": {
+      "avatar": "T1",
+      "family": "safety-mobility",
+      "accent": "#E8C040",
+      "accent_name": "taxi yellow",
+      "highlight": "taxi / door / seatbelt"
+    },
+    "crossing-the-road": {
+      "avatar": "C1",
+      "family": "safety-mobility",
+      "accent": "#E8A020",
+      "accent_name": "amber signal",
+      "highlight": "crossing / look / green man"
+    },
+    "swimming-wow": {
+      "avatar": "C1",
+      "family": "sports-prep",
+      "accent": "#3A9ABA",
+      "accent_name": "pool blue",
+      "highlight": "water / goggles / kick"
+    },
+    "cycling-prep": {
+      "avatar": "C1",
+      "family": "sports-prep",
+      "accent": "#E8B020",
+      "accent_name": "bike yellow",
+      "highlight": "helmet / bike / lights"
+    },
+    "tennis-prep": {
+      "avatar": "C2",
+      "family": "sports-prep",
+      "accent": "#C0D040",
+      "accent_name": "court lime",
+      "highlight": "racket / ball"
+    },
+    "climbing-wow": {
+      "avatar": "T1",
+      "family": "sports-prep",
+      "accent": "#D06830",
+      "accent_name": "climb orange",
+      "highlight": "harness / hold / rope"
+    },
+    "gym-activities": {
+      "avatar": "T1",
+      "family": "sports-prep",
+      "accent": "#D05050",
+      "accent_name": "gym coral",
+      "highlight": "weights / mat / stretch"
+    },
+    "hiking": {
+      "avatar": "T2",
+      "family": "sports-prep",
+      "accent": "#4A8A50",
+      "accent_name": "forest green",
+      "highlight": "boots / path / map"
+    },
+    "going-on-holidays": {
+      "avatar": "T1",
+      "family": "travel",
+      "accent": "#E07050",
+      "accent_name": "holiday coral",
+      "highlight": "suitcase / passport"
+    },
+    "going-to-the-beach": {
+      "avatar": "C2",
+      "family": "travel",
+      "accent": "#40B0C0",
+      "accent_name": "turquoise",
+      "highlight": "towel / sea / sunscreen"
+    },
+    "going-to-the-mountain": {
+      "avatar": "T1",
+      "family": "travel",
+      "accent": "#5A7A4A",
+      "accent_name": "mountain green",
+      "highlight": "backpack / path"
+    },
+    "going-camping": {
+      "avatar": "T1",
+      "family": "travel",
+      "accent": "#A09050",
+      "accent_name": "khaki",
+      "highlight": "tent / torch"
+    },
+    "going-to-the-museum": {
+      "avatar": "C1",
+      "family": "travel",
+      "accent": "#C0A040",
+      "accent_name": "mustard",
+      "highlight": "ticket / exhibit"
+    },
+    "going-to-a-theme-park": {
+      "avatar": "C2",
+      "family": "travel",
+      "accent": "#E05080",
+      "accent_name": "fun pink",
+      "highlight": "ticket / ride queue"
+    },
+    "attending-a-sport-event": {
+      "avatar": "T1",
+      "family": "travel",
+      "accent": "#D04040",
+      "accent_name": "stadium red",
+      "highlight": "ticket / seat / cheer"
+    },
+    "at-the-hotel": {
+      "avatar": "T1",
+      "family": "public-spaces",
+      "accent": "#C4A882",
+      "accent_name": "hotel sand",
+      "highlight": "keycard / lift / door"
+    },
+    "at-the-supermarket": {
+      "avatar": "T1",
+      "family": "public-spaces",
+      "accent": "#5A9A60",
+      "accent_name": "fresh green",
+      "highlight": "trolley / product / till"
+    },
+    "at-the-shopping-mall": {
+      "avatar": "C2",
+      "family": "public-spaces",
+      "accent": "#E07090",
+      "accent_name": "mall pink",
+      "highlight": "bag / shop door"
+    },
+    "at-the-hospital": {
+      "avatar": "YA1",
+      "family": "public-spaces",
+      "accent": "#5AAA8A",
+      "accent_name": "clinical green",
+      "highlight": "appointment card / door / form"
+    },
+    "at-the-pharmacy": {
+      "avatar": "YA2",
+      "family": "public-spaces",
+      "accent": "#3A9A6A",
+      "accent_name": "pharmacy green",
+      "highlight": "prescription / medicine"
+    },
+    "at-the-hairdresser": {
+      "avatar": "YA1",
+      "family": "public-spaces",
+      "accent": "#9A80B8",
+      "accent_name": "salon lilac",
+      "highlight": "scissors / cape / mirror"
+    },
+    "clothes-boy": {
+      "avatar": "C1",
+      "family": "self-care",
+      "accent": "#6FA89A",
+      "accent_name": "mint sage",
+      "highlight": "garment on/off",
+      "note": "Merged dress + undress. Objects once. Actions: all on then all off."
+    },
+    "clothes-girl": {
+      "avatar": "C2",
+      "family": "self-care",
+      "accent": "#D4A0B0",
+      "accent_name": "dusty rose",
+      "highlight": "garment on/off",
+      "note": "Merged dress + undress. Objects once. Actions: all on then all off."
+    }
+  },
+  "emotions_rules": {
+    "avatar": "E1",
+    "principle": "Feeling first, no gender. Soft androgynous face.",
+    "colour_groups": {
+      "green": {
+        "emotions": [
+          "happy",
+          "calm"
+        ],
+        "hex": "#5FAE7A"
+      },
+      "yellow": {
+        "emotions": [
+          "excited",
+          "worried"
+        ],
+        "hex": "#E8C040"
+      },
+      "blue": {
+        "emotions": [
+          "sad",
+          "tired"
+        ],
+        "hex": "#5B8FC4"
+      },
+      "red": {
+        "emotions": [
+          "angry",
+          "frustrated"
+        ],
+        "hex": "#D05555"
+      }
+    },
+    "face_card": "Tight face. Soft bowl-cut. Sweater collar + halo = emotion colour.",
+    "technique": "Same E1 body; crew sweater MUST be that emotion colour. Accent on coping gesture.",
+    "never": [
+      "long hair",
+      "buzzcut only",
+      "eyelashes/makeup",
+      "masculine jaw",
+      "feminine lashes",
+      "T2 girl look",
+      "shared technique art across different colour groups"
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "emotion-frustrated",
+  "family": "emotions",
+  "status": "ready",
+  "audience": "all",
+  "character": {
+    "avatar_id": "E1",
+    "band": "youth",
+    "gender": "neutral",
+    "skin": "medium",
+    "hair": "soft short rounded bowl cut, androgynous",
+    "clothes": "red crew sweater #D05555, soft grey trousers",
+    "age": "youth",
+    "lock": "E1 genderless. Sweater+halo #D05555. Two unique coping actions only."
+  },
+  "label": {
+    "en": "Frustrated",
+    "es": "Frustracion"
+  },
+  "existing_dir": null,
+  "emotions_asset_dir": "emotions-keyring",
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "frustrated",
+      "es": "frustracion"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "frustrated",
+      "slug": "frustrated",
+      "title": {
+        "en": "frustrated",
+        "es": "frustracion"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "pause-break",
+      "slug": "pause-break",
+      "title": {
+        "en": "pause break",
+        "es": "hacer pausa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "try-again-later",
+      "slug": "try-again-later",
+      "title": {
+        "en": "try later",
+        "es": "probar luego"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "frustrated",
+        "es": "frustracion"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "frustrated",
+      "slug": "frustrated",
+      "title": {
+        "en": "frustrated",
+        "es": "frustracion"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "pause-break",
+      "slug": "pause-break",
+      "title": {
+        "en": "pause break",
+        "es": "hacer pausa"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "try-again-later",
+      "slug": "try-again-later",
+      "title": {
+        "en": "try later",
+        "es": "probar luego"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 1,
+    "actions": 2,
+    "cards": 4
+  },
+  "design": {
+    "avatar_id": "E1",
+    "family_base": "#E8A840",
+    "accent": "#D05555",
+    "accent_name": "red",
+    "colour_group": "red",
+    "highlight": "E1 genderless red; unique premium coping pair",
+    "outfit_lock": true,
+    "sort_order": 7
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "art_notes": "Premium: face+cover red. Actions unique to this emotion, sweater #D05555. Not shared across emotions."
+}

@@ -1,0 +1,339 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "1.6",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step. Match shower/dress."
+  },
+  "id": "at-the-hospital",
+  "family": "public-spaces",
+  "status": "ready",
+  "audience": "adult",
+  "character": {
+    "avatar_id": "YA1",
+    "band": "young-adult",
+    "gender": "woman",
+    "skin": "medium",
+    "hair": "dark curly shoulder-length",
+    "clothes": "lavender lounge set",
+    "age": "young-adult",
+    "lock": "PRIMARY YA1 only on cover+all actions. Same outfit colours entire pack. Accent #5AAA8A highlights action. Staff secondary OK."
+  },
+  "label": {
+    "en": "At the hospital",
+    "es": "En el hospital"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "hospital",
+      "es": "hospital"
+    },
+    "wow_layer": "cover"
+  },
+  "items": [
+    {
+      "id": "appointment-card",
+      "slug": "appointment-card",
+      "title": {
+        "en": "appointment",
+        "es": "cita"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hospital-id",
+      "slug": "hospital-id",
+      "title": {
+        "en": "hospital ID",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "prescription-pad",
+      "slug": "prescription-pad",
+      "title": {
+        "en": "prescription",
+        "es": "receta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "medical-form",
+      "slug": "medical-form",
+      "title": {
+        "en": "form",
+        "es": "formulario"
+      },
+      "wow_layer": "object"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive-checkin",
+      "slug": "arrive-checkin",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-id-appointment",
+      "slug": "show-id-appointment",
+      "title": {
+        "en": "show ID",
+        "es": "mostrar cita"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-waiting",
+      "slug": "sit-waiting",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enter-office",
+      "slug": "enter-office",
+      "title": {
+        "en": "enter room",
+        "es": "entrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fill-forms",
+      "slug": "fill-forms",
+      "title": {
+        "en": "fill form",
+        "es": "rellenar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "receive-advice",
+      "slug": "receive-advice",
+      "title": {
+        "en": "listen",
+        "es": "escuchar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-prescription",
+      "slug": "collect-prescription",
+      "title": {
+        "en": "get prescription",
+        "es": "coger receta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-long-time",
+      "slug": "wait-long-time",
+      "title": {
+        "en": "long wait",
+        "es": "espera larga"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-noise",
+      "slug": "loud-noise",
+      "title": {
+        "en": "loud noise",
+        "es": "ruido"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-waiting",
+      "slug": "crowded-waiting",
+      "title": {
+        "en": "crowded waiting",
+        "es": "sala llena"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "steps": [
+    {
+      "id": "cover",
+      "slug": "cover",
+      "title": {
+        "en": "hospital",
+        "es": "hospital"
+      },
+      "wow_layer": "cover"
+    },
+    {
+      "id": "appointment-card",
+      "slug": "appointment-card",
+      "title": {
+        "en": "appointment",
+        "es": "cita"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "hospital-id",
+      "slug": "hospital-id",
+      "title": {
+        "en": "hospital ID",
+        "es": "tarjeta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "prescription-pad",
+      "slug": "prescription-pad",
+      "title": {
+        "en": "prescription",
+        "es": "receta"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "medical-form",
+      "slug": "medical-form",
+      "title": {
+        "en": "form",
+        "es": "formulario"
+      },
+      "wow_layer": "object"
+    },
+    {
+      "id": "arrive-checkin",
+      "slug": "arrive-checkin",
+      "title": {
+        "en": "check in",
+        "es": "registrarse"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "show-id-appointment",
+      "slug": "show-id-appointment",
+      "title": {
+        "en": "show ID",
+        "es": "mostrar cita"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "sit-waiting",
+      "slug": "sit-waiting",
+      "title": {
+        "en": "wait",
+        "es": "esperar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "enter-office",
+      "slug": "enter-office",
+      "title": {
+        "en": "enter room",
+        "es": "entrar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "fill-forms",
+      "slug": "fill-forms",
+      "title": {
+        "en": "fill form",
+        "es": "rellenar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "receive-advice",
+      "slug": "receive-advice",
+      "title": {
+        "en": "listen",
+        "es": "escuchar"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "collect-prescription",
+      "slug": "collect-prescription",
+      "title": {
+        "en": "get prescription",
+        "es": "coger receta"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "leave",
+      "slug": "leave",
+      "title": {
+        "en": "leave",
+        "es": "salir"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "wait-long-time",
+      "slug": "wait-long-time",
+      "title": {
+        "en": "long wait",
+        "es": "espera larga"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "loud-noise",
+      "slug": "loud-noise",
+      "title": {
+        "en": "loud noise",
+        "es": "ruido"
+      },
+      "wow_layer": "way"
+    },
+    {
+      "id": "crowded-waiting",
+      "slug": "crowded-waiting",
+      "title": {
+        "en": "crowded waiting",
+        "es": "sala llena"
+      },
+      "wow_layer": "way"
+    }
+  ],
+  "counts": {
+    "items": 4,
+    "actions": 11,
+    "cards": 16
+  },
+  "avatar_rule": "One primary avatar for ALL cover+actions. Locked outfit/colours for whole routine. Accent colour highlights the action or hero object. Never mix ages. Optional staff secondary only.",
+  "design": {
+    "avatar_id": "YA1",
+    "family_base": "#D03860",
+    "accent": "#5AAA8A",
+    "accent_name": "clinical green",
+    "highlight": "appointment card / door / form",
+    "outfit_lock": true
+  }
+}
