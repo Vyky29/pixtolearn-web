@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "dubai-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "dubai",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Creek, Marina."
+  },
+  "label": {
+    "en": "Dubai day",
+    "es": "Dia en Dubai"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "dubai day",
+      "es": "dia en dubai"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "burj-khalifa",
+      "slug": "burj-khalifa",
+      "title": {
+        "en": "Burj Khalifa",
+        "es": "Burj Khalifa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "dubai-mall",
+      "slug": "dubai-mall",
+      "title": {
+        "en": "Dubai Mall",
+        "es": "Dubai Mall"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "dubai-fountain",
+      "slug": "dubai-fountain",
+      "title": {
+        "en": "Dubai Fountain",
+        "es": "Fuente de Dubai"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "dubai-creek",
+      "slug": "dubai-creek",
+      "title": {
+        "en": "Dubai Creek",
+        "es": "Dubai Creek"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "dubai-marina",
+      "slug": "dubai-marina",
+      "title": {
+        "en": "Dubai Marina",
+        "es": "Dubai Marina"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-burj-khalifa",
+      "slug": "look-burj-khalifa",
+      "title": {
+        "en": "look at Burj Khalifa",
+        "es": "mirar Burj Khalifa"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-dubai-creek",
+      "slug": "walk-dubai-creek",
+      "title": {
+        "en": "walk by Dubai Creek",
+        "es": "andar por Dubai Creek"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-dubai-mall",
+      "slug": "look-dubai-mall",
+      "title": {
+        "en": "look at Dubai Mall",
+        "es": "mirar Dubai Mall"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-dubai-fountain",
+      "slug": "look-dubai-fountain",
+      "title": {
+        "en": "look at Dubai Fountain",
+        "es": "mirar la Fuente de Dubai"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-dubai-marina",
+      "slug": "walk-dubai-marina",
+      "title": {
+        "en": "walk at Dubai Marina",
+        "es": "andar en Dubai Marina"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-dubai-marina",
+      "slug": "look-dubai-marina",
+      "title": {
+        "en": "look at Dubai Marina",
+        "es": "mirar Dubai Marina"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-dubai-creek",
+    "walk-dubai-marina"
+  ],
+  "spec_status": "spec-ready"
+}

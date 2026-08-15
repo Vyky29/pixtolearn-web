@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "barcelona-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "barcelona",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: La Rambla, Ciutadella."
+  },
+  "label": {
+    "en": "Barcelona day",
+    "es": "Dia en Barcelona"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "barcelona day",
+      "es": "dia en barcelona"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "sagrada-familia",
+      "slug": "sagrada-familia",
+      "title": {
+        "en": "Sagrada Familia",
+        "es": "Sagrada Familia"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "park-guell",
+      "slug": "park-guell",
+      "title": {
+        "en": "Park Guell",
+        "es": "Park Guell"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "la-rambla",
+      "slug": "la-rambla",
+      "title": {
+        "en": "La Rambla",
+        "es": "La Rambla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "beach",
+      "slug": "beach",
+      "title": {
+        "en": "Barcelona beach",
+        "es": "playa de Barcelona"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ciutadella-park",
+      "slug": "ciutadella-park",
+      "title": {
+        "en": "Ciutadella Park",
+        "es": "Parc de la Ciutadella"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-sagrada-familia",
+      "slug": "look-sagrada-familia",
+      "title": {
+        "en": "look at Sagrada Familia",
+        "es": "mirar la Sagrada Familia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-la-rambla",
+      "slug": "walk-la-rambla",
+      "title": {
+        "en": "walk on La Rambla",
+        "es": "andar por La Rambla"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-park-guell",
+      "slug": "look-park-guell",
+      "title": {
+        "en": "look at Park Guell",
+        "es": "mirar Park Guell"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-beach",
+      "slug": "look-beach",
+      "title": {
+        "en": "look at the beach",
+        "es": "mirar la playa"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-ciutadella",
+      "slug": "walk-ciutadella",
+      "title": {
+        "en": "walk in Ciutadella Park",
+        "es": "andar en el Parc de la Ciutadella"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-ciutadella",
+      "slug": "look-ciutadella",
+      "title": {
+        "en": "look at Ciutadella Park",
+        "es": "mirar el Parc de la Ciutadella"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-la-rambla",
+    "walk-ciutadella"
+  ],
+  "spec_status": "spec-ready"
+}

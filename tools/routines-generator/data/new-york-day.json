@@ -1,0 +1,64 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [531, 648],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "new-york-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "new-york",
+  "status": "ready",
+  "art": "installed",
+  "architecture_wave": "future-city-days-v2",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. City-specific walks: harbor, Central Park."
+  },
+  "label": {"en": "New York day", "es": "Dia en Nueva York"},
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {"en": "new york day", "es": "dia en nueva york"},
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {"id": "statue-of-liberty", "slug": "statue-of-liberty", "title": {"en": "Statue of Liberty", "es": "Estatua de la Libertad"}, "wow_layer": "object", "art": "installed"},
+    {"id": "times-square", "slug": "times-square", "title": {"en": "Times Square", "es": "Times Square"}, "wow_layer": "object", "art": "installed"},
+    {"id": "brooklyn-bridge", "slug": "brooklyn-bridge", "title": {"en": "Brooklyn Bridge", "es": "Puente de Brooklyn"}, "wow_layer": "object", "art": "installed"},
+    {"id": "harbor", "slug": "harbor", "title": {"en": "New York harbor", "es": "puerto de Nueva York"}, "wow_layer": "object", "art": "installed"},
+    {"id": "central-park", "slug": "central-park", "title": {"en": "Central Park", "es": "Central Park"}, "wow_layer": "object", "art": "installed"},
+    {"id": "map-sign", "slug": "map-sign", "title": {"en": "map", "es": "mapa"}, "wow_layer": "object", "art": "installed"},
+    {"id": "ticket", "slug": "ticket", "title": {"en": "ticket", "es": "entrada"}, "wow_layer": "object", "art": "installed"},
+    {"id": "water-bottle", "slug": "water-bottle", "title": {"en": "water", "es": "agua"}, "wow_layer": "object", "art": "installed"},
+    {"id": "snack", "slug": "snack", "title": {"en": "snack", "es": "snack"}, "wow_layer": "object", "art": "installed"}
+  ],
+  "actions": [
+    {"id": "arrive", "slug": "arrive", "title": {"en": "arrive", "es": "llegar"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-statue-of-liberty", "slug": "look-statue-of-liberty", "title": {"en": "look at Statue of Liberty", "es": "mirar la Estatua de la Libertad"}, "wow_layer": "way", "art": "installed"},
+    {"id": "walk-harbor", "slug": "walk-harbor", "title": {"en": "walk by the harbor", "es": "andar por el puerto"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-times-square", "slug": "look-times-square", "title": {"en": "look at Times Square", "es": "mirar Times Square"}, "wow_layer": "way", "art": "installed"},
+    {"id": "snack-rest", "slug": "snack-rest", "title": {"en": "snack / rest", "es": "snack / descanso"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-brooklyn-bridge", "slug": "look-brooklyn-bridge", "title": {"en": "look at Brooklyn Bridge", "es": "mirar el Puente de Brooklyn"}, "wow_layer": "way", "art": "installed"},
+    {"id": "walk-central-park", "slug": "walk-central-park", "title": {"en": "walk in Central Park", "es": "andar en Central Park"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-central-park", "slug": "look-central-park", "title": {"en": "look at Central Park", "es": "mirar Central Park"}, "wow_layer": "way", "art": "installed"},
+    {"id": "finish-day", "slug": "finish-day", "title": {"en": "finish the day", "es": "terminar el dia"}, "wow_layer": "way", "art": "installed"}
+  ],
+  "counts": {"items": 9, "actions": 9, "cards": 19},
+  "city_walks": ["walk-harbor", "walk-central-park"],
+  "spec_status": "spec-ready"
+}

@@ -14,7 +14,7 @@
   "family": "travel",
   "bundle": "city-days",
   "city_id": "singapore",
-  "status": "planned",
+  "status": "retired",
   "art": "pending",
   "content_review": "approved-pre-art",
   "architecture_wave": "future-city-days",
@@ -169,5 +169,7 @@
     "actions": 5,
     "cards": 12
   },
-  "spec_status": "spec-ready"
+  "spec_status": "spec-ready",
+  "retired_reason": "city-days-v2: replaced by one city-day pack per city",
+  "replaced_by": "singapore-day"
 }

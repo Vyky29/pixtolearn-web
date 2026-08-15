@@ -1,0 +1,190 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-p3-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "rainy-day",
+  "family": "weather-seasons",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p3-scale",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "raincoat, boots",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+  },
+  "label": {
+    "en": "Rainy day",
+    "es": "Dia de lluvia"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "rainy day",
+      "es": "dia de lluvia"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "coat",
+      "slug": "coat",
+      "title": {
+        "en": "coat",
+        "es": "abrigo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "umbrella",
+      "slug": "umbrella",
+      "title": {
+        "en": "umbrella",
+        "es": "paraguas"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "boots",
+      "slug": "boots",
+      "title": {
+        "en": "boots",
+        "es": "botas"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "towel",
+      "slug": "towel",
+      "title": {
+        "en": "towel",
+        "es": "toalla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "check-weather",
+      "slug": "check-weather",
+      "title": {
+        "en": "check weather",
+        "es": "mirar el tiempo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "boots-on",
+      "slug": "boots-on",
+      "title": {
+        "en": "boots on",
+        "es": "ponerse las botas"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "coat-on",
+      "slug": "coat-on",
+      "title": {
+        "en": "coat on",
+        "es": "ponerse el abrigo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "umbrella-ready",
+      "slug": "umbrella-ready",
+      "title": {
+        "en": "umbrella ready",
+        "es": "paraguas listo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-out",
+      "slug": "go-out",
+      "title": {
+        "en": "go out",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-careful",
+      "slug": "walk-careful",
+      "title": {
+        "en": "walk careful",
+        "es": "caminar con cuidado"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "come-inside",
+      "slug": "come-inside",
+      "title": {
+        "en": "come inside",
+        "es": "entrar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "umbrella-down",
+      "slug": "umbrella-down",
+      "title": {
+        "en": "umbrella down",
+        "es": "cerrar el paraguas"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "boots-off",
+      "slug": "boots-off",
+      "title": {
+        "en": "boots off",
+        "es": "quitarse las botas"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "dry-off",
+      "slug": "dry-off",
+      "title": {
+        "en": "dry off",
+        "es": "secarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "existing_dir": "rainy-day",
+  "art_dir": "rainy-day"
+}

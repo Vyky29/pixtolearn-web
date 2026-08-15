@@ -1,0 +1,65 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [531, 648],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "paris-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "paris",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "future-city-days-v2",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Walks are city-specific (Seine, Luxembourg)."
+  },
+  "label": {"en": "Paris day", "es": "Dia en Paris"},
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {"en": "paris day", "es": "dia en paris"},
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {"id": "eiffel-tower", "slug": "eiffel-tower", "title": {"en": "Eiffel Tower", "es": "Torre Eiffel"}, "wow_layer": "object", "art": "installed"},
+    {"id": "louvre", "slug": "louvre", "title": {"en": "Louvre", "es": "Louvre"}, "wow_layer": "object", "art": "installed"},
+    {"id": "notre-dame", "slug": "notre-dame", "title": {"en": "Notre-Dame", "es": "Notre-Dame"}, "wow_layer": "object", "art": "installed"},
+    {"id": "seine", "slug": "seine", "title": {"en": "River Seine", "es": "rio Sena"}, "wow_layer": "object", "art": "installed"},
+    {"id": "luxembourg-gardens", "slug": "luxembourg-gardens", "title": {"en": "Luxembourg Gardens", "es": "Jardin de Luxemburgo"}, "wow_layer": "object", "art": "installed"},
+    {"id": "map-sign", "slug": "map-sign", "title": {"en": "map", "es": "mapa"}, "wow_layer": "object", "art": "installed"},
+    {"id": "ticket", "slug": "ticket", "title": {"en": "ticket", "es": "entrada"}, "wow_layer": "object", "art": "installed"},
+    {"id": "water-bottle", "slug": "water-bottle", "title": {"en": "water", "es": "agua"}, "wow_layer": "object", "art": "installed"},
+    {"id": "snack", "slug": "snack", "title": {"en": "snack", "es": "snack"}, "wow_layer": "object", "art": "installed"}
+  ],
+  "actions": [
+    {"id": "arrive", "slug": "arrive", "title": {"en": "arrive", "es": "llegar"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-eiffel-tower", "slug": "look-eiffel-tower", "title": {"en": "look at Eiffel Tower", "es": "mirar Torre Eiffel"}, "wow_layer": "way", "art": "installed"},
+    {"id": "walk-seine", "slug": "walk-seine", "title": {"en": "walk by the Seine", "es": "andar junto al Sena"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-louvre", "slug": "look-louvre", "title": {"en": "look at the Louvre", "es": "mirar el Louvre"}, "wow_layer": "way", "art": "installed"},
+    {"id": "snack-rest", "slug": "snack-rest", "title": {"en": "snack / rest", "es": "snack / descanso"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-notre-dame", "slug": "look-notre-dame", "title": {"en": "look at Notre-Dame", "es": "mirar Notre-Dame"}, "wow_layer": "way", "art": "installed"},
+    {"id": "walk-luxembourg", "slug": "walk-luxembourg", "title": {"en": "walk in Luxembourg Gardens", "es": "andar en el Jardin de Luxemburgo"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-luxembourg", "slug": "look-luxembourg", "title": {"en": "look at Luxembourg Gardens", "es": "mirar el Jardin de Luxemburgo"}, "wow_layer": "way", "art": "installed"},
+    {"id": "finish-day", "slug": "finish-day", "title": {"en": "finish the day", "es": "terminar el dia"}, "wow_layer": "way", "art": "installed"}
+  ],
+  "counts": {"items": 9, "actions": 9, "cards": 19},
+  "city_walks": ["walk-seine", "walk-luxembourg"],
+  "spec_status": "spec-ready"
+}

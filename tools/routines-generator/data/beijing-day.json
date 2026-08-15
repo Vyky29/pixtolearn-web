@@ -1,0 +1,233 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "beijing-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "beijing",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "language_focus": "zh",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Summer Palace lake, Jingshan Park."
+  },
+  "label": {
+    "en": "Beijing day",
+    "es": "Dia en Pekin"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "beijing day",
+      "es": "dia en pekin"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "forbidden-city",
+      "slug": "forbidden-city",
+      "title": {
+        "en": "Forbidden City",
+        "es": "Ciudad Prohibida"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "temple-of-heaven",
+      "slug": "temple-of-heaven",
+      "title": {
+        "en": "Temple of Heaven",
+        "es": "Templo del Cielo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "great-wall",
+      "slug": "great-wall",
+      "title": {
+        "en": "Great Wall",
+        "es": "Gran Muralla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "summer-palace",
+      "slug": "summer-palace",
+      "title": {
+        "en": "Summer Palace",
+        "es": "Palacio de Verano"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "jingshan-park",
+      "slug": "jingshan-park",
+      "title": {
+        "en": "Jingshan Park",
+        "es": "Parque Jingshan"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-forbidden-city",
+      "slug": "look-forbidden-city",
+      "title": {
+        "en": "look at the Forbidden City",
+        "es": "mirar la Ciudad Prohibida"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-summer-palace",
+      "slug": "walk-summer-palace",
+      "title": {
+        "en": "walk by the Summer Palace lake",
+        "es": "andar junto al lago del Palacio de Verano"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-temple-of-heaven",
+      "slug": "look-temple-of-heaven",
+      "title": {
+        "en": "look at the Temple of Heaven",
+        "es": "mirar el Templo del Cielo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-great-wall",
+      "slug": "look-great-wall",
+      "title": {
+        "en": "look at the Great Wall",
+        "es": "mirar la Gran Muralla"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-jingshan-park",
+      "slug": "walk-jingshan-park",
+      "title": {
+        "en": "walk in Jingshan Park",
+        "es": "andar en el Parque Jingshan"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-jingshan-park",
+      "slug": "look-jingshan-park",
+      "title": {
+        "en": "look at Jingshan Park",
+        "es": "mirar el Parque Jingshan"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-summer-palace",
+    "walk-jingshan-park"
+  ],
+  "spec_status": "spec-ready"
+}

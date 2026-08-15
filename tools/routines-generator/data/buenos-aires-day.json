@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "buenos-aires-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "buenos-aires",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Rio de la Plata, Palermo."
+  },
+  "label": {
+    "en": "Buenos Aires day",
+    "es": "Dia en Buenos Aires"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "buenos aires day",
+      "es": "dia en buenos aires"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "obelisco",
+      "slug": "obelisco",
+      "title": {
+        "en": "Obelisco",
+        "es": "Obelisco"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "plaza-de-mayo",
+      "slug": "plaza-de-mayo",
+      "title": {
+        "en": "Plaza de Mayo",
+        "es": "Plaza de Mayo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "caminito",
+      "slug": "caminito",
+      "title": {
+        "en": "Caminito",
+        "es": "Caminito"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "rio-de-la-plata",
+      "slug": "rio-de-la-plata",
+      "title": {
+        "en": "Rio de la Plata",
+        "es": "Rio de la Plata"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "palermo-park",
+      "slug": "palermo-park",
+      "title": {
+        "en": "Palermo park",
+        "es": "Parque de Palermo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-obelisco",
+      "slug": "look-obelisco",
+      "title": {
+        "en": "look at the Obelisco",
+        "es": "mirar el Obelisco"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-rio-de-la-plata",
+      "slug": "walk-rio-de-la-plata",
+      "title": {
+        "en": "walk by the Rio de la Plata",
+        "es": "andar junto al Rio de la Plata"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-plaza-de-mayo",
+      "slug": "look-plaza-de-mayo",
+      "title": {
+        "en": "look at Plaza de Mayo",
+        "es": "mirar Plaza de Mayo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-caminito",
+      "slug": "look-caminito",
+      "title": {
+        "en": "look at Caminito",
+        "es": "mirar Caminito"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-palermo",
+      "slug": "walk-palermo",
+      "title": {
+        "en": "walk in Palermo park",
+        "es": "andar en Palermo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-palermo",
+      "slug": "look-palermo",
+      "title": {
+        "en": "look at Palermo park",
+        "es": "mirar el parque de Palermo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-rio-de-la-plata",
+    "walk-palermo"
+  ],
+  "spec_status": "spec-ready"
+}

@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "tokyo-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "tokyo",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Sumida, Ueno Park."
+  },
+  "label": {
+    "en": "Tokyo day",
+    "es": "Dia en Tokio"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "tokyo day",
+      "es": "dia en tokio"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "senso-ji",
+      "slug": "senso-ji",
+      "title": {
+        "en": "Senso-ji",
+        "es": "Senso-ji"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "shibuya-crossing",
+      "slug": "shibuya-crossing",
+      "title": {
+        "en": "Shibuya Crossing",
+        "es": "Cruce de Shibuya"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "meiji-shrine",
+      "slug": "meiji-shrine",
+      "title": {
+        "en": "Meiji Shrine",
+        "es": "Santuario Meiji"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "sumida-river",
+      "slug": "sumida-river",
+      "title": {
+        "en": "Sumida River",
+        "es": "rio Sumida"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ueno-park",
+      "slug": "ueno-park",
+      "title": {
+        "en": "Ueno Park",
+        "es": "Parque Ueno"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-senso-ji",
+      "slug": "look-senso-ji",
+      "title": {
+        "en": "look at Senso-ji",
+        "es": "mirar Senso-ji"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-sumida",
+      "slug": "walk-sumida",
+      "title": {
+        "en": "walk by the Sumida",
+        "es": "andar junto al Sumida"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-shibuya-crossing",
+      "slug": "look-shibuya-crossing",
+      "title": {
+        "en": "look at Shibuya Crossing",
+        "es": "mirar el Cruce de Shibuya"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-meiji-shrine",
+      "slug": "look-meiji-shrine",
+      "title": {
+        "en": "look at Meiji Shrine",
+        "es": "mirar el Santuario Meiji"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-ueno-park",
+      "slug": "walk-ueno-park",
+      "title": {
+        "en": "walk in Ueno Park",
+        "es": "andar en el Parque Ueno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-ueno-park",
+      "slug": "look-ueno-park",
+      "title": {
+        "en": "look at Ueno Park",
+        "es": "mirar el Parque Ueno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-sumida",
+    "walk-ueno-park"
+  ],
+  "spec_status": "spec-ready"
+}

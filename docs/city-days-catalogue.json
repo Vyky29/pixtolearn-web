@@ -1,14 +1,14 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "product": "city-days",
-  "status": "locked-catalogue",
-  "locked_at": "2026-08-14",
+  "status": "locked-catalogue-v2",
+  "locked_at": "2026-08-15",
   "product_home": "routines",
   "bundle_id": "bundle-city-days",
   "family_technical": "travel",
-  "note": "Visit packs only. Transport stays in travel. Chain with Create my routine. Schedules may reuse covers as tiles but is not City home.",
-  "visit_grain": {
-    "id": "city-visit-v1",
+  "note": "One day pack per city (multi-stop). No per-attraction packs. No meet-adult. Transport stays in travel. Chain with Create my routine.",
+  "city_day_grain": {
+    "id": "city-day-v2",
     "steps": [
       {
         "id": "arrive",
@@ -16,32 +16,47 @@
         "es": "llegar"
       },
       {
-        "id": "enter-look",
-        "en": "enter / look",
-        "es": "entrar / mirar"
+        "id": "look-landmark-a",
+        "en": "look at landmark",
+        "es": "mirar monumento"
       },
       {
-        "id": "photo-optional",
-        "en": "photo optional",
-        "es": "foto opcional"
+        "id": "walk-between",
+        "en": "walk to next",
+        "es": "andar al siguiente"
       },
       {
-        "id": "exit",
-        "en": "exit",
-        "es": "salir"
+        "id": "look-landmark-b",
+        "en": "look at landmark",
+        "es": "mirar monumento"
       },
       {
-        "id": "next-meet-adult",
-        "en": "next / meet adult",
-        "es": "siguiente / adulto"
+        "id": "snack-rest",
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      {
+        "id": "look-landmark-c",
+        "en": "look at landmark",
+        "es": "mirar monumento"
+      },
+      {
+        "id": "walk-city",
+        "en": "walk / look at city",
+        "es": "andar / mirar ciudad"
+      },
+      {
+        "id": "finish-day",
+        "en": "finish the day",
+        "es": "terminar el dia"
       }
     ],
+    "note": "One multi-stop day pack per city. Walks are city-specific (not generic). No meet-adult.",
     "optional_story_rules": [
       "quiet",
       "no-touch",
       "queue",
-      "ticket",
-      "remove-shoes"
+      "ticket"
     ]
   },
   "membership": "premium",
@@ -54,13 +69,29 @@
       },
       "chip_symbol": "city-chip-london",
       "pack_ids": [
-        "visit-london-big-ben-parliament",
-        "visit-london-london-eye",
-        "visit-london-tower-bridge",
-        "visit-london-british-museum",
-        "visit-london-buckingham-palace",
-        "visit-london-hyde-park",
-        "visit-london-natural-history-museum"
+        "london-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Big Ben & Parliament",
+          "es": "Big Ben y Parlamento"
+        },
+        {
+          "en": "London Eye",
+          "es": "London Eye"
+        },
+        {
+          "en": "Tower Bridge",
+          "es": "Tower Bridge"
+        },
+        {
+          "en": "River Thames",
+          "es": "rio Thames"
+        },
+        {
+          "en": "Hyde Park",
+          "es": "Hyde Park"
+        }
       ]
     },
     {
@@ -71,13 +102,29 @@
       },
       "chip_symbol": "city-chip-paris",
       "pack_ids": [
-        "visit-paris-eiffel-tower",
-        "visit-paris-louvre-museum",
-        "visit-paris-notre-dame",
-        "visit-paris-arc-de-triomphe",
-        "visit-paris-seine-river-walk",
-        "visit-paris-luxembourg-gardens",
-        "visit-paris-sacre-coeur"
+        "paris-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Eiffel Tower",
+          "es": "Torre Eiffel"
+        },
+        {
+          "en": "Louvre Museum",
+          "es": "Museo del Louvre"
+        },
+        {
+          "en": "Notre-Dame",
+          "es": "Notre-Dame"
+        },
+        {
+          "en": "River Seine",
+          "es": "rio Sena"
+        },
+        {
+          "en": "Luxembourg Gardens",
+          "es": "Jardin de Luxemburgo"
+        }
       ]
     },
     {
@@ -88,13 +135,29 @@
       },
       "chip_symbol": "city-chip-new-york",
       "pack_ids": [
-        "visit-new-york-statue-of-liberty-area",
-        "visit-new-york-central-park",
-        "visit-new-york-times-square",
-        "visit-new-york-empire-state-building",
-        "visit-new-york-brooklyn-bridge-walk",
-        "visit-new-york-metropolitan-museum",
-        "visit-new-york-natural-history-museum-nyc"
+        "new-york-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Statue of Liberty",
+          "es": "Estatua de la Libertad"
+        },
+        {
+          "en": "Times Square",
+          "es": "Times Square"
+        },
+        {
+          "en": "Brooklyn Bridge",
+          "es": "Puente de Brooklyn"
+        },
+        {
+          "en": "New York harbor",
+          "es": "puerto de Nueva York"
+        },
+        {
+          "en": "Central Park",
+          "es": "Central Park"
+        }
       ]
     },
     {
@@ -105,13 +168,29 @@
       },
       "chip_symbol": "city-chip-tokyo",
       "pack_ids": [
-        "visit-tokyo-senso-ji-temple",
-        "visit-tokyo-shibuya-crossing",
-        "visit-tokyo-meiji-shrine",
-        "visit-tokyo-tokyo-skytree",
-        "visit-tokyo-ueno-park",
-        "visit-tokyo-teamlab-borderless",
-        "visit-tokyo-imperial-palace-gardens"
+        "tokyo-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Senso-ji",
+          "es": "Senso-ji"
+        },
+        {
+          "en": "Shibuya Crossing",
+          "es": "Cruce de Shibuya"
+        },
+        {
+          "en": "Meiji Shrine",
+          "es": "Santuario Meiji"
+        },
+        {
+          "en": "Sumida River",
+          "es": "rio Sumida"
+        },
+        {
+          "en": "Ueno Park",
+          "es": "Parque Ueno"
+        }
       ]
     },
     {
@@ -122,13 +201,29 @@
       },
       "chip_symbol": "city-chip-rome",
       "pack_ids": [
-        "visit-rome-colosseum",
-        "visit-rome-roman-forum",
-        "visit-rome-trevi-fountain",
-        "visit-rome-pantheon",
-        "visit-rome-vatican-museums",
-        "visit-rome-st-peters-basilica",
-        "visit-rome-villa-borghese-gardens"
+        "rome-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Colosseum",
+          "es": "Coliseo"
+        },
+        {
+          "en": "Roman Forum",
+          "es": "Foro Romano"
+        },
+        {
+          "en": "Trevi Fountain",
+          "es": "Fontana di Trevi"
+        },
+        {
+          "en": "River Tiber",
+          "es": "rio Tiber"
+        },
+        {
+          "en": "Piazza Navona",
+          "es": "Piazza Navona"
+        }
       ]
     },
     {
@@ -139,13 +234,29 @@
       },
       "chip_symbol": "city-chip-barcelona",
       "pack_ids": [
-        "visit-barcelona-sagrada-familia",
-        "visit-barcelona-park-guell",
-        "visit-barcelona-la-rambla-walk",
-        "visit-barcelona-gothic-quarter",
-        "visit-barcelona-casa-batllo",
-        "visit-barcelona-barceloneta-beach",
-        "visit-barcelona-camp-nou-exterior"
+        "barcelona-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Sagrada Familia",
+          "es": "Sagrada Familia"
+        },
+        {
+          "en": "Park Guell",
+          "es": "Park Guell"
+        },
+        {
+          "en": "La Rambla",
+          "es": "La Rambla"
+        },
+        {
+          "en": "Barcelona beach",
+          "es": "playa de Barcelona"
+        },
+        {
+          "en": "Ciutadella Park",
+          "es": "Parc de la Ciutadella"
+        }
       ]
     },
     {
@@ -156,13 +267,29 @@
       },
       "chip_symbol": "city-chip-dubai",
       "pack_ids": [
-        "visit-dubai-burj-khalifa",
-        "visit-dubai-dubai-mall",
-        "visit-dubai-dubai-fountain",
-        "visit-dubai-palm-jumeirah-view",
-        "visit-dubai-dubai-frame",
-        "visit-dubai-old-dubai-souk",
-        "visit-dubai-desert-edge-viewpoint"
+        "dubai-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Burj Khalifa",
+          "es": "Burj Khalifa"
+        },
+        {
+          "en": "Dubai Mall",
+          "es": "Dubai Mall"
+        },
+        {
+          "en": "Dubai Fountain",
+          "es": "Fuente de Dubai"
+        },
+        {
+          "en": "Dubai Creek",
+          "es": "Dubai Creek"
+        },
+        {
+          "en": "Dubai Marina",
+          "es": "Dubai Marina"
+        }
       ]
     },
     {
@@ -173,13 +300,29 @@
       },
       "chip_symbol": "city-chip-singapore",
       "pack_ids": [
-        "visit-singapore-gardens-by-the-bay",
-        "visit-singapore-marina-bay-sands-view",
-        "visit-singapore-merlion-park",
-        "visit-singapore-singapore-zoo",
-        "visit-singapore-sentosa",
-        "visit-singapore-chinatown-singapore",
-        "visit-singapore-botanic-gardens"
+        "singapore-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Gardens by the Bay",
+          "es": "Gardens by the Bay"
+        },
+        {
+          "en": "Marina Bay Sands",
+          "es": "Marina Bay Sands"
+        },
+        {
+          "en": "Merlion",
+          "es": "Merlion"
+        },
+        {
+          "en": "Singapore River",
+          "es": "rio de Singapur"
+        },
+        {
+          "en": "Botanic Gardens",
+          "es": "Jardines Botanicos"
+        }
       ]
     },
     {
@@ -190,13 +333,29 @@
       },
       "chip_symbol": "city-chip-sydney",
       "pack_ids": [
-        "visit-sydney-sydney-opera-house",
-        "visit-sydney-harbour-bridge-walk",
-        "visit-sydney-circular-quay",
-        "visit-sydney-bondi-beach",
-        "visit-sydney-taronga-zoo",
-        "visit-sydney-royal-botanic-garden",
-        "visit-sydney-darling-harbour"
+        "sydney-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Opera House",
+          "es": "Opera House"
+        },
+        {
+          "en": "Harbour Bridge",
+          "es": "Harbour Bridge"
+        },
+        {
+          "en": "Circular Quay",
+          "es": "Circular Quay"
+        },
+        {
+          "en": "Sydney Harbour",
+          "es": "puerto de Sidney"
+        },
+        {
+          "en": "Botanic Garden",
+          "es": "Jardin Botanico"
+        }
       ]
     },
     {
@@ -207,13 +366,29 @@
       },
       "chip_symbol": "city-chip-istanbul",
       "pack_ids": [
-        "visit-istanbul-hagia-sophia",
-        "visit-istanbul-blue-mosque",
-        "visit-istanbul-grand-bazaar",
-        "visit-istanbul-topkapi-palace",
-        "visit-istanbul-bosphorus-viewpoint",
-        "visit-istanbul-spice-bazaar",
-        "visit-istanbul-galata-tower-area"
+        "istanbul-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Hagia Sophia",
+          "es": "Santa Sofia"
+        },
+        {
+          "en": "Blue Mosque",
+          "es": "Mezquita Azul"
+        },
+        {
+          "en": "Grand Bazaar",
+          "es": "Gran Bazar"
+        },
+        {
+          "en": "Bosphorus",
+          "es": "Bosforo"
+        },
+        {
+          "en": "Gulhane Park",
+          "es": "Parque Gulhane"
+        }
       ]
     },
     {
@@ -224,13 +399,29 @@
       },
       "chip_symbol": "city-chip-buenos-aires",
       "pack_ids": [
-        "visit-buenos-aires-obelisco",
-        "visit-buenos-aires-plaza-de-mayo",
-        "visit-buenos-aires-caminito-la-boca",
-        "visit-buenos-aires-teatro-colon-exterior",
-        "visit-buenos-aires-recoleta-cemetery",
-        "visit-buenos-aires-palermo-parks",
-        "visit-buenos-aires-puerto-madero-walk"
+        "buenos-aires-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Obelisco",
+          "es": "Obelisco"
+        },
+        {
+          "en": "Plaza de Mayo",
+          "es": "Plaza de Mayo"
+        },
+        {
+          "en": "Caminito",
+          "es": "Caminito"
+        },
+        {
+          "en": "Rio de la Plata",
+          "es": "Rio de la Plata"
+        },
+        {
+          "en": "Palermo park",
+          "es": "Parque de Palermo"
+        }
       ]
     },
     {
@@ -241,6 +432,762 @@
       },
       "chip_symbol": "city-chip-rio-de-janeiro",
       "pack_ids": [
+        "rio-de-janeiro-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Christ the Redeemer",
+          "es": "Cristo Redentor"
+        },
+        {
+          "en": "Sugarloaf",
+          "es": "Pan de Azucar"
+        },
+        {
+          "en": "Copacabana",
+          "es": "Copacabana"
+        },
+        {
+          "en": "Guanabara Bay",
+          "es": "Bahia de Guanabara"
+        },
+        {
+          "en": "Parque Lage",
+          "es": "Parque Lage"
+        }
+      ]
+    },
+    {
+      "id": "beijing",
+      "title": {
+        "en": "Beijing",
+        "es": "Pekin"
+      },
+      "chip_symbol": "city-chip-beijing",
+      "pack_ids": [
+        "beijing-day"
+      ],
+      "day_landmarks": [
+        {
+          "en": "Forbidden City",
+          "es": "Ciudad Prohibida"
+        },
+        {
+          "en": "Temple of Heaven",
+          "es": "Templo del Cielo"
+        },
+        {
+          "en": "Great Wall",
+          "es": "Gran Muralla"
+        },
+        {
+          "en": "Summer Palace",
+          "es": "Palacio de Verano"
+        },
+        {
+          "en": "Jingshan Park",
+          "es": "Parque Jingshan"
+        }
+      ],
+      "language_focus": "zh"
+    }
+  ],
+  "packs": [
+    {
+      "id": "london-day",
+      "city_id": "london",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "London day",
+        "es": "Dia en Londres"
+      },
+      "landmarks": [
+        {
+          "en": "Big Ben & Parliament",
+          "es": "Big Ben y Parlamento"
+        },
+        {
+          "en": "London Eye",
+          "es": "London Eye"
+        },
+        {
+          "en": "Tower Bridge",
+          "es": "Tower Bridge"
+        },
+        {
+          "en": "River Thames",
+          "es": "rio Thames"
+        },
+        {
+          "en": "Hyde Park",
+          "es": "Hyde Park"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-london-big-ben-parliament",
+        "visit-london-london-eye",
+        "visit-london-tower-bridge",
+        "visit-london-british-museum",
+        "visit-london-buckingham-palace",
+        "visit-london-hyde-park",
+        "visit-london-natural-history-museum"
+      ],
+      "city_walks": [
+        "walk-thames",
+        "walk-hyde-park"
+      ]
+    },
+    {
+      "id": "paris-day",
+      "city_id": "paris",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Paris day",
+        "es": "Dia en Paris"
+      },
+      "landmarks": [
+        {
+          "en": "Eiffel Tower",
+          "es": "Torre Eiffel"
+        },
+        {
+          "en": "Louvre Museum",
+          "es": "Museo del Louvre"
+        },
+        {
+          "en": "Notre-Dame",
+          "es": "Notre-Dame"
+        },
+        {
+          "en": "River Seine",
+          "es": "rio Sena"
+        },
+        {
+          "en": "Luxembourg Gardens",
+          "es": "Jardin de Luxemburgo"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-paris-eiffel-tower",
+        "visit-paris-louvre-museum",
+        "visit-paris-notre-dame",
+        "visit-paris-arc-de-triomphe",
+        "visit-paris-seine-river-walk",
+        "visit-paris-luxembourg-gardens",
+        "visit-paris-sacre-coeur"
+      ],
+      "city_walks": [
+        "walk-seine",
+        "walk-luxembourg"
+      ]
+    },
+    {
+      "id": "new-york-day",
+      "city_id": "new-york",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "New York day",
+        "es": "Dia en Nueva York"
+      },
+      "landmarks": [
+        {
+          "en": "Statue of Liberty",
+          "es": "Estatua de la Libertad"
+        },
+        {
+          "en": "Times Square",
+          "es": "Times Square"
+        },
+        {
+          "en": "Brooklyn Bridge",
+          "es": "Puente de Brooklyn"
+        },
+        {
+          "en": "New York harbor",
+          "es": "puerto de Nueva York"
+        },
+        {
+          "en": "Central Park",
+          "es": "Central Park"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-new-york-statue-of-liberty-area",
+        "visit-new-york-central-park",
+        "visit-new-york-times-square",
+        "visit-new-york-empire-state-building",
+        "visit-new-york-brooklyn-bridge-walk",
+        "visit-new-york-metropolitan-museum",
+        "visit-new-york-natural-history-museum-nyc"
+      ],
+      "city_walks": [
+        "walk-harbor",
+        "walk-central-park"
+      ]
+    },
+    {
+      "id": "tokyo-day",
+      "city_id": "tokyo",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Tokyo day",
+        "es": "Dia en Tokio"
+      },
+      "landmarks": [
+        {
+          "en": "Senso-ji",
+          "es": "Senso-ji"
+        },
+        {
+          "en": "Shibuya Crossing",
+          "es": "Cruce de Shibuya"
+        },
+        {
+          "en": "Meiji Shrine",
+          "es": "Santuario Meiji"
+        },
+        {
+          "en": "Sumida River",
+          "es": "rio Sumida"
+        },
+        {
+          "en": "Ueno Park",
+          "es": "Parque Ueno"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-tokyo-senso-ji-temple",
+        "visit-tokyo-shibuya-crossing",
+        "visit-tokyo-meiji-shrine",
+        "visit-tokyo-tokyo-skytree",
+        "visit-tokyo-ueno-park",
+        "visit-tokyo-teamlab-borderless",
+        "visit-tokyo-imperial-palace-gardens"
+      ],
+      "city_walks": [
+        "walk-sumida",
+        "walk-ueno-park"
+      ]
+    },
+    {
+      "id": "rome-day",
+      "city_id": "rome",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Rome day",
+        "es": "Dia en Roma"
+      },
+      "landmarks": [
+        {
+          "en": "Colosseum",
+          "es": "Coliseo"
+        },
+        {
+          "en": "Roman Forum",
+          "es": "Foro Romano"
+        },
+        {
+          "en": "Trevi Fountain",
+          "es": "Fontana di Trevi"
+        },
+        {
+          "en": "River Tiber",
+          "es": "rio Tiber"
+        },
+        {
+          "en": "Piazza Navona",
+          "es": "Piazza Navona"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-rome-colosseum",
+        "visit-rome-roman-forum",
+        "visit-rome-trevi-fountain",
+        "visit-rome-pantheon",
+        "visit-rome-vatican-museums",
+        "visit-rome-st-peters-basilica",
+        "visit-rome-villa-borghese-gardens"
+      ],
+      "city_walks": [
+        "walk-tiber",
+        "walk-piazza-navona"
+      ]
+    },
+    {
+      "id": "barcelona-day",
+      "city_id": "barcelona",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Barcelona day",
+        "es": "Dia en Barcelona"
+      },
+      "landmarks": [
+        {
+          "en": "Sagrada Familia",
+          "es": "Sagrada Familia"
+        },
+        {
+          "en": "Park Guell",
+          "es": "Park Guell"
+        },
+        {
+          "en": "La Rambla",
+          "es": "La Rambla"
+        },
+        {
+          "en": "Barcelona beach",
+          "es": "playa de Barcelona"
+        },
+        {
+          "en": "Ciutadella Park",
+          "es": "Parc de la Ciutadella"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-barcelona-sagrada-familia",
+        "visit-barcelona-park-guell",
+        "visit-barcelona-la-rambla-walk",
+        "visit-barcelona-gothic-quarter",
+        "visit-barcelona-casa-batllo",
+        "visit-barcelona-barceloneta-beach",
+        "visit-barcelona-camp-nou-exterior"
+      ],
+      "city_walks": [
+        "walk-la-rambla",
+        "walk-ciutadella"
+      ]
+    },
+    {
+      "id": "dubai-day",
+      "city_id": "dubai",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Dubai day",
+        "es": "Dia en Dubai"
+      },
+      "landmarks": [
+        {
+          "en": "Burj Khalifa",
+          "es": "Burj Khalifa"
+        },
+        {
+          "en": "Dubai Mall",
+          "es": "Dubai Mall"
+        },
+        {
+          "en": "Dubai Fountain",
+          "es": "Fuente de Dubai"
+        },
+        {
+          "en": "Dubai Creek",
+          "es": "Dubai Creek"
+        },
+        {
+          "en": "Dubai Marina",
+          "es": "Dubai Marina"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-dubai-burj-khalifa",
+        "visit-dubai-dubai-mall",
+        "visit-dubai-dubai-fountain",
+        "visit-dubai-palm-jumeirah-view",
+        "visit-dubai-dubai-frame",
+        "visit-dubai-old-dubai-souk",
+        "visit-dubai-desert-edge-viewpoint"
+      ],
+      "city_walks": [
+        "walk-dubai-creek",
+        "walk-dubai-marina"
+      ]
+    },
+    {
+      "id": "singapore-day",
+      "city_id": "singapore",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Singapore day",
+        "es": "Dia en Singapur"
+      },
+      "landmarks": [
+        {
+          "en": "Gardens by the Bay",
+          "es": "Gardens by the Bay"
+        },
+        {
+          "en": "Marina Bay Sands",
+          "es": "Marina Bay Sands"
+        },
+        {
+          "en": "Merlion",
+          "es": "Merlion"
+        },
+        {
+          "en": "Singapore River",
+          "es": "rio de Singapur"
+        },
+        {
+          "en": "Botanic Gardens",
+          "es": "Jardines Botanicos"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-singapore-gardens-by-the-bay",
+        "visit-singapore-marina-bay-sands-view",
+        "visit-singapore-merlion-park",
+        "visit-singapore-singapore-zoo",
+        "visit-singapore-sentosa",
+        "visit-singapore-chinatown-singapore",
+        "visit-singapore-botanic-gardens"
+      ],
+      "city_walks": [
+        "walk-singapore-river",
+        "walk-botanic-gardens"
+      ]
+    },
+    {
+      "id": "sydney-day",
+      "city_id": "sydney",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Sydney day",
+        "es": "Dia en Sidney"
+      },
+      "landmarks": [
+        {
+          "en": "Opera House",
+          "es": "Opera House"
+        },
+        {
+          "en": "Harbour Bridge",
+          "es": "Harbour Bridge"
+        },
+        {
+          "en": "Circular Quay",
+          "es": "Circular Quay"
+        },
+        {
+          "en": "Sydney Harbour",
+          "es": "puerto de Sidney"
+        },
+        {
+          "en": "Botanic Garden",
+          "es": "Jardin Botanico"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-sydney-sydney-opera-house",
+        "visit-sydney-harbour-bridge-walk",
+        "visit-sydney-circular-quay",
+        "visit-sydney-bondi-beach",
+        "visit-sydney-taronga-zoo",
+        "visit-sydney-royal-botanic-garden",
+        "visit-sydney-darling-harbour"
+      ],
+      "city_walks": [
+        "walk-harbour",
+        "walk-botanic-garden"
+      ]
+    },
+    {
+      "id": "istanbul-day",
+      "city_id": "istanbul",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Istanbul day",
+        "es": "Dia en Estambul"
+      },
+      "landmarks": [
+        {
+          "en": "Hagia Sophia",
+          "es": "Santa Sofia"
+        },
+        {
+          "en": "Blue Mosque",
+          "es": "Mezquita Azul"
+        },
+        {
+          "en": "Grand Bazaar",
+          "es": "Gran Bazar"
+        },
+        {
+          "en": "Bosphorus",
+          "es": "Bosforo"
+        },
+        {
+          "en": "Gulhane Park",
+          "es": "Parque Gulhane"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-istanbul-hagia-sophia",
+        "visit-istanbul-blue-mosque",
+        "visit-istanbul-grand-bazaar",
+        "visit-istanbul-topkapi-palace",
+        "visit-istanbul-bosphorus-viewpoint",
+        "visit-istanbul-spice-bazaar",
+        "visit-istanbul-galata-tower-area"
+      ],
+      "city_walks": [
+        "walk-bosphorus",
+        "walk-gulhane-park"
+      ]
+    },
+    {
+      "id": "buenos-aires-day",
+      "city_id": "buenos-aires",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Buenos Aires day",
+        "es": "Dia en Buenos Aires"
+      },
+      "landmarks": [
+        {
+          "en": "Obelisco",
+          "es": "Obelisco"
+        },
+        {
+          "en": "Plaza de Mayo",
+          "es": "Plaza de Mayo"
+        },
+        {
+          "en": "Caminito",
+          "es": "Caminito"
+        },
+        {
+          "en": "Rio de la Plata",
+          "es": "Rio de la Plata"
+        },
+        {
+          "en": "Palermo park",
+          "es": "Parque de Palermo"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
+        "visit-buenos-aires-obelisco",
+        "visit-buenos-aires-plaza-de-mayo",
+        "visit-buenos-aires-caminito-la-boca",
+        "visit-buenos-aires-teatro-colon-exterior",
+        "visit-buenos-aires-recoleta-cemetery",
+        "visit-buenos-aires-palermo-parks",
+        "visit-buenos-aires-puerto-madero-walk"
+      ],
+      "city_walks": [
+        "walk-rio-de-la-plata",
+        "walk-palermo"
+      ]
+    },
+    {
+      "id": "rio-de-janeiro-day",
+      "city_id": "rio-de-janeiro",
+      "family": "travel",
+      "bundle": "city-days",
+      "product_home": "routines",
+      "membership": "premium",
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Rio de Janeiro day",
+        "es": "Dia en Rio de Janeiro"
+      },
+      "landmarks": [
+        {
+          "en": "Christ the Redeemer",
+          "es": "Cristo Redentor"
+        },
+        {
+          "en": "Sugarloaf",
+          "es": "Pan de Azucar"
+        },
+        {
+          "en": "Copacabana",
+          "es": "Copacabana"
+        },
+        {
+          "en": "Guanabara Bay",
+          "es": "Bahia de Guanabara"
+        },
+        {
+          "en": "Parque Lage",
+          "es": "Parque Lage"
+        }
+      ],
+      "actions": [
+        "arrive",
+        "look-landmark-a",
+        "walk-between",
+        "look-landmark-b",
+        "snack-rest",
+        "look-landmark-c",
+        "walk-city",
+        "finish-day"
+      ],
+      "replaces_visit_packs": [
         "visit-rio-de-janeiro-christ-the-redeemer",
         "visit-rio-de-janeiro-sugarloaf-mountain",
         "visit-rio-de-janeiro-copacabana-beach",
@@ -248,3710 +1195,61 @@
         "visit-rio-de-janeiro-selaron-steps",
         "visit-rio-de-janeiro-tijuca-forest-viewpoint",
         "visit-rio-de-janeiro-maracana-exterior"
+      ],
+      "city_walks": [
+        "walk-guanabara-bay",
+        "walk-parque-lage"
       ]
-    }
-  ],
-  "packs": [
-    {
-      "id": "visit-london-big-ben-parliament",
-      "slug": "big-ben-parliament",
-      "city_id": "london",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Big Ben & Parliament",
-        "es": "Visitar Big Ben y Parlamento"
-      },
-      "attraction": {
-        "en": "Big Ben & Parliament",
-        "es": "Big Ben y Parlamento"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-london-london-eye",
-      "slug": "london-eye",
-      "city_id": "london",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit London Eye",
-        "es": "Visitar London Eye"
-      },
-      "attraction": {
-        "en": "London Eye",
-        "es": "London Eye"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-london-tower-bridge",
-      "slug": "tower-bridge",
-      "city_id": "london",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Tower Bridge",
-        "es": "Visitar Tower Bridge"
-      },
-      "attraction": {
-        "en": "Tower Bridge",
-        "es": "Tower Bridge"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-london-british-museum",
-      "slug": "british-museum",
-      "city_id": "london",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit British Museum",
-        "es": "Visitar Museo Britanico"
-      },
-      "attraction": {
-        "en": "British Museum",
-        "es": "Museo Britanico"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-london-buckingham-palace",
-      "slug": "buckingham-palace",
-      "city_id": "london",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Buckingham Palace",
-        "es": "Visitar Palacio de Buckingham"
-      },
-      "attraction": {
-        "en": "Buckingham Palace",
-        "es": "Palacio de Buckingham"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-london-hyde-park",
-      "slug": "hyde-park",
-      "city_id": "london",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Hyde Park",
-        "es": "Visitar Hyde Park"
-      },
-      "attraction": {
-        "en": "Hyde Park",
-        "es": "Hyde Park"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-london-natural-history-museum",
-      "slug": "natural-history-museum",
-      "city_id": "london",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Natural History Museum",
-        "es": "Visitar Museo de Historia Natural"
-      },
-      "attraction": {
-        "en": "Natural History Museum",
-        "es": "Museo de Historia Natural"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-paris-eiffel-tower",
-      "slug": "eiffel-tower",
-      "city_id": "paris",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Eiffel Tower",
-        "es": "Visitar Torre Eiffel"
-      },
-      "attraction": {
-        "en": "Eiffel Tower",
-        "es": "Torre Eiffel"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-paris-louvre-museum",
-      "slug": "louvre-museum",
-      "city_id": "paris",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Louvre Museum",
-        "es": "Visitar Museo del Louvre"
-      },
-      "attraction": {
-        "en": "Louvre Museum",
-        "es": "Museo del Louvre"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-paris-notre-dame",
-      "slug": "notre-dame",
-      "city_id": "paris",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Notre-Dame",
-        "es": "Visitar Notre-Dame"
-      },
-      "attraction": {
-        "en": "Notre-Dame",
-        "es": "Notre-Dame"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-paris-arc-de-triomphe",
-      "slug": "arc-de-triomphe",
-      "city_id": "paris",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Arc de Triomphe",
-        "es": "Visitar Arco de Triunfo"
-      },
-      "attraction": {
-        "en": "Arc de Triomphe",
-        "es": "Arco de Triunfo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-paris-seine-river-walk",
-      "slug": "seine-river-walk",
-      "city_id": "paris",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Seine river walk",
-        "es": "Visitar Paseo por el Sena"
-      },
-      "attraction": {
-        "en": "Seine river walk",
-        "es": "Paseo por el Sena"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-paris-luxembourg-gardens",
-      "slug": "luxembourg-gardens",
-      "city_id": "paris",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Luxembourg Gardens",
-        "es": "Visitar Jardin de Luxemburgo"
-      },
-      "attraction": {
-        "en": "Luxembourg Gardens",
-        "es": "Jardin de Luxemburgo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-paris-sacre-coeur",
-      "slug": "sacre-coeur",
-      "city_id": "paris",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Sacre-Coeur",
-        "es": "Visitar Sacre-Coeur"
-      },
-      "attraction": {
-        "en": "Sacre-Coeur",
-        "es": "Sacre-Coeur"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-new-york-statue-of-liberty-area",
-      "slug": "statue-of-liberty-area",
-      "city_id": "new-york",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Statue of Liberty area",
-        "es": "Visitar Zona Estatua de la Libertad"
-      },
-      "attraction": {
-        "en": "Statue of Liberty area",
-        "es": "Zona Estatua de la Libertad"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-new-york-central-park",
-      "slug": "central-park",
-      "city_id": "new-york",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Central Park",
-        "es": "Visitar Central Park"
-      },
-      "attraction": {
-        "en": "Central Park",
-        "es": "Central Park"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-new-york-times-square",
-      "slug": "times-square",
-      "city_id": "new-york",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Times Square",
-        "es": "Visitar Times Square"
-      },
-      "attraction": {
-        "en": "Times Square",
-        "es": "Times Square"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-new-york-empire-state-building",
-      "slug": "empire-state-building",
-      "city_id": "new-york",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Empire State Building",
-        "es": "Visitar Empire State Building"
-      },
-      "attraction": {
-        "en": "Empire State Building",
-        "es": "Empire State Building"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-new-york-brooklyn-bridge-walk",
-      "slug": "brooklyn-bridge-walk",
-      "city_id": "new-york",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Brooklyn Bridge walk",
-        "es": "Visitar Paseo Brooklyn Bridge"
-      },
-      "attraction": {
-        "en": "Brooklyn Bridge walk",
-        "es": "Paseo Brooklyn Bridge"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-new-york-metropolitan-museum",
-      "slug": "metropolitan-museum",
-      "city_id": "new-york",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Metropolitan Museum",
-        "es": "Visitar Museo Metropolitano"
-      },
-      "attraction": {
-        "en": "Metropolitan Museum",
-        "es": "Museo Metropolitano"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-new-york-natural-history-museum-nyc",
-      "slug": "natural-history-museum-nyc",
-      "city_id": "new-york",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Natural History Museum NYC",
-        "es": "Visitar Museo Historia Natural NYC"
-      },
-      "attraction": {
-        "en": "Natural History Museum NYC",
-        "es": "Museo Historia Natural NYC"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-tokyo-senso-ji-temple",
-      "slug": "senso-ji-temple",
-      "city_id": "tokyo",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Senso-ji Temple",
-        "es": "Visitar Templo Senso-ji"
-      },
-      "attraction": {
-        "en": "Senso-ji Temple",
-        "es": "Templo Senso-ji"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-tokyo-shibuya-crossing",
-      "slug": "shibuya-crossing",
-      "city_id": "tokyo",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Shibuya Crossing",
-        "es": "Visitar Cruce de Shibuya"
-      },
-      "attraction": {
-        "en": "Shibuya Crossing",
-        "es": "Cruce de Shibuya"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-tokyo-meiji-shrine",
-      "slug": "meiji-shrine",
-      "city_id": "tokyo",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Meiji Shrine",
-        "es": "Visitar Santuario Meiji"
-      },
-      "attraction": {
-        "en": "Meiji Shrine",
-        "es": "Santuario Meiji"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-tokyo-tokyo-skytree",
-      "slug": "tokyo-skytree",
-      "city_id": "tokyo",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Tokyo Skytree",
-        "es": "Visitar Tokyo Skytree"
-      },
-      "attraction": {
-        "en": "Tokyo Skytree",
-        "es": "Tokyo Skytree"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-tokyo-ueno-park",
-      "slug": "ueno-park",
-      "city_id": "tokyo",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Ueno Park",
-        "es": "Visitar Parque Ueno"
-      },
-      "attraction": {
-        "en": "Ueno Park",
-        "es": "Parque Ueno"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-tokyo-teamlab-borderless",
-      "slug": "teamlab-borderless",
-      "city_id": "tokyo",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit teamLab Borderless",
-        "es": "Visitar teamLab Borderless"
-      },
-      "attraction": {
-        "en": "teamLab Borderless",
-        "es": "teamLab Borderless"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-tokyo-imperial-palace-gardens",
-      "slug": "imperial-palace-gardens",
-      "city_id": "tokyo",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Imperial Palace gardens",
-        "es": "Visitar Jardines Palacio Imperial"
-      },
-      "attraction": {
-        "en": "Imperial Palace gardens",
-        "es": "Jardines Palacio Imperial"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rome-colosseum",
-      "slug": "colosseum",
-      "city_id": "rome",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Colosseum",
-        "es": "Visitar Coliseo"
-      },
-      "attraction": {
-        "en": "Colosseum",
-        "es": "Coliseo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rome-roman-forum",
-      "slug": "roman-forum",
-      "city_id": "rome",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Roman Forum",
-        "es": "Visitar Foro Romano"
-      },
-      "attraction": {
-        "en": "Roman Forum",
-        "es": "Foro Romano"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rome-trevi-fountain",
-      "slug": "trevi-fountain",
-      "city_id": "rome",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Trevi Fountain",
-        "es": "Visitar Fuente de Trevi"
-      },
-      "attraction": {
-        "en": "Trevi Fountain",
-        "es": "Fuente de Trevi"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rome-pantheon",
-      "slug": "pantheon",
-      "city_id": "rome",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Pantheon",
-        "es": "Visitar Panteon"
-      },
-      "attraction": {
-        "en": "Pantheon",
-        "es": "Panteon"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rome-vatican-museums",
-      "slug": "vatican-museums",
-      "city_id": "rome",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Vatican Museums",
-        "es": "Visitar Museos Vaticanos"
-      },
-      "attraction": {
-        "en": "Vatican Museums",
-        "es": "Museos Vaticanos"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rome-st-peters-basilica",
-      "slug": "st-peters-basilica",
-      "city_id": "rome",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit St Peter's Basilica",
-        "es": "Visitar Basilica de San Pedro"
-      },
-      "attraction": {
-        "en": "St Peter's Basilica",
-        "es": "Basilica de San Pedro"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rome-villa-borghese-gardens",
-      "slug": "villa-borghese-gardens",
-      "city_id": "rome",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Villa Borghese gardens",
-        "es": "Visitar Jardines Villa Borghese"
-      },
-      "attraction": {
-        "en": "Villa Borghese gardens",
-        "es": "Jardines Villa Borghese"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-barcelona-sagrada-familia",
-      "slug": "sagrada-familia",
-      "city_id": "barcelona",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Sagrada Familia",
-        "es": "Visitar Sagrada Familia"
-      },
-      "attraction": {
-        "en": "Sagrada Familia",
-        "es": "Sagrada Familia"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-barcelona-park-guell",
-      "slug": "park-guell",
-      "city_id": "barcelona",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Park Guell",
-        "es": "Visitar Park Guell"
-      },
-      "attraction": {
-        "en": "Park Guell",
-        "es": "Park Guell"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-barcelona-la-rambla-walk",
-      "slug": "la-rambla-walk",
-      "city_id": "barcelona",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit La Rambla walk",
-        "es": "Visitar Paseo por La Rambla"
-      },
-      "attraction": {
-        "en": "La Rambla walk",
-        "es": "Paseo por La Rambla"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-barcelona-gothic-quarter",
-      "slug": "gothic-quarter",
-      "city_id": "barcelona",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Gothic Quarter",
-        "es": "Visitar Barrio Gotico"
-      },
-      "attraction": {
-        "en": "Gothic Quarter",
-        "es": "Barrio Gotico"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-barcelona-casa-batllo",
-      "slug": "casa-batllo",
-      "city_id": "barcelona",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Casa Batllo",
-        "es": "Visitar Casa Batllo"
-      },
-      "attraction": {
-        "en": "Casa Batllo",
-        "es": "Casa Batllo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-barcelona-barceloneta-beach",
-      "slug": "barceloneta-beach",
-      "city_id": "barcelona",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Barceloneta beach",
-        "es": "Visitar Playa Barceloneta"
-      },
-      "attraction": {
-        "en": "Barceloneta beach",
-        "es": "Playa Barceloneta"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-barcelona-camp-nou-exterior",
-      "slug": "camp-nou-exterior",
-      "city_id": "barcelona",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Camp Nou exterior",
-        "es": "Visitar Exterior Camp Nou"
-      },
-      "attraction": {
-        "en": "Camp Nou exterior",
-        "es": "Exterior Camp Nou"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-dubai-burj-khalifa",
-      "slug": "burj-khalifa",
-      "city_id": "dubai",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Burj Khalifa",
-        "es": "Visitar Burj Khalifa"
-      },
-      "attraction": {
-        "en": "Burj Khalifa",
-        "es": "Burj Khalifa"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-dubai-dubai-mall",
-      "slug": "dubai-mall",
-      "city_id": "dubai",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Dubai Mall",
-        "es": "Visitar Dubai Mall"
-      },
-      "attraction": {
-        "en": "Dubai Mall",
-        "es": "Dubai Mall"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-dubai-dubai-fountain",
-      "slug": "dubai-fountain",
-      "city_id": "dubai",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Dubai Fountain",
-        "es": "Visitar Fuente de Dubai"
-      },
-      "attraction": {
-        "en": "Dubai Fountain",
-        "es": "Fuente de Dubai"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-dubai-palm-jumeirah-view",
-      "slug": "palm-jumeirah-view",
-      "city_id": "dubai",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Palm Jumeirah view",
-        "es": "Visitar Vista Palm Jumeirah"
-      },
-      "attraction": {
-        "en": "Palm Jumeirah view",
-        "es": "Vista Palm Jumeirah"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-dubai-dubai-frame",
-      "slug": "dubai-frame",
-      "city_id": "dubai",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Dubai Frame",
-        "es": "Visitar Dubai Frame"
-      },
-      "attraction": {
-        "en": "Dubai Frame",
-        "es": "Dubai Frame"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-dubai-old-dubai-souk",
-      "slug": "old-dubai-souk",
-      "city_id": "dubai",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Old Dubai souk",
-        "es": "Visitar Zoco Dubai antiguo"
-      },
-      "attraction": {
-        "en": "Old Dubai souk",
-        "es": "Zoco Dubai antiguo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-dubai-desert-edge-viewpoint",
-      "slug": "desert-edge-viewpoint",
-      "city_id": "dubai",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Desert edge viewpoint",
-        "es": "Visitar Mirador desierto"
-      },
-      "attraction": {
-        "en": "Desert edge viewpoint",
-        "es": "Mirador desierto"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-singapore-gardens-by-the-bay",
-      "slug": "gardens-by-the-bay",
-      "city_id": "singapore",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Gardens by the Bay",
-        "es": "Visitar Gardens by the Bay"
-      },
-      "attraction": {
-        "en": "Gardens by the Bay",
-        "es": "Gardens by the Bay"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-singapore-marina-bay-sands-view",
-      "slug": "marina-bay-sands-view",
-      "city_id": "singapore",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Marina Bay Sands view",
-        "es": "Visitar Vista Marina Bay Sands"
-      },
-      "attraction": {
-        "en": "Marina Bay Sands view",
-        "es": "Vista Marina Bay Sands"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-singapore-merlion-park",
-      "slug": "merlion-park",
-      "city_id": "singapore",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Merlion Park",
-        "es": "Visitar Parque Merlion"
-      },
-      "attraction": {
-        "en": "Merlion Park",
-        "es": "Parque Merlion"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-singapore-singapore-zoo",
-      "slug": "singapore-zoo",
-      "city_id": "singapore",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Singapore Zoo",
-        "es": "Visitar Zoo de Singapur"
-      },
-      "attraction": {
-        "en": "Singapore Zoo",
-        "es": "Zoo de Singapur"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-singapore-sentosa",
-      "slug": "sentosa",
-      "city_id": "singapore",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Sentosa",
-        "es": "Visitar Sentosa"
-      },
-      "attraction": {
-        "en": "Sentosa",
-        "es": "Sentosa"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-singapore-chinatown-singapore",
-      "slug": "chinatown-singapore",
-      "city_id": "singapore",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Chinatown Singapore",
-        "es": "Visitar Chinatown Singapur"
-      },
-      "attraction": {
-        "en": "Chinatown Singapore",
-        "es": "Chinatown Singapur"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-singapore-botanic-gardens",
-      "slug": "botanic-gardens",
-      "city_id": "singapore",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Botanic Gardens",
-        "es": "Visitar Jardines Botanicos"
-      },
-      "attraction": {
-        "en": "Botanic Gardens",
-        "es": "Jardines Botanicos"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-sydney-sydney-opera-house",
-      "slug": "sydney-opera-house",
-      "city_id": "sydney",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Sydney Opera House",
-        "es": "Visitar Opera de Sidney"
-      },
-      "attraction": {
-        "en": "Sydney Opera House",
-        "es": "Opera de Sidney"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-sydney-harbour-bridge-walk",
-      "slug": "harbour-bridge-walk",
-      "city_id": "sydney",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Harbour Bridge walk",
-        "es": "Visitar Paseo Harbour Bridge"
-      },
-      "attraction": {
-        "en": "Harbour Bridge walk",
-        "es": "Paseo Harbour Bridge"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-sydney-circular-quay",
-      "slug": "circular-quay",
-      "city_id": "sydney",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Circular Quay",
-        "es": "Visitar Circular Quay"
-      },
-      "attraction": {
-        "en": "Circular Quay",
-        "es": "Circular Quay"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-sydney-bondi-beach",
-      "slug": "bondi-beach",
-      "city_id": "sydney",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Bondi Beach",
-        "es": "Visitar Playa Bondi"
-      },
-      "attraction": {
-        "en": "Bondi Beach",
-        "es": "Playa Bondi"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-sydney-taronga-zoo",
-      "slug": "taronga-zoo",
-      "city_id": "sydney",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Taronga Zoo",
-        "es": "Visitar Zoo Taronga"
-      },
-      "attraction": {
-        "en": "Taronga Zoo",
-        "es": "Zoo Taronga"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-sydney-royal-botanic-garden",
-      "slug": "royal-botanic-garden",
-      "city_id": "sydney",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Royal Botanic Garden",
-        "es": "Visitar Jardin Botanico Real"
-      },
-      "attraction": {
-        "en": "Royal Botanic Garden",
-        "es": "Jardin Botanico Real"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-sydney-darling-harbour",
-      "slug": "darling-harbour",
-      "city_id": "sydney",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Darling Harbour",
-        "es": "Visitar Darling Harbour"
-      },
-      "attraction": {
-        "en": "Darling Harbour",
-        "es": "Darling Harbour"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-istanbul-hagia-sophia",
-      "slug": "hagia-sophia",
-      "city_id": "istanbul",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Hagia Sophia",
-        "es": "Visitar Santa Sofia"
-      },
-      "attraction": {
-        "en": "Hagia Sophia",
-        "es": "Santa Sofia"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-istanbul-blue-mosque",
-      "slug": "blue-mosque",
-      "city_id": "istanbul",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Blue Mosque",
-        "es": "Visitar Mezquita Azul"
-      },
-      "attraction": {
-        "en": "Blue Mosque",
-        "es": "Mezquita Azul"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-istanbul-grand-bazaar",
-      "slug": "grand-bazaar",
-      "city_id": "istanbul",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Grand Bazaar",
-        "es": "Visitar Gran Bazar"
-      },
-      "attraction": {
-        "en": "Grand Bazaar",
-        "es": "Gran Bazar"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-istanbul-topkapi-palace",
-      "slug": "topkapi-palace",
-      "city_id": "istanbul",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Topkapi Palace",
-        "es": "Visitar Palacio Topkapi"
-      },
-      "attraction": {
-        "en": "Topkapi Palace",
-        "es": "Palacio Topkapi"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-istanbul-bosphorus-viewpoint",
-      "slug": "bosphorus-viewpoint",
-      "city_id": "istanbul",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Bosphorus viewpoint",
-        "es": "Visitar Mirador Bosforo"
-      },
-      "attraction": {
-        "en": "Bosphorus viewpoint",
-        "es": "Mirador Bosforo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
     },
     {
-      "id": "visit-istanbul-spice-bazaar",
-      "slug": "spice-bazaar",
-      "city_id": "istanbul",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Spice Bazaar",
-        "es": "Visitar Bazar de las Especias"
-      },
-      "attraction": {
-        "en": "Spice Bazaar",
-        "es": "Bazar de las Especias"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-istanbul-galata-tower-area",
-      "slug": "galata-tower-area",
-      "city_id": "istanbul",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Galata Tower area",
-        "es": "Visitar Zona Torre Galata"
-      },
-      "attraction": {
-        "en": "Galata Tower area",
-        "es": "Zona Torre Galata"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-buenos-aires-obelisco",
-      "slug": "obelisco",
-      "city_id": "buenos-aires",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Obelisco",
-        "es": "Visitar Obelisco"
-      },
-      "attraction": {
-        "en": "Obelisco",
-        "es": "Obelisco"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-buenos-aires-plaza-de-mayo",
-      "slug": "plaza-de-mayo",
-      "city_id": "buenos-aires",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Plaza de Mayo",
-        "es": "Visitar Plaza de Mayo"
-      },
-      "attraction": {
-        "en": "Plaza de Mayo",
-        "es": "Plaza de Mayo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-buenos-aires-caminito-la-boca",
-      "slug": "caminito-la-boca",
-      "city_id": "buenos-aires",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Caminito La Boca",
-        "es": "Visitar Caminito La Boca"
-      },
-      "attraction": {
-        "en": "Caminito La Boca",
-        "es": "Caminito La Boca"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-buenos-aires-teatro-colon-exterior",
-      "slug": "teatro-colon-exterior",
-      "city_id": "buenos-aires",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Teatro Colon exterior",
-        "es": "Visitar Exterior Teatro Colon"
-      },
-      "attraction": {
-        "en": "Teatro Colon exterior",
-        "es": "Exterior Teatro Colon"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-buenos-aires-recoleta-cemetery",
-      "slug": "recoleta-cemetery",
-      "city_id": "buenos-aires",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Recoleta Cemetery",
-        "es": "Visitar Cementerio de Recoleta"
-      },
-      "attraction": {
-        "en": "Recoleta Cemetery",
-        "es": "Cementerio de Recoleta"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-buenos-aires-palermo-parks",
-      "slug": "palermo-parks",
-      "city_id": "buenos-aires",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Palermo parks",
-        "es": "Visitar Parques de Palermo"
-      },
-      "attraction": {
-        "en": "Palermo parks",
-        "es": "Parques de Palermo"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-buenos-aires-puerto-madero-walk",
-      "slug": "puerto-madero-walk",
-      "city_id": "buenos-aires",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Puerto Madero walk",
-        "es": "Visitar Paseo Puerto Madero"
-      },
-      "attraction": {
-        "en": "Puerto Madero walk",
-        "es": "Paseo Puerto Madero"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rio-de-janeiro-christ-the-redeemer",
-      "slug": "christ-the-redeemer",
-      "city_id": "rio-de-janeiro",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Christ the Redeemer",
-        "es": "Visitar Cristo Redentor"
-      },
-      "attraction": {
-        "en": "Christ the Redeemer",
-        "es": "Cristo Redentor"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rio-de-janeiro-sugarloaf-mountain",
-      "slug": "sugarloaf-mountain",
-      "city_id": "rio-de-janeiro",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Sugarloaf Mountain",
-        "es": "Visitar Pan de Azucar"
-      },
-      "attraction": {
-        "en": "Sugarloaf Mountain",
-        "es": "Pan de Azucar"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rio-de-janeiro-copacabana-beach",
-      "slug": "copacabana-beach",
-      "city_id": "rio-de-janeiro",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Copacabana beach",
-        "es": "Visitar Playa Copacabana"
-      },
-      "attraction": {
-        "en": "Copacabana beach",
-        "es": "Playa Copacabana"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rio-de-janeiro-ipanema-beach",
-      "slug": "ipanema-beach",
-      "city_id": "rio-de-janeiro",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Ipanema beach",
-        "es": "Visitar Playa Ipanema"
-      },
-      "attraction": {
-        "en": "Ipanema beach",
-        "es": "Playa Ipanema"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rio-de-janeiro-selaron-steps",
-      "slug": "selaron-steps",
-      "city_id": "rio-de-janeiro",
-      "status": "planned",
-      "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Selaron Steps",
-        "es": "Visitar Escalera Selaron"
-      },
-      "attraction": {
-        "en": "Selaron Steps",
-        "es": "Escalera Selaron"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rio-de-janeiro-tijuca-forest-viewpoint",
-      "slug": "tijuca-forest-viewpoint",
-      "city_id": "rio-de-janeiro",
-      "status": "planned",
-      "membership": "premium",
+      "id": "beijing-day",
+      "city_id": "beijing",
+      "family": "travel",
+      "bundle": "city-days",
       "product_home": "routines",
-      "title": {
-        "en": "Visit Tijuca Forest viewpoint",
-        "es": "Visitar Mirador Floresta da Tijuca"
-      },
-      "attraction": {
-        "en": "Tijuca Forest viewpoint",
-        "es": "Mirador Floresta da Tijuca"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
-        {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
-        },
-        {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
-        },
-        {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
-        },
-        {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
-        },
-        {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
-        }
-      ]
-    },
-    {
-      "id": "visit-rio-de-janeiro-maracana-exterior",
-      "slug": "maracana-exterior",
-      "city_id": "rio-de-janeiro",
-      "status": "planned",
       "membership": "premium",
-      "product_home": "routines",
-      "title": {
-        "en": "Visit Maracana exterior",
-        "es": "Visitar Exterior Maracana"
+      "status": "ready",
+      "grain": "city-day-v2",
+      "label": {
+        "en": "Beijing day",
+        "es": "Dia en Pekin"
       },
-      "attraction": {
-        "en": "Maracana exterior",
-        "es": "Exterior Maracana"
-      },
-      "grain": "city-visit-v1",
-      "actions": [
+      "landmarks": [
         {
-          "id": "arrive",
-          "en": "arrive",
-          "es": "llegar"
+          "en": "Forbidden City",
+          "es": "Ciudad Prohibida"
         },
         {
-          "id": "enter-look",
-          "en": "enter / look",
-          "es": "entrar / mirar"
+          "en": "Temple of Heaven",
+          "es": "Templo del Cielo"
         },
         {
-          "id": "photo-optional",
-          "en": "photo optional",
-          "es": "foto opcional"
+          "en": "Great Wall",
+          "es": "Gran Muralla"
         },
         {
-          "id": "exit",
-          "en": "exit",
-          "es": "salir"
+          "en": "Summer Palace",
+          "es": "Palacio de Verano"
         },
         {
-          "id": "next-meet-adult",
-          "en": "next / meet adult",
-          "es": "siguiente / adulto"
+          "en": "Jingshan Park",
+          "es": "Parque Jingshan"
         }
-      ]
+      ],
+      "city_walks": [
+        "walk-summer-palace",
+        "walk-jingshan-park"
+      ],
+      "language_focus": "zh"
     }
   ],
   "stats": {
-    "cities": 12,
-    "packs": 84,
-    "steps_per_visit": 5
+    "cities": 13,
+    "packs": 13,
+    "model": "1-pack-per-city"
+  },
+  "retired": {
+    "grain_id": "city-visit-v1",
+    "reason": "Too much art; Meet Adult not wanted; prefer general city day"
   }
 }

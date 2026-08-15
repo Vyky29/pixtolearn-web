@@ -1,0 +1,200 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-p3-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "hot-day",
+  "family": "weather-seasons",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p3-scale",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark ponytail",
+    "clothes": "light summer top, shorts or skirt",
+    "age": "child",
+    "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant."
+  },
+  "label": {
+    "en": "Hot day",
+    "es": "Dia de calor"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "hot day",
+      "es": "dia de calor"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "hat",
+      "slug": "hat",
+      "title": {
+        "en": "hat",
+        "es": "sombrero"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water bottle",
+        "es": "botella de agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "sunscreen",
+      "slug": "sunscreen",
+      "title": {
+        "en": "sunscreen",
+        "es": "protector solar"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "shade-spot",
+      "slug": "shade-spot",
+      "title": {
+        "en": "shade spot",
+        "es": "sombra"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "fan",
+      "slug": "fan",
+      "title": {
+        "en": "fan",
+        "es": "abanico"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "check-hot-day",
+      "slug": "check-hot-day",
+      "title": {
+        "en": "check hot day",
+        "es": "comprobar dia de calor"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "hat-on",
+      "slug": "hat-on",
+      "title": {
+        "en": "hat on",
+        "es": "ponerse el sombrero"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sunscreen-with-adult",
+      "slug": "sunscreen-with-adult",
+      "title": {
+        "en": "sunscreen with adult",
+        "es": "crema con adulto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "water-ready",
+      "slug": "water-ready",
+      "title": {
+        "en": "water ready",
+        "es": "agua lista"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-out",
+      "slug": "go-out",
+      "title": {
+        "en": "go out",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "drink-water",
+      "slug": "drink-water",
+      "title": {
+        "en": "drink water",
+        "es": "beber agua"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "find-shade",
+      "slug": "find-shade",
+      "title": {
+        "en": "find shade",
+        "es": "buscar sombra"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "rest",
+      "slug": "rest",
+      "title": {
+        "en": "rest",
+        "es": "descansar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "drink-again",
+      "slug": "drink-again",
+      "title": {
+        "en": "drink again",
+        "es": "beber otra vez"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "come-inside-cool",
+      "slug": "come-inside-cool",
+      "title": {
+        "en": "come inside cool",
+        "es": "entrar a fresco"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "existing_dir": "hot-day",
+  "art_dir": "hot-day"
+}

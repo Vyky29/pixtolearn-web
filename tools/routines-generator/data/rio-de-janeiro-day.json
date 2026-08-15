@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "rio-de-janeiro-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "rio-de-janeiro",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Guanabara Bay, Parque Lage."
+  },
+  "label": {
+    "en": "Rio de Janeiro day",
+    "es": "Dia en Rio de Janeiro"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "rio day",
+      "es": "dia en rio"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "christ-redeemer",
+      "slug": "christ-redeemer",
+      "title": {
+        "en": "Christ the Redeemer",
+        "es": "Cristo Redentor"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "sugarloaf",
+      "slug": "sugarloaf",
+      "title": {
+        "en": "Sugarloaf",
+        "es": "Pan de Azucar"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "copacabana",
+      "slug": "copacabana",
+      "title": {
+        "en": "Copacabana",
+        "es": "Copacabana"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "guanabara-bay",
+      "slug": "guanabara-bay",
+      "title": {
+        "en": "Guanabara Bay",
+        "es": "Bahia de Guanabara"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "parque-lage",
+      "slug": "parque-lage",
+      "title": {
+        "en": "Parque Lage",
+        "es": "Parque Lage"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-christ-redeemer",
+      "slug": "look-christ-redeemer",
+      "title": {
+        "en": "look at Christ the Redeemer",
+        "es": "mirar el Cristo Redentor"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-guanabara-bay",
+      "slug": "walk-guanabara-bay",
+      "title": {
+        "en": "walk by Guanabara Bay",
+        "es": "andar junto a la Bahia de Guanabara"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-sugarloaf",
+      "slug": "look-sugarloaf",
+      "title": {
+        "en": "look at Sugarloaf",
+        "es": "mirar el Pan de Azucar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-copacabana",
+      "slug": "look-copacabana",
+      "title": {
+        "en": "look at Copacabana",
+        "es": "mirar Copacabana"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-parque-lage",
+      "slug": "walk-parque-lage",
+      "title": {
+        "en": "walk in Parque Lage",
+        "es": "andar en Parque Lage"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-parque-lage",
+      "slug": "look-parque-lage",
+      "title": {
+        "en": "look at Parque Lage",
+        "es": "mirar Parque Lage"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-guanabara-bay",
+    "walk-parque-lage"
+  ],
+  "spec_status": "spec-ready"
+}

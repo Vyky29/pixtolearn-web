@@ -1,0 +1,200 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-p3-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "cold-day",
+  "family": "weather-seasons",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p3-scale",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "light-olive",
+    "hair": "short brown",
+    "clothes": "winter coat, hat, gloves",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Casts provide girl variant."
+  },
+  "label": {
+    "en": "Cold day",
+    "es": "Dia de frio"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "cold day",
+      "es": "dia de frio"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "coat",
+      "slug": "coat",
+      "title": {
+        "en": "coat",
+        "es": "abrigo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "hat",
+      "slug": "hat",
+      "title": {
+        "en": "hat",
+        "es": "gorro"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "gloves",
+      "slug": "gloves",
+      "title": {
+        "en": "gloves",
+        "es": "guantes"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "scarf",
+      "slug": "scarf",
+      "title": {
+        "en": "scarf",
+        "es": "bufanda"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "warm-drink",
+      "slug": "warm-drink",
+      "title": {
+        "en": "warm drink",
+        "es": "bebida caliente"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "check-cold-day",
+      "slug": "check-cold-day",
+      "title": {
+        "en": "check cold day",
+        "es": "comprobar dia de frio"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "coat-on",
+      "slug": "coat-on",
+      "title": {
+        "en": "coat on",
+        "es": "ponerse el abrigo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "hat-on",
+      "slug": "hat-on",
+      "title": {
+        "en": "hat on",
+        "es": "ponerse el gorro"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "gloves-on",
+      "slug": "gloves-on",
+      "title": {
+        "en": "gloves on",
+        "es": "ponerse los guantes"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "scarf-if-needed",
+      "slug": "scarf-if-needed",
+      "title": {
+        "en": "scarf if needed",
+        "es": "bufanda si hace falta"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-out",
+      "slug": "go-out",
+      "title": {
+        "en": "go out",
+        "es": "salir"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "keep-moving",
+      "slug": "keep-moving",
+      "title": {
+        "en": "keep moving",
+        "es": "seguir andando"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "come-in-warm",
+      "slug": "come-in-warm",
+      "title": {
+        "en": "come in warm",
+        "es": "entrar a calentarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "coat-off",
+      "slug": "coat-off",
+      "title": {
+        "en": "coat off",
+        "es": "quitarse el abrigo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "have-warm-drink",
+      "slug": "have-warm-drink",
+      "title": {
+        "en": "have warm drink",
+        "es": "tomar bebida caliente"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "existing_dir": "cold-day",
+  "art_dir": "cold-day"
+}

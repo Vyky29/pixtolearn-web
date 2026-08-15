@@ -1,0 +1,180 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-p3-spec",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "school-photo-day",
+  "family": "school-college",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "p3-scale",
+  "audience": "child",
+  "character": {
+    "avatar_id": "C2",
+    "band": "child",
+    "gender": "girl",
+    "skin": "medium-dark",
+    "hair": "dark ponytail",
+    "clothes": "school jumper, dark skirt or trousers",
+    "age": "child",
+    "lock": "PRIMARY C2 on cover+actions. Casts provide boy variant."
+  },
+  "label": {
+    "en": "School photo day",
+    "es": "Dia de foto escolar"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "school photo day",
+      "es": "dia de foto escolar"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "camera",
+      "slug": "camera",
+      "title": {
+        "en": "camera",
+        "es": "camara"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "chair",
+      "slug": "chair",
+      "title": {
+        "en": "chair",
+        "es": "silla"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "backdrop",
+      "slug": "backdrop",
+      "title": {
+        "en": "backdrop",
+        "es": "fondo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "smile-or-still-face-card",
+      "slug": "smile-or-still-face-card",
+      "title": {
+        "en": "smile or still face card",
+        "es": "tarjeta sonrisa o cara quieta"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "wait-turn",
+      "slug": "wait-turn",
+      "title": {
+        "en": "wait turn",
+        "es": "esperar turno"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "quiet-voice",
+      "slug": "quiet-voice",
+      "title": {
+        "en": "quiet voice",
+        "es": "voz bajita"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-to-chair",
+      "slug": "walk-to-chair",
+      "title": {
+        "en": "walk to chair",
+        "es": "caminar a la silla"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "sit",
+      "slug": "sit",
+      "title": {
+        "en": "sit",
+        "es": "sentarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-at-camera",
+      "slug": "look-at-camera",
+      "title": {
+        "en": "look at camera",
+        "es": "mirar a la camara"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "still-face-or-smile",
+      "slug": "still-face-or-smile",
+      "title": {
+        "en": "still face or smile",
+        "es": "cara quieta o sonrisa"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "click-done",
+      "slug": "click-done",
+      "title": {
+        "en": "click done",
+        "es": "foto hecha"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "stand-up",
+      "slug": "stand-up",
+      "title": {
+        "en": "stand up",
+        "es": "levantarse"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "go-back-to-class",
+      "slug": "go-back-to-class",
+      "title": {
+        "en": "go back to class",
+        "es": "volver a clase"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "existing_dir": "school-photo-day",
+  "art_dir": "school-photo-day"
+}

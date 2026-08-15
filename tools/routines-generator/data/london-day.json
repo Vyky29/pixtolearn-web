@@ -1,0 +1,246 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [
+      531,
+      648
+    ],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "london-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "london",
+  "status": "ready",
+  "art": "installed",
+  "content_review": "approved-pre-art",
+  "architecture_wave": "future-city-days-v2",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1 on cover+actions. Landmarks are heroes of look steps. Walks are city-specific. Casts provide girl variant."
+  },
+  "label": {
+    "en": "London day",
+    "es": "Dia en Londres"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "london day",
+      "es": "dia en londres"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "big-ben-parliament",
+      "slug": "big-ben-parliament",
+      "title": {
+        "en": "Big Ben",
+        "es": "Big Ben"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "london-eye",
+      "slug": "london-eye",
+      "title": {
+        "en": "London Eye",
+        "es": "London Eye"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "tower-bridge",
+      "slug": "tower-bridge",
+      "title": {
+        "en": "Tower Bridge",
+        "es": "Tower Bridge"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "thames",
+      "slug": "thames",
+      "title": {
+        "en": "River Thames",
+        "es": "rio Thames"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "hyde-park",
+      "slug": "hyde-park",
+      "title": {
+        "en": "Hyde Park",
+        "es": "Hyde Park"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-big-ben",
+      "slug": "look-big-ben",
+      "title": {
+        "en": "look at Big Ben",
+        "es": "mirar Big Ben"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-thames",
+      "slug": "walk-thames",
+      "title": {
+        "en": "walk by the Thames",
+        "es": "andar junto al Thames"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-london-eye",
+      "slug": "look-london-eye",
+      "title": {
+        "en": "look at London Eye",
+        "es": "mirar London Eye"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-tower-bridge",
+      "slug": "look-tower-bridge",
+      "title": {
+        "en": "look at Tower Bridge",
+        "es": "mirar Tower Bridge"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-hyde-park",
+      "slug": "walk-hyde-park",
+      "title": {
+        "en": "walk in Hyde Park",
+        "es": "andar en Hyde Park"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-hyde-park",
+      "slug": "look-hyde-park",
+      "title": {
+        "en": "look at Hyde Park",
+        "es": "mirar Hyde Park"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "replaces": [
+    "visit-london-big-ben-parliament",
+    "visit-london-london-eye",
+    "visit-london-tower-bridge",
+    "visit-london-british-museum",
+    "visit-london-hyde-park"
+  ],
+  "spec_status": "spec-ready"
+}

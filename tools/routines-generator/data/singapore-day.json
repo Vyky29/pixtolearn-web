@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "singapore-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "singapore",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Singapore River, Botanic Gardens."
+  },
+  "label": {
+    "en": "Singapore day",
+    "es": "Dia en Singapur"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "singapore day",
+      "es": "dia en singapur"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "gardens-by-the-bay",
+      "slug": "gardens-by-the-bay",
+      "title": {
+        "en": "Gardens by the Bay",
+        "es": "Gardens by the Bay"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "marina-bay-sands",
+      "slug": "marina-bay-sands",
+      "title": {
+        "en": "Marina Bay Sands",
+        "es": "Marina Bay Sands"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "merlion",
+      "slug": "merlion",
+      "title": {
+        "en": "Merlion",
+        "es": "Merlion"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "singapore-river",
+      "slug": "singapore-river",
+      "title": {
+        "en": "Singapore River",
+        "es": "rio de Singapur"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "botanic-gardens",
+      "slug": "botanic-gardens",
+      "title": {
+        "en": "Botanic Gardens",
+        "es": "Jardines Botanicos"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-gardens-by-the-bay",
+      "slug": "look-gardens-by-the-bay",
+      "title": {
+        "en": "look at Gardens by the Bay",
+        "es": "mirar Gardens by the Bay"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-singapore-river",
+      "slug": "walk-singapore-river",
+      "title": {
+        "en": "walk by Singapore River",
+        "es": "andar junto al rio"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-marina-bay-sands",
+      "slug": "look-marina-bay-sands",
+      "title": {
+        "en": "look at Marina Bay Sands",
+        "es": "mirar Marina Bay Sands"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-merlion",
+      "slug": "look-merlion",
+      "title": {
+        "en": "look at the Merlion",
+        "es": "mirar el Merlion"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-botanic-gardens",
+      "slug": "walk-botanic-gardens",
+      "title": {
+        "en": "walk in Botanic Gardens",
+        "es": "andar en los Jardines Botanicos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-botanic-gardens",
+      "slug": "look-botanic-gardens",
+      "title": {
+        "en": "look at Botanic Gardens",
+        "es": "mirar los Jardines Botanicos"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-singapore-river",
+    "walk-botanic-gardens"
+  ],
+  "spec_status": "spec-ready"
+}

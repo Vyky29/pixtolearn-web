@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "istanbul-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "istanbul",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Bosphorus, Gulhane Park."
+  },
+  "label": {
+    "en": "Istanbul day",
+    "es": "Dia en Estambul"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "istanbul day",
+      "es": "dia en estambul"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "hagia-sophia",
+      "slug": "hagia-sophia",
+      "title": {
+        "en": "Hagia Sophia",
+        "es": "Santa Sofia"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "blue-mosque",
+      "slug": "blue-mosque",
+      "title": {
+        "en": "Blue Mosque",
+        "es": "Mezquita Azul"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "grand-bazaar",
+      "slug": "grand-bazaar",
+      "title": {
+        "en": "Grand Bazaar",
+        "es": "Gran Bazar"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "bosphorus",
+      "slug": "bosphorus",
+      "title": {
+        "en": "Bosphorus",
+        "es": "Bosforo"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "gulhane-park",
+      "slug": "gulhane-park",
+      "title": {
+        "en": "Gulhane Park",
+        "es": "Parque Gulhane"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-hagia-sophia",
+      "slug": "look-hagia-sophia",
+      "title": {
+        "en": "look at Hagia Sophia",
+        "es": "mirar Santa Sofia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-bosphorus",
+      "slug": "walk-bosphorus",
+      "title": {
+        "en": "walk by the Bosphorus",
+        "es": "andar junto al Bosforo"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-blue-mosque",
+      "slug": "look-blue-mosque",
+      "title": {
+        "en": "look at the Blue Mosque",
+        "es": "mirar la Mezquita Azul"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-grand-bazaar",
+      "slug": "look-grand-bazaar",
+      "title": {
+        "en": "look at the Grand Bazaar",
+        "es": "mirar el Gran Bazar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-gulhane-park",
+      "slug": "walk-gulhane-park",
+      "title": {
+        "en": "walk in Gulhane Park",
+        "es": "andar en el Parque Gulhane"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-gulhane-park",
+      "slug": "look-gulhane-park",
+      "title": {
+        "en": "look at Gulhane Park",
+        "es": "mirar el Parque Gulhane"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-bosphorus",
+    "walk-gulhane-park"
+  ],
+  "spec_status": "spec-ready"
+}

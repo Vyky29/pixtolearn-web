@@ -1,0 +1,64 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "format": {
+    "unit": "one step = one single-face card",
+    "structure": "cover + items (objects only) + actions (ordered). Size varies by clinical need.",
+    "art_px": [531, 648],
+    "style": "Objects: single object, white bg, no person. Actions: clear step."
+  },
+  "id": "rome-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "rome",
+  "status": "ready",
+  "art": "installed",
+  "architecture_wave": "future-city-days-v2",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. City-specific walks: Tiber, Piazza Navona."
+  },
+  "label": {"en": "Rome day", "es": "Dia en Roma"},
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {"en": "rome day", "es": "dia en roma"},
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {"id": "colosseum", "slug": "colosseum", "title": {"en": "Colosseum", "es": "Coliseo"}, "wow_layer": "object", "art": "installed"},
+    {"id": "roman-forum", "slug": "roman-forum", "title": {"en": "Roman Forum", "es": "Foro Romano"}, "wow_layer": "object", "art": "installed"},
+    {"id": "trevi-fountain", "slug": "trevi-fountain", "title": {"en": "Trevi Fountain", "es": "Fontana di Trevi"}, "wow_layer": "object", "art": "installed"},
+    {"id": "tiber", "slug": "tiber", "title": {"en": "River Tiber", "es": "rio Tiber"}, "wow_layer": "object", "art": "installed"},
+    {"id": "piazza-navona", "slug": "piazza-navona", "title": {"en": "Piazza Navona", "es": "Piazza Navona"}, "wow_layer": "object", "art": "installed"},
+    {"id": "map-sign", "slug": "map-sign", "title": {"en": "map", "es": "mapa"}, "wow_layer": "object", "art": "installed"},
+    {"id": "ticket", "slug": "ticket", "title": {"en": "ticket", "es": "entrada"}, "wow_layer": "object", "art": "installed"},
+    {"id": "water-bottle", "slug": "water-bottle", "title": {"en": "water", "es": "agua"}, "wow_layer": "object", "art": "installed"},
+    {"id": "snack", "slug": "snack", "title": {"en": "snack", "es": "snack"}, "wow_layer": "object", "art": "installed"}
+  ],
+  "actions": [
+    {"id": "arrive", "slug": "arrive", "title": {"en": "arrive", "es": "llegar"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-colosseum", "slug": "look-colosseum", "title": {"en": "look at the Colosseum", "es": "mirar el Coliseo"}, "wow_layer": "way", "art": "installed"},
+    {"id": "walk-tiber", "slug": "walk-tiber", "title": {"en": "walk by the Tiber", "es": "andar junto al Tiber"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-roman-forum", "slug": "look-roman-forum", "title": {"en": "look at the Roman Forum", "es": "mirar el Foro Romano"}, "wow_layer": "way", "art": "installed"},
+    {"id": "snack-rest", "slug": "snack-rest", "title": {"en": "snack / rest", "es": "snack / descanso"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-trevi-fountain", "slug": "look-trevi-fountain", "title": {"en": "look at Trevi Fountain", "es": "mirar la Fontana di Trevi"}, "wow_layer": "way", "art": "installed"},
+    {"id": "walk-piazza-navona", "slug": "walk-piazza-navona", "title": {"en": "walk in Piazza Navona", "es": "andar en Piazza Navona"}, "wow_layer": "way", "art": "installed"},
+    {"id": "look-piazza-navona", "slug": "look-piazza-navona", "title": {"en": "look at Piazza Navona", "es": "mirar Piazza Navona"}, "wow_layer": "way", "art": "installed"},
+    {"id": "finish-day", "slug": "finish-day", "title": {"en": "finish the day", "es": "terminar el dia"}, "wow_layer": "way", "art": "installed"}
+  ],
+  "counts": {"items": 9, "actions": 9, "cards": 19},
+  "city_walks": ["walk-tiber", "walk-piazza-navona"],
+  "spec_status": "spec-ready"
+}

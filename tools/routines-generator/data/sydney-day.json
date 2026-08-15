@@ -1,0 +1,232 @@
+{
+  "product": "PixtoLearn WOW Routine",
+  "version": "0.3-city-day-v2",
+  "id": "sydney-day",
+  "family": "travel",
+  "bundle": "city-days",
+  "city_id": "sydney",
+  "status": "ready",
+  "art": "installed",
+  "membership": "premium",
+  "product_home": "routines",
+  "audience": "child",
+  "grain": "city-day-v2",
+  "character": {
+    "avatar_id": "C1",
+    "band": "child",
+    "gender": "boy",
+    "skin": "medium",
+    "hair": "short",
+    "clothes": "soft teal jacket, grey trousers",
+    "age": "child",
+    "lock": "PRIMARY C1. Walks: Harbour, Botanic Garden."
+  },
+  "label": {
+    "en": "Sydney day",
+    "es": "Dia en Sidney"
+  },
+  "cover": {
+    "id": "cover",
+    "slug": "cover",
+    "title": {
+      "en": "sydney day",
+      "es": "dia en sidney"
+    },
+    "wow_layer": "cover",
+    "art": "installed"
+  },
+  "items": [
+    {
+      "id": "opera-house",
+      "slug": "opera-house",
+      "title": {
+        "en": "Opera House",
+        "es": "Opera House"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "harbour-bridge",
+      "slug": "harbour-bridge",
+      "title": {
+        "en": "Harbour Bridge",
+        "es": "Harbour Bridge"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "circular-quay",
+      "slug": "circular-quay",
+      "title": {
+        "en": "Circular Quay",
+        "es": "Circular Quay"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "harbour",
+      "slug": "harbour",
+      "title": {
+        "en": "Sydney Harbour",
+        "es": "puerto de Sidney"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "botanic-garden",
+      "slug": "botanic-garden",
+      "title": {
+        "en": "Botanic Garden",
+        "es": "Jardin Botanico"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "map-sign",
+      "slug": "map-sign",
+      "title": {
+        "en": "map",
+        "es": "mapa"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "ticket",
+      "slug": "ticket",
+      "title": {
+        "en": "ticket",
+        "es": "entrada"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "water-bottle",
+      "slug": "water-bottle",
+      "title": {
+        "en": "water",
+        "es": "agua"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    },
+    {
+      "id": "snack",
+      "slug": "snack",
+      "title": {
+        "en": "snack",
+        "es": "snack"
+      },
+      "wow_layer": "object",
+      "art": "installed"
+    }
+  ],
+  "actions": [
+    {
+      "id": "arrive",
+      "slug": "arrive",
+      "title": {
+        "en": "arrive",
+        "es": "llegar"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-opera-house",
+      "slug": "look-opera-house",
+      "title": {
+        "en": "look at the Opera House",
+        "es": "mirar la Opera House"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-harbour",
+      "slug": "walk-harbour",
+      "title": {
+        "en": "walk by the harbour",
+        "es": "andar por el puerto"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-harbour-bridge",
+      "slug": "look-harbour-bridge",
+      "title": {
+        "en": "look at Harbour Bridge",
+        "es": "mirar Harbour Bridge"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "snack-rest",
+      "slug": "snack-rest",
+      "title": {
+        "en": "snack / rest",
+        "es": "snack / descanso"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-circular-quay",
+      "slug": "look-circular-quay",
+      "title": {
+        "en": "look at Circular Quay",
+        "es": "mirar Circular Quay"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "walk-botanic-garden",
+      "slug": "walk-botanic-garden",
+      "title": {
+        "en": "walk in the Botanic Garden",
+        "es": "andar en el Jardin Botanico"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "look-botanic-garden",
+      "slug": "look-botanic-garden",
+      "title": {
+        "en": "look at the Botanic Garden",
+        "es": "mirar el Jardin Botanico"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    },
+    {
+      "id": "finish-day",
+      "slug": "finish-day",
+      "title": {
+        "en": "finish the day",
+        "es": "terminar el dia"
+      },
+      "wow_layer": "way",
+      "art": "installed"
+    }
+  ],
+  "counts": {
+    "items": 9,
+    "actions": 9,
+    "cards": 19
+  },
+  "city_walks": [
+    "walk-harbour",
+    "walk-botanic-garden"
+  ],
+  "spec_status": "spec-ready"
+}
