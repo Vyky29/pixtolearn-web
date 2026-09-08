@@ -31,7 +31,7 @@ p{margin:0 0 1em}
         backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .topbar .wrap{display:flex;align-items:center;gap:18px;height:70px}
 .brandmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.brandmark img{height:40px;width:auto;display:block}
+.brandmark img{height:44px;width:auto;display:block;object-fit:contain}
 .brandmark span{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-.03em;white-space:nowrap}
 .topnav{display:flex;gap:20px;margin-left:auto;font-size:14px;font-weight:600}
 .topnav a{color:var(--ink-soft);text-decoration:none}
@@ -56,11 +56,17 @@ p{margin:0 0 1em}
 .brand-strip{display:grid;grid-template-columns:1.1fr auto 1fr auto 1fr;align-items:center;gap:18px;
              margin-top:34px;padding:22px 24px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}
 .brand-strip .pair{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
-.brand-strip .pair img{height:56px;width:auto;max-width:100%;display:block}
-.brand-strip .pair .pixto{height:64px}
+.brand-strip .pair img{height:56px;width:auto;max-width:100%;display:block;object-fit:contain}
+.brand-strip .pair .pixto{height:72px}
 .brand-strip .pair small{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
 .brand-strip .x{font-family:var(--display);font-weight:800;font-size:22px;color:var(--ink-faint)}
 .brand-strip .note{grid-column:1/-1;margin:4px 0 0;font-size:12.5px;color:var(--ink-soft);text-align:center}
+.scheme-badge{display:flex;flex-direction:column;justify-content:center;min-width:168px;max-width:240px;
+              min-height:56px;padding:10px 14px 10px 16px;border-radius:14px;text-align:left;color:#fff}
+.scheme-badge strong{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:.02em;line-height:1.1}
+.scheme-badge span{font-size:11px;font-weight:600;opacity:.88;margin-top:3px}
+.scheme-badge.sta{background:#0f3d6e;box-shadow:inset 4px 0 0 #e8a840}
+.scheme-badge.se{background:#143d2e;box-shadow:inset 4px 0 0 #5cb85c}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
 .stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;position:relative;overflow:hidden}
@@ -73,7 +79,9 @@ p{margin:0 0 1em}
 .scheme-tabs button{border:0;background:transparent;font-family:var(--body);font-weight:800;font-size:14px;
                     padding:10px 16px;border-radius:16px;cursor:pointer;color:var(--ink-soft);
                     display:inline-flex;align-items:center;gap:10px}
-.scheme-tabs button img{height:34px;width:auto;display:block;border-radius:8px}
+.scheme-tabs button .scheme-badge{min-width:0;min-height:0;padding:7px 10px;border-radius:10px}
+.scheme-tabs button .scheme-badge strong{font-size:13px}
+.scheme-tabs button .scheme-badge span{display:none}
 .scheme-tabs button[aria-selected="true"]{background:var(--ink);color:#fff}
 .scheme-tabs button:hover:not([aria-selected="true"]){color:var(--pink)}
 @media(max-width:700px){
@@ -222,12 +230,18 @@ footer strong{color:#fff}
       </div>
       <div class="x" aria-hidden="true">x</div>
       <div class="pair">
-        <img src="assets/brand/sta-wordmark.svg" alt="STA International Learn to Swim Programme" />
+        <div class="scheme-badge sta" role="img" aria-label="STA International Learn to Swim Programme">
+          <strong>STA</strong>
+          <span>International Learn to Swim</span>
+        </div>
         <small>200 outcomes mapped</small>
       </div>
       <div class="x" aria-hidden="true">+</div>
       <div class="pair">
-        <img src="assets/brand/swim-england-wordmark.svg" alt="Swim England Learn to Swim Stages 1-7" />
+        <div class="scheme-badge se" role="img" aria-label="Swim England Learn to Swim Stages 1-7, formerly ASA">
+          <strong>Swim England</strong>
+          <span>ASA · Stages 1-7</span>
+        </div>
         <small>79 outcomes mapped</small>
       </div>
       <p class="note">Wordmarks above are PixtoLearn labels for scheme names. Official STA and Swim England logos are not reproduced here.</p>
@@ -242,11 +256,11 @@ footer strong{color:#fff}
 
     <div class="scheme-tabs" role="tablist" aria-label="Awarding body">
       <button type="button" role="tab" id="tab-sta" aria-controls="sta" aria-selected="true">
-        <img src="assets/brand/sta-wordmark.svg" alt="" />
+        <span class="scheme-badge sta" aria-hidden="true"><strong>STA</strong></span>
         <span>STA ILSP</span>
       </button>
       <button type="button" role="tab" id="tab-se" aria-controls="se" aria-selected="false">
-        <img src="assets/brand/swim-england-wordmark.svg" alt="" />
+        <span class="scheme-badge se" aria-hidden="true"><strong>ASA</strong></span>
         <span>Swim England 1-7</span>
       </button>
     </div>

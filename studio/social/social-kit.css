@@ -30,8 +30,8 @@ pointer-events:none;animation:drift 28s linear infinite}
 .wrap{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
 .hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;animation:rise .7s var(--ease) both}
 .brand-lockup{display:flex;align-items:center;gap:.9rem}
-.brand-mark{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;overflow:hidden;flex-shrink:0}
-.brand-mark img{width:120%;height:auto;display:block;margin-left:-8%}
+.brand-mark{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;overflow:hidden;flex-shrink:0;padding:8px}
+.brand-mark img{width:100%;height:100%;object-fit:contain;display:block}
 .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:0 0 .35rem}
 header h1{font-family:var(--font-display);font-size:clamp(1.7rem,3.4vw,2.35rem);margin:0 0 .4rem;letter-spacing:-.03em;line-height:1.1}
 .tagline{margin:0;max-width:36rem;color:rgba(255,255,255,.78);font-size:1.02rem}
