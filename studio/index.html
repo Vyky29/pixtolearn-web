@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>PixtoLearn Studio | Team tools</title>
+  <meta name="description" content="Internal PixtoLearn team tools. Not part of the public website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink: #d03860;
+      --pink-deep: #b82858;
+      --amber: #e8a840;
+      --slate: #88b0c0;
+      --ink: #14242b;
+      --ink-soft: #3a5159;
+      --ink-faint: #7d9099;
+      --page: #f7f4ef;
+      --mist: #efe8df;
+      --white: #fff;
+      --line: #e3dbd0;
+      --display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+      --body: "Figtree", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: var(--body);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--pink), var(--amber), var(--slate));
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 56px 24px 80px }
+    .eyebrow {
+      display: inline-flex;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 7px 14px;
+      border-radius: 999px;
+    }
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(36px, 6vw, 56px);
+      letter-spacing: -.03em;
+      line-height: 1.08;
+      margin: 18px 0 12px;
+    }
+    .lede { color: var(--ink-soft); max-width: 62ch; font-size: 18px }
+    .note {
+      margin: 28px 0 36px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--amber);
+      background: #fff8eb;
+      color: #5a4a2a;
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr } }
+    a.card {
+      display: block;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px 24px 22px;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.card:hover { border-color: var(--pink) }
+    a.card h2 {
+      font-family: var(--display);
+      font-size: 26px;
+      margin: 0 0 8px;
+    }
+    a.card p { margin: 0; color: var(--ink-soft); font-size: 15px }
+    a.card .url {
+      display: block;
+      margin-top: 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: var(--pink-deep);
+    }
+    footer {
+      margin-top: 48px;
+      color: var(--ink-faint);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bar"></div>
+  <main class="wrap">
+    <span class="eyebrow">Internal · team only</span>
+    <h1>PixtoLearn Studio</h1>
+    <p class="lede">
+      Working tools for the team. These pages are not in the public website navigation
+      and are set to stay out of search.
+    </p>
+    <p class="note">
+      Share these URLs with the team. Do not link them from shop, swimming, academy or the homepage.
+    </p>
+    <div class="grid">
+      <a class="card" href="/studio/outcomes">
+        <h2>Learning outcomes</h2>
+        <p>STA ILSP and Swim England (ASA) Stages 1-7 mapped to the 160 swimming flashcards, with flip-to-break-it-down.</p>
+        <span class="url">/studio/outcomes</span>
+      </a>
+      <a class="card" href="/studio/social">
+        <h2>Social media creator</h2>
+        <p>Launch kit: bios, 28-day calendar, post generator, Social Studio and ops. English and Spanish.</p>
+        <span class="url">/studio/social</span>
+      </a>
+    </div>
+    <footer>PixtoLearn · Because visuals speak louder</footer>
+  </main>
+</body>
+</html>

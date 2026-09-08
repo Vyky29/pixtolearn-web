@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>PixtoLearn | Social Launch Kit (EN / ES)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="social-kit.css" />
+</head>
+<body>
+  <div class="brand-bar"></div>
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <img src="/assets/brand/logo-on-dark.svg" alt="" />
+          </div>
+          <div>
+            <p class="eyebrow"><a href="/studio" style="color:inherit;text-decoration:none">PixtoLearn studio</a></p>
+            <h1 data-i18n="title">Social Launch Kit</h1>
+            <p class="tagline" data-i18n="subtitle">Bios, calendar, posts, Social Studio V2 and ops. Six networks. One visual language.</p>
+          </div>
+        </div>
+        <div class="hero-stats" aria-hidden="true">
+          <div class="stat-chip"><strong>6</strong><span data-i18n="statNet">networks</span></div>
+          <div class="stat-chip"><strong>28</strong><span data-i18n="statDays">launch days</span></div>
+          <div class="stat-chip"><strong>EN/ES</strong><span data-i18n="statLang">bilingual</span></div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <div class="tabs" role="tablist" aria-label="Sections">
+          <button type="button" class="active" data-tab="bios" data-i18n="tabBios">Bios</button>
+          <button type="button" data-tab="calendar" data-i18n="tabCalendar">Calendar</button>
+          <button type="button" data-tab="generator" data-i18n="tabGenerator">Posts</button>
+          <button type="button" data-tab="studio" data-i18n="tabStudio">Studio</button>
+          <button type="button" data-tab="ops" data-i18n="tabOps">Ops</button>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="active" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="panel-bios" class="panel active" role="tabpanel">
+      <div class="section-head">
+        <div class="section-kicker" data-i18n="kickBios">Profiles</div>
+        <h2 data-i18n="biosH2">Profile kit (P0 networks)</h2>
+        <p class="lead" data-i18n="biosLead">Claim Instagram, TikTok and LinkedIn with the same brand voice.</p>
+      </div>
+      <div class="note" data-i18n="biosNote">Handles: Instagram @pixtolearn (live). Claim TikTok and LinkedIn as PixtoLearn.</div>
+      <div class="grid" id="biosGrid"></div>
+      <h3 data-i18n="highlightsH3">Instagram Highlights</h3>
+      <div class="card flat" id="highlightsCard"></div>
+      <h3 data-i18n="linkBioH3">Link-in-bio structure</h3>
+      <div class="card flat" id="linkBioCard"></div>
+      <h3 data-i18n="checklistH3">Week 0 checklist</h3>
+      <div class="card flat"><ul class="checklist" id="week0List"></ul></div>
+    </section>
+
+    <section id="panel-calendar" class="panel" role="tabpanel">
+      <div class="section-head">
+        <div class="section-kicker" data-i18n="kickCal">Launch</div>
+        <h2 data-i18n="calH2">28-day launch calendar</h2>
+        <p class="lead" data-i18n="calLead">Daily beat for Instagram + TikTok. Export weeks from Ops.</p>
+      </div>
+      <div class="filters" id="calFilters">
+        <button type="button" class="active" data-filter="all" data-i18n="filterAll">All</button>
+        <button type="button" data-filter="brand" data-i18n="filterBrand">Brand</button>
+        <button type="button" data-filter="swim" data-i18n="filterSwim">Swimming</button>
+        <button type="button" data-filter="wow" data-i18n="filterWow">WOW</button>
+        <button type="button" data-filter="app" data-i18n="filterApp">App</button>
+        <button type="button" data-filter="academy" data-i18n="filterAcademy">Academy</button>
+        <button type="button" data-filter="impact" data-i18n="filterImpact">Impact</button>
+        <button type="button" data-filter="offer" data-i18n="filterOffer">Offer</button>
+      </div>
+      <div class="calendar" id="calendarList"></div>
+    </section>
+
+    <section id="panel-generator" class="panel" role="tabpanel">
+      <div class="section-head">
+        <div class="section-kicker" data-i18n="kickGen">Copy</div>
+        <h2 data-i18n="genH2">Post generator</h2>
+        <p class="lead" data-i18n="genLead">Pillar + audience + product + angle. Captions, script, LinkedIn, brief, hashtags.</p>
+      </div>
+      <div class="card flat">
+        <div class="form-grid">
+          <label><span data-i18n="lblPillar">Pillar</span><select id="gPillar"></select></label>
+          <label><span data-i18n="lblAudience">Audience</span><select id="gAudience"></select></label>
+          <label><span data-i18n="lblProduct">Product</span><select id="gProduct"></select></label>
+          <label><span data-i18n="lblAngle">Angle</span><select id="gAngle"></select></label>
+          <label><span data-i18n="lblCta">CTA</span><select id="gCta"></select></label>
+          <label><span data-i18n="lblExtra">Extra detail (optional)</span><input type="text" id="gExtra" data-i18n-placeholder="extraPh" placeholder="e.g. noisy pool, First-Next-Then" /></label>
+        </div>
+        <div class="row-actions">
+          <button type="button" class="btn pink" id="btnGenerate" data-i18n="btnGenerate">Generate posts</button>
+          <button type="button" class="btn secondary" id="btnCopyAll" data-i18n="btnCopyAll">Copy all</button>
+          <button type="button" class="btn secondary" id="btnToStudio" data-i18n="btnToStudio">Send hook to Studio</button>
+        </div>
+      </div>
+      <div class="outputs" id="genOutputs"></div>
+      <h3 data-i18n="guardH3">Brand guardrails</h3>
+      <div class="card flat"><ul class="checklist" id="guardList"></ul></div>
+    </section>
+
+    <section id="panel-studio" class="panel" role="tabpanel">
+      <div class="section-head">
+        <div class="section-kicker" data-i18n="kickStudio">Creative</div>
+        <h2 data-i18n="studioH2">Social Studio V2</h2>
+        <p class="lead" data-i18n="studioLead">Network-first templates, safe zones, post chrome and feed preview. Export platform-ready PNGs.</p>
+      </div>
+
+      <div class="studio-v2">
+        <aside class="studio-controls card flat">
+          <div class="form-grid" style="grid-template-columns:1fr 1fr">
+            <label><span data-i18n="lblNetwork">Network</span><select id="sNetwork"></select></label>
+            <label><span data-i18n="lblPlacement">Placement</span><select id="sPlacement"></select></label>
+            <label><span data-i18n="lblTemplate">Template</span><select id="sTemplate"></select></label>
+            <label><span data-i18n="lblBgVariant">Background</span>
+              <select id="sBgVariant">
+                <option value="ink">Ink gradient</option>
+                <option value="foam">Foam light</option>
+                <option value="photo">Photo</option>
+                <option value="cutout">Photo soft</option>
+              </select>
+            </label>
+          </div>
+          <label><span data-i18n="lblHook">Hook / headline</span><input type="text" id="sHook" value="Because visuals speak louder" /></label>
+          <label><span data-i18n="lblSub">Supporting line</span><input type="text" id="sSub" value="Four paths. One visual language." /></label>
+          <label><span data-i18n="lblFoot">Footer / CTA</span><input type="text" id="sFoot" value="pixtolearn.com" /></label>
+          <label><span data-i18n="lblCtaLabel">CTA button label</span><input type="text" id="sCtaLabel" value="Shop packs" /></label>
+
+          <div class="form-grid" style="grid-template-columns:1fr 1fr;margin-top:0.6rem">
+            <label><span data-i18n="lblZoom">Zoom</span><input type="range" id="sZoom" min="1" max="2.2" step="0.05" value="1" /></label>
+            <label><span data-i18n="lblOverlay">Overlay</span><input type="range" id="sOverlay" min="0.2" max="0.8" step="0.05" value="0.55" /></label>
+            <label><span>Crop X</span><input type="range" id="sCropX" min="0" max="1" step="0.01" value="0.5" /></label>
+            <label><span>Crop Y</span><input type="range" id="sCropY" min="0" max="1" step="0.01" value="0.5" /></label>
+          </div>
+
+          <div class="row-actions" style="margin:0.7rem 0">
+            <label class="check-inline"><input type="checkbox" id="sSafeZones" checked /> <span data-i18n="lblSafe">Safe zones</span></label>
+            <label class="check-inline"><input type="checkbox" id="sConsentOnly" /> <span data-i18n="lblConsent">Safe assets only</span></label>
+          </div>
+
+          <label><span data-i18n="lblPhoto">Background from library</span><select id="photoGroup"></select></label>
+          <p class="photo-count" id="photoCount" aria-live="polite"></p>
+          <div class="photo-grid" id="photoGrid"></div>
+
+          <h4 class="studio-subh" data-i18n="carouselH">Carousel</h4>
+          <div class="row-actions">
+            <button type="button" class="btn secondary" id="btnSlideAdd" data-i18n="btnSlideAdd">Add slide</button>
+            <button type="button" class="btn secondary" id="btnSlideDup" data-i18n="btnSlideDup">Duplicate</button>
+            <button type="button" class="btn secondary" id="btnSlideDel" data-i18n="btnSlideDel">Delete</button>
+          </div>
+          <div class="slide-tabs" id="slideTabs"></div>
+
+          <div class="row-actions" style="margin-top:0.9rem">
+            <button type="button" class="btn pink" id="btnRender" data-i18n="btnRender">Refresh</button>
+            <button type="button" class="btn" id="btnDownload" data-i18n="btnDownload">Download PNG</button>
+            <button type="button" class="btn secondary" id="btnDownloadAll" data-i18n="btnDownloadAll">Export carousel</button>
+            <button type="button" class="btn secondary" id="btnClearBg" data-i18n="btnClearBg">Clear photo</button>
+            <button type="button" class="btn secondary" id="btnAddFeed" data-i18n="btnAddFeed">Add to feed</button>
+          </div>
+        </aside>
+
+        <div class="studio-stage">
+          <div class="preview-tabs" id="previewTabs">
+            <button type="button" class="active" data-preview="canvas" data-i18n="prevCanvas">Canvas</button>
+            <button type="button" data-preview="post" data-i18n="prevPost">Post preview</button>
+            <button type="button" data-preview="feed" data-i18n="prevFeed">Profile / feed</button>
+          </div>
+
+          <div id="preview-canvas" class="preview-panel active">
+            <div class="studio-preview-wrap">
+              <canvas id="studioCanvas" width="1080" height="1350" aria-label="Post canvas"></canvas>
+              <div class="studio-meta" id="studioMeta">Instagram  |  Feed 4:5  |  1080 x 1350</div>
+            </div>
+          </div>
+
+          <div id="preview-post" class="preview-panel">
+            <div class="post-chrome" id="postChrome">
+              <div class="post-chrome-head">
+                <div class="post-avatar" aria-hidden="true"></div>
+                <div>
+                  <strong id="chromeHandle">@pixtolearn</strong>
+                  <div class="post-meta" id="chromeMeta">Sponsored  |  PixtoLearn</div>
+                </div>
+              </div>
+              <div class="post-chrome-media" id="chromeMedia"></div>
+              <div class="post-chrome-actions" id="chromeActions">Like  |  Comment  |  Share  |  Save</div>
+              <div class="post-chrome-caption" id="chromeCaption"></div>
+            </div>
+          </div>
+
+          <div id="preview-feed" class="preview-panel">
+            <div class="feed-toolbar">
+              <strong id="feedTitle">Instagram grid</strong>
+              <button type="button" class="btn secondary" id="btnClearFeed" data-i18n="btnClearFeed">Clear feed</button>
+            </div>
+            <div class="feed-grid" id="feedGrid"></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 data-i18n="videoH3">Image and video playbook</h3>
+      <div class="feature-grid" id="videoIdeas"></div>
+    </section>
+
+    <section id="panel-ops" class="panel" role="tabpanel">
+      <div class="section-head">
+        <div class="section-kicker" data-i18n="kickOps">Ops</div>
+        <h2 data-i18n="opsH2">Content ops suite</h2>
+        <p class="lead" data-i18n="opsLead">Weekly export, UTMs, approvals, storyboard, metrics, UGC and scheduling queue.</p>
+      </div>
+      <div class="subtabs" role="tablist">
+        <button type="button" class="active" data-ops="export" data-i18n="opsExport">Export</button>
+        <button type="button" data-ops="utm" data-i18n="opsUtm">UTM</button>
+        <button type="button" data-ops="approve" data-i18n="opsApprove">Approve</button>
+        <button type="button" data-ops="story" data-i18n="opsStory">Storyboard</button>
+        <button type="button" data-ops="metrics" data-i18n="opsMetrics">Metrics</button>
+        <button type="button" data-ops="ugc" data-i18n="opsUgc">UGC</button>
+        <button type="button" data-ops="queue" data-i18n="opsQueue">Queue</button>
+      </div>
+
+      <div id="ops-export" class="ops-panel active">
+        <div class="card flat">
+          <div class="form-grid">
+            <label><span data-i18n="weekLabel">Week</span>
+              <select id="weekNum">
+                <option value="1">Week 1 (days 1-7)</option>
+                <option value="2">Week 2 (days 8-14)</option>
+                <option value="3">Week 3 (days 15-21)</option>
+                <option value="4">Week 4 (days 22-28)</option>
+              </select>
+            </label>
+          </div>
+          <div class="row-actions">
+            <button type="button" class="btn pink" id="btnCopyWeek" data-i18n="btnCopyWeek">Copy week</button>
+            <button type="button" class="btn secondary" id="btnMd" data-i18n="btnMd">Download Markdown</button>
+            <button type="button" class="btn secondary" id="btnCsv" data-i18n="btnCsv">Download CSV</button>
+          </div>
+          <p class="meta" style="margin-top:0.9rem">Paste Markdown into Notion / Docs. Import CSV into Meta Business Suite or a scheduler sheet.</p>
+        </div>
+      </div>
+
+      <div id="ops-utm" class="ops-panel">
+        <div class="card flat">
+          <div class="form-grid">
+            <label><span data-i18n="utmBase">Base URL</span><input type="url" id="utmBase" value="https://www.pixtolearn.com/shop" /></label>
+            <label><span data-i18n="utmCampaign">utm_campaign</span><input type="text" id="utmCampaign" value="launch28" /></label>
+            <label><span data-i18n="utmContent">utm_content</span><input type="text" id="utmContent" value="week1" /></label>
+          </div>
+          <div class="row-actions">
+            <button type="button" class="btn pink" id="btnBuildUtm" data-i18n="btnBuildUtm">Build links</button>
+            <button type="button" class="btn secondary" id="btnCopyUtm" data-i18n="copy">Copy</button>
+          </div>
+          <div class="mono-box" id="utmOut" style="margin-top:0.9rem"></div>
+        </div>
+      </div>
+
+      <div id="ops-approve" class="ops-panel">
+        <p class="lead" data-i18n="approveLead">Track draft / approved / posted for each launch day. Saved in this browser.</p>
+        <div id="approveTable"></div>
+      </div>
+
+      <div id="ops-story" class="ops-panel">
+        <p class="lead" data-i18n="storyLead">Build a 20s Reel beat sheet, then copy or push hook to Studio.</p>
+        <div class="card flat story-beats">
+          <div class="beat-card">
+            <div class="beat-time">0-2s</div>
+            <label><span>Hook</span><textarea id="storyHook"></textarea></label>
+          </div>
+          <div class="beat-card">
+            <div class="beat-time">2-12s</div>
+            <label><span>Demo</span><textarea id="storyDemo"></textarea></label>
+          </div>
+          <div class="beat-card">
+            <div class="beat-time">12-20s</div>
+            <label><span>CTA</span><textarea id="storyCta"></textarea></label>
+          </div>
+          <div class="beat-card">
+            <div class="beat-time">Shot</div>
+            <label><span>Shot checklist</span><textarea id="storyShot"></textarea></label>
+          </div>
+          <div class="beat-card">
+            <div class="beat-time">VO</div>
+            <label><span>Voiceover</span><textarea id="storyVo"></textarea></label>
+          </div>
+          <div class="beat-card">
+            <div class="beat-time">Text</div>
+            <label><span>On-screen text</span><textarea id="storyOnscreen"></textarea></label>
+          </div>
+          <div class="row-actions">
+            <button type="button" class="btn pink" id="btnSaveStory">Save</button>
+            <button type="button" class="btn secondary" id="btnCopyStory" data-i18n="copy">Copy</button>
+            <button type="button" class="btn secondary" id="btnStoryMd" data-i18n="btnStoryMd">Export MD</button>
+            <button type="button" class="btn secondary" id="btnStoryStudio" data-i18n="btnToStudio">Send to Studio</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="ops-metrics" class="ops-panel">
+        <p class="lead" data-i18n="metricsLead">Paste weekly numbers. The kit suggests which pillar to push next.</p>
+        <div class="card flat">
+          <div class="form-grid">
+            <label><span data-i18n="lblReach">Reach</span><input type="number" id="mReach" min="0" placeholder="10000" /></label>
+            <label><span data-i18n="lblSaves">Saves</span><input type="number" id="mSaves" min="0" placeholder="420" /></label>
+            <label><span data-i18n="lblShares">Shares</span><input type="number" id="mShares" min="0" placeholder="180" /></label>
+            <label><span data-i18n="lblClicks">Link clicks</span><input type="number" id="mClicks" min="0" placeholder="95" /></label>
+          </div>
+          <div class="row-actions">
+            <button type="button" class="btn pink" id="btnScore" data-i18n="btnScore">Score week</button>
+          </div>
+          <div class="metric-bars" id="metricBars"></div>
+          <ul class="checklist" id="metricTips" style="margin-top:0.9rem"></ul>
+        </div>
+      </div>
+
+      <div id="ops-ugc" class="ops-panel">
+        <p class="lead" data-i18n="ugcLead">Log partner clips with consent notes. Export a handoff list.</p>
+        <div class="card flat">
+          <div class="form-grid">
+            <label><span>Source / partner</span><input type="text" id="ugcSource" placeholder="Swim school / OT / parent" /></label>
+            <label><span>Consent</span><input type="text" id="ugcConsent" placeholder="written / pending / faces blurred" /></label>
+            <label><span>Networks</span><input type="text" id="ugcNetworks" placeholder="IG, TikTok, LinkedIn" /></label>
+          </div>
+          <label><span>Notes / shot description</span><textarea id="ugcNotes" placeholder="15s poolside First-Next-Then, no faces"></textarea></label>
+          <div class="row-actions" style="margin-top:0.8rem">
+            <button type="button" class="btn pink" id="btnAddUgc" data-i18n="btnAddUgc">Add UGC item</button>
+            <button type="button" class="btn secondary" id="btnExportUgc" data-i18n="btnExportUgc">Export UGC CSV</button>
+          </div>
+        </div>
+        <div class="ugc-list" id="ugcList" style="margin-top:1rem"></div>
+      </div>
+
+      <div id="ops-queue" class="ops-panel">
+        <p class="lead" data-i18n="queueLead">Approved posts ready for Buffer / Meta / LinkedIn scheduling (manual paste).</p>
+        <div class="card flat">
+          <div class="mono-box" id="queueBox"></div>
+          <div class="row-actions">
+            <button type="button" class="btn pink" id="btnExportQueue" data-i18n="btnExportQueue">Copy queue</button>
+            <button type="button" class="btn secondary" id="btnBackup" data-i18n="btnBackup">Backup project JSON</button>
+            <label class="btn secondary" style="display:inline-flex;align-items:center;cursor:pointer">
+              <span data-i18n="btnImport">Import project</span>
+              <input type="file" id="importProject" accept="application/json,.json" hidden />
+            </label>
+          </div>
+          <p class="meta" style="margin-top:0.8rem">Auto-post APIs stay manual on purpose. Backup/import moves drafts, feed, approvals, UGC and metrics between browsers.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-brand">PixtoLearn</div>
+        <div data-i18n="footer">Internal marketing tool. Not for public indexing. hello@pixtolearn.com</div>
+      </div>
+      <div style="opacity:0.8">Because visuals speak louder</div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="social-kit-data.js"></script>
+  <script src="social-kit-networks.js"></script>
+  <script src="social-kit-templates.js"></script>
+  <script src="social-kit-app.js"></script>
+</body>
+</html>
