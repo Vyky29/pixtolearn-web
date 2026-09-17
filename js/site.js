@@ -1,4 +1,6 @@
 (function () {
+  applySiteChrome();
+
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && header) {
@@ -21,7 +23,11 @@
       else openNav();
     });
     header.querySelectorAll(".nav-links a").forEach((a) => {
-      a.addEventListener("click", () => closeNav());
+      a.addEventListener("click", (ev) => {
+        // Mobile Activity: first tap expands (preventDefault); leave menu open.
+        if (ev.defaultPrevented) return;
+        closeNav();
+      });
     });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && header.classList.contains("open")) closeNav();
@@ -30,15 +36,101 @@
 
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll(".nav-links a[data-nav]").forEach((a) => {
-    const key = a.getAttribute("data-nav");
+    const key = (a.getAttribute("data-nav") || "").toLowerCase();
+    const activityPages = new Set([
+      "activity.html",
+      "swimming.html",
+      "physical.html",
+      "climbing.html",
+      "yoga.html",
+    ]);
+    const onActivity =
+      key === "activity.html" &&
+      (activityPages.has(path) ||
+        (path.startsWith("product-") &&
+          (path.includes("pack") || path.includes("stands"))));
     if (
       (key === "home" && (path === "" || path === "index.html")) ||
       path === key ||
-      path === key + ".html"
+      onActivity
     ) {
       a.setAttribute("aria-current", "page");
     }
   });
+
+  function applySiteChrome() {
+    const activityKids = [
+      { href: "swimming.html", label: "Swimming" },
+      { href: "physical.html", label: "Physical" },
+      { href: "climbing.html", label: "Climbing" },
+      { href: "yoga.html", label: "Yoga" },
+    ];
+    const primary = [
+      { href: "activity.html", nav: "activity.html", label: "Activity", dropdown: activityKids },
+      { href: "routines.html", nav: "routines.html", label: "Routines" },
+      { href: "app.html", nav: "app.html", label: "App" },
+      { href: "updates.html", nav: "updates.html", label: "Updates" },
+      { href: "shop.html", nav: "shop.html", label: "Shop" },
+      { href: "about.html", nav: "about.html", label: "About", extra: true },
+    ];
+    document.querySelectorAll("ul.nav-links").forEach((ul) => {
+      ul.innerHTML = primary
+        .map((item) => {
+          const cls = item.extra ? "nav-extra" : "";
+          if (item.dropdown) {
+            const kids = item.dropdown
+              .map(
+                (c) =>
+                  `<li><a href="${c.href}" data-nav="${c.href}">${c.label}</a></li>`
+              )
+              .join("");
+            return `<li class="nav-item has-dd${cls ? " " + cls : ""}"><a class="nav-dd-trigger" href="${item.href}" data-nav="${item.nav}" aria-haspopup="true">${item.label}</a><ul class="nav-dd">${kids}</ul></li>`;
+          }
+          return `<li${cls ? ' class="' + cls + '"' : ""}><a href="${item.href}" data-nav="${item.nav}">${item.label}</a></li>`;
+        })
+        .join("");
+    });
+    // Mobile: tap Activity once to expand sports; second path is the hub link itself
+    document.querySelectorAll(".nav-item.has-dd").forEach((item) => {
+      const trigger = item.querySelector(":scope > a.nav-dd-trigger");
+      if (!trigger) return;
+      trigger.addEventListener("click", (e) => {
+        const narrow = window.matchMedia("(max-width: 980px)").matches;
+        const menuOpen = document.querySelector(".site-header.open");
+        if (narrow && menuOpen && !item.classList.contains("is-open")) {
+          e.preventDefault();
+          document.querySelectorAll(".nav-item.has-dd.is-open").forEach((o) => {
+            if (o !== item) o.classList.remove("is-open");
+          });
+          item.classList.add("is-open");
+        }
+      });
+    });
+    document.querySelectorAll(".footer-grid > div").forEach((col) => {
+      const h = col.querySelector("h3");
+      if (!h) return;
+      const title = h.textContent.trim().toLowerCase();
+      if (title !== "explore" && title !== "our work") return;
+      const list = col.querySelector("ul");
+      if (!list) return;
+      list.innerHTML = [
+        '<li><a href="activity.html">Activity</a></li>',
+        '<li><a href="swimming.html">Swimming</a></li>',
+        '<li><a href="physical.html">Physical</a></li>',
+        '<li><a href="climbing.html">Climbing</a></li>',
+        '<li><a href="yoga.html">Yoga</a></li>',
+        '<li><a href="routines.html">Routines</a></li>',
+        '<li><a href="app.html">App</a></li>',
+        '<li><a href="updates.html">Updates</a></li>',
+        '<li><a href="shop.html">Shop</a></li>',
+      ].join("");
+    });
+    document.querySelectorAll(".footer-news > span").forEach((el) => {
+      if (/academy/i.test(el.textContent || "")) {
+        el.textContent = "Subscribe for product and app updates";
+      }
+    });
+  }
 
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
@@ -239,7 +331,7 @@
         const note = form.querySelector("[data-footer-news-note]");
         if (note) {
           note.hidden = false;
-          note.textContent = "Thanks. You are subscribed for product and Academy updates.";
+          note.textContent = "Thanks. You are subscribed for product and app updates.";
         }
         form.reset();
       });
@@ -446,7 +538,7 @@
                 <label><input type="checkbox" name="gift_swim" value="1" checked disabled /> Free swimming printable trial</label>
                 <label><input type="checkbox" name="want_wow" value="1" /> Also send a WOW cards sample when ready</label>
                 <label><input type="checkbox" name="want_app" value="1" /> PixtoLearn App launch tips</label>
-                <label><input type="checkbox" name="want_academy" value="1" /> PixtoLearn Academy waiting list</label>
+                <label><input type="checkbox" name="want_updates" value="1" /> Product and app updates</label>
                 <label><input type="checkbox" name="privacy" value="1" required /> I agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a></label>
               </div>
               <button class="lead-submit" type="submit">Submit</button>
@@ -536,7 +628,7 @@
         gift_swim: true,
         want_wow: data.get("want_wow") === "1",
         want_app: data.get("want_app") === "1",
-        want_academy: data.get("want_academy") === "1",
+        want_updates: data.get("want_updates") === "1",
         at: new Date().toISOString(),
         page: path,
       };

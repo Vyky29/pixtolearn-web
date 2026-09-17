@@ -12866,3 +12866,397 @@ a.post:hover {
   }
 }
 
+
+/* Home: three product doors (Activity · Routines · App) */
+.home-paths--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.home-paths--3 .home-path:nth-child(1) .home-path-kicker { color: #5b8c7a; }
+.home-paths--3 .home-path:nth-child(2) .home-path-kicker { color: #d03860; }
+.home-paths--3 .home-path:nth-child(3) .home-path-kicker { color: var(--slate-deep); }
+.home-paths--3 .home-path:nth-child(1) .home-path-media {
+  box-shadow: 10px 12px 0 rgba(91, 140, 122, 0.22);
+}
+.home-paths--3 .home-path:nth-child(2) .home-path-media {
+  box-shadow: 10px 12px 0 rgba(208, 56, 96, 0.16);
+}
+.home-paths--3 .home-path:nth-child(3) .home-path-media {
+  box-shadow: 10px 12px 0 rgba(95, 138, 154, 0.28);
+}
+@media (max-width: 860px) {
+  .home-paths--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Activity hub modules */
+.activity-modules {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 900px) {
+  .activity-modules {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.activity-mod {
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border-radius: 18px;
+  padding: 1rem 1.05rem 1.15rem;
+  border-top: 4px solid currentColor;
+  box-shadow: 0 1px 0 rgba(20, 36, 43, 0.06);
+}
+.activity-mod.is-physical { color: #5b8c7a; }
+.activity-mod.is-swimming { color: #88b5c2; }
+.activity-mod.is-climbing { color: #c77830; }
+.activity-mod.is-yoga { color: #a094c0; }
+.activity-mod h3 { margin: 0; color: var(--ink, #14242b); font-size: 1.15rem; }
+.activity-mod p { margin: 0; color: var(--soft, #3a5159); font-size: 0.92rem; }
+.activity-mod .badge-soft {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(20, 36, 43, 0.06);
+  color: #14242b;
+}
+.activity-mod .badge-soft.is-live {
+  background: rgba(91, 140, 122, 0.16);
+  color: #2f6b4f;
+}
+.dual-split {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 860px) {
+  .dual-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+  }
+}
+.dual-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.25rem 1.3rem 1.4rem;
+  box-shadow: 0 1px 0 rgba(20, 36, 43, 0.06);
+}
+.dual-card h3 { margin: 0 0 0.4rem; }
+.dual-card p { margin: 0 0 1rem; color: #3a5159; }
+
+
+
+
+/* Activity nav dropdown */
+.nav-item.has-dd {
+  position: relative;
+}
+.nav-item.has-dd > a.nav-dd-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+.nav-item.has-dd > a.nav-dd-trigger::before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  opacity: 0.55;
+  order: 2;
+  flex: 0 0 auto;
+}
+.nav-dd {
+  display: none;
+  position: absolute;
+  top: calc(100% - 0.15rem);
+  left: 0;
+  min-width: 11.5rem;
+  margin: 0;
+  padding: 0.45rem;
+  list-style: none;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow:
+    0 1px 0 rgba(20, 36, 43, 0.06),
+    0 18px 40px rgba(20, 36, 43, 0.14);
+  z-index: 80;
+}
+.nav-dd a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--ink-soft, #3a5159);
+  text-decoration: none;
+}
+.nav-dd a::after { display: none !important; }
+.nav-dd a:hover,
+.nav-dd a:focus-visible {
+  background: rgba(95, 138, 154, 0.12);
+  color: var(--ink, #14242b);
+}
+.nav-dd a[aria-current="page"] {
+  background: rgba(95, 138, 154, 0.14);
+  color: var(--ink, #14242b);
+  font-weight: 750;
+}
+.nav-item.has-dd:hover > .nav-dd,
+.nav-item.has-dd:focus-within > .nav-dd {
+  display: grid;
+  gap: 0.1rem;
+}
+@media (max-width: 980px) {
+  .nav-item.has-dd { width: 100%; }
+  .nav-item.has-dd > .nav-dd {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0.15rem 0 0.35rem 0.85rem;
+    min-width: 0;
+  }
+  .site-header.open .nav-item.has-dd.is-open > .nav-dd,
+  .site-header.open .nav-item.has-dd:focus-within > .nav-dd {
+    display: grid;
+    gap: 0.15rem;
+  }
+  .site-header.open .nav-dd a {
+    font-size: 1.05rem;
+    padding: 0.55rem 0.65rem;
+  }
+}
+
+/* Activity hub rich layout */
+.act-why {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 900px) {
+  .act-why {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+.act-why-points {
+  display: grid;
+  gap: 0.85rem;
+}
+.act-why-point {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.95rem 1.05rem;
+  background: #fff;
+  border-radius: 16px;
+  border-left: 4px solid var(--accent, #88b5c2);
+  box-shadow: 0 1px 0 rgba(20, 36, 43, 0.06);
+}
+.act-why-point h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+.act-why-point p {
+  margin: 0;
+  color: #3a5159;
+  font-size: 0.92rem;
+}
+.act-problem-band {
+  background:
+    radial-gradient(ellipse 70% 80% at 0% 50%, rgba(208, 56, 96, 0.08), transparent 55%),
+    radial-gradient(ellipse 60% 70% at 100% 40%, rgba(95, 138, 154, 0.12), transparent 50%),
+    #f4f1ec;
+}
+.act-problem-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 800px) {
+  .act-problem-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.act-problem-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.15rem 1.2rem 1.3rem;
+  box-shadow: 0 1px 0 rgba(20, 36, 43, 0.06);
+}
+.act-problem-card .kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b82858;
+  opacity: 0.85;
+}
+.act-problem-card h3 { margin: 0 0 0.4rem; font-size: 1.08rem; }
+.act-problem-card p { margin: 0; color: #3a5159; font-size: 0.92rem; }
+
+.activity-mod {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.activity-mod:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(20, 36, 43, 0.1);
+}
+.activity-mod .mod-media {
+  display: block;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #eef3f4;
+  margin-bottom: 0.15rem;
+}
+.activity-mod .mod-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.activity-mod .linkish {
+  font-size: 0.85rem;
+  font-weight: 750;
+  color: currentColor;
+}
+
+/* Sport page: clean card strip + session demo */
+.clean-card-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(140px, 180px);
+  gap: 0.85rem;
+  overflow-x: auto;
+  padding: 0.25rem 0 0.75rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.clean-card {
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 16px;
+  padding: 0.55rem;
+  box-shadow: 0 1px 0 rgba(20, 36, 43, 0.06);
+}
+.clean-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  background: #f7f4ef;
+}
+.clean-card span {
+  display: block;
+  margin-top: 0.45rem;
+  padding: 0 0.2rem 0.15rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #14242b;
+  text-align: center;
+}
+.session-demo {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .session-demo {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 2.25rem;
+  }
+}
+.session-demo-shot {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #14242b;
+  box-shadow: 0 18px 40px rgba(20, 36, 43, 0.18);
+}
+.session-demo-shot img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.session-demo-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.session-demo-list li {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(20, 36, 43, 0.06);
+}
+.session-demo-list strong {
+  font-size: 0.98rem;
+}
+.session-demo-list span {
+  color: #3a5159;
+  font-size: 0.9rem;
+}
+.buy-app-only {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+.buy-app-only .btn-row {
+  justify-content: center;
+}
+
+/* Activity library folders (mirror app packs) */
+.library-folders {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0.5rem;
+}
+@media (min-width: 900px) {
+  .library-folders {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.library-folder {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem 1.05rem 1.15rem;
+  border-left: 5px solid currentColor;
+  box-shadow: 0 1px 0 rgba(20,36,43,0.06);
+}
+.library-folder h3 {
+  margin: 0 0 0.35rem;
+  color: #14242b;
+  font-size: 1.05rem;
+}
+.library-folder p {
+  margin: 0;
+  color: #3a5159;
+  font-size: 0.9rem;
+}
+.library-folder .folder-meta {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #14242b;
+  opacity: 0.55;
+}
