@@ -1,0 +1,25 @@
+{
+  "note": "Local repository counts, not yet reconciled against final commercial deployment. Do not use as plan entitlement counts.",
+  "routines": {
+    "collections": 180,
+    "families": 25,
+    "source": "src/lib/routines/wow-packs.generated.ts"
+  },
+  "swimming": {
+    "uniqueCards": 151,
+    "source": "src/data/club-pack/swimming-catalog.json"
+  },
+  "physical": {
+    "uniqueCards": 81,
+    "collections": 6,
+    "source": "src/data/club-pack/physical-catalog.json",
+    "release": "beta"
+  },
+  "voice": {
+    "availableConcepts": 1006,
+    "excludedDrafts": 3,
+    "categories": 11,
+    "coreWords": 15,
+    "source": "src/data/voice/myvoice/catalog.json; src/lib/voice/core-stages.ts"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "method": "Built-in image_gen, precise-object-edit",
+  "source": "Original 16-character reference ensemble rendered from reparto-infantil-teenager-v4",
+  "prompt": "Change only exposed skin of all sixteen to light #F1D4B8 / medium #BD845E / dark #69452F. Preserve names, pose, face identity, hair, clothes, hearing aids, glasses, headwear and wheelchairs. Keep complete bodies within bounds.",
+  "files": {
+    "light": "exec-c20d39f0-06b5-45b3-bfc3-59a6c7c83049.png",
+    "medium": "exec-fa8fda05-7be4-424d-b535-1edcd5e75782.png",
+    "dark": "exec-8c6dadf4-e260-4124-8141-7ae9149c4241.png"
+  }
+}

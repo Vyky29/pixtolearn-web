@@ -1,0 +1,26 @@
+/* Brand actions: a quiet, tactile shape; no decorative arrows. */
+a.button,a.btn,.app-editorial .app-decision>a.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:13px 24px;border-radius:12px;border:1px solid transparent;background:#ca335c;color:#fff;font-family:PixtoBody,sans-serif;font-size:14px;font-weight:650;line-height:1.2;text-decoration:none;letter-spacing:.05px;box-shadow:0 5px 14px #a7274317;transition:background .18s,box-shadow .18s,transform .18s}
+a.button:hover,a.btn:hover,.app-editorial .app-decision>a.btn:hover{background:#af284e;color:white;box-shadow:0 7px 18px #9e274329;transform:translateY(-1px)}
+a.button:active,a.btn:active{transform:translateY(0);box-shadow:0 2px 5px #9e274315}
+a.button:focus-visible,a.btn:focus-visible,a.brand-text-link:focus-visible{outline:3px solid #88b5c2;outline-offset:4px}
+a.brand-text-link{display:inline-flex;align-items:center;min-height:40px;padding:9px 15px;border-radius:10px;border:1px solid #88b5c250;background:#edf4f5;color:#365f6c;text-decoration:none;font-weight:600;font-size:13px;transition:background .18s,border-color .18s}
+a.brand-text-link:hover{background:#dcebef;border-color:#88b5c2;color:#254d5a}
+@media(prefers-reduced-motion:reduce){a.button,a.btn,a.brand-text-link{transition:none!important;transform:none!important}}
+/* Compact brand navigation: readable destinations, no repeated arrows. */
+@media(max-width:1100px){
+body.menu-open{overflow:hidden}
+header #nav.open{position:fixed;inset:82px 0 auto;max-height:calc(100dvh - 82px);width:100%;display:grid;grid-template-columns:1fr 1fr;gap:0 22px;padding:24px max(24px,5vw) 30px;border-radius:0 0 18px 18px;background:#fffdf8;border-top:1px solid #dbe4e5;box-shadow:0 18px 32px #18343e18;overflow-y:auto;overscroll-behavior:contain}
+header #nav.open::before{content:'PIXTOLEARN';grid-column:1/-1;font:700 10px PixtoBody,sans-serif;letter-spacing:2px;color:#627b85;padding:0 0 14px}
+header #nav.open>a{grid-column:1/-1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:5px;min-height:76px;padding:13px 0;border:0;border-bottom:1px solid #e3e9e8;color:#19343e;font:650 25px/1.2 PixtoDisplay,sans-serif;letter-spacing:-.6px}
+header #nav.open>a::after,header #nav.open>a.active::after{display:block;position:static;content:'';font:400 12px/1.4 PixtoBody,sans-serif;letter-spacing:0;color:#657a82;background:none;width:auto;height:auto}
+header #nav.open>a[href='app.html']::after{content:'Routines, Swimming, Physical Activity & My Voice'}
+header #nav.open>a[href='swimming-packs.html']::after{content:'Waterproof visual support for the pool'}
+header #nav.open>a[href='updates.html']::after{content:'Learning, Impact & Resources'}
+header #nav.open>a[href='shop.html']::after{content:'The app and our Swimming collection'}
+header #nav.open>a.active{color:#477e8c}
+header #nav.open>a.mobile-member-link{grid-column:auto;min-height:48px;padding:17px 0 0;border:0;font:600 13px PixtoBody,sans-serif;letter-spacing:0;color:#355c69}
+header #nav.open>a.mobile-member-link::after{display:none}
+header .menu-toggle{border-radius:9px!important;background:#e8f0f1!important;border:1px solid #d7e5e8!important;box-shadow:none!important;width:40px;height:40px;min-width:40px;padding:10px!important}
+header .menu-toggle .menu-lines i{background:#365e6a!important;height:2px!important;border-radius:2px}
+header .menu-toggle[aria-expanded=true]{background:#dbe9ec!important}
+}

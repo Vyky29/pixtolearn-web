@@ -1,0 +1,15 @@
+.app-editorial #feature-language{padding:8px 4px}
+.app-editorial #feature-language .language-heading{align-items:center;gap:28px;margin-bottom:26px}
+.app-editorial #feature-language .language-heading h3{font-size:clamp(27px,3vw,38px);line-height:1.15;margin:8px 0 12px;max-width:650px}
+.app-editorial #feature-language .language-heading p{font-size:15px}
+.app-editorial #feature-language .language-picker{font-size:12px;color:#5c7077;min-width:175px}
+.app-editorial #feature-language select{background:#fffdf8;border:1px solid #c8d8dc;border-radius:10px;font-size:15px;padding:12px 14px;width:100%;box-shadow:none}
+.app-editorial #feature-language .language-four-fans{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;max-width:890px;margin:0 auto}
+.app-editorial #feature-language .language-product{display:flex;flex-direction:column;align-items:center}
+.app-editorial #feature-language .language-product h4{font-size:14px;margin:0 0 13px;color:var(--fan-accent)}
+.app-editorial #feature-language .product-fan{height:255px;width:180px;position:relative}
+.app-editorial #feature-language .product-fan-card,.app-editorial #feature-language .product-fan:hover .product-fan-card{position:relative;inset:auto;transform:none;width:180px;height:255px;border-radius:12px;box-shadow:0 8px 22px #172e3512;border:1px solid #172e3512;box-sizing:content-box}
+.app-editorial #feature-language .product-fan-card iframe{transform:scale(.24193548);width:744px;height:1054px}
+.app-editorial #feature-language .language-status{font-size:12px;margin:20px 0 0}
+@media(max-width:1000px){.app-editorial #feature-language .language-four-fans{gap:12px}.app-editorial #feature-language .product-fan,.app-editorial #feature-language .product-fan-card,.app-editorial #feature-language .product-fan:hover .product-fan-card{width:145px;height:206px}.app-editorial #feature-language .product-fan-card iframe{transform:scale(.19489247)}}
+@media(max-width:700px){.app-editorial #feature-language .language-heading{display:block;margin-bottom:22px}.app-editorial #feature-language .language-picker{display:block;max-width:220px;margin-top:17px}.app-editorial #feature-language .language-four-fans{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.app-editorial #feature-language .language-product h4{font-size:12px;margin-bottom:9px}.app-editorial #feature-language .product-fan,.app-editorial #feature-language .product-fan-card,.app-editorial #feature-language .product-fan:hover .product-fan-card{width:124px;height:176px}.app-editorial #feature-language .product-fan-card iframe{transform:scale(.16666667)}}
