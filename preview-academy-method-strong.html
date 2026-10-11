@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview · Academy method 2 &amp; 3</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=logo-keep-ink-1" />
+  <style>
+    .prev-method {
+      padding: 2rem 0 4rem;
+    }
+    .prev-method-intro {
+      max-width: 40rem;
+      margin-bottom: 2.25rem;
+    }
+    .prev-method-intro h1 {
+      margin: 0.35rem 0 0.55rem;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+    }
+    .prev-method-intro p {
+      margin: 0;
+      color: var(--ink-soft);
+    }
+    .prev-method-label {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.85rem;
+      align-items: baseline;
+      margin-bottom: 1.15rem;
+    }
+    .prev-method-label strong {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+    .prev-method-label span {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+    .prev-method-block {
+      margin-bottom: 3rem;
+    }
+
+    /* ——— Option 2: stacked beats ——— */
+    .prev-m2 {
+      padding: clamp(3rem, 7vw, 4.75rem) 0;
+      background:
+        linear-gradient(180deg, #f7f4ef 0%, #f0ebe3 100%);
+    }
+    .prev-m2 .section-head {
+      max-width: 36rem;
+      margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+    }
+    .prev-m2 .section-head h2 {
+      font-size: clamp(2rem, 4.5vw, 3.1rem);
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+    }
+    .prev-m2-stack {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid rgba(20, 36, 43, 0.12);
+    }
+    .prev-m2-stack li {
+      display: grid;
+      grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: baseline;
+      padding: clamp(1.15rem, 2.5vw, 1.55rem) 0;
+      border-bottom: 1px solid rgba(20, 36, 43, 0.12);
+    }
+    .prev-m2-stack h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+    .prev-m2-stack p {
+      margin: 0;
+      max-width: 34rem;
+      font-size: 1.05rem;
+      line-height: 1.45;
+      color: var(--ink-soft);
+    }
+    .prev-m2-note {
+      margin: 1.35rem 0 0;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+    }
+    .prev-m2-note span {
+      color: var(--slate-deep);
+      font-weight: 700;
+    }
+    @media (max-width: 640px) {
+      .prev-m2-stack li {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+        padding: 1.05rem 0;
+      }
+    }
+
+    /* ——— Option 3: photo + four words ——— */
+    .prev-m3 {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      color: #fff;
+      min-height: min(72svh, 640px);
+      display: grid;
+      align-items: center;
+      padding: clamp(3.25rem, 8vw, 5.5rem) 0;
+    }
+    .prev-m3-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: #1a333a;
+    }
+    .prev-m3-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70% 40%;
+    }
+    .prev-m3-shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(105deg, rgba(12, 28, 36, 0.82) 0%, rgba(12, 28, 36, 0.55) 48%, rgba(12, 28, 36, 0.42) 100%),
+        linear-gradient(180deg, rgba(12, 28, 36, 0.25) 0%, rgba(12, 28, 36, 0.55) 100%);
+    }
+    .prev-m3 .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 42rem;
+    }
+    .prev-m3 .eyebrow {
+      color: rgba(255, 255, 255, 0.78) !important;
+    }
+    .prev-m3 .eyebrow::before {
+      background: var(--amber) !important;
+    }
+    .prev-m3-verbs {
+      margin: 0.4rem 0 1rem;
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6.5vw, 4.2rem);
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: #fff;
+    }
+    .prev-m3-verbs span {
+      display: block;
+    }
+    .prev-m3 .lede {
+      margin: 0 0 1.15rem;
+      max-width: 32rem;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1.08rem;
+    }
+    .prev-m3-note {
+      margin: 0;
+      font-size: 0.92rem;
+      color: rgba(183, 236, 231, 0.92);
+    }
+  </style>
+</head>
+<body class="ds-ui">
+  <main id="main" class="prev-method">
+    <div class="wrap">
+      <div class="prev-method-intro">
+        <p class="eyebrow">Preview</p>
+        <h1>Academy method — stronger, not interactive</h1>
+        <p>Option 2 = stacked editorial beats. Option 3 = photo + four verbs. Pick one to put on live Academy.</p>
+      </div>
+    </div>
+
+    <div class="prev-method-block">
+      <div class="wrap">
+        <div class="prev-method-label">
+          <strong>2 — Stacked beats</strong>
+          <span>Full-width rows, hairline rules, no numbers</span>
+        </div>
+      </div>
+      <section class="prev-m2" aria-label="Option 2 stacked beats">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">In every module</p>
+            <h2>Watch. Learn. Practise. Use.</h2>
+            <p class="lede">Academy trains the PixtoLearn method — then puts it in your next session with Packs, WOW and the App.</p>
+          </div>
+          <ol class="prev-m2-stack" aria-label="How each Academy module works">
+            <li>
+              <h3>See it in action</h3>
+              <p>Watch visual teaching in a moment that matters.</p>
+            </li>
+            <li>
+              <h3>Learn the method</h3>
+              <p>Clear ideas you can explain to a colleague.</p>
+            </li>
+            <li>
+              <h3>Practise the call</h3>
+              <p>Try decisions you may face tomorrow.</p>
+            </li>
+            <li>
+              <h3>Take it with you</h3>
+              <p>Same language as Packs, WOW and the App.</p>
+            </li>
+          </ol>
+          <p class="prev-m2-note"><span>45–60 min</span> · laptop or phone · between sessions</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="prev-method-block">
+      <div class="wrap">
+        <div class="prev-method-label">
+          <strong>3 — Photo + four words</strong>
+          <span>Full-bleed still; verbs carry the section</span>
+        </div>
+      </div>
+      <section class="prev-m3" aria-label="Option 3 photo and four words">
+        <div class="prev-m3-media" aria-hidden="true">
+          <img src="assets/photos/academy-hero.jpg" alt="" />
+          <div class="prev-m3-shade"></div>
+        </div>
+        <div class="wrap">
+          <p class="eyebrow">In every module</p>
+          <p class="prev-m3-verbs" aria-label="Watch. Learn. Practise. Use.">
+            <span>Watch.</span>
+            <span>Learn.</span>
+            <span>Practise.</span>
+            <span>Use.</span>
+          </p>
+          <p class="lede">Academy trains the PixtoLearn method — then puts it in your next session with Packs, WOW and the App.</p>
+          <p class="prev-m3-note">45–60 min · laptop or phone · between sessions</p>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

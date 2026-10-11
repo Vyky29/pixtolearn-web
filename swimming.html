@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=a5-hair-3" />
+  <link rel="stylesheet" href="css/site.css?v=academy-lock-1" />
 </head>
-<body>
+<body class="ds-ui">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
@@ -23,8 +23,9 @@
         <li><a href="swimming.html" data-nav="swimming.html">Swimming</a></li>
         <li><a href="routines.html" data-nav="routines.html">Routines</a></li>
         <li><a href="app.html" data-nav="app.html">App</a></li>
-        <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
+        <li><a href="academy.html" data-nav="academy.html">Academy</a></li>
         <li><a href="updates.html" data-nav="updates.html">Updates</a></li>
+        <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
       </ul>
       <div class="nav-icons">
         <a class="nav-icon" href="shop.html" aria-label="Shop basket">
@@ -324,6 +325,28 @@
     </div>
   </section>
 
+  <div class="swim-users-wave swim-users-wave--flip" aria-hidden="true">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" focusable="false">
+      <defs>
+        <linearGradient id="swimWaveFadeFlip" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7aa3b3" stop-opacity="0.28" />
+          <stop offset="38%" stop-color="#88b0c0" stop-opacity="0.18" />
+          <stop offset="72%" stop-color="#f7f4ef" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#f7f4ef" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#swimWaveFadeFlip)"
+        d="M0 148C160 72 320 48 500 108C680 168 840 228 1040 148C1180 92 1320 84 1440 118L1440 320H0Z"
+      />
+      <path
+        fill="#88b0c0"
+        opacity="0.12"
+        d="M0 188C200 108 380 92 560 142C740 192 920 232 1120 168C1260 124 1360 128 1440 148L1440 320H0Z"
+      />
+    </svg>
+  </div>
+
   <!-- 3. WHO USES IT IN SWIMMING -->
   <section id="swim-users" class="section-tint">
     <div class="wrap">
@@ -519,6 +542,28 @@
     </div>
   </section>
 
+  <div class="swim-users-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" focusable="false">
+      <defs>
+        <linearGradient id="swimWaveFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7aa3b3" stop-opacity="0.28" />
+          <stop offset="38%" stop-color="#88b0c0" stop-opacity="0.18" />
+          <stop offset="72%" stop-color="#f7f4ef" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#f7f4ef" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#swimWaveFade)"
+        d="M0 148C160 72 320 48 500 108C680 168 840 228 1040 148C1180 92 1320 84 1440 118L1440 320H0Z"
+      />
+      <path
+        fill="#88b0c0"
+        opacity="0.12"
+        d="M0 188C200 108 380 92 560 142C740 192 920 232 1120 168C1260 124 1360 128 1440 148L1440 320H0Z"
+      />
+    </svg>
+  </div>
+
   <!-- 4. PROOF + NEXT STEP -->
   <section id="impact" class="section-tint">
     <div class="wrap swim-proof reveal">
@@ -581,6 +626,6 @@
       <span>Because visuals speak louder</span>
     </div>
   </footer>
-  <script src="js/site.js"></script>
+  <script src="js/site.js?v=academy-lock-1"></script>
 </body>
 </html>

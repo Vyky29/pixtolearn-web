@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PixtoLearn — Tomorrow</title>
+  <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("fonts/bricolage.woff2") format("woff2");
+      font-weight: 700 800;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Figtree";
+      src: url("fonts/figtree.woff2") format("woff2");
+      font-weight: 500 600;
+      font-style: normal;
+      font-display: block;
+    }
+
+    :root {
+      --pink: #d53863;
+      --amber: #f4b83f;
+      --slate: #88b5c2;
+      --ink: #020203;
+      --foam: #f4f8f9;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      background: var(--ink);
+    }
+
+    .frame {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+    }
+
+    .photo {
+      position: absolute;
+      inset: 0;
+      background:
+        url("../assets/photos/mode/product-float.jpg") 54% -680px / 2800px auto no-repeat;
+    }
+
+    .mark {
+      position: absolute;
+      left: 56px;
+      bottom: 168px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cards { display: flex; gap: 4px; }
+
+    .cards i {
+      display: block;
+      width: 14px;
+      height: 20px;
+      border-radius: 2px;
+    }
+
+    .cards i:nth-child(1) { background: var(--pink); }
+    .cards i:nth-child(2) { background: var(--amber); }
+    .cards i:nth-child(3) { background: var(--slate); }
+
+    .mark span {
+      font-family: "Figtree", sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.28em;
+      color: var(--ink);
+    }
+
+    .line {
+      position: absolute;
+      left: 56px;
+      bottom: 72px;
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <article class="frame">
+    <div class="photo" aria-hidden="true"></div>
+    <div class="mark">
+      <span class="cards" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>PIXTOLEARN</span>
+    </div>
+    <p class="line">Tomorrow.</p>
+  </article>
+</body>
+</html>

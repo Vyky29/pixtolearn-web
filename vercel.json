@@ -4,6 +4,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/learn",
+      "destination": "/academy",
+      "permanent": false
+    },
+    {
+      "source": "/learn/:path*",
+      "destination": "/academy",
+      "permanent": false
+    },
+    {
       "source": "/portal",
       "destination": "https://pixtolearn-aquatic-specialist.vercel.app/portal/",
       "permanent": false

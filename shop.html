@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=wow-polish-1" />
+  <link rel="stylesheet" href="css/site.css?v=shop-square-1" />
 </head>
-<body>
+<body class="ds-ui">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
@@ -55,7 +55,7 @@
       <div class="hero-shade"></div>
     </div>
     <div class="wrap hero-content reveal">
-      <p class="eyebrow" style="color:#b7ece7">Shop</p>
+      <p class="eyebrow">Shop</p>
       <h1>Find what works for you</h1>
       <p class="lede">Start with waterproof packs and accessories. Add the App and Academy when you want digital Focus or the teaching method.</p>
       <div class="btn-row">
@@ -75,23 +75,26 @@
       </div>
       <div class="price-grid">
         <article class="price featured reveal">
-          <img src="assets/packs/shop-full.png" alt="Full Pack" />
+          <img class="price-life" src="assets/photos/mode/session-match.jpg" alt="Learner matching waterproof PixtoLearn cards during a pool session" loading="lazy" />
           <span class="badge pink">Most complete</span>
           <h3>Full Pack</h3>
+          <img class="shop-thumb" src="assets/packs/shop-full.png" alt="Full Pack product" />
           <p class="muted">Full swimming visual system for programmes and centres.</p>
           <div class="amount">£329</div>
           <a class="btn btn-primary" href="product-full-pack.html">View &amp; buy</a>
         </article>
         <article class="price reveal">
-          <img src="assets/packs/shop-basic.png" alt="Basic Pack" />
+          <img class="price-life" src="assets/photos/mode/session-smile.jpg" alt="Smiling learner with PixtoLearn cards at the pool" loading="lazy" />
           <h3>Basic Pack</h3>
+          <img class="shop-thumb" src="assets/packs/shop-basic.png" alt="Basic Pack product" />
           <p class="muted">Starter waterproof set for early aquatic skills.</p>
           <div class="amount">£74.99</div>
           <a class="btn btn-ghost" href="product-basic-pack.html">View &amp; buy</a>
         </article>
         <article class="price reveal">
-          <img src="assets/packs/shop-fun.png" alt="Fun Pack" />
+          <img class="price-life" src="assets/photos/mode/close-card.jpg" alt="Learner holding up a PixtoLearn ducks card during a pool session" loading="lazy" />
           <h3>Fun Pack</h3>
+          <img class="shop-thumb" src="assets/packs/shop-fun.png" alt="Fun Pack product" />
           <p class="muted">Playful aquatic visuals to keep engagement high.</p>
           <div class="amount">£74.99</div>
           <a class="btn btn-ghost" href="product-fun-pack.html">View &amp; buy</a>
@@ -108,9 +111,30 @@
         <p class="lede">Pricing not published yet. Tell us your context and we will share options, samples, and timelines.</p>
       </div>
       <div class="price-grid">
-        <article class="price price-wow-pack is-actions reveal"><img src="assets/packs/wow-1.png" alt="WOW Core Everyday Actions pack cards" /><h3>Everyday Action Visuals</h3><div class="amount soon">Price on request</div><a class="btn btn-ghost" href="contact.html?interest=wow-everyday">Ask</a></article>
-        <article class="price price-wow-pack is-emotions reveal"><img src="assets/packs/wow-2.png" alt="WOW Core Emotional Regulation pack cards" /><h3>Emotional Regulation</h3><div class="amount soon">Price on request</div><a class="btn btn-ghost" href="contact.html?interest=wow-emotions">Ask</a></article>
-        <article class="price price-wow-pack is-routines reveal"><img src="assets/packs/wow-3.png" alt="WOW Routines packs cards" /><h3>Life Skills &amp; Sports Routines</h3><div class="amount soon">Price on request</div><a class="btn btn-ghost" href="contact.html?interest=wow-routines">Ask</a></article>
+        <article class="price price-wow-pack reveal">
+          <img class="price-life" src="assets/photos/routines-hero.jpg?v=6" alt="Adult helping a child with shoes while wearing a PixtoLearn wait card on a lanyard" loading="lazy" />
+          <h3>Everyday Action Visuals</h3>
+          <img class="shop-thumb" src="assets/packs/wow-1.png" alt="WOW Core Everyday Actions pack cards" />
+          <div class="amount soon">Price on request</div>
+          <a class="btn btn-ghost" href="contact.html?interest=wow-everyday">Ask</a>
+        </article>
+        <article class="price price-wow-pack reveal">
+          <figure class="photo-ph">
+            <div class="photo-ph-frame" role="img" aria-label="Placeholder photo"></div>
+            <figcaption class="photo-ph-note">[placeholder — need: Emotional Regulation cards used during a calm-down moment]</figcaption>
+          </figure>
+          <h3>Emotional Regulation</h3>
+          <img class="shop-thumb" src="assets/packs/wow-2.png" alt="WOW Core Emotional Regulation pack cards" />
+          <div class="amount soon">Price on request</div>
+          <a class="btn btn-ghost" href="contact.html?interest=wow-emotions">Ask</a>
+        </article>
+        <article class="price price-wow-pack reveal">
+          <img class="price-life" src="assets/photos/wow-lanyard-new.jpg" alt="PixtoLearn WOW card worn on a lanyard in everyday use" loading="lazy" />
+          <h3>Life Skills &amp; Sports Routines</h3>
+          <img class="shop-thumb" src="assets/packs/wow-3.png" alt="WOW Routines packs cards" />
+          <div class="amount soon">Price on request</div>
+          <a class="btn btn-ghost" href="contact.html?interest=wow-routines">Ask</a>
+        </article>
       </div>
     </div>
   </section>
@@ -122,63 +146,82 @@
         <h2>Carry and display</h2>
       </div>
       <div class="price-grid price-grid-2">
-        <article class="price reveal"><img src="assets/photos/stands-holder.png" alt="PixtoLearn stands labeled first, next, then, with holder and bag" /><h3>Stands &amp; Holder</h3><div class="amount">£19.99</div><a class="btn btn-ghost" href="product-stands-holder.html">View &amp; buy</a></article>
-        <article class="price reveal"><img src="assets/photos/keyring-lanyard.png" alt="White PixtoLearn lanyard with metal keyring" /><h3>Keyring + free Lanyard</h3><div class="amount">£4.99</div><a class="btn btn-ghost" href="product-keyring.html">View &amp; buy</a></article>
+        <article class="price reveal">
+          <figure class="photo-ph">
+            <div class="photo-ph-frame" role="img" aria-label="Placeholder photo"></div>
+            <figcaption class="photo-ph-note">[placeholder — need: Stands &amp; Holder set up poolside during a lesson]</figcaption>
+          </figure>
+          <h3>Stands &amp; Holder</h3>
+          <img class="shop-thumb" src="assets/photos/stands-holder.png" alt="PixtoLearn stands labeled first, next, then, with holder and bag" />
+          <div class="amount">£19.99</div>
+          <a class="btn btn-ghost" href="product-stands-holder.html">View &amp; buy</a>
+        </article>
+        <article class="price reveal">
+          <img class="price-life" src="assets/photos/wow-lanyard-new.jpg" alt="PixtoLearn card on a lanyard in everyday use" loading="lazy" />
+          <h3>Keyring + free Lanyard</h3>
+          <img class="shop-thumb" src="assets/photos/keyring-lanyard.png" alt="White PixtoLearn lanyard with metal keyring" />
+          <div class="amount">£4.99</div>
+          <a class="btn btn-ghost" href="product-keyring.html">View &amp; buy</a>
+        </article>
       </div>
       <p class="note" style="margin-top:1.25rem">This HTML rebuild is a premium front-end preview. Checkout can reconnect to WooCommerce or a new payments flow next.</p>
     </div>
   </section>
 
   
-  <section id="app" class="section-tint">
+  <section id="app">
     <div class="wrap">
-      <article class="shop-app reveal">
-        <div class="shop-app-media" aria-hidden="true">
-          <img src="assets/photos/hero-app.jpg" alt="" />
-        </div>
-        <div class="shop-app-copy">
-          <div class="shop-app-badge">
-            <img src="assets/brand/app-icon.png" alt="" width="40" height="40" />
-            <span>PixtoLearn App</span>
-          </div>
-          <h2>Same visuals. Live sessions.</h2>
-          <p class="lede">Membership for Focus mode, libraries, and planners. Complements waterproof packs and WOW cards; it is not another flashcard pack.</p>
-          <p class="shop-app-price">From <strong>£7</strong> / month</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="app.html#plans">See memberships</a>
-            <a class="btn btn-ghost" href="https://pixtolearn-parents.vercel.app" rel="noopener" target="_blank">Open PixtoLearn App</a>
-          </div>
+      <article class="reveal shop-app-plain">
+        <p class="eyebrow">App</p>
+        <h2>Same visuals. Live sessions.</h2>
+        <p class="lede">Membership for Focus mode, libraries, and planners. Complements waterproof packs and WOW cards; it is not another flashcard pack.</p>
+        <p>From <strong>£7</strong> / month</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="app.html#plans">See memberships</a>
+          <a class="btn btn-ghost" href="https://pixtolearn-parents.vercel.app" rel="noopener" target="_blank">Open PixtoLearn App</a>
         </div>
       </article>
     </div>
   </section>
 
-  <section id="academy" class="section-tint">
+  <section id="academy">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">Add Academy</p>
+        <p class="eyebrow">Academy</p>
         <h2>Already have packs? Learn the method.</h2>
-        <p class="lede">Launch courses, Neurodiversity Visual Specialist, and aquatic co-brand pathway. Full pricing on Academy.</p>
+        <p class="lede">Launch courses and the Neurodiversity Visual Specialist pathway. Full pricing on Academy.</p>
       </div>
       <div class="price-grid">
         <article class="price reveal">
           <h3>Launch Pathway</h3>
           <p class="muted">All 4 short courses. Foundations from &pound;19 alone.</p>
           <div class="amount">&pound;79</div>
-          <a class="btn btn-ghost" href="academy.html#pricing">Buy from Academy</a>
+          <a class="btn btn-ghost" href="academy.html#path">Buy from Academy</a>
         </article>
         <article class="price featured reveal">
           <span class="badge pink">Flagship</span>
           <h3>Neurodiversity Specialist</h3>
           <p class="muted">Visual Awareness full pathway. Team &pound;399.</p>
           <div class="amount">&pound;199</div>
-          <a class="btn btn-primary" href="academy.html#specialist">See Specialist</a>
+          <a class="btn btn-primary" href="academy.html#specialisations">See Specialisations</a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="bundles">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Bundles</p>
+        <h2>Packs plus training, together.</h2>
+        <p class="lede">Save when you combine swimming visuals with Academy and App access.</p>
+      </div>
+      <div class="price-grid shop-bundles-grid">
         <article class="price reveal">
           <h3>Swim Pro bundle</h3>
           <p class="muted">Full Pack + Launch Pathway + 30 days App.</p>
           <div class="amount">&pound;349</div>
-          <a class="btn btn-ghost" href="academy.html#bundles">Buy bundles</a>
+          <a class="btn btn-ghost" href="contact.html?interest=swim-pro">Ask about this bundle</a>
         </article>
       </div>
     </div>
@@ -222,7 +265,7 @@
           <li><a href="routines.html">Routines</a></li>
           <li><a href="app.html">App</a></li>
           <li><a href="academy.html">Academy</a></li>
-          <li><a href="academy.html#pricing">Academy pricing</a></li>
+          <li><a href="academy.html#launch">Academy Launch</a></li>
           <li><a href="learn/index.html">Learner hub</a></li>
           <li><a href="updates.html">Updates</a></li>
           <li><a href="shop.html">Shop</a></li>
@@ -246,6 +289,6 @@
     </div>
   </footer>
   <script src="js/cart.js"></script>
-  <script src="js/site.js"></script>
+  <script src="js/site.js?v=academy-lock-1"></script>
 </body>
 </html>

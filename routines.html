@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=wow-polish-1" />
+  <link rel="stylesheet" href="css/site.css?v=academy-lock-1" />
 </head>
-<body>
+<body class="ds-ui page-routines">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
@@ -56,7 +56,7 @@
       <div class="hero-shade"></div>
     </div>
     <div class="wrap hero-content reveal">
-      <p class="eyebrow" style="color:#b7ece7">Words · Objects · Ways</p>
+      <p class="eyebrow">Words · Objects · Ways</p>
       <h1>Clear visuals for everyday life</h1>
       <p class="lede">Portable WOW cards bring structure, clarity, and confidence into daily tasks, transitions, and emotional moments.</p>
       <div class="btn-row">
@@ -84,8 +84,6 @@
           <img src="assets/packs/keyring/1/4_get.png" alt="get" />
         </figure>
 
-        <span class="wow-trio-join" aria-hidden="true"></span>
-
         <figure class="wow-trio-item is-objects">
           <figcaption>
             <span class="wow-trio-kicker">Objects</span>
@@ -93,8 +91,6 @@
           </figcaption>
           <img src="assets/packs/keyring/3/1_toothbrush.png" alt="toothbrush" />
         </figure>
-
-        <span class="wow-trio-join" aria-hidden="true"></span>
 
         <figure class="wow-trio-item is-ways">
           <figcaption>
@@ -153,86 +149,65 @@
       </div>
       <div class="btn-row feature-cta-row reveal">
         <a class="btn btn-primary" href="shop.html#wow">Shop WOW packs</a>
-        <a class="btn btn-ghost" href="app.html">Discover PixtoLearn App</a>
       </div>
     </div>
   </section>
 
-  <section class="wow-portable">
+  <section class="wow-portable wow-portable--spotlight" data-portable-section>
     <div class="wrap">
       <div class="wow-portable-intro reveal">
         <p class="eyebrow">Portable by design</p>
         <h2>Four ways to carry the same cards</h2>
         <p class="lede">Small enough for daily life. Clear enough for the moment that matters.</p>
       </div>
-    </div>
 
-    <div class="wow-portable-rail-wrap reveal">
-      <div class="wow-portable-rail" data-portable-rail tabindex="0" aria-label="Ways to carry WOW cards">
-        <figure class="wow-portable-shot">
-          <img src="assets/photos/wow-lanyard-new.jpg" alt="Person wearing a PixtoLearn lanyard and holding the toothbrush card" loading="lazy" />
-          <figcaption>
-            <strong>On a lanyard</strong>
-            <span>Worn around the neck. Show the card and match the action.</span>
-          </figcaption>
-        </figure>
-        <figure class="wow-portable-shot">
-          <img src="assets/photos/wow-portable/bag.jpg?v=12" alt="WOW cards on a keyring clipped to a backpack" loading="lazy" />
-          <figcaption>
-            <strong>Clipped to a bag</strong>
-            <span>Keyring on a zip or strap for school runs and outings.</span>
-          </figcaption>
-        </figure>
-        <figure class="wow-portable-shot">
-          <img src="assets/photos/wow-portable/paired.jpg?v=4" alt="Real shoes, toothbrush, and gel paired with matching WOW cards" loading="lazy" />
-          <figcaption>
-            <strong>Paired with objects</strong>
-            <span>Real object next to its card in context.</span>
-          </figcaption>
-        </figure>
-        <figure class="wow-portable-shot wow-portable-shot--mix">
-          <div class="wow-portable-mix" aria-hidden="true">
-            <div class="wow-portable-alone">
-              <img src="assets/packs/keyring/1/17_wait.png" alt="" />
-              <span>One card</span>
+      <div class="wow-portable-rail-wrap reveal">
+        <div class="wow-portable-rail" data-portable-rail aria-label="Ways to carry WOW cards">
+          <figure class="wow-portable-shot is-spotlight" tabindex="0" role="button" aria-pressed="true">
+            <div class="wow-portable-media">
+              <img src="assets/photos/wow-lanyard-new.jpg" alt="Person wearing a PixtoLearn lanyard and holding the toothbrush card" loading="lazy" />
             </div>
-            <p class="wow-portable-or">OR</p>
-            <div class="wow-portable-sequence">
-              <p class="wow-portable-sequence-label">Climbing ready</p>
-              <ol class="wow-portable-steps">
-                <li>
-                  <span class="wow-portable-step-num">1</span>
-                  <img src="assets/packs/keyring/5/2_harness.png" alt="" />
-                </li>
-                <li>
-                  <span class="wow-portable-step-num">2</span>
-                  <img src="assets/packs/keyring/5/2_putharnesson.png" alt="" />
-                </li>
-                <li>
-                  <span class="wow-portable-step-num">3</span>
-                  <img src="assets/packs/keyring/5/5_helmet.png" alt="" />
-                </li>
-                <li>
-                  <span class="wow-portable-step-num">4</span>
-                  <img src="assets/packs/keyring/5/3_puthelmeton.png" alt="" />
-                </li>
-                <li>
-                  <span class="wow-portable-step-num">5</span>
-                  <img src="assets/packs/keyring/5/4_putclimbingshoeson.png" alt="" />
-                </li>
-              </ol>
+            <figcaption>
+              <strong>On a lanyard</strong>
+              <span>Worn around the neck. Show the card and match the action.</span>
+            </figcaption>
+          </figure>
+          <figure class="wow-portable-shot" tabindex="0" role="button" aria-pressed="false">
+            <div class="wow-portable-media">
+              <img src="assets/photos/wow-portable/bag.jpg?v=12" alt="WOW cards on a keyring clipped to a backpack" loading="lazy" />
             </div>
-          </div>
-          <figcaption>
-            <strong>Alone or grouped</strong>
-            <span>One cue, or mix steps across packs — shown with climbing ready.</span>
-          </figcaption>
-        </figure>
+            <figcaption>
+              <strong>Clipped to a bag</strong>
+              <span>Keyring on a zip or strap for school runs and outings.</span>
+            </figcaption>
+          </figure>
+          <figure class="wow-portable-shot" tabindex="0" role="button" aria-pressed="false">
+            <div class="wow-portable-media">
+              <img src="assets/photos/wow-portable/paired.jpg?v=4" alt="Real shoes, toothbrush, and gel paired with matching WOW cards" loading="lazy" />
+            </div>
+            <figcaption>
+              <strong>Paired with objects</strong>
+              <span>Real object next to its card in context.</span>
+            </figcaption>
+          </figure>
+          <figure class="wow-portable-shot wow-portable-shot--mix" tabindex="0" role="button" aria-pressed="false">
+            <div class="wow-portable-media">
+              <div class="photo-ph">
+                <div class="photo-ph-frame" role="img" aria-label="Placeholder photo"></div>
+                <p class="photo-ph-note">[placeholder — need: photo of WOW cards used alone vs as a short climbing-ready sequence in a real climbing/gym setting]</p>
+              </div>
+            </div>
+            <figcaption>
+              <strong>Alone or grouped</strong>
+              <span>One cue, or mix steps across packs — shown with climbing ready.</span>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="wow-catalogue">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Catalogue</p>
@@ -240,7 +215,7 @@
         <p class="lede">Pricing for WOW packs is being finalised. Contact us for availability, samples, and programme quotes.</p>
       </div>
       <div class="price-grid">
-        <article class="price price-wow-pack is-actions reveal">
+        <article class="price price-wow-pack reveal">
           <div class="wow-pack-stage" aria-hidden="true">
             <div class="wow-pack-stack">
               <img class="wow-pack-card" src="assets/packs/keyring/1/5_drink.png" alt="" />
@@ -251,7 +226,7 @@
           <h3>WOW Core: Everyday Actions</h3>
           <div class="amount soon">Price on request</div>
         </article>
-        <article class="price price-wow-pack is-emotions reveal">
+        <article class="price price-wow-pack reveal">
           <div class="wow-pack-stage" aria-hidden="true">
             <div class="wow-pack-stack">
               <img class="wow-pack-card" src="assets/packs/keyring/emotions-pack/05_happy.png" alt="" />
@@ -262,7 +237,7 @@
           <h3>WOW Core: Emotional Regulation</h3>
           <div class="amount soon">Price on request</div>
         </article>
-        <article class="price price-wow-pack is-routines reveal">
+        <article class="price price-wow-pack reveal">
           <div class="wow-pack-stage" aria-hidden="true">
             <div class="wow-pack-stack">
               <img class="wow-pack-card" src="assets/packs/keyring/4/1_towel.png" alt="" />
@@ -275,7 +250,7 @@
           <div class="amount soon">Price on request</div>
         </article>
       </div>
-      <div class="btn-row" style="margin-top:1.25rem">
+      <div class="btn-row wow-catalogue-cta">
         <a class="btn btn-primary" href="contact.html?interest=wow">Ask about packs</a>
       </div>
     </div>
@@ -342,6 +317,6 @@
     </div>
   </footer>
   <script src="js/cart.js"></script>
-  <script src="js/site.js?v=wow-rail-1"></script>
+  <script src="js/site.js?v=academy-lock-1"></script>
 </body>
 </html>

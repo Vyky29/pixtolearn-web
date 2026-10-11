@@ -1,4 +1,60 @@
 (function () {
+  /* Flip to false when Academy courses should go live. Preview the full page with ?preview=1 */
+  const ACADEMY_LOCKED = true;
+
+  function academyPreviewUnlocked() {
+    try {
+      return new URLSearchParams(location.search).get("preview") === "1";
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function academyIsLocked() {
+    return ACADEMY_LOCKED && !academyPreviewUnlocked();
+  }
+
+  const LOCK_ICON =
+    '<svg class="nav-lock" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
+
+  function initAcademyLock() {
+    const locked = academyIsLocked();
+    document.body.classList.toggle("academy-is-locked", locked);
+
+    document.querySelectorAll('.nav-links a[data-nav="academy.html"]').forEach((a) => {
+      a.classList.toggle("is-locked", locked);
+      if (locked) {
+        a.setAttribute("aria-label", "Academy, coming soon");
+        if (!a.querySelector(".nav-lock")) a.insertAdjacentHTML("beforeend", LOCK_ICON);
+      } else {
+        a.removeAttribute("aria-label");
+        a.querySelectorAll(".nav-lock").forEach((el) => el.remove());
+      }
+    });
+
+    const homePath = document.querySelector('.home-path[href="academy.html"]');
+    if (homePath) {
+      homePath.classList.toggle("is-locked", locked);
+      const media = homePath.querySelector(".home-path-media");
+      if (media && locked && !homePath.querySelector(".path-lock")) {
+        media.insertAdjacentHTML(
+          "beforeend",
+          '<span class="path-lock" aria-hidden="true">' + LOCK_ICON + "Soon</span>"
+        );
+      }
+      if (!locked) homePath.querySelectorAll(".path-lock").forEach((el) => el.remove());
+    }
+
+    document.querySelectorAll('[data-academy-locked]').forEach((el) => {
+      el.hidden = !locked;
+    });
+    document.querySelectorAll('[data-academy-open]').forEach((el) => {
+      el.hidden = locked;
+    });
+  }
+
+  initAcademyLock();
+
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && header) {
@@ -26,6 +82,12 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && header.classList.contains("open")) closeNav();
     });
+  }
+
+  /* Soft shadow plate: pull heroes under the opaque bar */
+  const photoHero = document.querySelector("main .hero, #main > .hero, .hero");
+  if (header && photoHero && photoHero.querySelector(".hero-media")) {
+    document.documentElement.classList.add("has-photo-hero");
   }
 
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -102,6 +164,7 @@
   initAcademyStage();
   initAcademyGain();
   initAcademyKits();
+  initAcademyPath();
   initFooterNewsletter();
   initSystemList();
   initSystemRewrite();
@@ -401,8 +464,9 @@
       const note = form.querySelector("[data-academy-note]");
       if (note) {
         note.hidden = false;
-        note.textContent =
-          "Thanks. You are on the Academy updates list. You can buy courses any time from the pricing section.";
+        note.textContent = academyIsLocked()
+          ? "Thanks. You are on the Academy waiting list. We will email you when courses open."
+          : "Thanks. You are on the Academy updates list. You can buy courses any time from the pricing section.";
       }
       form.reset();
       if (interest) {
@@ -1312,6 +1376,102 @@
     setLens(lens, false);
   }
 
+  function createExclusiveVisibleCycles() {
+    const items = new Map();
+    let active = null;
+    let io = null;
+
+    function score(el) {
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      const top = Math.max(r.top, 0);
+      const bottom = Math.min(r.bottom, vh);
+      const visible = Math.max(0, bottom - top);
+      if (visible < 80 || r.height <= 0) return 0;
+      const ratio = visible / Math.min(r.height, vh);
+      if (ratio < 0.22) return 0;
+      const mid = (r.top + r.bottom) / 2;
+      const centerDist = Math.abs(mid - vh / 2) / vh;
+      return ratio * (1.15 - Math.min(1, centerDist));
+    }
+
+    function pick() {
+      let winner = null;
+      let best = 0;
+      items.forEach((m, el) => {
+        const s = score(el);
+        m.score = s;
+        if (s > best) {
+          best = s;
+          winner = el;
+        }
+      });
+
+      if (winner === active) {
+        const current = winner ? items.get(winner) : null;
+        if (winner && current && !current.held && !current.playing) {
+          current.playing = true;
+          current.onPlay();
+        }
+        return;
+      }
+
+      if (active) {
+        const prev = items.get(active);
+        if (prev) {
+          prev.playing = false;
+          prev.onStop();
+        }
+        active = null;
+      }
+
+      if (!winner) return;
+      const next = items.get(winner);
+      if (!next || next.held) return;
+      active = winner;
+      next.playing = true;
+      next.onPlay();
+    }
+
+    function ensureIo() {
+      if (io || !("IntersectionObserver" in window)) return;
+      io = new IntersectionObserver(() => pick(), {
+        threshold: [0, 0.15, 0.28, 0.4, 0.55, 0.7, 0.85, 1]
+      });
+      window.addEventListener("scroll", pick, { passive: true });
+      window.addEventListener("resize", pick);
+    }
+
+    return {
+      register(el, onPlay, onStop) {
+        const m = { onPlay, onStop, score: 0, held: false, playing: false };
+        items.set(el, m);
+        ensureIo();
+        if (io) io.observe(el);
+        pick();
+        return {
+          hold() {
+            m.held = true;
+            if (active === el) {
+              m.playing = false;
+              m.onStop();
+              active = null;
+            }
+          },
+          release() {
+            m.held = false;
+            pick();
+          }
+        };
+      }
+    };
+  }
+
+  function wowAutoCycles() {
+    if (!wowAutoCycles._inst) wowAutoCycles._inst = createExclusiveVisibleCycles();
+    return wowAutoCycles._inst;
+  }
+
   function initWowSpotlight() {
     const root = document.querySelector("[data-wow-spotlight]");
     if (!root) return;
@@ -1323,6 +1483,7 @@
     if (!cards.length || !labels.length) return;
 
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const watch = root.closest(".wow-outcomes") || root;
     let index = Math.max(
       0,
       labels.findIndex((label) => label.classList.contains("is-active"))
@@ -1353,145 +1514,506 @@
     function play() {
       if (calm.matches) return;
       stop();
-      timer = window.setInterval(() => show(index + 1), 1800);
+      timer = window.setInterval(() => show(index + 1), 1100);
     }
+
+    const gate = wowAutoCycles().register(watch, play, stop);
 
     labels.forEach((label, i) => {
       label.addEventListener("click", () => {
         show(i);
-        stop();
-        play();
+        gate.hold();
+        window.clearTimeout(root._wowSpotlightResume);
+        root._wowSpotlightResume = window.setTimeout(() => gate.release(), 4000);
       });
     });
 
-    root.addEventListener("mouseenter", stop);
-    root.addEventListener("mouseleave", play);
-    root.addEventListener("focusin", stop);
+    root.addEventListener("focusin", () => gate.hold());
     root.addEventListener("focusout", (e) => {
-      if (!root.contains(e.relatedTarget)) play();
+      if (!root.contains(e.relatedTarget)) gate.release();
     });
-
-    if ("IntersectionObserver" in window) {
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) play();
-            else stop();
-          });
-        },
-        { threshold: 0.35 }
-      );
-      io.observe(root);
-    } else {
-      play();
-    }
 
     show(index);
   }
 
   function initWowPortable() {
+    const section = document.querySelector("[data-portable-section]");
     const rail = document.querySelector("[data-portable-rail]");
     if (!rail) return;
 
-    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let down = false;
-    let startX = 0;
-    let scrollLeft = 0;
-    let timer = null;
-    let paused = false;
+    const shots = Array.from(rail.querySelectorAll(".wow-portable-shot"));
+    if (!shots.length) return;
 
-    rail.addEventListener("pointerdown", (e) => {
-      down = true;
-      paused = true;
-      stop();
-      startX = e.pageX;
-      scrollLeft = rail.scrollLeft;
-      rail.setPointerCapture(e.pointerId);
-    });
-    rail.addEventListener("pointerup", () => {
-      down = false;
-      paused = false;
-      play();
-    });
-    rail.addEventListener("pointercancel", () => {
-      down = false;
-      paused = false;
-      play();
-    });
-    rail.addEventListener("pointermove", (e) => {
-      if (!down) return;
-      rail.scrollLeft = scrollLeft - (e.pageX - startX);
-    });
-    rail.addEventListener("wheel", () => {
-      paused = true;
-      stop();
-      window.clearTimeout(rail._wowResume);
-      rail._wowResume = window.setTimeout(() => {
-        paused = false;
-        play();
-      }, 2400);
-    }, { passive: true });
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const watch = section || rail;
+    let index = Math.max(0, shots.findIndex((shot) => shot.classList.contains("is-spotlight")));
+    let timer = null;
+
+    function setSpotlight(active, focus = false) {
+      index = Math.max(0, shots.indexOf(active));
+      shots.forEach((shot, i) => {
+        const on = i === index;
+        shot.classList.toggle("is-spotlight", on);
+        shot.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      if (focus) shots[index].focus({ preventScroll: true });
+    }
+
+    function nextShot(from) {
+      let i = from;
+      for (let n = 0; n < shots.length; n++) {
+        i = (i + 1) % shots.length;
+        if (!shots[i].querySelector(".photo-ph")) return shots[i];
+      }
+      return shots[i];
+    }
 
     function stop() {
       if (timer) window.clearInterval(timer);
       timer = null;
     }
 
-    function step() {
-      if (paused || calm.matches) return;
-      const shots = rail.querySelectorAll(".wow-portable-shot");
-      if (shots.length < 2) return;
-      const max = rail.scrollWidth - rail.clientWidth;
-      if (max <= 8) return;
-      const gap = 16;
-      const width = shots[0].getBoundingClientRect().width + gap;
-      const next = rail.scrollLeft + width;
-      if (next >= max - 4) {
-        rail.scrollTo({ left: 0, behavior: calm.matches ? "auto" : "smooth" });
-      } else {
-        rail.scrollBy({ left: width, behavior: calm.matches ? "auto" : "smooth" });
-      }
-    }
-
     function play() {
-      if (calm.matches || paused) return;
+      if (calm.matches) return;
       stop();
-      timer = window.setInterval(step, 3200);
+      timer = window.setInterval(() => {
+        if (calm.matches) return;
+        setSpotlight(nextShot(index));
+      }, 2000);
     }
 
-    rail.addEventListener("mouseenter", () => {
-      paused = true;
-      stop();
+    const gate = wowAutoCycles().register(watch, play, stop);
+
+    function pauseTemporarily(ms = 5000) {
+      gate.hold();
+      window.clearTimeout(rail._portableResume);
+      rail._portableResume = window.setTimeout(() => gate.release(), ms);
+    }
+
+    shots.forEach((shot) => {
+      shot.addEventListener("click", () => {
+        setSpotlight(shot);
+        pauseTemporarily();
+      });
+      shot.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setSpotlight(shot);
+          pauseTemporarily();
+        }
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+          e.preventDefault();
+          setSpotlight(nextShot(index), true);
+          pauseTemporarily();
+        }
+        if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+          e.preventDefault();
+          let i = index;
+          for (let n = 0; n < shots.length; n++) {
+            i = (i - 1 + shots.length) % shots.length;
+            if (!shots[i].querySelector(".photo-ph")) break;
+          }
+          setSpotlight(shots[i], true);
+          pauseTemporarily();
+        }
+      });
     });
-    rail.addEventListener("mouseleave", () => {
-      paused = false;
-      play();
-    });
-    rail.addEventListener("focusin", () => {
-      paused = true;
-      stop();
-    });
+
+    rail.addEventListener("focusin", () => gate.hold());
     rail.addEventListener("focusout", (e) => {
-      if (!rail.contains(e.relatedTarget)) {
-        paused = false;
-        play();
-      }
+      if (!rail.contains(e.relatedTarget)) gate.release();
     });
 
-    if ("IntersectionObserver" in window) {
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) play();
-            else stop();
-          });
-        },
-        { threshold: 0.25 }
-      );
-      io.observe(rail);
-    } else {
-      play();
+    if (!shots[index]?.classList.contains("is-spotlight") || shots[index].querySelector(".photo-ph")) {
+      const firstReal = shots.find((shot) => !shot.querySelector(".photo-ph")) || shots[0];
+      setSpotlight(firstReal);
     }
+  }
+
+  function initAcademyPath() {
+    const root = document.querySelector("[data-aca-path]");
+    if (!root) return;
+
+    const items = [
+      {
+        deep: false,
+        bundle: false,
+        level: "Course",
+        title: "Visual Teaching Foundations",
+        price: "£19",
+        meta: "About 45–60 minutes · laptop or phone",
+        kicker: "After this course",
+        after: "Explain the visual method to a colleague and spot one place to use it tomorrow.",
+        openLabel: "Open course",
+        openHref: "learn/course/visual-teaching-foundations/index.html",
+        buyLabel: "Buy £19",
+        buyHref: "cart.html",
+        buyAttrs: {
+          id: "aca-foundations",
+          name: "Academy: Visual Teaching Foundations",
+          price: "19",
+          image: "assets/photos/mode/first-then.jpg",
+          href: "learn/course/visual-teaching-foundations/index.html",
+        },
+        accent: "var(--pink-deep)",
+      },
+      {
+        deep: false,
+        bundle: false,
+        level: "Course",
+        title: "Using Packs and the App",
+        price: "£29",
+        meta: "About 45–60 minutes · laptop or phone",
+        kicker: "After this course",
+        after: "Run one Focus or First & Then board with Packs and the App as one system.",
+        openLabel: "Open course",
+        openHref: "learn/course/using-pixtolearn-packs-and-app/index.html",
+        buyLabel: "Buy £29",
+        buyHref: "cart.html",
+        buyAttrs: {
+          id: "aca-packs-app",
+          name: "Academy: Using PixtoLearn Packs and App",
+          price: "29",
+          image: "assets/photos/hero-app.jpg",
+          href: "learn/course/using-pixtolearn-packs-and-app/index.html",
+        },
+        accent: "var(--pink-deep)",
+      },
+      {
+        deep: false,
+        bundle: false,
+        level: "Course",
+        title: "Teaching Swimming with Visuals",
+        price: "£29",
+        meta: "About 45–60 minutes · laptop or phone",
+        kicker: "After this course",
+        after: "Place three poolside visuals and coach one skill step without extra talk.",
+        openLabel: "Open course",
+        openHref: "learn/course/teaching-swimming-visual-systems/index.html",
+        buyLabel: "Buy £29",
+        buyHref: "cart.html",
+        buyAttrs: {
+          id: "aca-swimming",
+          name: "Academy: Teaching Swimming with Visual Systems",
+          price: "29",
+          image: "assets/photos/mode/session-match.jpg",
+          href: "learn/course/teaching-swimming-visual-systems/index.html",
+        },
+        accent: "var(--pink-deep)",
+      },
+      {
+        deep: false,
+        bundle: false,
+        level: "Course",
+        title: "Everyday Routines for Toddlers",
+        price: "£29",
+        meta: "About 45–60 minutes · laptop or phone",
+        kicker: "After this course",
+        after: "Set one home transition at child height with WOW cards.",
+        openLabel: "Open course",
+        openHref: "learn/course/everyday-visual-routines-toddlers/index.html",
+        buyLabel: "Buy £29",
+        buyHref: "cart.html",
+        buyAttrs: {
+          id: "aca-toddlers",
+          name: "Academy: Everyday Visual Routines for Toddlers",
+          price: "29",
+          image: "assets/icons/audience/families.jpg",
+          href: "learn/course/everyday-visual-routines-toddlers/index.html",
+        },
+        accent: "var(--pink-deep)",
+      },
+      {
+        deep: false,
+        bundle: true,
+        level: "Best value",
+        title: "All four courses",
+        price: "£79",
+        meta: "Full Launch set · team licence £249 for 10 seats",
+        kicker: "After the bundle",
+        after: "Method, tools, pool and home — one shared language across Packs, WOW and the App.",
+        openLabel: "Buy pathway",
+        openHref: "cart.html",
+        buyLabel: "Team £249",
+        buyHref: "cart.html",
+        openBuyAttrs: {
+          id: "aca-pathway",
+          name: "Academy: Launch Pathway (4 courses)",
+          price: "79",
+          image: "assets/photos/academy-hero.jpg",
+          href: "learn/index.html",
+        },
+        buyAttrs: {
+          id: "aca-team",
+          name: "Academy: Team licence (10 seats / 1 year)",
+          price: "249",
+          image: "assets/photos/workshop.jpg",
+          href: "contact.html?interest=academy-team",
+        },
+        accent: "var(--pink-deep)",
+      },
+      {
+        deep: true,
+        bundle: false,
+        level: "Specialisation",
+        title: "Neurodiversity Visual Specialist",
+        price: "£199",
+        meta: "Full pathway · team £399",
+        kicker: "After this specialisation",
+        after: "Design and sustain a shared visual system across home, school, therapy, community and pool.",
+        openLabel: "Open",
+        openHref: "learn/course/neurodiversity-visual-specialist/index.html",
+        buyLabel: "Buy £199",
+        buyHref: "cart.html",
+        buyAttrs: {
+          id: "aca-neuro-specialist",
+          name: "Academy: Neurodiversity Visual Specialist",
+          price: "199",
+          image: "assets/icons/audience/occupational-therapist.jpg",
+          href: "learn/course/neurodiversity-visual-specialist/index.html",
+        },
+        accent: "var(--slate-deep)",
+      },
+      {
+        deep: true,
+        bundle: false,
+        level: "Specialisation",
+        title: "Aquatic Pathway I + II",
+        price: "£199",
+        meta: "PixtoLearn with clubSENsational · team £399",
+        kicker: "After this specialisation",
+        after: "Run deeper aquatic pedagogy and skills progression with clubSENsational.",
+        openLabel: "Open",
+        openHref: "learn/course/aquatic-specialist-pathway/index.html",
+        buyLabel: "Buy £199",
+        buyHref: "cart.html",
+        buyAttrs: {
+          id: "aca-aquatic-specialist",
+          name: "Academy: Aquatic Pathway (PixtoLearn with clubSENsational)",
+          price: "199",
+          image: "assets/photos/mode/session-logo-back.jpg",
+          href: "learn/course/aquatic-specialist-pathway/index.html",
+        },
+        accent: "var(--slate-deep)",
+      },
+      {
+        deep: true,
+        bundle: false,
+        level: "Coming next",
+        title: "Older Adults & Dementia",
+        price: "TBA",
+        meta: "Outline available · price with release",
+        kicker: "Coming next",
+        after: "Preview calm visual routines for later-life care.",
+        openLabel: "View outline",
+        openHref: "learn/curriculum/dementia-older-adults-outline.html",
+        buyLabel: "Contact",
+        buyHref: "contact.html?interest=academy",
+        buyAttrs: null,
+        accent: "var(--slate-deep)",
+      },
+    ];
+
+    const stops = Array.from(root.querySelectorAll(".aca-path-stop"));
+    const panel = root.querySelector("[data-aca-path-panel]");
+    const body = root.querySelector("[data-aca-path-body]");
+    const levelEl = root.querySelector("[data-aca-path-level]");
+    const titleEl = root.querySelector("[data-aca-path-title]");
+    const priceEl = root.querySelector("[data-aca-path-price]");
+    const metaEl = root.querySelector("[data-aca-path-meta]");
+    const kickerEl = root.querySelector("[data-aca-path-kicker]");
+    const afterEl = root.querySelector("[data-aca-path-after]");
+    const openEl = root.querySelector("[data-aca-path-open]");
+    const buyEl = root.querySelector("[data-aca-path-buy]");
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = 0;
+    let timer = null;
+    let userLocked = false;
+    let spyPaused = false;
+    let scrollIdle = null;
+    let clickGuardUntil = 0;
+    const courseCount = 5;
+    const CYCLE_MS = 2500;
+
+    function setBuyAttrs(el, attrs, asBuy) {
+      if (!el) return;
+      if (!attrs) {
+        el.removeAttribute("data-aca-buy");
+        el.removeAttribute("data-product-id");
+        el.removeAttribute("data-product-name");
+        el.removeAttribute("data-product-price");
+        el.removeAttribute("data-product-image");
+        el.removeAttribute("data-product-href");
+        return;
+      }
+      if (asBuy) el.setAttribute("data-aca-buy", "");
+      else el.removeAttribute("data-aca-buy");
+      el.setAttribute("data-product-id", attrs.id);
+      el.setAttribute("data-product-name", attrs.name);
+      el.setAttribute("data-product-price", attrs.price);
+      el.setAttribute("data-product-image", attrs.image);
+      el.setAttribute("data-product-href", attrs.href);
+    }
+
+    function apply(item) {
+      if (levelEl) levelEl.textContent = item.level;
+      if (titleEl) titleEl.textContent = item.title;
+      if (priceEl) priceEl.textContent = item.price;
+      if (metaEl) metaEl.textContent = item.meta;
+      if (kickerEl) kickerEl.textContent = item.kicker;
+      if (afterEl) afterEl.textContent = item.after;
+      if (openEl) {
+        openEl.textContent = item.openLabel;
+        openEl.setAttribute("href", item.openHref);
+        if (item.openBuyAttrs) {
+          openEl.setAttribute("data-aca-buy", "");
+          setBuyAttrs(openEl, item.openBuyAttrs, true);
+        } else {
+          openEl.removeAttribute("data-aca-buy");
+          setBuyAttrs(openEl, null, false);
+        }
+      }
+      if (buyEl) {
+        buyEl.textContent = item.buyLabel;
+        buyEl.setAttribute("href", item.buyHref);
+        setBuyAttrs(buyEl, item.buyAttrs, Boolean(item.buyAttrs));
+      }
+      if (panel) {
+        panel.style.setProperty("--panel-accent", item.accent);
+        panel.classList.toggle("is-deep", item.deep);
+      }
+    }
+
+    function show(next, fromUser) {
+      index = ((next % items.length) + items.length) % items.length;
+      if (fromUser) userLocked = items[index].deep || items[index].bundle;
+
+      stops.forEach((stop, i) => {
+        stop.classList.toggle("is-active", i === index);
+      });
+
+      const item = items[index];
+      if (!body || calm.matches) {
+        apply(item);
+        return;
+      }
+
+      body.classList.add("is-swap");
+      window.setTimeout(() => {
+        apply(item);
+        body.classList.remove("is-swap");
+      }, 160);
+    }
+
+    function stopAuto() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function playAuto() {
+      if (calm.matches || userLocked || spyPaused) return;
+      stopAuto();
+      timer = window.setInterval(() => {
+        if (userLocked || spyPaused) {
+          stopAuto();
+          return;
+        }
+        show((index + 1) % courseCount, false);
+      }, CYCLE_MS);
+    }
+
+    function sectionInView() {
+      const rect = root.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      return rect.top < vh * 0.85 && rect.bottom > vh * 0.2;
+    }
+
+    function spyFromScroll() {
+      if (!sectionInView()) return;
+      if (Date.now() < clickGuardUntil) return;
+
+      const focusY = (window.innerHeight || 0) * 0.42;
+      let best = index;
+      let bestDist = Infinity;
+
+      stops.forEach((stop, i) => {
+        const rect = stop.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > (window.innerHeight || 0)) return;
+        const mid = rect.top + rect.height * 0.5;
+        const dist = Math.abs(mid - focusY);
+        if (dist < bestDist) {
+          bestDist = dist;
+          best = i;
+        }
+      });
+
+      if (best !== index) {
+        show(best, false);
+        if (items[best].deep) {
+          userLocked = true;
+          stopAuto();
+        }
+      }
+    }
+
+    function onScroll() {
+      spyPaused = true;
+      stopAuto();
+      spyFromScroll();
+      if (scrollIdle) window.clearTimeout(scrollIdle);
+      scrollIdle = window.setTimeout(() => {
+        spyPaused = false;
+        if (!userLocked) playAuto();
+      }, 900);
+    }
+
+    root.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-aca-path-i]");
+      if (!btn || !root.contains(btn)) return;
+      const next = Number(btn.getAttribute("data-aca-path-i"));
+      clickGuardUntil = Date.now() + 700;
+      show(next, true);
+      const stop = stops[next];
+      if (stop?.scrollIntoView) {
+        stop.scrollIntoView({
+          block: "nearest",
+          behavior: calm.matches ? "auto" : "smooth",
+        });
+      }
+      if (items[index].deep) stopAuto();
+      else playAuto();
+    });
+
+    root.addEventListener("mouseenter", stopAuto);
+    root.addEventListener("mouseleave", () => {
+      if (!userLocked && !spyPaused) playAuto();
+    });
+    root.addEventListener("focusin", stopAuto);
+    root.addEventListener("focusout", (e) => {
+      if (!root.contains(e.relatedTarget) && !userLocked && !spyPaused) playAuto();
+    });
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", spyFromScroll, { passive: true });
+
+    const hash = (location.hash || "").toLowerCase();
+    let start = 0;
+    if (
+      hash === "#specialisations" ||
+      hash === "#specialist" ||
+      hash === "#pathways"
+    ) {
+      start = 5;
+      userLocked = true;
+    } else if (hash === "#cobrand") {
+      start = 6;
+      userLocked = true;
+    } else if (hash === "#launch" || hash === "#path") {
+      start = 0;
+    }
+
+    show(start, false);
+    if (!userLocked) playAuto();
   }
 
   function initModeStage() {
