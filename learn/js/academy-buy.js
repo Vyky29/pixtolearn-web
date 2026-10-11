@@ -1,4 +1,14 @@
 (function () {
+  var ACADEMY_LOCKED = true;
+  try {
+    if (new URLSearchParams(location.search).get("preview") === "1") {
+      /* allow buy buttons in preview */
+    } else if (ACADEMY_LOCKED) {
+      location.replace("/academy.html");
+      return;
+    }
+  } catch (_) {}
+
   function cartHref() {
     var path = location.pathname || "";
     if (path.indexOf("/learn/") !== -1) return "/cart.html";

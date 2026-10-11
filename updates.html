@@ -9,22 +9,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/site.css?v=academy-lock-1" />
 </head>
-<body>
+<body class="ds-ui">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="PixtoLearn home">
+      <a class="brand" href="home.html" aria-label="PixtoLearn home">
         <img src="assets/brand/logo.png" alt="PixtoLearn" />
       </a>
       <ul class="nav-links">
         <li><a href="swimming.html" data-nav="swimming.html">Swimming</a></li>
         <li><a href="routines.html" data-nav="routines.html">Routines</a></li>
         <li><a href="app.html" data-nav="app.html">App</a></li>
-<li><a href="updates.html" data-nav="updates.html">Updates</a></li>
+        <li><a href="academy.html" data-nav="academy.html">Academy</a></li>
+        <li><a href="updates.html" data-nav="updates.html">Updates</a></li>
         <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
-        <li class="nav-extra"><a href="about.html" data-nav="about.html">About</a></li>
       </ul>
       <div class="nav-icons">
         <a class="nav-icon" href="shop.html" aria-label="Shop basket">
@@ -56,11 +56,11 @@
       <div class="hero-shade"></div>
     </div>
     <div class="wrap hero-content reveal">
-      <p class="eyebrow" style="color:#b7ece7">Visual learning in action</p>
+      <p class="eyebrow">Visual learning in action</p>
       <h1>Learning · Impact · Resources</h1>
       <p class="lede">Practical insights, real impact, and visual learning tools for everyday learning.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="shop.html">Explore our packs</a>
+        <a class="btn btn-ghost btn-ghost-light" href="shop.html">Explore our packs</a>
         <a class="btn btn-ghost btn-ghost-light" href="app.html">Discover PixtoLearn App</a>
       </div>
     </div>
@@ -69,11 +69,8 @@
   <section>
     <div class="wrap" data-updates>
       <div class="section-head reveal">
-        <p class="eyebrow">Browse by theme</p>
-        <h2>Learning. Impact. Resources.</h2>
-        <p class="lede">Three clear homes for our stories. Pick a lane, or scroll everything below.</p>
+        <p class="eyebrow">Journal</p>
       </div>
-
       <div class="update-cats reveal">
         <a class="update-cat is-pink" href="#learning" data-cat-card="learning">
           <img src="assets/photos/students.jpg" alt="" />
@@ -84,37 +81,37 @@
           <span class="update-cat-label">Impact</span>
         </a>
         <a class="update-cat is-slate" href="#resources" data-cat-card="resources">
-          <img src="assets/photos/hands-cards.png" alt="" />
+          <img src="assets/photos/wow-lanyard.jpg" alt="" />
           <span class="update-cat-label">Resources</span>
         </a>
       </div>
-
-      <p class="updates-filter-note">
-        <a href="updates.html">Show all</a>
-      </p>
 
       <div class="update-block" id="learning" data-cat-section="learning">
         <div class="update-block-head">
           <span class="blog-cat-pill is-learning">Learning</span>
           <h3>Ideas you can teach with</h3>
         </div>
-        <div class="post-grid">
-          <a class="post reveal" href="blog-visual-learning-101.html" data-post-cat="learning">
-            <img src="assets/photos/students.jpg" alt="" />
-            <div class="post-body">
+        <div class="update-list">
+          <a class="update-row reveal" href="blog-visual-learning-101.html" data-post-cat="learning">
+            <div class="update-row-media">
+              <img src="assets/photos/students.jpg" alt="" />
+            </div>
+            <div class="update-row-body">
               <time datetime="2024-09-25">25 Sep 2024</time>
-              <h3>Visual learning 101</h3>
-              <p class="muted">Did you know that 65% of people are visual learners? How visuals help children, adults, and neurodiverse learners.</p>
-              <span class="linkish">Read more →</span>
+              <h3>Why Visual Learning Works — For Everyone</h3>
+              <p>That gap between hearing and “getting it” is what visual learning closes — for every age and every brain.</p>
+              <span class="update-row-cta">Read more</span>
             </div>
           </a>
-          <a class="post reveal" href="blog-breaking-language-barriers.html" data-post-cat="learning">
-            <img src="assets/photos/ghana-1.jpg" alt="" />
-            <div class="post-body">
+          <a class="update-row reveal" href="blog-breaking-language-barriers.html" data-post-cat="learning">
+            <div class="update-row-media">
+              <img src="assets/photos/ghana-1.jpg" alt="" />
+            </div>
+            <div class="update-row-body">
               <time datetime="2024-07-25">25 Jul 2024</time>
               <h3>Breaking language barriers</h3>
-              <p class="muted">How visual tools help travellers, teachers, and learners connect when words are not enough.</p>
-              <span class="linkish">Read more →</span>
+              <p>How visual tools help travellers, teachers, and learners connect when words are not enough.</p>
+              <span class="update-row-cta">Read more</span>
             </div>
           </a>
         </div>
@@ -125,14 +122,16 @@
           <span class="blog-cat-pill is-impact">Impact</span>
           <h3>Stories from the field</h3>
         </div>
-        <div class="post-grid">
-          <a class="post reveal" href="blog-ghana-swimming.html" data-post-cat="impact">
-            <img src="assets/photos/ghana-2.jpg" alt="" />
-            <div class="post-body">
+        <div class="update-list">
+          <a class="update-row reveal" href="blog-ghana-swimming.html" data-post-cat="impact">
+            <div class="update-row-media">
+              <img src="assets/photos/ghana-2.jpg" alt="" />
+            </div>
+            <div class="update-row-body">
               <time datetime="2024-08-27">27 Aug 2024</time>
               <h3>PixtoLearn Swimming in Larabanga, Ghana</h3>
-              <p class="muted">A memorable journey introducing waterproof visual swimming support at Bambenninye Community School.</p>
-              <span class="linkish">Read more →</span>
+              <p>A memorable journey introducing waterproof visual swimming support at Bambenninye Community School.</p>
+              <span class="update-row-cta">Read more</span>
             </div>
           </a>
         </div>
@@ -143,14 +142,27 @@
           <span class="blog-cat-pill is-resources">Resources</span>
           <h3>Tools to use this week</h3>
         </div>
-        <div class="post-grid">
-          <a class="post reveal" href="printable-trial.html" data-post-cat="resources">
-            <img src="assets/photos/hands-cards.png" alt="" />
-            <div class="post-body">
+        <div class="update-list">
+          <a class="update-row reveal" href="blog-wow-examples.html" data-post-cat="resources">
+            <div class="update-row-media">
+              <img src="assets/packs/keyring/3/3_brushtopteeth.png" alt="" />
+            </div>
+            <div class="update-row-body">
+              <time>7 Aug 2026</time>
+              <h3>Using WOW cards</h3>
+              <p>Words, Objects and Ways across six everyday moments — from brushing teeth to climbing ready.</p>
+              <span class="update-row-cta">Read more</span>
+            </div>
+          </a>
+          <a class="update-row reveal" href="printable-trial.html" data-post-cat="resources">
+            <div class="update-row-media">
+              <img src="assets/photos/hands-cards.png" alt="" />
+            </div>
+            <div class="update-row-body">
               <time>Free sample</time>
               <h3>Swimming printable trial</h3>
-              <p class="muted">Try a free swimming printable and see how visuals support clearer poolside sessions.</p>
-              <span class="linkish">Get the trial →</span>
+              <p>Try a free swimming printable and see how visuals support clearer poolside sessions.</p>
+              <span class="update-row-cta">Get the trial</span>
             </div>
           </a>
         </div>
@@ -164,7 +176,7 @@
     <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <a class="brand footer-logo" href="index.html" aria-label="PixtoLearn home">
+        <a class="brand footer-logo" href="home.html" aria-label="PixtoLearn home">
           <img src="assets/brand/logo.png" alt="PixtoLearn" />
         </a>
         <p class="footer-tagline">Real-life learning, powered by visual aids.</p>
@@ -184,7 +196,7 @@
           </a>
         </div>
         <form class="footer-news" data-footer-newsletter>
-          <span>Subscribe for product and app updates</span>
+          <span>Subscribe for product and Academy updates</span>
           <div class="footer-news-row">
             <input type="email" name="email" placeholder="Your email" required autocomplete="email" aria-label="Email address" />
             <button class="btn btn-primary" type="submit">Subscribe</button>
@@ -198,14 +210,15 @@
           <li><a href="swimming.html">Swimming</a></li>
           <li><a href="routines.html">Routines</a></li>
           <li><a href="app.html">App</a></li>
-<li><a href="updates.html">Updates</a></li>
-                    <li><a href="shop.html">Shop</a></li>
+          <li><a href="academy.html">Academy</a></li>
+          <li><a href="updates.html">Updates</a></li>
+          <li><a href="shop.html">Shop</a></li>
         </ul>
       </div>
       <div>
         <h3>Care</h3>
         <ul>
-          <li><a href="about.html">About us</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="privacy.html">Privacy policy</a></li>
           <li><a href="cookies.html">Cookies policy</a></li>
@@ -220,7 +233,7 @@
     </div>
   </footer>
   <script src="js/cart.js"></script>
-  <script src="js/site.js?v=4"></script>
+  <script src="js/site.js?v=academy-lock-1"></script>
   <script src="js/blog.js"></script>
 </body>
 </html>

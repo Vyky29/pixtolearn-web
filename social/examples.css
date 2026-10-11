@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("fonts/bricolage.woff2") format("woff2");
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("fonts/figtree.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --pink: #d53863;
+  --amber: #f4b83f;
+  --slate: #88b5c2;
+  --ink: #14242b;
+  --foam: #f4f8f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  background: var(--foam);
+}
+
+.frame {
+  position: relative;
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.frame.foam { background: var(--foam); }
+
+.wash {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+.wash.pink {
+  width: 420px; height: 420px;
+  background: #f3c3d0;
+  top: -80px; right: -90px;
+}
+.wash.amber {
+  width: 340px; height: 340px;
+  background: #f8e3b4;
+  left: -120px; bottom: 80px;
+}
+.wash.slate {
+  width: 280px; height: 280px;
+  background: #d5e6ec;
+  right: 40px; bottom: -40px;
+}
+
+.logo {
+  position: absolute;
+  z-index: 3;
+  width: 280px;
+  height: auto;
+  top: 48px;
+  left: 48px;
+}
+.logo-sm { width: 230px; position: static; }
+.logo-center {
+  width: 300px;
+  left: 50%;
+  top: 56px;
+  transform: translateX(-50%);
+}
+.logo-chip {
+  width: 250px;
+  top: 40px;
+  left: 40px;
+  background: rgba(244, 248, 249, 0.92);
+  border-radius: 28px;
+  padding: 14px 18px 10px;
+}
+
+.blob {
+  position: absolute;
+  background: #fff center / cover no-repeat;
+  box-shadow: 0 24px 60px rgba(20, 36, 43, 0.16);
+}
+.photo.cards {
+  width: 690px;
+  height: 860px;
+  right: 36px;
+  top: 250px;
+  border-radius: 220px 160px 260px 180px;
+  background-image: url("../assets/photos/mode/product-three-cards.jpg");
+  background-position: center 40%;
+}
+.stage-photo {
+  position: relative;
+  width: 920px;
+  height: 740px;
+  right: auto;
+  top: auto;
+  margin: 0 auto;
+  border-radius: 200px 200px 64px 64px;
+}
+
+.copy {
+  position: absolute;
+  z-index: 3;
+}
+.copy.left { left: 56px; bottom: 88px; width: 520px; }
+.copy.center {
+  left: 0; right: 0;
+  top: 340px;
+  text-align: center;
+}
+.stage {
+  position: absolute;
+  left: 0; right: 0;
+  top: 520px;
+  display: flex;
+  justify-content: center;
+}
+
+.kicker {
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+.kicker.light { color: #d5e6ec; }
+
+h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: 92px;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+}
+h1.light { color: var(--foam); font-size: 84px; }
+
+.full {
+  position: absolute;
+  inset: 0;
+  background: center / cover no-repeat;
+}
+.full.float {
+  background-image: url("../assets/photos/mode/product-float.jpg");
+  background-position: center 42%;
+  background-size: cover;
+}
+.sticker {
+  position: absolute;
+  z-index: 3;
+  left: 36px;
+  top: 36px;
+  width: 460px;
+  padding: 28px 32px 26px;
+  background: var(--foam);
+  border-radius: 40px 100px 40px 72px;
+  box-shadow: 0 18px 50px rgba(2, 2, 3, 0.18);
+}
+.full.sequence {
+  background-image: url("../assets/photos/mode/first-then.jpg");
+  background-position: 8% 48%;
+}
+.full.session {
+  background-image: url("../assets/photos/mode/session-match.jpg");
+  background-position: center 18%;
+}
+
+.sticker h1 { font-size: 72px; margin-top: 12px; }
+
+.panel {
+  position: absolute;
+  z-index: 3;
+  right: 0; top: 0; bottom: 0;
+  width: 440px;
+  padding: 56px 44px 64px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--foam);
+  border-radius: 220px 0 0 220px;
+  box-shadow: -16px 0 40px rgba(20, 36, 43, 0.12);
+}
+.panel .logo-sm { margin-bottom: auto; }
+.panel h1 { font-size: 96px; }
+
+.ribbon {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 120px 64px 64px;
+  background: linear-gradient(180deg, rgba(244,248,249,0) 0%, rgba(244,248,249,0.92) 42%, #f4f8f9 100%);
+  border-radius: 180px 180px 0 0;
+}
+.ribbon h1 { font-size: 108px; }

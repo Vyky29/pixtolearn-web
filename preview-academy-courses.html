@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview | Academy path E — polished</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=academy-e-polished-1" />
+  <style>
+    .aca-prev {
+      background: #ece8e1;
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    .aca-prev-bar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(20, 36, 43, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .aca-prev-bar a {
+      font-weight: 650;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .aca-prev-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+    }
+
+    .aca-prev-intro {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 1.35rem auto 1.15rem;
+      padding: 1.1rem 1.2rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(20, 36, 43, 0.08);
+    }
+
+    .aca-prev-intro h1 {
+      margin: 0 0 0.4rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      letter-spacing: -0.03em;
+    }
+
+    .aca-prev-intro p {
+      margin: 0;
+      max-width: 62ch;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    .aca-prev-frame {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0 auto 2.5rem;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(20, 36, 43, 0.1);
+      box-shadow: 0 18px 48px rgba(20, 36, 43, 0.08);
+      background: #fff;
+    }
+
+    .aca-prev-cap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      justify-content: space-between;
+      padding: 0.7rem 1.1rem;
+      background: rgba(20, 36, 43, 0.04);
+      border-bottom: 1px solid rgba(20, 36, 43, 0.08);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .aca-prev-cap strong {
+      color: var(--pink-deep);
+      font-weight: 800;
+    }
+
+    /* —— Polished path —— */
+    .opt-e {
+      padding: clamp(2.75rem, 6vw, 4.25rem) 0 clamp(3rem, 6vw, 4.5rem);
+      background:
+        radial-gradient(ellipse 55% 48% at 0% 0%, rgba(208, 56, 96, 0.07), transparent 52%),
+        radial-gradient(ellipse 45% 50% at 100% 30%, rgba(95, 138, 154, 0.1), transparent 50%),
+        linear-gradient(180deg, #f7f4ef 0%, #f0ebe3 100%);
+    }
+
+    .opt-e .section-head {
+      max-width: 40rem;
+      margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .opt-e-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(17rem, 0.88fr);
+      gap: clamp(1.5rem, 3.5vw, 2.5rem);
+      align-items: start;
+    }
+
+    .opt-e-path {
+      position: relative;
+      padding: 0.35rem 0 0.5rem 0.15rem;
+    }
+
+    .opt-e-spine {
+      position: absolute;
+      left: 1.28rem;
+      top: 2.4rem;
+      bottom: 1.6rem;
+      width: 3px;
+      border-radius: 999px;
+      background: linear-gradient(
+        180deg,
+        rgba(208, 56, 96, 0.55) 0%,
+        rgba(208, 56, 96, 0.28) 42%,
+        rgba(95, 138, 154, 0.25) 55%,
+        rgba(95, 138, 154, 0.6) 100%
+      );
+      opacity: 0.9;
+    }
+
+    .opt-e-spine::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      opacity: 0.5;
+    }
+
+    .opt-e-group-label {
+      margin: 0 0 0.65rem 3.15rem;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--slate-deep);
+    }
+
+    .opt-e-bridge {
+      display: grid;
+      gap: 0.35rem;
+      margin: 1.35rem 0 1rem 3.15rem;
+      max-width: 22rem;
+    }
+
+    .opt-e-bridge-line {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(208, 56, 96, 0.35), rgba(95, 138, 154, 0.2), transparent);
+    }
+
+    .opt-e-bridge span {
+      font-size: 0.78rem;
+      font-weight: 650;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    .opt-e-group-label.is-deep {
+      margin-top: 0.35rem;
+      color: var(--pink-deep);
+    }
+
+    .opt-e-stops {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .opt-e-stops.is-courses {
+      gap: 0.28rem;
+    }
+
+    .opt-e-stops.is-deep {
+      gap: 0.55rem;
+      margin-top: 0.15rem;
+    }
+
+    .opt-e-stop {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    .opt-e-stop button {
+      appearance: none;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+      gap: 0.55rem 0.75rem;
+      align-items: center;
+      margin: 0;
+      padding: 0.62rem 0.9rem 0.62rem 0;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      border-radius: 14px;
+      transition: background 0.28s ease, transform 0.28s ease;
+    }
+
+    .opt-e-stop.is-deep button {
+      padding: 0.85rem 0.9rem 0.85rem 0;
+    }
+
+    .opt-e-stop button:hover {
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .opt-e-stop.is-active button {
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 10px 28px rgba(20, 36, 43, 0.06);
+    }
+
+    .opt-e-stop button:focus-visible {
+      outline: 2px solid var(--pink-deep);
+      outline-offset: 2px;
+    }
+
+    .opt-e-node-wrap {
+      display: grid;
+      place-items: center;
+      width: 2.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .opt-e-node {
+      width: 0.95rem;
+      height: 0.95rem;
+      border-radius: 999px;
+      background: #fff;
+      border: 2.5px solid rgba(208, 56, 96, 0.4);
+      box-shadow: 0 0 0 5px rgba(247, 244, 239, 0.95);
+      transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .opt-e-stop.is-active .opt-e-node {
+      background: var(--pink-deep);
+      border-color: var(--pink-deep);
+      transform: scale(1.28);
+      box-shadow:
+        0 0 0 5px rgba(247, 244, 239, 0.95),
+        0 0 0 10px rgba(208, 56, 96, 0.14);
+    }
+
+    .opt-e-stop.is-bundle .opt-e-node {
+      width: 1.15rem;
+      height: 1.15rem;
+      border-color: rgba(208, 56, 96, 0.55);
+      border-style: dashed;
+    }
+
+    .opt-e-stop.is-bundle.is-active .opt-e-node {
+      border-style: solid;
+      background: var(--pink-deep);
+    }
+
+    .opt-e-stop.is-deep .opt-e-node {
+      width: 1.35rem;
+      height: 1.35rem;
+      border-width: 3.5px;
+      border-color: rgba(95, 138, 154, 0.55);
+    }
+
+    .opt-e-stop.is-deep.is-active .opt-e-node {
+      background: var(--slate-deep);
+      border-color: var(--slate-deep);
+      box-shadow:
+        0 0 0 5px rgba(247, 244, 239, 0.95),
+        0 0 0 11px rgba(95, 138, 154, 0.16);
+      transform: scale(1.18);
+    }
+
+    .opt-e-stop-copy {
+      display: grid;
+      gap: 0.12rem;
+      min-width: 0;
+    }
+
+    .opt-e-stop-tag {
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate-deep);
+    }
+
+    .opt-e-stop.is-active .opt-e-stop-tag {
+      color: var(--pink-deep);
+    }
+
+    .opt-e-stop.is-deep.is-active .opt-e-stop-tag {
+      color: var(--slate-deep);
+    }
+
+    .opt-e-stop-name {
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      line-height: 1.18;
+    }
+
+    .opt-e-stop.is-deep .opt-e-stop-name {
+      font-size: 1.14rem;
+      font-weight: 780;
+    }
+
+    .opt-e-stop-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
+      opacity: 0.62;
+      padding-right: 0.15rem;
+    }
+
+    .opt-e-stop.is-active .opt-e-stop-price {
+      opacity: 1;
+    }
+
+    .opt-e-stop.is-deep .opt-e-stop-price {
+      font-size: 1.08rem;
+    }
+
+    /* Panel */
+    .opt-e-panel {
+      position: sticky;
+      top: 4.75rem;
+      display: grid;
+      gap: 0.9rem;
+      align-content: start;
+      padding: 1.35rem 1.3rem 1.3rem;
+      border-radius: 20px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(245, 240, 233, 0.94));
+      border: 1px solid rgba(20, 36, 43, 0.1);
+      box-shadow:
+        0 18px 44px rgba(20, 36, 43, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      min-height: 20rem;
+      overflow: hidden;
+    }
+
+    .opt-e-panel::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--panel-accent, var(--pink-deep));
+      opacity: 0.85;
+      transition: background 0.35s ease;
+    }
+
+    .opt-e-panel {
+      position: sticky;
+    }
+
+    .opt-e-panel-level {
+      margin: 0;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--panel-accent, var(--pink-deep));
+    }
+
+    .opt-e-panel-body {
+      display: grid;
+      gap: 0.85rem;
+      transition: opacity 0.28s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .opt-e-panel-body.is-swap {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .opt-e-panel h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 2.8vw, 1.85rem);
+      font-weight: 780;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      max-width: 14ch;
+    }
+
+    .opt-e-panel.is-deep h3 {
+      max-width: 16ch;
+      font-size: clamp(1.5rem, 3vw, 1.95rem);
+    }
+
+    .opt-e-panel-price {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+
+    .opt-e-panel.is-deep .opt-e-panel-price {
+      font-size: 2rem;
+    }
+
+    .opt-e-panel-meta {
+      margin: -0.25rem 0 0;
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+    }
+
+    .aca-detail {
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(20, 36, 43, 0.08);
+    }
+
+    .aca-detail-kicker {
+      display: block;
+      margin: 0 0 0.35rem;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--panel-accent, var(--pink-deep));
+    }
+
+    .aca-detail p {
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.45;
+      color: var(--ink-soft);
+      min-height: 3.1em;
+    }
+
+    .opt-e-panel .btn-row {
+      margin-top: 0.15rem;
+    }
+
+    .opt-e-hint {
+      margin: 1.25rem 0 0 3.15rem;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+
+    @media (max-width: 860px) {
+      .opt-e-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .opt-e-panel {
+        position: relative;
+        top: auto;
+        min-height: 0;
+      }
+
+      .opt-e-panel::before {
+        width: 100%;
+        height: 4px;
+        bottom: auto;
+        right: 0;
+      }
+
+      .opt-e-hint {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .opt-e-stop-name {
+        font-size: 0.98rem;
+      }
+
+      .opt-e-stop.is-deep .opt-e-stop-name {
+        font-size: 1.05rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .opt-e-node,
+      .opt-e-stop button,
+      .opt-e-panel-body {
+        transition: none;
+      }
+
+      .opt-e-panel-body.is-swap {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body class="aca-prev ds-ui">
+  <div class="aca-prev-bar">
+    <span class="aca-prev-label">Preview · Option E polished</span>
+    <span>2.5s cycle · scroll-spy</span>
+    <a href="academy.html">← Live Academy</a>
+  </div>
+
+  <div class="aca-prev-intro">
+    <h1>Polished E — 2.5s cycle + scroll-spy</h1>
+    <p>
+      Courses auto-advance every 2.5 seconds. Scroll the page with the path in view &mdash;
+      the active stop follows what&rsquo;s nearest the middle of the screen. Tap still wins.
+    </p>
+  </div>
+
+  <div class="aca-prev-frame">
+    <div class="aca-prev-cap">
+      <span><strong>Proposed</strong> · Live Academy candidate</span>
+      <span>Start → deepen on one path</span>
+    </div>
+
+    <section class="opt-e" data-opt-e aria-label="Academy path">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Academy</p>
+          <h2>Start with a course. Go deeper when you&rsquo;re ready.</h2>
+          <p class="lede">One path for Academy &mdash; short courses first, specialisations further along.</p>
+        </div>
+
+        <div class="opt-e-layout">
+          <div class="opt-e-path">
+            <div class="opt-e-spine" aria-hidden="true"></div>
+
+            <p class="opt-e-group-label">Courses</p>
+            <ul class="opt-e-stops is-courses">
+              <li class="opt-e-stop is-active">
+                <button type="button" data-e="0">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">Method</span>
+                    <span class="opt-e-stop-name">Visual Teaching Foundations</span>
+                  </span>
+                  <span class="opt-e-stop-price">&pound;19</span>
+                </button>
+              </li>
+              <li class="opt-e-stop">
+                <button type="button" data-e="1">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">Tools</span>
+                    <span class="opt-e-stop-name">Using Packs and the App</span>
+                  </span>
+                  <span class="opt-e-stop-price">&pound;29</span>
+                </button>
+              </li>
+              <li class="opt-e-stop">
+                <button type="button" data-e="2">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">Swimming</span>
+                    <span class="opt-e-stop-name">Teaching Swimming with Visuals</span>
+                  </span>
+                  <span class="opt-e-stop-price">&pound;29</span>
+                </button>
+              </li>
+              <li class="opt-e-stop">
+                <button type="button" data-e="3">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">WOW</span>
+                    <span class="opt-e-stop-name">Everyday Routines for Toddlers</span>
+                  </span>
+                  <span class="opt-e-stop-price">&pound;29</span>
+                </button>
+              </li>
+              <li class="opt-e-stop is-bundle">
+                <button type="button" data-e="4">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">Best value</span>
+                    <span class="opt-e-stop-name">All four courses</span>
+                  </span>
+                  <span class="opt-e-stop-price">&pound;79</span>
+                </button>
+              </li>
+            </ul>
+
+            <div class="opt-e-bridge" aria-hidden="true">
+              <div class="opt-e-bridge-line"></div>
+              <span>Go deeper when you&rsquo;re ready</span>
+            </div>
+
+            <p class="opt-e-group-label is-deep">Specialisations</p>
+            <ul class="opt-e-stops is-deep">
+              <li class="opt-e-stop is-deep">
+                <button type="button" data-e="5">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">Specialisation</span>
+                    <span class="opt-e-stop-name">Neurodiversity Visual Specialist</span>
+                  </span>
+                  <span class="opt-e-stop-price">&pound;199</span>
+                </button>
+              </li>
+              <li class="opt-e-stop is-deep">
+                <button type="button" data-e="6">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">Specialisation</span>
+                    <span class="opt-e-stop-name">Aquatic Pathway I + II</span>
+                  </span>
+                  <span class="opt-e-stop-price">&pound;199</span>
+                </button>
+              </li>
+              <li class="opt-e-stop is-deep">
+                <button type="button" data-e="7">
+                  <span class="opt-e-node-wrap"><span class="opt-e-node" aria-hidden="true"></span></span>
+                  <span class="opt-e-stop-copy">
+                    <span class="opt-e-stop-tag">Coming next</span>
+                    <span class="opt-e-stop-name">Older Adults &amp; Dementia</span>
+                  </span>
+                  <span class="opt-e-stop-price">TBA</span>
+                </button>
+              </li>
+            </ul>
+
+            <p class="opt-e-hint">Courses cycle every 2.5s. Scroll to spy, or tap a stop to take over.</p>
+          </div>
+
+          <aside class="opt-e-panel" data-e-panel style="--panel-accent: var(--pink-deep)">
+            <div class="opt-e-panel-body" data-e-body>
+              <p class="opt-e-panel-level" data-e-level>Course</p>
+              <h3 data-e-title>Visual Teaching Foundations</h3>
+              <div class="opt-e-panel-price" data-e-price>&pound;19</div>
+              <p class="opt-e-panel-meta" data-e-meta>About 45&ndash;60 minutes · laptop or phone</p>
+              <div class="aca-detail">
+                <span class="aca-detail-kicker" data-e-kicker>After this course</span>
+                <p data-e-after>Explain the visual method to a colleague and spot one place to use it tomorrow.</p>
+              </div>
+              <div class="btn-row">
+                <a class="btn btn-primary" data-e-open href="learn/course/visual-teaching-foundations/index.html">Open course</a>
+                <a class="btn btn-ghost" data-e-buy href="cart.html">Buy &pound;19</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.querySelector("[data-opt-e]");
+      if (!root) return;
+
+      var items = [
+        {
+          deep: false,
+          bundle: false,
+          level: "Course",
+          title: "Visual Teaching Foundations",
+          price: "£19",
+          meta: "About 45–60 minutes · laptop or phone",
+          kicker: "After this course",
+          after: "Explain the visual method to a colleague and spot one place to use it tomorrow.",
+          openLabel: "Open course",
+          openHref: "learn/course/visual-teaching-foundations/index.html",
+          buyLabel: "Buy £19",
+          buyHref: "cart.html",
+          accent: "var(--pink-deep)"
+        },
+        {
+          deep: false,
+          bundle: false,
+          level: "Course",
+          title: "Using Packs and the App",
+          price: "£29",
+          meta: "About 45–60 minutes · laptop or phone",
+          kicker: "After this course",
+          after: "Run one Focus or First & Then board with Packs and the App as one system.",
+          openLabel: "Open course",
+          openHref: "learn/course/using-pixtolearn-packs-and-app/index.html",
+          buyLabel: "Buy £29",
+          buyHref: "cart.html",
+          accent: "var(--pink-deep)"
+        },
+        {
+          deep: false,
+          bundle: false,
+          level: "Course",
+          title: "Teaching Swimming with Visuals",
+          price: "£29",
+          meta: "About 45–60 minutes · laptop or phone",
+          kicker: "After this course",
+          after: "Place three poolside visuals and coach one skill step without extra talk.",
+          openLabel: "Open course",
+          openHref: "learn/course/teaching-swimming-visual-systems/index.html",
+          buyLabel: "Buy £29",
+          buyHref: "cart.html",
+          accent: "var(--pink-deep)"
+        },
+        {
+          deep: false,
+          bundle: false,
+          level: "Course",
+          title: "Everyday Routines for Toddlers",
+          price: "£29",
+          meta: "About 45–60 minutes · laptop or phone",
+          kicker: "After this course",
+          after: "Set one home transition at child height with WOW cards.",
+          openLabel: "Open course",
+          openHref: "learn/course/everyday-visual-routines-toddlers/index.html",
+          buyLabel: "Buy £29",
+          buyHref: "cart.html",
+          accent: "var(--pink-deep)"
+        },
+        {
+          deep: false,
+          bundle: true,
+          level: "Best value",
+          title: "All four courses",
+          price: "£79",
+          meta: "Full Launch set · team licence £249 for 10 seats",
+          kicker: "After the bundle",
+          after: "Method, tools, pool and home — one shared language across Packs, WOW and the App.",
+          openLabel: "Buy pathway",
+          openHref: "cart.html",
+          buyLabel: "Team £249",
+          buyHref: "cart.html",
+          accent: "var(--pink-deep)"
+        },
+        {
+          deep: true,
+          bundle: false,
+          level: "Specialisation",
+          title: "Neurodiversity Visual Specialist",
+          price: "£199",
+          meta: "Full pathway · team £399",
+          kicker: "After this specialisation",
+          after: "Design and sustain a shared visual system across home, school, therapy, community and pool.",
+          openLabel: "Open",
+          openHref: "learn/course/neurodiversity-visual-specialist/index.html",
+          buyLabel: "Buy £199",
+          buyHref: "cart.html",
+          accent: "var(--slate-deep)"
+        },
+        {
+          deep: true,
+          bundle: false,
+          level: "Specialisation",
+          title: "Aquatic Pathway I + II",
+          price: "£199",
+          meta: "PixtoLearn with clubSENsational · team £399",
+          kicker: "After this specialisation",
+          after: "Run deeper aquatic pedagogy and skills progression with clubSENsational.",
+          openLabel: "Open",
+          openHref: "learn/course/aquatic-specialist-pathway/index.html",
+          buyLabel: "Buy £199",
+          buyHref: "cart.html",
+          accent: "var(--slate-deep)"
+        },
+        {
+          deep: true,
+          bundle: false,
+          level: "Coming next",
+          title: "Older Adults & Dementia",
+          price: "TBA",
+          meta: "Outline available · price with release",
+          kicker: "Coming next",
+          after: "Preview calm visual routines for later-life care.",
+          openLabel: "View outline",
+          openHref: "learn/curriculum/dementia-older-adults-outline.html",
+          buyLabel: "Contact",
+          buyHref: "contact.html?interest=academy",
+          accent: "var(--slate-deep)"
+        }
+      ];
+
+      var stops = Array.prototype.slice.call(root.querySelectorAll(".opt-e-stop"));
+      var panel = root.querySelector("[data-e-panel]");
+      var body = root.querySelector("[data-e-body]");
+      var levelEl = root.querySelector("[data-e-level]");
+      var titleEl = root.querySelector("[data-e-title]");
+      var priceEl = root.querySelector("[data-e-price]");
+      var metaEl = root.querySelector("[data-e-meta]");
+      var kickerEl = root.querySelector("[data-e-kicker]");
+      var afterEl = root.querySelector("[data-e-after]");
+      var openEl = root.querySelector("[data-e-open]");
+      var buyEl = root.querySelector("[data-e-buy]");
+      var calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+      var index = 0;
+      var timer = null;
+      var userLocked = false;
+      var courseCount = 5; /* 0–4 including bundle */
+      var spyPaused = false;
+      var scrollIdle = null;
+      var clickGuardUntil = 0;
+      var CYCLE_MS = 2500;
+
+      function apply(item) {
+        if (levelEl) levelEl.textContent = item.level;
+        if (titleEl) titleEl.textContent = item.title;
+        if (priceEl) priceEl.textContent = item.price;
+        if (metaEl) metaEl.textContent = item.meta;
+        if (kickerEl) kickerEl.textContent = item.kicker;
+        if (afterEl) afterEl.textContent = item.after;
+        if (openEl) {
+          openEl.textContent = item.openLabel;
+          openEl.setAttribute("href", item.openHref);
+        }
+        if (buyEl) {
+          buyEl.textContent = item.buyLabel;
+          buyEl.setAttribute("href", item.buyHref);
+        }
+        if (panel) {
+          panel.style.setProperty("--panel-accent", item.accent);
+          panel.classList.toggle("is-deep", item.deep);
+        }
+      }
+
+      function show(next, fromUser) {
+        index = ((next % items.length) + items.length) % items.length;
+        if (fromUser) userLocked = items[index].deep || items[index].bundle;
+
+        stops.forEach(function (stop, i) {
+          stop.classList.toggle("is-active", i === index);
+        });
+
+        var item = items[index];
+        if (!body || calm.matches) {
+          apply(item);
+          return;
+        }
+
+        body.classList.add("is-swap");
+        window.setTimeout(function () {
+          apply(item);
+          body.classList.remove("is-swap");
+        }, 160);
+      }
+
+      function stopAuto() {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+      }
+
+      function playAuto() {
+        if (calm.matches || userLocked || spyPaused) return;
+        stopAuto();
+        timer = window.setInterval(function () {
+          if (userLocked || spyPaused) {
+            stopAuto();
+            return;
+          }
+          var next = (index + 1) % courseCount;
+          show(next, false);
+        }, CYCLE_MS);
+      }
+
+      function sectionInView() {
+        var rect = root.getBoundingClientRect();
+        var vh = window.innerHeight || 1;
+        return rect.top < vh * 0.85 && rect.bottom > vh * 0.2;
+      }
+
+      function spyFromScroll() {
+        if (!sectionInView()) return;
+        if (Date.now() < clickGuardUntil) return;
+
+        var focusY = (window.innerHeight || 0) * 0.42;
+        var best = index;
+        var bestDist = Infinity;
+
+        stops.forEach(function (stop, i) {
+          var rect = stop.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > (window.innerHeight || 0)) return;
+          var mid = rect.top + rect.height * 0.5;
+          var dist = Math.abs(mid - focusY);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = i;
+          }
+        });
+
+        if (best !== index) {
+          show(best, false);
+          /* scrolling onto a deep stop pauses auto; courses keep auto after idle */
+          if (items[best].deep) {
+            userLocked = true;
+            stopAuto();
+          }
+        }
+      }
+
+      function onScroll() {
+        spyPaused = true;
+        stopAuto();
+        spyFromScroll();
+        if (scrollIdle) window.clearTimeout(scrollIdle);
+        scrollIdle = window.setTimeout(function () {
+          spyPaused = false;
+          if (!userLocked) playAuto();
+        }, 900);
+      }
+
+      root.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-e]");
+        if (!btn || !root.contains(btn)) return;
+        var next = Number(btn.getAttribute("data-e"));
+        clickGuardUntil = Date.now() + 700;
+        show(next, true);
+
+        var stop = stops[next];
+        if (stop && typeof stop.scrollIntoView === "function") {
+          stop.scrollIntoView({ block: "nearest", behavior: calm.matches ? "auto" : "smooth" });
+        }
+
+        if (items[index].deep) stopAuto();
+        else playAuto();
+      });
+
+      root.addEventListener("mouseenter", stopAuto);
+      root.addEventListener("mouseleave", function () {
+        if (!userLocked && !spyPaused) playAuto();
+      });
+      root.addEventListener("focusin", stopAuto);
+      root.addEventListener("focusout", function (e) {
+        if (!root.contains(e.relatedTarget) && !userLocked && !spyPaused) playAuto();
+      });
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", spyFromScroll, { passive: true });
+
+      show(0, false);
+      playAuto();
+    })();
+  </script>
+</body>
+</html>

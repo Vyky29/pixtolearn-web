@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview all pages | PixtoLearn</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #14242b;
+      --ink-soft: #3a5159;
+      --pink: #d03860;
+      --foam: #f7f4ef;
+      --white: #fff;
+      --line: rgba(20, 36, 43, 0.1);
+      --shadow: 0 12px 32px rgba(20, 36, 43, 0.08);
+      --radius: 18px;
+      --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+      --font-body: "Figtree", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 50% 40% at 0% 0%, rgba(208, 56, 96, 0.1), transparent 55%),
+        radial-gradient(ellipse 45% 40% at 100% 10%, rgba(232, 168, 64, 0.12), transparent 50%),
+        var(--foam);
+      padding: 2rem 1.25rem 3rem;
+    }
+    .wrap { width: min(100%, 40rem); margin: 0 auto; }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      letter-spacing: -0.03em;
+      margin: 0 0 0.4rem;
+    }
+    .lede {
+      margin: 0 0 1.5rem;
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+    }
+    .open-all {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.5rem;
+      margin-bottom: 1.25rem;
+      border: 0;
+      border-radius: 999px;
+      background: var(--pink);
+      color: #fff;
+      font: inherit;
+      font-weight: 750;
+      font-size: 1.05rem;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+    .open-all:active { transform: scale(0.98); }
+    .note {
+      margin: 0 0 1.25rem;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.65rem;
+    }
+    .list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .list a span {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+    .list a:active { transform: scale(0.99); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Preview all pages</h1>
+    <p class="lede">Design-system pass — tap one page, or open every page at once.</p>
+
+    <button type="button" class="open-all" id="open-all">Open all pages</button>
+    <p class="note">Browsers may block multiple tabs — allow pop-ups for this site if only one opens.</p>
+
+    <ul class="list" id="page-list">
+      <li><a href="home.html" target="_blank" rel="noopener">Home <span>home.html</span></a></li>
+      <li><a href="swimming.html" target="_blank" rel="noopener">Swimming <span>swimming.html</span></a></li>
+      <li><a href="routines.html" target="_blank" rel="noopener">Routines <span>routines.html</span></a></li>
+      <li><a href="app.html" target="_blank" rel="noopener">App <span>app.html</span></a></li>
+      <li><a href="academy.html" target="_blank" rel="noopener">Academy <span>academy.html</span></a></li>
+      <li><a href="shop.html" target="_blank" rel="noopener">Shop <span>shop.html</span></a></li>
+      <li><a href="updates.html" target="_blank" rel="noopener">Updates <span>updates.html</span></a></li>
+    </ul>
+  </div>
+
+  <script>
+    document.getElementById("open-all").addEventListener("click", () => {
+      const links = [...document.querySelectorAll("#page-list a")];
+      links.forEach((a) => {
+        window.open(a.href, "_blank", "noopener");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview · Header options 8 · 10 · 11</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=logo-dup-fix-1" />
+  <style>
+    body.prev-hdr-page {
+      background: #ebe6df;
+    }
+    .prev-hdr {
+      padding: 1.5rem 0 3.5rem;
+    }
+    .prev-hdr-intro {
+      max-width: 40rem;
+      margin: 0 auto 1.75rem;
+      width: min(var(--max), calc(100% - 2.5rem));
+    }
+    .prev-hdr-intro h1 {
+      margin: 0.3rem 0 0.5rem;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+    }
+    .prev-hdr-intro p {
+      margin: 0;
+      color: var(--ink-soft);
+    }
+    .prev-hdr-block {
+      margin-bottom: 2.75rem;
+    }
+    .prev-hdr-label {
+      width: min(var(--max), calc(100% - 2.5rem));
+      margin: 0 auto 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.85rem;
+      align-items: baseline;
+    }
+    .prev-hdr-label strong {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .prev-hdr-label span {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    /* Shared mock stage: fake sticky header over a cropped hero */
+    .prev-stage {
+      position: relative;
+      height: min(70svh, 560px);
+      overflow: hidden;
+      border-radius: 0;
+      background: #1a333a;
+    }
+    .prev-stage-media {
+      position: absolute;
+      inset: 0;
+    }
+    .prev-stage-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+    .prev-stage-shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(12, 28, 36, 0.55) 0%, rgba(12, 28, 36, 0.28) 55%, rgba(12, 28, 36, 0.2) 100%),
+        linear-gradient(180deg, rgba(12, 28, 36, 0.2) 0%, rgba(12, 28, 36, 0.45) 100%);
+    }
+    .prev-stage-copy {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      padding: 0 0 clamp(2rem, 5vw, 3rem);
+      color: #fff;
+    }
+    .prev-stage-copy .wrap {
+      max-width: 36rem;
+    }
+    .prev-stage-copy h2 {
+      margin: 0.35rem 0 0.55rem;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+    .prev-stage-copy p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 32rem;
+    }
+
+    .prev-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      min-height: var(--nav-h);
+      display: flex;
+      align-items: center;
+    }
+    .prev-bar .nav {
+      width: min(var(--max), calc(100% - 2.5rem));
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: var(--nav-h);
+    }
+    .prev-bar .brand img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+    .prev-bar .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .prev-bar .nav-links a {
+      padding: 0.5rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .prev-bar .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .prev-bar .nav-icon {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: inherit;
+    }
+    .prev-bar .nav-links a[aria-current="page"] {
+      font-weight: 750;
+    }
+    @media (max-width: 820px) {
+      .prev-bar .nav-links { display: none; }
+    }
+
+    /* ——— 8: brand wash (opaque, no blur) ——— */
+    .prev-h8 .prev-bar {
+      background:
+        linear-gradient(90deg, rgba(208, 56, 96, 0.12), rgba(232, 168, 64, 0.14) 48%, rgba(95, 138, 154, 0.14)),
+        #f4efe8;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+    .prev-h8 .nav-links a { color: var(--ink-soft); }
+    .prev-h8 .nav-links a[aria-current="page"] {
+      color: var(--pink-deep);
+      background: rgba(208, 56, 96, 0.12);
+      box-shadow: inset 0 0 0 1px rgba(184, 40, 88, 0.28);
+    }
+    .prev-h8 .nav-icon { color: var(--ink); }
+
+    /* ——— 10: icons only over hero; solid bar with full nav on “scroll” mock ——— */
+    .prev-h10-pair {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 960px) {
+      .prev-h10-pair {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.15rem;
+        width: min(1200px, calc(100% - 2rem));
+        margin-inline: auto;
+      }
+      .prev-h10-pair .prev-stage {
+        height: min(52svh, 420px);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+    }
+    .prev-h10-sub {
+      margin: 0 0 0.55rem;
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      width: min(var(--max), calc(100% - 2.5rem));
+      margin-inline: auto;
+    }
+    @media (min-width: 960px) {
+      .prev-h10-sub { width: auto; margin-left: 0; }
+      .prev-h10-pair .prev-h10-cell { display: flex; flex-direction: column; gap: 0.45rem; }
+    }
+    .prev-h10-over .prev-bar {
+      background: transparent;
+      box-shadow: none;
+    }
+    .prev-h10-over .nav-links { display: none !important; }
+    .prev-h10-over .brand img {
+      filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.35));
+    }
+    .prev-h10-over .nav-icon {
+      color: #fff;
+      background: rgba(12, 28, 36, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+    .prev-h10-scrolled .prev-bar {
+      background: rgba(247, 244, 239, 0.98);
+      box-shadow: 0 10px 28px rgba(12, 28, 36, 0.12);
+      backdrop-filter: none;
+    }
+    .prev-h10-scrolled .nav-links a { color: var(--ink-soft); }
+    .prev-h10-scrolled .nav-links a[aria-current="page"] {
+      color: var(--slate-deep);
+      background: rgba(95, 138, 154, 0.14);
+      box-shadow: inset 0 0 0 1px rgba(95, 138, 154, 0.28);
+    }
+    .prev-h10-scrolled .nav-icon { color: var(--ink); }
+    .prev-h10-scrolled .prev-stage-copy { opacity: 0.35; }
+
+    /* ——— 11: soft shadow plate (opaque cream, no image blur through bar) ——— */
+    .prev-h11 .prev-bar {
+      background: #f7f4ef;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: 0 12px 32px rgba(12, 28, 36, 0.18);
+    }
+    .prev-h11 .nav-links a { color: var(--ink-soft); }
+    .prev-h11 .nav-links a[aria-current="page"] {
+      color: var(--slate-deep);
+      background: rgba(95, 138, 154, 0.14);
+      box-shadow: inset 0 0 0 1px rgba(95, 138, 154, 0.28);
+    }
+    .prev-h11 .nav-icon { color: var(--ink); }
+  </style>
+</head>
+<body class="ds-ui prev-hdr-page">
+  <main class="prev-hdr" id="main">
+    <div class="prev-hdr-intro">
+      <p class="eyebrow">Preview</p>
+      <h1>Header options 8 · 10 · 11</h1>
+      <p>No live translucent glass — three opaque alternatives on the same hero. Say which you want sitewide.</p>
+    </div>
+
+    <!-- 8 -->
+    <section class="prev-hdr-block" aria-label="Option 8">
+      <div class="prev-hdr-label">
+        <strong>8 — Brand wash</strong>
+        <span>Opaque bar tinted with pink / amber / slate — not cream, not blur</span>
+      </div>
+      <div class="prev-stage prev-h8">
+        <div class="prev-stage-media" aria-hidden="true">
+          <img src="assets/photos/academy-hero.jpg" alt="" />
+          <div class="prev-stage-shade"></div>
+        </div>
+        <header class="prev-bar">
+          <div class="nav">
+            <a class="brand" href="home.html" aria-label="PixtoLearn home"><img src="assets/brand/logo.png" alt="PixtoLearn" /></a>
+            <ul class="nav-links">
+              <li><a href="#">Swimming</a></li>
+              <li><a href="#">Routines</a></li>
+              <li><a href="#">App</a></li>
+              <li><a href="#" aria-current="page">Academy</a></li>
+              <li><a href="#">Updates</a></li>
+              <li><a href="#">Shop</a></li>
+            </ul>
+            <div class="nav-icons">
+              <a class="nav-icon" href="#" aria-label="Cart">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h15l-1.4 8.2a2 2 0 0 1-2 1.8H9a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+              </a>
+              <a class="nav-icon" href="#" aria-label="Account">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8"/></svg>
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="prev-stage-copy">
+          <div class="wrap">
+            <p class="eyebrow" style="color:#b7ece7">Academy</p>
+            <h2>Learn the method.</h2>
+            <p>Opaque brand-tinted plate — photo stays sharp under a solid bar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section class="prev-hdr-block" aria-label="Option 10">
+      <div class="prev-hdr-label">
+        <strong>10 — Icons first</strong>
+        <span>Over hero: logo + cart/account only · after scroll: full solid nav</span>
+      </div>
+      <div class="prev-h10-pair">
+        <div class="prev-h10-cell">
+          <p class="prev-h10-sub">At top of hero</p>
+          <div class="prev-stage prev-h10-over">
+            <div class="prev-stage-media" aria-hidden="true">
+              <img src="assets/photos/mode/session-match.jpg?v=1" alt="" />
+              <div class="prev-stage-shade"></div>
+            </div>
+            <header class="prev-bar">
+              <div class="nav">
+                <a class="brand" href="home.html" aria-label="PixtoLearn home"><img src="assets/brand/logo-on-dark.png" alt="PixtoLearn" /></a>
+                <ul class="nav-links">
+                  <li><a href="#">Swimming</a></li>
+                  <li><a href="#">Routines</a></li>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">Academy</a></li>
+                  <li><a href="#">Updates</a></li>
+                  <li><a href="#">Shop</a></li>
+                </ul>
+                <div class="nav-icons">
+                  <a class="nav-icon" href="#" aria-label="Cart">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h15l-1.4 8.2a2 2 0 0 1-2 1.8H9a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+                  </a>
+                  <a class="nav-icon" href="#" aria-label="Account">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8"/></svg>
+                  </a>
+                </div>
+              </div>
+            </header>
+            <div class="prev-stage-copy">
+              <div class="wrap">
+                <p class="eyebrow" style="color:#b7ece7">Swimming</p>
+                <h2>Photo first.</h2>
+                <p>Word nav is gone — only logo and utilities over the image.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prev-h10-cell">
+          <p class="prev-h10-sub">After scroll</p>
+          <div class="prev-stage prev-h10-scrolled">
+            <div class="prev-stage-media" aria-hidden="true">
+              <img src="assets/photos/mode/session-match.jpg?v=1" alt="" />
+              <div class="prev-stage-shade"></div>
+            </div>
+            <header class="prev-bar">
+              <div class="nav">
+                <a class="brand" href="home.html" aria-label="PixtoLearn home"><img src="assets/brand/logo.png" alt="PixtoLearn" /></a>
+                <ul class="nav-links">
+                  <li><a href="#" aria-current="page">Swimming</a></li>
+                  <li><a href="#">Routines</a></li>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">Academy</a></li>
+                  <li><a href="#">Updates</a></li>
+                  <li><a href="#">Shop</a></li>
+                </ul>
+                <div class="nav-icons">
+                  <a class="nav-icon" href="#" aria-label="Cart">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h15l-1.4 8.2a2 2 0 0 1-2 1.8H9a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+                  </a>
+                  <a class="nav-icon" href="#" aria-label="Account">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8"/></svg>
+                  </a>
+                </div>
+              </div>
+            </header>
+            <div class="prev-stage-copy">
+              <div class="wrap">
+                <p class="eyebrow" style="color:#b7ece7">Swimming</p>
+                <h2>Full nav returns.</h2>
+                <p>Solid cream plate + complete links once you leave the photo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="prev-hdr-block" aria-label="Option 11">
+      <div class="prev-hdr-label">
+        <strong>11 — Soft shadow plate</strong>
+        <span>Fully opaque cream · soft shadow into the photo · no backdrop blur</span>
+      </div>
+      <div class="prev-stage prev-h11">
+        <div class="prev-stage-media" aria-hidden="true">
+          <img src="assets/photos/mode/session-instructor.jpg?v=1" alt="" />
+          <div class="prev-stage-shade"></div>
+        </div>
+        <header class="prev-bar">
+          <div class="nav">
+            <a class="brand" href="home.html" aria-label="PixtoLearn home"><img src="assets/brand/logo.png" alt="PixtoLearn" /></a>
+            <ul class="nav-links">
+              <li><a href="#">Swimming</a></li>
+              <li><a href="#">Routines</a></li>
+              <li><a href="#">App</a></li>
+              <li><a href="#">Academy</a></li>
+              <li><a href="#">Updates</a></li>
+              <li><a href="#">Shop</a></li>
+            </ul>
+            <div class="nav-icons">
+              <a class="nav-icon" href="#" aria-label="Cart">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h15l-1.4 8.2a2 2 0 0 1-2 1.8H9a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+              </a>
+              <a class="nav-icon" href="#" aria-label="Account">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.2c1.6-3.2 4-4.8 6.5-4.8s4.9 1.6 6.5 4.8"/></svg>
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="prev-stage-copy">
+          <div class="wrap">
+            <p class="eyebrow" style="color:#b7ece7">Home</p>
+            <h2>Solid, not glass.</h2>
+            <p>Cream plate casts a soft shadow — the photo never shows through the bar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

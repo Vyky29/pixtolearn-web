@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview | Routines motifs</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=routines-motifs-1" />
+  <style>
+    .motif-prev {
+      background: var(--page);
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    .motif-prev-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(20, 36, 43, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .motif-prev-bar a { font-weight: 650; color: var(--ink); text-decoration: none; }
+    .motif-prev-bar nav { display: flex; flex-wrap: wrap; gap: 0.85rem 1.1rem; }
+    .motif-prev-bar nav a { color: var(--ink-soft); }
+
+    .motif-block {
+      padding: clamp(2.25rem, 5vw, 3.5rem) 0 clamp(3rem, 6vw, 4.5rem);
+      border-bottom: 1px solid rgba(20, 36, 43, 0.08);
+    }
+
+    .motif-tag {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0 auto 1.25rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .motif-tag strong { color: var(--pink-deep); }
+
+    .motif-stage {
+      background: var(--page);
+    }
+
+    .motif-fake {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 2.25rem 0 1.5rem;
+    }
+
+    .motif-fake h2 {
+      margin: 0.35rem 0 0.4rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      letter-spacing: -0.03em;
+    }
+
+    .motif-fake .lede {
+      margin: 0;
+      max-width: 34ch;
+      color: var(--ink-soft);
+    }
+
+    /* 1 — Soft curves (live SVG) */
+    .routines-wave {
+      display: block;
+      width: 100%;
+      height: clamp(6.5rem, 12vw, 9.5rem);
+      margin: 0.35rem 0 -2.5rem;
+      line-height: 0;
+      pointer-events: none;
+      background: var(--page);
+    }
+
+    .routines-wave svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 2 — Card edge */
+    .routines-card-edge {
+      display: block;
+      width: 100%;
+      height: 1.35rem;
+      margin: 1.75rem 0 1.5rem;
+      background:
+        radial-gradient(circle at 50% 0, transparent 5px, rgba(208, 56, 96, 0.22) 5.5px) 0 0 / 22px 14px repeat-x;
+      border: 0;
+      pointer-events: none;
+    }
+
+    /* 3 — Lanyard line */
+    .routines-lanyard {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      margin: 2rem 0 1.75rem;
+      pointer-events: none;
+      position: relative;
+      height: 2rem;
+    }
+
+    .routines-lanyard::before {
+      content: "";
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      top: 50%;
+      height: 1.5px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(95, 138, 154, 0.55) 12%,
+        rgba(95, 138, 154, 0.55) 88%,
+        transparent
+      );
+      transform: translateY(-50%);
+    }
+
+    .routines-lanyard-ring {
+      position: relative;
+      z-index: 1;
+      width: 1.55rem;
+      height: 1.55rem;
+      border-radius: 999px;
+      border: 2px solid rgba(95, 138, 154, 0.75);
+      background: var(--page);
+      box-shadow: inset 0 0 0 3px var(--page);
+    }
+
+    .motif-mock {
+      width: min(960px, calc(100% - 2.5rem));
+      margin: 1.75rem auto 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(20, 36, 43, 0.08);
+      box-shadow: 0 18px 40px rgba(20, 36, 43, 0.08);
+      background: #fff;
+    }
+
+    .motif-mock img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .motif-note {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0.85rem auto 0;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+    }
+  </style>
+</head>
+<body class="motif-prev">
+  <div class="motif-prev-bar">
+    <a href="routines.html">← Back to Routines</a>
+    <nav>
+      <a href="#soft">1 Soft curves</a>
+      <a href="#card">2 Card edge</a>
+      <a href="#lanyard">3 Lanyard line</a>
+    </nav>
+  </div>
+
+  <section class="motif-block" id="soft">
+    <p class="motif-tag"><strong>1 · Soft curves</strong> — live divider (same craft as swimming)</p>
+    <div class="motif-stage">
+      <div class="motif-fake">
+        <p class="eyebrow">The WOW concept</p>
+        <h2>Words. Objects. Ways.</h2>
+        <p class="lede">One system for clearer tasks — shown here with brushing teeth.</p>
+      </div>
+
+      <div class="routines-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" focusable="false">
+          <defs>
+            <linearGradient id="routinesWaveFade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#7aa3b3" stop-opacity="0.26" />
+              <stop offset="38%" stop-color="#88b0c0" stop-opacity="0.16" />
+              <stop offset="72%" stop-color="#f7f4ef" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#f7f4ef" stop-opacity="1" />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#routinesWaveFade)"
+            d="M0 148C160 72 320 48 500 108C680 168 840 228 1040 148C1180 92 1320 84 1440 118L1440 320H0Z"
+          />
+          <path
+            fill="#88b0c0"
+            opacity="0.11"
+            d="M0 188C200 108 380 92 560 142C740 192 920 232 1120 168C1260 124 1360 128 1440 148L1440 320H0Z"
+          />
+        </svg>
+      </div>
+
+      <div class="motif-fake">
+        <p class="eyebrow">Outcomes</p>
+        <h2>What WOW cards support</h2>
+        <p class="lede">Visible sequences for mornings, care, and daily living.</p>
+      </div>
+    </div>
+    <p class="motif-note">Closest to swimming. Calm slate → cream fade.</p>
+    <figure class="motif-mock">
+      <img src="assets/previews/motif-soft-curves.png" alt="Soft curves motif mockup" />
+    </figure>
+  </section>
+
+  <section class="motif-block" id="card">
+    <p class="motif-tag"><strong>2 · Card edge</strong> — live divider</p>
+    <div class="motif-stage">
+      <div class="motif-fake">
+        <p class="eyebrow">The WOW concept</p>
+        <h2>Words. Objects. Ways.</h2>
+        <p class="lede">One system for clearer tasks — shown here with brushing teeth.</p>
+      </div>
+
+      <div class="routines-card-edge" aria-hidden="true"></div>
+
+      <div class="motif-fake">
+        <p class="eyebrow">Outcomes</p>
+        <h2>What WOW cards support</h2>
+        <p class="lede">Visible sequences for mornings, care, and daily living.</p>
+      </div>
+    </div>
+    <p class="motif-note">Perforated strip — reads like a physical WOW card edge.</p>
+    <figure class="motif-mock">
+      <img src="assets/previews/motif-card-edge.png" alt="Card edge motif mockup" />
+    </figure>
+  </section>
+
+  <section class="motif-block" id="lanyard">
+    <p class="motif-tag"><strong>3 · Lanyard line</strong> — live divider</p>
+    <div class="motif-stage">
+      <div class="motif-fake">
+        <p class="eyebrow">The WOW concept</p>
+        <h2>Words. Objects. Ways.</h2>
+        <p class="lede">One system for clearer tasks — shown here with brushing teeth.</p>
+      </div>
+
+      <div class="routines-lanyard" aria-hidden="true">
+        <span class="routines-lanyard-ring"></span>
+      </div>
+
+      <div class="motif-fake">
+        <p class="eyebrow">Portable by design</p>
+        <h2>Four ways to carry the same cards</h2>
+        <p class="lede">Small enough for daily life. Clear enough for the moment that matters.</p>
+      </div>
+    </div>
+    <p class="motif-note">Thin cord + ring — lightest, ties to Portable.</p>
+    <figure class="motif-mock">
+      <img src="assets/previews/motif-lanyard-line.png" alt="Lanyard line motif mockup" />
+    </figure>
+  </section>
+</body>
+</html>

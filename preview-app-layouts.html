@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview | App layouts B &amp; C</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <style>
+    .pv-tag {
+      margin: 0;
+      display: inline-block;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--slate-deep);
+      background: rgba(95, 138, 154, 0.14);
+    }
+
+    .pv-divider {
+      margin: 4rem 0 0;
+      border: 0;
+      border-top: 1px solid rgba(20, 36, 43, 0.08);
+    }
+
+    /* ========== B — LIFESTYLE ========== */
+    .life-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: center;
+    }
+
+    .life-split.reverse {
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    }
+
+    .life-split.reverse .life-copy {
+      order: 2;
+    }
+
+    .life-media {
+      margin: 0;
+      border-radius: 1.15rem;
+      overflow: hidden;
+      min-width: 0;
+      box-shadow: 0 1.2rem 2.8rem rgba(20, 36, 43, 0.1);
+    }
+
+    .life-media img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      object-fit: cover;
+    }
+
+    .life-copy h2 {
+      margin: 0.45rem 0 0.75rem;
+      font-size: clamp(1.55rem, 2.8vw, 2.1rem);
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+    }
+
+    .life-copy .lede {
+      margin: 0;
+      max-width: 36ch;
+    }
+
+    .life-modes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.35rem;
+    }
+
+    .life-mode {
+      display: grid;
+      gap: 0.55rem;
+      text-align: center;
+    }
+
+    .life-mode img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+      border-radius: 0.85rem;
+      background: #fff;
+      box-shadow:
+        inset 0 0 0 1px rgba(20, 36, 43, 0.06),
+        0 0.6rem 1.4rem rgba(20, 36, 43, 0.08);
+    }
+
+    .life-mode b {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate-deep);
+    }
+
+    .life-mode span {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.35;
+    }
+
+    .life-places {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .life-place {
+      position: relative;
+      margin: 0;
+      border-radius: 1.15rem;
+      overflow: hidden;
+      min-height: 22rem;
+      box-shadow: 0 1.2rem 2.8rem rgba(20, 36, 43, 0.1);
+    }
+
+    .life-place img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .life-place-copy {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 0.45rem;
+      align-content: end;
+      min-height: 22rem;
+      padding: 1.5rem;
+      color: #fff;
+      background: linear-gradient(180deg, transparent 28%, rgba(20, 36, 43, 0.78) 100%);
+    }
+
+    .life-place-copy .plplace-kicker {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .life-place-copy h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+    }
+
+    .life-place-copy p {
+      margin: 0;
+      max-width: 28ch;
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .life-place-copy .linkish {
+      color: #fff;
+      justify-self: start;
+      margin-top: 0.35rem;
+    }
+
+    .life-crop {
+      margin: 1.5rem 0 0;
+      max-width: 16rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 1rem 2.2rem rgba(20, 36, 43, 0.12);
+    }
+
+    .life-crop img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    /* ========== C — RADICAL CUT ========== */
+    .cut-band {
+      display: grid;
+      gap: 1.25rem;
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      border-radius: 1.35rem;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow:
+        inset 0 0 0 1px rgba(20, 36, 43, 0.06),
+        0 1rem 2.4rem rgba(20, 36, 43, 0.07);
+    }
+
+    .cut-band h2 {
+      margin: 0;
+      font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+      letter-spacing: -0.02em;
+    }
+
+    .cut-band .lede {
+      margin: 0;
+      max-width: 52ch;
+    }
+
+    .cut-line {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      padding-top: 0.35rem;
+      border-top: 1px solid rgba(20, 36, 43, 0.08);
+    }
+
+    .cut-avatars {
+      display: flex;
+      align-items: center;
+    }
+
+    .cut-avatars span,
+    .cut-avatars img {
+      width: 3.1rem;
+      height: 3.1rem;
+      border-radius: 999px;
+      box-shadow: 0 0 0 3px #fff;
+    }
+
+    .cut-avatars span {
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--slate-deep);
+      background: rgba(95, 138, 154, 0.12);
+      border: 2px dashed rgba(95, 138, 154, 0.45);
+    }
+
+    .cut-avatars img {
+      margin-left: -0.55rem;
+      object-fit: cover;
+    }
+
+    .cut-modes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .cut-modes i {
+      font-style: normal;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      background: rgba(247, 244, 239, 0.95);
+      box-shadow: inset 0 0 0 1px rgba(20, 36, 43, 0.06);
+    }
+
+    .cut-modes i b {
+      color: var(--pink-deep);
+      font-weight: 800;
+    }
+
+    .cut-who {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      margin-top: 0.5rem;
+    }
+
+    .cut-who article h3 {
+      margin: 0 0 0.45rem;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .cut-who article p {
+      margin: 0 0 0.65rem;
+      max-width: 34ch;
+      font-size: 0.98rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+
+    @media (max-width: 860px) {
+      .life-split,
+      .life-split.reverse,
+      .life-places,
+      .cut-who {
+        grid-template-columns: 1fr;
+      }
+
+      .life-split.reverse .life-copy {
+        order: 0;
+      }
+
+      .life-modes {
+        grid-template-columns: 1fr;
+      }
+
+      .life-place {
+        min-height: 18rem;
+      }
+
+      .life-place-copy {
+        min-height: 18rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <div class="wrap" style="padding-top:2.5rem">
+      <p class="eyebrow">Preview only</p>
+      <h1 style="font-size:1.55rem;margin:.35rem 0 0">App page &mdash; B lifestyle &amp; C radical cut</h1>
+      <p class="lede" style="margin-top:.7rem">Same finalised copy. Different representation. Hero + Memberships stay as they are.</p>
+    </div>
+
+    <!-- ============================================================
+         OPTION B — LIFESTYLE
+         ============================================================ -->
+    <div class="wrap" style="margin-top:2.5rem">
+      <p class="pv-tag">Option B &mdash; Lifestyle</p>
+    </div>
+
+    <section class="section-tint">
+      <div class="wrap">
+        <div class="life-split">
+          <div class="life-copy">
+            <p class="eyebrow">Personalisation</p>
+            <h2>Their picture. Their routine.</h2>
+            <p class="lede">Add a photo and PixtoLearn turns it into their avatar &mdash; then places them inside the steps they practise.</p>
+            <figure class="life-crop">
+              <img src="assets/photos/app/avatar-learner.jpg" alt="Learner avatar" />
+            </figure>
+          </div>
+          <figure class="life-media">
+            <img src="assets/photos/app/kitchen-tablet.jpg" alt="Family using PixtoLearn at home" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Session modes</p>
+          <h2>One card. Three ways to run it.</h2>
+          <p class="lede">Watch <b>eat</b> move from a full mealtime schedule, to Focus, to First &amp; Then.</p>
+        </div>
+        <div class="life-modes">
+          <div class="life-mode">
+            <img src="assets/packs/keyring-web/eat.jpg" alt="" />
+            <b>Schedule</b>
+            <span>In the mealtime row</span>
+          </div>
+          <div class="life-mode">
+            <img src="assets/packs/keyring-web/eat.jpg" alt="" />
+            <b>Focus</b>
+            <span>One step only</span>
+          </div>
+          <div class="life-mode">
+            <img src="assets/packs/keyring-web/eat.jpg" alt="" />
+            <b>First &amp; Then</b>
+            <span>Eat &rarr; drink</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tint">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Who it&rsquo;s for</p>
+          <h2>Home or centre. Same app.</h2>
+          <p class="lede">Two plans, shaped by how you teach &mdash; not two different products.</p>
+        </div>
+        <div class="life-places">
+          <figure class="life-place">
+            <img src="assets/photos/hero-app-family.jpg" alt="" loading="lazy" />
+            <div class="life-place-copy">
+              <p class="plplace-kicker">At home</p>
+              <h3>Family</h3>
+              <p>One or two learners, everyday routines, and short First &amp; Then boards when a transition needs calm.</p>
+              <a class="linkish" href="app.html#plan-family">See Family plan</a>
+            </div>
+          </figure>
+          <figure class="life-place">
+            <img src="assets/photos/app/classroom-tablet.jpg" alt="" loading="lazy" />
+            <div class="life-place-copy">
+              <p class="plplace-kicker">In centres</p>
+              <h3>Pro</h3>
+              <p>Several learners, staff seats, and a Planner that keeps each person&rsquo;s schedule separate.</p>
+              <a class="linkish" href="app.html#plan-pro">See Pro plan</a>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <hr class="pv-divider" />
+
+    <!-- ============================================================
+         OPTION C — RADICAL CUT
+         ============================================================ -->
+    <div class="wrap" style="margin-top:3rem">
+      <p class="pv-tag">Option C &mdash; Radical cut</p>
+    </div>
+
+    <section class="section-tint">
+      <div class="wrap">
+        <div class="cut-band">
+          <p class="eyebrow" style="margin:0">The app in one breath</p>
+          <h2>Their avatar. Their card. Three ways to run it.</h2>
+          <p class="lede">Add a photo and it becomes their avatar in the steps. Then the same card &mdash; here, <b>eat</b> &mdash; runs as a schedule, Focus, or First &amp; Then.</p>
+          <div class="cut-line">
+            <div class="cut-avatars" aria-hidden="true">
+              <span>+</span>
+              <img src="assets/photos/app/avatar-learner.jpg" alt="" />
+            </div>
+            <div class="cut-modes" aria-label="Session modes">
+              <i><b>eat</b> · Schedule</i>
+              <i><b>eat</b> · Focus</i>
+              <i><b>eat</b> · First &amp; Then</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Who it&rsquo;s for</p>
+          <h2>Home or centre. Same app.</h2>
+          <p class="lede">Two plans, shaped by how you teach &mdash; not two different products.</p>
+        </div>
+        <div class="cut-who">
+          <article>
+            <h3>Family</h3>
+            <p>One or two learners, everyday routines, and short First &amp; Then boards when a transition needs calm.</p>
+            <a class="linkish" href="app.html#plan-family">See Family plan</a>
+          </article>
+          <article>
+            <h3>Pro</h3>
+            <p>Several learners, staff seats, and a Planner that keeps each person&rsquo;s schedule separate.</p>
+            <a class="linkish" href="app.html#plan-pro">See Pro plan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap" style="padding:3rem 0 4rem">
+      <p class="lede" style="margin:0">Which one &mdash; B, C, or a blend?</p>
+    </div>
+  </main>
+</body>
+</html>

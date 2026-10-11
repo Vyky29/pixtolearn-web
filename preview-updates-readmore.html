@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview · Updates Read more CTAs</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=hero-nav-blur-1" />
+  <style>
+    .prev-rm {
+      padding: 2rem 0 4rem;
+    }
+    .prev-rm-intro {
+      max-width: 40rem;
+      margin-bottom: 2rem;
+    }
+    .prev-rm-intro h1 {
+      margin: 0.35rem 0 0.6rem;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+    .prev-rm-intro p {
+      margin: 0;
+      color: var(--ink-soft);
+    }
+    .prev-rm-block {
+      margin-bottom: 2.75rem;
+      padding: 1.25rem 1.35rem 1.5rem;
+      border: 1px solid rgba(20, 36, 43, 0.1);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.55);
+    }
+    .prev-rm-label {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .prev-rm-label strong {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .prev-rm-label span {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+    .prev-rm-block .update-list {
+      border-top: 1px solid rgba(20, 36, 43, 0.08);
+    }
+
+    /* Kill live ds-ui pill on preview CTAs, then restyle per option */
+    .prev-rm-block .update-row-cta {
+      display: inline-flex !important;
+      width: fit-content !important;
+      max-width: none !important;
+      align-items: center;
+      justify-content: flex-start !important;
+      gap: 0.25rem;
+      margin-top: 0.45rem !important;
+      margin-left: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      color: var(--ink) !important;
+      font-size: 0.88rem !important;
+      font-weight: 750 !important;
+      box-shadow: none !important;
+      letter-spacing: 0.01em;
+      transition: color 0.2s ease, gap 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .prev-rm-block .update-row:hover .update-row-cta,
+    .prev-rm-block .update-row:focus-visible .update-row-cta {
+      background: transparent !important;
+      border-color: transparent !important;
+      color: var(--ink) !important;
+    }
+    .prev-rm-block .update-row-cta::after {
+      content: "→";
+      margin: 0;
+      transition: transform 0.2s ease, margin-left 0.2s ease;
+    }
+
+    /* A — Text link */
+    .prev-rm-a .update-row:hover .update-row-cta::after,
+    .prev-rm-a .update-row:focus-visible .update-row-cta::after {
+      margin-left: 0.2rem;
+      transform: none;
+    }
+
+    /* B — Compact pill */
+    .prev-rm-b .update-row-cta {
+      gap: 0.4rem !important;
+      margin-top: 0.75rem !important;
+      padding: 0.55rem 1rem !important;
+      border-radius: 999px !important;
+      border: 1px solid color-mix(in srgb, var(--pink) 55%, var(--ink)) !important;
+      color: var(--ink) !important;
+    }
+    .prev-rm-b .update-row:hover .update-row-cta,
+    .prev-rm-b .update-row:focus-visible .update-row-cta {
+      background: var(--pink) !important;
+      border-color: var(--pink) !important;
+      color: #fff !important;
+      gap: 0.5rem !important;
+    }
+    .prev-rm-b .update-row:hover .update-row-cta::after {
+      transform: translateX(2px);
+    }
+
+    /* C — Underline */
+    .prev-rm-c .update-row-cta {
+      position: relative;
+      padding-bottom: 0.12rem !important;
+    }
+    .prev-rm-c .update-row-cta::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--pink);
+      transition: right 0.25s ease;
+    }
+    .prev-rm-c .update-row:hover .update-row-cta::before,
+    .prev-rm-c .update-row:focus-visible .update-row-cta::before {
+      right: 0;
+    }
+    .prev-rm-c .update-row:hover .update-row-cta::after {
+      transform: translateX(2px);
+    }
+
+    /* D — Title only (no CTA label) */
+    .prev-rm-d .update-row-cta {
+      display: none !important;
+    }
+    .prev-rm-d .update-row-body h3 {
+      display: inline;
+      transition: color 0.2s ease;
+    }
+    .prev-rm-d .update-row-body h3::after {
+      content: " →";
+      opacity: 0;
+      transition: opacity 0.2s ease, margin-left 0.2s ease;
+      margin-left: 0;
+      color: var(--pink);
+      font-weight: 700;
+    }
+    .prev-rm-d .update-row:hover .update-row-body h3,
+    .prev-rm-d .update-row:focus-visible .update-row-body h3 {
+      color: var(--pink-deep);
+    }
+    .prev-rm-d .update-row:hover .update-row-body h3::after,
+    .prev-rm-d .update-row:focus-visible .update-row-body h3::after {
+      opacity: 1;
+      margin-left: 0.15rem;
+    }
+  </style>
+</head>
+<body class="ds-ui">
+  <main id="main" class="prev-rm">
+    <div class="wrap">
+      <div class="prev-rm-intro">
+        <p class="eyebrow">Preview</p>
+        <h1>Updates “Read more” options</h1>
+        <p>Same row, four CTA treatments. Hover each. Tell me A, B, C, or D.</p>
+      </div>
+
+      <section class="prev-rm-block prev-rm-a" aria-label="Option A">
+        <div class="prev-rm-label">
+          <strong>A — Text link</strong>
+          <span>Ink link, arrow nudges on hover</span>
+        </div>
+        <div class="update-list">
+          <a class="update-row" href="blog-visual-learning-101.html">
+            <div class="update-row-media">
+              <img src="assets/photos/students.jpg" alt="" />
+            </div>
+            <div class="update-row-body">
+              <time datetime="2024-09-25">25 Sep 2024</time>
+              <h3>Why Visual Learning Works — For Everyone</h3>
+              <p>That gap between hearing and “getting it” is what visual learning closes — for every age and every brain.</p>
+              <span class="update-row-cta">Read more</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="prev-rm-block prev-rm-b" aria-label="Option B">
+        <div class="prev-rm-label">
+          <strong>B — Compact pill</strong>
+          <span>Outline pill, shrink-to-content (not full width)</span>
+        </div>
+        <div class="update-list">
+          <a class="update-row" href="blog-visual-learning-101.html">
+            <div class="update-row-media">
+              <img src="assets/photos/students.jpg" alt="" />
+            </div>
+            <div class="update-row-body">
+              <time datetime="2024-09-25">25 Sep 2024</time>
+              <h3>Why Visual Learning Works — For Everyone</h3>
+              <p>That gap between hearing and “getting it” is what visual learning closes — for every age and every brain.</p>
+              <span class="update-row-cta">Read more</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="prev-rm-block prev-rm-c" aria-label="Option C">
+        <div class="prev-rm-label">
+          <strong>C — Underline</strong>
+          <span>Text with growing underline, no pill</span>
+        </div>
+        <div class="update-list">
+          <a class="update-row" href="blog-visual-learning-101.html">
+            <div class="update-row-media">
+              <img src="assets/photos/students.jpg" alt="" />
+            </div>
+            <div class="update-row-body">
+              <time datetime="2024-09-25">25 Sep 2024</time>
+              <h3>Why Visual Learning Works — For Everyone</h3>
+              <p>That gap between hearing and “getting it” is what visual learning closes — for every age and every brain.</p>
+              <span class="update-row-cta">Read more</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="prev-rm-block prev-rm-d" aria-label="Option D">
+        <div class="prev-rm-label">
+          <strong>D — Title only</strong>
+          <span>No CTA label; hover the row — title picks up an arrow</span>
+        </div>
+        <div class="update-list">
+          <a class="update-row" href="blog-visual-learning-101.html">
+            <div class="update-row-media">
+              <img src="assets/photos/students.jpg" alt="" />
+            </div>
+            <div class="update-row-body">
+              <time datetime="2024-09-25">25 Sep 2024</time>
+              <h3>Why Visual Learning Works — For Everyone</h3>
+              <p>That gap between hearing and “getting it” is what visual learning closes — for every age and every brain.</p>
+              <span class="update-row-cta">Read more</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /studio
-Disallow: /studio/
-Disallow: /lab
-Disallow: /research
-Disallow: /tools
-Disallow: /marketing

@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/site.css?v=academy-lock-1" />
 </head>
-<body>
+<body class="ds-ui">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="PixtoLearn home">
+      <a class="brand" href="home.html" aria-label="PixtoLearn home">
         <img src="assets/brand/logo.png" alt="PixtoLearn" />
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">Menu</button>
@@ -23,9 +23,9 @@
         <li><a href="swimming.html" data-nav="swimming.html">Swimming</a></li>
         <li><a href="routines.html" data-nav="routines.html">Routines</a></li>
         <li><a href="app.html" data-nav="app.html">App</a></li>
-        <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
-        <li class="nav-extra"><a href="about.html" data-nav="about.html">About</a></li>
+        <li><a href="academy.html" data-nav="academy.html">Academy</a></li>
         <li><a href="updates.html" data-nav="updates.html">Updates</a></li>
+        <li><a href="shop.html" data-nav="shop.html">Shop</a></li>
       </ul>
       <div class="nav-icons">
         <a class="nav-icon" href="shop.html" aria-label="Shop basket">
@@ -53,148 +53,221 @@
     </div>
     <div class="swim-canvas" data-swim-waves aria-hidden="true"><canvas></canvas></div>
     <div class="wrap hero-content reveal">
-      <p class="eyebrow" style="color:#b7ece7"><a href="activity.html" style="color:inherit;text-decoration:none">Activity</a> · Swimming</p>
+      <p class="eyebrow" style="color:#b7ece7">PixtoLearn Swimming</p>
       <h1>Real-life swimming skills, powered by visual systems</h1>
       <p class="lede">Waterproof picture tools help swimmers understand actions, follow steps, and feel secure where verbal instructions often fall short.</p>
       <div class="btn-row">
-        <a class="btn btn-primary btn-pulse" href="shop.html#swimming">Shop swimming packs</a>
-        <a class="btn btn-ghost btn-ghost-light" href="#inside">Inside PixtoLearn</a>
+        <a class="btn btn-ghost btn-ghost-light" href="shop.html#swimming">Shop swimming packs</a>
+        <a class="btn btn-ghost btn-ghost-light" href="#inside">Inside the system</a>
       </div>
     </div>
   </section>
 
-  <!-- 1. THE VISUAL SYSTEM -->
+  <!-- 1. VISUAL SYSTEM -->
   <section id="system">
     <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">The visual system</p>
-        <h2>A visual system for learning to swim that fits any programme</h2>
-        <p class="lede">PixtoLearn Swimming is a shared visual language for the water. Waterproof pictures show one clear action at a time, so instructors, families, and swimmers can teach and learn the same skills without relying on spoken instructions alone. It sits alongside the programme you already run: clearer sessions, stronger focus, and water safety built into the way you teach.</p>
+      <div class="section-head system-head reveal">
+        <p class="eyebrow">Methodology</p>
+        <h2>The PixtoLearn Swimming Visual System</h2>
+        <p class="lede">A structured visual system for real aquatic environments: clearer teaching, calmer sessions, and progress you can see.</p>
       </div>
 
-      <div class="sys-brief reveal">
-        <article class="sys-pillar">
-          <span class="sys-pillar-icon"><img src="assets/icons/svg/about-inclusive.svg" alt="" /></span>
-          <h3>Inclusion</h3>
-          <p>Works without shared speech or language. Pictures carry the lesson for non-verbal, neurodiverse, and multilingual swimmers.</p>
-        </article>
-        <article class="sys-pillar">
-          <span class="sys-pillar-icon"><img src="assets/icons/svg/follow-routines.svg" alt="" /></span>
-          <h3>Session structure</h3>
-          <p>A visible order for the lesson. Transitions stay calm because everyone can see what comes next.</p>
-        </article>
-        <article class="sys-pillar">
-          <span class="sys-pillar-icon"><img src="assets/icons/svg/build-confidence.svg" alt="" /></span>
-          <h3>Swimmer focus</h3>
-          <p>One picture, one action. Less verbal noise, clearer attention in the water.</p>
-        </article>
-        <article class="sys-pillar">
-          <span class="sys-pillar-icon"><img src="assets/icons/svg/about-impact.svg" alt="" /></span>
-          <h3>Water safety</h3>
-          <p>Float, tread, and self-rescue taught as real aquatic skills, not as a side note.</p>
-        </article>
-        <article class="sys-pillar">
-          <span class="sys-pillar-icon"><img src="assets/icons/svg/programme.svg" alt="" /></span>
-          <h3>New skills</h3>
-          <p>Break each skill into the steps that the learner needs, so new practice stays achievable.</p>
-        </article>
+      <!-- Layout 1 (saved) — say “bring back Layout 1” to restore -->
+      <div class="system-layout-1-wrap" hidden data-system-layout="1">
+        <p class="system-lead">PixtoLearn Swimming instructs by</p>
+        <div class="system-list system-layout-1" data-system-list>
+          <button type="button" class="system-item is-open" data-system-item aria-expanded="true">
+            <span class="system-num" aria-hidden="true">01</span>
+            <span class="system-item-main">
+              <span class="system-item-title">Structured progress</span>
+              <span class="system-item-copy">Clear visual steps for confident skill building.</span>
+            </span>
+            <span class="system-item-mark" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="system-item" data-system-item aria-expanded="false">
+            <span class="system-num" aria-hidden="true">02</span>
+            <span class="system-item-main">
+              <span class="system-item-title">Predictable sessions</span>
+              <span class="system-item-copy">Consistent flow that supports calm regulation.</span>
+            </span>
+            <span class="system-item-mark" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="system-item" data-system-item aria-expanded="false">
+            <span class="system-num" aria-hidden="true">03</span>
+            <span class="system-item-main">
+              <span class="system-item-title">Shared understanding</span>
+              <span class="system-item-copy">One visual language for every support profile.</span>
+            </span>
+            <span class="system-item-mark" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="system-item" data-system-item aria-expanded="false">
+            <span class="system-num" aria-hidden="true">04</span>
+            <span class="system-item-main">
+              <span class="system-item-title">Better engagement</span>
+              <span class="system-item-copy">More focus, fewer breaks in routine.</span>
+            </span>
+            <span class="system-item-mark" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="system-item" data-system-item aria-expanded="false">
+            <span class="system-num" aria-hidden="true">05</span>
+            <span class="system-item-main">
+              <span class="system-item-title">Fits your programme</span>
+              <span class="system-item-copy">Slots into your curriculum without rebuilding it.</span>
+            </span>
+            <span class="system-item-mark" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="system-item" data-system-item aria-expanded="false">
+            <span class="system-num" aria-hidden="true">06</span>
+            <span class="system-item-main">
+              <span class="system-item-title">Language support</span>
+              <span class="system-item-copy">Builds functional vocabulary linked to actions.</span>
+            </span>
+            <span class="system-item-mark" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Layout 2 — Cross-out / rewrite (auto-animates). Say “bring back Layout 2” to restore. -->
+      <div class="system-layout-2 reveal" data-system-layout="2">
+        <div class="system-card-strip" aria-hidden="true">
+          <img src="assets/flashcards/splash.png" alt="" />
+          <img src="assets/flashcards/kick-legs.png" alt="" />
+          <img src="assets/flashcards/blow-bubbles.png" alt="" />
+          <img src="assets/flashcards/goggles-on.png" alt="" />
+        </div>
+        <p class="system-rewrite-frame">Without visuals <span aria-hidden="true">→</span> With PixtoLearn</p>
+        <div class="system-rewrite" data-system-rewrite aria-live="polite">
+          <div class="system-rewrite-line" data-rewrite-line>
+            <span class="system-rewrite-before">Too many words in the water</span>
+            <span class="system-rewrite-after">Structured progress — clear visual steps</span>
+          </div>
+          <div class="system-rewrite-line" data-rewrite-line>
+            <span class="system-rewrite-before">Steps get mixed up mid-skill</span>
+            <span class="system-rewrite-after">Predictable sessions — calmer regulation</span>
+          </div>
+          <div class="system-rewrite-line" data-rewrite-line>
+            <span class="system-rewrite-before">Everyone hears something different</span>
+            <span class="system-rewrite-after">Shared understanding — one visual language</span>
+          </div>
+          <div class="system-rewrite-line" data-rewrite-line>
+            <span class="system-rewrite-before">Overwhelm breaks the flow</span>
+            <span class="system-rewrite-after">Better engagement — fewer broken routines</span>
+          </div>
+          <div class="system-rewrite-line" data-rewrite-line>
+            <span class="system-rewrite-before">Another system to rebuild around</span>
+            <span class="system-rewrite-after">Fits your programme — no rebuild needed</span>
+          </div>
+          <div class="system-rewrite-line" data-rewrite-line>
+            <span class="system-rewrite-before">Language gets lost in instruction</span>
+            <span class="system-rewrite-after">Language support — words linked to action</span>
+          </div>
+        </div>
+        <div class="system-result is-waiting" data-system-result>
+          <p class="system-result-q">The result<span class="system-result-dots" aria-hidden="true"><i></i><i></i><i></i></span></p>
+          <p class="system-result-placeholder" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </p>
+          <p class="system-result-line">Safer sessions. Stronger progress. Greater confidence.</p>
+        </div>
+      </div>
+
+      <!-- Older side-by-side compare kept hidden -->
+      <div class="system-layout-2-compare" data-system-layout="2-compare" hidden>
+        <div class="system-compare">
+          <article class="system-compare-panel system-compare-before">
+            <p class="system-compare-kicker">Without visuals</p>
+            <h3>Words alone</h3>
+            <ul>
+              <li>Instructions fade in the noise of the pool</li>
+              <li>Steps get mixed up mid-skill</li>
+              <li>Every learner hears something different</li>
+              <li>Overwhelm breaks the session flow</li>
+            </ul>
+          </article>
+          <div class="system-compare-bridge" aria-hidden="true">
+            <span>With PixtoLearn</span>
+          </div>
+          <article class="system-compare-panel system-compare-after">
+            <p class="system-compare-kicker">With PixtoLearn</p>
+            <h3>See it. Do it.</h3>
+            <ul class="system-punches">
+              <li><strong>Structured progress</strong> — clear visual steps</li>
+              <li><strong>Predictable sessions</strong> — calmer regulation</li>
+              <li><strong>Shared understanding</strong> — one visual language</li>
+              <li><strong>Better engagement</strong> — fewer broken routines</li>
+              <li><strong>Fits your programme</strong> — no rebuild needed</li>
+              <li><strong>Language support</strong> — words linked to action</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-
-    <section id="library" class="section-tint">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Library folders</p>
-          <h2>The same folders as in the app</h2>
-          <p class="lede">PixtoLearn Swimming is organised into colour folders — physical packs and the digital hub use the same structure.</p>
-        </div>
-        <div class="library-folders">
-        <article class="library-folder reveal" style="color:#B84C64">
-          <h3>Water Adaptation</h3>
-          <p>Breathing, entry and safety, and first movement in the water.</p>
-          <span class="folder-meta">29 cards</span>
-        </article>
-        <article class="library-folder reveal" style="color:#26575B">
-          <h3>Floating & Streamline</h3>
-          <p>Balance, streamline shape, and early diving.</p>
-          <span class="folder-meta">30 cards</span>
-        </article>
-        <article class="library-folder reveal" style="color:#C46C30">
-          <h3>Swimming Strokes</h3>
-          <p>Front crawl, backstroke, breaststroke, butterfly — step by step.</p>
-          <span class="folder-meta">22 cards</span>
-        </article>
-        <article class="library-folder reveal" style="color:#E8C840">
-          <h3>Games & Extras</h3>
-          <p>Games, session extras, and motivators for the lesson.</p>
-          <span class="folder-meta">24 cards</span>
-        </article>
-        </div>
-      </div>
-    </section>
-
-
-  <section id="activity-bridge" class="section-tint">
-    <div class="wrap reveal" style="padding-top:2.25rem;padding-bottom:2.25rem">
-      <div class="section-head" style="margin-bottom:0">
-        <p class="eyebrow">PIXTOLEARN Activity</p>
-        <h2>Swimming is the model for the Activity line</h2>
-        <p class="lede">The same visual method — clean cards, Break It Down, Focus, session order — powers Physical, Climbing and Yoga in the app. Waterproof packs stay unique to Swimming.</p>
-        <div class="btn-row" style="margin-top:1rem">
-          <a class="btn btn-ghost" href="activity.html">All Activity modules</a>
-          <a class="btn btn-ghost" href="physical.html">Physical</a>
-          <a class="btn btn-ghost" href="climbing.html">Climbing</a>
-          <a class="btn btn-ghost" href="yoga.html">Yoga</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. INSIDE PIXTOLEARN -->
-  <section id="inside" class="section-tint">
+  <!-- 2. INSIDE + VIDEOS -->
+  <section id="inside">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">Inside PixtoLearn</p>
-        <h2>Three kinds of flashcard, and a clear session order</h2>
-        <p class="lede">The system is built around different card types for teaching, motivating, and choosing, plus a First / Next / Then schedule so every swimmer can see the flow of the lesson.</p>
+        <p class="eyebrow">Product</p>
+        <h2>Inside PixtoLearn Swimming</h2>
+        <p class="lede">Choose a pack, watch it in action, then explore how each flashcard is built.</p>
       </div>
 
-      <div class="card-types reveal">
-        <article class="card-type is-lead">
-          <div class="card-type-media">
-            <img src="assets/flashcards/float-on-back-main.png" alt="Break It Down card: float on back" loading="lazy" />
-          </div>
-          <p class="card-type-kicker">Main teaching card</p>
-          <h3>Break It Down</h3>
-          <p>Two sides. The front shows the goal. The reverse breaks it into the steps that skill needs: three, four, or more.</p>
-        </article>
-        <article class="card-type">
-          <div class="card-type-media">
-            <img src="assets/packs/path-fan/swim-water-pistol.jpg" alt="Single Object card: water pistol" loading="lazy" />
-          </div>
-          <p class="card-type-kicker">Toys and equipment</p>
-          <h3>Single Objects</h3>
-          <p>One toy or piece of equipment per card. Use them as the activity, as a motivator, or inside a visual schedule.</p>
-        </article>
-        <article class="card-type">
-          <div class="card-type-media">
-            <img src="assets/packs/path-fan/swim-choosing.jpg" alt="Break and Choose card: choosing side" loading="lazy" />
-          </div>
-          <p class="card-type-kicker">Break and choose</p>
-          <h3>Break and Choose</h3>
-          <p>One side signals break time. The other lets the swimmer choose a preferred toy, game, or activity.</p>
-        </article>
-      </div>
-
-      <div class="inside-block reveal" id="flashcard">
-        <div class="inside-block-head">
-          <p class="eyebrow">Break It Down in action</p>
-          <h3>Show the goal. Teach the path.</h3>
-          <p>Then teach with Show, Mode, Perform, Repeat.</p>
+      <div class="pack-carousel reveal" data-pack-carousel>
+        <button class="pack-nav pack-nav-prev" type="button" aria-label="Previous pack">&#8592;</button>
+        <div class="pack-track">
+          <article class="pack-slide" data-pack-slide data-index="0">
+            <span class="pack-badge pack-badge-basic">Basic Pack</span>
+            <div class="pack-video" data-video-card>
+              <button class="video-play" type="button" aria-label="Play Basic Pack video">
+                <img src="assets/packs/shop-basic.png" alt="PixtoLearn Basic Pack" />
+                <span class="video-play-btn" aria-hidden="true"></span>
+              </button>
+              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-basic.png">
+                <source src="assets/videos/basic-pack.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="pack-slide is-active" data-pack-slide data-index="1">
+            <span class="pack-badge pack-badge-full">Full Pack</span>
+            <div class="pack-video" data-video-card>
+              <button class="video-play" type="button" aria-label="Play Full Pack video">
+                <img src="assets/packs/shop-full.png" alt="PixtoLearn Full Pack" />
+                <span class="video-play-btn" aria-hidden="true"></span>
+              </button>
+              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-full.png">
+                <source src="assets/videos/team-swimming.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="pack-slide" data-pack-slide data-index="2">
+            <span class="pack-badge pack-badge-fun">Fun Pack</span>
+            <div class="pack-video" data-video-card>
+              <button class="video-play" type="button" aria-label="Play Fun Pack video">
+                <img src="assets/packs/shop-fun.png" alt="PixtoLearn Fun Pack" />
+                <span class="video-play-btn" aria-hidden="true"></span>
+              </button>
+              <video class="video-el" preload="metadata" playsinline controls poster="assets/videos/poster-fun.png">
+                <source src="assets/videos/fun-pack.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
         </div>
+        <button class="pack-nav pack-nav-next" type="button" aria-label="Next pack">&#8594;</button>
+        <div class="pack-dots" aria-hidden="true">
+          <button type="button" data-pack-dot="0"></button>
+          <button type="button" class="is-active" data-pack-dot="1"></button>
+          <button type="button" data-pack-dot="2"></button>
+        </div>
+      </div>
 
+      <!-- Flashcard anatomy -->
+      <div class="flash-anatomy reveal" id="flashcard">
+        <div class="section-head" style="margin-top:2.5rem">
+          <p class="eyebrow">The card</p>
+          <h2>The PixtoLearn Swimming Flashcard</h2>
+          <p class="lede">Every card works as a pair: one clear action on the main side, and a break-it-down sequence on the reverse.</p>
+        </div>
         <div class="flash-duo">
           <article class="flash-panel">
             <div class="flash-panel-media">
@@ -202,179 +275,132 @@
             </div>
             <div class="flash-panel-copy">
               <p class="flash-kicker">Main side</p>
-              <h3>Show the goal</h3>
-              <p>One clear picture of the skill, so the learner knows what success looks like.</p>
+              <h3>See the goal first</h3>
+              <p>One clear picture of the goal. Teachers and families start here so the learner knows what the skill looks like.</p>
             </div>
           </article>
           <article class="flash-panel flash-panel-path">
             <div class="flash-panel-media">
-              <img src="assets/flashcards/float-on-back-breakdown.png" alt="Break it down side: steps for float on back" />
+              <img src="assets/flashcards/float-on-back-breakdown.png" alt="Break it down side: four steps for float on back" />
             </div>
             <div class="flash-panel-copy">
               <p class="flash-kicker">Break it down</p>
-              <h3>Teach the path</h3>
-              <p>Flip for the sequence. Float on back needs four steps. Other skills need fewer, or more.</p>
+              <h3>Practice the sequence</h3>
+              <p>Flip to rehearse the sequence: breath in, lean back, looking up, tummy up. Calm and clear steps.</p>
             </div>
           </article>
         </div>
-
-        <div class="teach-cycle" aria-label="Teaching cycle">
-          <div class="teach-cycle-step">
-            <strong>Show</strong>
-            <span>Present the card</span>
-          </div>
-          <div class="teach-cycle-step">
-            <strong>Mode</strong>
-            <span>Model the skill</span>
-          </div>
-          <div class="teach-cycle-step">
-            <strong>Perform</strong>
-            <span>Learner tries it</span>
-          </div>
-          <div class="teach-cycle-step">
-            <strong>Repeat</strong>
-            <span>Practise until it sticks</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="inside-block reveal" id="session">
-        <div class="inside-block-head">
-          <p class="eyebrow">Session order</p>
-          <h3>First. Next. Then.</h3>
-          <p>Stands hold the visual schedule upright so every swimmer can see what comes first, what comes next, and what comes then.</p>
-        </div>
-        <div class="session-split">
-          <figure class="session-split-media">
-            <img src="assets/photos/mode/first-then.jpg?v=1" alt="First then visual sequence with PixtoLearn cards at the poolside" />
-          </figure>
-          <div class="session-split-copy">
-            <ol class="session-steps">
-              <li><strong>First</strong> A familiar or focus activity</li>
-              <li><strong>Next</strong> The new skill or practice</li>
-              <li><strong>Then</strong> A motivator, game, or break</li>
-            </ol>
-          </div>
-        </div>
+        <ul class="flash-traits">
+          <li>
+            <img src="assets/photos/mode/product-float.jpg?v=1" alt="PixtoLearn flashcard floating waterproof in pool water" />
+            <strong>Durably waterproof</strong>
+            <span>Pool-ready, every lesson</span>
+          </li>
+          <li class="flash-trait-a5">
+            <div class="a5-stage" aria-hidden="true">
+              <div class="a5-board">
+                <div class="a5-frame">
+                  <img class="a5-card" src="assets/flashcards/float-on-back-main.png" alt="" />
+                </div>
+                <div class="a5-dim a5-dim-h">
+                  <span class="a5-hair a5-hair-v"></span>
+                  <span class="a5-label">210 mm</span>
+                </div>
+                <div class="a5-dim a5-dim-w">
+                  <span class="a5-hair a5-hair-h"></span>
+                  <span class="a5-label">148 mm</span>
+                </div>
+              </div>
+            </div>
+            <strong>Perfect A5 size</strong>
+            <span>148 x 210 mm</span>
+          </li>
+          <li class="flash-trait-art">
+            <img src="assets/photos/mode/product-three-cards.jpg?v=1" alt="Three PixtoLearn swimming cards in the water: splash, stay on the boat, sinkers" />
+            <strong>Clear action art</strong>
+            <span>No clutter</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 3. PACKS -->
-  <section id="packs" class="section-tint">
+  <div class="swim-users-wave swim-users-wave--flip" aria-hidden="true">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" focusable="false">
+      <defs>
+        <linearGradient id="swimWaveFadeFlip" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7aa3b3" stop-opacity="0.28" />
+          <stop offset="38%" stop-color="#88b0c0" stop-opacity="0.18" />
+          <stop offset="72%" stop-color="#f7f4ef" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#f7f4ef" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#swimWaveFadeFlip)"
+        d="M0 148C160 72 320 48 500 108C680 168 840 228 1040 148C1180 92 1320 84 1440 118L1440 320H0Z"
+      />
+      <path
+        fill="#88b0c0"
+        opacity="0.12"
+        d="M0 188C200 108 380 92 560 142C740 192 920 232 1120 168C1260 124 1360 128 1440 148L1440 320H0Z"
+      />
+    </svg>
+  </div>
+
+  <!-- 3. WHO USES IT IN SWIMMING -->
+  <section id="swim-users" class="section-tint">
     <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Packs</p>
-        <h2>Choose the pack that fits your sessions</h2>
-        <p class="lede">Same visual system, three ways in. See each pack in the water and pick the one that matches how you teach.</p>
-      </div>
-
-      <div class="pack-grid reveal">
-        <article class="pack-card">
-          <div class="pack-video" data-video-card>
-            <button class="video-play" type="button" aria-label="Play Basic Pack video">
-              <img src="assets/videos/poster-basic.png" alt="PixtoLearn Basic Pack in a swimming session" loading="lazy" />
-              <span class="video-play-btn" aria-hidden="true"></span>
-            </button>
-            <video class="video-el" preload="none" playsinline controls poster="assets/videos/poster-basic.png">
-              <source src="assets/videos/basic-pack.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="pack-card-body">
-            <span class="pack-badge pack-badge-basic">Basic Pack</span>
-            <p>Core skills for teachers starting with visual support.</p>
-            <a class="btn btn-ghost" href="product-basic-pack.html">See Basic Pack</a>
-          </div>
-        </article>
-
-        <article class="pack-card is-featured">
-          <div class="pack-video" data-video-card>
-            <button class="video-play" type="button" aria-label="Play Full Pack video">
-              <img src="assets/videos/poster-full.png" alt="PixtoLearn Full Pack in a swimming session" loading="lazy" />
-              <span class="video-play-btn" aria-hidden="true"></span>
-            </button>
-            <video class="video-el" preload="none" playsinline controls poster="assets/videos/poster-full.png">
-              <source src="assets/videos/team-swimming.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="pack-card-body">
-            <span class="pack-badge pack-badge-full">Full Pack</span>
-            <p>The complete system: 160 cards, folders, stands, holder, and toys.</p>
-            <a class="btn btn-primary" href="product-full-pack.html">See Full Pack</a>
-          </div>
-        </article>
-
-        <article class="pack-card">
-          <div class="pack-video" data-video-card>
-            <button class="video-play" type="button" aria-label="Play Fun Pack video">
-              <img src="assets/videos/poster-fun.png" alt="PixtoLearn Fun Pack in a swimming session" loading="lazy" />
-              <span class="video-play-btn" aria-hidden="true"></span>
-            </button>
-            <video class="video-el" preload="none" playsinline controls poster="assets/videos/poster-fun.png">
-              <source src="assets/videos/fun-pack.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="pack-card-body">
-            <span class="pack-badge pack-badge-fun">Fun Pack</span>
-            <p>Games, toys, and motivation for playful sessions.</p>
-            <a class="btn btn-ghost" href="product-fun-pack.html">See Fun Pack</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. WHO USES IT IN SWIMMING -->
-  <section id="swim-users">
-    <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head swim-users-head reveal">
         <p class="eyebrow">In the pool</p>
         <h2>Who uses PixtoLearn Swimming</h2>
         <p class="lede">Same visual language across the people who teach, support, and learn in the water.</p>
       </div>
       <div class="swim-users reveal" data-swim-users data-active="">
         <div class="swim-users-stage">
+          <p class="swim-users-hint">(Tap on a role to see recommended packs)</p>
           <div class="swim-users-orbit" data-swim-orbit>
             <div class="swim-users-ring" data-swim-ring>
-              <!-- 12 slots: 4 interactive + 8 fillers close the ring -->
-              <button type="button" class="swim-users-node" style="--i: 0; --bubble-tint: 208, 56, 96" data-user="instructors" aria-pressed="false" aria-label="Swimming instructors">
+              <button type="button" class="swim-users-node" style="--i: 0" data-user="instructors" aria-pressed="false" aria-label="Swimming instructors">
                 <span class="swim-users-node-face">
-                  <img class="swim-users-node-photo" src="assets/photos/mode/session-smile.jpg?v=1" alt="" />
-                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  <span class="swim-users-node-disc">
+                    <img class="swim-users-node-photo" src="assets/photos/mode/session-smile.jpg?v=1" alt="" />
+                    <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  </span>
+                  <span class="swim-users-node-label">Instructors</span>
                 </span>
               </button>
-              <span class="swim-users-filler" style="--i: 1; --s: 48px; --bubble-tint: 136, 176, 192" aria-hidden="true"></span>
-              <span class="swim-users-filler" style="--i: 2; --s: 28px; --bubble-tint: 232, 168, 64" aria-hidden="true"></span>
-              <button type="button" class="swim-users-node" style="--i: 3; --bubble-tint: 136, 176, 192" data-user="schools" aria-pressed="false" aria-label="Schools and organisations">
+              <button type="button" class="swim-users-node" style="--i: 1" data-user="schools" aria-pressed="false" aria-label="Schools and organisations">
                 <span class="swim-users-node-face">
-                  <img class="swim-users-node-photo" src="assets/photos/mode/group-shirts.jpg?v=1" alt="" />
-                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  <span class="swim-users-node-disc">
+                    <img class="swim-users-node-photo" src="assets/photos/mode/group-shirts.jpg?v=1" alt="" />
+                    <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  </span>
+                  <span class="swim-users-node-label">Schools</span>
                 </span>
               </button>
-              <span class="swim-users-filler" style="--i: 4; --s: 38px; --bubble-tint: 95, 138, 154" aria-hidden="true"></span>
-              <span class="swim-users-filler" style="--i: 5; --s: 22px; --bubble-tint: 208, 56, 96" aria-hidden="true"></span>
-              <button type="button" class="swim-users-node" style="--i: 6; --bubble-tint: 232, 168, 64" data-user="families" aria-pressed="false" aria-label="Families">
+              <button type="button" class="swim-users-node" style="--i: 2" data-user="families" aria-pressed="false" aria-label="Families">
                 <span class="swim-users-node-face">
-                  <img class="swim-users-node-photo" src="assets/photos/mode/joy.jpg?v=1" alt="" />
-                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  <span class="swim-users-node-disc">
+                    <img class="swim-users-node-photo" src="assets/photos/mode/joy.jpg?v=1" alt="" />
+                    <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  </span>
+                  <span class="swim-users-node-label">Families</span>
                 </span>
               </button>
-              <span class="swim-users-filler" style="--i: 7; --s: 44px; --bubble-tint: 136, 176, 192" aria-hidden="true"></span>
-              <span class="swim-users-filler" style="--i: 8; --s: 26px; --bubble-tint: 232, 168, 64" aria-hidden="true"></span>
-              <button type="button" class="swim-users-node" style="--i: 9; --bubble-tint: 95, 138, 154" data-user="sen" aria-pressed="false" aria-label="SEN specialists and therapists">
+              <button type="button" class="swim-users-node" style="--i: 3" data-user="sen" aria-pressed="false" aria-label="SEN specialists and therapists">
                 <span class="swim-users-node-face">
-                  <img class="swim-users-node-photo" src="assets/photos/mode/first-then.jpg?v=1" alt="" />
-                  <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  <span class="swim-users-node-disc">
+                    <img class="swim-users-node-photo" src="assets/photos/mode/first-then.jpg?v=1" alt="" />
+                    <span class="swim-users-node-glass" aria-hidden="true"></span>
+                  </span>
+                  <span class="swim-users-node-label">SEN specialists</span>
                 </span>
               </button>
-              <span class="swim-users-filler" style="--i: 10; --s: 34px; --bubble-tint: 208, 56, 96" aria-hidden="true"></span>
-              <span class="swim-users-filler" style="--i: 11; --s: 20px; --bubble-tint: 136, 176, 192" aria-hidden="true"></span>
             </div>
             <div class="swim-users-core">
               <img src="assets/packs/shop-full-cutout.png" alt="PixtoLearn Swimming Full Pack kit" />
             </div>
           </div>
-          <p class="swim-users-hint">Select a photo to see recommended packs for that role.</p>
         </div>
 
         <div class="swim-users-panel" data-swim-panel aria-hidden="true">
@@ -516,98 +542,44 @@
     </div>
   </section>
 
-  <!-- 4. REAL WORLD -->
+  <div class="swim-users-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" focusable="false">
+      <defs>
+        <linearGradient id="swimWaveFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7aa3b3" stop-opacity="0.28" />
+          <stop offset="38%" stop-color="#88b0c0" stop-opacity="0.18" />
+          <stop offset="72%" stop-color="#f7f4ef" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#f7f4ef" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#swimWaveFade)"
+        d="M0 148C160 72 320 48 500 108C680 168 840 228 1040 148C1180 92 1320 84 1440 118L1440 320H0Z"
+      />
+      <path
+        fill="#88b0c0"
+        opacity="0.12"
+        d="M0 188C200 108 380 92 560 142C740 192 920 232 1120 168C1260 124 1360 128 1440 148L1440 320H0Z"
+      />
+    </svg>
+  </div>
+
+  <!-- 4. PROOF + NEXT STEP -->
   <section id="impact" class="section-tint">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Real world implementation</p>
-        <h2>The same cards. Real water. Real lives.</h2>
-        <p class="lede">When swim lessons are scarce and language gets in the way, a waterproof picture still teaches what to do next.</p>
-      </div>
-
-      <article class="impact-feature reveal">
-        <figure class="impact-feature-media">
-          <img src="assets/photos/ghana-1.jpg" alt="Instructor and learner in the pool using a PixtoLearn goggles sequence card" />
-          <figcaption class="impact-feature-cap">
-            <span>In-session</span>
-            <strong>Cards used at the poolside and in the water</strong>
-          </figcaption>
-        </figure>
-        <div class="impact-feature-body">
-          <p class="impact-kicker">Why this matters</p>
-          <h3>Water safety cannot wait for perfect conditions</h3>
-          <p>In many communities near open water, children learn to swim with limited coaches, mixed languages, and almost no waterproof teaching tools.</p>
-          <p>PixtoLearn takes the same visual system used in UK pools into those sessions: clear actions, calm steps, skills that travel.</p>
-          <p class="impact-places">Already in use from Kenya to Colombia, and in coastal programmes where drowning risk is highest.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="around-the-world.html">PixtoLearn Swimming Around the World</a>
-            <a class="btn btn-ghost" href="around-the-world.html#project">Explore the project</a>
-          </div>
+    <div class="wrap swim-proof reveal">
+      <div class="swim-proof-copy">
+        <p class="eyebrow">Beyond the pool</p>
+        <h2>A method that travels</h2>
+        <p class="lede">One visual system: clear, calm, and shareable - that can move from UK pools into communities where coaches, tools, and shared language are limited.</p>
+        <p class="swim-proof-note">Learn the system in Academy, then follow the work where the cards are making a difference.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="academy.html">Explore Academy</a>
+          <a class="btn btn-ghost" href="around-the-world.html">PixtoLearn Swimming: Around the World</a>
         </div>
-      </article>
-
-      <div class="impact-strip reveal">
-        <figure class="impact-strip-item">
-          <img src="assets/photos/ghana-impact.jpg" alt="Coach holding a float on back PixtoLearn card during a pool session" />
-          <figcaption>Teaching float and balance with one clear visual</figcaption>
-        </figure>
-        <figure class="impact-strip-item">
-          <img src="assets/photos/library/dsc_0795.jpg" alt="Instructors reviewing PixtoLearn choosing and seahorse cards on a waterproof board" />
-          <figcaption>Shared board sequences coaches can repeat</figcaption>
-        </figure>
       </div>
-
-      <div class="impact-grid reveal">
-        <article class="impact-card">
-          <div class="feature-icon" aria-hidden="true"><img src="assets/icons/svg/about-inclusive.svg" alt="" /></div>
-          <h3>Works without shared spoken language</h3>
-          <p>Pictures carry the lesson when words do not.</p>
-        </article>
-        <article class="impact-card">
-          <div class="feature-icon" aria-hidden="true"><img src="assets/icons/svg/durable.svg" alt="" /></div>
-          <h3>Built for real water, not just classrooms</h3>
-          <p>Waterproof cards stay useful in splash, sun, and busy groups.</p>
-        </article>
-        <article class="impact-card">
-          <div class="feature-icon" aria-hidden="true"><img src="assets/icons/svg/about-scalable.svg" alt="" /></div>
-          <h3>One method coaches can repeat</h3>
-          <p>The same sequence in every pool, lake, or shoreline session.</p>
-        </article>
-      </div>
-      <div class="system-result reveal">
-        <p class="system-result-q">What changes?</p>
-        <p class="system-result-line">Children understand sooner.</p>
-        <p class="system-result-line">Safer habits stick.</p>
-        <p class="system-result-line">Skills that can save a life.</p>
-      </div>
-      <div class="btn-row feature-cta-row reveal">
-        <a class="btn btn-primary" href="shop.html#swimming">Shop swimming packs</a>
-        <a class="btn btn-ghost" href="around-the-world.html">PixtoLearn Swimming Around the World</a>
-        <a class="btn btn-ghost" href="app.html#activity">Use in the app</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-tint" id="app-twin">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Same language · digital</p>
-        <h2>In the pool and in the app</h2>
-        <p class="lede">Waterproof packs stay the physical product. In PixtoLearn App you build swimming sessions, open them on the floor device, and use Session mode for instructors — without a child house.</p>
-      </div>
-      <div class="dual-split">
-        <article class="dual-card reveal">
-          <h3>Physical packs</h3>
-          <p>Full, Basic, Fun, stands and toys. What we manufacture and ship today.</p>
-          <a class="btn btn-primary" href="shop.html#swimming">Shop packs</a>
-        </article>
-        <article class="dual-card reveal">
-          <h3>App sessions</h3>
-          <p>Digital swimming hub under Activity. Family for home; Session for poolside and centres.</p>
-          <a class="btn btn-primary" href="https://pixtolearn-parents.vercel.app" rel="noopener" target="_blank">Open the app</a>
-        </article>
-      </div>
-      <p class="note reveal" style="margin-top:1.25rem;text-align:center">Activity umbrella: <a href="activity.html">Physical · Swimming · Climbing · Yoga</a></p>
+      <figure class="swim-proof-media">
+        <img src="assets/photos/ghana-8.jpg" alt="Swimming teacher and young learner smiling together in the pool during a PixtoLearn Swimming session in Ghana" loading="lazy" />
+      </figure>
     </div>
   </section>
 
@@ -616,7 +588,7 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <a class="brand" href="index.html" aria-label="PixtoLearn home"><img src="assets/brand/logo.png" alt="PixtoLearn" /></a>
+        <a class="brand" href="home.html" aria-label="PixtoLearn home"><img src="assets/brand/logo.png" alt="PixtoLearn" /></a>
         <p class="muted" style="margin-top:0.85rem;max-width:28ch">Real-life learning, powered by visual aids. Physical packs and PixtoLearn App for clearer sessions.</p>
       </div>
       <div>
@@ -632,7 +604,7 @@
       <div>
         <h3>Company</h3>
         <ul>
-          <li><a href="about.html">About us</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="account.html">My Account</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="mailto:hello@pixtolearn.com">hello@pixtolearn.com</a></li>
@@ -654,6 +626,6 @@
       <span>Because visuals speak louder</span>
     </div>
   </footer>
-  <script src="js/site.js?v=6"></script>
+  <script src="js/site.js?v=academy-lock-1"></script>
 </body>
 </html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview | App continuity A+B</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=app-continuity-prev-2" />
+  <style>
+    .app-prev {
+      background: #ece8e1;
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    .app-prev-bar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(20, 36, 43, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .app-prev-bar a { font-weight: 650; color: var(--ink); text-decoration: none; }
+    .app-prev-bar .app-prev-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+    }
+
+    .app-prev-intro {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 1.5rem auto 1.25rem;
+      padding: 1.15rem 1.25rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(20, 36, 43, 0.08);
+      box-shadow: 0 10px 28px rgba(20, 36, 43, 0.05);
+    }
+
+    .app-prev-intro h1 {
+      margin: 0 0 0.5rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+      letter-spacing: -0.03em;
+    }
+
+    .app-prev-intro p {
+      margin: 0;
+      max-width: 58ch;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    .app-prev-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      margin-top: 0.85rem;
+    }
+
+    .app-prev-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      background: rgba(95, 138, 154, 0.1);
+    }
+
+    .app-prev-legend span::before {
+      content: "";
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--brand-bar);
+    }
+
+    .app-prev-legend span:nth-child(2)::before { background: var(--pink); }
+    .app-prev-legend span:nth-child(3)::before { background: var(--amber); }
+
+    /* Framed mock — reads as one page */
+    .app-prev-frame {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0 auto 3rem;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--page);
+      box-shadow:
+        0 0 0 1px rgba(20, 36, 43, 0.08),
+        0 28px 60px rgba(20, 36, 43, 0.12);
+    }
+
+    .app-cont-ab {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* A — Hero fade */
+    .app-cont-ab .app-cont-hero {
+      position: relative;
+      min-height: clamp(18rem, 42vw, 24rem);
+      display: grid;
+      align-items: end;
+      isolation: isolate;
+    }
+
+    .app-cont-ab .app-cont-hero .hero-media,
+    .app-cont-ab .app-cont-hero .hero-shade {
+      position: absolute;
+      inset: 0;
+    }
+
+    .app-cont-ab .app-cont-hero .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%;
+    }
+
+    .app-cont-ab .app-cont-hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: clamp(6rem, 16vw, 10rem);
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(180deg, transparent 0%, var(--page) 94%);
+    }
+
+    .app-cont-ab .app-cont-hero .hero-content {
+      position: relative;
+      z-index: 3;
+      padding: clamp(2.5rem, 6vw, 3.5rem) 0 clamp(3.5rem, 8vw, 5rem);
+      color: #fff;
+    }
+
+    .app-cont-ab .app-cont-hero h1 {
+      max-width: 14ch;
+    }
+
+    .app-cont-ab .app-cont-hero .lede {
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 34ch;
+    }
+
+    .app-cont-callout {
+      position: absolute;
+      z-index: 4;
+      right: 1.25rem;
+      bottom: clamp(4.5rem, 10vw, 6.5rem);
+      max-width: 11rem;
+      padding: 0.5rem 0.7rem;
+      border-radius: 10px;
+      font-size: 0.68rem;
+      font-weight: 750;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(20, 36, 43, 0.1);
+      box-shadow: 0 8px 20px rgba(20, 36, 43, 0.1);
+    }
+
+    .app-cont-callout strong {
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate-deep);
+    }
+
+    /* Shared flow wash (B) */
+    .app-cont-flow {
+      position: relative;
+      margin-top: clamp(-4rem, -9vw, -2.75rem);
+      z-index: 5;
+      background:
+        radial-gradient(ellipse 72% 55% at 8% 0%, rgba(95, 138, 154, 0.14), transparent 58%),
+        radial-gradient(ellipse 58% 48% at 95% 22%, rgba(208, 56, 96, 0.08), transparent 52%),
+        var(--page);
+    }
+
+    .app-cont-personalise {
+      padding: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+    }
+
+    .app-cont-personalise .section-head {
+      margin-bottom: 1.25rem;
+    }
+
+    /* Handoff phone — Mealtime row highlighted */
+    .app-cont-handoff-phone .plui-row.is-handoff {
+      position: relative;
+      z-index: 1;
+      outline: 2px solid rgba(208, 56, 96, 0.45);
+      outline-offset: 3px;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(208, 56, 96, 0.12);
+    }
+
+    .app-cont-handoff-phone .plapp-screen-item:last-child .plapp-phone {
+      filter: drop-shadow(0 22px 36px rgba(20, 36, 43, 0.14));
+    }
+
+    .app-cont-handoff-phone .plapp-screen-item:last-child .plapp-caption h3::after {
+      content: " → opens on tablet";
+      font-weight: 650;
+      color: var(--pink-deep);
+    }
+
+    /* Bridge zone */
+    .app-cont-handoff {
+      position: relative;
+      padding: 0.5rem 0 0;
+      margin-bottom: clamp(-5rem, -11vw, -3.5rem);
+      z-index: 6;
+    }
+
+    .app-cont-handoff-inner {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      gap: 0.65rem;
+      padding: 0 1.25rem;
+    }
+
+    .app-cont-bridge {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem 0.85rem;
+      padding: 0.75rem 1.15rem;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(20, 36, 43, 0.1);
+      box-shadow: 0 12px 32px rgba(20, 36, 43, 0.1);
+      font-size: 0.92rem;
+      font-weight: 650;
+      color: var(--ink-soft);
+    }
+
+    .app-cont-bridge img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--pink);
+    }
+
+    .app-cont-bridge strong { color: var(--ink); font-weight: 780; }
+    .app-cont-bridge em {
+      font-style: normal;
+      font-weight: 800;
+      color: var(--pink-deep);
+    }
+
+    .app-cont-bridge-arrow {
+      font-size: 1.1rem;
+      color: var(--slate-deep);
+      opacity: 0.5;
+    }
+
+    .app-cont-thread {
+      width: min(420px, 88%);
+      height: 56px;
+      overflow: visible;
+    }
+
+    .app-cont-thread path {
+      fill: none;
+      stroke: url(#handoffGrad);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-dasharray: 6 8;
+      opacity: 0.55;
+    }
+
+    /* Library overlap (B) */
+    .app-cont-library {
+      position: relative;
+      z-index: 7;
+      padding: clamp(5.5rem, 12vw, 7.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .app-cont-library .section-head {
+      text-align: center;
+      margin-inline: auto;
+      max-width: 36rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .app-cont-library .eyebrow { justify-content: center; }
+
+    .app-cont-library .plmode-stage {
+      position: relative;
+      z-index: 2;
+    }
+
+    .app-cont-library .plmode-device {
+      margin-inline: auto;
+      filter: drop-shadow(0 36px 52px rgba(20, 36, 43, 0.18));
+    }
+
+    .app-cont-library .plui-kicker.is-match {
+      position: relative;
+    }
+
+    .app-cont-library .plui-kicker.is-match::after {
+      content: "same routine";
+      position: absolute;
+      left: calc(100% + 0.5rem);
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0.2rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      background: rgba(208, 56, 96, 0.1);
+      white-space: nowrap;
+    }
+
+    .app-cont-footnote {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: -1.5rem auto 3rem;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    @media (max-width: 900px) {
+      .app-cont-callout { display: none; }
+      .app-cont-thread { display: none; }
+      .app-cont-library .plui-kicker.is-match::after { display: none; }
+      .app-cont-handoff { margin-bottom: -2rem; }
+      .app-cont-library { padding-top: 3.5rem; }
+    }
+  </style>
+</head>
+<body class="app-prev ds-ui">
+  <div class="app-prev-bar">
+    <a href="app.html">&larr; Back to live App</a>
+    <span class="app-prev-label">Recommended preview · A + B</span>
+  </div>
+
+  <div class="app-prev-intro wrap">
+    <h1>One scroll: hero &rarr; phone &rarr; tablet</h1>
+    <p>Hero fades into cream. Leo&rsquo;s <strong>Mealtime</strong> schedule on phone becomes <strong>Mealtime &middot; 3 of 8</strong> on tablet. The tablet overlaps the phone row so it feels like one moment, not three sections.</p>
+    <div class="app-prev-legend" aria-hidden="true">
+      <span>A · Hero fade</span>
+      <span>A · Screen bridge</span>
+      <span>B · Device overlap</span>
+    </div>
+  </div>
+
+  <div class="app-prev-frame app-cont-ab">
+    <!-- Hero -->
+    <section class="app-cont-hero hero-app hero-page">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/photos/hero-app-schedule.jpg" alt="" />
+        <div class="hero-shade"></div>
+      </div>
+      <div class="wrap hero-content">
+        <p class="eyebrow">PixtoLearn App</p>
+        <h1>The same visual system, now live on screen</h1>
+        <p class="lede">Turn printed PixtoLearn packs into live sessions on tablet and phone &mdash; built around each learner.</p>
+      </div>
+      <p class="app-cont-callout" aria-hidden="true"><strong>A · Fade</strong>Hero dissolves into cream &mdash; no hard cut.</p>
+    </section>
+
+    <div class="app-cont-flow">
+      <!-- Personalise -->
+      <section class="app-cont-personalise">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Personalisation</p>
+            <h2>Their picture. Their routine.</h2>
+            <p class="lede">Add a photo and PixtoLearn turns it into their avatar &mdash; then places them inside the steps they practise.</p>
+          </div>
+
+          <div class="plapp-screens plapp-screens--trio app-cont-handoff-phone">
+            <div class="plapp-screen-item">
+              <div class="plapp-device plapp-phone">
+                <div class="plapp-bezel">
+                  <span class="plapp-phone-notch"></span>
+                  <div class="plapp-screen plapp-screen--phone">
+                    <div class="plui plui--profile">
+                      <div class="plui-topbar">
+                        <span>Back</span>
+                        <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                        <span>Save</span>
+                      </div>
+                      <div class="plui-center">
+                        <span class="plui-avatar plui-avatar--dash" aria-hidden="true">+</span>
+                        <p class="plui-kicker">Add a photo</p>
+                      </div>
+                      <div class="plui-field"><span>Child name</span><i>Leo</i></div>
+                      <div class="plui-cta">Create profile</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="plapp-caption">
+                <h3>1 · Create their profile</h3>
+                <p>Add a name and photo to get started.</p>
+              </div>
+            </div>
+
+            <div class="plapp-screen-item">
+              <div class="plapp-device plapp-phone">
+                <div class="plapp-bezel">
+                  <span class="plapp-phone-notch"></span>
+                  <div class="plapp-screen plapp-screen--phone">
+                    <div class="plui plui--reveal">
+                      <div class="plui-topbar">
+                        <span>Back</span>
+                        <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                        <span>Edit</span>
+                      </div>
+                      <div class="plui-avatar-card">
+                        <img src="assets/photos/app/avatar-learner.jpg" alt="" loading="lazy" />
+                        <div class="plui-avatar-meta"><span>Their PixtoLearn avatar</span></div>
+                      </div>
+                      <div class="plui-cta">Start a routine</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="plapp-caption">
+                <h3>2 · See themselves in the steps</h3>
+                <p>Their avatar appears in the actions they practise.</p>
+              </div>
+            </div>
+
+            <div class="plapp-screen-item">
+              <div class="plapp-device plapp-phone">
+                <div class="plapp-bezel">
+                  <span class="plapp-phone-notch"></span>
+                  <div class="plapp-screen plapp-screen--phone">
+                    <div class="plui plui--list">
+                      <div class="plui-topbar">
+                        <span>Back</span>
+                        <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                        <span>Add</span>
+                      </div>
+                      <p class="plui-kicker">Leo &middot; tailored schedules</p>
+                      <div class="plui-list">
+                        <div class="plui-row is-handoff">
+                          <span class="plui-row-thumb" style="--pl-accent:var(--pink)"><img src="assets/photos/app/avatar-learner.jpg" alt="" loading="lazy" /></span>
+                          <span class="plui-row-main"><b>Mealtime</b><span>8 steps</span></span>
+                        </div>
+                        <div class="plui-row">
+                          <span class="plui-row-thumb" style="--pl-accent:var(--slate-deep)"><img src="assets/photos/app/avatar-learner.jpg" alt="" loading="lazy" /></span>
+                          <span class="plui-row-main"><b>Morning routine</b><span>11 steps</span></span>
+                        </div>
+                        <div class="plui-row">
+                          <span class="plui-row-thumb" style="--pl-accent:var(--amber)"><img src="assets/photos/app/avatar-learner.jpg" alt="" loading="lazy" /></span>
+                          <span class="plui-row-main"><b>Swimming</b><span>10 steps</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="plapp-caption">
+                <h3>3 · Build around their day</h3>
+                <p>Tap <strong>Mealtime</strong> &mdash; it opens on tablet below.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bridge -->
+      <div class="app-cont-handoff">
+        <div class="app-cont-handoff-inner">
+          <svg class="app-cont-thread" viewBox="0 0 420 56" aria-hidden="true">
+            <defs>
+              <linearGradient id="handoffGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#d03860" />
+                <stop offset="100%" stop-color="#88b0c0" />
+              </linearGradient>
+            </defs>
+            <path d="M210 4 C210 28, 210 28, 210 52" />
+          </svg>
+          <p class="app-cont-bridge">
+            <img src="assets/photos/app/avatar-learner.jpg" alt="" />
+            <strong>Leo</strong> opens <em>Mealtime</em>
+            <span class="app-cont-bridge-arrow" aria-hidden="true">&darr;</span>
+            <strong>step 3 of 8</strong> on tablet
+          </p>
+        </div>
+      </div>
+
+      <!-- Session modes -->
+      <section class="app-cont-library">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Session modes</p>
+            <h2>One card. Three ways to run it.</h2>
+            <p class="lede">Watch <b>eat</b> move from a full mealtime schedule, to Focus, to First &amp; Then.</p>
+          </div>
+
+          <div class="plmode-stage" data-mode-stage>
+            <div class="plmode-tabs" role="tablist" aria-label="Session modes">
+              <button class="plmode-tab is-on" type="button" role="tab" aria-selected="true" data-mode="schedule">Schedule</button>
+              <button class="plmode-tab" type="button" role="tab" aria-selected="false" data-mode="focus">Focus</button>
+              <button class="plmode-tab" type="button" role="tab" aria-selected="false" data-mode="firstthen">First &amp; Then</button>
+            </div>
+
+            <div class="plapp-device plapp-pad plmode-device">
+              <div class="plapp-bezel">
+                <div class="plapp-screen plapp-screen--pad">
+                  <div class="plui plmode-panel is-on" data-panel="schedule">
+                    <div class="plui-topbar">
+                      <span>Back</span>
+                      <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                      <span>Focus</span>
+                    </div>
+                    <p class="plui-kicker is-match">Mealtime &middot; 3 of 8</p>
+                    <div class="plui-progress"><i></i></div>
+                    <div class="plui-cards plui-cards--4">
+                      <div class="plui-card" style="--pl-accent:var(--slate-deep)">
+                        <img src="assets/packs/keyring-web/wash-hands.jpg" alt="" loading="lazy" />
+                        <div>
+                          <div class="plui-card-rule"></div>
+                          <div class="plui-card-meta plui-card-meta--step"><span>Step 1</span></div>
+                        </div>
+                      </div>
+                      <div class="plui-card" style="--pl-accent:var(--slate-deep)">
+                        <img src="assets/packs/keyring-web/sit-down.jpg" alt="" loading="lazy" />
+                        <div>
+                          <div class="plui-card-rule"></div>
+                          <div class="plui-card-meta plui-card-meta--step"><span>Step 2</span></div>
+                        </div>
+                      </div>
+                      <div class="plui-card is-now" style="--pl-accent:var(--pink)">
+                        <img src="assets/packs/keyring-web/eat.jpg" alt="" loading="lazy" />
+                        <div>
+                          <div class="plui-card-rule"></div>
+                          <div class="plui-card-meta plui-card-meta--step is-now"><span>Now &middot; step 3</span></div>
+                        </div>
+                      </div>
+                      <div class="plui-card" style="--pl-accent:var(--amber)">
+                        <img src="assets/packs/keyring-web/drink.jpg" alt="" loading="lazy" />
+                        <div>
+                          <div class="plui-card-rule"></div>
+                          <div class="plui-card-meta plui-card-meta--step"><span>Step 4</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="plui plui--focus plmode-panel" data-panel="focus">
+                    <div class="plui-topbar">
+                      <span>Exit</span>
+                      <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                      <span>Timer</span>
+                    </div>
+                    <div>
+                      <p class="plui-kicker is-match">Mealtime &middot; 3 of 8</p>
+                      <div class="plui-progress"><i></i></div>
+                    </div>
+                    <div class="plui-step plmode-step">
+                      <div class="plui-step-label"><span>Now</span><span>3 / 8</span></div>
+                      <img src="assets/packs/keyring-web/eat.jpg" alt="" loading="lazy" />
+                    </div>
+                    <div class="plui-dots"><i></i><i></i><i class="is-on"></i><i></i><i></i></div>
+                  </div>
+
+                  <div class="plui plmode-panel" data-panel="firstthen">
+                    <div class="plui-topbar">
+                      <span>Back</span>
+                      <img class="plui-mark" style="width:2.1em;height:2.1em" src="assets/brand/symbol-clear.png" alt="" />
+                      <span>Edit</span>
+                    </div>
+                    <p class="plui-kicker">Eat &rarr; drink</p>
+                    <div class="plmode-pair">
+                      <div class="plui-step">
+                        <div class="plui-step-label"><span>First</span></div>
+                        <img src="assets/packs/keyring-web/eat.jpg" alt="" loading="lazy" />
+                      </div>
+                      <span class="plmode-arrow" aria-hidden="true">&rarr;</span>
+                      <div class="plui-step">
+                        <div class="plui-step-label"><span>Then</span></div>
+                        <img src="assets/packs/keyring-web/drink.jpg" alt="" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <p class="app-prev-footnote">Preview only &mdash; not on the live App page yet. The bridge pill and callouts are here to explain the handoff; on the live page you could drop the pill and let matching UI labels (<strong>Mealtime</strong>, <strong>3 of 8</strong>) carry the story.</p>
+
+  <script>
+    (function () {
+      const stage = document.querySelector("[data-mode-stage]");
+      if (!stage) return;
+      const tabs = Array.from(stage.querySelectorAll(".plmode-tab"));
+      const panels = Array.from(stage.querySelectorAll(".plmode-panel"));
+      tabs.forEach((tab, i) => {
+        tab.addEventListener("click", () => {
+          const mode = tab.getAttribute("data-mode");
+          tabs.forEach((t, j) => {
+            const on = j === i;
+            t.classList.toggle("is-on", on);
+            t.setAttribute("aria-selected", on ? "true" : "false");
+          });
+          panels.forEach((p) => p.classList.toggle("is-on", p.getAttribute("data-panel") === mode));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("fonts/bricolage.woff2") format("woff2");
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("fonts/figtree.woff2") format("woff2");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --pink: #d03860;
+  --pink-deep: #b82858;
+  --amber: #e8a840;
+  --slate: #5f8a9a;
+  --ink: #14242b;
+  --page: #f7f4ef;
+  --brand-bar: linear-gradient(90deg, #d03860 0%, #e8a840 48%, #88b0c0 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  background: var(--page);
+}
+
+.frame {
+  width: 1080px;
+  height: 1350px;
+  background: var(--page);
+  padding: 48px 76px 80px 48px;
+}
+
+.stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slab {
+  position: absolute;
+  inset: 0;
+  border-radius: 48px;
+  transform: translate(28px, 32px);
+  background: var(--accent, var(--pink));
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  border-radius: 48px;
+  background: linear-gradient(165deg, #fff8f0 0%, #f7f1e8 100%);
+  box-shadow: 0 14px 36px #14242b1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px 44px;
+}
+
+.logo {
+  width: 228px;
+  height: auto;
+  display: block;
+}
+
+.window {
+  margin-top: 28px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #efe8df;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.photo.cards {
+  background-image: url("../assets/photos/mode/product-three-cards.jpg");
+  background-position: center 62%;
+}
+.photo.float {
+  background-image: url("../assets/photos/mode/product-float.jpg");
+  background-position: 54% 58%;
+}
+.photo.sequence {
+  background-image: url("../assets/photos/mode/first-then.jpg");
+  background-size: 250% auto;
+  background-position: 22% 74%;
+}
+.photo.session {
+  background-image: url("../assets/photos/mode/session-match.jpg");
+  background-position: center 22%;
+}
+.photo.waterline {
+  background-image: url("../assets/photos/mode/product-waterline.jpg");
+  background-position: 68% 40%;
+}
+
+.copy {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: Figtree, "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.dash {
+  width: 76px;
+  height: 4px;
+  margin: 16px auto 18px;
+  border-radius: 99px;
+  background: var(--brand-bar);
+}
+
+h1 {
+  font-family: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+h1 span { color: var(--pink); }
+
+.accent-pink { --accent: #d03860; }
+.accent-amber { --accent: #e8a840; }
+.accent-slate { --accent: #5f8a9a; }
+.accent-ink { --accent: #14242b; }
+.accent-deep { --accent: #b82858; }

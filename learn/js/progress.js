@@ -3,6 +3,15 @@
  * Key: pixto_academy_progress
  * Shape: { [courseId]: { modules: { [moduleId]: "not-started"|"in-progress"|"completed" }, updatedAt } }
  */
+(function () {
+  var ACADEMY_LOCKED = true;
+  try {
+    if (new URLSearchParams(location.search).get("preview") === "1") return;
+  } catch (_) {}
+  if (!ACADEMY_LOCKED) return;
+  location.replace("/academy.html");
+})();
+
 (function (global) {
   "use strict";
 

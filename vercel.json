@@ -4,6 +4,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/learn",
+      "destination": "/academy",
+      "permanent": false
+    },
+    {
+      "source": "/learn/:path*",
+      "destination": "/academy",
+      "permanent": false
+    },
+    {
       "source": "/portal",
       "destination": "https://pixtolearn-aquatic-specialist.vercel.app/portal/",
       "permanent": false
@@ -69,18 +79,6 @@
       "source": "/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/studio",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
-      ]
-    },
-    {
-      "source": "/studio/(.*)",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
       ]
     }
   ]

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Preview | WOW layouts 1 · 3 · 4</title>
+  <link rel="icon" href="assets/brand/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=wow-preview-1" />
+  <style>
+    .wow-prev-page {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232, 241, 244, 0.9), transparent 60%),
+        #f7f9fa;
+      min-height: 100vh;
+    }
+
+    .wow-prev-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(20, 36, 43, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .wow-prev-bar a { font-weight: 650; }
+    .wow-prev-bar nav { display: flex; flex-wrap: wrap; gap: 0.85rem 1.1rem; }
+
+    .wow-prev-block {
+      padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+      border-bottom: 1px solid rgba(20, 36, 43, 0.08);
+    }
+
+    .wow-prev-tag {
+      width: min(var(--max), calc(100% - 2.5rem));
+      margin: 0 auto 1.5rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .wow-prev-tag strong { color: var(--pink-deep); }
+
+    /* Shared intro */
+    .wow-prev-intro {
+      max-width: 28rem;
+      margin: 0 auto clamp(1.75rem, 4vw, 2.5rem);
+      text-align: center;
+    }
+
+    .wow-prev-intro h2 {
+      margin: 0.35rem 0 0.55rem;
+      font-size: clamp(1.75rem, 3.5vw, 2.45rem);
+      letter-spacing: -0.03em;
+    }
+
+    .wow-prev-intro .lede {
+      margin: 0 auto;
+      max-width: 34ch;
+    }
+
+    .wow-prev-intro .eyebrow { justify-content: center; }
+
+    .wow-prev-card {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      background: #fff;
+      border-radius: 1rem;
+      border: 1px solid rgba(20, 36, 43, 0.07);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 16px 36px rgba(20, 36, 43, 0.1);
+    }
+
+    /* ========== 1. Story strip ========== */
+    .wow-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(0.5rem, 2vw, 1.1rem);
+      width: min(100%, 40rem);
+      margin-inline: auto;
+    }
+
+    .wow-strip-item {
+      margin: 0;
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 11.5rem;
+      display: grid;
+      gap: 0.65rem;
+      justify-items: center;
+    }
+
+    .wow-strip-mark {
+      width: 1.65rem;
+      height: 3px;
+      border-radius: 99px;
+      background: var(--mark, var(--pink));
+    }
+
+    .wow-strip-item.is-w { --mark: var(--pink); }
+    .wow-strip-item.is-o { --mark: var(--amber); }
+    .wow-strip-item.is-a { --mark: var(--slate-deep); }
+
+    .wow-strip-arrow {
+      flex: 0 0 auto;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+      opacity: 0.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* ========== 3. Focus stage ========== */
+    .wow-focus {
+      width: min(100%, 18rem);
+      margin-inline: auto;
+      display: grid;
+      gap: 1.25rem;
+      justify-items: center;
+    }
+
+    .wow-focus-stage {
+      width: min(100%, 14.5rem);
+      position: relative;
+    }
+
+    .wow-focus-stage img {
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      inset: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .wow-focus-stage img.is-on {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .wow-focus-tabs {
+      display: flex;
+      gap: 0.35rem 1.35rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .wow-focus-tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 0.3rem 0.1rem 0.4rem;
+      font: inherit;
+      font-weight: 650;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      cursor: pointer;
+    }
+
+    .wow-focus-tab.is-on {
+      color: var(--ink);
+      border-bottom-color: var(--tab, var(--pink));
+    }
+
+    .wow-focus-tab[data-focus="words"].is-on { --tab: var(--pink); }
+    .wow-focus-tab[data-focus="objects"].is-on { --tab: var(--amber); }
+    .wow-focus-tab[data-focus="ways"].is-on { --tab: var(--slate-deep); }
+
+    /* ========== 4. Editorial footnote ========== */
+    .wow-edit {
+      width: min(100%, 42rem);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .wow-edit-line {
+      margin: 0 0 clamp(1.75rem, 4vw, 2.5rem);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.55rem, 3.4vw, 2.35rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .wow-edit-line em {
+      font-style: italic;
+      font-weight: 650;
+      color: var(--slate-deep);
+    }
+
+    .wow-edit-row {
+      display: flex;
+      justify-content: center;
+      gap: clamp(0.65rem, 2vw, 1.15rem);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wow-edit-row li {
+      flex: 0 1 8.5rem;
+      min-width: 0;
+      display: grid;
+      gap: 0.45rem;
+      justify-items: center;
+    }
+
+    .wow-edit-row img {
+      width: 100%;
+      max-width: 8.5rem;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) inset,
+        0 12px 28px rgba(20, 36, 43, 0.08);
+    }
+
+    .wow-edit-micro {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--micro, var(--ink-soft));
+    }
+
+    .wow-edit-row li:nth-child(1) { --micro: var(--pink); }
+    .wow-edit-row li:nth-child(2) { --micro: color-mix(in srgb, var(--amber) 80%, var(--ink)); }
+    .wow-edit-row li:nth-child(3) { --micro: var(--slate-deep); }
+
+    @media (max-width: 560px) {
+      .wow-strip { flex-wrap: wrap; width: min(100%, 12rem); }
+      .wow-strip-arrow { display: none; }
+      .wow-edit-row { width: min(100%, 12rem); flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body class="wow-prev-page">
+  <div class="wow-prev-bar">
+    <strong>WOW layout previews</strong>
+    <nav>
+      <a href="#opt1">1 · Story strip</a>
+      <a href="#opt3">3 · Focus stage</a>
+      <a href="#opt4">4 · Editorial</a>
+      <a href="routines.html">← Back to Routines</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- 1. STORY STRIP -->
+    <section class="wow-prev-block" id="opt1">
+      <p class="wow-prev-tag"><strong>Option 1</strong> — Story strip</p>
+      <div class="wrap">
+        <div class="wow-prev-intro">
+          <p class="eyebrow">The WOW concept</p>
+          <h2>Words. Objects. Ways.</h2>
+          <p class="lede">One system for clearer tasks — shown here with brushing teeth.</p>
+        </div>
+
+        <div class="wow-strip" aria-label="Brushing teeth through WOW">
+          <figure class="wow-strip-item is-w">
+            <span class="wow-strip-mark" aria-hidden="true"></span>
+            <img class="wow-prev-card" src="assets/packs/keyring/1/4_get.png" alt="get" />
+          </figure>
+          <span class="wow-strip-arrow" aria-hidden="true">&rarr;</span>
+          <figure class="wow-strip-item is-o">
+            <span class="wow-strip-mark" aria-hidden="true"></span>
+            <img class="wow-prev-card" src="assets/packs/keyring/3/1_toothbrush.png" alt="toothbrush" />
+          </figure>
+          <span class="wow-strip-arrow" aria-hidden="true">&rarr;</span>
+          <figure class="wow-strip-item is-a">
+            <span class="wow-strip-mark" aria-hidden="true"></span>
+            <img class="wow-prev-card" src="assets/packs/keyring/3/3_brushtopteeth.png" alt="brush top teeth" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FOCUS STAGE -->
+    <section class="wow-prev-block" id="opt3">
+      <p class="wow-prev-tag"><strong>Option 3</strong> — Focus stage</p>
+      <div class="wrap">
+        <div class="wow-prev-intro">
+          <p class="eyebrow">The WOW concept</p>
+          <h2>Words. Objects. Ways.</h2>
+          <p class="lede">One system for clearer tasks — shown here with brushing teeth.</p>
+        </div>
+
+        <div class="wow-focus" data-wow-focus>
+          <div class="wow-focus-stage">
+            <img class="wow-prev-card is-on" data-focus-panel="words" src="assets/packs/keyring/1/4_get.png" alt="get" />
+            <img class="wow-prev-card" data-focus-panel="objects" src="assets/packs/keyring/3/1_toothbrush.png" alt="toothbrush" />
+            <img class="wow-prev-card" data-focus-panel="ways" src="assets/packs/keyring/3/3_brushtopteeth.png" alt="brush top teeth" />
+          </div>
+          <div class="wow-focus-tabs" role="tablist" aria-label="WOW layers">
+            <button class="wow-focus-tab is-on" type="button" role="tab" aria-selected="true" data-focus="words">Words</button>
+            <button class="wow-focus-tab" type="button" role="tab" aria-selected="false" data-focus="objects">Objects</button>
+            <button class="wow-focus-tab" type="button" role="tab" aria-selected="false" data-focus="ways">Ways</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EDITORIAL FOOTNOTE -->
+    <section class="wow-prev-block" id="opt4">
+      <p class="wow-prev-tag"><strong>Option 4</strong> — Editorial footnote</p>
+      <div class="wrap">
+        <div class="wow-prev-intro">
+          <p class="eyebrow">The WOW concept</p>
+        </div>
+
+        <div class="wow-edit">
+          <p class="wow-edit-line">Brushing teeth, <em>through WOW</em>.</p>
+          <ul class="wow-edit-row">
+            <li>
+              <span class="wow-edit-micro">Words</span>
+              <img class="wow-prev-card" src="assets/packs/keyring/1/4_get.png" alt="get" />
+            </li>
+            <li>
+              <span class="wow-edit-micro">Objects</span>
+              <img class="wow-prev-card" src="assets/packs/keyring/3/1_toothbrush.png" alt="toothbrush" />
+            </li>
+            <li>
+              <span class="wow-edit-micro">Ways</span>
+              <img class="wow-prev-card" src="assets/packs/keyring/3/3_brushtopteeth.png" alt="brush top teeth" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    (function () {
+      const root = document.querySelector("[data-wow-focus]");
+      if (!root) return;
+      const tabs = Array.from(root.querySelectorAll("[data-focus]"));
+      const panels = Array.from(root.querySelectorAll("[data-focus-panel]"));
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const key = tab.getAttribute("data-focus");
+          tabs.forEach((t) => {
+            const on = t === tab;
+            t.classList.toggle("is-on", on);
+            t.setAttribute("aria-selected", on ? "true" : "false");
+          });
+          panels.forEach((p) => {
+            p.classList.toggle("is-on", p.getAttribute("data-focus-panel") === key);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
