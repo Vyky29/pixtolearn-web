@@ -1,0 +1,7 @@
+.photographic-hero>.hero-reel img{position:absolute;inset:0;object-position:center center;opacity:0;transition:opacity 1.15s ease}
+.hero-reel img.is-on{opacity:1}
+.hero-dots{position:absolute;z-index:2;right:28px;bottom:22px;display:flex;gap:8px;align-items:center}
+.hero-dots button{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#ffffff8c;box-shadow:0 0 0 1px #10262e66;cursor:pointer}
+.hero-dots button[aria-current=true]{width:22px;background:#fff}
+@media(max-width:760px){.hero-dots{top:16px;right:16px;bottom:auto}}
+@media(prefers-reduced-motion:reduce){.hero-reel img{transition:none}}

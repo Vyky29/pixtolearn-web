@@ -5,6 +5,8 @@ a.button:active,a.btn:active{transform:translateY(0);box-shadow:0 2px 5px #9e274
 a.button:focus-visible,a.btn:focus-visible,a.brand-text-link:focus-visible{outline:3px solid #88b5c2;outline-offset:4px}
 a.brand-text-link{display:inline-flex;align-items:center;min-height:40px;padding:9px 15px;border-radius:10px;border:1px solid #88b5c250;background:#edf4f5;color:#365f6c;text-decoration:none;font-weight:600;font-size:13px;transition:background .18s,border-color .18s}
 a.brand-text-link:hover{background:#dcebef;border-color:#88b5c2;color:#254d5a}
+.photographic-hero .brand-actions a.brand-text-link{background:#fffdf8;color:#14242b;border-color:transparent;box-shadow:0 10px 22px #10262e40}
+.photographic-hero .brand-actions a.brand-text-link:hover{background:#fff;color:#14242b;border-color:transparent}
 @media(prefers-reduced-motion:reduce){a.button,a.btn,a.brand-text-link{transition:none!important;transform:none!important}}
 /* Compact brand navigation: readable destinations, no repeated arrows. */
 @media(max-width:1100px){

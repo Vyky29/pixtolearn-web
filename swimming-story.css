@@ -1,0 +1,52 @@
+.water-film{width:100vw;margin-left:calc(50% - 50vw);background:#10262e;color:#fff;padding:84px 8vw 76px}
+.water-film .water-kicker{margin:0 0 22px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#a6d1dd}
+.water-kicker .k-after{display:none}
+.water-film.is-after .k-before,.water-film.is-result .k-before{display:none}
+.water-film.is-after .k-after,.water-film.is-result .k-after{display:inline}
+.water-play{display:grid;min-height:168px;margin:0}
+.water-film p{color:#fff;max-width:none}
+.water-play p{grid-area:1/1;margin:0;max-width:14ch;font-size:clamp(38px,5.2vw,72px);line-height:1.02;letter-spacing:-.045em;color:#fff}
+.water-before{position:relative;display:inline-block}
+.water-before:after{content:"";position:absolute;left:0;top:54%;height:3px;width:100%;background:#f07899;transform:scaleX(0);transform-origin:left center}
+.water-film.is-strike .water-before:after{transform:scaleX(1);transition:transform .5s ease}
+.water-play .water-after{opacity:0;color:var(--tone,#f3bb58)}
+.water-film.is-after .water-before{opacity:0}
+.water-film.is-after .water-after,.water-film.is-result .water-after{opacity:1}
+.water-film.is-result .water-before{opacity:0}
+.water-film .water-result{margin:28px 0 0;max-width:18ch;font-size:clamp(26px,3vw,40px);line-height:1.2;letter-spacing:-.03em;color:#d5e7ec;opacity:0}
+.water-film.is-result .water-result{opacity:1;transition:opacity .6s ease}
+.water-still{display:none;margin:18px 0 0;padding:0;list-style:none;max-width:640px}
+.water-still li{padding:10px 0;border-top:1px solid #ffffff22;font-size:20px}
+.water-people{padding:72px 0 20px}
+.water-people-head{max-width:640px;margin-bottom:36px}
+.water-people-head h2{margin:12px 0 14px}
+.water-layout{display:grid;grid-template-columns:minmax(280px,480px) minmax(0,1fr);gap:48px;align-items:center}
+.water-orbit{position:relative;width:min(460px,100%);aspect-ratio:1;margin:0 auto}
+.water-core{position:absolute;left:50%;top:50%;width:128px;height:128px;margin:-64px 0 0 -64px;border-radius:50%;background:#f4f1eb;display:grid;place-items:center;text-align:center;padding:16px;font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:#3f7584}
+.water-node{position:absolute;left:50%;top:50%;width:132px;margin:-78px 0 0 -66px;padding:0;border:0;background:transparent;cursor:pointer;text-align:center;transform:rotate(calc(var(--a) * 1deg)) translateY(-168px) rotate(calc(var(--a) * -1deg))}
+.water-node img{width:92px;height:92px;object-fit:cover;border-radius:50%;display:block;margin:0 auto 8px;box-shadow:0 0 0 4px #fffdf8,0 12px 18px -14px #14242b}
+.water-node span{display:block;font-size:13px;font-weight:750;color:#14242b}
+.water-node[aria-pressed=true] img{box-shadow:0 0 0 4px #fffdf8,0 0 0 7px var(--c,#88b5c2)}
+.water-dossier{background:#f4f1eb;border-radius:18px;min-height:300px;padding:32px 32px 28px;border-top:3px solid var(--c,#14242b)}
+.water-dossier article[hidden]{display:none}
+.water-invite{margin:0;font-size:22px;line-height:1.4;max-width:28ch;color:#14242b}
+.water-dossier h3{margin:8px 0 12px;font-size:clamp(28px,3vw,40px);line-height:1.1}
+.water-dossier p{margin:0;max-width:42ch}
+.water-go{display:inline-flex;margin-top:22px;font-weight:750;color:#14242b;text-decoration:none;border-bottom:2px solid var(--c,#88b5c2);padding-bottom:3px}
+.pack-for{display:none;margin:0 0 10px;font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+.collection-grid article.is-picked{border-top-color:var(--pick,#14242b);background:#fff;border-radius:12px;padding:18px 16px 8px;box-shadow:0 16px 30px -24px #14242b}
+.collection-grid article.is-picked .pack-for{display:block;color:var(--pick,#14242b)}
+@media(max-width:800px){
+  .water-film{padding:56px 24px 48px}
+  .water-layout{grid-template-columns:1fr;gap:28px}
+  .water-orbit{display:grid;grid-template-columns:1fr 1fr;aspect-ratio:auto;gap:8px 12px;width:100%}
+  .water-core{display:none}
+  .water-node{position:static;width:auto;margin:0;transform:none}
+  .water-dossier{min-height:0;padding:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .water-play{display:none}
+  .water-still{display:block}
+  .water-result{opacity:1}
+  .water-before:after,.water-result{transition:none}
+}
