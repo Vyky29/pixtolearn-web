@@ -114,16 +114,73 @@
 .shop-hero .hero-dots button{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#ffffff8c;box-shadow:0 0 0 1px #10262e66;cursor:pointer}
 .shop-hero .hero-dots button[aria-current=true]{width:22px;background:#fff}
 .shop-hero-ipads{pointer-events:none}
-.shop-hero-ipads .shop-ipads{position:absolute;left:46%;right:3%;top:11%;bottom:9%;width:auto;height:auto;max-width:none;margin:0}
-.shop-hero-ipads .shop-ipad-back{width:64%;left:0;top:0;transform:rotate(-6.5deg);transform-origin:72% 70%}
-.shop-hero-ipads .shop-ipad-front{width:76%;right:0;top:32%;transform:rotate(4.5deg);transform-origin:24% 72%}
+.shop-hero-ipads .shop-ipads{position:absolute;left:46%;right:4%;top:7%;bottom:8%;width:auto;height:auto;max-width:none;margin:0}
+.shop-hero-ipads .shop-ipad-back{width:58%;left:30%;top:0;transform:rotate(-7deg);transform-origin:50% 80%}
+.shop-hero-ipads .shop-ipad-front{width:74%;right:0;top:32%;transform:rotate(4.5deg);transform-origin:28% 70%}
 .shop-hero-ipads .shop-ipad{box-shadow:0 24px 36px -16px #041014b8}
 @media(prefers-reduced-motion:reduce){
   .shop-hero-photo,.shop-hero-ipads{transition:none}
 }
 @media(max-width:760px){
-  .shop-hero .hero-dots{top:calc(100vw * 9 / 16 - 28px);right:14px;bottom:auto}
-  .shop-hero-ipads .shop-ipads{left:6%;right:4%;top:8%;bottom:8%}
-  .shop-hero-ipads .shop-ipad-back{width:58%;left:0;top:4%}
-  .shop-hero-ipads .shop-ipad-front{width:68%;right:0;top:26%}
+  body.shop-clean .shop-hero{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    aspect-ratio:auto;
+    min-height:0;
+    height:auto;
+    width:100vw;
+    max-width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    padding:0;
+    gap:0;
+    background:#10262e;
+    overflow:hidden;
+  }
+  body.shop-clean .shop-hero::after{content:none;display:none}
+  body.shop-clean .shop-hero-reel{
+    position:relative;
+    inset:auto;
+    order:-1;
+    z-index:0;
+    flex:none;
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    overflow:hidden;
+  }
+  body.shop-clean .shop-hero-photo,
+  body.shop-clean .shop-hero-ipads{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+  }
+  body.shop-clean .shop-hero-photo{object-fit:cover;object-position:78% 42%}
+  body.shop-clean .shop-hero-copy{
+    order:1;
+    position:relative;
+    z-index:1;
+    max-width:none;
+    width:100%;
+    margin:0;
+    padding:22px 20px 28px;
+    background:#10262e;
+  }
+  body.shop-clean .shop-hero h1,
+  body.shop-clean .shop-hero h1 span{font-size:42px;line-height:.98}
+  body.shop-clean .shop-hero>.hero-dots{
+    position:absolute;
+    z-index:3;
+    top:calc(100vw * 9 / 16 - 22px);
+    right:14px;
+    bottom:auto;
+    left:auto;
+    margin:0;
+  }
+  body.shop-clean .shop-hero-ipads .shop-ipads{position:absolute;left:7%;right:6%;top:8%;bottom:8%;width:auto;height:auto;margin:0}
+  body.shop-clean .shop-hero-ipads .shop-ipad-back{width:54%;left:0;top:4%}
+  body.shop-clean .shop-hero-ipads .shop-ipad-front{width:62%;right:0;top:24%}
 }

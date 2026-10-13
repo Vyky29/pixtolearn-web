@@ -277,8 +277,12 @@ button.benefit-photo:hover{box-shadow:0 22px 36px -22px #14242b}
 .swim-feats span{display:block;color:#56656a;font-size:14px;line-height:1.4;margin-top:4px}
 @media(max-width:760px){
   .swim-benefits .why-title{font-size:32px}
-  body.brand-page .photographic-hero.swim-hero .brand-statement{font-size:32px;line-height:1.02}
-  body.brand-page .photographic-hero.swim-hero .brand-statement span{display:inline}
+  body.brand-page .photographic-hero.swim-hero .brand-statement,
+  body.brand-page .photographic-hero.swim-hero .brand-statement span{
+    font-size:40px;
+    line-height:1.02;
+    display:block;
+  }
 }
 @media(max-width:800px){
   .swim-app{grid-template-columns:1fr}
@@ -331,6 +335,55 @@ button.benefit-photo:hover{box-shadow:0 22px 36px -22px #14242b}
 .swim-page .collection-products .pack-card-copy p{margin:0;font-size:16px;line-height:1.45;color:#3d5158}
 .swim-page .collection-products .pack-card .pack-for:not([hidden]){margin-top:8px;color:#3f7584;font-weight:650}
 .swim-page .collection-products .pack-card>.pack-view{margin-top:18px;align-self:flex-start}
+
+@media(max-width:760px){
+  .swim-page .case-menu{align-items:stretch;width:100%;min-width:0}
+  .swim-page .case-tabs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    width:100%;
+    border-bottom:0;
+    justify-content:stretch;
+  }
+  .swim-page .case-tabs button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:10px 12px;
+    border-radius:12px;
+    background:#fff;
+    color:#14242b;
+    box-shadow:0 0 0 1px #14242b18;
+    font-size:15px;
+    line-height:1.2;
+    text-align:center;
+    white-space:normal;
+  }
+  .swim-page .case-tabs button[aria-current=true]{background:#14242b;color:#fff;box-shadow:none}
+  .swim-page .case-tabs button[aria-current=true]::after{display:none}
+  .swim-page .case-sub{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    margin-top:10px;
+    overflow:visible;
+  }
+  .swim-page .case-sub[data-sub="cards"]{grid-template-columns:1fr 1.35fr auto}
+  .swim-page .case-sub[hidden]{display:none}
+  .swim-page .case-sub button{
+    white-space:normal;
+    min-height:44px;
+    padding:8px 8px;
+    font-size:13px;
+    line-height:1.2;
+    text-align:center;
+  }
+}
 
 @media(min-width:761px){
   .swim-hero .brand-statement,
