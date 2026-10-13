@@ -36,6 +36,8 @@
 .case-split{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(240px,.9fr);column-gap:40px;align-items:center;min-height:0}
 .kit-solo{display:flex;align-items:center;justify-content:center;margin:0;min-height:0;width:100%}
 .kit-solo img{display:block;width:auto;height:auto;max-width:min(100%,420px);max-height:300px;object-fit:contain;object-position:center;background:transparent;border-radius:0}
+.case-panel[data-chapter-panel="toys"] .kit-solo{display:flex;align-items:center;justify-content:center;width:100%;margin:0 auto}
+.case-panel[data-chapter-panel="toys"] .kit-solo img{display:block;margin:0 auto;width:auto;height:auto;max-width:min(100%,480px);max-height:360px;object-fit:contain;object-position:center center;background:transparent}
 .swim-brief-head p,.who-head p{max-width:38em}
 .folder-pass,.kind-pass{display:grid;column-gap:48px;align-items:center;margin-top:10px}
 .folder-pass{grid-template-columns:minmax(340px,1.25fr) minmax(240px,.75fr)}
