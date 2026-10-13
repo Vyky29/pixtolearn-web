@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PixtoLearn · Diez formas de poner el conjunto</title>
+<link rel="stylesheet" href="style.css?v=nav1"/>
+<style>
+  body{background:#efeae3;color:#14242b}
+  .review{max-width:1180px;margin:0 auto;padding:28px 4vw 90px}
+  .review-nav{display:flex;gap:12px 16px;flex-wrap:wrap;position:sticky;top:0;z-index:5;background:#efeae3ee;padding:14px 0;backdrop-filter:blur(8px)}
+  .review-nav a{font-weight:750;border-bottom:1px solid currentColor;font-size:14px}
+  .review h1{font-size:clamp(32px,4vw,48px);letter-spacing:-.04em;max-width:16em;margin:8px 0 12px}
+  .review>.lead{font-size:18px;max-width:740px;margin-bottom:28px}
+  .option{margin:0 0 42px}
+  .option-note{display:flex;justify-content:space-between;gap:18px;align-items:baseline;margin:0 0 10px}
+  .option-note b{font-family:PixtoDisplay,Arial,sans-serif;font-size:20px;letter-spacing:-.03em}
+  .option-note span{font-size:14px;color:#56656a;max-width:540px;text-align:right}
+  .hero{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(300px,1.2fr);align-items:center;gap:18px;min-height:440px;padding:32px 36px;border-radius:18px;overflow:hidden;background:#10262e;color:#fff}
+  .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 70% 90% at 78% 58%, #e7f3f6 0%, #b7d3db 38%, #3d6570 70%, #10262e 100%)}
+  .hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#10262ef6 0%,#10262ef0 32%,#10262ec4 48%,#10262e55 70%,#10262e14 100%)}
+  .copy{position:relative;z-index:1;max-width:340px}
+  .copy .eyebrow{display:block;margin:0 0 10px;color:#e1edf0;font-size:11px;font-weight:750;letter-spacing:.16em}
+  .copy h2{margin:0;color:#fff;font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(28px,3vw,40px);font-weight:800;letter-spacing:-.045em;line-height:.96}
+  .copy h2 span{display:inline}
+  .copy h2 .brand-pink{color:#d03860}
+  .copy h2 .brand-amber{color:#e8a840}
+  .copy h2 .brand-blue{color:#88b5c2}
+  .copy p{max-width:22em;margin:12px 0 0;color:#fff;font-size:15px;line-height:1.45}
+  .copy .button{display:inline-block;margin-top:16px;background:#d03860;color:#fff;border-radius:999px;padding:11px 16px;font-weight:750;font-size:14px}
+  .set{position:relative;z-index:1;min-width:0}
+  .pack{display:block;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 14px 10px #10262e40)}
+  .pad{background:#18262c;padding:4px 4px 6px;border-radius:10px;box-shadow:0 14px 18px -14px #10262ecc}
+  .pad img{display:block;width:100%;height:auto;border-radius:6px;background:#f7f4ef}
+  .set-still{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .set-still .pads,.set-still .packs{display:flex;justify-content:center;align-items:flex-end;gap:14px;width:100%}
+  .set-still .pad{width:38%}
+  .set-still .pack{width:31%}
+  .set-shelf{display:flex;flex-direction:column;gap:18px}
+  .set-shelf .row{display:flex;justify-content:center;align-items:flex-end;gap:16px}
+  .set-shelf .pad{width:40%}
+  .set-shelf .pack{width:30%}
+  .set-pair{display:flex;align-items:flex-end;justify-content:center;gap:18px}
+  .set-pair .pads{display:flex;align-items:flex-end;gap:12px;width:46%}
+  .set-pair .pad{width:48%}
+  .set-pair .packs{display:flex;align-items:flex-end;gap:8px;width:54%}
+  .set-pair .pack{width:33%}
+  .set-packs{display:flex;align-items:flex-end;justify-content:center;gap:8px}
+  .set-packs .pack{width:32%}
+  .set-island{background:linear-gradient(#f7fbfc,#e7f1f4);border-radius:20px;padding:22px 16px 14px;box-shadow:0 18px 28px -22px #10262e}
+  .set-island .pads,.set-island .packs{display:flex;justify-content:center;align-items:flex-end;gap:12px}
+  .set-island .pads{margin-bottom:12px}
+  .set-island .pad{width:42%}
+  .set-island .pack{width:32%}
+  .set-arc{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .set-arc .pads{display:flex;justify-content:center;gap:28px;width:70%}
+  .set-arc .pad{width:46%}
+  .set-arc .packs{display:flex;align-items:flex-end;justify-content:center;gap:6px;width:100%}
+  .set-arc .pack{width:30%}
+  .set-arc .pack.mid{width:34%;transform:translateY(-16px)}
+  .set-side{display:grid;grid-template-columns:1.35fr .72fr;gap:16px;align-items:end}
+  .set-side .packs{display:flex;align-items:flex-end;gap:6px}
+  .set-side .pack{width:33%}
+  .set-side .pads{display:flex;flex-direction:column;gap:10px}
+  .set-row{display:flex;align-items:flex-end;justify-content:center;gap:8px}
+  .set-row .pad{width:21%}
+  .set-row .pack{width:18%}
+  .hero.wide{display:block;min-height:460px;padding:36px 40px 28px}
+  .hero.wide .copy{max-width:380px}
+  .hero.wide .set-table{position:absolute;left:34%;right:3%;bottom:16px;z-index:1;display:flex;align-items:flex-end;justify-content:flex-end;gap:10px}
+  .hero.wide .set-table .pad{width:22%}
+  .hero.wide .set-table .pack{width:18%}
+  .hero.spread{display:block;min-height:480px}
+  .hero.spread .copy{position:relative;z-index:2;padding:8px 0}
+  .hero.spread .set-spread{position:absolute;inset:18px 2% 16px 42%;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;gap:12px}
+  .hero.spread .pads,.hero.spread .packs{display:flex;justify-content:center;align-items:flex-end;gap:12px}
+  .hero.spread .pad{width:34%}
+  .hero.spread .pack{width:30%}
+  @media(max-width:800px){
+    .option-note{display:block}
+    .option-note span{display:block;text-align:left;margin-top:4px}
+    .hero,.hero.wide,.hero.spread{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:22px 16px 18px}
+    .hero:after{background:linear-gradient(180deg,#10262ef2 0%,#10262ecc 42%,#10262e88 100%)}
+    .copy{max-width:none}
+    .hero.wide .set-table,.hero.spread .set-spread{position:relative;inset:auto;left:auto;right:auto;margin-top:18px}
+    .set-side{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<main class="review">
+<nav class="review-nav" aria-label="Opciones">
+  <a href="#o1">1 Bodegón</a>
+  <a href="#o2">2 Estantería</a>
+  <a href="#o3">3 La foto</a>
+  <a href="#o4">4 Al lado</a>
+  <a href="#o5">5 Solo packs</a>
+  <a href="#o6">6 Mesa clara</a>
+  <a href="#o7">7 Arco</a>
+  <a href="#o8">8 Columna</a>
+  <a href="#o9">9 Fila</a>
+  <a href="#o10">10 A sangre</a>
+</nav>
+<h1>Diez formas de meter el conjunto en el hero.</h1>
+<p class="lead">La foto es el conjunto: los dos iPads y los tres packs, en una sola imagen, con el azul oscuro sobre las letras. En ninguna se tapan.</p>
+
+<section class="option" id="o1">
+  <div class="option-note"><b>1 · Bodegón</b><span>Los iPads detrás, los packs delante, con aire entre las dos filas.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-still"></div></div>
+</section>
+<section class="option" id="o2">
+  <div class="option-note"><b>2 · Estantería</b><span>Dos filas separadas. Nada se cruza. Se lee como un catálogo.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-shelf"></div></div>
+</section>
+<section class="option" id="o3">
+  <div class="option-note"><b>3 · La foto es el conjunto</b><span>El velo azul cubre el título. El conjunto sale a la derecha, donde la foto se abre.</span></div>
+  <div class="hero spread"><div class="copy"></div><div class="set set-spread"></div></div>
+</section>
+<section class="option" id="o4">
+  <div class="option-note"><b>4 · La app a un lado</b><span>Los dos iPads juntos, sin montarse. Los packs en su propia fila, al lado.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-pair"></div></div>
+</section>
+<section class="option" id="o5">
+  <div class="option-note"><b>5 · Solo los packs</b><span>La foto del hero es Basic, Fun y Full. Los iPads se quedan en el bloque de la app, debajo.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-packs"></div></div>
+</section>
+<section class="option" id="o6">
+  <div class="option-note"><b>6 · Mesa clara</b><span>El conjunto dentro de un cuadro claro, puesto sobre el azul. Como una foto de producto.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-island"></div></div>
+</section>
+<section class="option" id="o7">
+  <div class="option-note"><b>7 · Arco</b><span>Fun un poco más alto en el centro. Los iPads pequeños, atrás, sin caer sobre los packs.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-arc"></div></div>
+</section>
+<section class="option" id="o8">
+  <div class="option-note"><b>8 · Columna</b><span>Los packs a la izquierda del grupo. Los iPads en columna, a la derecha, uno bajo el otro.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-side"></div></div>
+</section>
+<section class="option" id="o9">
+  <div class="option-note"><b>9 · Fila</b><span>Los cinco al mismo nivel, sin giros y sin capas. El más fácil de leer.</span></div>
+  <div class="hero"><div class="copy"></div><div class="set set-row"></div></div>
+</section>
+<section class="option" id="o10">
+  <div class="option-note"><b>10 · A sangre</b><span>El conjunto ocupa el borde de abajo de toda la foto. El título flota en el azul, encima.</span></div>
+  <div class="hero wide"><div class="copy"></div><div class="set set-table"></div></div>
+</section>
+</main>
+<script>
+  const copy = `<span class="eyebrow">THE PIXTOLEARN SHOP</span><h2>Bring visuals <span class="brand-pink">into</span> <span class="brand-amber">everyday</span> <span class="brand-blue">life.</span></h2><p>On your screen. By the pool. Find the support that fits your day.</p><a class="button" href="shop.html#packs">See the packs</a>`;
+  const pad = (src, alt) => `<div class="pad"><img alt="${alt}" src="${src}"></div>`;
+  const pack = (src, alt, cls) => `<img class="pack${cls ? " " + cls : ""}" alt="${alt}" src="${src}">`;
+  const splash = pad("assets/current-art/app-splash.png", "PixtoLearn splash");
+  const home = pad("assets/current-art/adult-home.png", "PixtoLearn on iPad");
+  const basic = pack("assets/shop-set/basic.png", "Basic");
+  const fun = pack("assets/shop-set/fun-notoys.png", "Fun");
+  const funMid = pack("assets/shop-set/fun-notoys.png", "Fun", "mid");
+  const full = pack("assets/shop-set/full.png", "Full");
+  const pads = `<div class="pads">${splash}${home}</div>`;
+  const packs = `<div class="packs">${basic}${fun}${full}</div>`;
+  document.querySelectorAll(".copy").forEach((node) => { node.innerHTML = copy; });
+  document.querySelector(".set-still").innerHTML = pads + packs;
+  document.querySelector(".set-shelf").innerHTML = `<div class="row">${splash}${home}</div><div class="row">${basic}${fun}${full}</div>`;
+  document.querySelector(".set-spread").innerHTML = pads + packs;
+  document.querySelector(".set-pair").innerHTML = `<div class="pads">${splash}${home}</div><div class="packs">${basic}${fun}${full}</div>`;
+  document.querySelector(".set-packs").innerHTML = basic + fun + full;
+  document.querySelector(".set-island").innerHTML = pads + packs;
+  document.querySelector(".set-arc").innerHTML = `<div class="pads">${splash}${home}</div><div class="packs">${basic}${funMid}${full}</div>`;
+  document.querySelector(".set-side").innerHTML = `<div class="packs">${basic}${fun}${full}</div><div class="pads">${splash}${home}</div>`;
+  document.querySelector(".set-row").innerHTML = splash + home + basic + fun + full;
+  document.querySelector(".set-table").innerHTML = splash + home + basic + fun + full;
+</script>
+</body>
+</html>

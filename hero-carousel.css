@@ -1,4 +1,13 @@
-.photographic-hero>.hero-reel img{position:absolute;inset:0;object-position:center center;opacity:0;transition:opacity 1.15s ease}
+@media(min-width:761px){
+  body .photographic-hero{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:max(5vw,calc((100vw - 1440px) / 2 + 5vw));padding-right:max(5vw,calc((100vw - 1440px) / 2 + 5vw))}
+  .photographic-hero:after,
+  .app-intro.photographic-hero:after{background:linear-gradient(90deg,#10262ef7 0%,#10262ef5 46%,#10262eee 58%,#10262e99 74%,#10262e38 88%,#10262e00 100%)}
+}
+@media(max-width:760px){
+  body.brand-home .photographic-hero,body.brand-page .photographic-hero,body.shop-clean .photographic-hero,body.is-app .photographic-hero{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+}
+.photographic-hero>.hero-reel,.photographic-hero>.brand-photo{width:100%;height:100%}
+.photographic-hero>.hero-reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0;transition:opacity 1.15s ease}
 .hero-reel img.is-on{opacity:1}
 .hero-dots{position:absolute;z-index:2;right:28px;bottom:22px;display:flex;gap:8px;align-items:center}
 .hero-dots button{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#ffffff8c;box-shadow:0 0 0 1px #10262e66;cursor:pointer}

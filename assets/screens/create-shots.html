@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Create session shots</title>
+<style>
+  html,body{margin:0;background:#1c2c33}
+  .phone{width:390px;background:#f7f4ef;color:#14242b;font-family:Arial,Helvetica,sans-serif}
+  .top{display:flex;align-items:center;gap:10px;padding:14px 16px 8px;background:#fffdf8}
+  .logo{width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px #14242b14;display:grid;place-items:center;font-size:11px;font-weight:800;color:var(--c)}
+  .who small{display:block;font-size:9px;font-weight:800;letter-spacing:.12em;color:var(--c)}
+  .who b{font-size:14px;color:var(--c)}
+  .tools{margin-left:auto;display:flex;gap:8px}
+  .tools i{width:34px;height:34px;border-radius:50%;background:#14242b;display:grid;place-items:center}
+  .tools svg{width:15px;height:15px;fill:#fff}
+  .bar{height:3px;background:linear-gradient(90deg,#d03860,#e8a840 40%,var(--c))}
+  .body{padding:14px 16px 18px}
+  .back{margin:0;font-size:12px;font-weight:750}
+  h1{margin:4px 0 4px;font-size:28px;letter-spacing:-.03em;line-height:1}
+  .sub{margin:0 0 12px;font-size:13px;font-weight:650;color:#5c7279}
+  .name{margin:0 0 6px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#6b7c82}
+  input{width:100%;box-sizing:border-box;border:0;border-radius:12px;background:#fff;padding:12px 14px;font:600 15px Arial;color:#8aa;box-shadow:0 0 0 1px #14242b14}
+  .pick{display:grid;grid-template-columns:1.15fr .85fr;gap:8px;margin-top:10px}
+  .kind{border:0;border-radius:14px;padding:12px 12px 14px;text-align:left;background:#fff;box-shadow:0 0 0 1px #14242b14;color:#14242b}
+  .kind.on{background:var(--c);color:#fff;box-shadow:none}
+  .kind b{display:block;margin-top:6px;font-size:16px}
+  .kind span{display:block;margin-top:2px;font-size:12px;font-weight:650;opacity:.85}
+  .bars{width:18px;height:14px;display:flex;flex-direction:column;justify-content:space-between}
+  .bars i{display:block;height:3px;border-radius:2px;background:currentColor}
+  .ring{width:16px;height:16px;border:2px solid currentColor;border-radius:50%;position:relative}
+  .ring:before,.ring:after,.ring i{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:currentColor}
+  .ring:before{left:4px;top:-3px}
+  .ring:after{right:-3px;bottom:1px}
+  .ring i{left:-1px;bottom:1px}
+  .sel{margin-top:10px;background:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 0 0 1px #14242b10;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  .sel b{font-size:12px;letter-spacing:.06em}
+  .sel span{display:block;margin-top:4px;font-size:13px;font-weight:650;color:#8aa;text-align:center}
+  .save{margin-top:10px;width:100%;border:0;border-radius:14px;background:var(--c);color:#fff;font:800 15px Arial;padding:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .chips button{border:0;border-radius:999px;background:#fff;color:#14242b;font:800 11px Arial;letter-spacing:.04em;padding:7px 10px;box-shadow:0 0 0 1px #14242b14}
+  .chips .on{background:var(--c);color:#fff;box-shadow:none}
+  .mine{margin:8px 0 0;font-size:13px;font-weight:750}
+  .search{margin-top:8px;color:#9aa}
+  .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px}
+  .grid figure{margin:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px #14242b10}
+  .grid img{display:block;width:100%;height:108px;object-fit:cover;background:#fff}
+</style>
+</head>
+<body>
+<section class="phone" id="phys" style="--c:#C77830"></section>
+<section class="phone" id="swim" style="--c:#507f8d"></section>
+<script>
+const tools = `<span class="tools"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.2"/><path d="M6.2 18.5c1.2-2.4 3.2-3.6 5.8-3.6s4.6 1.2 5.8 3.6"/></svg></i><i><svg viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg></i><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M18 6l-1.6 1.6M7.6 16.4 6 18"/></svg></i></span>`;
+function screen(id, product, back, lead, placeholder, empty, count, chips, cards){
+  document.getElementById(id).innerHTML = `
+    <div class="top"><span class="logo">Px</span><span class="who"><small>PIXTOLEARN</small><b>${product}</b></span>${tools}</div>
+    <div class="bar"></div>
+    <div class="body">
+      <p class="back">${back}</p>
+      <h1>Create session</h1>
+      <p class="sub">${lead}</p>
+      <p class="name">SESSION NAME</p>
+      <input value="${placeholder}" readonly>
+      <div class="pick">
+        <button class="kind on" type="button"><span class="bars"><i></i><i></i><i></i></span><b>Session</b><span>Pictures in one order.</span></button>
+        <button class="kind" type="button"><span class="ring"><i></i></span><b>Circuit</b><span>Stations you go around.</span></button>
+      </div>
+      <div class="sel"><b>${count}</b><span>${empty}</span><b>0</b></div>
+      <button class="save" type="button">Save session</button>
+      <div class="chips">${chips}</div>
+      <p class="mine">My cards</p>
+      <input class="search" value="Search all families and categories..." readonly>
+      <div class="grid">${cards.map(src => `<figure><img src="create-src/${src}" alt=""></figure>`).join("")}</div>
+    </div>`;
+}
+screen("phys","Physical Activity","Back to Physical Activity","Add Physical Activity cards to your session.","e.g. Gym warm-up","Add Physical Activity cards to your session.","0 SELECTED",
+  `<button class="on" type="button">ALL</button><button type="button">MOVE</button><button type="button">BODY</button><button type="button">STRETCHES</button><button type="button">OBJECTS</button>`,
+  ["p1.webp","p2.webp","p3.webp","p4.webp","p5.webp","p6.webp"]);
+screen("swim","Swimming","Back to Swimming","Add cards from the library.","e.g. Sunday beginners, float","Add cards from the library.","0 CARDS",
+  `<button class="on" type="button">ALL</button><button type="button">WATER</button><button type="button">FLOAT</button><button type="button">STROKES</button><button type="button">GAMES</button>`,
+  ["s1.webp","s2.webp","s3.webp","s4.webp","s5.webp","s6.webp"]);
+const only = new URLSearchParams(location.search).get("only");
+if (only) {
+  document.body.style.cssText = "margin:0;padding:0;display:block;background:#fff";
+  document.querySelectorAll(".phone").forEach(p => { p.style.display = p.id === only ? "block" : "none"; });
+}
+</script>
+</body>
+</html>

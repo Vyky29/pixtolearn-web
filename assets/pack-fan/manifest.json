@@ -1,0 +1,184 @@
+{
+  "water": [
+    [
+      "assets/pack-fan/water-0-a.jpg",
+      "wash your face",
+      "assets/pack-fan/water-0-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/water-1-a.jpg",
+      "face in the water",
+      "assets/pack-fan/water-1-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/water-2-a.jpg",
+      "blow bubbles with pop tube",
+      "assets/pack-fan/water-2-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/water-3-a.jpg",
+      "hold breath",
+      "assets/pack-fan/water-3-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/water-4-a.jpg",
+      "pouring water",
+      "assets/pack-fan/water-4-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/water-5-a.jpg",
+      "blow toy away",
+      "assets/pack-fan/water-5-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/water-6-a.jpg",
+      "sitting safety entry",
+      "assets/pack-fan/water-6-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/water-7-a.jpg",
+      "move forward with a noodle",
+      "assets/pack-fan/water-7-b.jpg",
+      "Break it down"
+    ]
+  ],
+  "float": [
+    [
+      "assets/pack-fan/float-0-a.jpg",
+      "float on back",
+      "assets/pack-fan/float-0-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/float-1-a.jpg",
+      "float on front",
+      "assets/pack-fan/float-1-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/float-2-a.jpg",
+      "rocket float on back",
+      "assets/pack-fan/float-2-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/float-3-a.jpg",
+      "rocket float on front",
+      "assets/pack-fan/float-3-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/float-4-a.jpg",
+      "roll back to front",
+      "assets/pack-fan/float-4-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/float-5-a.jpg",
+      "shout & sign for help",
+      "assets/pack-fan/float-5-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/float-6-a.jpg",
+      "tuck float",
+      "assets/pack-fan/float-6-b.jpg",
+      "Break it down"
+    ]
+  ],
+  "stroke": [
+    [
+      "assets/pack-fan/stroke-0-a.jpg",
+      "front crawl kick",
+      "assets/pack-fan/stroke-0-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/stroke-1-a.jpg",
+      "backstroke kick",
+      "assets/pack-fan/stroke-1-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/stroke-2-a.jpg",
+      "breaststroke kick on front",
+      "assets/pack-fan/stroke-2-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/stroke-3-a.jpg",
+      "dolphin kick",
+      "assets/pack-fan/stroke-3-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/stroke-4-a.jpg",
+      "sitting dive",
+      "assets/pack-fan/stroke-4-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/stroke-5-a.jpg",
+      "front crawl arms",
+      "assets/pack-fan/stroke-5-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/stroke-6-a.jpg",
+      "breaststroke arms",
+      "assets/pack-fan/stroke-6-b.jpg",
+      "Break it down"
+    ]
+  ],
+  "games": [
+    [
+      "assets/pack-fan/games-0-a.jpg",
+      "swimming costume on",
+      "assets/pack-fan/games-0-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/games-1-a.jpg",
+      "swim cap on",
+      "assets/pack-fan/games-1-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/games-2-a.jpg",
+      "goggles on",
+      "assets/pack-fan/games-2-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/games-3-a.jpg",
+      "clothes on",
+      "assets/pack-fan/games-3-b.jpg",
+      "Break it down"
+    ],
+    [
+      "assets/pack-fan/games-4-a.jpg",
+      "Ball",
+      "assets/pack-fan/games-4-b.jpg",
+      "Hoop"
+    ],
+    [
+      "assets/pack-fan/games-5-a.jpg",
+      "Noodle",
+      "assets/pack-fan/games-5-b.jpg",
+      "Float"
+    ],
+    [
+      "assets/pack-fan/games-6-a.jpg",
+      "Water pistol",
+      "assets/pack-fan/games-6-b.jpg",
+      "Pop tube"
+    ]
+  ]
+}

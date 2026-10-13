@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 1024">
+  <rect width="768" height="1024" fill="#F7F4EF"/>
+  <text x="384" y="228" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="3.2" fill="#bd7029">NEW SESSION</text>
+  <text x="384" y="274" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#5c7279">Session or circuit</text>
+  <rect x="78" y="350" width="280" height="430" rx="32" fill="#fbf3e6"/>
+  <g transform="translate(148, 500)" fill="#bd7029">
+    <rect width="140" height="34" rx="10"/>
+    <rect y="54" width="140" height="34" rx="10" opacity=".72"/>
+    <rect y="108" width="140" height="34" rx="10" opacity=".48"/>
+  </g>
+  <text x="218" y="730" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#14242b">Session</text>
+  <rect x="410" y="350" width="280" height="430" rx="32" fill="#fffdf8" stroke="#bd7029" stroke-width="3"/>
+  <circle cx="550" cy="560" r="72" fill="none" stroke="#bd7029" stroke-width="8"/>
+  <circle cx="550" cy="488" r="16" fill="#bd7029"/>
+  <circle cx="612" cy="596" r="16" fill="#bd7029"/>
+  <circle cx="488" cy="596" r="16" fill="#bd7029"/>
+  <text x="550" y="730" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#14242b">Circuit</text>
+</svg>

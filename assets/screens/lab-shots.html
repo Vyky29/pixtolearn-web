@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Lab shots</title>
+<style>
+  html,body{margin:0;background:#1c2c33}
+  body{display:flex;flex-wrap:wrap;gap:28px;padding:28px}
+  .phone{width:390px;background:#fff;color:#14242b;font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+  .band{padding:14px 16px 14px}
+  .top{display:flex;align-items:center;gap:10px}
+  .logo{width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+  .logo svg{width:24px;height:24px}
+  .who small{display:block;font-size:9px;font-weight:800;letter-spacing:.14em}
+  .who b{font-size:15px}
+  .tools{margin-left:auto;display:flex;gap:8px}
+  .tools i{width:36px;height:36px;border-radius:50%;background:#14242b;display:grid;place-items:center}
+  .tools svg{width:16px;height:16px;fill:#fff}
+  .kicker{margin:16px 0 0;font-size:11px;font-weight:800;letter-spacing:.16em}
+  h1{margin:2px 0 4px;font-size:34px;line-height:.95;letter-spacing:-.04em}
+  .lead{margin:0;max-width:28ch;font-size:15px;font-weight:650;line-height:1.35}
+  .rows{padding:8px 16px 20px}
+  .row{display:flex;align-items:center;gap:12px;padding:10px 2px;border-bottom:1px solid #14242b14}
+  .mini{width:62px;height:78px;flex:none;display:grid;place-items:center}
+  .cardish{width:46px;height:64px;border-radius:8px;background:#fff;box-shadow:0 0 0 1px #14242b22;overflow:hidden;display:flex;flex-direction:column}
+  .cardish img{height:40px;width:100%;object-fit:cover}
+  .cardish span{flex:1;background:#f4f1ea}
+  .dash{width:40px;height:40px;border:1.5px dashed #9aa7ad;border-radius:6px}
+  .board{width:52px;height:64px;border-radius:8px;display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:6px}
+  .board i{background:#fff;border-radius:3px;opacity:.85}
+  .where{background:#d7eef6}
+  .feel{background:#eadcf2}
+  .choose{background:#f7f4b1}
+  .copy small{display:block;font-size:9px;font-weight:800;letter-spacing:.08em;color:#6b7c82}
+  .copy b{display:block;margin-top:2px;font-size:22px;letter-spacing:-.03em;line-height:1.05}
+  .copy span{display:block;margin-top:3px;font-size:13px;font-weight:650;color:#5c7279;line-height:1.3}
+  .chev{margin-left:auto;color:#9aa7ad;font-size:22px}
+  .made{display:flex;align-items:center;gap:14px;padding:16px 2px}
+  .badge{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;flex:none}
+  .badge svg{width:26px;height:26px;fill:#fff}
+  .stage{padding:16px 16px 8px;background:#f7f4ef}
+  .face{margin:0 0 8px;text-align:center;font-size:11px;font-weight:800;letter-spacing:.14em;color:#6b7c82}
+  .pixto{width:168px;margin:0 auto;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 0 0 7px var(--edge), 0 16px 24px -18px #14242b}
+  .pixto img{display:block;width:100%;height:148px;object-fit:cover}
+  .pixto b{display:block;padding:10px 8px 12px;text-align:center;font-size:16px}
+  .panel{margin:14px 16px 18px;padding:14px;border-radius:18px;background:#fff;box-shadow:0 0 0 1px #14242b10}
+  .panel .n{margin:0;font-size:11px;font-weight:800;letter-spacing:.12em;color:#6b7c82}
+  .panel .hint{margin:6px 0 0;font-size:13px;font-weight:650;line-height:1.35;color:#5c7279}
+  label{display:block;margin-top:12px;font-size:13px;font-weight:800}
+  input{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:12px 14px;border-radius:14px;border:1px solid #d5dde0;font:650 16px Arial;color:#14242b}
+  .consent{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:12px;font-weight:650;line-height:1.35;color:#14242b}
+  .consent i{width:18px;height:18px;border-radius:4px;background:#14242b;color:#fff;display:grid;place-items:center;flex:none;font-style:normal;font-size:12px}
+  .hintlab{margin:12px 0 0;font-size:11px;font-weight:800;letter-spacing:.08em;color:#14242b}
+  .ai{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:4px 16px 4px 4px;border-radius:999px;border:1.5px solid transparent;background:linear-gradient(#fff,#fff) padding-box, linear-gradient(105deg,#b82858,#d03860 18%,#e8a840 48%,#88b0c0 82%,#3d6f82) border-box;box-shadow:0 10px 18px -14px #14242b}
+  .ai .mark{width:40px;height:40px;border-radius:12px;background:#f3f6f7;display:grid;place-items:center}
+  .ai .mark svg{width:26px;height:26px}
+  .ai em{font-style:normal;font-size:20px;font-weight:800;letter-spacing:-.03em;background:linear-gradient(105deg,#b82858,#d03860 18%,#e8a840 48%,#88b0c0 82%,#3d6f82);-webkit-background-clip:text;background-clip:text;color:transparent}
+</style>
+</head>
+<body>
+<template id="spark">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#14242b" d="M12 1.55c.32 0 .56.2.66.52l1.72 6.05c.08.28.3.5.58.58l6.05 1.72c.32.1.52.34.52.66s-.2.56-.52.66l-6.05 1.72a.9.9 0 0 0-.58.58l-1.72 6.05c-.1.32-.34.52-.66.52s-.56-.2-.66-.52l-1.72-6.05a.9.9 0 0 0-.58-.58L3.6 13.14a.7.7 0 0 1-.52-.66c0-.32.2-.56.52-.66l6.05-1.72c.28-.08.5-.3.58-.58L11.34 2.07c.1-.32.34-.52.66-.52z"/>
+    <path fill="#E8A840" d="M19.05 2.35c.22 0 .4.14.46.36l.82 2.72c.06.2.22.36.42.42l2.72.82c.22.06.36.24.36.46s-.14.4-.36.46l-2.72.82a.6.6 0 0 0-.42.42l-.82 2.72c-.06.22-.24.36-.46.36s-.4-.14-.46-.36l-.82-2.72a.6.6 0 0 0-.42-.42l-2.72-.82a.47.47 0 0 1-.36-.46c0-.22.14-.4.36-.46l2.72-.82c.2-.06.36-.22.42-.42l.82-2.72c.06-.22.24-.36.46-.36z"/>
+    <path fill="#5F8A9A" d="M5.15 15.55c.18 0 .32.12.38.3l.55 1.85c.04.16.16.28.34.34l1.85.55c.18.04.3.2.3.38s-.12.32-.3.38l-1.85.55a.45.45 0 0 0-.34.34l-.55 1.85c-.06.18-.2.3-.38.3s-.32-.12-.38-.3l-.55-1.85a.45.45 0 0 0-.34-.34l-1.85-.55a.38.38 0 0 1-.3-.38c0-.18.12-.32.3-.38l1.85-.55c.16-.04.28-.16.34-.34l.55-1.85c.06-.18.2-.3.38-.3z"/>
+  </svg>
+</template>
+
+<section class="phone" id="swim-list"></section>
+<section class="phone" id="swim-ai"></section>
+<section class="phone" id="phys-list"></section>
+<section class="phone" id="phys-ai"></section>
+<section class="phone" id="routines-ai"></section>
+
+<script>
+const spark = document.getElementById('spark').innerHTML;
+const tools = `<span class="tools"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.2"/><path d="M6.2 18.5c1.2-2.4 3.2-3.6 5.8-3.6s4.6 1.2 5.8 3.6"/></svg></i><i><svg viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg></i></span>`;
+function band(wash, ink, name, lead){
+  return `<header class="band" style="background:${wash};color:${ink}"><div class="top"><span class="logo">${spark}</span><span class="who"><small>PIXTOLEARN</small><b>${name}</b></span>${tools}</div><p class="kicker">${name.toUpperCase()}</p><h1>Lab</h1><p class="lead">${lead}</p></header>`;
+}
+function row(art, kicker, title, body){
+  return `<div class="row"><div class="mini">${art}</div><div class="copy"><small>${kicker}</small><b>${title}</b><span>${body}</span></div><span class="chev">›</span></div>`;
+}
+const photo = src => `<div class="cardish"><img src="${src}" alt=""><span></span></div>`;
+const boards = {
+  where:'<div class="board where"><i></i><i></i><i></i><i></i></div>',
+  feel:'<div class="board feel"><i></i><i></i><i></i><i></i></div>',
+  choose:'<div class="board choose"><i></i><i></i><i></i><i></i><i></i><i></i></div>'
+};
+function list(id, wash, ink, name, lead, kicker, rows, badge){
+  document.getElementById(id).innerHTML = band(wash, ink, name, lead) + `<div class="rows">${rows}<div class="made"><span class="badge" style="background:${badge}">${spark.replace('fill="#14242b"','fill="#fff"')}</span><div class="copy"><b>Made in the Lab</b><span>The cards you have already made.</span></div><span class="chev">›</span></div></div>`;
+}
+const swimRows = [
+  row(photo('lab-src/kick.jpg'), 'PIXTOLEARN SWIMMING CARD', 'With steps', 'A picture, then the steps on the back.'),
+  row('<div class="dash"></div>', 'PIXTOLEARN SWIMMING CARD', 'Without steps', 'A picture and a name.'),
+  row(boards.where, 'PIXTOLEARN SWIMMING CARD', 'Where', 'Toilet, changing room, shower, pool.'),
+  row(boards.feel, 'PIXTOLEARN SWIMMING CARD', 'Feel', 'Happy, sad, tired, excited, cold, hot.'),
+  row(boards.choose, 'PIXTOLEARN SWIMMING CARD', 'Choose', 'Toys, float, noodle, and the rest.')
+].join('');
+list('swim-list','#88B5C2','#14242b','Swimming','Use your imagination. Make the card the session needs.','', swimRows, '#507f8d');
+const physRows = [
+  row(photo('lab-src/walk.jpg'), 'PIXTOLEARN PHYSICAL ACTIVITY CARD', 'With steps', 'A picture, then the steps on the back.'),
+  row('<div class="dash"></div>', 'PIXTOLEARN PHYSICAL ACTIVITY CARD', 'Without steps', 'A picture and a name.')
+].join('');
+list('phys-list','#C77830','#FFF8EB','Physical Activity','Use your imagination. Make the card the movement needs.','', physRows, '#bd7029');
+
+function ai(id, wash, ink, name, src, word, hint){
+  document.getElementById(id).innerHTML = `
+    <header class="band" style="background:${wash};color:${ink}">
+      <div class="top"><span class="logo">${spark}</span><span class="who"><small>PIXTOLEARN</small><b>${name}</b></span>${tools}</div>
+      <h1>Lab</h1>
+      <p class="lead">Your photo stays what it is. PixtoLearn AI draws the look.</p>
+    </header>
+    <div class="stage" style="--edge:${wash}">
+      <p class="face">MAIN</p>
+      <div class="pixto"><img src="${src}" alt=""><b>${word}</b></div>
+      <div class="panel">
+        <p class="n">1 · MAIN</p>
+        <p class="hint">Front of the card. A still photo can use PixtoLearn AI.</p>
+        <label>Label<input value="${word}" readonly></label>
+        <div class="consent"><i>✓</i><span>I understand this photo will be sent once to Pixto AI. We do not keep it.</span></div>
+        <p class="hintlab">PHOTO HINT</p>
+        <input value="${hint}" readonly>
+        <button class="ai" type="button"><span class="mark">${spark}</span><em>PixtoLearn AI</em></button>
+      </div>
+    </div>`;
+}
+ai('swim-ai','#88B5C2','#14242b','Swimming','lab-src/kick.jpg','kickboard','a kickboard, standing up');
+ai('phys-ai','#C77830','#FFF8EB','Physical Activity','lab-src/walk.jpg','walk forward','two people walking away');
+ai('routines-ai','#D03860','#FFF8EB','Routines','lab-src/toothbrush.jpg','toothbrush','toothpaste on the brush');
+const only = new URLSearchParams(location.search).get('only');
+if (only) {
+  document.body.style.cssText = 'margin:0;padding:0;display:block;background:#fff';
+  document.querySelectorAll('.phone').forEach(p => { p.style.display = p.id === only ? 'block' : 'none'; });
+}
+</script>
+</body>
+</html>

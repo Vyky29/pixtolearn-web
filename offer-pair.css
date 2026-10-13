@@ -13,12 +13,16 @@
 .offer-reel a{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .9s ease;text-decoration:none}
 .offer-reel a.is-on{opacity:1;pointer-events:auto}
 .offer-reel img{width:auto;max-width:100%;height:min(280px,72%);object-fit:contain;filter:drop-shadow(0 14px 12px #294c5b24)}
-.offer-reel b{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#3d5c66}
-.offer-dots{position:absolute;z-index:3;right:0;bottom:2px;display:flex;gap:7px}
+.offer-caption{display:flex;flex-direction:column;align-items:center;gap:2px;max-width:18em;text-align:center}
+.offer-reel a:not(.is-on) .offer-caption{display:none}
+.offer-reel b{font-family:PixtoDisplay,Arial,sans-serif;font-size:18px;font-weight:800;letter-spacing:-.03em;text-transform:none;color:#14242b}
+.offer-caption small{color:#3d5c66;font-size:14px;font-weight:650;line-height:1.35}
+.offer-dots{position:absolute;z-index:3;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:7px}
 .offer-dots button{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#14242b33;cursor:pointer}
 .offer-dots button[aria-current=true]{width:18px;background:#14242b}
 .offer-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding:18px 24px 24px}
+.offer-packs .offer-links{justify-content:center}
 .offer-links a{padding:7px 12px;border-radius:999px;background:#fff;color:#14242b;text-decoration:none;font-size:13px;font-weight:750;box-shadow:inset 0 -2px 0 var(--c,#88b5c2)}
 .offer-links a:hover{background:color-mix(in srgb,var(--c) 16%,#fff)}
-@media(max-width:760px){.offer-ipads{height:250px;margin-inline:12px}.offer-ipad-back,.offer-ipad-front{width:62%}.offer-reel{height:230px;margin-inline:16px}.offer-reel img{height:190px}.offer-links{padding:16px 16px 20px}}
+@media(max-width:760px){.offer-ipads{height:250px;margin-inline:12px}.offer-ipad-back,.offer-ipad-front{width:62%}.offer-reel{height:230px;margin-inline:16px}.offer-reel img{height:190px}.offer-links{display:flex;position:static;top:auto;left:auto;right:auto;z-index:auto;background:transparent;box-shadow:none;padding:16px 16px 20px}}
 @media(prefers-reduced-motion:reduce){.offer-reel a,.offer-more i{transition:none}}

@@ -30,7 +30,7 @@
     stop();
     timer = window.setInterval(function () {
       show(index + 1);
-    }, 4200);
+    }, 3000);
   }
 
   dots.forEach(function (dot, i) {

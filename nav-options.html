@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PixtoLearn · Diez maneras de sentar el menú</title>
+<style>
+@font-face{font-family:PixtoDisplay;src:url("assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:500 800;font-display:swap}
+@font-face{font-family:PixtoBody;src:url("assets/fonts/figtree-latin.woff2") format("woff2");font-weight:400 800;font-display:swap}
+:root{
+  --ink:#14242b;
+  --paper:#f7f4ef;
+  --pink:#d03860;
+  --amber:#e8a840;
+  --slate:#88b5c2;
+  --blue:#3f7584;
+  --card:#fffdf8;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:#efeae3;
+  color:var(--ink);
+  font:16px/1.45 PixtoBody,"Avenir Next","Segoe UI",sans-serif;
+}
+body:before{
+  content:"";
+  display:block;
+  height:4px;
+  background:linear-gradient(90deg,#d03860 0 38%,#88b5c2 38% 70%,#e8a840 70%);
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+img{display:block;max-width:100%}
+a:focus-visible,button:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,calc(100% - 36px));margin:0 auto;padding:26px 0 88px}
+.kicker{
+  margin:0;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--blue);
+}
+h1{
+  margin:8px 0 14px;
+  font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+  font-size:clamp(32px,4vw,44px);
+  letter-spacing:-.045em;
+  line-height:.98;
+}
+.rec{max-width:74ch;display:grid;gap:10px;margin:0 0 8px}
+.rec p{margin:0;font-size:16.5px}
+.rec b{font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;font-weight:800;letter-spacing:-.03em}
+.opt{margin-top:30px}
+.stage{
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:0 18px 40px -28px #14242b;
+  overflow:hidden;
+  border:1px solid #fff;
+}
+.cap{margin:10px 2px 0;font-size:14.5px;line-height:1.4;color:#24343a}
+.cap b{font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.num{color:var(--pink);margin-right:6px}
+.eye{
+  margin:0;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--blue);
+}
+.ico{width:20px;height:20px;display:block}
+.u{
+  display:flex;
+  align-items:center;
+  gap:2px;
+  padding:4px;
+  border:1px solid #88b5c238;
+  background:#f5f3ed;
+  border-radius:16px;
+  flex:none;
+}
+.u a,.u button{
+  width:36px;height:36px;
+  display:grid;place-items:center;
+  border-radius:11px;
+  color:var(--ink);
+}
+.u a:hover,.u button:hover{background:#fff;color:var(--pink)}
+.flag{font-size:16px;line-height:1}
+.logo img{width:132px;height:auto}
+.mark-only{width:34px;height:42px;overflow:hidden;display:block}
+.mark-only img{width:109px;max-width:none;height:auto;margin:-1px 0 0 -3.5px}
+
+/* 1. current bar */
+.bar1{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:0 28px;
+  background:#fffdf8;
+}
+.bar1 nav{display:flex;align-items:center;gap:30px}
+.bar1 nav a{font-size:13.5px;font-weight:700;padding:8px 0;position:relative}
+.bar1 nav a:hover{color:var(--pink)}
+.bar1 nav a.on{color:var(--ink)}
+.bar1 nav a.on:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-2px;
+  height:3px;border-radius:3px;
+  background:var(--pink);
+}
+
+/* 2. the sketch */
+.bar2{
+  display:flex;
+  align-items:flex-end;
+  gap:34px;
+  padding:16px 28px 14px;
+  background:#fffdf8;
+}
+.stack{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.stack .logo img{width:102px}
+.stack .app{
+  font-size:14px;
+  font-weight:700;
+  padding-bottom:2px;
+}
+.stack .app:hover{color:var(--pink)}
+.swim2{gap:3px;margin-left:6px}
+.swim2 .name{
+  font-size:15px;
+  font-weight:700;
+  padding-bottom:3px;
+  box-shadow:inset 0 -3px 0 var(--pink);
+}
+.swim2 .name:hover{color:var(--ink)}
+.links2{display:flex;gap:28px;align-items:flex-end;padding-bottom:3px}
+.links2 a{font-size:14.5px;font-weight:700}
+.links2 a:hover{color:var(--pink)}
+.bar2 .u{margin-left:auto;align-self:center}
+
+/* 3. mega */
+.bar3{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:0 28px;
+  background:#fff;
+  border-bottom:1px solid #14242b10;
+}
+.bar3 .logo img{width:120px}
+.bar3 nav{display:flex;align-items:center;gap:28px}
+.bar3 nav a{font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.bar3 nav a:hover{color:var(--pink)}
+.bar3 nav a.on{color:var(--ink);box-shadow:inset 0 -3px 0 var(--pink);padding-bottom:4px}
+.chev{
+  width:7px;height:7px;
+  border-right:1.7px solid currentColor;
+  border-bottom:1.7px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);
+}
+.panel{
+  display:grid;
+  grid-template-columns:1fr 280px;
+  gap:28px;
+  padding:22px 28px 24px;
+  background:#fff;
+  border-bottom:1px solid #14242b10;
+}
+.panel-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding-top:4px}
+.panel-links a{
+  font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+  font-size:26px;
+  letter-spacing:-.03em;
+  line-height:1.1;
+}
+.panel-links a:hover{color:var(--pink)}
+.panel-links a.on{color:var(--pink)}
+.panel .eye{margin-bottom:6px}
+.feature{
+  display:grid;
+  grid-template-columns:96px 1fr;
+  gap:12px;
+  align-items:center;
+  background:var(--paper);
+  border-radius:14px;
+  padding:10px;
+}
+.feature img{width:96px;height:114px;object-fit:contain}
+.feature small{display:block;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.feature b{display:block;margin-top:4px;font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;font-size:18px;letter-spacing:-.03em;line-height:1.05}
+.feature:hover b{color:var(--pink)}
+.glimpse{background:var(--paper);padding:22px 28px 26px}
+.glimpse h2{
+  margin:6px 0 0;
+  font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+  font-size:36px;
+  letter-spacing:-.04em;
+  line-height:1;
+}
+
+/* 4. two rows */
+.util4{
+  height:36px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:18px;
+  padding:0 28px;
+  background:var(--paper);
+  border-bottom:1px solid #14242b12;
+  font-size:12px;
+  font-weight:700;
+  color:var(--blue);
+}
+.util4 a,.util4 button{display:inline-flex;align-items:center;gap:6px}
+.util4 a:hover,.util4 button:hover{color:var(--pink)}
+.bar4{
+  height:68px;
+  display:flex;
+  align-items:center;
+  gap:32px;
+  padding:0 28px;
+  background:#fff;
+}
+.bar4 .logo img{width:124px}
+.bar4 nav{display:flex;gap:28px;align-items:center}
+.bar4 nav a{font-size:15px;font-weight:700;padding:6px 0;position:relative}
+.bar4 nav a:hover{color:var(--pink)}
+.bar4 nav a.on:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-4px;
+  height:3px;border-radius:3px;background:var(--pink);
+}
+
+/* 5. left rail */
+.shell5{display:grid;grid-template-columns:232px 1fr;min-height:460px}
+.rail5{
+  background:#fff;
+  border-right:1px solid #14242b10;
+  display:flex;
+  flex-direction:column;
+  padding:18px 14px 14px;
+}
+.rail5 .logo img{width:148px}
+.rail5 nav{display:flex;flex-direction:column;gap:4px;margin-top:22px}
+.rail5 nav a,.rail5 .foot a,.rail5 .foot button{
+  display:flex;align-items:center;gap:8px;
+  padding:10px 12px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:14.5px;
+  text-align:left;
+}
+.rail5 nav a:hover,.rail5 .foot a:hover,.rail5 .foot button:hover{background:var(--paper)}
+.rail5 nav a.on{background:#d0386014;color:var(--pink)}
+.rail5 .foot{margin-top:auto;display:flex;flex-direction:column;gap:2px;padding-top:12px}
+.main5{background:var(--paper);padding:32px 32px 28px}
+.fake-row{display:flex;gap:18px;align-items:center}
+.fake-row img{
+  width:96px;height:114px;object-fit:contain;
+  background:#fff;border-radius:14px;
+  box-shadow:0 10px 24px -18px #14242b;
+}
+.fake-row h2{
+  margin:4px 0 6px;
+  font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+  font-size:40px;
+  letter-spacing:-.045em;
+  line-height:.95;
+}
+.fake-row p{margin:0;max-width:36ch;color:#24343a}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.pair article{
+  background:#fff;
+  border-radius:14px;
+  padding:14px 16px 16px;
+  box-shadow:0 10px 24px -20px #14242b;
+}
+.pair b{display:block;font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;font-size:18px;letter-spacing:-.03em}
+.pair span{display:block;margin-top:4px;font-size:14px;color:#24343a}
+
+/* 6. icon rail open */
+.shell6{display:grid;grid-template-columns:248px 1fr;min-height:480px;background:var(--paper)}
+.rail6{
+  background:#fff;
+  border-right:1px solid #14242b12;
+  display:flex;
+  flex-direction:column;
+  padding:14px 12px 12px 0;
+  position:relative;
+}
+.rail6:before{
+  content:"";
+  position:absolute;
+  top:14px;bottom:14px;left:56px;
+  width:1px;background:#14242b14;
+}
+.rail6 a,.rail6 button{
+  display:grid;
+  grid-template-columns:56px 1fr;
+  align-items:center;
+  min-height:44px;
+  border-radius:0 12px 12px 0;
+  font-weight:700;
+  font-size:14.5px;
+  text-align:left;
+  color:var(--ink);
+}
+.rail6 a:hover,.rail6 button:hover{background:var(--paper)}
+.rail6 a.on{background:#d0386014;color:var(--pink)}
+.rail6 .ico,.rail6 .mark-only,.rail6 .flag{justify-self:center}
+.rail6 .brand{min-height:52px;margin-bottom:8px}
+.rail6 .foot{margin-top:auto}
+.main6{padding:32px 28px}
+.main6 h2{
+  margin:6px 0 8px;
+  font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+  font-size:36px;
+  letter-spacing:-.04em;
+  line-height:1;
+}
+.main6 p{margin:0;max-width:36ch}
+
+/* 7. centered wordmark */
+.bar7{
+  min-height:96px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:18px;
+  padding:16px 22px;
+  background:var(--paper);
+}
+.side{display:flex;align-items:center;gap:22px}
+.side.right{justify-content:flex-end}
+.bar7 .logo img{width:118px}
+.quiet{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.quiet:hover{color:var(--pink)}
+.quiet.on{color:var(--ink);box-shadow:inset 0 -1px 0 var(--pink);padding-bottom:3px}
+.bar7 .u{margin-left:8px}
+
+/* 8. chips */
+.h8{padding:16px 22px 20px;background:#fff}
+.h8-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.h8-top .logo img{width:108px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  height:40px;
+  padding:0 16px;
+  border-radius:999px;
+  font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:-.02em;
+  color:#fff;
+}
+.chip:hover{transform:translateY(-1px)}
+.chip.pink{background:var(--pink)}
+.chip.blue{background:var(--blue)}
+.chip.amber{background:var(--amber);color:var(--ink)}
+.chip.ink{background:var(--ink)}
+.chip.on{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--ink)}
+
+/* 9. global + subnav */
+.g9{
+  height:66px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:0 22px 0 28px;
+  background:#fff;
+}
+.g9 .logo img{width:116px}
+.g9-right{display:flex;align-items:center;gap:22px}
+.g9-right a{font-size:14px;font-weight:700}
+.g9-right a:hover{color:var(--pink)}
+.sub9{
+  height:50px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:0 28px;
+  background:#fffdf8;
+  border-top:1px solid #14242b10;
+}
+.sub9 a{font-size:14px;font-weight:700;padding:6px 0}
+.sub9 a:hover{color:var(--pink)}
+.sub9 a.on{box-shadow:inset 0 -3px 0 var(--pink)}
+.rule{width:1px;height:16px;background:#14242b22}
+.page9{background:var(--paper);padding:26px 28px 28px}
+
+/* 10. dock */
+.s10{position:relative;min-height:520px;background:var(--paper)}
+.top10{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 22px 0;
+}
+.top10 .logo img{width:96px}
+.body10{padding:36px 36px 120px}
+.body10 h2{
+  margin:6px 0 8px;
+  font-family:PixtoDisplay,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+  font-size:44px;
+  letter-spacing:-.045em;
+  line-height:.95;
+}
+.body10 p{margin:0;max-width:34ch}
+.dock{
+  position:absolute;
+  left:16px;right:16px;bottom:14px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 14px 34px -18px #14242b;
+  padding:8px 8px 10px;
+}
+.dock a{
+  min-width:76px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:3px;
+  font-size:11px;
+  font-weight:700;
+  color:var(--blue);
+  padding:4px 8px;
+  border-radius:16px;
+}
+.dock a:hover{color:var(--pink)}
+.dock .bub{
+  width:42px;height:32px;
+  display:grid;place-items:center;
+  border-radius:12px;
+}
+.dock a.on{color:var(--pink)}
+.dock a.on .bub{background:#d0386018}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" hidden>
+  <symbol id="i-user" viewBox="0 0 24 24">
+    <circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    <path d="M5.2 19.4v-1.2a6.8 6.8 0 0 1 13.6 0v1.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24">
+    <path d="M6.2 8h11.6l.8 11.2H5.4L6.2 8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+    <path d="M9 8V6.2a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-app" viewBox="0 0 24 24">
+    <rect x="7" y="3.2" width="10" height="17.6" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    <path d="M11 17.6h2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24">
+    <path d="M3 9.5c1.6 0 1.6-2 3.4-2s1.8 2 3.6 2 1.8-2 3.6-2 1.8 2 3.6 2 1.8-2 3.8-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    <path d="M3 15.2c1.6 0 1.6-2 3.4-2s1.8 2 3.6 2 1.8-2 3.6-2 1.8 2 3.6 2 1.8-2 3.8-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="2.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    <path d="M12 3.5v3.2M12 17.3v3.2M3.5 12h3.2M17.3 12h3.2M6.2 6.2l2.2 2.2M15.6 15.6l2.2 2.2M17.8 6.2l-2.2 2.2M8.4 15.6l-2.2 2.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24">
+    <path d="M4 10.2 6.2 5.2h11.6L20 10.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+    <path d="M4.4 10.2h15.2V19a1 1 0 0 1-1 1H5.4a1 1 0 0 1-1-1v-8.8Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    <path d="M10 20v-5.2h4V20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<main class="wrap">
+  <p class="kicker">PixtoLearn · menú</p>
+  <h1>Dónde puede sentarse el menú</h1>
+  <div class="rec">
+    <p>Apple separa idioma, cuenta y carrito de la marca. Stripe abre un panel solo cuando un enlace tiene hijos. Nike guarda el catálogo detrás de un icono; Linear deja un rail fijo porque la herramienta se usa todo el día.</p>
+    <p><b>La 4, dos filas como Apple.</b> Bandera, cuenta y carrito arriba; logo y cuatro destinos abajo: en el iPad se lee de un golpe y cada destino está a un clic.</p>
+    <p><b>La 2, tu boceto.</b> PixtoLearn pequeño, App debajo, y Physical collection sobre Swimming packs: la barra misma dice qué es la app y qué es la colección física.</p>
+  </div>
+
+  <section class="opt" id="m1">
+    <div class="stage">
+      <header class="bar1">
+        <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+        <nav aria-label="Principal">
+          <a href="app.html">App</a>
+          <a class="on" href="swimming-packs.html" aria-current="page">Swimming Packs</a>
+          <a href="updates.html">Updates</a>
+          <a href="shop.html">Shop</a>
+        </nav>
+        <div class="u">
+          <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span></button>
+          <a href="account.html" aria-label="My account"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+          <a href="cart.html" aria-label="Cart"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></a>
+        </div>
+      </header>
+    </div>
+    <p class="cap"><b><span class="num">01</span>Barra afinada.</b> La fila única, como Apple con el menú cerrado: logo, cuatro enlaces, raya de marca. Cabe si Swimming no necesita explicación.</p>
+  </section>
+
+  <section class="opt" id="m2">
+    <div class="stage">
+      <header class="bar2">
+        <div class="stack">
+          <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+          <a class="app" href="app.html">App</a>
+        </div>
+        <a class="stack swim2" href="swimming-packs.html" aria-current="page">
+          <span class="eye">Physical collection</span>
+          <span class="name">Swimming packs</span>
+        </a>
+        <nav class="links2" aria-label="Principal">
+          <a href="updates.html">Updates</a>
+          <a href="shop.html">Shop</a>
+        </nav>
+        <div class="u">
+          <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span></button>
+          <a href="account.html" aria-label="My account"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+          <a href="cart.html" aria-label="Cart"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></a>
+        </div>
+      </header>
+    </div>
+    <p class="cap"><b><span class="num">02</span>Boceto en dos alturas.</b> El que dibujaste: marca pequeña, App debajo, Physical collection sobre Swimming packs. Cabe para separar la app y la colección en la misma barra.</p>
+  </section>
+
+  <section class="opt" id="m3">
+    <div class="stage">
+      <header class="bar3">
+        <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+        <nav aria-label="Principal">
+          <a href="app.html">App</a>
+          <a class="on" href="swimming-packs.html" aria-current="page">Swimming Packs <i class="chev" aria-hidden="true"></i></a>
+          <a href="updates.html">Updates</a>
+          <a href="shop.html">Shop</a>
+        </nav>
+        <div class="u">
+          <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span></button>
+          <a href="account.html" aria-label="My account"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+          <a href="cart.html" aria-label="Cart"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></a>
+        </div>
+      </header>
+      <div class="panel">
+        <div class="panel-links">
+          <p class="eye">Physical collection</p>
+          <a class="on" href="swimming-packs.html" aria-current="page">Swimming packs</a>
+          <a href="swimming-packs.html">What's in the set</a>
+          <a href="swimming-packs.html">The packs</a>
+        </div>
+        <a class="feature" href="swimming-packs.html">
+          <img src="assets/kit-stands.png" alt="Bolsa, caja y soportes first, next, then."/>
+          <span><small>The packs</small><b>In the bag, for the water.</b></span>
+        </a>
+      </div>
+      <div class="glimpse">
+        <p class="eye">Physical collection</p>
+        <h2>Swimming packs</h2>
+      </div>
+    </div>
+    <p class="cap"><b><span class="num">03</span>Mega menú.</b> Como Stripe: la barra sigue corta y Swimming abre la colección, los packs y qué lleva el set. Cabe si la colección tiene hijos y el resto sigue a un clic.</p>
+  </section>
+
+  <section class="opt" id="m4">
+    <div class="stage">
+      <div class="util4">
+        <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span> English</button>
+        <a href="account.html">My account</a>
+        <a href="cart.html">Cart</a>
+      </div>
+      <header class="bar4">
+        <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+        <nav aria-label="Principal">
+          <a href="app.html">App</a>
+          <a class="on" href="swimming-packs.html" aria-current="page">Swimming packs</a>
+          <a href="updates.html">Updates</a>
+          <a href="shop.html">Shop</a>
+        </nav>
+      </header>
+    </div>
+    <p class="cap"><b><span class="num">04</span>Dos filas.</b> Como Apple: arriba idioma, cuenta y carrito; abajo la marca y los cuatro destinos. Cabe en el iPad, con todo a la vista.</p>
+  </section>
+
+  <section class="opt" id="m5">
+    <div class="stage">
+      <div class="shell5">
+        <aside class="rail5">
+          <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+          <nav aria-label="Principal">
+            <a href="app.html">App</a>
+            <a class="on" href="swimming-packs.html" aria-current="page">Swimming packs</a>
+            <a href="updates.html">Updates</a>
+            <a href="shop.html">Shop</a>
+          </nav>
+          <div class="foot">
+            <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span> Language</button>
+            <a href="account.html">My account</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </aside>
+        <div class="main5">
+          <div class="fake-row">
+            <img src="assets/kit-stands.png" alt=""/>
+            <div>
+              <p class="eye">Physical collection</p>
+              <h2>Swimming packs</h2>
+              <p>Four packs for the pool. The same pictures as the app, in your hands.</p>
+            </div>
+          </div>
+          <div class="pair">
+            <article><b>Starter</b><span>The first cards for the water.</span></article>
+            <article><b>Full set</b><span>The session, in order.</span></article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="cap"><b><span class="num">05</span>Rail izquierdo.</b> Como Linear: columna fija, todo visible, la página al lado. Cabe si el sitio se usa como herramienta.</p>
+  </section>
+
+  <section class="opt" id="m6">
+    <div class="stage">
+      <div class="shell6">
+        <nav class="rail6" aria-label="Menú rápido">
+          <a class="brand" href="index.html">
+            <span class="mark-only"><img src="assets/logo.png" alt=""/></span>
+            <span>PixtoLearn</span>
+          </a>
+          <a href="app.html"><svg class="ico" aria-hidden="true"><use href="#i-app"/></svg><span>App</span></a>
+          <a class="on" href="swimming-packs.html" aria-current="page"><svg class="ico" aria-hidden="true"><use href="#i-wave"/></svg><span>Swimming packs</span></a>
+          <a href="updates.html"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><span>Updates</span></a>
+          <a href="shop.html"><svg class="ico" aria-hidden="true"><use href="#i-shop"/></svg><span>Shop</span></a>
+          <div class="foot">
+            <button type="button"><span class="flag" aria-hidden="true">🇬🇧</span><span>Language</span></button>
+            <a href="account.html"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg><span>My account</span></a>
+            <a href="cart.html"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg><span>Cart</span></a>
+          </div>
+        </nav>
+        <div class="main6">
+          <div class="fake-row">
+            <img src="assets/kit-stands.png" alt=""/>
+            <div>
+              <p class="eye">Physical collection</p>
+              <h2>Swimming packs</h2>
+              <p>Four packs for the pool. The same pictures as the app, in your hands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="cap"><b><span class="num">06</span>Rail de iconos.</b> Como Nike: un borde de iconos que al abrirse enseña los nombres. Cabe para quien ya se sabe el sitio.</p>
+  </section>
+
+  <section class="opt" id="m7">
+    <div class="stage">
+      <header class="bar7">
+        <nav class="side" aria-label="Principal">
+          <a class="quiet" href="app.html">App</a>
+          <a class="quiet on" href="swimming-packs.html" aria-current="page">Swimming packs</a>
+        </nav>
+        <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+        <div class="side right">
+          <a class="quiet" href="updates.html">Updates</a>
+          <a class="quiet" href="shop.html">Shop</a>
+          <div class="u">
+            <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span></button>
+            <a href="account.html" aria-label="My account"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+            <a href="cart.html" aria-label="Cart"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <p class="cap"><b><span class="num">07</span>Wordmark al centro.</b> Como Celine: la marca en medio, enlaces a los lados, cuenta y carrito al extremo. Cabe si el menú calla y manda la marca.</p>
+  </section>
+
+  <section class="opt" id="m8">
+    <div class="stage">
+      <div class="h8">
+        <div class="h8-top">
+          <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+          <div class="u">
+            <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span></button>
+            <a href="account.html" aria-label="My account"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+            <a href="cart.html" aria-label="Cart"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></a>
+          </div>
+        </div>
+        <nav class="chips" aria-label="Principal">
+          <a class="chip pink" href="app.html">App</a>
+          <a class="chip blue on" href="swimming-packs.html" aria-current="page">Swimming packs</a>
+          <a class="chip amber" href="updates.html">Updates</a>
+          <a class="chip ink" href="shop.html">Shop</a>
+        </nav>
+      </div>
+    </div>
+    <p class="cap"><b><span class="num">08</span>Chips de producto.</b> Como Headspace: App en rosa, Swimming en azul, Updates en ámbar, Shop en tinta. Cabe si el color ordena los cuatro destinos.</p>
+  </section>
+
+  <section class="opt" id="m9">
+    <div class="stage">
+      <header class="g9">
+        <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+        <div class="g9-right">
+          <a href="app.html">App</a>
+          <a href="updates.html">Updates</a>
+          <a href="shop.html">Shop</a>
+          <div class="u">
+            <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span></button>
+            <a href="account.html" aria-label="My account"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+            <a href="cart.html" aria-label="Cart"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></a>
+          </div>
+        </div>
+      </header>
+      <nav class="sub9" aria-label="Swimming">
+        <span class="eye">Physical collection</span>
+        <i class="rule" aria-hidden="true"></i>
+        <a class="on" href="swimming-packs.html" aria-current="page">Swimming packs</a>
+        <a href="swimming-packs.html">What's in the set</a>
+        <a href="swimming-packs.html">Programmes</a>
+      </nav>
+      <div class="page9">
+        <div class="fake-row">
+          <img src="assets/kit-stands.png" alt=""/>
+          <div>
+            <p class="eye">Physical collection</p>
+            <h2>Swimming packs</h2>
+            <p>Cards, toys and the order of the session.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="cap"><b><span class="num">09</span>Barra global y subnav.</b> Como IKEA: arriba App, Updates, Shop y la cuenta; debajo, las páginas de Swimming. Cabe cuando la colección tiene sitio propio.</p>
+  </section>
+
+  <section class="opt" id="m10">
+    <div class="stage s10">
+      <div class="top10">
+        <a class="logo" href="index.html" aria-label="PixtoLearn"><img src="assets/logo.png" alt="PixtoLearn"/></a>
+        <div class="u">
+          <button type="button" aria-label="Idioma"><span class="flag" aria-hidden="true">🇬🇧</span></button>
+          <a href="account.html" aria-label="My account"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+          <a href="cart.html" aria-label="Cart"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></a>
+        </div>
+      </div>
+      <div class="body10">
+        <p class="eye">Physical collection</p>
+        <h2>Swimming packs</h2>
+        <p>Four packs for the pool. The same pictures as the app.</p>
+      </div>
+      <nav class="dock" aria-label="Menú rápido">
+        <a href="app.html"><span class="bub"><svg class="ico" aria-hidden="true"><use href="#i-app"/></svg></span>App</a>
+        <a class="on" href="swimming-packs.html" aria-current="page"><span class="bub"><svg class="ico" aria-hidden="true"><use href="#i-wave"/></svg></span>Swimming</a>
+        <a href="updates.html"><span class="bub"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg></span>Updates</a>
+        <a href="shop.html"><span class="bub"><svg class="ico" aria-hidden="true"><use href="#i-shop"/></svg></span>Shop</a>
+      </nav>
+    </div>
+    <p class="cap"><b><span class="num">10</span>Dock inferior.</b> Como el dock de iPad: cuatro iconos fijos abajo, cuenta, idioma y carrito arriba. Cabe en el iPad, que es donde se usa.</p>
+  </section>
+</main>
+</body>
+</html>

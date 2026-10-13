@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PixtoLearn · Eight ways through Swimming</title>
+<link rel="stylesheet" href="style.css?v=nav1"/>
+<style>
+  body{background:#efeae3;color:#14242b}
+  .review{max-width:1180px;margin:0 auto;padding:28px 4vw 90px}
+  .review-nav{display:flex;gap:14px 18px;flex-wrap:wrap;position:sticky;top:0;z-index:5;background:#efeae3ee;padding:14px 0;backdrop-filter:blur(8px)}
+  .review-nav a{font-weight:750;border-bottom:1px solid currentColor;font-size:14px}
+  .review h1{font-size:clamp(34px,4vw,50px);letter-spacing:-.04em;max-width:16em;margin:8px 0 12px}
+  .review>.lead{font-size:18px;max-width:720px;margin-bottom:28px}
+  .option{margin:0 0 48px}
+  .option-note{display:flex;justify-content:space-between;gap:18px;align-items:baseline;margin:0 0 10px}
+  .option-note b{font-family:PixtoDisplay,Arial,sans-serif;font-size:20px;letter-spacing:-.03em}
+  .option-note span{font-size:14px;color:#56656a;max-width:520px;text-align:right}
+  .stage{display:block;background:#fffdf8;border-radius:18px;padding:40px 40px 36px;box-shadow:0 18px 40px -32px #14242b;overflow:hidden;text-align:left}
+  .stage h2,.stage p,.stage .eyebrow{text-align:left}
+  .stage button{width:auto;max-width:none;box-shadow:none}
+  .eyebrow{display:block;font-size:11px;font-weight:750;letter-spacing:.16em;color:#6a7a80;text-transform:uppercase}
+  .title{font-family:PixtoDisplay,Arial,sans-serif;font-weight:800;letter-spacing:-.045em;line-height:.96;margin:10px 0 0;font-size:clamp(36px,4.4vw,62px)}
+  .title span{color:#3f7584}
+  .lede{margin:16px 0 0;font-size:17px;line-height:1.45;max-width:36em;color:#24343a}
+  .links{display:flex;gap:18px;align-items:center;margin-top:18px}
+  .links a.button{background:#14242b;color:#fffdf8;border-radius:999px;padding:12px 18px;font-weight:750}
+  .links a.text{font-weight:750;border-bottom:1px solid currentColor}
+  .strike{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .strike li{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center}
+  .strike img{width:72px;height:72px;object-fit:cover;border-radius:10px;background:#e7eef0}
+  .strike .gone{display:block;color:#8d989c;text-decoration:line-through;text-decoration-thickness:1.5px;font-size:15px}
+  .strike b{display:block;margin-top:2px;font-family:PixtoDisplay,Arial,sans-serif;font-size:22px;letter-spacing:-.03em;font-weight:800;color:#14242b}
+  .stage.is-live .strike .gone{animation:cross .7s ease both}
+  @keyframes cross{from{text-decoration-color:transparent;color:#14242b}to{text-decoration-color:#d03860;color:#8d989c}}
+  .replay{margin-top:12px;border:0;background:transparent;padding:0;font-weight:750;border-bottom:1px solid currentColor;cursor:pointer}
+  .cards{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap}
+  .stage .flip{border:0;background:transparent;padding:0;cursor:pointer;text-align:left;width:210px;flex:none}
+  .flip .stack{display:block;position:relative;height:280px}
+  .flip .face{position:absolute;inset:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 24px #172b3218;display:flex;flex-direction:column}
+  .flip .back{display:none}
+  .flip.is-back .face:not(.back){display:none}
+  .flip.is-back .back{display:flex}
+  .flip img{width:100%;height:230px;object-fit:contain;background:#fff}
+  .flip i{display:flex;align-items:center;justify-content:space-between;height:50px;padding:0 12px;font-style:normal;font-weight:750;background:#14242b;color:#fff}
+  .flip .back i{background:#3f7584}
+  .flip small{font-weight:650;letter-spacing:.08em;font-size:11px}
+  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .packs a{color:inherit;border-top:3px solid #88b5c2;padding-top:12px}
+  .packs a:nth-child(2){border-color:#e8a840}
+  .packs a:nth-child(3){border-color:#d03860}
+  .packs img{width:100%;height:120px;object-fit:contain}
+  .packs b{display:block;font-family:PixtoDisplay,Arial,sans-serif;font-size:28px;letter-spacing:-.04em}
+  .packs span{display:block;color:#56656a;font-size:14px;margin-top:4px}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .facts article{border-top:1px solid #14242b22;padding-top:10px}
+  .facts b{display:block;font-family:PixtoDisplay,Arial,sans-serif;font-size:22px;letter-spacing:-.03em}
+  .facts span{display:block;color:#56656a;font-size:14px;margin-top:4px}
+  .places{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .places a{display:block;color:inherit;background:#f4f0e8;border-radius:14px;overflow:hidden}
+  .places img{width:100%;height:150px;object-fit:cover}
+  .places div{padding:12px 14px 16px}
+  .places b{display:block;font-family:PixtoDisplay,Arial,sans-serif;font-size:22px;letter-spacing:-.03em}
+  .places span{display:block;color:#56656a;font-size:14px;margin-top:4px}
+  .kicker{margin:28px 0 12px;font-size:12px;font-weight:750;letter-spacing:.14em;color:#6a7a80;text-transform:uppercase}
+  /* 1 */
+  .opt1 .title{max-width:11em}
+  .opt1 .band{margin-top:28px;padding:22px;background:#10262e;color:#fff;border-radius:16px}
+  .opt1 .band .replay{color:#fff}
+  .opt1 .band .gone{color:#ffffff99}
+  .opt1 .band b{color:#fff}
+  .opt1 .band .strike img{border-radius:8px}
+  /* 2 */
+  .opt2 .beat{padding:22px 0;border-top:1px solid #14242b16}
+  .opt2 .beat h3{font-family:PixtoDisplay,Arial,sans-serif;font-size:28px;letter-spacing:-.03em;margin:0 0 12px}
+  /* 3 */
+  .opt3{display:grid;grid-template-columns:.82fr 1.18fr;gap:36px;align-items:start}
+  .opt3 .sticky{position:sticky;top:64px}
+  .opt3 .title{font-size:clamp(32px,3.4vw,48px)}
+  /* 4 */
+  .opt4{position:relative;padding:0;background:#10262e;color:#fff}
+  .opt4 .photo{display:block;width:100%;height:460px;object-fit:cover;object-position:62% 40%}
+  .opt4 .sheet{position:absolute;left:28px;top:28px;bottom:28px;width:min(460px,46%);background:#fffdf8;color:#14242b;border-radius:16px;padding:28px;overflow:auto}
+  .opt4 .below{padding:28px 40px 36px;background:#fffdf8;color:#14242b}
+  /* 5 */
+  .opt5 .open{display:grid;gap:0}
+  .opt5 .open article{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:22px 0;border-top:1px solid #14242b14}
+  .opt5 .open img{width:100%;height:180px;object-fit:cover;border-radius:12px}
+  .opt5 .open .gone{font-size:18px}
+  .opt5 .open b{font-size:clamp(28px,3vw,40px)}
+  /* 6 */
+  .opt6,.opt6 h2,.opt6 p,.opt6 .eyebrow{text-align:center}
+  .opt6 .title{max-width:14em;margin-inline:auto}
+  .opt6 .lede{margin-inline:auto}
+  .opt6 .cards{justify-content:center;margin-top:22px}
+  .opt6 .one-line{margin:22px auto 0;max-width:28em;font-size:20px}
+  .opt6 .one-line s{color:#8d989c}
+  .opt6 .packs,.opt6 .facts,.opt6 .places{text-align:left;margin-top:28px}
+  /* 7 */
+  .opt7 .step{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:22px 0;border-top:1px solid #14242b14}
+  .opt7 .n{font-family:PixtoDisplay,Arial,sans-serif;font-size:28px;color:#d03860;letter-spacing:-.04em}
+  .opt7 h3{margin:0 0 8px;font-size:26px;letter-spacing:-.03em}
+  /* 8 */
+  .opt8{padding:64px 56px}
+  .opt8 .title{font-size:clamp(42px,5vw,72px);max-width:12em}
+  .opt8 .quiet-strike{margin-top:28px;font-size:22px;max-width:22em}
+  .opt8 .quiet-strike s{color:#8d989c}
+  .opt8 .cards{margin-top:28px}
+  .opt8 .places{margin-top:36px}
+  .opt8 .facts{margin-top:28px;grid-template-columns:1fr}
+  @media(max-width:800px){
+    .stage{padding:22px 16px}
+    .option-note{display:block}
+    .option-note span{text-align:left}
+    .opt1 .band,.opt3,.opt5 .open article,.opt7 .step{grid-template-columns:1fr}
+    .opt4 .sheet{position:relative;left:auto;top:auto;bottom:auto;width:auto;margin:-40px 12px 0}
+    .opt4 .photo{height:240px}
+    .packs,.facts,.places{grid-template-columns:1fr}
+    .opt3 .sticky{position:static}
+  }
+</style>
+</head>
+<body>
+<main class="review">
+<nav class="review-nav">
+  <a href="#o1">1 · La frase</a>
+  <a href="#o2">2 · Una lectura</a>
+  <a href="#o3">3 · Título fijo</a>
+  <a href="#o4">4 · Sobre la foto</a>
+  <a href="#o5">5 · El tachado abre</a>
+  <a href="#o6">6 · La carta</a>
+  <a href="#o7">7 · Cinco pasos</a>
+  <a href="#o8">8 · Mucho aire</a>
+</nav>
+<h1>Ocho recorridos para Swimming.</h1>
+<p class="lead">La frase abre. El tachado va con una imagen. La carta física tiene Main y Break, igual en swimming y en physical. La app no es “mucho más”: es un temporizador, acceso rápido, idiomas y más personalización. Around the world enlaza los textos que ya están: Ghana, Egipto, y la misión de India. Colombia no tiene blog en esta web.</p>
+
+<section class="option" id="o1">
+<div class="option-note"><b>1 · La frase primero</b><span>Nada de foto encima del título. La intro se lee, y después el agua.</span></div>
+<div class="stage opt1" data-live>
+<p class="eyebrow">PixtoLearn Swimming</p>
+<h2 class="title">Real-life swimming skills, <span>powered by visual systems.</span></h2>
+<p class="lede">Waterproof cards for the session. You show the skill. You turn the card, and the skill breaks into steps.</p>
+<div class="links"><a class="button" href="shop.html">Shop the packs</a><a class="text" href="#cards-1">See Main and Break</a></div>
+<div class="band">
+<ul class="strike">
+<li><img alt="" src="assets/pool/session-card.jpg"/><span><s class="gone">Too many words in the water</s><b>The step is on the card</b></span></li>
+<li><img alt="" src="assets/pool/product-waterline.jpg"/><span><s class="gone">The skill stays in your head</s><b>Everyone sees the same picture</b></span></li>
+<li><img alt="" src="assets/pool/group-shirts.jpg"/><span><s class="gone">Language gets lost mid-skill</s><b>The picture holds the lesson</b></span></li>
+</ul>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+</div>
+<p class="kicker" id="cards-1">The physical card</p>
+<div class="cards">
+<button class="flip" type="button" aria-label="Turn the swimming card"><span class="stack"><span class="face"><img alt="Face in the water and blow bubbles" src="assets/product-art/swimming-1-main.webp"/><i>Main <small>the skill</small></i></span><span class="face back"><img alt="Three steps: breath in, face in the water, blow bubbles" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break <small>the steps</small></i></span></span></button>
+<button class="flip" type="button" aria-label="Turn the physical card"><span class="stack"><span class="face"><img alt="Walk forward" src="assets/native-cards/physical-1-main.png"/><i>Main <small>on land</small></i></span><span class="face back"><img alt="The same movement, broken into steps" src="assets/native-cards/physical-1-breakdown.svg"/><i>Break <small>the steps</small></i></span></span></button>
+</div>
+<p class="kicker">Three packs</p>
+<div class="packs">
+<a href="product-basic-pack.html"><img alt="" src="assets/pack-basic.png"/><b>Basic</b><span>Confidence, floating, technique.</span></a>
+<a href="product-fun-pack.html"><img alt="" src="assets/pack-fun.png"/><b>Fun</b><span>The cards, plus the toys.</span></a>
+<a href="product-full-pack.html"><img alt="" src="assets/pack-full.png"/><b>Full</b><span>The set a programme keeps.</span></a>
+</div>
+<p class="kicker">In the app</p>
+<div class="facts">
+<article><b>Timer</b><span>The step stays up for as long as you set.</span></article>
+<article><b>Quick access</b><span>The card you need, without hunting.</span></article>
+<article><b>Languages</b><span>The same picture, another language.</span></article>
+<article><b>Yours</b><span>More ways to make the session yours.</span></article>
+</div>
+<p class="kicker">Around the world</p>
+<div class="places">
+<a href="blog-ghana-swimming.html"><img alt="" src="assets/world/ghana-lesson.jpg"/><div><b>Ghana</b><span>Larabanga. The first lessons at Mole Park.</span></div></a>
+<a href="blog-breaking-language-barriers.html"><img alt="" src="assets/pool/session-instructor.jpg"/><div><b>Egypt</b><span>Sharm el Sheikh. The picture when the language is not shared.</span></div></a>
+<a href="around-the-world.html#pilot"><img alt="" src="assets/pool/group-shirts.jpg"/><div><b>India</b><span>Mission 1. A visual pack in a real session.</span></div></a>
+</div>
+</div>
+</section>
+
+<section class="option" id="o2">
+<div class="option-note"><b>2 · Una sola lectura</b><span>Todo en columna. Cada bloque responde a la frase de arriba.</span></div>
+<div class="stage opt2" data-live>
+<p class="eyebrow">PixtoLearn Swimming</p>
+<h2 class="title">Real-life swimming skills, <span>powered by visual systems.</span></h2>
+<p class="lede">One sentence, then the session, the card, the packs, the app, and the places.</p>
+<div class="beat">
+<h3>What drops away</h3>
+<ul class="strike">
+<li><img alt="" src="assets/pool/session-card.jpg"/><span><s class="gone">Too many words in the water</s><b>The step is on the card</b></span></li>
+<li><img alt="" src="assets/product-art/swimming-1-main.webp"/><span><s class="gone">Explain it again</s><b>Show Main, then Break</b></span></li>
+</ul>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+</div>
+<div class="beat">
+<h3>Main, then Break</h3>
+<div class="cards">
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Face in the water and blow bubbles" src="assets/product-art/swimming-1-main.webp"/><i>Main</i></span><span class="face back"><img alt="Three steps" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break</i></span></span></button>
+</div>
+</div>
+<div class="beat">
+<h3>Basic, Fun, Full</h3>
+<div class="packs">
+<a href="product-basic-pack.html"><img alt="" src="assets/pack-basic.png"/><b>Basic</b><span>The skills.</span></a>
+<a href="product-fun-pack.html"><img alt="" src="assets/pack-fun.png"/><b>Fun</b><span>Skills and play.</span></a>
+<a href="product-full-pack.html"><img alt="" src="assets/pack-full.png"/><b>Full</b><span>The whole set.</span></a>
+</div>
+</div>
+<div class="beat">
+<h3>What the app adds</h3>
+<div class="facts">
+<article><b>Timer</b><span>Hold the step.</span></article>
+<article><b>Quick access</b><span>Open it fast.</span></article>
+<article><b>Languages</b><span>Switch the words.</span></article>
+<article><b>Yours</b><span>Shape the session.</span></article>
+</div>
+</div>
+<div class="beat">
+<h3>The same pictures, further out</h3>
+<div class="places">
+<a href="blog-ghana-swimming.html"><img alt="" src="assets/world/ghana-lesson.jpg"/><div><b>Ghana</b><span>Read the Larabanga story.</span></div></a>
+<a href="blog-breaking-language-barriers.html"><img alt="" src="assets/pool/session-hoop.jpg"/><div><b>Egypt</b><span>Read Sharm el Sheikh.</span></div></a>
+<a href="around-the-world.html#pilot"><img alt="" src="assets/pool/group-shirts.jpg"/><div><b>India</b><span>Read Mission 1.</span></div></a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="option" id="o3">
+<div class="option-note"><b>3 · El título se queda</b><span>La frase no se va al hacer scroll. El resto pasa a su lado.</span></div>
+<div class="stage opt3" data-live>
+<div class="sticky">
+<p class="eyebrow">PixtoLearn Swimming</p>
+<h2 class="title">Real-life swimming skills, <span>powered by visual systems.</span></h2>
+<p class="lede">The card is the lesson. Main is the skill. Break is the skill in steps. The app only makes that easier to run.</p>
+<div class="links"><a class="button" href="shop.html">Shop the packs</a></div>
+</div>
+<div>
+<ul class="strike">
+<li><img alt="" src="assets/pool/session-card.jpg"/><span><s class="gone">Too many words</s><b>One picture</b></span></li>
+<li><img alt="" src="assets/pool/product-waterline.jpg"/><span><s class="gone">Say it twice</s><b>Turn the card</b></span></li>
+</ul>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+<p class="kicker">Main and Break</p>
+<div class="cards">
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main swimming card" src="assets/product-art/swimming-1-main.webp"/><i>Main</i></span><span class="face back"><img alt="Break swimming card" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break</i></span></span></button>
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main physical card" src="assets/native-cards/physical-1-main.png"/><i>Main</i></span><span class="face back"><img alt="Break physical card" src="assets/native-cards/physical-1-breakdown.svg"/><i>Break</i></span></span></button>
+</div>
+<p class="kicker">Packs</p>
+<div class="packs">
+<a href="product-basic-pack.html"><b>Basic</b><span>Start here.</span></a>
+<a href="product-fun-pack.html"><b>Fun</b><span>Add play.</span></a>
+<a href="product-full-pack.html"><b>Full</b><span>Keep the programme.</span></a>
+</div>
+<p class="kicker">App facilities</p>
+<div class="facts">
+<article><b>Timer</b><span></span></article>
+<article><b>Quick access</b><span></span></article>
+<article><b>Languages</b><span></span></article>
+<article><b>Yours</b><span></span></article>
+</div>
+<p class="kicker">Impact</p>
+<div class="places">
+<a href="blog-ghana-swimming.html"><div><b>Ghana</b><span>Larabanga</span></div></a>
+<a href="blog-breaking-language-barriers.html"><div><b>Egypt</b><span>Sharm el Sheikh</span></div></a>
+<a href="around-the-world.html#pilot"><div><b>India</b><span>Mission 1</span></div></a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="option" id="o4">
+<div class="option-note"><b>4 · La frase encima de la foto</b><span>La foto se queda. El título va en una hoja, para que no se pierda.</span></div>
+<div class="stage opt4" data-live>
+<img class="photo" alt="A swimming lesson" src="assets/world/ghana-lesson.jpg"/>
+<div class="sheet">
+<p class="eyebrow">PixtoLearn Swimming</p>
+<h2 class="title">Real-life swimming skills, <span>powered by visual systems.</span></h2>
+<p class="lede">Show the card. Turn it for the steps.</p>
+<ul class="strike">
+<li><img alt="" src="assets/product-art/swimming-1-main.webp"/><span><s class="gone">Another explanation</s><b>Main</b></span></li>
+<li><img alt="" src="assets/product-art/swimming-1-breakdown.webp"/><span><s class="gone">The skill, all at once</s><b>Break</b></span></li>
+</ul>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+</div>
+<div class="below">
+<div class="cards">
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main" src="assets/product-art/swimming-1-main.webp"/><i>Main</i></span><span class="face back"><img alt="Break" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break</i></span></span></button>
+</div>
+<p class="kicker">In the app: timer, quick access, languages, and more ways to make it yours.</p>
+<div class="places">
+<a href="blog-ghana-swimming.html"><img alt="" src="assets/world/ghana-lesson.jpg"/><div><b>Ghana</b><span>The Larabanga story.</span></div></a>
+<a href="blog-breaking-language-barriers.html"><img alt="" src="assets/pool/session-card.jpg"/><div><b>Egypt</b><span>When the words are not shared.</span></div></a>
+<a href="around-the-world.html#pilot"><img alt="" src="assets/pool/product-waterline.jpg"/><div><b>India</b><span>Mission 1.</span></div></a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="option" id="o5">
+<div class="option-note"><b>5 · El tachado abre la página</b><span>Una línea de intro, y el tachado es el héroe, con foto al lado.</span></div>
+<div class="stage opt5" data-live>
+<p class="eyebrow">PixtoLearn Swimming</p>
+<p class="lede">Real-life swimming skills, powered by visual systems.</p>
+<div class="open">
+<article><div><s class="gone">Too many words in the water</s><b>The step is on the card</b></div><img alt="" src="assets/pool/session-card.jpg"/></article>
+<article><div><s class="gone">The skill stays in your head</s><b>Main shows it. Break splits it.</b></div><img alt="" src="assets/pool/product-waterline.jpg"/></article>
+<article><div><s class="gone">Everyone hears something different</s><b>Everyone sees the same picture</b></div><img alt="" src="assets/pool/group-shirts.jpg"/></article>
+</div>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+<p class="kicker">Turn the card</p>
+<div class="cards">
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main swimming" src="assets/product-art/swimming-1-main.webp"/><i>Main</i></span><span class="face back"><img alt="Break swimming" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break</i></span></span></button>
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main physical" src="assets/native-cards/physical-1-main.png"/><i>Main</i></span><span class="face back"><img alt="Break physical" src="assets/native-cards/physical-1-breakdown.svg"/><i>Break</i></span></span></button>
+</div>
+<p class="kicker">Timer · quick access · languages · yours</p>
+<div class="places">
+<a href="blog-ghana-swimming.html"><div><b>Ghana</b><span>Larabanga blog</span></div></a>
+<a href="blog-breaking-language-barriers.html"><div><b>Egypt</b><span>Language barriers</span></div></a>
+<a href="around-the-world.html#pilot"><div><b>India</b><span>Mission 1</span></div></a>
+</div>
+</div>
+</section>
+
+<section class="option" id="o6">
+<div class="option-note"><b>6 · La carta es la página</b><span>Main en el centro. Un toque y pasa a Break. La frase está encima, quieta.</span></div>
+<div class="stage opt6" data-live>
+<p class="eyebrow">PixtoLearn Swimming</p>
+<h2 class="title">Real-life swimming skills, <span>powered by visual systems.</span></h2>
+<p class="lede">Tap the card.</p>
+<div class="cards">
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main" src="assets/product-art/swimming-1-main.webp"/><i>Main <small>tap</small></i></span><span class="face back"><img alt="Break" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break <small>three steps</small></i></span></span></button>
+</div>
+<p class="one-line"><s class="gone">Too many words in the water.</s> The step is on the card.</p>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+<div class="packs">
+<a href="product-basic-pack.html"><b>Basic</b><span>The skills.</span></a>
+<a href="product-fun-pack.html"><b>Fun</b><span>Skills and toys.</span></a>
+<a href="product-full-pack.html"><b>Full</b><span>The programme.</span></a>
+</div>
+<div class="facts">
+<article><b>Timer</b><span>Hold the step.</span></article>
+<article><b>Quick access</b><span>Find the card.</span></article>
+<article><b>Languages</b><span>Change the words.</span></article>
+<article><b>Yours</b><span>Make it fit.</span></article>
+</div>
+<div class="places">
+<a href="blog-ghana-swimming.html"><img alt="" src="assets/world/ghana-lesson.jpg"/><div><b>Ghana</b><span>Larabanga</span></div></a>
+<a href="blog-breaking-language-barriers.html"><img alt="" src="assets/pool/session-instructor.jpg"/><div><b>Egypt</b><span>Sharm el Sheikh</span></div></a>
+<a href="around-the-world.html#pilot"><img alt="" src="assets/pool/group-shirts.jpg"/><div><b>India</b><span>Mission 1</span></div></a>
+</div>
+</div>
+</section>
+
+<section class="option" id="o7">
+<div class="option-note"><b>7 · Cinco pasos</b><span>El flujo está numerado. No hay que adivinar qué va después.</span></div>
+<div class="stage opt7" data-live>
+<div class="step"><span class="n">01</span><div>
+<p class="eyebrow">PixtoLearn Swimming</p>
+<h2 class="title">Real-life swimming skills, <span>powered by visual systems.</span></h2>
+<p class="lede">Waterproof cards. The picture is the skill.</p>
+</div></div>
+<div class="step"><span class="n">02</span><div>
+<h3>What the session stops needing</h3>
+<ul class="strike">
+<li><img alt="" src="assets/pool/session-card.jpg"/><span><s class="gone">A long explanation</s><b>A card at the water</b></span></li>
+<li><img alt="" src="assets/pool/session-hoop.jpg"/><span><s class="gone">A different version for each child</s><b>The same picture</b></span></li>
+</ul>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+</div></div>
+<div class="step"><span class="n">03</span><div>
+<h3>Main, then Break</h3>
+<div class="cards">
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main" src="assets/product-art/swimming-1-main.webp"/><i>Main</i></span><span class="face back"><img alt="Break" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break</i></span></span></button>
+</div>
+</div></div>
+<div class="step"><span class="n">04</span><div>
+<h3>Choose the pack</h3>
+<div class="packs">
+<a href="product-basic-pack.html"><b>Basic</b><span>Skills.</span></a>
+<a href="product-fun-pack.html"><b>Fun</b><span>Play.</span></a>
+<a href="product-full-pack.html"><b>Full</b><span>The set.</span></a>
+</div>
+</div></div>
+<div class="step"><span class="n">05</span><div>
+<h3>The app is how you run it</h3>
+<div class="facts">
+<article><b>Timer</b><span>Keep the step up.</span></article>
+<article><b>Quick access</b><span>Skip the search.</span></article>
+<article><b>Languages</b><span>The words change.</span></article>
+<article><b>Yours</b><span>More of the session, your way.</span></article>
+</div>
+<p class="kicker">And the pictures travel</p>
+<div class="places">
+<a href="blog-ghana-swimming.html"><div><b>Ghana</b><span>Larabanga</span></div></a>
+<a href="blog-breaking-language-barriers.html"><div><b>Egypt</b><span>Sharm el Sheikh</span></div></a>
+<a href="around-the-world.html#pilot"><div><b>India</b><span>Mission 1</span></div></a>
+</div>
+</div></div>
+</div>
+</section>
+
+<section class="option" id="o8">
+<div class="option-note"><b>8 · Mucho aire</b><span>Poca cosa en pantalla. La frase, un tachado, dos cartas, tres lugares.</span></div>
+<div class="stage opt8" data-live>
+<p class="eyebrow">PixtoLearn Swimming</p>
+<h2 class="title">Real-life swimming skills, <span>powered by visual systems.</span></h2>
+<p class="quiet-strike"><s class="gone">Too many words in the water.</s><br/>The step is on the card.</p>
+<button class="replay" type="button" data-replay>Play the cross-out</button>
+<div class="cards">
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Main" src="assets/product-art/swimming-1-main.webp"/><i>Main</i></span><span class="face back"><img alt="Break" src="assets/product-art/swimming-1-breakdown.webp"/><i>Break</i></span></span></button>
+<button class="flip" type="button"><span class="stack"><span class="face"><img alt="Physical main" src="assets/native-cards/physical-1-main.png"/><i>Main</i></span><span class="face back"><img alt="Physical break" src="assets/native-cards/physical-1-breakdown.svg"/><i>Break</i></span></span></button>
+</div>
+<div class="facts"><article><b>In the app</b><span>A timer. Quick access. Other languages. More ways to make the session yours.</span></article></div>
+<div class="places">
+<a href="blog-ghana-swimming.html"><img alt="" src="assets/world/ghana-lesson.jpg"/><div><b>Ghana</b><span>Larabanga</span></div></a>
+<a href="blog-breaking-language-barriers.html"><img alt="" src="assets/pool/session-card.jpg"/><div><b>Egypt</b><span>Sharm el Sheikh</span></div></a>
+<a href="around-the-world.html#pilot"><img alt="" src="assets/pool/product-waterline.jpg"/><div><b>India</b><span>Mission 1</span></div></a>
+</div>
+</div>
+</section>
+</main>
+<script>
+document.querySelectorAll(".flip").forEach((button) => {
+  button.addEventListener("click", () => button.classList.toggle("is-back"));
+});
+document.querySelectorAll("[data-live]").forEach((stage) => {
+  const play = () => {
+    stage.classList.remove("is-live");
+    void stage.offsetWidth;
+    stage.classList.add("is-live");
+  };
+  stage.querySelector("[data-replay]")?.addEventListener("click", play);
+  play();
+});
+</script>
+</body>
+</html>

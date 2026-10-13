@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Session studies · PixtoLearn Swimming</title>
+<style>
+@font-face{font-family:PixtoDisplay;src:url("assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:500 800;font-display:swap}
+@font-face{font-family:PixtoBody;src:url("assets/fonts/figtree-latin.woff2") format("woff2");font-weight:400 800;font-display:swap}
+:root{--ink:#14242b;--blue:#88b5c2;--deep:#3f7584;--mist:#e7f3f6;--paper:#fffdf8;--line:#14242b14;--muted:#56656a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.45 PixtoBody,Arial,sans-serif}
+button,a{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:transparent;padding:0}
+img{display:block;max-width:100%}
+s{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--deep)}
+.top{position:sticky;top:0;z-index:20;display:flex;gap:16px;align-items:center;padding:14px 4vw;background:#fffdf8ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top b{font-family:PixtoDisplay,Arial,sans-serif;letter-spacing:-.03em}
+.top nav{display:flex;flex-wrap:wrap;gap:4px}
+.top a{padding:4px 8px;border-radius:999px;text-decoration:none;color:var(--deep);font-size:12px;font-weight:700}
+.top a:hover{background:var(--mist)}
+.intro{max-width:740px;padding:36px 4vw 10px}
+.intro h1{margin:0 0 10px;font-family:PixtoDisplay,Arial,sans-serif;font-weight:800;font-size:clamp(34px,4.4vw,54px);letter-spacing:-.045em;line-height:1.02}
+.intro h1 span{color:var(--blue)}
+.intro p{max-width:38em;margin:0;color:var(--muted)}
+.study{padding:32px 4vw 64px;border-top:1px solid var(--line);scroll-margin-top:62px}
+.study header{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;max-width:640px;margin-bottom:22px}
+.study header span{color:var(--blue);font-weight:800;letter-spacing:.08em}
+.study h2{margin:0;font-family:PixtoDisplay,Arial,sans-serif;font-size:28px;letter-spacing:-.04em}
+.study header p{margin:2px 0 0;color:var(--muted);font-size:15px}
+.stage{max-width:980px}
+.kicker{margin:0 0 14px;color:var(--deep);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.title{margin:0 0 16px;font-family:PixtoDisplay,Arial,sans-serif;font-weight:800;font-size:clamp(32px,3.4vw,44px);letter-spacing:-.045em;line-height:1}
+
+/* 01 row */
+.row button{display:grid;grid-template-columns:minmax(0,1fr) 0px;gap:16px;align-items:center;width:100%;text-align:left;padding:11px 0;border-bottom:1px solid var(--line)}
+.row button.is-on{grid-template-columns:minmax(0,1fr) 86px}
+.row s{display:block;font-size:13px}
+.row b{display:block;font-family:PixtoDisplay,Arial,sans-serif;font-size:22px;letter-spacing:-.03em}
+.row img{width:86px;height:64px;object-fit:cover;border-radius:10px;background:var(--mist)}
+.row img.card{object-fit:contain;padding:4px}
+
+/* 02 fold */
+.fold button{display:block;width:100%;text-align:left;padding:12px 0 10px;border-bottom:1px solid var(--line)}
+.fold s{display:block;font-size:13px}
+.fold b{font-family:PixtoDisplay,Arial,sans-serif;font-size:24px;letter-spacing:-.03em}
+.fold .pic{height:0;overflow:hidden;transition:height .35s ease}
+.fold button.is-on .pic{height:168px;margin-top:10px}
+.fold img{height:168px;width:auto;max-width:100%;object-fit:contain;margin-left:auto}
+
+/* 03 turn */
+.turn-wrap{display:grid;grid-template-columns:minmax(0,420px) minmax(180px,.6fr);gap:28px;align-items:center}
+.turn{height:230px;perspective:900px}
+.turn-inner{position:relative;height:100%;transform-style:preserve-3d;transition:transform .55s ease}
+.turn.is-back .turn-inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;border-radius:18px;backface-visibility:hidden;background:var(--mist)}
+.face.back{transform:rotateY(180deg);background:#14242b;color:#fff}
+.face s{font-size:15px}
+.face b{font-family:PixtoDisplay,Arial,sans-serif;font-size:28px;letter-spacing:-.03em;line-height:1.05}
+.face img{position:absolute;top:16px;right:16px;width:92px;height:72px;object-fit:contain}
+.words{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.words button{color:var(--muted);text-align:left}
+.words button.is-on{color:var(--ink);font-weight:700}
+
+/* 04 gutter */
+.gutter{display:grid;gap:0}
+.gutter button{display:grid;grid-template-columns:1fr 64px 1fr;gap:14px;align-items:center;width:100%;text-align:left;padding:8px 0}
+.gutter s{font-size:15px}
+.gutter b{font-family:PixtoDisplay,Arial,sans-serif;font-size:18px}
+.gutter i{display:block;width:64px;height:48px;border-radius:8px;background:var(--mist) center/cover no-repeat;opacity:.25}
+.gutter button.is-on i{opacity:1;outline:2px solid var(--blue)}
+.gutter button.is-on b{color:var(--deep)}
+
+/* 05 index */
+.index{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:center}
+.nums{display:flex;flex-direction:column}
+.nums button{height:28px;text-align:left;color:#8aa;font-variant-numeric:tabular-nums;font-weight:700}
+.nums button.is-on{color:var(--ink)}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:16px;align-items:center;min-height:96px;padding:12px 16px;border-radius:16px;background:linear-gradient(#e7f3f6,#f7fbfc)}
+.bar b{font-family:PixtoDisplay,Arial,sans-serif;font-size:26px;letter-spacing:-.03em;line-height:1.05}
+.bar s{display:block;font-size:13px;margin-bottom:4px}
+.bar img{width:120px;height:84px;object-fit:contain}
+
+/* 06 caption */
+.cap{max-width:640px}
+.cap figure{position:relative;height:280px;margin:0;border-radius:18px;overflow:hidden;background:#102028}
+.cap img{width:100%;height:100%;object-fit:cover}
+.cap figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 20px 16px;color:#fff;background:linear-gradient(transparent,#102028e6)}
+.cap s{display:block;font-size:13px;color:#d7ebf0}
+.cap b{font-family:PixtoDisplay,Arial,sans-serif;font-size:28px;letter-spacing:-.03em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips button{padding:6px 10px;border-radius:999px;background:#fff;color:var(--muted);box-shadow:0 0 0 1px var(--line);font-size:13px}
+.chips button.is-on{background:var(--ink);color:#fff}
+
+/* 07 sentence */
+.sentence{max-width:16em}
+.sentence button{display:block;width:100%;text-align:left}
+.sentence s,.sentence b{font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(32px,4vw,48px);letter-spacing:-.045em;line-height:1.05}
+.sentence b{display:inline}
+.stamp{display:inline-block;width:1.15em;height:1.15em;margin-left:.2em;vertical-align:-.15em;object-fit:contain;border-radius:6px;background:var(--mist)}
+.step{margin-top:14px;color:var(--deep);font-size:13px;font-weight:700;letter-spacing:.12em}
+
+/* 08 cells */
+.cells{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cells button{position:relative;min-height:92px;padding:14px;text-align:left;border-radius:14px;background:#f4f7f8;overflow:hidden}
+.cells button.is-on{background:#14242b;color:#fff}
+.cells s{display:block;font-size:12px;color:var(--deep)}
+.cells button.is-on s{color:#88b5c2}
+.cells b{position:relative;font-family:PixtoDisplay,Arial,sans-serif;font-size:20px;letter-spacing:-.03em}
+.cells img{position:absolute;right:8px;bottom:8px;width:72px;height:56px;object-fit:contain;opacity:0}
+.cells button.is-on img{opacity:1}
+
+/* 09 strip */
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.strip button{flex:0 0 220px;scroll-snap-align:start;text-align:left;padding:10px;border-radius:16px;background:#f4f7f8}
+.strip button.is-on{background:#14242b;color:#fff}
+.strip img{width:100%;height:120px;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:10px}
+.strip s{display:block;font-size:12px}
+.strip button.is-on s{color:#88b5c2}
+.strip b{font-family:PixtoDisplay,Arial,sans-serif;font-size:18px;letter-spacing:-.03em}
+
+/* 10 hold */
+.hold b.slogan{display:block;max-width:14em;color:var(--blue);font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:800;letter-spacing:-.04em;line-height:1.08}
+.hold .picks{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hold .picks button{display:inline-flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;border-radius:999px;background:#fff;box-shadow:0 0 0 1px var(--line);font-size:13px}
+.hold .picks button.is-on{box-shadow:0 0 0 1.5px var(--deep)}
+.hold .picks img{width:28px;height:28px;object-fit:cover;border-radius:50%;background:var(--mist)}
+@media(max-width:720px){
+  .turn-wrap,.index{grid-template-columns:1fr}
+  .gutter button{grid-template-columns:1fr;gap:2px}
+  .gutter i{display:none}
+  .gutter button.is-on i{display:block}
+  .cells{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="top"><b>Session studies</b><nav>
+<a href="#s1">01</a><a href="#s2">02</a><a href="#s3">03</a><a href="#s4">04</a><a href="#s5">05</a>
+<a href="#s6">06</a><a href="#s7">07</a><a href="#s8">08</a><a href="#s9">09</a><a href="#s10">10</a>
+</nav></div>
+<div class="intro">
+<h1>Ten ways to hold <span>the session.</span></h1>
+<p>The line under the title is gone. Each study uses the same eight pairs, in a tighter frame, with a different way to move through them.</p>
+</div>
+
+<section class="study" id="s1"><header><span>01</span><div><h2>The row</h2><p>Every line is already on the page. The picture arrives at the end of the one you choose.</p></div></header><div class="mount" data-kind="row"></div></section>
+<section class="study" id="s2"><header><span>02</span><div><h2>The fold</h2><p>The picture opens under the line, only as tall as it needs. The next choice closes it.</p></div></header><div class="mount" data-kind="fold"></div></section>
+<section class="study" id="s3"><header><span>03</span><div><h2>The turn</h2><p>One card. The problem is the front. Turn it, and the answer and the picture are the back.</p></div></header><div class="mount" data-kind="turn"></div></section>
+<section class="study" id="s4"><header><span>04</span><div><h2>The gutter</h2><p>The problem and the answer face each other. The picture is a slim mark between them.</p></div></header><div class="mount" data-kind="gutter"></div></section>
+<section class="study" id="s5"><header><span>05</span><div><h2>The index</h2><p>Eight numbers. One low bar holds the answer and the picture. Nothing taller than the line.</p></div></header><div class="mount" data-kind="index"></div></section>
+<section class="study" id="s6"><header><span>06</span><div><h2>On the picture</h2><p>The words sit on the photograph. The eight answers are chips under the frame.</p></div></header><div class="mount" data-kind="cap"></div></section>
+<section class="study" id="s7"><header><span>07</span><div><h2>In the sentence</h2><p>The answer takes the place of the struck words. The picture is a stamp in the line.</p></div></header><div class="mount" data-kind="sentence"></div></section>
+<section class="study" id="s8"><header><span>08</span><div><h2>The cells</h2><p>Eight cells, and no empty stage. Press one and the picture fills that cell.</p></div></header><div class="mount" data-kind="cells"></div></section>
+<section class="study" id="s9"><header><span>09</span><div><h2>The strip</h2><p>A film you slide. Each frame is the picture and the answer, side by side in one band.</p></div></header><div class="mount" data-kind="strip"></div></section>
+<section class="study" id="s10"><header><span>10</span><div><h2>The result holds it</h2><p>The ending is the frame. Each answer is a chip, and its picture sits on the chip.</p></div></header><div class="mount" data-kind="hold"></div></section>
+
+<script>
+(function () {
+  var lines = [
+    {bad:"Too many words in the water", good:"The step stays on the card", img:"assets/native-cards/swimming-1-main.webp", card:1},
+    {bad:"The skill stays in your head", good:"Everyone sees the same picture", img:"assets/pool/group-shirts.jpg"},
+    {bad:"Language gets lost mid-skill", good:"The picture holds the lesson", img:"assets/pool/session-card.jpg"},
+    {bad:"Steps get mixed up mid-skill", good:"Break it down", img:"assets/native-cards/swimming-1-breakdown.webp", card:1},
+    {bad:"Everyone hears something different", good:"One visual language", img:"assets/native-cards/swim-session-support-extras-08.jpg", card:1},
+    {bad:"Explain it again", good:"Show Main, then the steps", img:"assets/native-cards/swimming-3-main.webp", card:1},
+    {bad:"The next thing is a surprise", good:"Now, next, then", img:"assets/kit-stands.png", card:1},
+    {bad:"Finished arrives without warning", good:"They see it coming", img:"assets/native-cards/swim-session-support-extras-07.jpg", card:1}
+  ];
+  function img(line, extra) {
+    return '<img alt="" src="' + line.img + '"' + (line.card ? ' class="card"' : '') + (extra || '') + '>';
+  }
+  var builds = {
+    row: function (root) {
+      root.className = "stage row";
+      root.innerHTML = '<p class="kicker">The session</p><h3 class="title">Made clear.</h3>' + lines.map(function (line, i) {
+        return '<button type="button"' + (i ? '' : ' class="is-on"') + '><span><s>' + line.bad + '</s><b>' + line.good + '</b></span>' + img(line) + '</button>';
+      }).join('');
+      bind(root);
+    },
+    fold: function (root) {
+      root.className = "stage fold";
+      root.innerHTML = '<p class="kicker">The session</p><h3 class="title">Made clear.</h3>' + lines.map(function (line, i) {
+        return '<button type="button"' + (i ? '' : ' class="is-on"') + '><s>' + line.bad + '</s><b>' + line.good + '</b><span class="pic">' + img(line) + '</span></button>';
+      }).join('');
+      bind(root);
+    },
+    turn: function (root) {
+      root.className = "stage";
+      var line = lines[0];
+      root.innerHTML = '<div class="turn-wrap"><button class="turn" type="button" aria-pressed="false"><span class="turn-inner"><span class="face"><s>' + line.bad + '</s><b>Turn it.</b></span><span class="face back"><b>' + line.good + '</b>' + img(line) + '</span></span></button><div class="words"></div></div>';
+      var words = root.querySelector(".words");
+      lines.forEach(function (item, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = item.good;
+        if (!i) b.className = "is-on";
+        b.onclick = function () { setTurn(root, i); };
+        words.appendChild(b);
+      });
+      root.querySelector(".turn").onclick = function () {
+        var on = root.querySelector(".words .is-on");
+        var i = Array.prototype.indexOf.call(words.children, on);
+        var card = root.querySelector(".turn");
+        card.classList.toggle("is-back");
+        card.setAttribute("aria-pressed", card.classList.contains("is-back"));
+        if (!card.classList.contains("is-back")) setTurn(root, (i + 1) % lines.length);
+      };
+    },
+    gutter: function (root) {
+      root.className = "stage gutter";
+      root.innerHTML = '<p class="kicker">The session</p><h3 class="title">Made clear.</h3>' + lines.map(function (line, i) {
+        return '<button type="button"' + (i ? '' : ' class="is-on"') + '><s>' + line.bad + '</s><i style="background-image:url(' + line.img + ')"></i><b>' + line.good + '</b></button>';
+      }).join('');
+      bind(root);
+    },
+    index: function (root) {
+      root.className = "stage index";
+      root.innerHTML = '<div class="nums"></div><div class="bar"></div>';
+      var nums = root.querySelector(".nums");
+      lines.forEach(function (line, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = "0" + (i + 1);
+        if (!i) b.className = "is-on";
+        b.onclick = function () { paintBar(root, i); };
+        nums.appendChild(b);
+      });
+      paintBar(root, 0);
+    },
+    cap: function (root) {
+      root.className = "stage cap";
+      root.innerHTML = '<figure><img alt=""/><figcaption><s></s><b></b></figcaption></figure><div class="chips"></div>';
+      var chips = root.querySelector(".chips");
+      lines.forEach(function (line, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = line.good;
+        if (!i) b.className = "is-on";
+        b.onclick = function () { paintCap(root, i); };
+        chips.appendChild(b);
+      });
+      paintCap(root, 0);
+    },
+    sentence: function (root) {
+      root.className = "stage sentence";
+      root.innerHTML = '<p class="kicker">The session</p><button type="button"><s></s><b></b></button><div class="step"></div>';
+      var n = 0;
+      function paint() {
+        var line = lines[n];
+        root.querySelector("s").textContent = line.bad;
+        root.querySelector("b").innerHTML = line.good + '<img class="stamp" alt="" src="' + line.img + '">';
+        root.querySelector(".step").textContent = "0" + (n + 1) + "  /  08";
+      }
+      root.querySelector("button").onclick = function () { n = (n + 1) % lines.length; paint(); };
+      paint();
+    },
+    cells: function (root) {
+      root.className = "stage cells";
+      root.innerHTML = lines.map(function (line, i) {
+        return '<button type="button"' + (i ? '' : ' class="is-on"') + '><s>' + line.bad + '</s><b>' + line.good + '</b>' + img(line) + '</button>';
+      }).join('');
+      bind(root);
+    },
+    strip: function (root) {
+      root.className = "stage strip";
+      root.innerHTML = lines.map(function (line, i) {
+        return '<button type="button"' + (i ? '' : ' class="is-on"') + '>' + img(line) + '<s>' + line.bad + '</s><b>' + line.good + '</b></button>';
+      }).join('');
+      bind(root);
+    },
+    hold: function (root) {
+      root.className = "stage hold";
+      root.innerHTML = '<p class="kicker">The result</p><b class="slogan">Safer sessions. Stronger progress. Greater confidence for every swimmer.</b><div class="picks"></div>';
+      var picks = root.querySelector(".picks");
+      lines.forEach(function (line, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.innerHTML = img(line) + "<span>" + line.good + "</span>";
+        if (!i) b.className = "is-on";
+        b.onclick = function () {
+          picks.querySelectorAll("button").forEach(function (el) { el.classList.remove("is-on"); });
+          b.className = "is-on";
+        };
+        picks.appendChild(b);
+      });
+    }
+  };
+  function bind(root) {
+    var buttons = root.querySelectorAll("button");
+    buttons.forEach(function (button) {
+      button.onclick = function () {
+        buttons.forEach(function (el) { el.classList.remove("is-on"); });
+        button.className = "is-on";
+      };
+    });
+  }
+  function setTurn(root, i) {
+    var line = lines[i];
+    var card = root.querySelector(".turn");
+    card.classList.remove("is-back");
+    card.setAttribute("aria-pressed", "false");
+    card.querySelector(".face s").textContent = line.bad;
+    card.querySelector(".face.back b").textContent = line.good;
+    card.querySelector(".face.back img").src = line.img;
+    root.querySelectorAll(".words button").forEach(function (el, n) { el.classList.toggle("is-on", n === i); });
+  }
+  function paintBar(root, i) {
+    var line = lines[i];
+    root.querySelectorAll(".nums button").forEach(function (el, n) { el.classList.toggle("is-on", n === i); });
+    root.querySelector(".bar").innerHTML = "<div><s>" + line.bad + "</s><b>" + line.good + "</b></div>" + img(line);
+  }
+  function paintCap(root, i) {
+    var line = lines[i];
+    var image = root.querySelector("figure img");
+    image.src = line.img;
+    image.style.objectFit = line.card ? "contain" : "cover";
+    image.style.background = line.card ? "#f7f4ef" : "#102028";
+    root.querySelector("s").textContent = line.bad;
+    root.querySelector("b").textContent = line.good;
+    root.querySelectorAll(".chips button").forEach(function (el, n) { el.classList.toggle("is-on", n === i); });
+  }
+  document.querySelectorAll(".mount").forEach(function (mount) {
+    builds[mount.getAttribute("data-kind")](mount);
+  });
+})();
+</script>
+</body>
+</html>

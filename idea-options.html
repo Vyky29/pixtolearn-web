@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PixtoLearn · Five ways to say it, and twenty photo prompts</title>
+<link rel="stylesheet" href="style.css?v=nav1"/>
+<style>
+  body{background:#efeae3;color:#14242b}
+  .review{max-width:1180px;margin:0 auto;padding:28px 4vw 80px}
+  .review-nav{display:flex;gap:18px;position:sticky;top:0;z-index:5;background:#efeae3ee;padding:14px 0;backdrop-filter:blur(8px)}
+  .review-nav a{font-weight:750;border-bottom:1px solid currentColor}
+  .review h1{font-size:clamp(36px,4vw,52px);letter-spacing:-.04em;max-width:16em;margin:8px 0 12px}
+  .review>.lead{font-size:18px;max-width:680px;margin-bottom:28px}
+  .option{margin:0 0 42px}
+  .option-note{display:flex;justify-content:space-between;gap:18px;align-items:baseline;margin:0 0 10px}
+  .option-note b{font-family:PixtoDisplay,Arial,sans-serif;font-size:20px;letter-spacing:-.03em}
+  .option-note span{font-size:14px;color:#56656a;max-width:520px;text-align:right}
+  .stage{background:#fffdf8;border-radius:18px;padding:36px 40px 32px;box-shadow:0 18px 40px -32px #14242b}
+  .eyebrow{display:block}
+  .q{font-family:PixtoDisplay,Arial,sans-serif;font-weight:800;letter-spacing:-.045em;line-height:.92;margin:8px 0 0}
+  .q .why{display:block;font-size:.42em;letter-spacing:-.03em;margin-bottom:6px;color:#14242b}
+  .pink{color:#d03860}.amber{color:#c48a12}.blue{color:#3f7584}
+  .ink{color:#14242b}
+  /* 1. one sentence, then three answers */
+  .opt1{position:relative;overflow:hidden}
+  .opt1:before{content:"";position:absolute;left:-6%;top:-38%;width:72%;height:92%;background:#e4eef2;border-radius:50%;z-index:0}
+  .opt1:after{content:"";position:absolute;right:28px;top:22px;width:84px;height:84px;border:11px solid #f3ddb0;border-radius:50%;z-index:0}
+  .opt1>*{position:relative;z-index:1}
+  .idea-kicker{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+  .idea-kicker .eyebrow{font-size:11px;letter-spacing:.18em;color:#6a7a80}
+  .idea-kicker .why{font-family:PixtoDisplay,Arial,sans-serif;font-weight:800;font-size:clamp(26px,2.4vw,36px);letter-spacing:-.03em;line-height:1}
+  .opt1 .q{font-size:clamp(34px,4.2vw,60px);max-width:none;margin-top:10px;line-height:1.02;padding-right:96px}
+  .opt1 .q .why{display:inline;font-size:1em;margin:0 .12em 0 0;color:#14242b}
+  .opt1 .bridge{text-align:center;max-width:none}
+  .opt1 .answers{margin-top:18px}
+  .opt1 .answers article{border-top:0;padding-top:0}
+  .opt1 .answers button{display:block;width:100%;text-align:left;background:transparent;border:0;border-top:3px solid #d03860;padding:12px 0 0;cursor:pointer;color:inherit;font:inherit}
+  .opt1 .answers article:nth-child(2) button{border-color:#e8a840}
+  .opt1 .answers article:nth-child(3) button{border-color:#88b5c2}
+  .opt1 .answers button[aria-pressed="true"]{background:linear-gradient(#fffdf8,#fffdf8) padding-box}
+  .opt1 .answers button[aria-pressed="true"] b{text-decoration:underline;text-underline-offset:4px}
+  .idea-panels{margin-top:22px}
+  .idea-panel,.reel-cards{display:flex;flex-wrap:wrap;gap:14px 8px;align-items:flex-end;justify-content:center}
+  .idea-panel[hidden]{display:none}
+  .idea-note{margin:16px 0 0;text-align:center;max-width:none;font-size:15px}
+  .pixto-mini{--w:84px;display:flex;flex-direction:column;width:84px;height:119px;margin:0;background:#fff;border:2px solid var(--ribete,#5b8c7a);border-radius:8px;overflow:hidden;box-shadow:0 6px 12px #172b3214}
+  .pixto-mini img{width:100%;height:88px;object-fit:contain;background:#fff}
+  .pixto-mini b{flex:none;display:grid;height:18px;place-items:center;padding:0 3px;color:#14242b;font-size:8px;font-weight:650;line-height:1;text-align:center;text-transform:lowercase}
+  .pixto-mini i{flex:none;display:grid;height:13px;place-items:center;overflow:hidden;padding:0 3px;background:var(--ribete,#5b8c7a);color:#fff;font-size:7px;font-style:normal;font-weight:750;line-height:1;text-transform:lowercase;white-space:nowrap}
+  .card-slot{display:flex;flex-direction:column;align-items:center;width:84px;flex:none}
+  .card-mark{display:block;height:14px;margin:0 0 4px;color:#8a969b;font-size:10px;font-weight:750;letter-spacing:.08em;text-align:center;text-transform:uppercase}
+  .card-slot.is-out{transform:translateY(-26px)}
+  .card-slot.is-out .pixto-mini{box-shadow:0 16px 18px #172b3228}
+  .pixto-yellow{display:flex;flex-direction:column;width:84px;height:119px;margin:0;background:#F7F4B1;border-radius:8px;overflow:hidden;box-shadow:0 6px 12px #172b3214}
+  .pixto-yellow .frame{margin:6px 6px 0;height:86px;background:#fff;border:1.5px solid #2c2c2c;border-radius:6px;overflow:hidden}
+  .pixto-yellow img{width:100%;height:100%;object-fit:contain}
+  .pixto-yellow b{flex:1;display:grid;place-items:center;padding:0 4px;color:#111;font-size:8px;font-weight:650;line-height:1;text-align:center;text-transform:lowercase}
+  .opt5 .lines article{display:block;padding:16px 0}
+  .opt5 .line-head{display:flex;align-items:baseline;gap:14px 22px;flex-wrap:wrap;margin:0 0 10px}
+  .opt5 .line-head p{margin:0}
+  .opt5 .lines small{display:block;margin:0 0 2px}
+  .opt5 .reel-cards{justify-content:flex-start}
+  .lines .pixto-mini b,.answers .pixto-mini b{font-family:PixtoBody,Arial,sans-serif;font-size:8px;font-weight:650;letter-spacing:0;line-height:1}
+  .lines .pixto-mini i{font-size:7px;letter-spacing:0}
+  .answers{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
+  .answers article{border-top:3px solid #d03860;padding-top:12px}
+  .answers article:nth-child(2){border-color:#e8a840}
+  .answers article:nth-child(3){border-color:#88b5c2}
+  .answers small{display:block;color:#8a969b;font-weight:650}
+  .answers b{display:block;font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(28px,3vw,42px);letter-spacing:-.04em;line-height:.95;margin-top:2px}
+  .answers p{margin:10px 0 0;font-size:16px;max-width:none}
+  .bridge{margin:22px 0 0;font-size:15px;color:#56656a}
+  /* 2. question block left, ideas listed right */
+  .opt2{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:end}
+  .opt2 .q{font-size:clamp(36px,4vw,56px)}
+  .opt2 .stack{display:grid;gap:0}
+  .opt2 .stack article{display:grid;grid-template-columns:148px 1fr;gap:8px 16px;align-items:baseline;padding:14px 0;border-top:1px solid #14242b18}
+  .opt2 .stack b{font-family:PixtoDisplay,Arial,sans-serif;font-size:28px;letter-spacing:-.04em}
+  .opt2 .stack small{color:#8a969b;font-weight:650}
+  .opt2 .stack p{margin:0;font-size:16px;max-width:none}
+  /* 3. three full stripes, question is only a caption */
+  .opt3 .caption{font-size:18px;margin:10px 0 18px;max-width:none}
+  .stripe{display:grid;grid-template-columns:minmax(180px,.7fr) 1.4fr;gap:18px;align-items:baseline;padding:16px 0;border-top:3px solid #d03860}
+  .stripe:nth-child(2){border-color:#e8a840}
+  .stripe:nth-child(3){border-color:#88b5c2}
+  .stripe b{font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(32px,3.4vw,48px);letter-spacing:-.045em}
+  .stripe small{display:block;color:#8a969b;font-weight:650;margin-bottom:2px}
+  .stripe p{margin:0;font-size:18px;max-width:none}
+  /* 4. one sentence, the three verbs carry the colour */
+  .opt4 .quiet{font-size:18px;margin:8px 0 14px;max-width:none}
+  .opt4 .sentence{font-family:PixtoDisplay,Arial,sans-serif;font-weight:800;font-size:clamp(32px,3.6vw,48px);letter-spacing:-.04em;line-height:1.05;max-width:18em}
+  /* 5. one question, three equal lines, no columns of brand words */
+  .opt5 .q{font-size:clamp(34px,4vw,52px);max-width:18ch}
+  .lines{margin-top:26px;display:grid;gap:0}
+  .lines article{display:grid;grid-template-columns:1.1fr 1.4fr;gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid #14242b16}
+  .lines b{font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(28px,3vw,40px);letter-spacing:-.04em}
+  .lines small{color:#8a969b;font-weight:650;margin-right:8px}
+  .lines p{margin:0;font-size:17px;max-width:none}
+  /* Quiet set. The hero already spends pink, amber and blue.
+     The site stylesheet also paints that blue oval and amber ring on every .stage. */
+  .review .optq:before,.review .optq:after,
+  .review .optb:before,.review .optb:after,
+  .review .optc:before,.review .optc:after{display:none;content:none}
+  .review .optq,.review .optb,.review .optc{display:block;align-items:stretch;justify-content:flex-start;isolation:auto;padding:36px 40px 32px}
+  .quiet-set{margin:0 0 18px;font-size:15px;color:#56656a}
+  .optq .q,.optb .q,.optc .q{font-size:clamp(32px,3.4vw,48px);line-height:1.05;max-width:14em;color:#14242b}
+  .optq .q .why,.optb .q .why,.optc .q .why{display:inline;font-size:1em;margin:0 .15em 0 0;color:#14242b}
+  .optq b,.optb .q{color:#14242b}
+  .optq .answers{margin-top:22px}
+  .optq .answers article{border-top:1px solid #14242b14;padding-top:14px}
+  .optq .answers button{border:0;background:transparent;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer;width:100%}
+  .optq .answers b{color:#14242b;text-decoration:none}
+  .optq .answers button[aria-pressed="true"] b{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:#14242b}
+  .optb .answers article{border-top:0;padding-top:0}
+  .optb .answers button{border:0;background:transparent;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer;width:100%}
+  .optb .answers small,.optb .answers b,.optb .answers p{color:#b0b8bc}
+  .optb .answers button[aria-pressed="true"] small,
+  .optb .answers button[aria-pressed="true"] p{color:#14242b}
+  .optb .answers .tone-pink{color:#d03860}
+  .optb .answers .tone-amber{color:#c48a12}
+  .optb .answers .tone-blue{color:#3f7584}
+  .optb .mark{position:relative;display:inline-block;padding-bottom:.18em}
+  .optb .mark:after{content:"";position:absolute;left:0;right:0;bottom:0;height:.1em;min-height:4px;border-radius:99px}
+  .optb .tone-pink:after{background:#d03860}
+  .optb .tone-amber:after{background:#e8a840}
+  .optb .tone-blue:after{background:#88b5c2}
+  .optc .sentence{font-weight:400;font-size:22px;letter-spacing:0;line-height:1.45;max-width:28em;margin:16px 0 4px;color:#24343a}
+  .optc .idea-panels{background:transparent;padding:8px 0 0}
+  .prompts{margin-top:20px}
+  .rule{background:#fffdf8;border-radius:16px;padding:22px 24px;margin:0 0 18px}
+  .rule p{max-width:none;font-size:16px}
+  .shot{background:#fffdf8;border-radius:16px;padding:18px 20px 16px;margin:0 0 12px}
+  .shot header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:8px;height:auto;padding:0;border:0;background:transparent}
+  .shot h2{font-size:22px;letter-spacing:-.03em;margin:0}
+  .shot .meta{font-size:13px;font-weight:700;color:#3f7584}
+  .shot pre{white-space:pre-wrap;font:15px/1.45 PixtoBody,Arial,sans-serif;margin:0;color:#14242b}
+  .shot button{border:1px solid #14242b33;background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700}
+  @media(max-width:800px){
+    .stage{padding:22px 18px}
+    .answers,.opt2,.stripe,.lines article,.idea-panel{grid-template-columns:1fr}
+    .idea-panel{flex-direction:column;align-items:center}
+    .opt1:after{width:54px;height:54px;border-width:8px;right:12px;top:12px}
+    .option-note{display:block}
+    .option-note span{text-align:left}
+    .opt2 .stack article{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<main class="review">
+<nav class="review-nav"><a href="#quiet">Quieter</a><a href="#designs">The louder ones</a><a href="#prompts">Twenty photos</a></nav>
+<h1>The hero already uses the three colours. This block should not.</h1>
+<p class="lead">Pink, amber and blue are spent on “visuals speak louder” above. Down here they were painted again on the same words, and again on anticipate, recognise and understand. These three keep the sentence and the cards, and leave the colour out of the type.</p>
+
+<section id="quiet">
+<p class="quiet-set">Start here. The five below still carry the brand colours, so you can see the difference.</p>
+
+<article class="option">
+<div class="option-note"><b>A · All in ink</b><span>The question and the three ideas are black. A hairline separates them. Colour lives only in the cards.</span></div>
+<div class="stage optq" data-idea>
+<span class="eyebrow">The idea behind PixtoLearn</span>
+<h2 class="q"><span class="why">Why do</span> visuals speak louder?</h2>
+<p class="bridge">A picture does three things.</p>
+<div class="answers" role="tablist" aria-label="What a picture does">
+<article><button type="button" role="tab" aria-pressed="true" data-idea-tab="anticipate"><small>Helps</small><b>anticipate</b><p>You see what is coming.</p></button></article>
+<article><button type="button" role="tab" aria-pressed="false" data-idea-tab="recognise"><small>Lets you</small><b>recognise</b><p>You know what it is.</p></button></article>
+<article><button type="button" role="tab" aria-pressed="false" data-idea-tab="understand"><small>Makes you</small><b>understand</b><p>You follow the order.</p></button></article>
+</div>
+<div class="idea-panels">
+<div class="idea-panel" data-idea-panel="anticipate"></div>
+<div class="idea-panel" data-idea-panel="recognise" hidden></div>
+<div class="idea-panel" data-idea-panel="understand" hidden></div>
+</div>
+<p class="idea-note" data-idea-name>Brushing teeth</p>
+</div>
+</article>
+
+<article class="option">
+<div class="option-note"><b>B · Only the one you are reading</b><span>Anticipate, recognise and understand are tinted. The short brand bars stay under visuals, speak and louder.</span></div>
+<div class="stage optb" data-idea>
+<span class="eyebrow">The idea behind PixtoLearn</span>
+<h2 class="q"><span class="why">Why do</span> <span class="mark tone-pink">visuals</span> <span class="mark tone-amber">speak</span> <span class="mark tone-blue">louder</span>?</h2>
+<p class="bridge">A picture does three things.</p>
+<div class="answers" role="tablist" aria-label="What a picture does">
+<article><button type="button" role="tab" aria-pressed="true" data-idea-tab="anticipate"><small>Helps</small><b><span class="tone-pink">anticipate</span></b><p>You see what is coming.</p></button></article>
+<article><button type="button" role="tab" aria-pressed="false" data-idea-tab="recognise"><small>Lets you</small><b><span class="tone-amber">recognise</span></b><p>You know what it is.</p></button></article>
+<article><button type="button" role="tab" aria-pressed="false" data-idea-tab="understand"><small>Makes you</small><b><span class="tone-blue">understand</span></b><p>You follow the order.</p></button></article>
+</div>
+<div class="idea-panels">
+<div class="idea-panel" data-idea-panel="anticipate"></div>
+<div class="idea-panel" data-idea-panel="recognise" hidden></div>
+<div class="idea-panel" data-idea-panel="understand" hidden></div>
+</div>
+<p class="idea-note" data-idea-name>Brushing teeth</p>
+</div>
+</article>
+
+<article class="option">
+<div class="option-note"><b>C · One sentence</b><span>No columns of coloured words. The cards are the only colour on the page.</span></div>
+<div class="stage optc" data-idea>
+<span class="eyebrow">The idea behind PixtoLearn</span>
+<h2 class="q"><span class="why">Why do</span> visuals speak louder?</h2>
+<p class="sentence">A picture helps you anticipate what is coming, recognise what it is, and understand the order.</p>
+<div class="idea-panels">
+<div class="idea-panel" data-idea-panel="anticipate"></div>
+</div>
+<p class="idea-note">The next step comes forward. You see it before you do it.</p>
+</div>
+</article>
+</section>
+
+<section id="designs">
+<article class="option">
+<div class="option-note"><b>1 · One sentence, then the answers</b><span>Click a word. Every card is the same miniature. Nothing rotates.</span></div>
+<div class="stage opt1" data-idea>
+<span class="eyebrow">The idea behind PixtoLearn</span>
+<h2 class="q"><span class="why">Why do</span> <span class="pink">visuals</span> <span class="amber">speak</span> <span class="blue">louder?</span></h2>
+<p class="bridge">A picture does three things.</p>
+<div class="answers" role="tablist" aria-label="What a picture does">
+<article><button type="button" role="tab" aria-pressed="true" data-idea-tab="anticipate"><small>Helps</small><b class="pink">anticipate</b><p>You see what is coming.</p></button></article>
+<article><button type="button" role="tab" aria-pressed="false" data-idea-tab="recognise"><small>Lets you</small><b class="amber">recognise</b><p>You know what it is.</p></button></article>
+<article><button type="button" role="tab" aria-pressed="false" data-idea-tab="understand"><small>Makes you</small><b class="blue">understand</b><p>You follow the order.</p></button></article>
+</div>
+<div class="idea-panels">
+<div class="idea-panel" data-idea-panel="anticipate"></div>
+<div class="idea-panel" data-idea-panel="recognise" hidden></div>
+<div class="idea-panel" data-idea-panel="understand" hidden></div>
+</div>
+<p class="idea-note" data-idea-name>Brushing teeth</p>
+</div>
+</article>
+
+<article class="option">
+<div class="option-note"><b>2 · Question on the left, ideas listed on the right</b><span>Two different shapes. The brand line is a block. The ideas are a list. Nothing lines up word for word.</span></div>
+<div class="stage opt2">
+<div>
+<span class="eyebrow">THE IDEA BEHIND PIXTOLEARN</span>
+<h2 class="q"><span class="why">Why do</span><span class="pink">visuals</span> <span class="amber">speak</span> <span class="blue">louder?</span></h2>
+</div>
+<div class="stack">
+<article><div><small>Helps</small><b class="pink">anticipate</b></div><p>You see what is coming.</p></article>
+<article><div><small>Lets you</small><b class="amber">recognise</b></div><p>You know what it is.</p></article>
+<article><div><small>Makes you</small><b class="blue">understand</b></div><p>You follow the order.</p></article>
+</div>
+</div>
+</article>
+
+<article class="option">
+<div class="option-note"><b>3 · The ideas are the section</b><span>The brand question is a caption. The three stripes are the only structure, each one full width.</span></div>
+<div class="stage opt3">
+<span class="eyebrow">THE IDEA BEHIND PIXTOLEARN</span>
+<p class="caption">Why do <span class="pink">visuals</span> <span class="amber">speak</span> <span class="blue">louder?</span></p>
+<div class="stripe"><div><small>Helps</small><b class="pink">anticipate</b></div><p>You see what is coming.</p></div>
+<div class="stripe"><div><small>Lets you</small><b class="amber">recognise</b></div><p>You know what it is.</p></div>
+<div class="stripe"><div><small>Makes you</small><b class="blue">understand</b></div><p>You follow the order.</p></div>
+</div>
+</article>
+
+<article class="option">
+<div class="option-note"><b>4 · One sentence, colour on the three ideas</b><span>Pink, amber and blue belong to anticipate, recognise and understand. The brand line stays small and intact.</span></div>
+<div class="stage opt4">
+<span class="eyebrow">THE IDEA BEHIND PIXTOLEARN</span>
+<p class="quiet">Why do visuals speak louder?</p>
+<p class="sentence">A picture helps you <span class="pink">anticipate</span> what is coming, <span class="amber">recognise</span> what it is, and <span class="blue">understand</span> the order.</p>
+</div>
+</article>
+
+<article class="option">
+<div class="option-note"><b>5 · Same start, three lines</b><span>The same miniatures, the same three ideas, all visible. Nothing grows, nothing rotates.</span></div>
+<div class="stage opt5" data-idea-reel>
+<span class="eyebrow">THE IDEA BEHIND PIXTOLEARN</span>
+<h2 class="q"><span class="why">Why do</span><span class="pink">visuals</span> <span class="amber">speak</span> <span class="blue">louder?</span></h2>
+<div class="lines">
+<article><div class="line-head"><b><small>Helps</small><span class="pink">anticipate</span></b><p>You see what is coming.</p></div><div class="reel-cards" data-reel-cards="anticipate"></div></article>
+<article><div class="line-head"><b><small>Lets you</small><span class="amber">recognise</span></b><p>You know what it is.</p></div><div class="reel-cards" data-reel-cards="recognise"></div></article>
+<article><div class="line-head"><b><small>Makes you</small><span class="blue">understand</span></b><p>You follow the order.</p></div><div class="reel-cards" data-reel-cards="understand"></div></article>
+</div>
+</div>
+</article>
+</section>
+
+<section class="prompts" id="prompts">
+<h2 style="font-size:40px;letter-spacing:-.04em;margin:12px 0">Twenty photos</h2>
+<div class="rule">
+<p>The drawing on the iPad is a file we already have in assets/idea, pasted in, not redrawn. It is the same picto as on the website: flat colour, one black outline, white card. If that picto shows a giraffe, the photograph has giraffes. If it shows a blue suitcase, the photograph has that suitcase.</p>
+<p>The iPad is copied from a real photograph of someone holding one. Both hands cradle the bottom edge, thumbs on the front corners, screen facing the camera as a flat rectangle. An 11-inch iPad is about as wide as the person’s torso. Mode <b>1</b> is portrait. Mode <b>1-2</b> and <b>1-2-3</b> are landscape.</p>
+<p>Shots with no file in assets/idea are not generated. We do not invent a child to fill the card.</p>
+</div>
+</section>
+</main>
+<script>
+const ideaNotes = {
+  anticipate: "The next step comes forward. You see it before you do it.",
+  recognise: "Only objects, from routines and from swimming.",
+  understand: "Three steps, in order."
+};
+const ideaSets = {
+  anticipate: [
+    { src: "assets/idea/brush-object.png", title: "toothbrush", ribete: "brushing teeth", color: "#5B8C7A", alt: "A toothbrush" },
+    { src: "assets/idea/brush-now.png", title: "pick up the brush", ribete: "brushing teeth", color: "#5B8C7A", alt: "A hand lifts a toothbrush", out: true }
+  ],
+  recognise: [
+    { src: "assets/idea/brush-object.png", title: "toothbrush", ribete: "brushing teeth", color: "#5B8C7A", alt: "A toothbrush" },
+    { src: "assets/idea/brush-paste.png", title: "toothpaste", ribete: "brushing teeth", color: "#5B8C7A", alt: "A tube of toothpaste" },
+    { src: "assets/idea/zoo-ticket.png", title: "ticket", ribete: "going to the zoo", color: "#7A4E9A", alt: "A zoo ticket" },
+    { src: "assets/idea/shop-basket.png", title: "basket", ribete: "at the supermarket", color: "#C77830", alt: "A shopping basket" },
+    { src: "assets/idea/hotel-key.png", title: "room key", ribete: "at the hotel", color: "#5B9A8B", alt: "A hotel room key" },
+    { src: "assets/idea/swim-ball.png", title: "ball", alt: "A swimming ball", yellow: true },
+    { src: "assets/idea/swim-float.png", title: "float", alt: "A swimming float", yellow: true },
+    { src: "assets/idea/swim-pistol.png", title: "water pistol", alt: "A water pistol", yellow: true }
+  ],
+  understand: [
+    { src: "assets/idea/brush-now.png", title: "pick up the brush", ribete: "brushing teeth", color: "#5B8C7A", alt: "A hand lifts a toothbrush", mark: "1" },
+    { src: "assets/idea/brush-next.png", title: "toothpaste", ribete: "brushing teeth", color: "#5B8C7A", alt: "Toothpaste goes on the brush", mark: "2" },
+    { src: "assets/idea/brush-then.png", title: "wet the brush", ribete: "brushing teeth", color: "#5B8C7A", alt: "The brush under the tap", mark: "3" }
+  ]
+};
+function ideaCard(card) {
+  const mark = card.mark ? `<span class="card-mark">${card.mark}</span>` : `<span class="card-mark"></span>`;
+  if (card.yellow) {
+    return `<div class="card-slot">${mark}<figure class="pixto-yellow"><span class="frame"><img alt="${card.alt}" src="${card.src}"></span><b>${card.title}</b></figure></div>`;
+  }
+  return `<div class="card-slot${card.out ? " is-out" : ""}">${mark}<figure class="pixto-mini" style="--ribete:${card.color}"><img alt="${card.alt}" src="${card.src}"><b>${card.title}</b><i>${card.ribete}</i></figure></div>`;
+}
+function paintIdeas(root) {
+  root.querySelectorAll("[data-idea-panel],[data-reel-cards]").forEach((slot) => {
+    const key = slot.dataset.ideaPanel || slot.dataset.reelCards;
+    slot.innerHTML = ideaSets[key].map(ideaCard).join("");
+  });
+}
+document.querySelectorAll("[data-idea],[data-idea-reel]").forEach(paintIdeas);
+document.querySelectorAll("[data-idea]").forEach((root) => {
+  const tabs = [...root.querySelectorAll("[data-idea-tab]")];
+  const panels = [...root.querySelectorAll("[data-idea-panel]")];
+  const note = root.querySelector("[data-idea-name]");
+  const show = (name) => {
+    tabs.forEach((tab) => tab.setAttribute("aria-pressed", String(tab.dataset.ideaTab === name)));
+    panels.forEach((panel) => panel.toggleAttribute("hidden", panel.dataset.ideaPanel !== name));
+    if (note) note.textContent = ideaNotes[name];
+  };
+  tabs.forEach((tab) => tab.addEventListener("click", () => show(tab.dataset.ideaTab)));
+  show("anticipate");
+});
+const lock = "Build the photograph in two layers. Layer one is a real place. Layer two is a real 11-inch iPad held the way people actually hold one: both hands cradle the bottom edge, fingers underneath, thumbs on the front corners, the screen facing the camera as a flat rectangle, not a trapezoid. The iPad is about as wide as the person’s torso. Landscape is 1.4 times as wide as it is tall. Portrait is the reverse. Thin even bezel. Do not invent a giant tablet. The screen is the PixtoLearn Focus player, dark ink #14242b, one pink Done button. The picture inside each card is the named PNG from assets/idea, pasted unchanged. Do not redraw it, do not restyle it, do not swap the character. The place around the iPad contains the same objects that are drawn in that PNG. A giraffe in the picto means giraffes in the photograph. If no PNG is named, do not generate the photo.";
+const shots = [
+["01 · Zoo · 1-2","Plus · zoo-visit · iPad landscape","Photorealistic 16:9 photograph, natural daylight. At a zoo viewing rail, an adult holds a landscape iPad in both hands and a child beside them looks toward the animals, one hand resting on the rail. Correct hands, five fingers, a real 11-inch iPad, not oversized. The screen is sharp and shows PixtoLearn Focus mode 1-2: two cards side by side on a dark ink #14242b background, labelled NOW and NEXT. NOW card, existing Plus art for zoo-visit, title “Observar los animales”, a flat illustration with a thin black outline and white background of a person watching animals from the allowed place. NEXT card, “Elegir una zona”, the same art style, choosing an area on a simple route. Small green label “Going to the zoo”. Pink Done button. No other app, no extra logos, no text inside the drawings. The enclosure and the animals are in the background, slightly soft. The iPad is horizontal."],
+["02 · Bus stop · 1","Plus · taking-the-bus · iPad portrait","Photorealistic 16:9 photograph. An adult stands at a real bus stop, one hand holding a portrait iPad at chest height, the other hand at their side. A child waits beside them, looking down the road. The bus stop sign and the street are clearly the place. Correct hands and a real iPad proportion, taller than it is wide. The screen shows PixtoLearn Focus mode 1: one large card only. Existing Plus art, “Esperar el autobús”, flat illustration, thin black outline, white background, a person waiting at a stop. Dark ink #14242b chrome, label “Going by bus”, pink Done button. No second card. Natural overcast daylight."],
+["03 · Hotel desk · 1-2-3","Plus · at-the-hotel · iPad landscape","Photorealistic 16:9 photograph inside a hotel reception. An adult stands at the desk, a landscape iPad lying flat enough to read, one hand touching the current card. The receptionist is across the desk, slightly soft. A key card and a small bag are on the counter. Correct hands. The screen shows PixtoLearn Focus mode 1-2-3: three cards in a row, NOW “Llegar al hotel”, NEXT “Presentarse en recepción”, THEN “Recoger la llave o tarjeta”. Existing Plus art, flat line illustration, white cards, thin black outline, dark ink #14242b player, label “Staying at a hotel”. The iPad is horizontal. Warm interior light, no studio backdrop."],
+["04 · Supermarket · 1-2","Plus · at-the-supermarket · iPad landscape","Photorealistic 16:9 photograph in a supermarket aisle. An adult holds a shopping basket in one arm and a landscape iPad in the other hand, thumb near the screen. A child points at a shelf. Products on the shelf match an ordinary shop, not a set. Correct hands, real iPad size. Screen is PixtoLearn Focus 1-2, NOW “Buscar los productos”, NEXT “Comprobar la lista”, existing Plus art, white cards, thin black outline, dark ink #14242b chrome, label “Going to the supermarket”. Horizontal iPad. Cool shop lighting."],
+["05 · Cafe · 1","Plus · at-a-cafe · iPad portrait","Photorealistic 16:9 photograph at a cafe table by a window. An adult sits with a portrait iPad propped against a glass, one hand on the side of the iPad. A child sits opposite with a glass of water. Cups and a paper menu are on the table, but the screen is the app, not the paper menu. Correct hands. Focus mode 1, one card: “Mirar la carta”, existing Plus art of looking at a menu, white card, thin black outline. Label “Going to a cafe”. Portrait iPad. Daylight from the window."],
+["06 · Dentist waiting room · 1-2","Plus · at-the-dentist · iPad landscape","Photorealistic 16:9 photograph in a quiet dental waiting room. An adult and a child sit side by side. The adult holds a landscape iPad across their lap, one finger on the NOW card. The child looks at the screen. Chairs, a closed door, soft daylight. No scary instruments in frame. Correct hands. Focus 1-2: NOW “Esperar el turno”, NEXT “Entrar a la consulta”, existing Plus art, white cards, thin black outline, dark ink #14242b player, label “Going to the dentist”. Horizontal iPad."],
+["07 · Hairdresser · 1","Plus · at-the-hairdresser · iPad portrait","Photorealistic 16:9 photograph in a hair salon. A child sits in the chair with a cape. An adult stands beside them holding a portrait iPad so they can both see one card, the adult’s other hand resting on the chair. Mirror and salon light, natural, not glossy advertising. Correct hands. Focus mode 1, one card only: “Sentarse en el lugar acordado”, existing Plus art, white background, thin black outline. Label “Having a haircut”. Portrait iPad."],
+["08 · Campsite · 1-2-3","Plus · going-camping · iPad landscape","Photorealistic 16:9 photograph at a campsite in late afternoon. An adult kneels by a half-open tent, landscape iPad resting on one knee, both hands steadying it. A child stands with a folded chair. Trees, guy ropes, real ground. Correct hands, no extra fingers. Focus 1-2-3: NOW “Llegar al camping”, NEXT “Localizar la parcela”, THEN “Preparar el alojamiento con ayuda”. Existing Plus art, three white cards, thin black outline, dark ink #14242b chrome, label “Going camping”. Horizontal iPad."],
+["09 · Train platform · 1-2","Plus · taking-the-train · iPad landscape","Photorealistic 16:9 photograph on a train platform behind the yellow line. An adult holds a landscape iPad with both hands. A teenager stands next to them with a backpack, looking toward the platform screen, not at the camera. The train is not yet at the platform. Correct hands and iPad size. Focus 1-2: NOW “Esperar en la zona indicada”, NEXT “Subir al tren detenido”. Existing Plus art, white cards, thin black outline, label “Going by train”. Horizontal iPad. Daylight, station architecture."],
+["10 · Library · 1","Plus · at-the-library · iPad portrait","Photorealistic 16:9 photograph between library shelves. A child reaches toward a book. An adult beside them holds a portrait iPad in one hand, the other hand indicating a shelf without covering the screen. Quiet, warm library light. Correct hands. Focus mode 1, one large card: “Buscar un libro o material”, existing Plus art, white card, thin black outline. Label “Going to the library”. Portrait iPad."],
+["11 · Cinema · 1-2-3","Plus · at-the-cinema · iPad landscape","Photorealistic 16:9 photograph in a cinema lobby, carpet and a softly lit poster wall, not a readable film title. An adult holds a landscape iPad, one hand on the screen, paper tickets in the other hand. A child looks at the screen. Correct hands. Focus 1-2-3: NOW “Localizar la sala”, NEXT “Encontrar el asiento”, THEN “Ver la película”. Existing Plus art, three white cards, thin black outline, dark ink #14242b player, label “Going to the cinema”. Horizontal iPad."],
+["12 · Farm · 1-2-3","Plus · farm-visit · iPad landscape","Photorealistic 16:9 photograph at a farm fence. An adult holds a landscape iPad at waist height so a child can see it. The child leans on the fence looking at sheep or cows beyond, one hand on the rail. Boots, mud, open sky. Correct hands. Focus 1-2-3: NOW “Seguir el recorrido acordado”, NEXT “Observar los animales”, THEN “Participar solo en la actividad permitida”. Existing Plus art, white cards, thin black outline, label “Visiting a farm”. Horizontal iPad."],
+["13 · Aquarium · 1","Plus · aquarium-visit · iPad portrait","Photorealistic 16:9 photograph in a dim aquarium hall, blue light from a tank. An adult holds a portrait iPad, screen bright enough to read, one thumb on the bezel. A child stands close, face lit by the tank, not by a flash. Correct hands. Focus mode 1, one card: “Observar los acuarios”, existing Plus art of looking at tanks, white card, thin black outline. Label “Going to the aquarium”. Portrait iPad. No cartoon fish on the screen."],
+["14 · Crossing the road · 1-2","Plus · crossing-the-road · iPad landscape","Photorealistic 16:9 photograph on a pavement at a pedestrian crossing, before anyone steps into the road. An adult and a child have stopped. The adult holds a landscape iPad low, against their body, one hand on it, and is looking up at the traffic, not down. The child holds the adult’s sleeve. The crossing and the kerb are clear. Correct hands. Focus 1-2: NOW “Pararse antes de la calzada”, NEXT “Observar el tráfico en ambas direcciones”. Existing Plus art, white cards, thin black outline, label “Crossing the road”. Horizontal iPad. They are waiting, not crossing."],
+["15 · Packing a school bag · 1-2-3","Plus · packing-school-bag · iPad landscape","Photorealistic 16:9 photograph at a kitchen table in the morning. A landscape iPad lies on the table. An adult’s hands arrange a book into an open backpack. A child’s hands rest on the table near the iPad, one finger touching the current card. Homework, a pencil case, daylight. Correct hands, no merged fingers. Focus 1-2-3: NOW “Reunir lo necesario”, NEXT “Meterlo en la mochila”, THEN “Cerrar la mochila”. Existing Plus art, three white cards, thin black outline, label “Packing the school bag”. Horizontal iPad."],
+["16 · Making a sandwich · 1","Plus · make-sandwich · iPad portrait","Photorealistic 16:9 photograph at a kitchen counter. A portrait iPad stands against the tiles. An adult’s hand rests on the iPad edge. A child’s hands put filling on a slice of bread. Bread, plate, and the filling are the real versions of the card. Correct hands. Focus mode 1, one card: “Añadir el relleno”, existing Plus art, white card, thin black outline, a single action. Label “Making a sandwich”. Portrait iPad. Natural kitchen light."],
+["17 · Washing up · 1-2","Plus · washing-up · iPad landscape","Photorealistic 16:9 photograph at a sink. A landscape iPad is propped on the counter, clear of the water. An adult’s wet hand is slightly back from the screen, the other hand holds a plate under the tap. A child stands on a step beside them, watching the screen. Soap, sponge, drying rack. Correct hands. Focus 1-2: NOW “Lavar una pieza”, NEXT “Aclararla”. Existing Plus art, white cards, thin black outline, label “Washing the dishes”. Horizontal iPad."],
+["18 · Bedtime · 1-2-3","Plus · bedtime-routine · iPad landscape","Photorealistic 16:9 photograph in a bedroom at night, one warm lamp. A child in pyjamas sits on the bed. An adult sits on the edge, holding a landscape iPad so both can see it, one hand supporting the side. No overhead flash. Correct hands. Focus 1-2-3: NOW “Ponerse el pijama”, NEXT “Cepillarse los dientes”, THEN “Acostarse”. Existing Plus art, three white cards, thin black outline, dark ink #14242b player, label “Getting ready for bed”. Horizontal iPad."],
+["19 · Doctor’s waiting room · 1","Plus · at-the-gp · iPad portrait","Photorealistic 16:9 photograph in a GP waiting room. An adult holds a portrait iPad on their knee with one hand. A child sits close, looking at the single card. Empty chairs, a reception desk far behind, quiet daylight. No medical tools. Correct hands and iPad proportions. Focus mode 1, one card: “Esperar el turno”, existing Plus art, white card, thin black outline. Label “Going to the doctor”. Portrait iPad."],
+["20 · Market · 1-2","Plus · market-shopping · iPad landscape","Photorealistic 16:9 photograph at an outdoor market stall with fruit. An adult holds a landscape iPad in one hand and a small bag in the other. A child points at the fruit. The stallholder is mid-distance, not posed. Daylight, awning, real produce. Correct hands. Focus 1-2: NOW “Elegir los productos”, NEXT “Pedir la cantidad acordada”. Existing Plus art, white cards, thin black outline, label “Going to the market”. Horizontal iPad."]
+];
+const cast = [
+"Cards, pasted from assets/idea, not redrawn. Now is zoo-ticket.png: a cream ticket with a standing giraffe and two grey lines. Next is zoo-1.png: two hands, a blue bottle, that same giraffe ticket, and a folded map with a giraffe and a bird. In the photograph, giraffes stand behind the rail. A blue bottle can sit on the rail. Landscape iPad, both hands under the bottom edge.",
+"No file in assets/idea for the bus. Do not generate this photo. Do not invent a child waiting at a stop.",
+"Cards, pasted from assets/idea, not redrawn. Now is hotel-1.png: a girl with curly hair and a yellow shirt walks through a grey door pulling a bright blue suitcase. Next is hotel-2.png: the same girl waves at a receptionist, blue suitcase beside her. Then is hotel-3.png: two hands pass a teal key card with a white key. In the photograph: a hotel door, a bright blue suitcase, a reception desk. Landscape iPad, both hands under the bottom edge.",
+"Cards, pasted from assets/idea, not redrawn. Now is shop-1.png: dark-skinned hands hold a list showing a banana and a milk carton. Next is shop-basket.png: a grey plastic basket with a blue handle. In the photograph the adult carries that grey basket with the blue handle, and the shelf has bananas and milk. Landscape iPad, both hands under the bottom edge.",
+"No file in assets/idea for the cafe. Do not generate this photo. Do not invent a child looking at a menu.",
+"No file in assets/idea for the dentist. Do not generate this photo.",
+"No file in assets/idea for the hairdresser. Do not generate this photo.",
+"No file in assets/idea for the campsite. Do not generate this photo.",
+"No file in assets/idea for the train. Do not generate this photo.",
+"No file in assets/idea for the library. Do not generate this photo.",
+"No file in assets/idea for the cinema. Do not generate this photo.",
+"No file in assets/idea for the farm. Do not generate this photo.",
+"No file in assets/idea for the aquarium. Do not generate this photo.",
+"No file in assets/idea for crossing the road. Do not generate this photo.",
+"No file in assets/idea for the school bag. Do not generate this photo.",
+"No file in assets/idea for the sandwich. Do not generate this photo.",
+"No file in assets/idea for washing up. Do not generate this photo.",
+"No file in assets/idea for bedtime. Do not generate this photo.",
+"No file in assets/idea for the doctor. Do not generate this photo.",
+"No file in assets/idea for the market. Do not generate this photo."
+];
+const root = document.querySelector("#prompts");
+shots.forEach(([title, meta, prompt], index) => {
+  const full = lock + "\n\n" + prompt + "\n\n" + cast[index];
+  const article = document.createElement("article");
+  article.className = "shot";
+  article.innerHTML = `<header><h2></h2><span class="meta"></span><button type="button">Copy</button></header><pre></pre>`;
+  article.querySelector("h2").textContent = title;
+  article.querySelector(".meta").textContent = meta;
+  article.querySelector("pre").textContent = full;
+  article.querySelector("button").addEventListener("click", async (event) => {
+    await navigator.clipboard.writeText(full);
+    event.currentTarget.textContent = "Copied";
+  });
+  root.append(article);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Orbit studies · PixtoLearn Swimming</title>
+<style>
+@font-face{font-family:PixtoDisplay;src:url("assets/fonts/bricolage-grotesque-latin.woff2") format("woff2");font-weight:500 800;font-display:swap}
+@font-face{font-family:PixtoBody;src:url("assets/fonts/figtree-latin.woff2") format("woff2");font-weight:400 800;font-display:swap}
+:root{--ink:#14242b;--blue:#88b5c2;--deep:#3f7584;--water:#6a9eb0;--mist:#d7ebf0;--paper:#fffdf8;--line:#14242b14}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 PixtoBody,Figtree,Arial,sans-serif}
+button,a{font:inherit;color:inherit}
+button{cursor:pointer}
+img{max-width:100%;display:block}
+.top{position:sticky;top:0;z-index:20;display:flex;gap:18px;align-items:center;padding:14px 4vw;background:#fffdf8ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top b{font-family:PixtoDisplay,Arial,sans-serif;font-weight:700;letter-spacing:-.03em}
+.top nav{display:flex;flex-wrap:wrap;gap:6px}
+.top a{padding:4px 8px;border-radius:999px;text-decoration:none;color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.04em}
+.top a:hover{background:var(--mist)}
+.intro{max-width:760px;padding:36px 4vw 8px}
+.intro h1{margin:0;font-family:PixtoDisplay,Arial,sans-serif;font-weight:800;font-size:clamp(36px,5vw,58px);letter-spacing:-.045em;line-height:1.02}
+.intro h1 span{color:var(--blue)}
+.intro p{max-width:40em;color:#56656a}
+.study{padding:28px 4vw 72px;border-top:1px solid var(--line);scroll-margin-top:64px}
+.study header{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;align-items:baseline;max-width:720px;margin-bottom:18px}
+.study header span{font-size:12px;font-weight:750;letter-spacing:.16em;color:var(--blue)}
+.study h2{margin:0;font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(28px,3vw,40px);letter-spacing:-.04em}
+.study header p{grid-column:2;margin:0;color:#56656a}
+.stage{display:grid;grid-template-columns:minmax(320px,1.05fr) minmax(280px,.95fr);gap:28px 40px;align-items:center}
+.orbit{min-width:0}
+.disc{--rx:.44;--ry:.34;--near:1.16;--far:.7;--blur:1.4;--speed:.12;position:relative;width:min(560px,100%);aspect-ratio:1;margin:0 auto 2.2rem}
+.sea{position:absolute;inset:2%;border-radius:50%;background:radial-gradient(circle at 50% 36%,#fff 0%,#eef7f9 28%,var(--mist) 52%,var(--blue) 78%,var(--water) 100%);overflow:hidden;box-shadow:inset 0 0 0 1.5px #ffffffd8,0 30px 50px -36px #14242b}
+.sea .tide{position:absolute;left:-40%;right:-40%;top:58%;height:46%;background:#e7f7fa66;border-radius:50%;animation:tide 11s ease-in-out infinite}
+.sea .gloss{position:absolute;inset:0;background:radial-gradient(circle at 50% 16%,#ffffffb0,transparent 42%);pointer-events:none}
+.ring{position:absolute;left:50%;top:50%;z-index:1;width:calc(var(--rx) * 200%);height:calc(var(--ry) * 200%);translate:-50% -50%;border:1.5px solid #ffffffcc;border-radius:50%;pointer-events:none;box-shadow:0 0 0 10px #ffffff18}
+.hub{position:absolute;left:50%;top:50%;z-index:4;width:min(360px,68%);translate:-50% -50%;padding:0;background:none;box-shadow:none;pointer-events:none}
+.hub-kicker{margin:0 0 4px;min-height:1em;font-size:10px;font-weight:750;letter-spacing:.16em;text-transform:uppercase;text-align:center;color:var(--deep);text-shadow:0 1px 0 #fffdf8}
+.hub-kicker:empty{display:none;margin:0}
+.hub-row{display:flex;justify-content:center;align-items:flex-end;gap:2px;min-height:108px}
+.hub figure{flex:1 1 0;max-width:34%;margin:0;text-align:center;animation:float 5.6s ease-in-out infinite;transition:flex-basis .45s ease,max-width .45s ease,opacity .35s ease,transform .45s ease}
+.hub figure:nth-child(2){animation-delay:-1.8s}
+.hub figure:nth-child(3){animation-delay:-3.1s}
+.hub img{width:100%;height:auto;object-fit:contain;background:none;filter:drop-shadow(0 16px 14px #14242b28)}
+.hub figcaption{margin-top:2px;font-size:10px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);opacity:0}
+.stage.is-open .hub figure:not(.is-on){flex:0 0 0px;max-width:0;opacity:0;overflow:hidden;transform:scale(.92)}
+.stage.is-open .hub figure.is-on{max-width:48%}
+.stage.is-open .hub figure.is-on figcaption{opacity:1;color:var(--ink)}
+.node{position:absolute;left:50%;top:50%;z-index:3;width:86px;height:86px;margin:0;padding:0;border:0;background:transparent;transform:translate(-50%,-50%)}
+.face{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden;background:#d7ebf0;box-shadow:0 14px 18px -14px #14242b,0 0 0 4px #fffdf8;transition:box-shadow .35s ease}
+.face img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.name{position:absolute;left:50%;top:calc(100% + 8px);translate:-50% 0;font-size:12px;font-weight:750;letter-spacing:.04em;color:var(--deep);white-space:nowrap;opacity:0;transition:opacity .25s ease}
+.node.is-near .face{box-shadow:0 18px 22px -12px #14242b,0 0 0 4px #fff,0 0 0 7px var(--deep)}
+.node[aria-pressed=true]{z-index:7}
+.node[aria-pressed=true] .face{box-shadow:0 18px 22px -12px #14242b,0 0 0 4px #fff,0 0 0 8px var(--deep)}
+.node[aria-pressed=true] .name{opacity:1;color:var(--ink)}
+.invite{margin:0;text-align:center;color:var(--deep);font-size:14px;font-weight:700;letter-spacing:.02em}
+.stage.is-open .invite{visibility:hidden}
+.advice{background:#fff;border-radius:24px;padding:28px 26px 22px;box-shadow:0 30px 50px -36px #14242b;border-top:3px solid var(--blue)}
+.advice article[hidden]{display:none}
+.advice .eyebrow{font-size:11px;font-weight:750;letter-spacing:.16em;color:var(--deep)}
+.advice h3{margin:8px 0 10px;font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(26px,3vw,36px);letter-spacing:-.04em;line-height:1.05}
+.advice .lead{margin:0;max-width:34em;color:#3d5158}
+.recs{display:grid;gap:12px;margin:18px 0 0;padding:0;list-style:none}
+.recs li{display:grid;grid-template-columns:104px 1fr;gap:14px;align-items:center;padding:10px;border-radius:16px;background:#f7f4ef}
+.recs img{width:104px;height:84px;object-fit:contain;border-radius:12px;background:#fff}
+.recs b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.recs small{display:inline-block;margin-left:8px;font-size:10px;font-weight:750;letter-spacing:.08em;color:var(--deep)}
+.recs p{margin:4px 0 0;font-size:14px;line-height:1.35;color:#3d5158}
+.recs a{display:inline-block;margin-top:6px;font-size:12px;font-weight:750;letter-spacing:.06em;text-transform:uppercase;color:var(--deep);text-decoration:none}
+.recs a:hover{color:var(--ink)}
+.idle{margin:0;color:#56656a}
+.stage.is-open .idle{display:none}
+@keyframes tide{50%{translate:6% 8px}}
+@keyframes float{50%{translate:0 -12px}}
+@media(max-width:860px){
+  .stage{grid-template-columns:1fr}
+  .disc{width:min(440px,100%)}
+  .node{width:70px;height:70px}
+  .hub{width:min(300px,72%)}
+  .recs li{grid-template-columns:84px 1fr}
+  .recs img{width:84px;height:68px}
+}
+@media(prefers-reduced-motion:reduce){
+  .sea .tide,.hub figure{animation:none}
+  .hub figure{transition:none}
+}
+.k-table{--rx:.46;--ry:.30;--near:1.22;--far:.64;--blur:.6;--speed:.1}
+.k-table .sea{background:radial-gradient(circle at 50% 42%,#fff 0%,#f4f8f9 62%,#d5ebf0 100%)}
+.k-table .sea .tide{display:none}
+.k-table .ring{border-color:#88b5c2;box-shadow:0 16px 0 -12px #88b5c244,0 0 0 1px #88b5c233}
+.k-focus{--rx:.40;--ry:.38;--near:1.34;--far:.52;--blur:9;--speed:.11}
+.k-focus .sea{background:radial-gradient(circle at 50% 42%,#fbfefe 0%,#d5e7ee 58%,#8eb4c0 100%)}
+.k-focus .node:not(.is-near) .face{box-shadow:0 0 0 3px #fffdf8aa}
+.k-tide{--rx:.43;--ry:.33;--near:1.18;--far:.68;--blur:1;--speed:.15}
+.k-tide .ring{box-shadow:0 0 0 9px #ffffff55,0 0 0 18px #ffffff22}
+.k-tide .sea .tide{top:46%;height:28%;background:#ffffff66}
+.k-lens{--rx:.42;--ry:.36;--near:1.14;--far:.72;--blur:.4;--speed:.09}
+.k-lens .sea{inset:1%;box-shadow:inset 0 0 0 14px #ffffff88,inset 0 -28px 40px #6a9eb040,0 24px 40px -28px #14242b}
+.k-lens .ring{border-color:#ffffff88}
+.k-bow{--rx:.46;--ry:.31;--near:1.28;--far:.6;--blur:.8;--speed:.13}
+.k-bow .sea{background:linear-gradient(#fbfcfd 46%,#d7ebf0 46%,#88b5c2 82%,#6a9eb0)}
+.k-bow .ring{border-color:#fff}
+.k-line{--rx:.44;--ry:.34;--near:1.2;--far:.66;--blur:0;--speed:.1}
+.k-line .sea{background:transparent;box-shadow:none}
+.k-line .sea .tide,.k-line .sea .gloss{display:none}
+.k-line .ring{border-width:1px;border-color:#88b5c2;box-shadow:none}
+.k-well{--rx:.40;--ry:.36;--near:1.26;--far:.58;--blur:2.4;--speed:.11}
+.k-well .sea{background:radial-gradient(circle at 50% 50%,#f7fbfc 0%,#f7fbfc 18%,#6a9eb0 46%,#3f7584 100%)}
+.k-well .sea .tide{background:#ffffff22;top:62%}
+.k-well .ring{border-color:#ffffff88}
+.k-pass{--rx:.47;--ry:.30;--near:1.42;--far:.5;--blur:3.2;--speed:.14}
+.k-pass .sea{background:linear-gradient(#fffdf8,#d7ebf0 46%,#88b5c2)}
+.k-pass .ring{border-color:#3f758455}
+.k-split{--rx:.42;--ry:.34;--near:1.16;--far:.7;--blur:1;--speed:.12}
+.k-split .advice{padding:32px 28px 26px}
+</style>
+</head>
+<body>
+<header class="top">
+<b>Ten orbits</b>
+<nav>
+<a href="#s1">01</a><a href="#s2">02</a><a href="#s3">03</a><a href="#s4">04</a><a href="#s5">05</a>
+<a href="#s6">06</a><a href="#s7">07</a><a href="#s8">08</a><a href="#s9">09</a><a href="#s10">10</a>
+</nav>
+</header>
+<div class="intro">
+<h1>Ten ways around <span>the water.</span></h1>
+<p>The three packs float in a row, in the middle, with no box around them. People travel the ring outside them. Choose someone, and the note opens beside the water: the packs we recommend, and why.</p>
+</div>
+
+<section class="study" id="s1">
+<header><span>01</span><h2>Near water</h2><p>A low pool. The packs float in a row in the middle. Whoever comes down toward you gets larger, and never crosses the products.</p></header>
+<div class="mount k-near"></div>
+</section>
+<section class="study" id="s2">
+<header><span>02</span><h2>The table</h2><p>The ring lies a little flat, like the near edge of a round table. The products float in the middle, with nothing around them.</p></header>
+<div class="mount k-table"></div>
+</section>
+<section class="study" id="s3">
+<header><span>03</span><h2>Soft focus</h2><p>A fuller circle. The one behind falls soft and small. The one in front stays sharp, and the packs in the middle do not move.</p></header>
+<div class="mount k-focus"></div>
+</section>
+<section class="study" id="s4">
+<header><span>04</span><h2>Two tides</h2><p>A second ring, and a little current on the path. The products hold the centre while the water moves.</p></header>
+<div class="mount k-tide"></div>
+</section>
+<section class="study" id="s5">
+<header><span>05</span><h2>The lens</h2><p>A thick glass disc. Portraits ride the rim. The packs float under the lens, still, in a row.</p></header>
+<div class="mount k-lens"></div>
+</section>
+<section class="study" id="s6">
+<header><span>06</span><h2>The bow</h2><p>Water to the horizon. The path is a shallow bow around the packs, not a line through them.</p></header>
+<div class="mount k-bow"></div>
+</section>
+<section class="study" id="s7">
+<header><span>07</span><h2>Hairline</h2><p>One blue line and three circles. The packs have no plate. The space around them is the quiet.</p></header>
+<div class="mount k-line"></div>
+</section>
+<section class="study" id="s8">
+<header><span>08</span><h2>The well</h2><p>Deeper water at the rim, light in the middle. The packs rest in that light. People circle the edge.</p></header>
+<div class="mount k-well"></div>
+</section>
+<section class="study" id="s9">
+<header><span>09</span><h2>The pass</h2><p>Wide and low. One portrait crosses large in front of the packs. The others stay small and soft behind.</p></header>
+<div class="mount k-pass"></div>
+</section>
+<section class="study" id="s10">
+<header><span>10</span><h2>Beside you</h2><p>The same water. The packs float in a row. When you choose, the note opens beside it: the packs, and the reason for each one.</p></header>
+<div class="mount k-split"></div>
+</section>
+
+<template id="orbit">
+<div class="stage">
+<div class="orbit">
+<div class="disc">
+<div class="sea"><span class="tide"></span><span class="gloss"></span></div>
+<div class="ring"></div>
+<div class="hub">
+<p class="hub-kicker"></p>
+<div class="hub-row">
+<figure data-pack="basic"><img alt="Basic pack" src="assets/pack-basic.png"/><figcaption>Basic</figcaption></figure>
+<figure data-pack="fun"><img alt="Fun pack" src="assets/pack-fun.png"/><figcaption>Fun</figcaption></figure>
+<figure data-pack="full"><img alt="Full pack" src="assets/pack-full.png"/><figcaption>Full</figcaption></figure>
+</div>
+</div>
+<button class="node" type="button" data-who="schools" data-packs="basic,full" aria-pressed="false">
+<span class="face"><img alt="" src="assets/pool/group-shirts.jpg" style="object-position:58% 40%"/></span>
+<span class="name">Schools</span>
+</button>
+<button class="node" type="button" data-who="coaches" data-packs="basic,fun,full" aria-pressed="false">
+<span class="face"><img alt="" src="assets/pool/session-card.jpg" style="object-position:72% 30%"/></span>
+<span class="name">Coaches</span>
+</button>
+<button class="node" type="button" data-who="families" data-packs="basic,fun" aria-pressed="false">
+<span class="face"><img alt="" src="assets/hero/joy.jpg" style="object-position:64% 40%"/></span>
+<span class="name">Families</span>
+</button>
+</div>
+<p class="invite">Choose who is around the water.</p>
+</div>
+<div class="advice">
+<p class="idle">The three packs wait in the middle. Choose a circle to see which ones we recommend, and why.</p>
+<article data-panel="schools" hidden>
+<span class="eyebrow">SCHOOLS &amp; ORGANISATIONS</span>
+<h3>One set for every class.</h3>
+<ul class="recs">
+<li>
+<img alt="Basic pack" src="assets/pack-basic.png"/>
+<div>
+<b>Basic<small>Recommended</small></b>
+<p>Skill cards.</p>
+<a href="product-basic-pack.html">View Basic</a>
+</div>
+</li>
+<li>
+<img alt="Full pack" src="assets/pack-full.png"/>
+<div>
+<b>Full<small>Recommended</small></b>
+<p>The whole case.</p>
+<a href="product-full-pack.html">View Full</a>
+</div>
+</li>
+</ul>
+</article>
+<article data-panel="coaches" hidden>
+<span class="eyebrow">COACHES</span>
+<h3>The session decides.</h3>
+<ul class="recs">
+<li>
+<img alt="Basic pack" src="assets/pack-basic.png"/>
+<div>
+<b>Basic<small>Recommended</small></b>
+<p>Skill cards.</p>
+<a href="product-basic-pack.html">View Basic</a>
+</div>
+</li>
+<li>
+<img alt="Fun pack" src="assets/pack-fun.png"/>
+<div>
+<b>Fun<small>Recommended</small></b>
+<p>Cards and toys.</p>
+<a href="product-fun-pack.html">View Fun</a>
+</div>
+</li>
+<li>
+<img alt="Full pack" src="assets/pack-full.png"/>
+<div>
+<b>Full<small>Recommended</small></b>
+<p>The whole case.</p>
+<a href="product-full-pack.html">View Full</a>
+</div>
+</li>
+</ul>
+</article>
+<article data-panel="families" hidden>
+<span class="eyebrow">FAMILIES</span>
+<h3>Play is how it lands.</h3>
+<ul class="recs">
+<li>
+<img alt="Basic pack" src="assets/pack-basic.png"/>
+<div>
+<b>Basic<small>Recommended</small></b>
+<p>Skill cards.</p>
+<a href="product-basic-pack.html">View Basic</a>
+</div>
+</li>
+<li>
+<img alt="Fun pack" src="assets/pack-fun.png"/>
+<div>
+<b>Fun<small>Recommended</small></b>
+<p>Cards and toys.</p>
+<a href="product-fun-pack.html">View Fun</a>
+</div>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</template>
+<script>
+(function () {
+  var tmpl = document.getElementById("orbit");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var TAU = Math.PI * 2;
+  var FRONT = Math.PI / 2;
+  var labels = { schools: "Schools", coaches: "Coaches", families: "Families" };
+  var worlds = [];
+
+  document.querySelectorAll(".mount").forEach(function (mount, n) {
+    mount.appendChild(tmpl.content.cloneNode(true));
+    var disc = mount.querySelector(".disc");
+    mount.classList.forEach(function (c) { if (c.indexOf("k-") === 0) disc.classList.add(c); });
+    worlds.push({
+      disc: disc,
+      stage: mount.querySelector(".stage"),
+      nodes: Array.prototype.slice.call(disc.querySelectorAll(".node")),
+      packs: Array.prototype.slice.call(disc.querySelectorAll("[data-pack]")),
+      kicker: disc.querySelector(".hub-kicker"),
+      spin: n * 0.55,
+      target: null,
+      open: null
+    });
+  });
+
+  function num(disc, name, fallback) {
+    var v = parseFloat(getComputedStyle(disc).getPropertyValue(name));
+    return isNaN(v) ? fallback : v;
+  }
+
+  function layout(world) {
+    var disc = world.disc;
+    var w = disc.clientWidth || 520;
+    var rx = num(disc, "--rx", 0.44) * w;
+    var ry = num(disc, "--ry", 0.34) * w;
+    var near = num(disc, "--near", 1.16);
+    var far = num(disc, "--far", 0.7);
+    var blurMax = num(disc, "--blur", 0);
+    var focus = disc.classList.contains("k-focus");
+    var tide = disc.classList.contains("k-tide");
+    var hub = disc.querySelector(".hub");
+    var db = disc.getBoundingClientRect();
+    var hb = hub.getBoundingClientRect();
+    var hx0 = hb.left - (db.left + db.width / 2);
+    var hy0 = hb.top - (db.top + db.height / 2);
+    var hx1 = hb.right - (db.left + db.width / 2);
+    var hy1 = hb.bottom - (db.top + db.height / 2);
+
+    world.nodes.forEach(function (node, i) {
+      var a = world.spin + i * TAU / 3;
+      var depth = (Math.sin(a) + 1) / 2;
+      var scale = far + (near - far) * depth;
+      var wobble = tide ? Math.sin(a * 2) * w * 0.018 : 0;
+      var x = Math.cos(a) * rx + wobble;
+      var y = Math.sin(a) * ry;
+      var nr = ((node.offsetWidth || 86) * 0.5 * scale) + 16;
+      var left = hx0 - nr;
+      var right = hx1 + nr;
+      var top = hy0 - nr;
+      var bottom = hy1 + nr;
+      if (x > left && x < right && y > top && y < bottom) {
+        var sx = Math.abs(x) < 1 ? Infinity : (x < 0 ? left / x : right / x);
+        var sy = Math.abs(y) < 1 ? Infinity : (y < 0 ? top / y : bottom / y);
+        var push = Math.min(sx, sy);
+        if (isFinite(push) && push > 1) {
+          x *= push;
+          y *= push;
+        }
+      }
+      var chosen = node.getAttribute("aria-pressed") === "true";
+      node.style.transform = "translate(-50%,-50%) translate(" + x.toFixed(1) + "px," + y.toFixed(1) + "px) scale(" + scale.toFixed(3) + ")";
+      node.style.zIndex = chosen ? "7" : (y > 6 ? "6" : "2");
+      var face = node.querySelector(".face");
+      var blur = (1 - depth) * blurMax;
+      var sat = focus ? 0.28 + depth * 0.72 : 1;
+      var bright = focus ? 1 + (1 - depth) * 0.12 : 1;
+      var fade = focus ? 0.34 + depth * 0.66 : 1;
+      face.style.filter = "blur(" + blur.toFixed(2) + "px) saturate(" + sat.toFixed(2) + ") brightness(" + bright.toFixed(2) + ")";
+      face.style.opacity = chosen ? "1" : fade.toFixed(3);
+      node.classList.toggle("is-near", depth > 0.8 || chosen);
+      node.querySelector(".name").style.opacity = (depth > 0.78 || chosen) ? "1" : "0";
+    });
+  }
+
+  function show(world, who) {
+    world.stage.classList.toggle("is-open", !!who);
+    world.stage.querySelectorAll("[data-panel]").forEach(function (panel) {
+      panel.hidden = panel.getAttribute("data-panel") !== who;
+    });
+    world.nodes.forEach(function (node) {
+      node.setAttribute("aria-pressed", node.getAttribute("data-who") === who ? "true" : "false");
+    });
+    var wanted = [];
+    if (who) {
+      var current = world.nodes.filter(function (node) { return node.getAttribute("data-who") === who; })[0];
+      wanted = current ? current.getAttribute("data-packs").split(",") : [];
+    }
+    world.packs.forEach(function (pack) {
+      pack.classList.toggle("is-on", !who || wanted.indexOf(pack.getAttribute("data-pack")) !== -1);
+    });
+    world.kicker.textContent = who ? "Recommended · " + labels[who] : "";
+  }
+
+  function choose(world, node) {
+    var who = node.getAttribute("data-who");
+    if (world.open === who) {
+      world.open = null;
+      world.target = null;
+      show(world, null);
+      return;
+    }
+    world.open = who;
+    var i = world.nodes.indexOf(node);
+    var want = FRONT - i * TAU / 3;
+    var delta = Math.atan2(Math.sin(want - world.spin), Math.cos(want - world.spin));
+    world.target = world.spin + delta;
+    show(world, who);
+  }
+
+  worlds.forEach(function (world) {
+    world.disc.addEventListener("click", function (event) {
+      var node = event.target.closest(".node");
+      if (node) choose(world, node);
+      else {
+        world.open = null;
+        world.target = null;
+        show(world, null);
+      }
+    });
+    layout(world);
+  });
+
+  var last = performance.now();
+  function frame(now) {
+    var dt = Math.min(40, now - last);
+    last = now;
+    worlds.forEach(function (world) {
+      if (!reduce) {
+        if (world.target == null) {
+          world.spin += num(world.disc, "--speed", 0.12) * dt / 1000;
+        } else {
+          var d = Math.atan2(Math.sin(world.target - world.spin), Math.cos(world.target - world.spin));
+          world.spin += d * Math.min(1, dt / 260);
+          if (Math.abs(d) < 0.004) world.spin = world.target;
+        }
+      }
+      layout(world);
+    });
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
