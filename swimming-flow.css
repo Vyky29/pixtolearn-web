@@ -35,7 +35,7 @@
 .case-panel[hidden]{display:none}
 .case-split{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(240px,.9fr);column-gap:40px;align-items:center;min-height:0}
 .kit-solo{display:flex;align-items:center;justify-content:center;margin:0;min-height:0;width:100%}
-.kit-solo img{width:auto;height:auto;max-width:min(100%,360px);max-height:250px;object-fit:contain;object-position:center;background:#fff;border-radius:16px}
+.kit-solo img{display:block;width:auto;height:auto;max-width:min(100%,420px);max-height:300px;object-fit:contain;object-position:center;background:transparent;border-radius:0}
 .swim-brief-head p,.who-head p{max-width:38em}
 .folder-pass,.kind-pass{display:grid;column-gap:48px;align-items:center;margin-top:10px}
 .folder-pass{grid-template-columns:minmax(340px,1.25fr) minmax(240px,.75fr)}
@@ -394,4 +394,35 @@ button.benefit-photo:hover{box-shadow:0 22px 36px -22px #14242b}
     letter-spacing:-.045em;
   }
   .swim-hero .brand-hero-copy>p{font-size:16px;line-height:1.45}
+}
+.swim-page .case-sub[data-sub="cards"]{
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:flex-end;
+  width:auto;
+  max-width:100%;
+  min-width:0;
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+}
+.swim-page .case-sub[data-sub="cards"] button{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+.swim-page .case-sub[data-sub="cards"][hidden]{display:none}
+@media(max-width:760px){
+  .swim-page .case-sub[data-sub="cards"]{
+    display:flex;
+    justify-content:flex-start;
+    width:100%;
+    margin-top:10px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .swim-page .case-sub[data-sub="cards"] button{
+    white-space:nowrap;
+    min-height:44px;
+    padding:8px 14px;
+  }
+  .swim-page .case-sub[data-sub="cards"][hidden]{display:none}
 }

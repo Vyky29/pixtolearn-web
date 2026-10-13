@@ -64,7 +64,7 @@
 .shop-hero h1 .brand-blue{color:#88b5c2!important}
 .shop-hero p{max-width:22em;margin:0;color:#fff;font-size:16px;line-height:1.45}
 .shop-hero .button{margin-top:18px}
-@media(max-width:800px){.shop-hero{min-height:0;padding:36px 20px 32px}.shop-hero:after{background:linear-gradient(180deg,#10262ee6 0%,#10262ed4 55%,#10262ef0 100%)}.shop-hero h1{font-size:34px}}
+
 
 .shop-clean .shop-shelf{padding:56px 0 28px}
 .shop-clean .shop-shelf .eyebrow{display:block;margin:0;color:#5d7380;font-size:11px;font-weight:750;letter-spacing:.18em}
@@ -88,17 +88,6 @@
 @media(min-width:761px){
   .shop-hero{aspect-ratio:16/9;min-height:0;height:auto}
 }
-@media(max-width:760px){
-  .shop-hero{display:flex;flex-direction:column;align-items:stretch;aspect-ratio:auto;min-height:0;height:auto;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:0 0 28px;background:#10262e}
-  .shop-hero-reel{position:relative;inset:auto;order:0;z-index:0;width:100%;height:auto;aspect-ratio:16/9}
-  .shop-hero-photo,.shop-hero-ipads{position:absolute;inset:0}
-  .shop-hero:after{display:none}
-  .shop-hero-copy{order:1;position:relative;z-index:1;max-width:none;padding:22px 20px 0}
-  .shop-hero .hero-dots{top:calc(100vw * 9 / 16 - 28px);right:14px;bottom:auto}
-  .shop-hero-ipads .shop-ipads{left:6%;right:4%;top:8%;bottom:8%}
-  .shop-hero-ipads .shop-ipad-back{width:58%;top:4%}
-  .shop-hero-ipads .shop-ipad-front{width:68%;top:26%}
-}
 
 @media(min-width:761px){
   .shop-hero h1,
@@ -121,35 +110,37 @@
 @media(prefers-reduced-motion:reduce){
   .shop-hero-photo,.shop-hero-ipads{transition:none}
 }
+
+/* Same fused shop hero on a phone. Both slides stay inside the veil. */
 @media(max-width:760px){
   body.shop-clean .shop-hero{
     display:flex;
-    flex-direction:column;
-    align-items:stretch;
+    flex-direction:row;
+    align-items:center;
     justify-content:flex-start;
     aspect-ratio:auto;
-    min-height:0;
+    min-height:540px;
     height:auto;
     width:100vw;
     max-width:100vw;
     margin-left:calc(50% - 50vw);
     margin-right:calc(50% - 50vw);
-    padding:0;
-    gap:0;
+    padding:32px 22px 48px;
     background:#10262e;
     overflow:hidden;
   }
-  body.shop-clean .shop-hero::after{content:none;display:none}
+  body.shop-clean .shop-hero::after{
+    content:"";
+    display:block;
+    background:linear-gradient(90deg,#10262ef8 0%,#10262ef6 38%,#10262eef 50%,#10262ea8 64%,#10262e55 78%,#10262e1a 90%,#10262e00 100%);
+  }
   body.shop-clean .shop-hero-reel{
-    position:relative;
-    inset:auto;
-    order:-1;
-    z-index:0;
-    flex:none;
+    position:absolute;
+    inset:0;
+    z-index:-2;
     width:100%;
-    height:auto;
-    aspect-ratio:16/9;
-    overflow:hidden;
+    height:100%;
+    aspect-ratio:auto;
   }
   body.shop-clean .shop-hero-photo,
   body.shop-clean .shop-hero-ipads{
@@ -160,27 +151,44 @@
   }
   body.shop-clean .shop-hero-photo{object-fit:cover;object-position:78% 42%}
   body.shop-clean .shop-hero-copy{
-    order:1;
     position:relative;
     z-index:1;
-    max-width:none;
-    width:100%;
+    order:0;
+    width:auto;
+    max-width:min(13rem,54%);
     margin:0;
-    padding:22px 20px 28px;
-    background:#10262e;
+    padding:0;
+    background:transparent;
   }
   body.shop-clean .shop-hero h1,
-  body.shop-clean .shop-hero h1 span{font-size:42px;line-height:.98}
+  body.shop-clean .shop-hero h1 span{
+    font-size:clamp(44px,4.4vw,60px);
+    line-height:.98;
+  }
   body.shop-clean .shop-hero>.hero-dots{
     position:absolute;
     z-index:3;
-    top:calc(100vw * 9 / 16 - 22px);
+    top:auto;
     right:14px;
-    bottom:auto;
+    bottom:16px;
     left:auto;
     margin:0;
   }
-  body.shop-clean .shop-hero-ipads .shop-ipads{position:absolute;left:7%;right:6%;top:8%;bottom:8%;width:auto;height:auto;margin:0}
-  body.shop-clean .shop-hero-ipads .shop-ipad-back{width:54%;left:0;top:4%}
-  body.shop-clean .shop-hero-ipads .shop-ipad-front{width:62%;right:0;top:24%}
+  body.shop-clean .shop-hero-ipads .shop-ipads{
+    left:62%;
+    right:3%;
+    top:16%;
+    bottom:20%;
+    width:auto;
+  }
+  body.shop-clean .shop-hero-ipads .shop-ipad-back{
+    width:72%;
+    left:0;
+    top:0;
+  }
+  body.shop-clean .shop-hero-ipads .shop-ipad-front{
+    width:86%;
+    right:0;
+    top:36%;
+  }
 }
