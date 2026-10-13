@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Create an adult PIN</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;font-family:Figtree,Arial,sans-serif;background:#14242b8c}
+  .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:16px}
+  .sheet{width:100%;max-width:360px;border-radius:28px;background:#fff8eb;padding:20px 20px 18px;box-shadow:0 24px 48px #14242b47,0 0 0 1px #0000001a}
+  h1{margin:0;text-align:center;font-size:22px;font-weight:800;letter-spacing:-.02em;color:#14242b}
+  .hint{margin:8px 0 0;text-align:center;font-size:14px;font-weight:600;color:#5c7279;line-height:1.35}
+  .dots{margin:20px 0 0;display:flex;justify-content:center;gap:10px}
+  .dots i{width:14px;height:14px;border-radius:50%;background:#14242b26;display:block}
+  .pad{margin:16px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .pad button{border:0;border-radius:16px;min-height:56px;font-size:20px;font-weight:800;color:#14242b;background:#fff;box-shadow:0 0 0 1px #00000014}
+  .actions{margin-top:16px;display:flex;gap:8px}
+  .actions button{flex:1;min-height:44px;border-radius:14px;font-size:15px;font-weight:700}
+  .ghost{background:transparent;color:#14242b;border:0}
+  .primary{background:#3f7584;color:#fff;border:0;opacity:.45}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sheet" role="dialog" aria-labelledby="t">
+    <h1 id="t">Create an adult PIN</h1>
+    <p class="hint">Choose a 4-digit PIN so the child cannot open Adult.</p>
+    <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="pad">
+      <button type="button">1</button><button type="button">2</button><button type="button">3</button>
+      <button type="button">4</button><button type="button">5</button><button type="button">6</button>
+      <button type="button">7</button><button type="button">8</button><button type="button">9</button>
+      <span></span><button type="button">0</button><button type="button">⌫</button>
+    </div>
+    <div class="actions">
+      <button type="button" class="ghost">Cancel</button>
+      <button type="button" class="primary" disabled>Continue</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

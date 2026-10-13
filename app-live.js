@@ -173,12 +173,14 @@ document.querySelectorAll('#meet-the-app [data-app]').forEach((root)=>{
   }
   paint();
 });
+const HOME_PHONE={frame:'portrait',ratio:'780/1640'};
 const stories={
   home:{
+    phone:HOME_PHONE,
     modes:{
       adult:{
         line:'You choose what is on, and leave it ready.',
-        shots:[{name:'Plan', frame:'landscape', ratio:'1100/760', src:'assets/current-art/adult-home.png', alt:'Home, the plan'}],
+        shots:[{name:'Plan', ...HOME_PHONE, src:'assets/screens/home-adult-phone.png?v=home2', alt:'Home, the plan'}],
         points:[
           ['The week','The day is on. You edit what belongs to it.'],
           ['The products','Routines, swimming, movement, and My Voice. Each one on or off.'],
@@ -187,11 +189,26 @@ const stories={
       },
       child:{
         line:'Their turn. The pictures you left.',
-        shots:[{name:'Play', frame:'portrait', ratio:'768/1024', src:'assets/current-art/child-home-portrait.png', alt:'Home, when they play'}],
+        shots:[{name:'User mode', ...HOME_PHONE, src:'assets/screens/home-child-phone.png?v=home2', alt:'Home, user mode'}],
         points:[
           ['Their week','Bathroom, pool, park, home. The places of the day.'],
           ['The words','How they feel, and the words you left.'],
           ['The products','The ones you switched on, along the bottom.']
+        ]
+      },
+      parent:{
+        line:'Adult mode stays behind your PIN.',
+        shots:[
+          {...HOME_PHONE, src:'assets/screens/home-adult-phone.png?v=home2', alt:'Home, the plan', at:0},
+          {...HOME_PHONE, src:'assets/screens/home-adult-phone.png?v=home2', alt:'Home, the plan', at:1},
+          {...HOME_PHONE, src:'assets/screens/home-adult-phone.png?v=home2', alt:'Home, the plan', at:2},
+          {...HOME_PHONE, src:'assets/screens/mode-pin-home.png?v=home2', alt:'Create an adult PIN', at:3}
+        ],
+        points:[
+          ['The week','The day is on. You edit what belongs to it.'],
+          ['The products','Routines, swimming, movement, and My Voice. Each one on or off.'],
+          ['The words','Core vocabulary, left within reach.'],
+          ['Set your PIN.','Adult mode asks for it. The plan stays with you.']
         ]
       }
     }
@@ -200,15 +217,27 @@ const stories={
 function mountStory(root, spec){
   let mode='adult';
   let shot=0;
+  let activePoint=0;
   let timer=0;
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  root.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{mode=b.dataset.mode;shot=0;paint()}));
+  root.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
+    mode=b.dataset.mode;
+    shot=0;
+    activePoint=mode==='parent'?3:0;
+    paint();
+  }));
   function current(){return spec.modes[mode]}
+  function shotForPoint(view,i){
+    const list=view.shots||[];
+    if(!list.length) return null;
+    const mapped=list.find(s=>s.at===i);
+    return mapped||list[0];
+  }
   function showShot(list, next){
     const stage=root.querySelector('.shot-stage');
     if(!stage) return;
     shot=(next+list.length)%list.length;
-    const wide=spec.same || list[shot].frame==='landscape';
+    const wide=spec.phone?false:(spec.same || list[shot].frame==='landscape');
     stage.classList.toggle('is-portrait', !wide);
     stage.classList.toggle('is-landscape', wide);
     stage.classList.toggle('is-same', Boolean(spec.same));
@@ -231,21 +260,26 @@ function mountStory(root, spec){
   }
   function paint(){
     const view=current();
-    const list=view.shots;
+    const list=view.shots||[];
     const visual=root.querySelector('.visual');
-    const wide=spec.same || list[shot].frame==='landscape';
-    const dots=list.length>1?`<div class="shot-dots" role="tablist">${list.map((s,i)=>`<button type="button" data-shot="${i}" aria-pressed="${i===shot}">${s.name}</button>`).join('')}</div>`:'';
-    visual.innerHTML=`<div class="shot-stage ${wide?'is-landscape':'is-portrait'}${spec.same?' is-same':''}"><div class="shot-ipad"><div class="shot-screen" style="--shot:${list[shot].ratio}">${list.map((s,i)=>`<img alt="${s.alt}" src="${s.src}" class="${s.ratio==='768/1024'?'is-board ':''}${i===shot?'is-on':''}" ${i===shot?'':'aria-hidden="true"'}>`).join('')}</div></div>${dots}</div>`;
+    const mappedIdx=list.findIndex(s=>s.at===activePoint);
+    const cur=mappedIdx>=0?list[mappedIdx]:shotForPoint(view, activePoint)||list[shot]||list[0];
+    shot=mappedIdx>=0?mappedIdx:0;
+    const wide=spec.phone?false:(spec.same || (cur&&cur.frame==='landscape'));
+    const dots=(!spec.phone&&list.length>1)?`<div class="shot-dots" role="tablist">${list.map((s,i)=>`<button type="button" data-shot="${i}" aria-pressed="${i===shot}">${s.name||''}</button>`).join('')}</div>`:'';
+    const ratio=(spec.phone&&spec.phone.ratio)||cur.ratio;visual.innerHTML=`<div class="shot-stage ${wide?'is-landscape':'is-portrait'}${spec.same?' is-same':''}${spec.phone?' is-home-phone':''}"><div class="shot-ipad"><div class="shot-screen" style="--shot:${ratio}"><img alt="${cur.alt}" src="${cur.src}" class="is-on" aria-hidden="false"></div></div>${dots}</div>`;
     visual.querySelectorAll('[data-shot]').forEach((dot,i)=>dot.addEventListener('click',()=>{showShot(list,i);start(list)}));
     const stage=visual.querySelector('.shot-stage');
-    stage.addEventListener('mouseenter', stop);
-    stage.addEventListener('mouseleave', ()=>start(list));
-    const light=list.length>1;
-    root.querySelector('[data-points]').innerHTML=view.points.map(([n,t],i)=>`<li class="${light&&i===shot?'is-on':''}"><strong>${n}</strong><span>${t}</span></li>`).join('');
+    if(stage){
+      stage.addEventListener('mouseenter', stop);
+      stage.addEventListener('mouseleave', ()=>{if(!spec.phone) start(list);});
+    }
+    root.querySelector('[data-points]').innerHTML=view.points.map(([n,t],i)=>`<li class="${i===activePoint?'is-on':''}" data-point="${i}" tabindex="0" role="button"><strong>${n}</strong><span>${t}</span></li>`).join('');
+    root.querySelectorAll('[data-points] li').forEach(li=>li.addEventListener('click',()=>{activePoint=Number(li.dataset.point);paint()}));
     const title=root.querySelector('[data-title]');
     if(title && view.line) title.textContent=view.line;
     root.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.mode===mode)));
-    start(list);
+    if(!spec.phone) start(list);
   }
   paint();
 }
@@ -387,7 +421,7 @@ if(location.hash) openFromHash();
       ["assets/studio-fan/p18-main.jpg?v=card1","Bird dog","assets/studio-fan/p18-step.jpg?v=card1","Break it down"],
       ["assets/studio-fan/p19-main.jpg?v=card1","Shoulder circles","assets/studio-fan/p19-step.jpg?v=card1","Break it down"],
       ["assets/studio-fan/p20-main.jpg?v=card1","Cat and neutral","assets/studio-fan/p20-step.jpg?v=card1","Break it down"],
-    ]
+    ],
   };
   Object.keys(sets).forEach(function(name){
     var pair=document.querySelector('#meet-the-app [data-fan="'+name+'"]');

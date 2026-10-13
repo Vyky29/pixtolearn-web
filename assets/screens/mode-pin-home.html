@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:780px;height:1640px;overflow:hidden;font-family:Figtree,Arial,sans-serif}
+.bg{position:absolute;inset:0;background:#14242b}
+.bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.dim{position:absolute;inset:0;background:rgba(20,36,43,.55)}
+.center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px}
+.sheet{width:100%;max-width:360px;border-radius:28px;background:#fff8eb;padding:20px 20px 18px;box-shadow:0 24px 48px rgba(20,36,43,.28),0 0 0 1px rgba(0,0,0,.1)}
+h1{margin:0;text-align:center;font-size:22px;font-weight:800;letter-spacing:-.02em;color:#14242b}
+.hint{margin:8px 0 0;text-align:center;font-size:14px;font-weight:600;color:#5c7279;line-height:1.35}
+.dots{margin:20px 0 0;display:flex;justify-content:center;gap:10px}
+.dots i{width:14px;height:14px;border-radius:50%;background:rgba(20,36,43,.15);display:block}
+.pad{margin:16px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pad button{border:0;border-radius:16px;min-height:56px;font-size:20px;font-weight:800;color:#14242b;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.actions{margin-top:16px;display:flex;gap:8px}
+.actions button{flex:1;min-height:44px;border-radius:14px;font-size:15px;font-weight:700}
+.ghost{background:transparent;color:#14242b;border:0}
+.primary{background:#3f7584;color:#fff;border:0;opacity:.45}
+</style></head><body>
+<div class="bg"><img src="home-adult-phone.png" alt=""></div>
+<div class="dim"></div>
+<div class="center"><div class="sheet" role="dialog"><h1>Create an adult PIN</h1>
+<p class="hint">Choose a 4-digit PIN so the child cannot open Adult.</p>
+<div class="dots"><i></i><i></i><i></i><i></i></div>
+<div class="pad"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><span></span><button>0</button><button>⌫</button></div>
+<div class="actions"><button class="ghost">Cancel</button><button class="primary" disabled>Continue</button></div></div></div>
+</body></html>

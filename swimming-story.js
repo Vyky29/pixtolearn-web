@@ -323,6 +323,7 @@
   }
 
   function clearPacks() {
+    if (orbit) orbit.removeAttribute("data-rec");
     people.querySelectorAll("[data-pack-chip]").forEach(function (chip) {
       chip.classList.remove("is-on");
     });
@@ -368,6 +369,7 @@
     });
     if (invite) invite.hidden = true;
     if (kicker) kicker.textContent = "Recommended · " + (labels[person] || who);
+    if (orbit) orbit.setAttribute("data-rec", String(wanted.length));
     rideTo(button);
     people.querySelectorAll("[data-pack-chip]").forEach(function (chip) {
       chip.classList.toggle("is-on", wanted.indexOf(chip.getAttribute("data-pack-chip")) !== -1);

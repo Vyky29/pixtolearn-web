@@ -49,8 +49,7 @@
 .app-live .pair.board .said{flex:1;height:100%;border-radius:5px;background:#fffdf8;display:flex;align-items:center;padding:0 3px}
 .app-live .pair.board .said img{height:13px;width:auto}
 .app-live .pair.board .speak{flex:none;width:13px;height:13px;border-radius:50%;background:#d03860;display:grid;place-items:center}
-.app-live .pair.board .speak svg{width:8px;height:8px}
-.app-live .tablet{width:210px;border:0;padding:7px;border-radius:18px;background:#18262c;box-shadow:0 3px 0 #899599,0 18px 28px -18px #14242b;transform:none}
+.app-live .pair.board .speak svg{width:8px;height:8px}.app-live .tablet{width:210px;border:0;padding:7px;border-radius:18px;background:#18262c;box-shadow:0 3px 0 #899599,0 18px 28px -18px #14242b;transform:none}
 .app-live .tablet:before{top:3px;width:4px;height:4px;margin-left:-2px;background:#81949b}
 .app-live .tablet img{height:auto;border-radius:12px;aspect-ratio:auto;object-fit:cover}
 .app-live .shot-stage{width:100%;display:flex;flex-direction:column;align-items:center}
@@ -70,9 +69,21 @@
 .app-live #one-home .shot-stage.is-landscape .shot-ipad{width:min(100%,300px)}
 .app-live .shot-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
 .app-live .fold .shot-screen img,
-.app-live #one-home .shot-screen img{object-fit:contain;object-position:center}
-.app-live .role button{display:inline-flex;align-items:center;gap:6px}
+.app-live #one-home .shot-screen img{object-fit:cover;object-position:center top}
+.app-live .role{display:flex;flex-wrap:wrap;gap:8px}
+.app-live .role button{display:inline-flex;align-items:center;gap:6px;padding:8px 12px}
 .app-live .role button svg{width:14px;height:14px;flex:none;display:block}
+.app-live .role--three button{font-size:13px;padding:8px 10px}
+.app-live .view-points li[data-point]{cursor:pointer}
+.app-live #lab h2{font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(28px,3.2vw,40px);line-height:1.05;letter-spacing:-.04em;margin:8px 0 10px;max-width:16ch}
+.app-live .lab-split{align-items:center}
+.app-live .lab-ipad{width:min(100%,200px);margin:0 auto;padding:7px;border-radius:26px;background:#fff;box-shadow:0 4px 0 #899599,0 20px 30px -14px #14242b8c}
+.app-live .lab-ipad .shot-screen{border-radius:18px;background:#f7f4ef}
+.app-live .lab-ipad img{width:100%;height:100%;object-fit:contain;display:block}
+.app-live .lab-beats{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.app-live .lab-beats figure{margin:0}
+.app-live .lab-beats img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;background:#eef3f4;box-shadow:0 0 0 1px #14242b14}
+.app-live .lab-beats figcaption{margin-top:5px;font-size:11px;font-weight:700;letter-spacing:.04em;color:#5c7279;text-align:center}
 .app-live .shot-screen img.is-on{opacity:1;z-index:1}
 .app-live .shot-dots{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px 0 0}
 .app-live .shot-dots button{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:0;border-radius:999px;background:#fff;color:#3d5158;font:650 13px/1 PixtoBody,Figtree,Arial,sans-serif;box-shadow:0 0 0 1px #14242b18;cursor:pointer}
@@ -97,7 +108,7 @@
 .app-live .homes figcaption{display:none}
 .app-live .fold.brand[open]{background:linear-gradient(180deg, color-mix(in srgb, var(--c) 12%, white), #fffdf8 180px);box-shadow:inset 4px 0 0 var(--c), inset 0 0 0 1px color-mix(in srgb, var(--c) 30%, white)}
 .app-live .fold.brand[open] .view-points li{border-top-color:color-mix(in srgb, var(--c) 22%, #e4ddd4)}
-.app-live #the-app,.app-live #characters,.app-live #languages,.app-live #one-home,.app-live #get-the-app,.app-live #pricing{scroll-margin-top:24px}
+.app-live #the-app,.app-live #characters,.app-live #languages,.app-live #lab,.app-live #one-home,.app-live #get-the-app,.app-live #pricing{scroll-margin-top:24px}
 .app-live #the-app{padding:44px 0 4px;background:transparent}
 .app-live #the-app h2{font-family:PixtoDisplay,Arial,sans-serif;font-size:clamp(36px,4vw,54px);line-height:.98;letter-spacing:-.045em;margin:10px 0 14px;max-width:12ch;color:#14242b}
 .app-live #the-app .hero-actions{margin-top:18px}
@@ -149,3 +160,8 @@
   .app-live .four,.app-live .plans-top{flex-direction:column;align-items:flex-start;gap:8px}
   .app-live .plan-grid{grid-template-columns:1fr}
 }
+
+.app-live .role button .mode-disc-icon{width:18px;height:18px;flex:none;display:block}
+.app-live #one-home .shot-stage.is-home-phone.is-portrait .shot-ipad{width:min(100%,176px)}
+.app-live #one-home .shot-stage.is-home-phone.is-portrait .shot-screen{aspect-ratio:780/1640}
+.app-live #one-home .shot-stage.is-landscape{display:none}

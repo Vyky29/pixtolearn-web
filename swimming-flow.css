@@ -219,21 +219,34 @@ button.benefit-photo:hover{box-shadow:0 22px 36px -22px #14242b}
 .who-tide{position:absolute;left:-20%;right:-20%;top:62%;height:55%;border-radius:50%;background:radial-gradient(ellipse at 50% 0%, #ffffff55, #6a9eb066 42%, #3f758400 72%);animation:who-tide 7s ease-in-out infinite}
 .who-gloss{position:absolute;inset:0;background:radial-gradient(ellipse 58% 32% at 50% 16%, #fff8, transparent 70%);pointer-events:none}
 .who-ring{position:absolute;left:50%;top:50%;width:calc(var(--rx) * 200%);height:calc(var(--ry) * 200%);border:1.5px solid #fff;border-radius:50%;box-shadow:0 0 0 10px #ffffff2e;translate:-50% -50%;pointer-events:none}
-.who-hub{position:absolute;left:50%;top:46%;z-index:4;width:min(380px,74%);translate:-50% -50%;pointer-events:none}
-.who-kicker{margin:0 0 4px;font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;text-align:center;color:#3f7584}
-.who-kicker:empty{display:none;margin:0}
-.who-row{display:grid;grid-template-columns:1fr 1fr;justify-items:center;align-items:end;width:100%}
-.who-row [data-pack-chip]{margin:0;padding:0;border:0;background:none;text-align:center;cursor:pointer;pointer-events:auto;animation:who-pack-float 5.6s ease-in-out infinite;transition:opacity .35s ease,transform .45s ease}
-.who-row [data-pack-chip="full"]{grid-column:1 / -1;grid-row:1;width:58%;margin:0 0 -26px;justify-self:center;z-index:2}
-.who-row [data-pack-chip="basic"]{grid-row:2;width:92%;justify-self:end;margin-right:2px;z-index:1}
-.who-row [data-pack-chip="fun"]{grid-row:2;width:92%;justify-self:start;margin-left:2px;z-index:1}
+.who-hub{position:absolute;left:50%;top:50%;z-index:4;width:min(320px,58%);translate:-50% -50%;pointer-events:none}
+.who-kicker{margin:0;font-size:11px;font-weight:750;letter-spacing:.1em;line-height:1.3;text-transform:uppercase;text-align:center;color:#3f7584}
+.who-kicker:empty{display:none}
+.who.is-open .who-kicker:not(:empty){position:absolute;left:50%;bottom:calc(100% + 6px);z-index:5;width:max-content;max-width:148px;margin:0;white-space:normal;translate:-50% 0;pointer-events:none}
+.who-row{position:relative;display:grid;grid-template-columns:1fr 1fr;justify-items:center;align-items:end;width:100%;gap:2px 10px}
+.who-row [data-pack-chip]{margin:0;padding:0;border:0;background:none;min-width:0;text-align:center;cursor:pointer;pointer-events:auto;animation:who-pack-float 5.6s ease-in-out infinite;transition:opacity .4s ease,transform .45s ease}
+.who-row [data-pack-chip="full"]{grid-column:1 / -1;grid-row:1;width:56%;margin:0;justify-self:center;z-index:2}
+.who-row [data-pack-chip="basic"]{grid-column:1;grid-row:2;width:100%;justify-self:stretch;z-index:1}
+.who-row [data-pack-chip="fun"]{grid-column:2;grid-row:2;width:100%;justify-self:stretch;z-index:1}
 .who-row [data-pack-chip]:nth-child(2){animation-delay:-1.8s}
 .who-row [data-pack-chip]:nth-child(3){animation-delay:-3.1s}
-.who-row img{width:100%;height:auto;max-height:132px;object-fit:contain;background:none;filter:drop-shadow(0 16px 14px #14242b28);transition:transform .35s ease}
-.who-row [data-pack-chip]:hover img{transform:scale(1.08)}
-.who-row [data-pack-chip] span{display:block;margin-top:2px;font-size:11px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:#3f7584;opacity:0;transition:opacity .35s ease}
-.who.is-open .who-row [data-pack-chip]:not(.is-on){opacity:.34}
-.who.is-open .who-row [data-pack-chip].is-on span{opacity:1;color:#14242b}
+.who-row img{width:100%;height:auto;max-height:100px;object-fit:contain;background:none;filter:drop-shadow(0 16px 14px #14242b28);transition:transform .35s ease}
+.who-row [data-pack-chip]:hover img{transform:scale(1.04)}
+.who-row [data-pack-chip] span{display:block;margin-top:0;max-height:0;overflow:hidden;font-size:12px;font-weight:750;letter-spacing:.08em;line-height:1.2;text-transform:uppercase;color:#14242b;opacity:0;transition:opacity .35s ease,max-height .35s ease,margin-top .35s ease}
+.who.is-open .who-row [data-pack-chip]:not(.is-on){position:absolute;width:0;height:0;margin:0;padding:0;overflow:hidden;opacity:0;pointer-events:none;z-index:0}
+.who.is-open .who-row [data-pack-chip].is-on span{opacity:1;max-height:1.4em;margin-top:4px;color:#14242b}
+.who-orbit[data-rec="1"] .who-hub{width:min(280px,52%);top:50%}
+.who-orbit[data-rec="1"] .who-row{grid-template-columns:1fr;align-items:center;justify-items:center}
+.who-orbit[data-rec="1"] .who-row [data-pack-chip].is-on{grid-column:1;grid-row:1;width:92%;margin:0;justify-self:center}
+.who-orbit[data-rec="1"] .who-row img{max-height:190px}
+.who-orbit[data-rec="2"] .who-hub{width:min(340px,64%);top:52%}
+.who-orbit[data-rec="2"] .who-row{grid-template-columns:1fr 1fr;align-items:end;justify-items:stretch;gap:4px 16px}
+.who-orbit[data-rec="2"] .who-row [data-pack-chip].is-on{grid-column:auto;grid-row:1;width:100%;margin:0;justify-self:stretch}
+.who-orbit[data-rec="2"] .who-row img{max-height:136px}
+.who-orbit[data-rec="3"] .who-hub{width:min(380px,70%);top:46%}
+.who-orbit[data-rec="3"] .who-row{align-items:end;gap:0 8px}
+.who-orbit[data-rec="3"] .who-row [data-pack-chip="full"].is-on{width:52%;margin:0 0 2px}
+.who-orbit[data-rec="3"] .who-row img{max-height:120px}
 .pack-zoom{width:min(880px,94vw);border:0;padding:18px 22px 28px;background:#fffdf8;border-radius:20px}
 .pack-zoom::backdrop{background:#14242bd0}
 .pack-zoom form{display:flex;justify-content:flex-end;margin:0 0 8px}
@@ -311,7 +324,16 @@ button.benefit-photo:hover{box-shadow:0 22px 36px -22px #14242b}
   .who.is-open .who-stage{grid-template-columns:1fr;grid-template-areas:"orbit" "advice";width:min(540px,100%)}
   .who-orbit{--rx:.44;--ry:.4;width:min(340px,100%);margin-bottom:108px}
   .who-node{width:64px}
-  .who-row img{max-height:86px}
+  .who-hub{width:min(200px,60%);top:50%}
+  .who-row img{max-height:58px}
+  .who-row [data-pack-chip] span{font-size:10px;letter-spacing:.06em}
+  .who-orbit[data-rec="1"] .who-hub{width:min(172px,52%)}
+  .who-orbit[data-rec="1"] .who-row img{max-height:112px}
+  .who-orbit[data-rec="2"] .who-hub{width:min(200px,62%);top:52%}
+  .who-orbit[data-rec="2"] .who-row{gap:2px 8px}
+  .who-orbit[data-rec="2"] .who-row img{max-height:64px}
+  .who-orbit[data-rec="3"] .who-hub{width:min(220px,66%);top:47%}
+  .who-orbit[data-rec="3"] .who-row img{max-height:66px}
   .who-picks a{grid-template-columns:72px 1fr}
   .who-picks img{height:62px}
 }
